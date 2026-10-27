@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=block"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #0e1116;
+        --ground-2: #161b23;
+        --paper: #fbf8f1;
+        --ink: #f4efe3;
+        --ink-dim: #a3abb9;
+        --paper-ink: #151922;
+        --paper-dim: #5b6270;
+        --gold: #f2b544;
+        --gold-deep: #c9871a;
+        --mint: #3ecf8e;
+        --font-display: "Fraunces", Georgia, serif;
+        --font-ui: "Inter", system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1920px; height: 1080px; overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative; width: 100%; height: 100%;
+        font-family: var(--font-ui); color: var(--ink);
+        background:
+          radial-gradient(1200px 700px at 75% 20%, rgba(242,181,68,0.10), transparent 60%),
+          radial-gradient(900px 600px at 10% 90%, rgba(62,207,142,0.06), transparent 60%),
+          var(--ground);
+      }
+      .clip { position: absolute; inset: 0; }
+      .center { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+      /* ---------- Scene 1: the problem ---------- */
+      #s1 .sheet {
+        position: absolute; left: 50%; top: 50%; width: 1500px; height: 760px;
+        margin: -380px 0 0 -750px;
+        display: grid; grid-template-columns: repeat(8, 1fr); grid-auto-rows: 54px; gap: 2px;
+        opacity: 0.18; transform: rotate(-4deg);
+      }
+      #s1 .cell {
+        background: #2a313d; font-family: var(--font-mono); font-size: 20px; color: #8b95a6;
+        display: flex; align-items: center; padding-left: 12px;
+      }
+      #s1 .cell.err { color: #ff6b6b; }
+      #s1 h1 {
+        position: relative; font-family: var(--font-display); font-weight: 800;
+        font-size: 128px; line-height: 1.02; letter-spacing: -0.012em; word-spacing: 0.06em; text-align: center;
+      }
+      #s1 h1 .w { display: inline-block; }
+      #s1 h1 .strike { position: relative; color: var(--ink-dim); }
+      #s1 h1 .strike::after {
+        content: ""; position: absolute; left: -2%; right: -2%; top: 54%; height: 10px;
+        background: #ff6b6b; transform: scaleX(var(--s, 0)); transform-origin: left center; border-radius: 6px;
+      }
+
+      /* ---------- Scene 2: logo reveal ---------- */
+      #s2 .coin {
+        width: 280px; height: 280px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ffe3a3 0%, var(--gold) 38%, var(--gold-deep) 100%);
+        box-shadow: inset 0 0 0 14px rgba(255,255,255,0.18), inset 0 0 0 22px rgba(0,0,0,0.10),
+                    0 40px 80px rgba(242,181,68,0.25);
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-display); font-weight: 800; font-size: 150px; color: #5a3a06;
+      }
+      #s2 .word {
+        margin-top: 46px; font-family: var(--font-display); font-weight: 800;
+        font-size: 170px; letter-spacing: -0.02em; line-height: 1;
+      }
+      #s2 .word span { display: inline-block; }
+      #s2 .tag { margin-top: 18px; font-size: 38px; color: var(--ink-dim); letter-spacing: 0.01em; }
+
+      /* ---------- Scene 3: invoice builds itself ---------- */
+      #s3 .invoice {
+        position: absolute; left: 200px; top: 90px; width: 880px; height: 900px;
+        background: var(--paper); color: var(--paper-ink); border-radius: 28px;
+        padding: 56px 60px; box-shadow: 0 60px 120px rgba(0,0,0,0.45);
+      }
+      #s3 .inv-head { display: flex; justify-content: space-between; align-items: flex-start; }
+      #s3 .brand { display: flex; align-items: center; gap: 14px; font-family: var(--font-display); font-weight: 800; font-size: 40px; }
+      #s3 .mini-coin {
+        width: 46px; height: 46px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ffe3a3, var(--gold) 45%, var(--gold-deep));
+        display: flex; align-items: center; justify-content: center; font-size: 26px; color: #5a3a06;
+      }
+      #s3 .inv-no { text-align: right; font-size: 28px; color: var(--paper-dim); line-height: 1.35; }
+      #s3 .inv-no b { display: block; font-family: var(--font-mono); font-size: 26px; color: var(--paper-ink); }
+      #s3 .bill { margin-top: 44px; font-size: 28px; color: var(--paper-dim); text-transform: uppercase; letter-spacing: 0.12em; }
+      #s3 .client { margin-top: 8px; font-size: 34px; font-weight: 700; min-height: 42px; }
+      #s3 .caret { display: inline-block; width: 3px; height: 34px; background: var(--gold-deep); vertical-align: -5px; margin-left: 4px; }
+      #s3 .rows { margin-top: 40px; border-top: 2px solid #e8e2d4; }
+      #s3 .row {
+        display: grid; grid-template-columns: 1fr 90px 170px; padding: 20px 0;
+        border-bottom: 2px solid #efe9dc; font-size: 30px;
+      }
+      #s3 .row .q { color: var(--paper-dim); text-align: center; }
+      #s3 .row .a { text-align: right; font-family: var(--font-mono); font-weight: 500; }
+      #s3 .sum { margin-top: 26px; display: grid; grid-template-columns: 1fr 220px; row-gap: 10px; font-size: 28px; color: var(--paper-dim); }
+      #s3 .sum .a { text-align: right; font-family: var(--font-mono); color: var(--paper-ink); }
+      #s3 .total {
+        margin-top: 24px; padding: 24px 28px; border-radius: 18px; background: var(--paper-ink); color: var(--paper);
+        display: flex; justify-content: space-between; align-items: center;
+      }
+      #s3 .total .l { font-size: 30px; color: #c7cbd3; }
+      #s3 .total .a { font-family: var(--font-mono); font-weight: 700; font-size: 46px; color: var(--gold); }
+      #s3 .stamp {
+        position: absolute; right: 60px; top: 190px; padding: 10px 30px;
+        border: 8px solid var(--mint); color: var(--mint); border-radius: 16px;
+        font-family: var(--font-display); font-weight: 800; font-size: 76px; letter-spacing: 0.06em;
+        transform: rotate(-12deg);
+      }
+      #s3 .side { position: absolute; left: 1160px; top: 220px; width: 640px; }
+      #s3 .side .eyebrow { font-size: 30px; font-weight: 600; color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; }
+      #s3 .side h2 {
+        margin-top: 18px; font-family: var(--font-display); font-weight: 800; font-size: 96px;
+        line-height: 1.02; letter-spacing: -0.012em; word-spacing: 0.06em;
+      }
+      #s3 .steps { margin-top: 48px; display: flex; flex-direction: column; gap: 22px; }
+      #s3 .step { display: flex; align-items: center; gap: 20px; font-size: 34px; font-weight: 500; }
+      #s3 .step i {
+        width: 54px; height: 54px; border-radius: 50%; background: rgba(242,181,68,0.14); border: 2px solid var(--gold);
+        color: var(--gold); font-style: normal; font-weight: 700; font-size: 28px;
+        display: flex; align-items: center; justify-content: center;
+      }
+
+      /* ---------- Scene 4: features ---------- */
+      #s4 h2 { font-family: var(--font-display); font-weight: 800; font-size: 96px; letter-spacing: -0.012em; word-spacing: 0.06em; }
+      #s4 .cards { margin-top: 70px; display: flex; gap: 40px; }
+      #s4 .card {
+        width: 470px; height: 300px; border-radius: 28px; padding: 42px;
+        background: var(--ground-2); border: 2px solid #252c38;
+        display: flex; flex-direction: column; justify-content: space-between;
+      }
+      #s4 .ico {
+        width: 76px; height: 76px; border-radius: 20px; background: rgba(242,181,68,0.14);
+        display: flex; align-items: center; justify-content: center;
+      }
+      #s4 .ico svg { width: 42px; height: 42px; stroke: var(--gold); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      #s4 .card h3 { font-size: 40px; font-weight: 700; }
+      #s4 .card p { margin-top: 8px; font-size: 30px; color: var(--ink-dim); }
+
+      /* ---------- Scene 5: end card ---------- */
+      #s5 .lockup { display: flex; align-items: center; gap: 34px; }
+      #s5 .coin {
+        width: 150px; height: 150px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ffe3a3, var(--gold) 40%, var(--gold-deep));
+        box-shadow: inset 0 0 0 9px rgba(255,255,255,0.18), 0 24px 60px rgba(242,181,68,0.25);
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-display); font-weight: 800; font-size: 82px; color: #5a3a06;
+      }
+      #s5 .name { font-family: var(--font-display); font-weight: 800; font-size: 180px; letter-spacing: -0.02em; line-height: 1; }
+      #s5 .line { margin-top: 40px; font-family: var(--font-display); font-weight: 600; font-size: 64px; letter-spacing: -0.02em; }
+      #s5 .line em { font-style: normal; color: var(--gold); }
+      #s5 .cta {
+        margin-top: 56px; padding: 24px 54px; border-radius: 999px; background: var(--gold); color: #2a1a02;
+        font-size: 36px; font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
+
+      <audio id="sound" src="assets/sikka-sound.mp3" data-start="0" data-duration="20" data-volume="1"></audio>
+
+      <!-- Scene 1 · 0–3.6s · the problem -->
+      <section id="s1" class="clip center" data-start="0" data-duration="3.6" data-track-index="0">
+        <div class="sheet" id="sheet" data-layout-ignore></div>
+        <h1>
+          <span class="w">Still</span> <span class="w">making</span> <span class="w">invoices</span><br />
+          <span class="w">in</span> <span class="w strike" id="strike">spreadsheets?</span>
+        </h1>
+      </section>
+
+      <!-- Scene 2 · 3.6–6.4s · logo reveal -->
+      <section id="s2" class="clip center" data-start="3.6" data-duration="2.8" data-track-index="0">
+        <div class="coin" id="coin">₹</div>
+        <div class="word" id="word"><span>S</span><span>i</span><span>k</span><span>k</span><span>a</span></div>
+        <div class="tag" id="tag">Invoicing, minted.</div>
+      </section>
+
+      <!-- Scene 3 · 6.4–13.6s · product -->
+      <section id="s3" class="clip" data-start="6.4" data-duration="7.2" data-track-index="0">
+        <div class="invoice" id="invoice">
+          <div class="inv-head">
+            <div class="brand"><div class="mini-coin">₹</div>Sikka</div>
+            <div class="inv-no">Invoice<b>#SK-0427</b>Due 15 Nov 2026</div>
+          </div>
+          <div class="bill">Bill to</div>
+          <div class="client"><span id="client"></span><span class="caret" id="caret"></span></div>
+          <div class="rows">
+            <div class="row" id="r1"><span>Brand identity design</span><span class="q">1</span><span class="a">₹45,000</span></div>
+            <div class="row" id="r2"><span>Website build</span><span class="q">1</span><span class="a">₹80,000</span></div>
+            <div class="row" id="r3"><span>Monthly support</span><span class="q">3</span><span class="a">₹15,000</span></div>
+          </div>
+          <div class="sum" id="sum">
+            <span>Subtotal</span><span class="a">₹1,40,000</span>
+            <span>GST 18%</span><span class="a">₹25,200</span>
+          </div>
+          <div class="total" id="total"><span class="l">Total due</span><span class="a" id="amt">₹0</span></div>
+          <div class="stamp" id="stamp" data-layout-allow-overlap>PAID</div>
+        </div>
+        <div class="side">
+          <div class="eyebrow" id="eyebrow">Meet Sikka</div>
+          <h2 id="headline">Professional invoices in seconds.</h2>
+          <div class="steps">
+            <div class="step" id="st1"><i>1</i>Add your client</div>
+            <div class="step" id="st2"><i>2</i>Drop in line items</div>
+            <div class="step" id="st3"><i>3</i>Send &amp; get paid</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 4 · 13.6–16.8s · features -->
+      <section id="s4" class="clip center" data-start="13.6" data-duration="3.2" data-track-index="0">
+        <h2 id="s4h">Everything your invoices need.</h2>
+        <div class="cards">
+          <div class="card" id="c1">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+            <div><h3>Beautiful templates</h3><p>Your logo, your brand.</p></div>
+          </div>
+          <div class="card" id="c2">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h8"/></svg></div>
+            <div><h3>Auto tax &amp; totals</h3><p>No formulas. No mistakes.</p></div>
+          </div>
+          <div class="card" id="c3">
+            <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div>
+            <div><h3>Share in one tap</h3><p>PDF, link or WhatsApp.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 5 · 16.8–20s · end card -->
+      <section id="s5" class="clip center" data-start="16.8" data-duration="3.2" data-track-index="0">
+        <div class="lockup" id="lockup"><div class="coin">₹</div><div class="name">Sikka</div></div>
+        <div class="line" id="line">Bill smarter. <em>Get paid faster.</em></div>
+        <div class="cta" id="cta">Available now</div>
+      </section>
+    </div>
+
+    <script>
+      // Fake spreadsheet backdrop for scene 1 (deterministic content).
+      const cells = ["A1","Client","Qty","Rate","=SUM(","#REF!","Total","GST","inv_v3","inv_FINAL","#VALUE!","=B2*C2"];
+      const sheet = document.getElementById("sheet");
+      for (let i = 0; i < 8 * 13; i++) {
+        const c = document.createElement("div");
+        const t = cells[(i * 7) % cells.length];
+        c.className = "cell" + (t.startsWith("#") ? " err" : "");
+        c.textContent = t;
+        sheet.appendChild(c);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+
+      // ---- Scene 1
+      tl.fromTo("#sheet", { scale: 1.08 }, { scale: 1, duration: 3.2, ease: "none" }, 0);
+      tl.fromTo("#s1 h1 .w:nth-child(n+4)", { y: 60, opacity: 0, filter: "blur(10px)" },
+        { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power3.out", stagger: 0.14 }, 0.3);
+      tl.fromTo("#s1 h1", { scale: 1.04 }, { scale: 1, duration: 3.0, ease: "power1.out" }, 0);
+      tl.fromTo("#strike", { "--s": 0 }, { "--s": 1, duration: 0.45, ease: "power2.inOut" }, 1.6);
+      tl.to("#s1 h1", { scale: 0.92, opacity: 0, filter: "blur(12px)", duration: 0.4, ease: "power2.in" }, 3.2);
+      tl.to("#sheet", { opacity: 0, duration: 0.4 }, 3.2);
+
+      // ---- Scene 2 (starts 3.6)
+      tl.fromTo("#coin", { y: -700, rotationY: 0, scale: 0.6 },
+        { y: 0, scale: 1, duration: 0.7, ease: "bounce.out" }, 3.6);
+      tl.fromTo("#coin", { rotationY: 0 }, { rotationY: 720, duration: 1.1, ease: "power3.out", immediateRender: false }, 3.6);
+      tl.fromTo("#word span", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(2)", stagger: 0.06 }, 4.25);
+      tl.fromTo("#tag", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 4.8);
+      tl.to(["#coin", "#word", "#tag"], { y: -40, opacity: 0, duration: 0.35, ease: "power2.in", stagger: 0.04 }, 6.0);
+
+      // ---- Scene 3 (starts 6.4)
+      tl.fromTo("#invoice", { y: 140, opacity: 0, rotation: -3 }, { y: 0, opacity: 1, rotation: 0, duration: 0.7, ease: "power3.out" }, 6.4);
+      tl.fromTo("#eyebrow", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 6.6);
+      tl.fromTo("#headline", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 6.75);
+      // typed client name
+      const clientName = "Nimbus Studio Pvt Ltd";
+      const typed = { n: 0 };
+      tl.fromTo(typed, { n: 0 }, {
+        n: clientName.length, duration: 0.9, ease: "none",
+        onUpdate: () => { document.getElementById("client").textContent = clientName.slice(0, Math.round(typed.n)); }
+      }, 7.1);
+      tl.fromTo("#st1", { x: 30, opacity: 0.25 }, { x: 0, opacity: 1, duration: 0.35 }, 7.1);
+      tl.fromTo("#caret", { opacity: 1 }, { opacity: 0, duration: 0.1 }, 8.1);
+      // line items
+      tl.fromTo("#st2", { x: 30, opacity: 0.25 }, { x: 0, opacity: 1, duration: 0.35 }, 8.2);
+      tl.fromTo(["#r1", "#r2", "#r3"], { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out", stagger: 0.28 }, 8.2);
+      tl.fromTo("#sum", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 9.2);
+      tl.fromTo("#total", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 9.4);
+      // total count-up (Indian digit grouping)
+      const fmt = (v) => "₹" + Math.round(v).toLocaleString("en-IN");
+      const amt = { v: 0 };
+      tl.fromTo(amt, { v: 0 }, {
+        v: 165200, duration: 1.1, ease: "power2.out",
+        onUpdate: () => { document.getElementById("amt").textContent = fmt(amt.v); }
+      }, 9.5);
+      // send & paid
+      tl.fromTo("#st3", { x: 30, opacity: 0.25 }, { x: 0, opacity: 1, duration: 0.35 }, 10.9);
+      tl.fromTo("#stamp", { scale: 2.6, opacity: 0, rotation: -24 }, { scale: 1, opacity: 1, rotation: -12, duration: 0.35, ease: "back.out(2.4)" }, 11.3);
+      tl.fromTo("#invoice", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, 11.62);
+      tl.to(["#invoice", "#s3 .side"], { y: -60, opacity: 0, duration: 0.45, ease: "power2.in", stagger: 0.05 }, 13.1);
+
+      // ---- Scene 4 (starts 13.6)
+      tl.fromTo("#s4h", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 13.65);
+      tl.fromTo(["#c1", "#c2", "#c3"], { y: 90, opacity: 0, scale: 0.94 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.6)", stagger: 0.15 }, 13.9);
+      tl.to(["#s4h", "#c1", "#c2", "#c3"], { y: -40, opacity: 0, duration: 0.35, ease: "power2.in", stagger: 0.04 }, 16.35);
+
+      // ---- Scene 5 (starts 16.8)
+      tl.fromTo("#lockup", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.8)" }, 16.85);
+      tl.fromTo("#s5 .coin", { rotationY: 0 }, { rotationY: 360, duration: 0.9, ease: "power3.out" }, 16.85);
+      tl.fromTo("#line", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 17.4);
+      tl.fromTo("#cta", { y: 30, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 17.85);
+      tl.fromTo("#cta", { scale: 1 }, { scale: 1.05, duration: 0.5, yoyo: true, repeat: 1, ease: "sine.inOut", immediateRender: false }, 18.6);
+      tl.set({}, {}, 20);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
