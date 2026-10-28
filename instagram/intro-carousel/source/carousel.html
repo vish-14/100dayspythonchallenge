@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block">
+<style>
+:root { --blue: #2257EF; --blue-lt: #7EA2FF; --ink: #0B1016; --ink-2: #151B24; --paper: #F5F5F7; --gray: #8A93A3; --line: #2A313D; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #222; font-family: 'Inter', sans-serif; }
+.slide { width: 1080px; height: 1350px; position: relative; overflow: hidden; background: var(--ink); color: var(--paper); margin-bottom: 40px; }
+.disp { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.02em; line-height: .98; }
+.mono { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .22em; font-weight: 500; }
+.label { position: absolute; left: 80px; top: 84px; font-size: 26px; color: var(--blue-lt); }
+.foot { position: absolute; left: 80px; right: 80px; bottom: 56px; display: flex; justify-content: space-between; align-items: center; font-size: 24px; color: var(--gray); }
+.swipe { color: var(--paper); font-weight: 700; }
+#s1 .swipe { background: var(--ink); padding: 12px 18px; border-radius: 12px; }
+#s1 .foot span:first-child { background: var(--ink); padding: 12px 18px; border-radius: 12px; }
+h1 { position: absolute; left: 80px; right: 80px; top: 150px; font-size: 92px; }
+h1 em { font-style: normal; color: var(--blue-lt); }
+.card { background: var(--paper); color: var(--ink); border-radius: 26px; box-shadow: 0 30px 70px rgba(0,0,0,.4); }
+
+/* 1 cover */
+#s1 h1 { top: 190px; font-size: 140px; }
+#s1 .sub { position: absolute; left: 80px; right: 80px; top: 360px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 60px; line-height: 1.08; }
+#s1 .sub em { font-style: normal; color: var(--blue-lt); }
+#s1 .panel { position: absolute; left: 0; bottom: 0; width: 1080px; height: 640px; overflow: hidden;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 3px, rgba(255,255,255,0) 3px 46px), radial-gradient(ellipse 72% 62% at 50% 42%, #4277FF 0%, #2257EF 46%, #163FC2 100%); }
+#s1 .panel img { position: absolute; left: 50%; bottom: -6px; width: 820px; transform: translateX(-50%); image-rendering: pixelated; }
+#s1 .foot { color: rgba(245,245,247,.86); z-index: 2; }
+#s1 .tag { position: absolute; left: 80px; top: 600px; font-size: 26px; color: var(--gray); }
+
+/* 2 problem */
+.rows { position: absolute; left: 80px; right: 80px; top: 480px; display: grid; gap: 22px; }
+.row { height: 132px; display: flex; align-items: center; gap: 28px; padding: 0 34px; position: relative; }
+.row .ico { width: 64px; height: 64px; border-radius: 16px; background: #E3E8F6; flex: none; position: relative; }
+.row .ico::after { content: ""; position: absolute; inset: 18px; border-radius: 6px; background: var(--blue); }
+.row b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 46px; }
+.row small { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #4E5666; letter-spacing: .08em; }
+.row .badge { position: absolute; right: -16px; top: -16px; width: 60px; height: 60px; border-radius: 50%; background: var(--blue); color: #fff;
+  font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+.note { position: absolute; left: 80px; right: 80px; font-size: 38px; font-weight: 600; line-height: 1.35; color: #C9CED8; }
+
+/* 3 hub */
+#hub { position: absolute; left: 0; top: 440px; width: 1080px; height: 440px; }
+#hub svg { position: absolute; inset: 0; }
+#hub line { stroke: var(--blue); stroke-width: 6; }
+.agent { position: absolute; left: 440px; top: 120px; width: 200px; height: 200px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 16px rgba(34,87,239,.22); }
+.agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; line-height: .9; }
+.agent span { font-size: 22px; margin-top: 8px; }
+.node { position: absolute; width: 300px; height: 100px; border-radius: 22px; background: var(--ink-2); border: 3px solid var(--blue); display: flex; align-items: center; gap: 18px; padding: 0 22px; font-size: 25px; letter-spacing: .12em; white-space: nowrap; }
+.node i { width: 46px; height: 46px; border-radius: 12px; background: var(--blue); flex: none; }
+.caps { position: absolute; left: 80px; right: 80px; top: 935px; display: grid; gap: 18px; }
+.cap { display: flex; gap: 18px; align-items: flex-start; font-size: 34px; font-weight: 600; line-height: 1.25; }
+.cap .n { flex: none; width: 52px; height: 52px; border-radius: 50%; border: 3px solid var(--blue-lt); color: var(--blue-lt); display: flex; align-items: center; justify-content: center;
+  font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 26px; margin-top: -4px; }
+
+/* 4 control */
+.pillars { position: absolute; left: 80px; right: 80px; top: 480px; display: grid; gap: 26px; }
+.pillar { border-left: 6px solid var(--blue); padding: 6px 0 6px 30px; }
+.pillar b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; }
+.pillar span { display: block; font-size: 32px; color: #C9CED8; margin-top: 8px; line-height: 1.3; }
+.approve { position: absolute; left: 80px; right: 80px; top: 1010px; height: 150px; display: flex; align-items: center; gap: 24px; padding: 0 30px; }
+.who { width: 80px; height: 80px; border-radius: 50%; background: var(--ink); position: relative; flex: none; }
+.who::before { content: ""; position: absolute; left: 27px; top: 14px; width: 26px; height: 26px; border-radius: 50%; background: var(--paper); }
+.who::after { content: ""; position: absolute; left: 16px; top: 45px; width: 48px; height: 25px; border-radius: 24px 24px 6px 6px; background: var(--paper); }
+.approve .k { font-size: 24px; color: #4E5666; }
+.approve .v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; margin-top: 4px; }
+.btn { margin-left: auto; background: var(--blue); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; padding: 20px 30px; border-radius: 16px; }
+
+/* 5 cta */
+#s5 h1 { font-size: 96px; }
+.step { position: absolute; left: 80px; right: 80px; display: flex; align-items: center; gap: 26px; }
+.num { width: 76px; height: 76px; border-radius: 50%; border: 4px solid var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; }
+.step .av { width: 92px; height: 92px; border-radius: 50%; border: 3px solid var(--paper); image-rendering: pixelated; }
+.step .h { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; flex: 1; }
+.follow { background: var(--paper); color: var(--ink); font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; padding: 18px 30px; border-radius: 18px; }
+.comment { flex: 1; height: 100px; border-radius: 50px; background: var(--paper); color: var(--ink); display: flex; align-items: center; padding: 0 36px; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; letter-spacing: .02em; }
+.dm { position: absolute; left: 80px; right: 80px; top: 980px; height: 120px; border-radius: 24px; background: var(--blue); display: flex; align-items: center; gap: 24px; padding: 0 32px; }
+.env { width: 66px; height: 50px; border-radius: 9px; background: #fff; position: relative; flex: none; overflow: hidden; }
+.env::after { content: ""; position: absolute; left: 9px; top: -26px; width: 48px; height: 48px; border: 5px solid var(--blue); transform: rotate(45deg); border-radius: 4px; }
+.dm b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 38px; }
+.book { position: absolute; left: 80px; right: 80px; top: 1140px; font-size: 32px; font-weight: 600; color: #C9CED8; }
+.book b { color: var(--paper); }
+</style>
+</head>
+<body>
+
+<!-- 1 · cover -->
+<section class="slide" id="s1">
+  <div class="label mono">@vish.workflows</div>
+  <h1 class="disp">Hi, I'm Vish.</h1>
+  <p class="sub">I build <em>AI agents</em> that take everyday tasks off your plate.</p>
+  <div class="tag mono">For growing businesses · worldwide</div>
+  <div class="panel"><img src="vish_hi.png" alt=""></div>
+  <div class="foot mono"><span>1 / 5</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 2 · problem -->
+<section class="slide" id="s2">
+  <div class="label mono">The problem</div>
+  <h1 class="disp">Small jobs keep <em>interrupting</em> your day.</h1>
+  <div class="rows">
+    <div class="row card"><span class="ico"></span><b>Enquiries</b><small>reply today</small><span class="badge">3</span></div>
+    <div class="row card"><span class="ico"></span><b>Follow-ups</b><small>overdue</small><span class="badge">5</span></div>
+    <div class="row card"><span class="ico"></span><b>Documents</b><small>to check</small><span class="badge">3</span></div>
+    <div class="row card"><span class="ico"></span><b>Team updates</b><small>waiting</small><span class="badge">2</span></div>
+  </div>
+  <p class="note" style="top:1090px">Each one is small. Together, they pull you away from growing the business.</p>
+  <div class="foot mono"><span>2 / 5</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 3 · the agent -->
+<section class="slide" id="s3">
+  <div class="label mono">The fix</div>
+  <h1 class="disp">One <em>AI agent</em>, connected to your tools.</h1>
+  <div id="hub">
+    <svg viewBox="0 0 1080 440"><line x1="540" y1="220" x2="230" y2="70"/><line x1="540" y1="220" x2="850" y2="70"/><line x1="540" y1="220" x2="230" y2="370"/><line x1="540" y1="220" x2="850" y2="370"/></svg>
+    <div class="node mono" style="left:80px;top:20px"><i></i>Inbox</div>
+    <div class="node mono" style="left:700px;top:20px"><i></i>CRM</div>
+    <div class="node mono" style="left:80px;top:320px"><i></i>Documents</div>
+    <div class="node mono" style="left:700px;top:320px"><i></i>Team chat</div>
+    <div class="agent"><b>AI</b><span class="mono">Agent</span></div>
+  </div>
+  <div class="caps">
+    <div class="cap"><span class="n">1</span>Captures enquiries and drafts replies</div>
+    <div class="cap"><span class="n">2</span>Sends timely follow-ups</div>
+    <div class="cap"><span class="n">3</span>Summarises documents for checking</div>
+    <div class="cap"><span class="n">4</span>Keeps your team updated</div>
+  </div>
+  <div class="foot mono"><span>3 / 5</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 4 · control -->
+<section class="slide" id="s4">
+  <div class="label mono">You stay in control</div>
+  <h1 class="disp">It runs on <em>your rules.</em></h1>
+  <div class="pillars" style="top:400px">
+    <div class="pillar"><b>Connected tools</b><span>Works inside the inbox, CRM and apps you already use.</span></div>
+    <div class="pillar"><b>Clear rules</b><span>You decide when it acts, what it does and when it stops.</span></div>
+    <div class="pillar"><b>Human approval</b><span>Replies, payments and anything unusual wait for a person.</span></div>
+  </div>
+  <div class="approve card" style="top:1010px"><div class="who"></div><div><div class="k mono">AI draft · new lead</div><div class="v">Ready for your review</div></div><div class="btn">✓ Approve</div></div>
+  <div class="foot mono"><span>4 / 5</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 5 · cta -->
+<section class="slide" id="s5">
+  <div class="label mono">Your turn</div>
+  <h1 class="disp">Want an AI agent built for <em>your business?</em></h1>
+  <div class="step" style="top:560px"><span class="num">1</span><img class="av" src="avatar.png" alt=""><span class="h">Follow<br>@vish.workflows</span><span class="follow">Follow</span></div>
+  <div class="step" style="top:720px"><span class="num">2</span><span class="h" style="flex:none;width:300px">Comment</span><span class="comment">WORKFLOW</span></div>
+  <div class="note" style="top:860px;font-size:32px">Follow first, so my reply can reach your DMs.</div>
+  <div class="dm"><span class="env"></span><b>I'll send you the workflow guide</b></div>
+  <p class="book">Prefer to talk? <b>Book a free discovery call</b><br>(link in bio).</p>
+  <div class="foot mono"><span>5 / 5</span><span>Save this for later</span></div>
+</section>
+
+</body>
+</html>
