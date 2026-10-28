@@ -35,7 +35,8 @@ The HyperFrames desktop app is a nicer way to keep editing visually: <https://hy
 | Voiceover | Kokoro-82M, voice `hm_omega` (Indian English male) at natural 1.0× speed (the call to action at 1.1×; set per scene with `speed` in `tools/script.json`), one clip per scene | `tools/make_vo.py` (needs `pip install kokoro-onnx soundfile`) |
 | Word timings | Parakeet TDT 0.6B via `npx hyperframes transcribe --engine parakeet`, aligned to the script's exact wording | `tools/analyze_voice.py` |
 | Captions and mouth shapes | Caption groups of 2–5 words; six mouth shapes per frame from the audio | `tools/analyze_voice.py` → `tools/timing.json`, `captions.srt` |
-| Presenter | Original pixel-art sprite drawn in code (body, head, 3 eye states, 2 brow states, 6 mouths), 10× nearest-neighbour | `tools/make_sprite.py` |
+| Presenter | Original pixel-art character drawn in code, loosely inspired by a reference face (short curly hair, thin mustache curving down at the corners, light-brown skin). Layers: body, head, 3 eye states, 2 brow states, 6 mouths and a mustache layer above them, at 10× nearest-neighbour | `tools/make_sprite.py` |
+| Instagram profile picture | The same character, face centred for the circular crop | `tools/make_profile.py` → `branding/instagram_profile_picture.png` |
 | Music | MusicGen-small (Meta, run locally): original 110 BPM electronic bed, looped on bar lines | `tools/gen_music.py`, `tools/make_music.py` |
 | Ducking | Music dips 9 dB under speech (60 ms attack, 350 ms release) | `tools/mix.py` |
 | Sound effects | 11 effects from the HyperFrames bundle, Pixabay Content License (`assets/audio/sfx/CREDITS.md`) | cues in `project.config.json` |
