@@ -1,0 +1,31 @@
+{
+ "duration": 34.0,
+ "beats": [0.0, 3.3, 5.2, 6.6, 8.0, 10.2, 12.45, 14.65, 16.05, 17.25, 19.1, 21.1, 22.5, 23.9, 25.1, 26.2, 27.6, 29.2, 31.0, 32.6],
+ "lines": [
+  {"id":"l00","t":0.15,"char":"stick","text":"I'll start my startup… when the time is perfect."},
+  {"id":"l01","t":3.45,"char":"stick","text":"Next Monday. Definitely."},
+  {"id":"l02","t":5.35,"char":"stick","text":"Sir! Fund my idea!"},
+  {"id":"l03","t":6.7,"char":"investor","text":"What's the idea?"},
+  {"id":"l04","t":8.05,"char":"stick","text":"…I'm still thinking."},
+  {"id":"l05","t":10.3,"char":"mentor","text":"Have you talked to any customers?"},
+  {"id":"l06","t":12.5,"char":"stick","text":"I told my mom. She loves it."},
+  {"id":"l07","t":14.8,"char":"fairy","text":"I'm here! I'll stay forever!"},
+  {"id":"l08","t":16.3,"char":"stick","text":"…She lied."},
+  {"id":"l09","t":17.4,"char":"stick","text":"Nobody's coming, huh?"},
+  {"id":"l10","t":19.25,"char":"ant","text":"Bro, I'm 2mm tall and I'm building."},
+  {"id":"l11","t":21.35,"char":"stick","text":"…Respect."},
+  {"id":"l12","t":22.85,"char":"stick","text":"Okay. Let's go."},
+  {"id":"l14","t":25.2,"char":"cust1","text":"Take my money!"},
+  {"id":"l15a","t":26.25,"char":"cust2","text":"Me too! Me too!"},
+  {"id":"l15b","t":26.35,"char":"cust3","text":""},
+  {"id":"l15c","t":26.55,"char":"cust4","text":""},
+  {"id":"l16","t":27.7,"char":"investor","text":"Wait! Can I invest now?"},
+  {"id":"l17","t":29.3,"char":"stick","text":"Sorry. We're busy building."},
+  {"id":"l19","t":32.75,"char":"ant","text":"Told you."}
+ ],
+ "sfx": {
+  "flip": [3.3, 3.62, 3.95], "trombone": 9.33, "slap": 14.35, "sparkle": 14.65, "poof": 16.05,
+  "ding": 21.15, "scratch": 22.5, "typing": [23.9, 25.05], "chaching": 26.0, "horn": 29.05, "drop": 29.45
+ },
+ "music": {"lazy": [0.0, 17.25], "pause": [6.6, 7.3], "sad": [17.25, 22.5], "hype": [22.85, 31.0], "end": [31.0, 34.0]}
+}
