@@ -8,7 +8,9 @@
 | Instagram display name | **Vish \| AI Automation** |
 | Username | **@vish.workflows** |
 | Audience | Business owners and small teams worldwide: India, Gulf, UK, US and beyond |
-| Promise | "I build AI workflows that run your business on autopilot", with a human always in the loop |
+| Promise | "I build AI agents that help businesses scale": automating leads, follow-ups, documents and ops, with a human always in control |
+| Booking | Free 15-min call: https://cal.com/vishworkflows/15min (Cal.com name "Vish \| AI Automation") |
+| Support email | support@sritrilinga.com (only place the company domain appears outside captions) |
 | Backend business | Sri Trilinga Technologies Private Limited (named **only** at the end of reel captions, for SEO) |
 | Account type | Instagram **Business** account, category *Information Technology Company* |
 | On-screen label | `@VISH.WORKFLOWS · AI AUTOMATION` (monospace, letter-spaced) |
@@ -23,10 +25,12 @@
 
 ```
 Hi, I'm Vish 👋
-I build AI workflows that run your business on autopilot ⚙️
-🌍 Working with businesses worldwide
+I build AI agents that help businesses scale 🚀
+⚙️ Automate leads, follow-ups & ops
 💬 Comment "WORKFLOW" on any reel 👇
 ```
+
+Cal.com bio: "I build AI agents and automations for growing businesses: they handle enquiries, follow-ups, documents and team updates, so your team can focus on scaling. Book a free 15-min call and we'll map the first AI agent for your business. Support: support@sritrilinga.com"
 
 Link in bio: the SuperProfile page, titled **"Get your free workflow →"**.
 

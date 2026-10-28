@@ -75,6 +75,13 @@ ol.do { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 .reply { font-family: var(--mono); font-weight: 700; font-size: 15px; background: var(--paper); color: var(--ink); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; }
 .reply small { font-weight: 500; color: #4E5666; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
 .note { color: var(--muted); font-size: 14px; }
+.book { justify-self: start; display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 19px; padding: 15px 22px; border-radius: 14px; }
+.book:hover { background: #3A6BFF; }
+.alt { display: grid; gap: 14px; border-top: 1px solid var(--line); padding-top: 16px; }
+.alt-row { display: grid; gap: 6px; }
+.mail { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mail span { font-family: var(--mono); font-weight: 700; font-size: 16px; user-select: all; word-break: break-all; }
+.mail button { font: 600 13px var(--body); color: var(--ink); background: var(--paper); border: 0; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
 footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
 
 @media (max-width: 620px) {
@@ -203,10 +210,16 @@ footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
 
   <div class="cta" id="build">
     <div class="label">Want it built for you?</div>
-    <h2>I'll build this workflow around your business.</h2>
-    <p>Reply to my DM with the word <strong>BUILD</strong> and three quick answers:</p>
-    <div class="reply"><small>Copy, fill in, send</small>BUILD — 1) my business: … 2) tools I use: … 3) the task that eats my time: …</div>
-    <p class="note">I'll map your workflow and suggest the first automation to set up. Every workflow keeps a person in charge of what matters.</p>
+    <h2>I'll build AI agents around your business.</h2>
+    <p>Pick the slot that suits you. We'll map the one workflow that frees up the most time, so your team can focus on scaling.</p>
+    <a class="book" href="https://cal.com/vishworkflows/15min" target="_blank" rel="noopener">Book a free 15-min call →</a>
+    <p class="note">Times show in your own time zone. Calls are online, and work for clients anywhere in the world.</p>
+    <div class="alt">
+      <div class="alt-row"><span class="label">Prefer to chat?</span><p>Reply <strong>BUILD</strong> to my DM with your business, the tools you use and the task that eats your time.</p></div>
+      <div class="alt-row"><span class="label">Support</span>
+        <div class="mail"><span id="mail">support@sritrilinga.com</span><button type="button" id="copy">Copy</button></div>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -214,3 +227,11 @@ footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
     <span class="label">Follow for more automation ideas</span>
   </footer>
 </div>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, t = document.getElementById('mail').textContent;
+  function done(msg) { b.textContent = msg; setTimeout(function () { b.textContent = 'Copy'; }, 1600); }
+  function select() { var r = document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+  try { navigator.clipboard.writeText(t).then(function () { done('Copied'); }, select); } catch (e) { select(); }
+});
+</script>
