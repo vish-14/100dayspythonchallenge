@@ -18,7 +18,7 @@ script = [
     {"id": "agent", "label": "AI AGENT", "say": AGENT,
      "text": "Here's how one AI agent helps. | It replies to enquiries, | follows up on time, | summarises documents, | "
              "and keeps your team updated. | You approve what matters."},
-    {"id": "cta", "label": "YOUR TURN", "speed": 1.1,
+    {"id": "cta", "label": "YOUR TURN", "speed": 1.05,
      "say": "Want it built for your business? Follow me and comment, workflow. I'll send the details to your DMs.",
      "text": "Want it built | for your business? | Follow me | and comment “WORKFLOW”. | I'll send the details | to your DMs."},
 ]
@@ -26,7 +26,11 @@ json.dump(script, open("tools/script.json", "w"), indent=1, ensure_ascii=False)
 
 # 1. voice, word timings, captions and mouth shapes
 run("python3", "make_vo.py", cwd="tools")
-shutil.move("tools/voiceover.wav", "assets/audio/voiceover.wav")
+# clarity for phone speakers: cut rumble and mud, lift presence a little
+run("ffmpeg", "-y", "-v", "error", "-i", "tools/voiceover.wav", "-af",
+    "highpass=f=80,equalizer=f=250:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.2:g=3,alimiter=limit=0.89",
+    "-ar", "24000", "assets/audio/voiceover.wav")
+os.remove("tools/voiceover.wav")
 run("npx", "hyperframes", "transcribe", "assets/audio/voiceover.wav", "--engine", "parakeet", "--json",
     stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 shutil.copy("assets/audio/transcript.json", "tools/words_raw.json")

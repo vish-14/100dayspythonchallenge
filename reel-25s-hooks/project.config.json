@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 22.7,
+    "duration": 23.2,
     "output": "ai_agent_four_tasks.mp4"
   },
   "brand": {
@@ -42,8 +42,8 @@
   "audio": {
     "voice_volume": 1.0,
     "music_volume": 1.0,
-    "duck_db": -9.0,
-    "music_base_db": -2.0
+    "duck_db": -12.0,
+    "music_base_db": -4.0
   },
   "scenes": [
     {

@@ -70,7 +70,7 @@
   <script>
     (() => {
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
-      const VIS = "rrrrraaaaaaarroooaaaaoooorrrrreeaaaaaaaaaaaaarrrraaaaeeeeeerrrrrrrrrrrraaooaaaoooaaaaaaaaeeebbrrraaammoooorrrrrrrrrrrrrraaaaaaaaaaaaaaaoooaaaaarrrrrreeaaaaaaaaaabbrrrraaaaeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrraaaaaaaaaaaarrraaaaoorrrraaaaaaaaaabbbrrrrrrrrrrrrrraaaaaaaaaaaaaaarrrraaaooooaaaaaeeeerrrrrrrrrrrrrrraaooaaaaaaaaeeaaaarrraaaarrrrraaooorrrrrrrrroorrrraaarrrrrrrrrrraaaaaaarrrrraaaaeemmrrrrrrrrrrrrrrooaaarrrrraaaaaaaaarrooeeeemmmrrrrrrrrrrrrrrrrrrrrraaaaaaammmaaaarrrraaaaaaaaaaaaaooaaaarrrrrrrrrrrraaaaaaaaaooaaaarrrroorrraaaaaaaaoorrrrrraaarrrrrbbmmrrrrrrrrrrrrraaammmmaaaoooooooaaaaaaaaaaaaarrrraaaaaaeeeeeeeemmrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8], BROWS = [0.08, 13.52], MOVES = [[4.06, -10, 0], [10, 10, 0], [13.28, 0, 0]];
+      const VIS = "rrrraaaaaeemmmaaaaooorrraabbbbaaaaabbbbbbbbbbbbbrrrrrrraaaooooommmoommmbbbooobbbbaaaaaarrmmrrrrrrrrrrrrrrraaaaaaaaaaaaooooaaaaaoooorrraaabbbbbbbbbbbbbbbbbeebbmmmmaaaarrreeeerrrrrrrrrrrrraaooaammmmaaaaaaaaaaaaabboommmmaaaaaaaooommmmmeeerrrrrrrrmmmaaaaabbooeeaaaaaabbbooooeeebbaaabbmmmmmrrrrrrrrrrraaaaaooooobbbbbeeeeeeemmaaaaaarrrrooooommmmooooooooooeeeeeeeeeeoooooobbbrrrraaabbmmmrrrrrrrrrrrrrrrrrrrbbaaaammmooooommmaaaaaooaaaaaammrrrrreeerrrrrrrrrrrrrrraaaaaammmaaaaaaaaaaoobboooooaaaeemmmmmeeeerrrrrrrrrrrrraaaaaaaaaooobbbbbbboooeeeaaaaoobbbrrrraaaarrmmmmbbbbrrrrrrrrrrrrrraaaaaaeeaaaoobbbbbbboooeeebbboooeeeeeooooommmbbbbbbbbaabbbrrrrreerr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8], BROWS = [0.08, 13.36], MOVES = [[3.568, -10, 0], [9.76, 10, 0], [13.04, 0, 0]];
       const tl = gsap.timeline({ paused: true });
       const $ = (id) => document.getElementById(id);
       const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };
@@ -80,7 +80,7 @@
 
       // IN < 0: the presenter is on screen from the first frame
       if (-1.000 >= 0) tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, -1.000);
-      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 14.956 - 0.4);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 14.912 - 0.4);
 
       function render() {
         const t = tl.time();
@@ -100,7 +100,7 @@
         head.style.translate = `${dx}px ${dy}px`;
       }
       const drive = { p: 0 };
-      tl.to(drive, { p: 1, duration: 22.700, ease: "none", onUpdate: render }, 0);
+      tl.to(drive, { p: 1, duration: 23.200, ease: "none", onUpdate: render }, 0);
       render();
       window.__timelines["presenter"] = tl;
     })();

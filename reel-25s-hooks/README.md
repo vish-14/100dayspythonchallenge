@@ -1,6 +1,6 @@
 # 25-second re-cut: three hook versions
 
-The same reel with three different opening lines, made to test as Instagram **Trial Reels** (shown only to non-followers). Each is about 23 s, 1080 × 1920, 30 fps. Vish is on screen and speaking from the first frame. The hook text is readable on frame 0, and the four task chips pop in within the first second.
+The same reel with three different opening lines, made to test as Instagram **Trial Reels** (shown only to non-followers). Each is about 23–24 s, voiced in the "Vish warm voice" (Kokoro am_michael, with light clarity EQ), 1080 × 1920, 30 fps. Vish is on screen and speaking from the first frame. The hook text is readable on frame 0, and the four task chips pop in within the first second.
 
 | File | Hook (on screen and spoken) | Style |
 | --- | --- | --- |

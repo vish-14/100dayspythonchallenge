@@ -80,7 +80,7 @@
   </div>
   <script>
     (() => {
-      const W = {"heres": 0.15, "heres_end": 0.51, "how": 0.51, "how_end": 0.75, "one": 0.75, "one_end": 0.91, "ai": 1.07, "ai_end": 1.63, "agent": 1.63, "agent_end": 2.11, "helps": 2.11, "helps_end": 2.75, "it": 2.75, "it_end": 2.91, "replies": 2.91, "replies_end": 3.39, "to": 3.39, "to_end": 3.63, "enquiries": 3.63, "enquiries_end": 4.59, "follows": 4.59, "follows_end": 5.07, "up": 5.07, "up_end": 5.31, "on": 5.31, "on_end": 5.55, "time": 5.55, "time_end": 6.19, "summarises": 6.19, "summarises_end": 7.07, "documents": 7.07, "documents_end": 7.71, "and": 7.71, "and_end": 7.87, "keeps": 7.87, "keeps_end": 8.19, "your": 8.19, "your_end": 8.35, "team": 8.35, "team_end": 8.67, "updated": 8.67, "updated_end": 9.47, "you": 9.47, "you_end": 9.71, "approve": 9.71, "approve_end": 10.19, "what": 10.19, "what_end": 10.43, "matters": 10.43, "matters_end": 11.15};
+      const W = {"heres": 0.15, "heres_end": 0.442, "how": 0.442, "how_end": 0.762, "one": 0.762, "one_end": 1.002, "ai": 1.002, "ai_end": 1.562, "agent": 1.562, "agent_end": 2.042, "helps": 2.042, "helps_end": 2.762, "it": 2.762, "it_end": 3.002, "replies": 3.002, "replies_end": 3.482, "to": 3.482, "to_end": 3.722, "enquiries": 3.722, "enquiries_end": 4.762, "follows": 4.762, "follows_end": 5.242, "up": 5.242, "up_end": 5.482, "on": 5.482, "on_end": 5.802, "time": 5.802, "time_end": 6.202, "summarises": 6.442, "summarises_end": 7.322, "documents": 7.322, "documents_end": 7.882, "and": 7.882, "and_end": 8.122, "keeps": 8.122, "keeps_end": 8.362, "your": 8.362, "your_end": 8.522, "team": 8.522, "team_end": 8.842, "updated": 8.842, "updated_end": 9.722, "you": 9.722, "you_end": 10.042, "approve": 10.042, "approve_end": 10.522, "what": 10.522, "what_end": 10.762, "matters": 10.762, "matters_end": 11.562};
       const tl = gsap.timeline({ paused: true });
       // "Here's how one AI agent helps": the agent appears with its four tools
       tl.fromTo("#ag-agent", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, W.heres - 0.1);
@@ -104,7 +104,7 @@
       tl.to("#ag-btn", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
       tl.set("#ag-b1", { opacity: 0 }, W.approve + 0.11); tl.set("#ag-b2", { opacity: 1 }, W.approve + 0.11);
       tl.to("#ag-btn", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.11);
-      tl.fromTo("#agent-prog", { scaleX: 0.1678 }, { scaleX: 0.6589, duration: 11.146, ease: "none" }, 0);
+      tl.fromTo("#agent-prog", { scaleX: 0.1430 }, { scaleX: 0.6428, duration: 11.594, ease: "none" }, 0);
       window.__timelines["agent"] = tl;
     })();
   </script>

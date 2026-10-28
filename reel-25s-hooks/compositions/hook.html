@@ -56,7 +56,7 @@
   </div>
   <script>
     (() => {
-      const W = {"what": 0.08, "what_end": 0.32, "if": 0.32, "if_end": 0.56, "one": 0.56, "one_end": 0.88, "ai": 0.88, "ai_end": 1.52, "agent": 1.52, "agent_end": 2.08, "handled": 2.08, "handled_end": 2.64, "your": 2.64, "your_end": 2.8, "daily": 2.8, "daily_end": 3.12, "admin": 3.12, "admin_end": 3.92};
+      const W = {"what": 0.08, "what_end": 0.24, "if": 0.24, "if_end": 0.48, "one": 0.48, "one_end": 0.72, "ai": 0.72, "ai_end": 1.2, "agent": 1.2, "agent_end": 1.68, "handled": 1.68, "handled_end": 2.08, "your": 2.08, "your_end": 2.24, "daily": 2.24, "daily_end": 2.64, "admin": 2.64, "admin_end": 3.36};
       const tl = gsap.timeline({ paused: true });
       // the hook text is fully readable from frame 0; "*word*" marks a highlighted word, "|" a line break
       const NUM = { "4": "four", "1": "one" };
@@ -82,7 +82,7 @@
       // movement inside the first second: the four everyday tasks pop in with their unread counts
       tl.fromTo(".hk-chip", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.09, ease: "back.out(2)" }, 0.12);
       tl.fromTo(".hk-chip i", { scale: 0 }, { scale: 1, duration: 0.22, stagger: 0.09, ease: "back.out(3)" }, 0.45);
-      tl.fromTo("#hook-prog", { scaleX: 0.0000 }, { scaleX: 0.1678, duration: 3.810, ease: "none" }, 0);
+      tl.fromTo("#hook-prog", { scaleX: 0.0000 }, { scaleX: 0.1430, duration: 3.318, ease: "none" }, 0);
       window.__timelines["hook"] = tl;
     })();
   </script>
