@@ -67,11 +67,11 @@ you've approved in advance.
 Third, it pulls key details
 
 18
-00:00:28,730 --> 00:00:29,680
+00:00:28,730 --> 00:00:29,620
 from documents
 
 19
-00:00:29,690 --> 00:00:30,960
+00:00:29,620 --> 00:00:30,960
 and prepares summaries
 
 20
@@ -103,11 +103,11 @@ It works through
 your connected tools
 
 27
-00:00:39,210 --> 00:00:40,340
+00:00:39,210 --> 00:00:40,400
 and clear rules,
 
 28
-00:00:40,340 --> 00:00:41,440
+00:00:40,410 --> 00:00:41,440
 and people approve
 
 29
@@ -115,14 +115,26 @@ and people approve
 what matters.
 
 30
-00:00:42,604 --> 00:00:44,320
-Want an AI agent
+00:00:42,604 --> 00:00:44,160
+Want this AI agent
 
 31
-00:00:44,330 --> 00:00:45,920
-like this for your business?
+00:00:44,170 --> 00:00:45,440
+built for your business?
 
 32
-00:00:45,930 --> 00:00:48,620
-Contact Sri Trilinga Technologies.
+00:00:45,450 --> 00:00:46,080
+Follow me
+
+33
+00:00:46,090 --> 00:00:47,760
+and comment “WORKFLOW”,
+
+34
+00:00:47,770 --> 00:00:49,200
+and I'll send you the details
+
+35
+00:00:49,210 --> 00:00:50,460
+in your DMs.
 

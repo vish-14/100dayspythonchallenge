@@ -57,12 +57,12 @@
     "id": "w9",
     "text": "documents,",
     "start": 5.68,
-    "end": 6.24
+    "end": 6.16
   },
   {
     "id": "w10",
     "text": "and",
-    "start": 6.24,
+    "start": 6.16,
     "end": 6.4
   },
   {
@@ -141,12 +141,12 @@
     "id": "w23",
     "text": "AI",
     "start": 11.76,
-    "end": 12.24
+    "end": 12.32
   },
   {
     "id": "w24",
     "text": "agent",
-    "start": 12.24,
+    "start": 12.32,
     "end": 12.72
   },
   {
@@ -183,7 +183,7 @@
     "id": "w30",
     "text": "First,",
     "start": 14.24,
-    "end": 14.8
+    "end": 14.72
   },
   {
     "id": "w31",
@@ -321,7 +321,7 @@
     "id": "w53",
     "text": "you've",
     "start": 24.88,
-    "end": 25.2
+    "end": 25.12
   },
   {
     "id": "w54",
@@ -381,7 +381,7 @@
     "id": "w63",
     "text": "documents",
     "start": 28.96,
-    "end": 29.68
+    "end": 29.6
   },
   {
     "id": "w64",
@@ -465,12 +465,12 @@
     "id": "w77",
     "text": "by",
     "start": 34.56,
-    "end": 34.8
+    "end": 34.72
   },
   {
     "id": "w78",
     "text": "sharing",
-    "start": 34.8,
+    "start": 34.72,
     "end": 35.28
   },
   {
@@ -553,9 +553,9 @@
   },
   {
     "id": "w92",
-    "text": "rules",
+    "text": "rules,",
     "start": 39.76,
-    "end": 40.24
+    "end": 40.4
   },
   {
     "id": "w93",
@@ -585,84 +585,138 @@
     "id": "w97",
     "text": "matters.",
     "start": 41.68,
-    "end": 42.56
+    "end": 42.48
   },
   {
     "id": "w98",
     "text": "Want",
-    "start": 42.56,
-    "end": 42.88
+    "start": 42.48,
+    "end": 42.8
   },
   {
     "id": "w99",
-    "text": "an",
-    "start": 43.04,
-    "end": 43.28
+    "text": "this",
+    "start": 42.88,
+    "end": 43.2
   },
   {
     "id": "w100",
     "text": "AI",
-    "start": 43.28,
-    "end": 43.84
+    "start": 43.2,
+    "end": 43.68
   },
   {
     "id": "w101",
     "text": "agent",
-    "start": 43.84,
-    "end": 44.32
+    "start": 43.68,
+    "end": 44.16
   },
   {
     "id": "w102",
-    "text": "like",
-    "start": 44.32,
-    "end": 44.64
+    "text": "built",
+    "start": 44.16,
+    "end": 44.48
   },
   {
     "id": "w103",
-    "text": "this",
-    "start": 44.64,
-    "end": 44.88
+    "text": "for",
+    "start": 44.48,
+    "end": 44.64
   },
   {
     "id": "w104",
-    "text": "for",
-    "start": 44.88,
-    "end": 45.04
+    "text": "your",
+    "start": 44.64,
+    "end": 44.8
   },
   {
     "id": "w105",
-    "text": "your",
-    "start": 45.04,
-    "end": 45.28
+    "text": "business?",
+    "start": 44.8,
+    "end": 45.44
   },
   {
     "id": "w106",
-    "text": "business,",
-    "start": 45.28,
+    "text": "Follow",
+    "start": 45.44,
     "end": 45.92
   },
   {
     "id": "w107",
-    "text": "contact",
+    "text": "me",
     "start": 45.92,
-    "end": 46.48
+    "end": 46.08
   },
   {
     "id": "w108",
-    "text": "Sri",
-    "start": 46.48,
-    "end": 46.8
+    "text": "and",
+    "start": 46.08,
+    "end": 46.32
   },
   {
     "id": "w109",
-    "text": "Trilinga",
-    "start": 46.96,
-    "end": 47.52
+    "text": "comment,",
+    "start": 46.32,
+    "end": 47.04
   },
   {
     "id": "w110",
-    "text": "Technologies.",
-    "start": 47.68,
-    "end": 48.32
+    "text": "workflow,",
+    "start": 47.04,
+    "end": 47.76
+  },
+  {
+    "id": "w111",
+    "text": "and",
+    "start": 47.76,
+    "end": 48
+  },
+  {
+    "id": "w112",
+    "text": "I'll",
+    "start": 48,
+    "end": 48.24
+  },
+  {
+    "id": "w113",
+    "text": "send",
+    "start": 48.24,
+    "end": 48.48
+  },
+  {
+    "id": "w114",
+    "text": "you",
+    "start": 48.48,
+    "end": 48.64
+  },
+  {
+    "id": "w115",
+    "text": "the",
+    "start": 48.64,
+    "end": 48.72
+  },
+  {
+    "id": "w116",
+    "text": "details",
+    "start": 48.72,
+    "end": 49.2
+  },
+  {
+    "id": "w117",
+    "text": "in",
+    "start": 49.2,
+    "end": 49.36
+  },
+  {
+    "id": "w118",
+    "text": "your",
+    "start": 49.36,
+    "end": 49.52
+  },
+  {
+    "id": "w119",
+    "text": "DMs.",
+    "start": 49.52,
+    "end": 50.16
   }
 ]

@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 50.0,
+    "duration": 52.2,
     "output": "ai_agent_four_tasks.mp4"
   },
   "brand": {
@@ -97,7 +97,7 @@
     },
     {
       "id": "cta",
-      "chapter": "GET IN TOUCH",
+      "chapter": "06 / YOUR TURN",
       "counter": "",
       "theme": "dark",
       "layout": "takeover"
@@ -238,14 +238,23 @@
       "human_v": "Replies · follow-ups · summaries"
     },
     "cta": {
-      "line1": "Want an AI agent",
-      "line1b": "like this for your",
+      "line1": "Want this AI agent",
       "line2": "business?",
-      "label": "CONTACT",
-      "co1": "Sri Trilinga",
-      "co2": "Technologies",
-      "email": "support@sritrilinga.com",
-      "note": "Tell us which task takes up most of your day."
+      "comments": "COMMENTS",
+      "user": "you",
+      "typed": "WORKFLOW",
+      "reply_k": "VISH · JUST NOW",
+      "reply": "Here's your workflow guide ✓",
+      "pill_a": "FOLLOW + COMMENT",
+      "pill_b": "“WORKFLOW”",
+      "pill_c": "",
+      "follow": "Follow",
+      "following": "Following ✓",
+      "follow_sub": "@vish.workflows",
+      "step1": "STEP 1",
+      "step2": "STEP 2",
+      "dm_note": "Follow first, so my reply can reach your DMs",
+      "line1b": "built for your"
     }
   },
   "sfx": [
@@ -430,10 +439,34 @@
       "volume": 0.4
     },
     {
-      "file": "pop.mp3",
-      "word": "cta:Contact",
-      "offset": 0,
-      "volume": 0.35
+      "file": "whoosh-short.mp3",
+      "word": "cta:Follow",
+      "offset": -0.2,
+      "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:me",
+      "offset": 0.2,
+      "volume": 0.5
+    },
+    {
+      "file": "key-press.mp3",
+      "word": "cta:comment",
+      "offset": 0.1,
+      "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:workflow",
+      "offset": 0.55,
+      "volume": 0.5
+    },
+    {
+      "file": "notification.mp3",
+      "word": "cta:DMs.",
+      "offset": 0.0,
+      "volume": 0.25
     }
   ]
 }

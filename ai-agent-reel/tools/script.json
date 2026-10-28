@@ -43,8 +43,9 @@
  },
  {
   "id": "cta",
-  "label": "GET IN TOUCH",
-  "say": "Want an AI agent like this for your business? Contact Shree Trilinga Technologies.",
-  "text": "Want an AI agent | like this for your business? | Contact Sri Trilinga Technologies."
+  "label": "YOUR TURN",
+  "speed": 1.1,
+  "say": "Want this AI agent built for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
+  "text": "Want this AI agent | built for your business? | Follow me | and comment “WORKFLOW”, | and I'll send you the details | in your DMs."
  }
 ]

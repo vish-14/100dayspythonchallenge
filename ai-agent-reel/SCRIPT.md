@@ -1,6 +1,6 @@
 # Four everyday tasks. One AI agent.
 
-A 50-second vertical reel (1080 × 1920, 30 fps). The voice is Kokoro `hm_omega` at 1.0× speed throughout. Captions in `ai_agent_four_tasks.srt` are timed from the real voiceover.
+A 52-second vertical reel for @vish.workflows (1080 × 1920, 30 fps). The voice is Kokoro `hm_omega`: 1.0× for the explainer and 1.1× for the call to action. Captions in `ai_agent_four_tasks.srt` are timed from the real voiceover.
 
 **Central idea:** one AI agent, connected to the inbox, CRM, documents and team chat, handles four everyday tasks. These are four capabilities of the same agent, not steps in a fixed order. It works through connected tools and clear rules, and people approve what matters.
 
@@ -14,8 +14,10 @@ A 50-second vertical reel (1080 × 1920, 30 fps). The voice is Kokoro `hm_omega`
 | 0:27 | Capability 3: Documents | Third, it pulls key details from documents, and prepares summaries for someone to check. | An agent icon with Documents lit. An invoice is scanned and its key fields separate out. They become an AI summary marked "Ready for a person to check" ✓. |
 | 0:32 | Capability 4: Team updates | Fourth, it keeps your team updated, by sharing changes with the right people. | An agent icon with Team chat lit. A task flips from In progress to Done, and the update travels to Sales, Operations and Finance. |
 | 0:37 | Oversight | It works through your connected tools and clear rules, and people approve what matters. | The full hub: every tool ticks on "connected tools". Each connection gets its rule (IF new enquiry, IF no reply · day 3, IF invoice arrives, IF status changes). A Human approval card (replies, follow-ups, summaries) links to the agent. Below, the emphasis words CONNECTED TOOLS → CLEAR RULES → PEOPLE APPROVE. |
-| 0:43 | Call to action | Want an AI agent like this for your business? Contact Sri Trilinga Technologies. | "Want an AI agent like this for your business?", then a contact card with Sri Trilinga Technologies and support@sritrilinga.com, and the line "Tell us which task takes up most of your day." Everything holds about 2 s. |
+| 0:43 | Call to action | Want this AI agent built for your business? Follow me and comment "workflow", and I'll send you the details in your DMs. | The headline "Want this AI agent built for your business?". Step 1: @vish.workflows with Follow, which turns into Following ✓. Step 2: a comment box types and posts "WORKFLOW", and the pill FOLLOW + COMMENT "WORKFLOW" appears. On "DMs" a reply from Vish arrives ("Here's your workflow guide ✓"), with the line "Follow first, so my reply can reach your DMs". The frame holds about 2 s. |
 
-**Pronunciation:** the voice reads "C R M" and "Shree Trilinga" so the TTS says them correctly. The captions show "CRM" and "Sri Trilinga". An independent speech-to-text check (Parakeet) heard "CRM" and "Sri Trilinga Technologies".
+**Pronunciation:** the voice reads "C R M" so the TTS says the letters; the captions show "CRM". An independent speech-to-text check (Parakeet) heard every word as written, including "CRM" and "workflow".
 
-**Measured audio:** −16.5 LUFS integrated, −1.6 dBFS peak, 3.2 LU loudness range. These are meter readings only; listen once before posting.
+**Funnel:** the keyword WORKFLOW matches the SuperProfile automation (followers only). The company name stays out of the video; put it at the end of the caption for SEO.
+
+**Measured audio:** −16.6 LUFS integrated, −1.6 dBFS peak. These are meter readings only; listen once before posting.

@@ -105,7 +105,7 @@
   </div>
   <script>
     (() => {
-      const W = {"enquiries": 0.15, "enquiries_end": 0.987, "followups": 1.147, "followups_end": 2.107, "documents": 2.107, "documents_end": 2.667, "and": 2.667, "and_end": 2.827, "team": 2.827, "team_end": 3.147, "updates": 3.147, "updates_end": 3.947, "handling": 3.947, "handling_end": 4.507, "them": 4.507, "them_end": 4.667, "manually": 4.827, "manually_end": 5.467, "keeps": 5.467, "keeps_end": 5.787, "interrupting": 5.787, "interrupting_end": 6.427, "your": 6.427, "your_end": 6.587, "day": 6.587, "day_end": 7.067, "heres": 7.067, "heres_end": 7.547, "how": 7.547, "how_end": 7.787, "one": 7.787, "one_end": 7.947, "ai": 8.187, "ai_end": 8.667, "agent": 8.667, "agent_end": 9.147, "can": 9.147, "can_end": 9.307, "help": 9.307, "help_end": 9.627, "with": 9.627, "with_end": 9.787, "all": 9.787, "all_end": 9.867, "four": 10.027, "four_end": 10.667};
+      const W = {"enquiries": 0.15, "enquiries_end": 0.987, "followups": 1.147, "followups_end": 2.107, "documents": 2.107, "documents_end": 2.587, "and": 2.587, "and_end": 2.827, "team": 2.827, "team_end": 3.147, "updates": 3.147, "updates_end": 3.947, "handling": 3.947, "handling_end": 4.507, "them": 4.507, "them_end": 4.667, "manually": 4.827, "manually_end": 5.467, "keeps": 5.467, "keeps_end": 5.787, "interrupting": 5.787, "interrupting_end": 6.427, "your": 6.427, "your_end": 6.587, "day": 6.587, "day_end": 7.067, "heres": 7.067, "heres_end": 7.547, "how": 7.547, "how_end": 7.787, "one": 7.787, "one_end": 7.947, "ai": 8.187, "ai_end": 8.747, "agent": 8.747, "agent_end": 9.147, "can": 9.147, "can_end": 9.307, "help": 9.307, "help_end": 9.627, "with": 9.627, "with_end": 9.787, "all": 9.787, "all_end": 9.867, "four": 10.027, "four_end": 10.667};
       const tl = gsap.timeline({ paused: true });
       // each task lands on its word, from a different direction, and settles at a slight angle
       const IN = [
@@ -141,7 +141,7 @@
       });
       tl.fromTo("#pb-agent", { boxShadow: "0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35)" },
         { boxShadow: "0 0 0 26px rgba(245,245,247,.28), 0 28px 60px rgba(4,8,20,.35)", duration: 0.3, yoyo: true, repeat: 1 }, W.four);
-      tl.fromTo("#problem-prog", { scaleX: 0.0715 }, { scaleX: 0.2851, duration: 10.683, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.0684 }, { scaleX: 0.2731, duration: 10.683, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

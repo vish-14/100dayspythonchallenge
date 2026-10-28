@@ -76,7 +76,7 @@ print(f"aligned {matched}/{len(flat)} sub-tokens from {len(raw)} transcript word
 
 # ---------------------------------------------------------------- caption groups (2–5 words)
 KEY = {"agent", "interrupting", "crm", "review", "approved", "summaries", "check", "updated", "connected", "rules", "approve",
-       "sri", "trilinga", "technologies"}
+       "follow", "workflow", "dms"}
 FUNC = {"in", "to", "the", "a", "and", "your", "when", "of", "for", "into", "can", "keep", "let"}
 groups, cur = [], []
 for i, w in enumerate(words):
