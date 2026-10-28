@@ -79,7 +79,7 @@
   </div>
   <script>
     (() => {
-      const W = {"enquiries": 0.15, "enquiries_end": 1.01, "followups": 1.01, "followups_end": 1.89, "updates": 1.89, "updates_end": 2.53, "reports": 2.53, "reports_end": 3.17, "small": 3.17, "small_end": 3.57, "jobs": 3.57, "jobs_end": 4.13, "keep": 4.13, "keep_end": 4.37, "interrupting": 4.37, "interrupting_end": 4.93, "your": 4.93, "your_end": 5.09, "day": 5.09, "day_end": 5.65};
+      const W = {"enquiries": 0.15, "enquiries_end": 1.105, "followups": 1.105, "followups_end": 1.985, "updates": 1.985, "updates_end": 2.625, "reports": 2.625, "reports_end": 3.425, "small": 3.425, "small_end": 3.825, "jobs": 3.825, "jobs_end": 4.225, "keep": 4.305, "keep_end": 4.625, "interrupting": 4.625, "interrupting_end": 5.185, "your": 5.185, "your_end": 5.345, "day": 5.345, "day_end": 5.905};
       const tl = gsap.timeline({ paused: true });
       const IN = [
         ["#pb-c1", W.enquiries, { x: -260, y: 30, rotation: -12 }, -4],
@@ -101,7 +101,7 @@
       });
       tl.fromTo("#pb-queue", { opacity: 0, scale: 0.86 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, W.interrupting + 0.22);
       tl.fromTo(["#pb-q1", "#pb-q2", "#pb-q3", "#pb-q4"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.26, stagger: 0.06, ease: "power2.out" }, W.interrupting + 0.3);
-      tl.fromTo("#problem-prog", { scaleX: 0.0998 }, { scaleX: 0.2031, duration: 5.580, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.0931 }, { scaleX: 0.1873, duration: 5.837, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

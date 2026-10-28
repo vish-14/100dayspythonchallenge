@@ -2,41 +2,41 @@
  {
   "id": "hook",
   "vo_start": 0.25,
-  "vo_end": 5.24
+  "vo_end": 5.625
  },
  {
   "id": "problem",
-  "vo_start": 5.54,
-  "vo_end": 10.77
+  "vo_start": 5.925,
+  "vo_end": 11.412
  },
  {
   "id": "a1",
-  "vo_start": 11.12,
-  "vo_end": 18.113
+  "vo_start": 11.762,
+  "vo_end": 19.369
  },
  {
   "id": "a2",
-  "vo_start": 18.463,
-  "vo_end": 24.071
+  "vo_start": 19.719,
+  "vo_end": 25.764
  },
  {
   "id": "a3",
-  "vo_start": 24.421,
-  "vo_end": 30.297
+  "vo_start": 26.114,
+  "vo_end": 32.387
  },
  {
   "id": "a4",
-  "vo_start": 30.647,
-  "vo_end": 36.094
+  "vo_start": 32.737,
+  "vo_end": 38.541
  },
  {
   "id": "key",
-  "vo_start": 36.494,
-  "vo_end": 41.617
+  "vo_start": 38.941,
+  "vo_end": 44.429
  },
  {
   "id": "cta",
-  "vo_start": 42.117,
-  "vo_end": 48.953
+  "vo_start": 44.929,
+  "vo_end": 58.089
  }
 ]

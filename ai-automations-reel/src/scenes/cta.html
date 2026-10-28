@@ -1,9 +1,13 @@
 <template>
   <style>
     {{BASE_CSS}}
-    .cta-h { position: absolute; left: 70px; font-size: 104px; }
+    .cta-h { position: absolute; left: 70px; font-size: 80px; padding-bottom: 16px; }
+    #cta-ben { position: absolute; left: 70px; top: 560px; width: 940px; }
+    .cta-bn { height: 104px; margin-bottom: 18px; border-radius: 22px; background: var(--ink-2); border: 2px solid var(--gray-line); display: flex; align-items: center; gap: 22px; padding: 0 28px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--paper); }
+    .cta-tick { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
     #cta-l1 { color: var(--paper); } #cta-l2 { color: #5C87FF; }
-    #cta-card { left: 70px; top: 642px; width: 940px; height: 300px; }
+    #cta-card { left: 70px; top: 652px; width: 940px; height: 292px; }
     .cta-av { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); flex: none; position: relative; }
     .cta-av::before { content: ""; position: absolute; left: 21px; top: 11px; width: 22px; height: 22px; border-radius: 50%; background: #fff; }
     .cta-av::after { content: ""; position: absolute; left: 12px; top: 37px; width: 40px; height: 20px; border-radius: 20px 20px 6px 6px; background: #fff; }
@@ -25,7 +29,7 @@
     #cta-note { position: absolute; left: 0; top: 1240px; width: 1080px; text-align: center; font-size: 32px; font-weight: 700; color: var(--paper); }
     .cta-num { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--paper); color: var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; }
     #cta-pill span.lt { font-weight: 700; opacity: .9; }
-    #cta-followrow { position: absolute; left: 70px; top: 520px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
+    #cta-followrow { position: absolute; left: 70px; top: 548px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
     #cta-follow { position: relative; width: 300px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
     #cta-f1, #cta-f2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; border-radius: 20px; }
     #cta-f1 { color: var(--ink); } #cta-f2 { color: var(--paper); background: var(--ink-2); border: 3px solid var(--paper); }
@@ -34,9 +38,14 @@
   </style>
   <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
     <div id="cta-bg" class="full bg-dark"></div>
-    <div class="cta-h mask" style="top:270px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>{{c.line1}}</div></div>
-    <div class="cta-h mask" style="top:378px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>{{c.line2}}</div></div>
-
+    <div class="cta-h mask" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>{{c.line1}}</div></div>
+    <div class="cta-h mask" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">{{c.line1b}}</div></div>
+    <div class="cta-h mask" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>{{c.line2}}</div></div>
+    <div id="cta-ben">
+      <div id="cta-b1" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.0}}</div>
+      <div id="cta-b2" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.1}}</div>
+      <div id="cta-b3" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.2}}</div>
+    </div>
     <div id="cta-card" class="card">
       <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;{{c.comments}} · comment “{{c.typed}}”</div>
       <div id="cta-rowA">
@@ -68,11 +77,18 @@
       const tl = gsap.timeline({ paused: true });
       // "Want this workflow?"
       tl.fromTo("#cta-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.want);
-      tl.fromTo("#cta-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.workflow - 0.05);
+      tl.fromTo("#cta-l1b", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.built - 0.05);
+      tl.fromTo("#cta-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.business - 0.05);
+      // the offer: three benefits land on the words that name them
+      [["#cta-b1", W.design], ["#cta-b2", W.automate], ["#cta-b3", W.scale]].forEach(([b, t]) => {
+        tl.fromTo(b, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, t - 0.08);
+      });
+      // then the action takes their place
+      tl.to(["#cta-b1", "#cta-b2", "#cta-b3"], { opacity: 0, x: 60, duration: 0.3, ease: "power2.in", stagger: 0.05 }, W.follow - 0.45);
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
-      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 560, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
+      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
       tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
       tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
       tl.set("#cta-f1", { opacity: 0 }, W.us + 0.31); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.31);
@@ -85,11 +101,11 @@
       tl.to("#cta-send", { scale: 0.86, duration: 0.07, yoyo: true, repeat: 1 }, W.workflow_2 + 0.55);
       tl.to("#cta-rowA", { opacity: 0, y: -10, duration: 0.18 }, W.workflow_2 + 0.65);
       tl.fromTo("#cta-posted", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out" }, W.workflow_2 + 0.75);
-      tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.below);
+      tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.comment);
       // "we'll send it straight to your inbox"
-      tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.inbox);
-      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.inbox + 0.2);
-      // after ~7 s everything holds still, so the call to action stays readable to the end
+      tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.dms);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.below + 0.2);
+      // after the last word everything holds still, so the call to action stays readable to the end
       window.__timelines["cta"] = tl;
     })();
   </script>

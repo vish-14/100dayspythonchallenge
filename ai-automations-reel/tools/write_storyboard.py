@@ -12,7 +12,7 @@ VIS = {
  "a3": "“03 / PROCESS DOCUMENTS”. An invoice arrives, a scan passes on “Extract”, four labelled fields separate out on “key details”, then page and fields collapse into an AI summary card; “Ready for the team to check” ticks on “check”.",
  "a4": "“04 / KEEP TEAMS UPDATED”. Task card flips In progress → Done on “changes”; a summary chip appears on “useful”; updates travel along wires to Sales, Operations and Finance, which confirm “Updated ✓” on “right people”.",
  "key": "Full-screen takeover. “THE KEY?” slams in, then becomes the label. The full workflow runs with ticks (CONNECTED TOOLS), rule chips land on the connectors (CLEAR RULES), then one step raises an exception that branches to a Human review card (HUMAN REVIEW). Emphasis words swap below the caption band.",
- "cta": "Full-screen call to action, held 12 s. “Want this workflow?”; a comment box types “WORKFLOW” and posts it; an inbox notification “Your workflow guide is here ✓” arrives on “inbox”; a big pill reads COMMENT “WORKFLOW” below; a cursor clicks + Follow → Following ✓ on “Follow for more”. All motion ends by about 7 s, then the frame holds to the last frame.",
+ "cta": "Full-screen call to action (unbranded), on screen about 17 s. “Want this workflow / built for your / business?”; three benefits land on their words (Designed around your tools · Busywork, automated · Built to scale with you). On “Follow us” they give way to the action: step 1 + Follow → Following ✓, step 2 a comment box types and posts “WORKFLOW”, the pill FOLLOW + COMMENT “WORKFLOW” and “Follow first, so our reply can reach your DMs”; a DM “Your workflow details are on the way ✓” arrives on “DMs”. After the last word the frame holds to the end.",
 }
 sfx = {}
 for s in cfg["sfx"]:

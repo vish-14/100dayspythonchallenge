@@ -83,7 +83,7 @@ for i, w in enumerate(words):
     comma = w["text"].endswith(",")
     pause = nxt is not None and nxt["start"] - w["end"] >= 0.15
     newscene = nxt is not None and nxt["scene"] != w["scene"]
-    if nxt is None or newscene or end_sent or (comma and len(cur) >= 2) or len(cur) >= 5 or (pause and len(cur) >= 3) or (nxt is not None and norm(nxt["text"]) == "and" and len(cur) >= 3):
+    if nxt is None or newscene or end_sent or (comma and len(cur) >= 2) or len(cur) >= 5 or (pause and len(cur) >= 3 and not (nxt is not None and nxt["text"].endswith(",") and len(cur) < 5)) or (nxt is not None and norm(nxt["text"]) == "and" and len(cur) >= 3):
         # never end a group on a small word: carry it into the next group
         carry = []
         while len(cur) > 2 and (norm(cur[-1]["text"]) in FUNC or cur[-1]["text"].lower().strip(".,") in FUNC) and not (nxt is None or newscene or end_sent):
