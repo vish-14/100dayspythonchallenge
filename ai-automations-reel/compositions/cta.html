@@ -65,11 +65,6 @@
     <div class="cta-h mask" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want this workflow</div></div>
     <div class="cta-h mask" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">built for your</div></div>
     <div class="cta-h mask" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
-    <div id="cta-ben">
-      <div id="cta-b1" class="cta-bn"><span class="cta-tick">✓</span>Designed around your tools</div>
-      <div id="cta-b2" class="cta-bn"><span class="cta-tick">✓</span>Busywork, automated</div>
-      <div id="cta-b3" class="cta-bn"><span class="cta-tick">✓</span>Built to scale with you</div>
-    </div>
     <div id="cta-card" class="card">
       <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;COMMENTS · comment “WORKFLOW”</div>
       <div id="cta-rowA">
@@ -97,28 +92,22 @@
   </div>
   <script>
     (() => {
-      const W = {"want": 0.15, "want_end": 0.421, "this": 0.421, "this_end": 0.661, "same": 0.661, "same_end": 0.981, "workflow": 0.981, "workflow_end": 1.541, "built": 1.541, "built_end": 1.861, "for": 1.861, "for_end": 2.021, "your": 2.021, "your_end": 2.181, "business": 2.181, "business_end": 2.741, "well": 2.741, "well_end": 3.141, "design": 3.141, "design_end": 3.461, "it": 3.461, "it_end": 3.621, "around": 3.621, "around_end": 3.941, "your_2": 3.941, "your_2_end": 4.101, "tools": 4.101, "tools_end": 4.741, "automate": 4.741, "automate_end": 5.221, "the": 5.221, "the_end": 5.301, "busywork": 5.301, "busywork_end": 5.701, "and": 6.021, "and_end": 6.261, "help": 6.261, "help_end": 6.501, "you": 6.501, "you_end": 6.741, "scale": 6.741, "scale_end": 7.461, "follow": 7.461, "follow_end": 7.941, "us": 7.941, "us_end": 8.341, "then": 8.341, "then_end": 8.661, "comment": 8.661, "comment_end": 9.141, "workflow_2": 9.301, "workflow_2_end": 9.941, "below": 10.101, "below_end": 10.421, "and_2": 10.661, "and_2_end": 10.901, "well_2": 10.901, "well_2_end": 11.141, "send": 11.141, "send_end": 11.381, "you_2": 11.381, "you_2_end": 11.541, "the_2": 11.541, "the_2_end": 11.701, "details": 11.701, "details_end": 12.181, "in": 12.181, "in_end": 12.341, "your_3": 12.341, "your_3_end": 12.501, "dms": 12.501, "dms_end": 13.301};
+      const W = {"want": 0.15, "want_end": 0.341, "this": 0.341, "this_end": 0.581, "workflow": 0.581, "workflow_end": 1.141, "built": 1.141, "built_end": 1.461, "for": 1.461, "for_end": 1.621, "your": 1.621, "your_end": 1.861, "business": 1.861, "business_end": 2.501, "follow": 2.501, "follow_end": 2.901, "us": 2.901, "us_end": 3.141, "and": 3.141, "and_end": 3.381, "comment": 3.381, "comment_end": 4.021, "workflow_2": 4.021, "workflow_2_end": 4.821, "and_2": 4.821, "and_2_end": 4.981, "well": 4.981, "well_end": 5.221, "send": 5.221, "send_end": 5.461, "the": 5.461, "the_end": 5.621, "details": 5.621, "details_end": 6.021, "to": 6.021, "to_end": 6.181, "your_2": 6.181, "your_2_end": 6.341, "dms": 6.341, "dms_end": 6.901};
       const tl = gsap.timeline({ paused: true });
       // "Want this workflow?"
       tl.fromTo("#cta-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.want);
       tl.fromTo("#cta-l1b", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.built - 0.05);
       tl.fromTo("#cta-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.business - 0.05);
-      // the offer: three benefits land on the words that name them
-      [["#cta-b1", W.design], ["#cta-b2", W.automate], ["#cta-b3", W.scale]].forEach(([b, t]) => {
-        tl.fromTo(b, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, t - 0.08);
-      });
-      // then the action takes their place
-      tl.to(["#cta-b1", "#cta-b2", "#cta-b3"], { opacity: 0, x: 60, duration: 0.3, ease: "power2.in", stagger: 0.05 }, W.follow - 0.45);
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
       tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
-      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
-      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
-      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.31); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.31);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.26);
       tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.us + 0.55);
       // STEP 2 · "then comment workflow below": the comment types and posts
-      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.then - 0.1);
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.and - 0.1);
       tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);
       tl.fromTo("#cta-typed", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "steps(8)" }, W.comment + 0.1);
       tl.to("#cta-ph", { opacity: 0, duration: 0.05 }, W.comment + 0.1);
@@ -128,7 +117,7 @@
       tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.comment);
       // "we'll send it straight to your inbox"
       tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.dms);
-      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.below + 0.2);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.send);
       // after the last word everything holds still, so the call to action stays readable to the end
       window.__timelines["cta"] = tl;
     })();

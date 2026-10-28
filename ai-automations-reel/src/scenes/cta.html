@@ -41,11 +41,6 @@
     <div class="cta-h mask" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>{{c.line1}}</div></div>
     <div class="cta-h mask" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">{{c.line1b}}</div></div>
     <div class="cta-h mask" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>{{c.line2}}</div></div>
-    <div id="cta-ben">
-      <div id="cta-b1" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.0}}</div>
-      <div id="cta-b2" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.1}}</div>
-      <div id="cta-b3" class="cta-bn"><span class="cta-tick">✓</span>{{c.benefits.2}}</div>
-    </div>
     <div id="cta-card" class="card">
       <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;{{c.comments}} · comment “{{c.typed}}”</div>
       <div id="cta-rowA">
@@ -79,22 +74,16 @@
       tl.fromTo("#cta-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.want);
       tl.fromTo("#cta-l1b", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.built - 0.05);
       tl.fromTo("#cta-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.business - 0.05);
-      // the offer: three benefits land on the words that name them
-      [["#cta-b1", W.design], ["#cta-b2", W.automate], ["#cta-b3", W.scale]].forEach(([b, t]) => {
-        tl.fromTo(b, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.42, ease: "expo.out" }, t - 0.08);
-      });
-      // then the action takes their place
-      tl.to(["#cta-b1", "#cta-b2", "#cta-b3"], { opacity: 0, x: 60, duration: 0.3, ease: "power2.in", stagger: 0.05 }, W.follow - 0.45);
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
       tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
-      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
-      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.25);
-      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.31); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.31);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.26);
       tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.us + 0.55);
       // STEP 2 · "then comment workflow below": the comment types and posts
-      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.then - 0.1);
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.and - 0.1);
       tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);
       tl.fromTo("#cta-typed", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "steps(8)" }, W.comment + 0.1);
       tl.to("#cta-ph", { opacity: 0, duration: 0.05 }, W.comment + 0.1);
@@ -104,7 +93,7 @@
       tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.comment);
       // "we'll send it straight to your inbox"
       tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.dms);
-      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.below + 0.2);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.send);
       // after the last word everything holds still, so the call to action stays readable to the end
       window.__timelines["cta"] = tl;
     })();

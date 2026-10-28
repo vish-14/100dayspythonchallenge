@@ -95,11 +95,11 @@ Four:
 keep everyone updated.
 
 25
-00:00:34,730 --> 00:00:36,340
+00:00:34,730 --> 00:00:36,260
 Route task changes
 
 26
-00:00:36,340 --> 00:00:37,600
+00:00:36,260 --> 00:00:37,600
 and useful summaries
 
 27
@@ -119,50 +119,30 @@ Connected tools,
 clear rules,
 
 31
-00:00:41,770 --> 00:00:42,420
+00:00:41,770 --> 00:00:42,500
 and a person
 
 32
-00:00:42,420 --> 00:00:44,869
+00:00:42,500 --> 00:00:44,869
 ready when something needs attention.
 
 33
-00:00:44,869 --> 00:00:46,640
-Want this same workflow built
+00:00:44,869 --> 00:00:46,240
+Want this workflow built
 
 34
-00:00:46,650 --> 00:00:47,520
+00:00:46,250 --> 00:00:47,280
 for your business?
 
 35
-00:00:47,530 --> 00:00:48,720
-We'll design it around
+00:00:47,290 --> 00:00:49,600
+Follow us and comment "workflow",
 
 36
-00:00:48,730 --> 00:00:49,520
-your tools,
+00:00:49,610 --> 00:00:50,800
+and we'll send the details
 
 37
-00:00:49,530 --> 00:00:50,740
-automate the busywork,
-
-38
-00:00:50,740 --> 00:00:52,240
-and help you scale.
-
-39
-00:00:52,250 --> 00:00:53,120
-Follow us,
-
-40
-00:00:53,130 --> 00:00:55,380
-then comment "workflow" below,
-
-41
-00:00:55,380 --> 00:00:56,320
-and we'll send you
-
-42
-00:00:56,330 --> 00:00:58,380
-the details in your DMs.
+00:00:50,810 --> 00:00:51,980
+to your DMs.
 

@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 62.0,
+    "duration": 54.0,
     "output": "ai_automations_sri_final.mp4"
   },
   "brand": {
@@ -251,12 +251,7 @@
       "step1": "STEP 1",
       "step2": "STEP 2",
       "dm_note": "Follow first, so our reply can reach your DMs",
-      "line1b": "built for your",
-      "benefits": [
-        "Designed around your tools",
-        "Busywork, automated",
-        "Built to scale with you"
-      ]
+      "line1b": "built for your"
     }
   },
   "sfx": [
@@ -453,24 +448,6 @@
       "volume": 0.4
     },
     {
-      "file": "pop.mp3",
-      "word": "cta:design",
-      "offset": 0.0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "cta:automate",
-      "offset": 0.0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "cta:scale.",
-      "offset": 0.0,
-      "volume": 0.3
-    },
-    {
       "file": "whoosh-short.mp3",
       "word": "cta:Follow",
       "offset": -0.2,
@@ -478,8 +455,8 @@
     },
     {
       "file": "click.mp3",
-      "word": "cta:us,",
-      "offset": 0.25,
+      "word": "cta:us",
+      "offset": 0.2,
       "volume": 0.5
     },
     {

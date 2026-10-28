@@ -66,7 +66,7 @@
   </div>
   <script>
     (() => {
-      const W = {"four": 0.15, "four_end": 0.453, "keep": 0.613, "keep_end": 0.853, "everyone": 0.853, "everyone_end": 1.253, "updated": 1.253, "updated_end": 2.133, "route": 2.133, "route_end": 2.693, "task": 2.693, "task_end": 3.093, "changes": 3.093, "changes_end": 3.653, "and": 3.813, "and_end": 4.053, "useful": 4.053, "useful_end": 4.453, "summaries": 4.453, "summaries_end": 5.013, "to": 5.013, "to_end": 5.173, "the": 5.173, "the_end": 5.333, "right": 5.333, "right_end": 5.653, "people": 5.653, "people_end": 6.213};
+      const W = {"four": 0.15, "four_end": 0.453, "keep": 0.613, "keep_end": 0.853, "everyone": 0.853, "everyone_end": 1.253, "updated": 1.253, "updated_end": 2.133, "route": 2.133, "route_end": 2.693, "task": 2.693, "task_end": 3.093, "changes": 3.093, "changes_end": 3.653, "and": 3.733, "and_end": 4.053, "useful": 4.053, "useful_end": 4.453, "summaries": 4.453, "summaries_end": 5.013, "to": 5.013, "to_end": 5.173, "the": 5.173, "the_end": 5.333, "right": 5.333, "right_end": 5.653, "people": 5.653, "people_end": 6.213};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.four - 0.04);
       tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.keep - 0.04);
@@ -91,7 +91,7 @@
         tl.to(tm, { backgroundColor: "rgba(245,245,247,.16)", borderColor: "#F5F5F7", duration: 0.2 }, t + 0.26);
         tl.fromTo(ok, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.2 }, t + 0.26);
       });
-      tl.fromTo("#a4-prog", { scaleX: 0.5256 }, { scaleX: 0.6257, duration: 6.204, ease: "none" }, 0);
+      tl.fromTo("#a4-prog", { scaleX: 0.6035 }, { scaleX: 0.7184, duration: 6.204, ease: "none" }, 0);
       window.__timelines["a4"] = tl;
     })();
   </script>

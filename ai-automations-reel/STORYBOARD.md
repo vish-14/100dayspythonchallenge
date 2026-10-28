@@ -1,6 +1,6 @@
 # AI automations reel — timestamped script and storyboard
 
-1080 × 1920, 30 fps, 62 s. Every time below comes from the real voiceover (Kokoro `hm_omega`, transcribed with Parakeet).
+1080 × 1920, 30 fps, 54 s. Every time below comes from the real voiceover (Kokoro `hm_omega`, transcribed with Parakeet).
 
 ## 00.00–05.78 s · 00 / THE OPPORTUNITY (takeover-then-split)
 
@@ -60,7 +60,7 @@
 
 **Sound:** music bed ducked −9 dB under the voice; impact-bass-1 on “Four”; click on “changes”; whoosh-short on “useful”; ping on “right”.
 
-**Captions:** 32.68 “Four:” · 33.14 “keep everyone updated.” · 34.73 “Route task changes” · 36.34 “and useful summaries” · 37.61 “to the right people.”
+**Captions:** 32.68 “Four:” · 33.14 “keep everyone updated.” · 34.73 “Route task changes” · 36.26 “and useful summaries” · 37.61 “to the right people.”
 
 ## 38.79–44.78 s · 05 / RELIABILITY (takeover)
 
@@ -70,14 +70,14 @@
 
 **Sound:** music bed ducked −9 dB under the voice; whoosh on “The”; impact-bass-1 on “key”; pop on “Connected”; pop on “clear”; click-soft on “person”.
 
-**Captions:** 38.88 “The key?” · 39.54 “Connected tools,” · 40.89 “clear rules,” · 41.77 “and a person” · 42.42 “ready when something needs attention.”
+**Captions:** 38.88 “The key?” · 39.54 “Connected tools,” · 40.89 “clear rules,” · 41.77 “and a person” · 42.50 “ready when something needs attention.”
 
-## 44.78–62.00 s · 06 / YOUR TURN (takeover)
+## 44.78–54.00 s · 06 / YOUR TURN (takeover)
 
-**Voiceover** (44.93–58.08 s): “Want this same workflow built for your business? We'll design it around your tools, automate the busywork, and help you scale. Follow us, then comment "workflow" below, and we'll send you the details in your DMs.”
+**Voiceover** (44.93–51.68 s): “Want this workflow built for your business? Follow us and comment "workflow", and we'll send the details to your DMs.”
 
-**Visual:** Full-screen call to action (unbranded), on screen about 17 s. “Want this workflow / built for your / business?”; three benefits land on their words (Designed around your tools · Busywork, automated · Built to scale with you). On “Follow us” they give way to the action: step 1 + Follow → Following ✓, step 2 a comment box types and posts “WORKFLOW”, the pill FOLLOW + COMMENT “WORKFLOW” and “Follow first, so our reply can reach your DMs”; a DM “Your workflow details are on the way ✓” arrives on “DMs”. After the last word the frame holds to the end.
+**Visual:** Full-screen call to action (unbranded), about 9 s. “Want this workflow / built for your / business?”; on “Follow us” step 1 + Follow → Following ✓; on “comment workflow” step 2 a comment box types and posts “WORKFLOW” and the pill FOLLOW + COMMENT “WORKFLOW” appears; a DM “Your workflow details are on the way ✓” arrives on “DMs”, with “Follow first, so our reply can reach your DMs”. The frame then holds about 2 s.
 
-**Sound:** music bed ducked −9 dB under the voice; whoosh on “Want”; pop on “design”; pop on “automate”; pop on “scale”; whoosh-short on “Follow”; click on “us”; key-press on “comment”; click on “workflow_2”; notification on “DMs”.
+**Sound:** music bed ducked −9 dB under the voice; whoosh on “Want”; whoosh-short on “Follow”; click on “us”; key-press on “comment”; click on “workflow_2”; notification on “DMs”.
 
-**Captions:** 44.87 “Want this same workflow built” · 46.65 “for your business?” · 47.53 “We'll design it around” · 48.73 “your tools,” · 49.53 “automate the busywork,” · 50.74 “and help you scale.” · 52.25 “Follow us,” · 53.13 “then comment "workflow" below,” · 55.38 “and we'll send you” · 56.33 “the details in your DMs.”
+**Captions:** 44.87 “Want this workflow built” · 46.25 “for your business?” · 47.29 “Follow us and comment "workflow",” · 49.61 “and we'll send the details” · 50.81 “to your DMs.”

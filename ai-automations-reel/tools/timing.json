@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "vo_duration": 58.089,
+ "vo_duration": 51.723,
  "scenes": [
   {
    "id": "hook",
@@ -40,7 +40,7 @@
   {
    "id": "cta",
    "vo_start": 44.929,
-   "vo_end": 58.089
+   "vo_end": 51.723
   }
  ],
  "words": [
@@ -54,7 +54,7 @@
    "text": "boring",
    "scene": "hook",
    "start": 0.48,
-   "end": 1.04
+   "end": 0.88
   },
   {
    "text": "tasks.",
@@ -150,7 +150,7 @@
    "text": "keep",
    "scene": "problem",
    "start": 10.08,
-   "end": 10.4
+   "end": 10.32
   },
   {
    "text": "interrupting",
@@ -342,12 +342,12 @@
    "text": "a",
    "scene": "a2",
    "start": 24.4,
-   "end": 24.48
+   "end": 24.56
   },
   {
    "text": "lead",
    "scene": "a2",
-   "start": 24.48,
+   "start": 24.56,
    "end": 24.88
   },
   {
@@ -497,7 +497,7 @@
   {
    "text": "and",
    "scene": "a4",
-   "start": 36.4,
+   "start": 36.32,
    "end": 36.64
   },
   {
@@ -588,12 +588,12 @@
    "text": "person",
    "scene": "key",
    "start": 42.16,
-   "end": 42.32
+   "end": 42.4
   },
   {
    "text": "ready",
    "scene": "key",
-   "start": 42.48,
+   "start": 42.56,
    "end": 42.96
   },
   {
@@ -624,217 +624,121 @@
    "text": "Want",
    "scene": "cta",
    "start": 44.929,
-   "end": 45.2
+   "end": 45.12
   },
   {
    "text": "this",
    "scene": "cta",
-   "start": 45.2,
-   "end": 45.44
-  },
-  {
-   "text": "same",
-   "scene": "cta",
-   "start": 45.44,
-   "end": 45.76
+   "start": 45.12,
+   "end": 45.36
   },
   {
    "text": "workflow",
    "scene": "cta",
-   "start": 45.76,
-   "end": 46.32
+   "start": 45.36,
+   "end": 45.92
   },
   {
    "text": "built",
    "scene": "cta",
-   "start": 46.32,
-   "end": 46.64
+   "start": 45.92,
+   "end": 46.24
   },
   {
    "text": "for",
    "scene": "cta",
-   "start": 46.64,
-   "end": 46.8
+   "start": 46.24,
+   "end": 46.4
   },
   {
    "text": "your",
    "scene": "cta",
-   "start": 46.8,
-   "end": 46.96
+   "start": 46.4,
+   "end": 46.64
   },
   {
    "text": "business?",
    "scene": "cta",
-   "start": 46.96,
-   "end": 47.52
-  },
-  {
-   "text": "We'll",
-   "scene": "cta",
-   "start": 47.52,
-   "end": 47.92
-  },
-  {
-   "text": "design",
-   "scene": "cta",
-   "start": 47.92,
-   "end": 48.24
-  },
-  {
-   "text": "it",
-   "scene": "cta",
-   "start": 48.24,
-   "end": 48.4
-  },
-  {
-   "text": "around",
-   "scene": "cta",
-   "start": 48.4,
-   "end": 48.72
-  },
-  {
-   "text": "your",
-   "scene": "cta",
-   "start": 48.72,
-   "end": 48.88
-  },
-  {
-   "text": "tools,",
-   "scene": "cta",
-   "start": 48.88,
-   "end": 49.52
-  },
-  {
-   "text": "automate",
-   "scene": "cta",
-   "start": 49.52,
-   "end": 50
-  },
-  {
-   "text": "the",
-   "scene": "cta",
-   "start": 50,
-   "end": 50.08
-  },
-  {
-   "text": "busywork,",
-   "scene": "cta",
-   "start": 50.08,
-   "end": 50.48
-  },
-  {
-   "text": "and",
-   "scene": "cta",
-   "start": 50.8,
-   "end": 51.04
-  },
-  {
-   "text": "help",
-   "scene": "cta",
-   "start": 51.04,
-   "end": 51.28
-  },
-  {
-   "text": "you",
-   "scene": "cta",
-   "start": 51.28,
-   "end": 51.52
-  },
-  {
-   "text": "scale.",
-   "scene": "cta",
-   "start": 51.52,
-   "end": 52.24
+   "start": 46.64,
+   "end": 47.28
   },
   {
    "text": "Follow",
    "scene": "cta",
-   "start": 52.24,
-   "end": 52.72
+   "start": 47.28,
+   "end": 47.68
   },
   {
-   "text": "us,",
+   "text": "us",
    "scene": "cta",
-   "start": 52.72,
-   "end": 53.12
-  },
-  {
-   "text": "then",
-   "scene": "cta",
-   "start": 53.12,
-   "end": 53.44
-  },
-  {
-   "text": "comment",
-   "scene": "cta",
-   "start": 53.44,
-   "end": 53.92
-  },
-  {
-   "text": "\"workflow\"",
-   "scene": "cta",
-   "start": 54.08,
-   "end": 54.72
-  },
-  {
-   "text": "below,",
-   "scene": "cta",
-   "start": 54.88,
-   "end": 55.2
+   "start": 47.68,
+   "end": 47.92
   },
   {
    "text": "and",
    "scene": "cta",
-   "start": 55.44,
-   "end": 55.68
+   "start": 47.92,
+   "end": 48.16
+  },
+  {
+   "text": "comment",
+   "scene": "cta",
+   "start": 48.16,
+   "end": 48.8
+  },
+  {
+   "text": "\"workflow\",",
+   "scene": "cta",
+   "start": 48.8,
+   "end": 49.6
+  },
+  {
+   "text": "and",
+   "scene": "cta",
+   "start": 49.6,
+   "end": 49.76
   },
   {
    "text": "we'll",
    "scene": "cta",
-   "start": 55.68,
-   "end": 55.92
+   "start": 49.76,
+   "end": 50
   },
   {
    "text": "send",
    "scene": "cta",
-   "start": 55.92,
-   "end": 56.16
-  },
-  {
-   "text": "you",
-   "scene": "cta",
-   "start": 56.16,
-   "end": 56.32
+   "start": 50,
+   "end": 50.24
   },
   {
    "text": "the",
    "scene": "cta",
-   "start": 56.32,
-   "end": 56.48
+   "start": 50.24,
+   "end": 50.4
   },
   {
    "text": "details",
    "scene": "cta",
-   "start": 56.48,
-   "end": 56.96
+   "start": 50.4,
+   "end": 50.8
   },
   {
-   "text": "in",
+   "text": "to",
    "scene": "cta",
-   "start": 56.96,
-   "end": 57.12
+   "start": 50.8,
+   "end": 50.96
   },
   {
    "text": "your",
    "scene": "cta",
-   "start": 57.12,
-   "end": 57.28
+   "start": 50.96,
+   "end": 51.12
   },
   {
    "text": "DMs.",
    "scene": "cta",
-   "start": 57.28,
-   "end": 58.08
+   "start": 51.12,
+   "end": 51.68
   }
  ],
  "captions": [
@@ -853,7 +757,7 @@
     {
      "text": "boring",
      "start": 0.48,
-     "end": 1.04,
+     "end": 0.88,
      "key": true
     },
     {
@@ -989,7 +893,7 @@
     {
      "text": "keep",
      "start": 10.08,
-     "end": 10.4,
+     "end": 10.32,
      "key": false
     },
     {
@@ -1269,12 +1173,12 @@
     {
      "text": "a",
      "start": 24.4,
-     "end": 24.48,
+     "end": 24.56,
      "key": false
     },
     {
      "text": "lead",
-     "start": 24.48,
+     "start": 24.56,
      "end": 24.88,
      "key": false
     },
@@ -1466,7 +1370,7 @@
    "id": "cap24",
    "scene": "a4",
    "start": 34.73,
-   "end": 36.34,
+   "end": 36.26,
    "words": [
     {
      "text": "Route",
@@ -1491,12 +1395,12 @@
   {
    "id": "cap25",
    "scene": "a4",
-   "start": 36.34,
+   "start": 36.26,
    "end": 37.6,
    "words": [
     {
      "text": "and",
-     "start": 36.4,
+     "start": 36.32,
      "end": 36.64,
      "key": false
     },
@@ -1610,7 +1514,7 @@
    "id": "cap30",
    "scene": "key",
    "start": 41.77,
-   "end": 42.42,
+   "end": 42.5,
    "words": [
     {
      "text": "and",
@@ -1627,7 +1531,7 @@
     {
      "text": "person",
      "start": 42.16,
-     "end": 42.32,
+     "end": 42.4,
      "key": true
     }
    ]
@@ -1635,12 +1539,12 @@
   {
    "id": "cap31",
    "scene": "key",
-   "start": 42.42,
+   "start": 42.5,
    "end": 44.869,
    "words": [
     {
      "text": "ready",
-     "start": 42.48,
+     "start": 42.56,
      "end": 42.96,
      "key": false
     },
@@ -1674,36 +1578,30 @@
    "id": "cap32",
    "scene": "cta",
    "start": 44.869,
-   "end": 46.64,
+   "end": 46.24,
    "words": [
     {
      "text": "Want",
      "start": 44.929,
-     "end": 45.2,
+     "end": 45.12,
      "key": false
     },
     {
      "text": "this",
-     "start": 45.2,
-     "end": 45.44,
-     "key": false
-    },
-    {
-     "text": "same",
-     "start": 45.44,
-     "end": 45.76,
+     "start": 45.12,
+     "end": 45.36,
      "key": false
     },
     {
      "text": "workflow",
-     "start": 45.76,
-     "end": 46.32,
+     "start": 45.36,
+     "end": 45.92,
      "key": true
     },
     {
      "text": "built",
-     "start": 46.32,
-     "end": 46.64,
+     "start": 45.92,
+     "end": 46.24,
      "key": false
     }
    ]
@@ -1711,25 +1609,25 @@
   {
    "id": "cap33",
    "scene": "cta",
-   "start": 46.65,
-   "end": 47.52,
+   "start": 46.25,
+   "end": 47.28,
    "words": [
     {
      "text": "for",
-     "start": 46.64,
-     "end": 46.8,
+     "start": 46.24,
+     "end": 46.4,
      "key": false
     },
     {
      "text": "your",
-     "start": 46.8,
-     "end": 46.96,
+     "start": 46.4,
+     "end": 46.64,
      "key": false
     },
     {
      "text": "business?",
-     "start": 46.96,
-     "end": 47.52,
+     "start": 46.64,
+     "end": 47.28,
      "key": false
     }
    ]
@@ -1737,51 +1635,75 @@
   {
    "id": "cap34",
    "scene": "cta",
-   "start": 47.53,
-   "end": 48.72,
+   "start": 47.29,
+   "end": 49.6,
    "words": [
     {
-     "text": "We'll",
-     "start": 47.52,
+     "text": "Follow",
+     "start": 47.28,
+     "end": 47.68,
+     "key": true
+    },
+    {
+     "text": "us",
+     "start": 47.68,
      "end": 47.92,
      "key": false
     },
     {
-     "text": "design",
+     "text": "and",
      "start": 47.92,
-     "end": 48.24,
+     "end": 48.16,
      "key": false
     },
     {
-     "text": "it",
-     "start": 48.24,
-     "end": 48.4,
+     "text": "comment",
+     "start": 48.16,
+     "end": 48.8,
      "key": false
     },
     {
-     "text": "around",
-     "start": 48.4,
-     "end": 48.72,
-     "key": false
+     "text": "\"workflow\",",
+     "start": 48.8,
+     "end": 49.6,
+     "key": true
     }
    ]
   },
   {
    "id": "cap35",
    "scene": "cta",
-   "start": 48.73,
-   "end": 49.52,
+   "start": 49.61,
+   "end": 50.8,
    "words": [
     {
-     "text": "your",
-     "start": 48.72,
-     "end": 48.88,
+     "text": "and",
+     "start": 49.6,
+     "end": 49.76,
      "key": false
     },
     {
-     "text": "tools,",
-     "start": 48.88,
-     "end": 49.52,
+     "text": "we'll",
+     "start": 49.76,
+     "end": 50,
+     "key": false
+    },
+    {
+     "text": "send",
+     "start": 50,
+     "end": 50.24,
+     "key": false
+    },
+    {
+     "text": "the",
+     "start": 50.24,
+     "end": 50.4,
+     "key": false
+    },
+    {
+     "text": "details",
+     "start": 50.4,
+     "end": 50.8,
      "key": false
     }
    ]
@@ -1789,183 +1711,29 @@
   {
    "id": "cap36",
    "scene": "cta",
-   "start": 49.53,
-   "end": 50.74,
+   "start": 50.81,
+   "end": 51.98,
    "words": [
     {
-     "text": "automate",
-     "start": 49.52,
-     "end": 50,
-     "key": false
-    },
-    {
-     "text": "the",
-     "start": 50,
-     "end": 50.08,
-     "key": false
-    },
-    {
-     "text": "busywork,",
-     "start": 50.08,
-     "end": 50.48,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap37",
-   "scene": "cta",
-   "start": 50.74,
-   "end": 52.24,
-   "words": [
-    {
-     "text": "and",
+     "text": "to",
      "start": 50.8,
-     "end": 51.04,
-     "key": false
-    },
-    {
-     "text": "help",
-     "start": 51.04,
-     "end": 51.28,
-     "key": false
-    },
-    {
-     "text": "you",
-     "start": 51.28,
-     "end": 51.52,
-     "key": false
-    },
-    {
-     "text": "scale.",
-     "start": 51.52,
-     "end": 52.24,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap38",
-   "scene": "cta",
-   "start": 52.25,
-   "end": 53.12,
-   "words": [
-    {
-     "text": "Follow",
-     "start": 52.24,
-     "end": 52.72,
-     "key": true
-    },
-    {
-     "text": "us,",
-     "start": 52.72,
-     "end": 53.12,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap39",
-   "scene": "cta",
-   "start": 53.13,
-   "end": 55.38,
-   "words": [
-    {
-     "text": "then",
-     "start": 53.12,
-     "end": 53.44,
-     "key": false
-    },
-    {
-     "text": "comment",
-     "start": 53.44,
-     "end": 53.92,
-     "key": false
-    },
-    {
-     "text": "\"workflow\"",
-     "start": 54.08,
-     "end": 54.72,
-     "key": true
-    },
-    {
-     "text": "below,",
-     "start": 54.88,
-     "end": 55.2,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap40",
-   "scene": "cta",
-   "start": 55.38,
-   "end": 56.32,
-   "words": [
-    {
-     "text": "and",
-     "start": 55.44,
-     "end": 55.68,
-     "key": false
-    },
-    {
-     "text": "we'll",
-     "start": 55.68,
-     "end": 55.92,
-     "key": false
-    },
-    {
-     "text": "send",
-     "start": 55.92,
-     "end": 56.16,
-     "key": false
-    },
-    {
-     "text": "you",
-     "start": 56.16,
-     "end": 56.32,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap41",
-   "scene": "cta",
-   "start": 56.33,
-   "end": 58.38,
-   "words": [
-    {
-     "text": "the",
-     "start": 56.32,
-     "end": 56.48,
-     "key": false
-    },
-    {
-     "text": "details",
-     "start": 56.48,
-     "end": 56.96,
-     "key": false
-    },
-    {
-     "text": "in",
-     "start": 56.96,
-     "end": 57.12,
+     "end": 50.96,
      "key": false
     },
     {
      "text": "your",
-     "start": 57.12,
-     "end": 57.28,
+     "start": 50.96,
+     "end": 51.12,
      "key": false
     },
     {
      "text": "DMs.",
-     "start": 57.28,
-     "end": 58.08,
+     "start": 51.12,
+     "end": 51.68,
      "key": false
     }
    ]
   }
  ],
- "visemes": "rrrrrrrrrraaaaaooooaaaaaaooorrraaeeeeerrrrrrrrrrrrrrrrooorrrrrmmmmmaaaaaaaooaaaarrrrrbbbmmrrrrrrrrrrrraaaaaeeooaaaaarrrrraaaaaaaaaaabbrrrbbbbboooeeeeeeeeooooeeeerrrrrrrrrrrrrrrrrraaooorraaaaaaaaaaaaaaarrrrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrrraaaaarrroooorrraaaaaarrrrrrrrrrrrrrrrrrooaaaaaooooaaaaaaaammrrrraaarrrroooooooorrrrrooooommeeemmrrrrrrrrrrrrrrrrooaaaaoooorrrrreeeerrmmaaaaoorrraaaaaaaoommrrrrrrrrrrrrrrrrrrrraaaaarrrrrraaoooooaaarrrraaaaaaaaaaaaaarrrrooooommmmbbbrrrraaaaarrreeeeoommrrrrrrrrrrrroooaaaarrrrraaaaaaeeeaaaaoooooaaaaaarrrrbbbbbbrrrraaaaaaaarrrrrrrrrreeeeerrrrrrrrrrrrrrrraaaaabbrrrrrraaaaaaaaaaaaarrraaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaaooeeaaaoooaaaaammrrrrrrrrraaarrrrraaabbbbooeeeeeeeeeeebbbbrrrrrrrrrrraaaaeeeeeaaaaaooaaaaaabbbbbeeoommeeeerrrrrrrrrrrrrrrrrraaaaaaaarrrrrraaaaooooaaaaarrrraaaaaaoooooooooaaaaaarrrrrrrrrrrrrrrrrraaaaarrraaaarrrrrrraaaooaaaaaaaaabboooorrrrrrrrrrrrrooooaaaaaaaaaammmmmooaaaaaaeeeaaaarrrrraaoooooooooommeemmrrrrrrrrrrrrrrrrrrraaaaaaaarrrrrrrrrrrraaaaaaaaaaaaaarrrraaaabbbmmrrrrrrrrrrrrrrooaaaaaarrrrrrraaaaarrrrmmmaaaooeeebbbbrrrrrrrrrrrrroooooaaaarraaaammmmmooaaaaaaaarrrrrrrrraabbbrrreeerrrmmrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrrrrraaaaaarrraaarrrrraaaabbooorrrrrrrrrrrrrraaaaabbaaaabbooorrrrrrrrrrrrraaarraaaaarrrrrrraaaaaaaaaaaaaaaammmaaooooaaooooooommaaarreeooommeeerrrrrrrrrrrrrrrrrrrrooaaaaaarrraaammmmaaaaoooooaaaarrrrraaaaaaaaaaarrrrrrbbbbbbbaaaaaaaaarrrrrrrrrrrrrrraaaaaaeeeaaaaaaaaaaaaaaaaooaaarrrrraaabbooorrrrrrrrrrrraaaaaaooaaaarrrrrrrrreeeebbbrrrrrrrrrrrraaeeeeeeerrrrrrmmrreeeeeerrrrrrrrrrrrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrraaaoorrrrrraaooaaaaarrrrrrrrraaarrrrrrrbbbbbrrrrrraaaaaaabbbrrrrrrrrrrrrrrooaaaammmmaaooooaaaaammmeeaaarrraaaaaaaaaaoooaaammmmeeeeeeeeeerrrrrrrrr"
+ "visemes": "rrrrrrrrrraaaaaooooaaaaaaooorrraaeeeeerrrrrrrrrrrrrrrrooorrrrrmmmmmaaaaaaaooaaaarrrrrbbbmmrrrrrrrrrrrraaaaaeeooaaaaarrrrraaaaaaaaaaabbrrrbbbbboooeeeeeeeeooooeeeerrrrrrrrrrrrrrrrrraaooorraaaaaaaaaaaaaaarrrrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrrraaaaarrroooorrraaaaaarrrrrrrrrrrrrrrrrrooaaaaaooooaaaaaaaammrrrraaarrrroooooooorrrrrooooommeeemmrrrrrrrrrrrrrrrrooaaaaoooorrrrreeeerrmmaaaaoorrraaaaaaaooorrrrrrrrrrrrrrrrrrrrraaaaarrrrrraaoooooaaarrrraaaaaaaaaaaaaarrrrooooommmmbbbrrrraaaaarrreeeeoommrrrrrrrrrrrroooaaaarrrrrraaaaaeeeaaaaaaaaaaaaaaarrrrbbbbbbrrrraaaaaaaarrrrrrrrrreeeeerrrrrrrrrrrrrrrraaaaabbrrrrrraaaaaaaaaaaaarrraaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaaooeeaaaoooaaaaammrrrrrrrrraaarrrrraaabbbbooeeeeeeeeeeebbbbrrrrrrrrrrraaaaeeeeeaaaaaooaaaaaabbbbbeeoommmeeerrrrrrrrrrrrrrrrrraaaaaaaarrrrrraaaaooooaaaaarrrraaaaaaoooooooooaaaaaarrrrrrrrrrrrrrrrrraaaaarrraaaarrrrrrraaaooaaaaaaaaabbooorrrrrrrrrrrrrrooooaaaaaaaaaammmmmooaaaaaaeeeaaaarrrrraaoooooooooommeemmrrrrrrrrrrrrrrrrrrraaaaaaaarrrrrrrrrrrraaaaaaaaaaaaaarrrraaaabbbmmrrrrrrrrrrrrrrooaaaaaarrrrrrraaaaarrrrmmmaaaooeeebbbbrrrrrrrrrrrrroooooaaaarraaaammmmmooaaaaaaaarrrrrrrrraabbbrrreeerrrmmrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrrrrraaaaaarrraaarrrrraaaabbooorrrrrrrrrrrrrraaaaabbaaaabbooorrrrrrrrrrrrraaarraaaammmmrrrraaaaaaaaaaaaaaaammmaaooooaaooooooommaaarreeooommeeerrrrrrrrrrrrrrrrrrrrraaaaaarraaaaaaaaaaarrrrraaaooooaaaarrrrraaaaaammaaammmmmmmrrrrrrrrrrrrrrraaaaaaaaaaaaaaarrrroorrrreeeeeeeoorrrrrrrrrrraaaarrrrrbbbbbbrrrrrrrrrrrrraaaammmmaaoooooooaaaarrrrrrrrrrrrraaaaaeeeeeeeemmrrrrrrr"
 }
