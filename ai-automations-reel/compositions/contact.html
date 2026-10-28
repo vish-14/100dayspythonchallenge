@@ -1,0 +1,72 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #ct-l1 { font-size: 98px; color: var(--paper); }
+    #ct-l2 { font-size: 98px; color: #5C87FF; }
+    .ct-line { position: absolute; left: 70px; }
+    #ct-flow { position: absolute; left: 70px; top: 530px; width: 940px; height: 70px; overflow: visible; }
+    #ct-label { position: absolute; left: 72px; top: 646px; font-size: 24px; color: var(--gray); }
+    #ct-name { position: absolute; left: 70px; top: 690px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 58px; color: var(--paper); letter-spacing: -.01em; }
+    #ct-card { position: absolute; left: 70px; top: 1090px; width: 940px; height: 224px; border-radius: 26px; background: var(--ink-2); border: 2px solid var(--gray-line); }
+    .ct-mail { position: absolute; left: 34px; display: flex; align-items: center; gap: 24px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 46px; color: var(--paper); letter-spacing: -.01em; }
+    .ct-env { width: 58px; height: 42px; border-radius: 8px; background: var(--blue); position: relative; flex: none; overflow: hidden; }
+    .ct-env::after { content: ""; position: absolute; left: 7px; top: -22px; width: 44px; height: 44px; border: 4px solid #fff; transform: rotate(45deg); border-radius: 4px; }
+    #ct-div { position: absolute; left: 34px; right: 34px; top: 111px; height: 2px; background: var(--gray-line); }
+  </style>
+  <div id="root" data-composition-id="contact" data-width="1080" data-height="1920">
+    <div id="contact-bg" class="full bg-dark"></div>
+    <div class="ct-line mask" style="top:290px"><div id="ct-l1" class="disp" data-layout-allow-occlusion>Less busywork.</div></div>
+    <div class="ct-line mask" style="top:400px"><div id="ct-l2" class="disp" data-layout-allow-occlusion>More flow.</div></div>
+    <svg id="ct-flow" viewBox="0 0 940 70"><path id="ct-path" d="M2 52 C 160 52, 200 14, 360 14 S 560 56, 720 40 S 880 18, 938 20" fill="none" stroke="#2257EF" stroke-width="6" stroke-linecap="round"/>
+      <circle id="ct-dot" cx="938" cy="20" r="11" fill="#F5F5F7"/></svg>
+    <div id="ct-label" class="mono">CONTACT</div>
+    <div id="ct-name">Sri Trilinga Technologies</div>
+    <div id="ct-card">
+      <div id="ct-m1" class="ct-mail" style="top:30px"><span class="ct-env"></span>vishwas@sritrilinga.com</div>
+      <div id="ct-div"></div>
+      <div id="ct-m2" class="ct-mail" style="top:142px"><span class="ct-env"></span>support@sritrilinga.com</div>
+    </div>
+    <div id="contact-chrome-top" class="chrome top mono t-dark"><span>SRI TRILINGA · AUTOMATION NOTES</span><span></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"want": 0.15, "want_end": 0.353, "your": 0.353, "your_end": 0.593, "business": 0.593, "business_end": 0.993, "to": 0.993, "to_end": 1.153, "run": 1.153, "run_end": 1.473, "more": 1.473, "more_end": 1.633, "smoothly": 1.633, "smoothly_end": 2.433, "contact": 2.433, "contact_end": 2.913, "sri": 3.073, "sri_end": 3.393, "trilinga": 3.473, "trilinga_end": 4.033, "technologies": 4.193, "technologies_end": 4.993, "lets": 4.993, "lets_end": 5.313, "build": 5.313, "build_end": 5.633, "your_2": 5.633, "your_2_end": 5.793, "automation": 5.793, "automation_end": 6.433};
+      const tl = gsap.timeline({ paused: true });
+      // calmer pace: longer, softer eases
+      tl.fromTo("#ct-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.6, ease: "power3.out" }, W.want);
+      tl.fromTo("#ct-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.6, ease: "power3.out" }, W.more - 0.05);
+      tl.fromTo("#ct-path", { strokeDasharray: 1200, strokeDashoffset: 1200 }, { strokeDashoffset: 0, duration: 1.0, ease: "power2.inOut" }, W.smoothly - 0.1);
+      tl.fromTo("#ct-dot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, W.smoothly + 0.8);
+      tl.fromTo("#ct-label", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, W.contact - 0.1);
+      tl.fromTo("#ct-name", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, W.contact);
+      // the contact details stay up to the last frame
+      tl.fromTo("#ct-card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, W.contact - 0.1);
+      tl.fromTo(["#ct-m1", "#ct-m2"], { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.5, stagger: 0.18, ease: "power2.out" }, W.contact);
+      window.__timelines["contact"] = tl;
+    })();
+  </script>
+</template>

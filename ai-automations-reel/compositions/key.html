@@ -1,0 +1,119 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #key-q { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; display: flex; align-items: center; justify-content: center; font-size: 190px; color: var(--paper); }
+    .k-node { position: absolute; top: 382px; width: 96px; height: 96px; border-radius: 50%; border: 4px solid var(--gray-dark); background: var(--ink); }
+    .k-node i { position: absolute; inset: 9px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 34px; font-style: normal; }
+    .k-lab { position: absolute; top: 500px; width: 220px; text-align: center; font-size: 21px; color: var(--paper); letter-spacing: .14em; }
+    .k-line { position: absolute; top: 428px; height: 4px; background: var(--gray-dark); }
+    .k-fill { position: absolute; top: 428px; height: 4px; background: var(--blue); transform-origin: 0 50%; }
+    .k-rule { position: absolute; top: 338px; font-size: 18px; padding: 6px 10px; }
+    #key-flag { position: absolute; left: 640px; top: 360px; width: 48px; height: 48px; border-radius: 50%; background: var(--paper); color: var(--ink);
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 32px; display: flex; align-items: center; justify-content: center; }
+    #key-branch { position: absolute; left: 668px; top: 480px; width: 4px; height: 120px; background: var(--paper); transform-origin: 50% 0; }
+    #key-human { left: 446px; top: 600px; width: 578px; height: 150px; display: flex; align-items: center; gap: 22px; padding: 0 24px; }
+    #key-who { width: 74px; height: 74px; border-radius: 50%; background: var(--blue); position: relative; flex: none; }
+    #key-who::before { content: ""; position: absolute; left: 25px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: #fff; }
+    #key-who::after { content: ""; position: absolute; left: 15px; top: 42px; width: 44px; height: 22px; border-radius: 22px 22px 6px 6px; background: #fff; }
+    .k-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .k-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 28px; color: var(--ink); margin-top: 6px; }
+    #key-emph { position: absolute; left: 0; top: 1100px; width: 1080px; height: 200px; }
+    .k-e { position: absolute; left: 0; top: 40px; width: 1080px; text-align: center; font-size: 90px; color: var(--paper); }
+    .k-e.blue { color: #6F95FF; }
+    #key-ecount { position: absolute; left: 0; top: 0; width: 1080px; text-align: center; font-size: 22px; color: var(--gray); }
+  </style>
+  <div id="root" data-composition-id="key" data-width="1080" data-height="1920">
+    <div id="key-bg" class="full bg-dark"></div>
+    <div id="key-q" class="disp">THE KEY?</div>
+    <div id="key-row">
+      <div id="key-l1" class="k-line" style="left:218px;width:144px"></div><div id="key-f1" class="k-fill" style="left:218px;width:144px"></div>
+      <div id="key-l2" class="k-line" style="left:458px;width:164px"></div><div id="key-f2" class="k-fill" style="left:458px;width:164px"></div>
+      <div id="key-l3" class="k-line" style="left:718px;width:144px"></div><div id="key-f3" class="k-fill" style="left:718px;width:144px"></div>
+      <div id="key-n1" class="k-node" style="left:122px"><i id="key-c1">✓</i></div>
+      <div id="key-n2" class="k-node" style="left:362px"><i id="key-c2">✓</i></div>
+      <div id="key-n3" class="k-node" style="left:622px"><i id="key-c3">✓</i></div>
+      <div id="key-n4" class="k-node" style="left:862px"><i id="key-c4">✓</i></div>
+      <div id="key-lb1" class="k-lab mono" style="left:60px">ENQUIRY</div>
+      <div id="key-lb2" class="k-lab mono" style="left:300px">CRM</div>
+      <div id="key-lb3" class="k-lab mono" style="left:560px">AI DRAFT</div>
+      <div id="key-lb4" class="k-lab mono" style="left:800px">TEAM</div>
+    </div>
+    <div id="key-r1" class="k-rule tag ghost mono" style="left:222px;color:var(--paper)">IF new lead</div>
+    <div id="key-r2" class="k-rule tag ghost mono" style="left:462px;color:var(--paper)">IF approved</div>
+    <div id="key-branch"></div>
+    <div id="key-flag">!</div>
+    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">Human review</span><div class="k-v">Missing PO number</div><div class="k-k" style="margin-top:6px">Assigned for human review</div></div></div>
+    <div id="key-emph">
+      <div id="key-ecount" class="mono"><span id="key-ec1">01</span><span id="key-ec2" style="position:absolute;left:0;right:0;opacity:0">02</span><span id="key-ec3" style="position:absolute;left:0;right:0;opacity:0">03</span></div>
+      <div class="mask" style="position:absolute;left:0;top:30px;width:1080px;height:140px">
+        <div data-layout-allow-overlap id="key-e1" class="k-e disp" style="top:10px">CONNECTED TOOLS</div>
+        <div data-layout-allow-overlap id="key-e2" class="k-e disp" style="top:10px">CLEAR RULES</div>
+        <div data-layout-allow-overlap id="key-e3" class="k-e disp blue" style="top:10px">HUMAN REVIEW</div>
+      </div>
+    </div>
+    <div id="key-chrome-top" class="chrome top mono t-dark"><span>SRI TRILINGA · AUTOMATION NOTES</span><span>04 / 04</span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"the": 0.15, "the_end": 0.27, "key": 0.216, "key_end": 0.536, "connected": 0.776, "connected_end": 1.336, "tools": 1.336, "tools_end": 1.896, "clear": 1.896, "clear_end": 2.216, "rules": 2.216, "rules_end": 2.776, "and": 2.776, "and_end": 3.016, "a": 3.016, "a_end": 3.096, "person": 3.096, "person_end": 3.256, "ready": 3.416, "ready_end": 3.896, "when": 3.896, "when_end": 4.056, "something": 4.056, "something_end": 4.376, "needs": 4.376, "needs_end": 4.776, "attention": 4.776, "attention_end": 5.576};
+      const tl = gsap.timeline({ paused: true });
+      // "The key?" fills the screen, then becomes the scene's label
+      tl.fromTo("#key-q", { scale: 1.35, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "power4.out" }, W.key - 0.12);
+      tl.to("#key-q", { y: -215, scale: 0.42, duration: 0.45, ease: "power3.inOut" }, W.connected - 0.25);
+      // the complete workflow runs, every step checks
+      tl.fromTo(["#key-n1", "#key-n2", "#key-n3", "#key-n4"], { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, stagger: 0.06, ease: "back.out(2)" }, W.connected - 0.1);
+      tl.fromTo(["#key-l1", "#key-l2", "#key-l3"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.connected);
+      tl.fromTo(["#key-lb1", "#key-lb2", "#key-lb3", "#key-lb4"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.05 }, W.connected + 0.1);
+      tl.set(["#key-c1", "#key-c2", "#key-c3", "#key-c4"], { scale: 0 }, 0);
+      tl.set(["#key-f1", "#key-f2", "#key-f3"], { scaleX: 0 }, 0);
+      [0, 1, 2, 3].forEach((i) => {
+        const t = W.connected + 0.25 + i * 0.22;
+        tl.to(`#key-c${i + 1}`, { scale: 1, duration: 0.18, ease: "back.out(3)" }, t);
+        if (i < 3) tl.to(`#key-f${i + 1}`, { scaleX: 1, duration: 0.2, ease: "none" }, t + 0.04);
+      });
+      // emphasis words below the caption band, one per beat
+      tl.fromTo("#key-emph", { opacity: 0 }, { opacity: 1, duration: 0.01 }, W.connected - 0.05);
+      tl.fromTo("#key-e1", { yPercent: 110 }, { yPercent: 0, duration: 0.34, ease: "power4.out" }, W.connected - 0.05);
+      tl.to("#key-e1", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.clear - 0.22);
+      tl.fromTo("#key-e2", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.clear - 0.04);
+      tl.set("#key-ec1", { opacity: 0 }, W.clear); tl.set("#key-ec2", { opacity: 1 }, W.clear);
+      // "clear rules": conditions sit on the connectors
+      tl.fromTo(["#key-r1", "#key-r2"], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.26, stagger: 0.1, ease: "back.out(2)" }, W.clear);
+      // "a person ready when something needs attention": one item branches to human review
+      tl.to("#key-e2", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.person - 0.22);
+      tl.fromTo("#key-e3", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.person - 0.04);
+      tl.set("#key-ec2", { opacity: 0 }, W.person); tl.set("#key-ec3", { opacity: 1 }, W.person);
+      tl.to("#key-c3", { scale: 0, duration: 0.12 }, W.person - 0.1);
+      tl.to("#key-n3", { borderColor: "#F5F5F7", duration: 0.15 }, W.person - 0.1);
+      tl.fromTo("#key-flag", { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(3)" }, W.person - 0.05);
+      tl.fromTo("#key-branch", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.out" }, W.ready - 0.1);
+      tl.fromTo("#key-human", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.ready + 0.12);
+      tl.to("#key-human", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.attention);
+      window.__timelines["key"] = tl;
+    })();
+  </script>
+</template>
