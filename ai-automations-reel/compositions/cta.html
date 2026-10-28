@@ -54,10 +54,11 @@
     .cta-num { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--paper); color: var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; }
     #cta-pill span.lt { font-weight: 700; opacity: .9; }
     #cta-followrow { position: absolute; left: 70px; top: 548px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
-    #cta-follow { position: relative; width: 300px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
+    #cta-follow { position: relative; width: 260px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
     #cta-f1, #cta-f2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; border-radius: 20px; }
     #cta-f1 { color: var(--ink); } #cta-f2 { color: var(--paper); background: var(--ink-2); border: 3px solid var(--paper); }
-    #cta-fsub { font-size: 32px; font-weight: 700; color: var(--paper); }
+    #cta-fsub { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: var(--paper); margin-right: auto; }
+    #cta-avatar { width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--paper); flex: none; }
     #cta-cursor { position: absolute; left: 0; top: 0; width: 46px; height: 56px; }
   </style>
   <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
@@ -76,23 +77,24 @@
         <div class="cta-av"></div>
         <div><div class="cta-k">you · now</div><div class="cta-v">WORKFLOW</div></div>
       </div>
-      <div id="cta-dm"><span class="cta-env"></span><div><div class="cta-k">YOUR DMS · JUST NOW</div><div class="t">Your workflow details are on the way ✓</div></div></div>
+      <div id="cta-dm"><span class="cta-env"></span><div><div class="cta-k">VISH · JUST NOW</div><div class="t">Here&#x27;s your workflow guide ✓</div></div></div>
     </div>
 
     <div id="cta-pill">FOLLOW + COMMENT “WORKFLOW”
       <svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 4 V19 M5 12 L12 19 L19 12" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div id="cta-note">Follow first, so our reply can reach your DMs</div>
+    <div id="cta-note">Follow first, so my reply can reach your DMs</div>
     <div id="cta-followrow">
       <div class="cta-num">1</div>
+      <img id="cta-avatar" src="assets/brand/avatar.png" alt="" />
+      <div id="cta-fsub">@vish.workflows</div>
       <div id="cta-follow"><div id="cta-f1">+ Follow</div><div id="cta-f2">Following ✓</div></div>
-      <div id="cta-fsub">Follow us</div>
     </div>
     <svg id="cta-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
-    <div id="cta-chrome-top" class="chrome top mono t-dark"><span>AI AUTOMATION · FIELD NOTES</span><span></span></div>
+    <div id="cta-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span></span></div>
   </div>
   <script>
     (() => {
-      const W = {"want": 0.15, "want_end": 0.341, "this": 0.341, "this_end": 0.581, "workflow": 0.581, "workflow_end": 1.141, "built": 1.141, "built_end": 1.461, "for": 1.461, "for_end": 1.621, "your": 1.621, "your_end": 1.861, "business": 1.861, "business_end": 2.501, "follow": 2.501, "follow_end": 2.901, "us": 2.901, "us_end": 3.141, "and": 3.141, "and_end": 3.381, "comment": 3.381, "comment_end": 4.021, "workflow_2": 4.021, "workflow_2_end": 4.821, "and_2": 4.821, "and_2_end": 4.981, "well": 4.981, "well_end": 5.221, "send": 5.221, "send_end": 5.461, "the": 5.461, "the_end": 5.621, "details": 5.621, "details_end": 6.021, "to": 6.021, "to_end": 6.181, "your_2": 6.181, "your_2_end": 6.341, "dms": 6.341, "dms_end": 6.901};
+      const W = {"want": 0.15, "want_end": 0.341, "this": 0.341, "this_end": 0.581, "workflow": 0.581, "workflow_end": 1.141, "built": 1.141, "built_end": 1.461, "for": 1.461, "for_end": 1.621, "your": 1.621, "your_end": 1.781, "business": 1.781, "business_end": 2.501, "follow": 2.501, "follow_end": 2.901, "me": 2.901, "me_end": 3.141, "and": 3.141, "and_end": 3.381, "comment": 3.381, "comment_end": 4.021, "workflow_2": 4.021, "workflow_2_end": 4.741, "and_2": 4.741, "and_2_end": 4.981, "ill": 4.981, "ill_end": 5.221, "send": 5.221, "send_end": 5.461, "you": 5.461, "you_end": 5.621, "the": 5.621, "the_end": 5.701, "details": 5.701, "details_end": 6.181, "in": 6.181, "in_end": 6.261, "your_2": 6.261, "your_2_end": 6.421, "dms": 6.421, "dms_end": 7.061};
       const tl = gsap.timeline({ paused: true });
       // "Want this workflow?"
       tl.fromTo("#cta-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.want);
@@ -101,11 +103,11 @@
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
-      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
-      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
-      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
-      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.26);
-      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.us + 0.55);
+      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 880, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.me + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.me + 0.26);
+      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.me + 0.55);
       // STEP 2 · "then comment workflow below": the comment types and posts
       tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.and - 0.1);
       tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);

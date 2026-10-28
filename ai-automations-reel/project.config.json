@@ -10,8 +10,10 @@
   "brand": {
     "company": "Sri Trilinga Technologies",
     "contact_name": "Sri",
-    "series_label": "AI AUTOMATION · FIELD NOTES",
-    "cta_keyword": "WORKFLOW"
+    "series_label": "@VISH.WORKFLOWS · AI AUTOMATION",
+    "cta_keyword": "WORKFLOW",
+    "handle": "@vish.workflows",
+    "persona": "Vish"
   },
   "colors": {
     "blue": "#2257EF",
@@ -34,7 +36,8 @@
     "music_bed": "assets/audio/music_bed.wav",
     "music_raw": "assets/audio/music.wav",
     "sfx_dir": "assets/audio/sfx",
-    "presenter_dir": "assets/presenter"
+    "presenter_dir": "assets/presenter",
+    "avatar": "assets/brand/avatar.png"
   },
   "audio": {
     "voice_volume": 1.0,
@@ -240,17 +243,17 @@
       "comments": "COMMENTS",
       "user": "you",
       "typed": "WORKFLOW",
-      "reply_k": "YOUR DMS · JUST NOW",
-      "reply": "Your workflow details are on the way ✓",
+      "reply_k": "VISH · JUST NOW",
+      "reply": "Here's your workflow guide ✓",
       "pill_a": "FOLLOW + COMMENT",
       "pill_b": "“WORKFLOW”",
       "pill_c": "",
       "follow": "Follow",
       "following": "Following ✓",
-      "follow_sub": "Follow us",
+      "follow_sub": "@vish.workflows",
       "step1": "STEP 1",
       "step2": "STEP 2",
-      "dm_note": "Follow first, so our reply can reach your DMs",
+      "dm_note": "Follow first, so my reply can reach your DMs",
       "line1b": "built for your"
     }
   },
@@ -455,7 +458,7 @@
     },
     {
       "file": "click.mp3",
-      "word": "cta:us",
+      "word": "cta:me",
       "offset": 0.2,
       "volume": 0.5
     },

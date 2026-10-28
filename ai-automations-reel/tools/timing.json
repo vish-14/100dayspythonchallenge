@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "vo_duration": 51.723,
+ "vo_duration": 51.89,
  "scenes": [
   {
    "id": "hook",
@@ -40,7 +40,7 @@
   {
    "id": "cta",
    "vo_start": 44.929,
-   "vo_end": 51.723
+   "vo_end": 51.89
   }
  ],
  "words": [
@@ -54,25 +54,25 @@
    "text": "boring",
    "scene": "hook",
    "start": 0.48,
-   "end": 0.88
+   "end": 1.04
   },
   {
    "text": "tasks.",
    "scene": "hook",
    "start": 1.04,
-   "end": 1.68
+   "end": 1.44
   },
   {
    "text": "One",
    "scene": "hook",
    "start": 1.68,
-   "end": 1.84
+   "end": 2.08
   },
   {
    "text": "smarter",
    "scene": "hook",
    "start": 2.08,
-   "end": 2.56
+   "end": 2.4
   },
   {
    "text": "workflow.",
@@ -144,13 +144,13 @@
    "text": "jobs",
    "scene": "problem",
    "start": 9.6,
-   "end": 10
+   "end": 10.08
   },
   {
    "text": "keep",
    "scene": "problem",
    "start": 10.08,
-   "end": 10.32
+   "end": 10.4
   },
   {
    "text": "interrupting",
@@ -545,7 +545,7 @@
   {
    "text": "key?",
    "scene": "key",
-   "start": 38.96,
+   "start": 39.04,
    "end": 39.36
   },
   {
@@ -654,12 +654,12 @@
    "text": "your",
    "scene": "cta",
    "start": 46.4,
-   "end": 46.64
+   "end": 46.56
   },
   {
    "text": "business?",
    "scene": "cta",
-   "start": 46.64,
+   "start": 46.56,
    "end": 47.28
   },
   {
@@ -669,7 +669,7 @@
    "end": 47.68
   },
   {
-   "text": "us",
+   "text": "me",
    "scene": "cta",
    "start": 47.68,
    "end": 47.92
@@ -690,16 +690,16 @@
    "text": "\"workflow\",",
    "scene": "cta",
    "start": 48.8,
-   "end": 49.6
+   "end": 49.52
   },
   {
    "text": "and",
    "scene": "cta",
-   "start": 49.6,
+   "start": 49.52,
    "end": 49.76
   },
   {
-   "text": "we'll",
+   "text": "I'll",
    "scene": "cta",
    "start": 49.76,
    "end": 50
@@ -711,34 +711,40 @@
    "end": 50.24
   },
   {
-   "text": "the",
+   "text": "you",
    "scene": "cta",
    "start": 50.24,
    "end": 50.4
   },
   {
-   "text": "details",
+   "text": "the",
    "scene": "cta",
    "start": 50.4,
-   "end": 50.8
+   "end": 50.48
   },
   {
-   "text": "to",
+   "text": "details",
    "scene": "cta",
-   "start": 50.8,
+   "start": 50.48,
    "end": 50.96
+  },
+  {
+   "text": "in",
+   "scene": "cta",
+   "start": 50.96,
+   "end": 51.04
   },
   {
    "text": "your",
    "scene": "cta",
-   "start": 50.96,
-   "end": 51.12
+   "start": 51.04,
+   "end": 51.2
   },
   {
    "text": "DMs.",
    "scene": "cta",
-   "start": 51.12,
-   "end": 51.68
+   "start": 51.2,
+   "end": 51.84
   }
  ],
  "captions": [
@@ -746,7 +752,7 @@
    "id": "cap00",
    "scene": "hook",
    "start": 0.19,
-   "end": 1.68,
+   "end": 1.62,
    "words": [
     {
      "text": "Four",
@@ -757,13 +763,13 @@
     {
      "text": "boring",
      "start": 0.48,
-     "end": 0.88,
+     "end": 1.04,
      "key": true
     },
     {
      "text": "tasks.",
      "start": 1.04,
-     "end": 1.68,
+     "end": 1.44,
      "key": false
     }
    ]
@@ -771,19 +777,19 @@
   {
    "id": "cap01",
    "scene": "hook",
-   "start": 1.69,
+   "start": 1.62,
    "end": 3.28,
    "words": [
     {
      "text": "One",
      "start": 1.68,
-     "end": 1.84,
+     "end": 2.08,
      "key": false
     },
     {
      "text": "smarter",
      "start": 2.08,
-     "end": 2.56,
+     "end": 2.4,
      "key": true
     },
     {
@@ -887,13 +893,13 @@
     {
      "text": "jobs",
      "start": 9.6,
-     "end": 10,
+     "end": 10.08,
      "key": false
     },
     {
      "text": "keep",
      "start": 10.08,
-     "end": 10.32,
+     "end": 10.4,
      "key": false
     },
     {
@@ -1464,7 +1470,7 @@
     },
     {
      "text": "key?",
-     "start": 38.96,
+     "start": 39.04,
      "end": 39.36,
      "key": false
     }
@@ -1621,12 +1627,12 @@
     {
      "text": "your",
      "start": 46.4,
-     "end": 46.64,
+     "end": 46.56,
      "key": false
     },
     {
      "text": "business?",
-     "start": 46.64,
+     "start": 46.56,
      "end": 47.28,
      "key": false
     }
@@ -1636,7 +1642,7 @@
    "id": "cap34",
    "scene": "cta",
    "start": 47.29,
-   "end": 49.6,
+   "end": 49.52,
    "words": [
     {
      "text": "Follow",
@@ -1645,7 +1651,7 @@
      "key": true
     },
     {
-     "text": "us",
+     "text": "me",
      "start": 47.68,
      "end": 47.92,
      "key": false
@@ -1665,7 +1671,7 @@
     {
      "text": "\"workflow\",",
      "start": 48.8,
-     "end": 49.6,
+     "end": 49.52,
      "key": true
     }
    ]
@@ -1673,17 +1679,17 @@
   {
    "id": "cap35",
    "scene": "cta",
-   "start": 49.61,
-   "end": 50.8,
+   "start": 49.53,
+   "end": 50.4,
    "words": [
     {
      "text": "and",
-     "start": 49.6,
+     "start": 49.52,
      "end": 49.76,
      "key": false
     },
     {
-     "text": "we'll",
+     "text": "I'll",
      "start": 49.76,
      "end": 50,
      "key": false
@@ -1695,15 +1701,9 @@
      "key": false
     },
     {
-     "text": "the",
+     "text": "you",
      "start": 50.24,
      "end": 50.4,
-     "key": false
-    },
-    {
-     "text": "details",
-     "start": 50.4,
-     "end": 50.8,
      "key": false
     }
    ]
@@ -1711,29 +1711,41 @@
   {
    "id": "cap36",
    "scene": "cta",
-   "start": 50.81,
-   "end": 51.98,
+   "start": 50.41,
+   "end": 52.14,
    "words": [
     {
-     "text": "to",
-     "start": 50.8,
+     "text": "the",
+     "start": 50.4,
+     "end": 50.48,
+     "key": false
+    },
+    {
+     "text": "details",
+     "start": 50.48,
      "end": 50.96,
      "key": false
     },
     {
-     "text": "your",
+     "text": "in",
      "start": 50.96,
-     "end": 51.12,
+     "end": 51.04,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 51.04,
+     "end": 51.2,
      "key": false
     },
     {
      "text": "DMs.",
-     "start": 51.12,
-     "end": 51.68,
+     "start": 51.2,
+     "end": 51.84,
      "key": false
     }
    ]
   }
  ],
- "visemes": "rrrrrrrrrraaaaaooooaaaaaaooorrraaeeeeerrrrrrrrrrrrrrrrooorrrrrmmmmmaaaaaaaooaaaarrrrrbbbmmrrrrrrrrrrrraaaaaeeooaaaaarrrrraaaaaaaaaaabbrrrbbbbboooeeeeeeeeooooeeeerrrrrrrrrrrrrrrrrraaooorraaaaaaaaaaaaaaarrrrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrrraaaaarrroooorrraaaaaarrrrrrrrrrrrrrrrrrooaaaaaooooaaaaaaaammrrrraaarrrroooooooorrrrrooooommeeemmrrrrrrrrrrrrrrrrooaaaaoooorrrrreeeerrmmaaaaoorrraaaaaaaooorrrrrrrrrrrrrrrrrrrrraaaaarrrrrraaoooooaaarrrraaaaaaaaaaaaaarrrrooooommmmbbbrrrraaaaarrreeeeoommrrrrrrrrrrrroooaaaarrrrrraaaaaeeeaaaaaaaaaaaaaaarrrrbbbbbbrrrraaaaaaaarrrrrrrrrreeeeerrrrrrrrrrrrrrrraaaaabbrrrrrraaaaaaaaaaaaarrraaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaaooeeaaaoooaaaaammrrrrrrrrraaarrrrraaabbbbooeeeeeeeeeeebbbbrrrrrrrrrrraaaaeeeeeaaaaaooaaaaaabbbbbeeoommmeeerrrrrrrrrrrrrrrrrraaaaaaaarrrrrraaaaooooaaaaarrrraaaaaaoooooooooaaaaaarrrrrrrrrrrrrrrrrraaaaarrraaaarrrrrrraaaooaaaaaaaaabbooorrrrrrrrrrrrrrooooaaaaaaaaaammmmmooaaaaaaeeeaaaarrrrraaoooooooooommeemmrrrrrrrrrrrrrrrrrrraaaaaaaarrrrrrrrrrrraaaaaaaaaaaaaarrrraaaabbbmmrrrrrrrrrrrrrrooaaaaaarrrrrrraaaaarrrrmmmaaaooeeebbbbrrrrrrrrrrrrroooooaaaarraaaammmmmooaaaaaaaarrrrrrrrraabbbrrreeerrrmmrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrrrrraaaaaarrraaarrrrraaaabbooorrrrrrrrrrrrrraaaaabbaaaabbooorrrrrrrrrrrrraaarraaaammmmrrrraaaaaaaaaaaaaaaammmaaooooaaooooooommaaarreeooommeeerrrrrrrrrrrrrrrrrrrrraaaaaarraaaaaaaaaaarrrrraaaooooaaaarrrrraaaaaammaaammmmmmmrrrrrrrrrrrrrrraaaaaaaaaaaaaaarrrroorrrreeeeeeeoorrrrrrrrrrraaaarrrrrbbbbbbrrrrrrrrrrrrraaaammmmaaoooooooaaaarrrrrrrrrrrrraaaaaeeeeeeeemmrrrrrrr"
+ "visemes": "rrrrrrrrrraaaaaooooaaaaaaooorrraaeeeeerrrrrrrrrrrrrrrrooaaaooommmmmaaaaaaarraaaarrrrrbbbmmrrrrrrrrrrrraaaaaeeooaaaaarrrrraaaaaaaaaaabbrrrbbbbboooeeeeeeeeooooeeeerrrrrrrrrrrrrrrrrraaooorraaaaaaaaaaaaaaarrrrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrrraaaaarrroooorrraaaaaarrrrrrrrrrrrrrrrrrooaaaaaooooaaaaaaaammrrrraaarrrroooooooorrrrrooooommeeemmrrrrrrrrrrrrrrrrooaaaaoooorrrrreeeerrmmaaaaoorrraaaaaaaooorrrrrrrrrrrrrrrrrrrrraaaaarrrrrraaoooooaaarrrraaaaaaaaaaaaaarrrrooooommmmbbbrrrraaaaarrreeeeoommrrrrrrrrrrrroooaaaarrrrrraaaaaeeeaaaaaaaaaaaaaaarrrrbbbbbbrrrraaaaaaaarrrrrrrrrreeeeerrrrrrrrrrrrrrrraaaaabbrrrrrraaaaaaaaaaaaarrraaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaaooeeaaaoooaaaaammrrrrrrrrraaarrrrraaaaaaaooeeeeeeeeeeebbbbrrrrrrrrrrraaaaeeeeeaaaaaooaaaaaabbbbbeeoommmeeerrrrrrrrrrrrrrrrrraaaaaaaarrrrrraaaaooooaaaaarrrraaaaaaoooooooooaaaaaarrrrrrrrrrrrrrrrrraaaaarrraaaarrrrrrraaaooaaaaaaeeebbooorrrrrrrrrrrrrrooooaaaaaaaaaammmmmooaaaaaaeeeaaaarrrrraaoooooooooommeemmrrrrrrrrrrrrrrrrrrraaaaaaaarrrrrrrrrrrraaaaaaaaaaaaaarrrraaaabbbmmrrrrrrrrrrrrrrooaaaaaarrrrrrraaaaarrrrmmmaaaooeeebbbbrrrrrrrrrrrrroooooaaaarraaaammmmmooaaaaaaaarrrrrrrrraabbbrrreeerrrmmrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrrrrraaaaaarrraaarrrrraaaabbooorrrrrrrrrrrrrraaaaabbaaaabbooorrrrrrrrrrrrraaarraaaammmmrrrraaaaaaaaaaaaaaaammmaaooooaaooooooommaaarreeooommeeerrrrrrrrrrrrrrrrrrrrraaaaarrraaaaaaaaaaarrrrraaaooooaaaarrrrraaaaaaaaaaammmmeerrrrrrrrrrrrrrrraaaaaaaaaooaaaaarrroorrrreeeeeeeoorrrrrrrrrrraaarrrrrbbbbbbrrrrrrrrrrrrraaaammmmaaoooaaaaaaarrrrrrrrrrraaaammmmooaaammeeeeeeemmrrrrrrr"
 }

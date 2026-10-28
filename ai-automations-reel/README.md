@@ -8,7 +8,7 @@ A 54-second, 1080 × 1920, 30 fps Instagram Reel built with [HyperFrames](https:
 
 | File | What it is |
 | --- | --- |
-| `ai_automations_sri_final.mp4` | Final video: H.264, AAC stereo 48 kHz, 54.0 s, 30 fps |
+| `vish_workflows_reel.mp4` (same as `ai_automations_sri_final.mp4`) | Final video, branded for @vish.workflows: H.264, AAC stereo 48 kHz, 54.0 s, 30 fps |
 | `ai_automations_voiceover.wav` | The voiceover alone (24 kHz mono) |
 | `ai_automations_captions.srt` | Phrase-level captions, timed from the real voiceover |
 | `STORYBOARD.md` | Timestamped script and storyboard |

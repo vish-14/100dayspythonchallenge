@@ -10,7 +10,7 @@
 
 **Sound:** music bed ducked −9 dB under the voice; impact-bass-1 on “tasks”; whoosh on “One”; whoosh-short on “workflow”; key-press on “AI”.
 
-**Captions:** 0.19 “Four boring tasks.” · 1.69 “One smarter workflow.” · 3.29 “Here's where AI automation helps.”
+**Captions:** 0.19 “Four boring tasks.” · 1.62 “One smarter workflow.” · 3.29 “Here's where AI automation helps.”
 
 ## 05.78–11.61 s · 00 / THE PROBLEM (split)
 
@@ -74,10 +74,10 @@
 
 ## 44.78–54.00 s · 06 / YOUR TURN (takeover)
 
-**Voiceover** (44.93–51.68 s): “Want this workflow built for your business? Follow us and comment "workflow", and we'll send the details to your DMs.”
+**Voiceover** (44.93–51.84 s): “Want this workflow built for your business? Follow me and comment "workflow", and I'll send you the details in your DMs.”
 
 **Visual:** Full-screen call to action (unbranded), about 9 s. “Want this workflow / built for your / business?”; on “Follow us” step 1 + Follow → Following ✓; on “comment workflow” step 2 a comment box types and posts “WORKFLOW” and the pill FOLLOW + COMMENT “WORKFLOW” appears; a DM “Your workflow details are on the way ✓” arrives on “DMs”, with “Follow first, so our reply can reach your DMs”. The frame then holds about 2 s.
 
-**Sound:** music bed ducked −9 dB under the voice; whoosh on “Want”; whoosh-short on “Follow”; click on “us”; key-press on “comment”; click on “workflow_2”; notification on “DMs”.
+**Sound:** music bed ducked −9 dB under the voice; whoosh on “Want”; whoosh-short on “Follow”; click on “me”; key-press on “comment”; click on “workflow_2”; notification on “DMs”.
 
-**Captions:** 44.87 “Want this workflow built” · 46.25 “for your business?” · 47.29 “Follow us and comment "workflow",” · 49.61 “and we'll send the details” · 50.81 “to your DMs.”
+**Captions:** 44.87 “Want this workflow built” · 46.25 “for your business?” · 47.29 “Follow me and comment "workflow",” · 49.53 “and I'll send you” · 50.41 “the details in your DMs.”

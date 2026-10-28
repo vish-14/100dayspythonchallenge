@@ -30,10 +30,11 @@
     .cta-num { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--paper); color: var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; }
     #cta-pill span.lt { font-weight: 700; opacity: .9; }
     #cta-followrow { position: absolute; left: 70px; top: 548px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
-    #cta-follow { position: relative; width: 300px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
+    #cta-follow { position: relative; width: 260px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
     #cta-f1, #cta-f2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; border-radius: 20px; }
     #cta-f1 { color: var(--ink); } #cta-f2 { color: var(--paper); background: var(--ink-2); border: 3px solid var(--paper); }
-    #cta-fsub { font-size: 32px; font-weight: 700; color: var(--paper); }
+    #cta-fsub { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: var(--paper); margin-right: auto; }
+    #cta-avatar { width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--paper); flex: none; }
     #cta-cursor { position: absolute; left: 0; top: 0; width: 46px; height: 56px; }
   </style>
   <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
@@ -60,8 +61,9 @@
     <div id="cta-note">{{c.dm_note}}</div>
     <div id="cta-followrow">
       <div class="cta-num">1</div>
-      <div id="cta-follow"><div id="cta-f1">+ {{c.follow}}</div><div id="cta-f2">{{c.following}}</div></div>
+      <img id="cta-avatar" src="assets/brand/avatar.png" alt="" />
       <div id="cta-fsub">{{c.follow_sub}}</div>
+      <div id="cta-follow"><div id="cta-f1">+ {{c.follow}}</div><div id="cta-f2">{{c.following}}</div></div>
     </div>
     <svg id="cta-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
     {{CHROME}}
@@ -77,11 +79,11 @@
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
-      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 300, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
-      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
-      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.us + 0.2);
-      tl.set("#cta-f1", { opacity: 0 }, W.us + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.us + 0.26);
-      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.us + 0.55);
+      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 880, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.me + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.me + 0.26);
+      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.me + 0.55);
       // STEP 2 · "then comment workflow below": the comment types and posts
       tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.and - 0.1);
       tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);

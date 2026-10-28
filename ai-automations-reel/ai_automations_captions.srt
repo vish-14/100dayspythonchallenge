@@ -1,9 +1,9 @@
 1
-00:00:00,190 --> 00:00:01,680
+00:00:00,190 --> 00:00:01,620
 Four boring tasks.
 
 2
-00:00:01,690 --> 00:00:03,280
+00:00:01,620 --> 00:00:03,280
 One smarter workflow.
 
 3
@@ -135,14 +135,14 @@ Want this workflow built
 for your business?
 
 35
-00:00:47,290 --> 00:00:49,600
-Follow us and comment "workflow",
+00:00:47,290 --> 00:00:49,520
+Follow me and comment "workflow",
 
 36
-00:00:49,610 --> 00:00:50,800
-and we'll send the details
+00:00:49,530 --> 00:00:50,400
+and I'll send you
 
 37
-00:00:50,810 --> 00:00:51,980
-to your DMs.
+00:00:50,410 --> 00:00:52,140
+the details in your DMs.
 
