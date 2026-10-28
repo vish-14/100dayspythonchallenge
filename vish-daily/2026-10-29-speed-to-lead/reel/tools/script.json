@@ -1,0 +1,51 @@
+[
+ {
+  "id": "hook",
+  "label": "00 / THE LEAK",
+  "say": "Realtors: your portal leads go cold while you're at viewings.",
+  "text": "Realtors: your portal leads go cold while you're at viewings."
+ },
+ {
+  "id": "problem",
+  "label": "00 / THE PROBLEM",
+  "say": "A buyer enquires at nine P M. You reply the next morning. By then, another agent is already talking to them.",
+  "text": "A buyer enquires at 9 PM. You reply the next morning. By then, another agent is already talking to them."
+ },
+ {
+  "id": "a1",
+  "label": "01 / REPLY INSTANTLY",
+  "say": "One: reply instantly. Every portal lead lands in your C R M, and AI sends a reply right away, in your tone.",
+  "text": "One: reply instantly. Every portal lead lands in your CRM, and AI sends a reply right away, in your tone."
+ },
+ {
+  "id": "a2",
+  "label": "02 / QUALIFY",
+  "say": "Two: qualify. AI asks about budget, area, timeline, and how they're paying.",
+  "text": "Two: qualify. AI asks about budget, area, timeline, and how they're paying."
+ },
+ {
+  "id": "a3",
+  "label": "03 / ROUTE + BOOK",
+  "say": "Three: route and book. Ready buyers ping you on WhatsApp. You approve, and the viewing lands in your calendar.",
+  "text": "Three: route and book. Ready buyers ping you on WhatsApp. You approve, and the viewing lands in your calendar."
+ },
+ {
+  "id": "a4",
+  "label": "04 / STAY WARM",
+  "say": "Four: follow up. Not ready yet? Friendly check-ins and new matching listings keep them warm.",
+  "text": "Four: follow up. Not ready yet? Friendly check-ins and new matching listings keep them warm."
+ },
+ {
+  "id": "key",
+  "label": "05 / RELIABILITY",
+  "say": "The key? Portals, C R M and calendar connected, clear rules, and you approving what matters.",
+  "text": "The key? Portals, CRM and calendar connected, clear rules, and you approving what matters."
+ },
+ {
+  "id": "cta",
+  "label": "06 / YOUR TURN",
+  "say": "Want this workflow built for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
+  "text": "Want this workflow built for your business? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
+  "speed": 1.1
+ }
+]

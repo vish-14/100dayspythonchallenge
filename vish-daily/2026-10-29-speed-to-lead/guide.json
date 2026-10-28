@@ -1,0 +1,91 @@
+{
+  "title": "The Speed-to-Lead Playbook",
+  "kicker": "A practical guide for real estate agents and brokers",
+  "subtitle": "How to answer every portal lead in minutes, qualify it, book the viewing and keep slow buyers warm, with you approving what matters.",
+  "overview": {
+    "heading": "The four automations at a glance",
+    "intro": "Each automation runs on its own, and they share the same lead record. Start with the instant reply: it's the one that stops leads going cold while you're out at viewings.",
+    "columns": ["Automation", "Starts when", "You approve"],
+    "rows": [
+      ["Reply instantly", "A new lead arrives from a property portal, your website, Instagram or WhatsApp.", "The reply templates, once, in advance."],
+      ["Qualify the lead", "The buyer or tenant answers the first reply.", "The questions asked and what counts as a hot lead."],
+      ["Route and book viewings", "A lead is marked hot.", "Every viewing, before it's confirmed."],
+      ["Keep slow leads warm", "A lead says they're not ready yet, or goes quiet.", "The check-ins and which listings go out."]
+    ]
+  },
+  "rules": {
+    "label": "What makes it reliable",
+    "heading": "Three rules that keep it working",
+    "items": [
+      {"title": "Connected tools", "text": "Portals, CRM, WhatsApp and calendar share one lead record, so nothing is copied by hand."},
+      {"title": "Clear rules", "text": "You decide what the AI may say, which leads are hot and when you take over."},
+      {"title": "You approve", "text": "Viewings, prices and anything unusual come to you first. Every message is logged."}
+    ]
+  },
+  "workflows": [
+    {
+      "name": "Reply instantly",
+      "goal": "Every new lead gets a helpful reply in minutes, in your tone, even when you're at a viewing or it's late at night.",
+      "trigger": "A new enquiry email or notification from a property portal, your website form, Instagram DM or WhatsApp Business.",
+      "steps": [
+        "Read the enquiry and pull out the name, contact details, listing and question.",
+        "Create or update the lead in your CRM, tagged with its portal or channel.",
+        "Reply from your approved templates with the listing's facts and viewing days.",
+        "Ask one simple question to keep the conversation going, then notify you."
+      ],
+      "tools": [["Automation", "Make, Zapier or n8n"], ["CRM", "Follow Up Boss, HubSpot, Zoho CRM or a Google Sheet"], ["Channels and AI", "Email or WhatsApp Business, with ChatGPT or Claude"]],
+      "approval": "the AI only sends replies built from templates and listing details you approved. Anything off-script comes to you."
+    },
+    {
+      "name": "Qualify the lead",
+      "goal": "You know who is ready to buy or rent before you spend time on a call.",
+      "trigger": "The lead replies to the first message.",
+      "steps": [
+        "Ask about budget, preferred areas, timeline and how they plan to pay.",
+        "Save each answer to the lead record in your CRM.",
+        "Score the lead as hot, warm or cold using the rules you set.",
+        "Summarise the lead in three lines for you or the agent who owns it."
+      ],
+      "tools": [["Conversation", "WhatsApp Business, website chat or email"], ["AI", "ChatGPT or Claude, with your question list"], ["Records", "your CRM's custom fields"]],
+      "approval": "you set the questions and the scoring rules. The AI never promises prices, availability or terms."
+    },
+    {
+      "name": "Route and book viewings",
+      "goal": "Hot leads reach the right agent fast, and viewings get booked without phone tag.",
+      "trigger": "A lead is scored hot, or asks to see a property.",
+      "steps": [
+        "Pick the agent by area, listing or rota, and send them a WhatsApp alert with the summary.",
+        "Check that agent's calendar and suggest open viewing slots.",
+        "Wait for the agent to approve or change the slot.",
+        "Confirm the viewing with the buyer and send a reminder the day before."
+      ],
+      "tools": [["Alerts", "WhatsApp, Slack or Microsoft Teams"], ["Calendar", "Google Calendar, Outlook or Calendly"], ["Automation", "Make, Zapier or n8n"]],
+      "approval": "no viewing is confirmed until an agent taps approve."
+    },
+    {
+      "name": "Keep slow leads warm",
+      "goal": "Buyers who aren't ready yet still think of you when they are.",
+      "trigger": "A lead says they're not ready yet, or hasn't replied after the days you set.",
+      "steps": [
+        "Send a friendly check-in on a rhythm you choose, for example day 2, 7 and 14.",
+        "Watch new listings and pick the ones that match the lead's budget and area.",
+        "Send the matches with a short note and an easy way to book a viewing.",
+        "Move the lead back to hot, and alert you, as soon as they reply with interest."
+      ],
+      "tools": [["Sequences", "your CRM's follow-ups, or Make, Zapier or n8n"], ["Listings", "your portal feed, website or a Google Sheet"], ["Channels", "WhatsApp Business or email"]],
+      "approval": "only check-ins you approved go out automatically, and leads can opt out at any time."
+    }
+  ],
+  "start": {
+    "label": "Your first steps",
+    "heading": "Start this week",
+    "intro": "Five small steps, no new software needed. Each one makes the first build faster.",
+    "items": [
+      {"lead": "List every place leads come from:", "text": "each portal, your website, Instagram and WhatsApp."},
+      {"lead": "Check your own reply time.", "text": "Send yourself a test enquiry tonight and see when it gets answered."},
+      {"lead": "Write three reply templates", "text": "you'd be happy to send to any new buyer or tenant."},
+      {"lead": "Write down your four questions", "text": "for budget, area, timeline and finance."},
+      {"lead": "Decide what makes a lead hot,", "text": "and who should get the alert."}
+    ]
+  }
+}

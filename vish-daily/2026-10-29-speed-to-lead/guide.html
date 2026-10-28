@@ -1,0 +1,175 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Speed-to-Lead Playbook</title><style>/* Vish guide print styles: A4, white, Inter, restrained blue. Used by make_guide.py. */
+@font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/inter-latin-700-normal.woff2") format("woff2"); }
+:root {
+  --text: #1B1F27;
+  --muted: #5A6170;
+  --blue: #1F4FD8;
+  --blue-soft: #F1F4FC;
+  --rule: #E2E5EB;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; color: var(--text); }
+body { font-family: "Inter", sans-serif; font-size: 10.5pt; line-height: 1.55; font-feature-settings: "ss01", "cv11"; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+h1 { font-size: 30pt; letter-spacing: -0.02em; line-height: 1.08; }
+h2 { font-size: 17pt; }
+h3 { font-size: 11pt; }
+a { color: var(--blue); }
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+
+/* section label: sentence case, readable */
+.label { font-size: 9.5pt; font-weight: 600; color: var(--blue); margin-bottom: 4pt; }
+.muted { color: var(--muted); }
+
+/* cover */
+.brand { display: flex; align-items: center; gap: 10pt; padding-bottom: 14pt; border-bottom: 1px solid var(--rule); }
+.brand img { width: 34pt; height: 34pt; border-radius: 50%; image-rendering: pixelated; }
+.brand b { display: block; font-size: 10.5pt; }
+.brand span { font-size: 9.5pt; color: var(--muted); }
+.cover-title { padding: 28pt 0 22pt; }
+.cover-title h1 { margin: 2pt 0 12pt; }
+.cover-title .lede { font-size: 12.5pt; line-height: 1.5; color: var(--muted); max-width: 150mm; }
+
+.overview h2 { margin-bottom: 6pt; }
+.overview .intro { margin-bottom: 14pt; max-width: 155mm; }
+table.at-a-glance { width: 100%; border-collapse: collapse; }
+.at-a-glance th { text-align: left; font-size: 9.5pt; font-weight: 600; color: var(--muted); padding: 0 10pt 6pt 0; border-bottom: 1.5px solid var(--text); }
+.at-a-glance td { vertical-align: top; padding: 8pt 10pt 8pt 0; border-bottom: 1px solid var(--rule); }
+.at-a-glance td.n { width: 22pt; font-weight: 700; color: var(--blue); }
+.at-a-glance td.name { width: 44mm; font-weight: 600; }
+.at-a-glance td:last-child { padding-right: 0; }
+.reliable { margin-top: 30pt; }
+
+/* automation blocks */
+.auto { padding-top: 2pt; }
+.auto + .auto { margin-top: 24pt; padding-top: 22pt; border-top: 1px solid var(--rule); }
+.auto h2 { margin-bottom: 4pt; }
+.auto .goal { color: var(--muted); margin-bottom: 12pt; max-width: 160mm; }
+.rows { display: grid; grid-template-columns: 24mm 1fr; column-gap: 12pt; row-gap: 10pt; }
+.rows > dt { font-weight: 600; font-size: 10pt; padding-top: 0.5pt; }
+.rows > dd { margin: 0; }
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 3pt; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 14pt 1fr; }
+ol.steps li::before { content: counter(s) "."; font-weight: 600; color: var(--blue); }
+.tools p + p { margin-top: 1pt; }
+.tools b { font-weight: 600; }
+.approve { margin-top: 12pt; background: var(--blue-soft); border-left: 3px solid var(--blue); padding: 8pt 12pt; }
+.approve b { font-weight: 600; }
+
+/* rules + checklist */
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16pt; margin-top: 12pt; }
+.rules > div { border-top: 2px solid var(--blue); padding-top: 9pt; }
+.rules h3 { margin-bottom: 4pt; }
+.rules p { color: var(--muted); }
+.start { }
+.start .intro { margin: 6pt 0 16pt; color: var(--muted); }
+ul.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+ul.check li { display: grid; grid-template-columns: 22pt 1fr; padding: 11pt 0; border-bottom: 1px solid var(--rule); }
+ul.check li:first-child { border-top: 1px solid var(--rule); }
+ul.check li::before { content: ""; width: 10pt; height: 10pt; margin-top: 2.5pt; border: 1.5px solid var(--blue); border-radius: 2pt; }
+ul.check b { font-weight: 600; }
+
+/* closing */
+.close { margin-top: 44pt; }
+.close .lede { font-size: 11pt; max-width: 170mm; margin: 6pt 0 14pt; }
+.book { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-weight: 600; font-size: 11pt; padding: 10pt 16pt; border-radius: 4pt; }
+.book-url { margin-top: 8pt; font-size: 9.5pt; color: var(--muted); }
+.book-url a { color: var(--muted); }
+.call { margin-top: 26pt; }
+.call ol.steps { margin-top: 8pt; }
+.contact { margin-top: 22pt; padding-top: 16pt; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr; gap: 16pt; }
+.contact h3 { font-size: 10.5pt; margin-bottom: 3pt; }
+.close.alone { margin-top: 0; }
+.close .call { margin-top: 22pt; }
+</style></head><body>
+<section class="page">
+  <div class="brand"><img src="avatar.png" alt=""><div><b>Vish | AI Automation</b><span>@vish.workflows</span></div></div>
+  <div class="cover-title">
+    <div class="label">A practical guide for real estate agents and brokers</div>
+    <h1>The Speed-to-Lead Playbook</h1>
+    <p class="lede">How to answer every portal lead in minutes, qualify it, book the viewing and keep slow buyers warm, with you approving what matters.</p>
+  </div>
+  <div class="overview">
+    <h2>The four automations at a glance</h2>
+    <p class="intro">Each automation runs on its own, and they share the same lead record. Start with the instant reply: it&#x27;s the one that stops leads going cold while you&#x27;re out at viewings.</p>
+    <table class="at-a-glance"><thead><tr><th></th><th>Automation</th><th>Starts when</th><th>You approve</th></tr></thead><tbody><tr><td class="n">01</td><td class="name">Reply instantly</td><td>A new lead arrives from a property portal, your website, Instagram or WhatsApp.</td><td>The reply templates, once, in advance.</td></tr><tr><td class="n">02</td><td class="name">Qualify the lead</td><td>The buyer or tenant answers the first reply.</td><td>The questions asked and what counts as a hot lead.</td></tr><tr><td class="n">03</td><td class="name">Route and book viewings</td><td>A lead is marked hot.</td><td>Every viewing, before it&#x27;s confirmed.</td></tr><tr><td class="n">04</td><td class="name">Keep slow leads warm</td><td>A lead says they&#x27;re not ready yet, or goes quiet.</td><td>The check-ins and which listings go out.</td></tr></tbody></table>
+  </div>
+  <div class="reliable">
+    <div class="label">What makes it reliable</div>
+    <h2>Three rules that keep it working</h2>
+    <div class="rules"><div><h3>Connected tools</h3><p>Portals, CRM, WhatsApp and calendar share one lead record, so nothing is copied by hand.</p></div><div><h3>Clear rules</h3><p>You decide what the AI may say, which leads are hot and when you take over.</p></div><div><h3>You approve</h3><p>Viewings, prices and anything unusual come to you first. Every message is logged.</p></div></div>
+  </div>
+</section>
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 01</div>
+    <h2>Reply instantly</h2>
+    <p class="goal">Every new lead gets a helpful reply in minutes, in your tone, even when you&#x27;re at a viewing or it&#x27;s late at night.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A new enquiry email or notification from a property portal, your website form, Instagram DM or WhatsApp Business.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Read the enquiry and pull out the name, contact details, listing and question.</span></li><li><span>Create or update the lead in your CRM, tagged with its portal or channel.</span></li><li><span>Reply from your approved templates with the listing&#x27;s facts and viewing days.</span></li><li><span>Ask one simple question to keep the conversation going, then notify you.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Automation:</b> Make, Zapier or n8n</p><p><b>CRM:</b> Follow Up Boss, HubSpot, Zoho CRM or a Google Sheet</p><p><b>Channels and AI:</b> Email or WhatsApp Business, with ChatGPT or Claude</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> the AI only sends replies built from templates and listing details you approved. Anything off-script comes to you.</div>
+  </article>
+  <article class="auto">
+    <div class="label">Automation 02</div>
+    <h2>Qualify the lead</h2>
+    <p class="goal">You know who is ready to buy or rent before you spend time on a call.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>The lead replies to the first message.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Ask about budget, preferred areas, timeline and how they plan to pay.</span></li><li><span>Save each answer to the lead record in your CRM.</span></li><li><span>Score the lead as hot, warm or cold using the rules you set.</span></li><li><span>Summarise the lead in three lines for you or the agent who owns it.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Conversation:</b> WhatsApp Business, website chat or email</p><p><b>AI:</b> ChatGPT or Claude, with your question list</p><p><b>Records:</b> your CRM&#x27;s custom fields</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> you set the questions and the scoring rules. The AI never promises prices, availability or terms.</div>
+  </article>
+</section>
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 03</div>
+    <h2>Route and book viewings</h2>
+    <p class="goal">Hot leads reach the right agent fast, and viewings get booked without phone tag.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A lead is scored hot, or asks to see a property.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Pick the agent by area, listing or rota, and send them a WhatsApp alert with the summary.</span></li><li><span>Check that agent&#x27;s calendar and suggest open viewing slots.</span></li><li><span>Wait for the agent to approve or change the slot.</span></li><li><span>Confirm the viewing with the buyer and send a reminder the day before.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Alerts:</b> WhatsApp, Slack or Microsoft Teams</p><p><b>Calendar:</b> Google Calendar, Outlook or Calendly</p><p><b>Automation:</b> Make, Zapier or n8n</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> no viewing is confirmed until an agent taps approve.</div>
+  </article>
+  <article class="auto">
+    <div class="label">Automation 04</div>
+    <h2>Keep slow leads warm</h2>
+    <p class="goal">Buyers who aren&#x27;t ready yet still think of you when they are.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A lead says they&#x27;re not ready yet, or hasn&#x27;t replied after the days you set.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Send a friendly check-in on a rhythm you choose, for example day 2, 7 and 14.</span></li><li><span>Watch new listings and pick the ones that match the lead&#x27;s budget and area.</span></li><li><span>Send the matches with a short note and an easy way to book a viewing.</span></li><li><span>Move the lead back to hot, and alert you, as soon as they reply with interest.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Sequences:</b> your CRM&#x27;s follow-ups, or Make, Zapier or n8n</p><p><b>Listings:</b> your portal feed, website or a Google Sheet</p><p><b>Channels:</b> WhatsApp Business or email</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> only check-ins you approved go out automatically, and leads can opt out at any time.</div>
+  </article>
+</section>
+<section class="page">
+  <div class="start">
+    <div class="label">Your first steps</div>
+    <h2>Start this week</h2>
+    <p class="intro">Five small steps, no new software needed. Each one makes the first build faster.</p>
+    <ul class="check"><li><span><b>List every place leads come from:</b> each portal, your website, Instagram and WhatsApp.</span></li><li><span><b>Check your own reply time.</b> Send yourself a test enquiry tonight and see when it gets answered.</span></li><li><span><b>Write three reply templates</b> you&#x27;d be happy to send to any new buyer or tenant.</span></li><li><span><b>Write down your four questions</b> for budget, area, timeline and finance.</span></li><li><span><b>Decide what makes a lead hot,</b> and who should get the alert.</span></li></ul>
+  </div>
+  <div class="close">
+    <div class="label">Want it built for you?</div>
+    <h2>I build AI agents around your business.</h2>
+    <p class="lede">In a free call, we’ll find the one workflow that frees up the most time for you and your team.</p>
+    <a class="book" href="https://cal.com/vishworkflows/discovery">Book a free discovery call</a>
+    <p class="book-url"><a href="https://cal.com/vishworkflows/discovery">cal.com/vishworkflows/discovery</a> · online, shown in your time zone</p>
+    
+    <div class="contact">
+      <div><h3>Prefer to chat?</h3><p class="muted">Reply <b>BUILD</b> to my Instagram DM with your business, your tools and the task that eats your time.</p></div>
+      <div><h3>Support</h3><p class="muted"><a href="mailto:support@sritrilinga.com">support@sritrilinga.com</a><br>Instagram: @vish.workflows</p></div>
+    </div>
+  </div>
+</section>
+</body></html>

@@ -1,0 +1,88 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #pb-clock { position: absolute; left: 56px; top: 262px; width: 470px; height: 130px; }
+    #pb-clock .disp { position: absolute; left: 0; top: 0; font-size: 124px; color: var(--paper); white-space: nowrap; }
+    #pb-clab { position: absolute; left: 60px; top: 396px; width: 460px; height: 30px; font-size: 22px; color: rgba(245,245,247,.86); }
+    #pb-clab span { position: absolute; left: 0; top: 0; }
+    #pb-other { left: 560px; top: 262px; width: 464px; height: 150px; padding: 20px 24px; overflow: visible; }
+    .pb-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .pb-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 28px; color: var(--ink); margin-top: 10px; display: flex; align-items: center; gap: 12px; }
+    #pb-live { width: 18px; height: 18px; border-radius: 50%; background: var(--blue); flex: none; }
+    #pb-chat { left: 56px; top: 450px; width: 968px; height: 410px; }
+    .pb-lab { margin: 22px 30px 0; }
+    .pb-bub { margin: 10px 30px 0; padding: 18px 24px; border-radius: 20px; font-size: 30px; font-weight: 600; color: #141A24; width: fit-content; max-width: 720px; line-height: 1.25; }
+    #pb-b1 { background: #EEF1F6; border-top-left-radius: 6px; }
+    #pb-b2 { background: #DCE5FD; margin-left: auto; margin-right: 30px; border-top-right-radius: 6px; }
+    #pb-meta { display: flex; justify-content: flex-end; gap: 16px; margin: 10px 30px 0; font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .1em; color: #5B6372; }
+    #pb-seen { color: var(--ink); font-weight: 700; }
+    #pb-ca, #pb-cb, #pb-la, #pb-lb, #pb-b1, #pb-l1, #pb-b2, #pb-meta, #pb-seen { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+    <div id="pb-clock"><div id="pb-ca" class="disp">9:04 PM</div><div id="pb-cb" class="disp">8:30 AM</div></div>
+    <div id="pb-clab" class="mono"><span id="pb-la">BUYER ENQUIRES</span><span id="pb-lb">YOU REPLY</span></div>
+    <div id="pb-other" class="card">
+      <div class="pb-k">ANOTHER AGENT · 9:06 PM</div>
+      <div class="pb-v"><span id="pb-live"></span>On a call with your buyer</div>
+    </div>
+    <div id="pb-chat" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;Portal · messages</div>
+      <div id="pb-l1" class="pb-k pb-lab">Buyer · property portal</div>
+      <div id="pb-b1" class="pb-bub">Is the 2BHK still available? Can I see it this week?</div>
+      <div id="pb-b2" class="pb-bub">Hi! Yes, it&#x27;s still available.</div>
+      <div id="pb-meta"><span id="pb-time">8:31 AM</span><span id="pb-seen">Seen · no reply</span></div>
+    </div>
+    <div id="problem-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>00 / 04</span></div><div id="problem-chrome-bot" class="chrome bot mono t-blue"><span>00 / THE PROBLEM</span><span class="prog"><i id="problem-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"a": 0.15, "a_end": 0.27, "buyer": 0.247, "buyer_end": 0.647, "enquires": 0.647, "enquires_end": 1.207, "at": 1.207, "at_end": 1.447, "9": 1.447, "9_end": 1.847, "pm": 1.847, "pm_end": 2.567, "you": 2.727, "you_end": 2.967, "reply": 2.967, "reply_end": 3.367, "the": 3.367, "the_end": 3.527, "next": 3.527, "next_end": 3.847, "morning": 3.847, "morning_end": 4.487, "by": 4.487, "by_end": 4.727, "then": 4.727, "then_end": 5.287, "another": 5.287, "another_end": 5.767, "agent": 5.767, "agent_end": 6.327, "is": 6.327, "is_end": 6.487, "already": 6.487, "already_end": 6.887, "talking": 6.887, "talking_end": 7.287, "to": 7.287, "to_end": 7.447, "them": 7.447, "them_end": 7.927};
+      const tl = gsap.timeline({ paused: true });
+      // "A buyer enquires": the conversation opens, the message lands
+      tl.fromTo("#pb-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.a - 0.1);
+      tl.fromTo("#pb-l1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.buyer);
+      tl.fromTo("#pb-b1", { opacity: 0, scale: 0.8, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.enquires);
+      // "at 9 PM": the clock
+      tl.fromTo("#pb-ca", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, W["9"] - 0.08);
+      tl.to("#pb-la", { opacity: 1, duration: 0.25 }, W["9"] + 0.1);
+      // "the next morning": the clock flips
+      tl.to("#pb-ca", { rotationX: 90, opacity: 0, duration: 0.18, ease: "power2.in" }, W.next - 0.12);
+      tl.fromTo("#pb-cb", { rotationX: -90, opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.24, ease: "power2.out" }, W.next + 0.06);
+      tl.set("#pb-la", { opacity: 0 }, W.next); tl.set("#pb-lb", { opacity: 1 }, W.next + 0.1);
+      tl.fromTo("#pb-b2", { opacity: 0, scale: 0.8, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.morning);
+      tl.fromTo("#pb-meta", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.morning + 0.25);
+      // "another agent is already talking to them"
+      tl.fromTo("#pb-other", { opacity: 0, x: 300, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: 0.45, ease: "expo.out" }, W.another - 0.08);
+      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.agent);
+      tl.fromTo("#pb-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.talking);
+      tl.to("#pb-b2", { opacity: 0.45, duration: 0.3 }, W.talking + 0.1);
+      tl.fromTo("#problem-prog", { scaleX: 0.0747 }, { scaleX: 0.2192, duration: 7.875, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>
