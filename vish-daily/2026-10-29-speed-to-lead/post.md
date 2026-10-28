@@ -19,29 +19,43 @@ Today's 8 PM slot already has the first reel ("4 boring tasks"), so this one goe
 
 ```
 Property agents: your enquiries go cold while you're out on site visits. Here's the fix ⏳
+AI agent for real estate | WhatsApp lead automation | India 🇮🇳
 
-A buyer enquires at 9 PM. You reply at 8:30 the next morning.
-By then, another broker is already talking to them.
+A buyer enquires at 9 PM. You reply the next morning.
+By then, another broker is already talking to them 😬
+
 That's why I built an AI agent for property agents, with 4 connected workflows. You stay in control 👇
 
-1️⃣ Respond to enquiries: every enquiry from 99acres, MagicBricks, Housing.com or WhatsApp lands in your CRM and gets a reply right away, in your style
-2️⃣ Qualify buyers: AI asks about budget, location, timeline and home loan, then scores the buyer
-3️⃣ Route + book: the agent alerts you on WhatsApp when a buyer meets your criteria, you approve, and the site visit lands in your calendar
-4️⃣ Follow-up automation: friendly check-ins and new matching properties keep slow buyers interested
+1️⃣ Respond to enquiries: every enquiry from 99acres, MagicBricks, Housing.com or WhatsApp lands in your CRM and gets an instant reply, in your style
+2️⃣ Qualify buyers: the AI asks about budget, location, timeline and home loan, then scores every lead
+3️⃣ Route + book site visits: the agent alerts you on WhatsApp when a buyer meets your criteria. You approve, and the site visit lands in your calendar
+4️⃣ Follow up: friendly check-ins and new matching properties keep slow buyers interested
 
-The AI replies fast. You still approve every site visit 🤝
+The AI replies in minutes. You still approve every site visit 🤝
+
+💬 Be honest: how fast do you reply to a new enquiry today? 5 min, 1 hour or next day? Tell me below 👇
 
 👉 Want this workflow built for your business?
-Follow @vish.workflows and comment "WORKFLOW". I'll send you the full Speed-to-Lead Playbook straight to your DMs 📩
+Follow @vish.workflows and comment "WORKFLOW". I'll send you the free Speed-to-Lead Playbook in your DMs 📩
 
-💾 Save this for your next team meeting.
+💾 Save this and share it with a broker friend who's always on site visits.
 
-AI automation for real estate agents, brokers and channel partners: property enquiry automation, real estate CRM automation, WhatsApp lead follow-up and AI agents for site visit booking, by Sri Trilinga Technologies Private Limited.
+Built for real estate agents, brokers, builders and channel partners in Bengaluru, Mumbai, Pune, Hyderabad, Delhi NCR, Chennai, Dubai and worldwide. AI automation, AI agents, real estate CRM automation, WhatsApp Business API automation, property lead management and site visit booking, by Sri Trilinga Technologies Private Limited.
 
-#AIAutomation #BusinessAutomation #RealEstateIndia #RealEstateAgent #PropertyDealer
+#RealEstateIndia #AIAutomation #RealEstateAgent #PropertyDealer #WhatsAppAutomation
 ```
 
-The first line is 89 characters, so it shows in full before "more". There are no statistics in the copy: the 9 PM / 8:30 AM story is an illustrative scenario.
+The first line is 89 characters, so it shows before "more". Line 2 is the keyword line. The reply-time question is a second, easy reason to comment and doesn't trigger the auto-DM. The cities add geo signals. The company name appears once, last, for SEO.
+
+### Reach settings before you tap Share
+
+- **Location tag:** your own city (e.g. Bengaluru, Karnataka), or Whitefield, Bengaluru to match the reel.
+- **Advanced settings:** alt text (section 3), auto-captions on, and the Real estate / Business topics if offered.
+- **Search engines:** Settings → Account privacy → allow public photos and videos in search engine results (check that the toggle exists on your account).
+- **Audio:** keep the original audio; no trending songs over the voice.
+- **Collab (optional):** invite a real estate agent or proptech page you know.
+- **15 minutes before posting:** comment on a few real estate pages.
+- **After posting:** send it personally to 5–10 agents, and share it to your Story with the reply-time poll.
 
 ## 3. Cover and alt text
 

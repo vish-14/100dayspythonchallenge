@@ -68,6 +68,15 @@ Rules:
 - Repeat the phrases clients search for: "AI automation", "CRM automation", "lead follow-up automation", "document processing", "workflow automation".
 - Use 3–5 relevant hashtags (Instagram's current guidance), not 30.
 
+## Reach checklist (every post)
+
+- **Caption line 2:** a keyword line in search phrases ("AI agent for [industry] | WhatsApp automation | [country]").
+- **A second comment prompt:** an easy question that doesn't use the word WORKFLOW ("How fast do you reply today?"), plus "share this with a [role] friend".
+- **Geo:** tag the city as the location, and name the key cities and regions in the SEO line before the company name.
+- **Settings:** alt text with keywords, auto-captions on, topics, original audio, and public search-engine indexing turned on for the account.
+- **Collabs and Trial Reels:** collab with a relevant real page when possible, and test alternative hooks as Trial Reels for non-followers.
+- **Metrics:** count saves, shares, WORKFLOW comments and calls, not only views. Never promise view or follower numbers.
+
 ## SuperProfile auto-DM
 
 1. Connect Instagram through the official Meta login only (never share the password).
