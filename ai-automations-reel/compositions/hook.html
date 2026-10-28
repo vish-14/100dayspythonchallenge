@@ -65,11 +65,11 @@
       <div id="hook-sub" class="mono">ONE SMARTER WORKFLOW</div>
     </div>
     <div id="hook-cover"></div>
-    <div id="hook-chrome-top" class="chrome top mono t-dark"><span>SRI TRILINGA · AUTOMATION NOTES</span><span>00 / 04</span></div><div id="hook-chrome-bot" class="chrome bot mono t-dark"><span>00 / THE OPPORTUNITY</span><span class="prog"><i id="hook-prog"></i></span></div>
+    <div id="hook-chrome-top" class="chrome top mono t-dark"><span>AI AUTOMATION · FIELD NOTES</span><span>00 / 04</span></div><div id="hook-chrome-bot" class="chrome bot mono t-dark"><span>00 / THE OPPORTUNITY</span><span class="prog"><i id="hook-prog"></i></span></div>
   </div>
   <script>
     (() => {
-      const W = {"four": 0.25, "four_end": 0.37, "boring": 0.48, "boring_end": 0.8, "tasks": 0.96, "tasks_end": 1.52, "one": 1.52, "one_end": 1.68, "smarter": 1.92, "smarter_end": 2.4, "workflow": 2.4, "workflow_end": 3.04, "heres": 3.04, "heres_end": 3.36, "where": 3.36, "where_end": 3.6, "ai": 3.6, "ai_end": 4.24, "automation": 4.24, "automation_end": 4.8, "helps": 4.8, "helps_end": 5.52};
+      const W = {"four": 0.25, "four_end": 0.37, "boring": 0.4, "boring_end": 0.96, "tasks": 0.96, "tasks_end": 1.52, "one": 1.52, "one_end": 1.68, "smarter": 1.92, "smarter_end": 2.4, "workflow": 2.4, "workflow_end": 3.04, "heres": 3.04, "heres_end": 3.36, "where": 3.36, "where_end": 3.6, "ai": 3.6, "ai_end": 4.16, "automation": 4.16, "automation_end": 4.8, "helps": 4.8, "helps_end": 5.52};
       const tl = gsap.timeline({ paused: true });
       // frame 0: "4 B●RING" already on screen (the thumbnail), TASKS lands on its word
       tl.fromTo("#hook-four", { scale: 1 }, { scale: 1.08, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, W.four);
@@ -101,7 +101,7 @@
         tl.fromTo(`#hook-f${i + 1}`, { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" }, t - 0.3);
         tl.fromTo(`#hook-n${i + 2}i`, { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(2.5)" }, t);
       });
-      tl.fromTo("#hook-prog", { scaleX: 0.0000 }, { scaleX: 0.1057, duration: 5.390, ease: "none" }, 0);
+      tl.fromTo("#hook-prog", { scaleX: 0.0000 }, { scaleX: 0.0998, duration: 5.390, ease: "none" }, 0);
       window.__timelines["hook"] = tl;
     })();
   </script>

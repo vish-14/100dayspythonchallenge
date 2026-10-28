@@ -46,11 +46,16 @@ def word_cues(sid):
 
 
 def abs_word(ref):
+    """'scene:Word' → absolute start of that word; 'scene:word_2' → its second occurrence."""
     sid, txt = ref.split(":", 1)
-    for w in TIM["words"]:
-        if w["scene"] == sid and w["text"] == txt:
-            return w["start"]
-    raise KeyError(ref)
+    n = 1
+    m = re.match(r"(.+)_(\d+)$", txt)
+    if m:
+        txt, n = m.group(1), int(m.group(2))
+    hits = [w for w in TIM["words"] if w["scene"] == sid and (w["text"] == txt or norm(w["text"]) == norm(txt))]
+    if len(hits) < n:
+        raise KeyError(ref)
+    return hits[n - 1]["start"]
 
 
 # ---------------------------------------------------------------- shared CSS / chrome

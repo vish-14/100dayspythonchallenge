@@ -1,12 +1,14 @@
-# Four boring tasks: AI automation reel (Sri Trilinga Technologies)
+# Four boring tasks: AI automation reel
 
-A 51-second, 1080 × 1920, 30 fps Instagram Reel built with [HyperFrames](https://hyperframes.heygen.com). It uses a split screen: editorial motion graphics in the top panel and an animated pixel-art presenter in the lower panel, with full-screen takeovers for the hook, the reliability beat and the contact card.
+A 54-second, 1080 × 1920, 30 fps Instagram Reel built with [HyperFrames](https://hyperframes.heygen.com). It uses a split screen: editorial motion graphics in the top panel and an animated pixel-art presenter in the lower panel, with full-screen takeovers for the hook, the reliability beat and the closing call to action.
+
+**Ending (no company name or emails on screen):** a 12-second call to action built for an auto-DM tool such as SuperProfile, which only replies to followers. Step 1: Follow (the button clicks to “Following ✓”). Step 2: comment “WORKFLOW” (it types and posts). Then a DM arrives: “Your workflow guide is here ✓”. All motion ends about 7 s in and the frame holds to the end. The keyword is in `project.config.json` → `copy.cta.typed` (and in the voiceover script `tools/script.json`).
 
 ## Deliverables
 
 | File | What it is |
 | --- | --- |
-| `ai_automations_sri_final.mp4` | Final video: H.264, AAC stereo 48 kHz, 51.0 s, 30 fps |
+| `ai_automations_sri_final.mp4` | Final video: H.264, AAC stereo 48 kHz, 54.0 s, 30 fps |
 | `ai_automations_voiceover.wav` | The voiceover alone (24 kHz mono) |
 | `ai_automations_captions.srt` | Phrase-level captions, timed from the real voiceover |
 | `STORYBOARD.md` | Timestamped script and storyboard |
@@ -22,7 +24,7 @@ npx hyperframes check                     # lint, layout, contrast, audio checks
 npx hyperframes render -q delivery --fps 30 -o ai_automations_sri_final.mp4
 ```
 
-**Changing copy, colours or emails:** edit `project.config.json`, then run `python3 tools/build.py` and `npx hyperframes check`. Change scene layouts and animations in `src/scenes/*.html`, never in `compositions/`, which is regenerated on every build. Inside each scene, `W.<word>` is the scene-local time of that spoken word, so animations stay locked to the voice.
+**Changing copy, colours or the CTA keyword:** edit `project.config.json`, then run `python3 tools/build.py` and `npx hyperframes check`. Change scene layouts and animations in `src/scenes/*.html`, never in `compositions/`, which is regenerated on every build. Inside each scene, `W.<word>` is the scene-local time of that spoken word, so animations stay locked to the voice.
 
 The HyperFrames desktop app is a nicer way to keep editing visually: <https://hyperframes.dev/studio/download>.
 
@@ -52,7 +54,7 @@ python3 tools/analyze_voice.py && python3 tools/mix.py && python3 tools/build.py
 
 The audio was checked with meters, not by ear:
 
-- Integrated loudness is −16.9 LUFS, with a true peak of −1.4 dBTP.
+- Integrated loudness is −17.0 LUFS, with a true peak of −1.5 dBTP.
 - The voice sits around −18 dB. The music sits around −26 dB in the gaps and about 9 dB lower under speech.
 
 Listen once before you publish.
@@ -60,6 +62,5 @@ Listen once before you publish.
 ## Known limitations
 
 - **Lip sync is audio-driven, not phoneme-accurate.** Each frame picks one of six mouth shapes (rest, pressed, small, open, wide, round) from the voice's loudness and spectrum, and the mouth closes between words. It follows the speech rhythm closely but is not true viseme alignment.
-- **"Sri Trilinga" pronunciation.** The TTS input is spelled "Shree Trilinga Technologies". The transcript then reads "Contact Sri Trilinga Technologies", but please listen to that line yourself.
-- **Length.** The video runs 51 s rather than about 45 s. The script at a natural pace takes 48 s, and the emails need at least 6 s on screen, so they run from 44.3 s to the end.
+- **Length.** The video runs 54 s rather than about 45 s. The script takes 49 s at a natural pace, and the call-to-action frame is held for 12 s so viewers have time to follow and comment.
 - **Illustrative examples.** All names, emails, invoice values and order numbers on the UI cards (Priya, Rahul, Northline Supplies, ₹48,200 and so on) are made up for illustration. The video shows no statistics or results.

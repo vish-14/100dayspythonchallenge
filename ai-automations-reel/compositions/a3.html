@@ -71,11 +71,11 @@
       <div id="a3-s3" class="a3-b"><i></i>Matches the purchase order</div>
       <div id="a3-check"><div id="a3-box"><div id="a3-tick">✓</div></div>Ready for the team to check</div>
     </div>
-    <div id="a3-chrome-top" class="chrome top mono t-dark"><span>SRI TRILINGA · AUTOMATION NOTES</span><span>03 / 04</span></div><div id="a3-chrome-bot" class="chrome bot mono t-dark"><span>03 / PROCESS DOCUMENTS</span><span class="prog"><i id="a3-prog"></i></span></div>
+    <div id="a3-chrome-top" class="chrome top mono t-dark"><span>AI AUTOMATION · FIELD NOTES</span><span>03 / 04</span></div><div id="a3-chrome-bot" class="chrome bot mono t-dark"><span>03 / PROCESS DOCUMENTS</span><span class="prog"><i id="a3-prog"></i></span></div>
   </div>
   <script>
     (() => {
-      const W = {"three": 0.15, "three_end": 0.529, "turn": 0.529, "turn_end": 0.849, "documents": 0.849, "documents_end": 1.409, "into": 1.409, "into_end": 1.649, "drafts": 1.649, "drafts_end": 2.369, "extract": 2.369, "extract_end": 2.929, "key": 2.929, "key_end": 3.249, "details": 3.249, "details_end": 3.809, "and": 3.889, "and_end": 4.049, "prepare": 4.049, "prepare_end": 4.529, "summaries": 4.529, "summaries_end": 5.089, "your": 5.089, "your_end": 5.249, "team": 5.249, "team_end": 5.569, "can": 5.569, "can_end": 5.729, "check": 5.729, "check_end": 6.289};
+      const W = {"three": 0.15, "three_end": 0.529, "turn": 0.529, "turn_end": 0.849, "documents": 0.849, "documents_end": 1.409, "into": 1.409, "into_end": 1.649, "drafts": 1.649, "drafts_end": 2.369, "extract": 2.369, "extract_end": 3.009, "key": 3.009, "key_end": 3.249, "details": 3.249, "details_end": 3.809, "and": 3.889, "and_end": 4.049, "prepare": 4.049, "prepare_end": 4.529, "summaries": 4.529, "summaries_end": 5.089, "your": 5.089, "your_end": 5.249, "team": 5.249, "team_end": 5.569, "can": 5.569, "can_end": 5.729, "check": 5.729, "check_end": 6.289};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.turn - 0.04);
@@ -97,7 +97,7 @@
       // "your team can check"
       tl.fromTo("#a3-check", { opacity: 0 }, { opacity: 1, duration: 0.25 }, W.team);
       tl.fromTo("#a3-tick", { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(3)" }, W.check + 0.05);
-      tl.fromTo("#a3-prog", { scaleX: 0.4759 }, { scaleX: 0.5980, duration: 6.226, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.4495 }, { scaleX: 0.5648, duration: 6.226, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

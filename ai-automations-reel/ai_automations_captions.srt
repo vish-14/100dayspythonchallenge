@@ -51,15 +51,15 @@ and let AI draft
 a reply for review.
 
 14
-00:00:18,403 --> 00:00:18,800
+00:00:18,410 --> 00:00:18,800
 Two:
 
 15
-00:00:18,810 --> 00:00:20,160
+00:00:18,810 --> 00:00:20,100
 follow up on time.
 
 16
-00:00:20,170 --> 00:00:22,560
+00:00:20,100 --> 00:00:22,560
 Trigger reminders and approved messages
 
 17
@@ -91,11 +91,11 @@ can check.
 Four:
 
 24
-00:00:31,050 --> 00:00:32,480
+00:00:31,050 --> 00:00:32,400
 keep everyone updated.
 
 25
-00:00:32,490 --> 00:00:33,940
+00:00:32,410 --> 00:00:33,940
 Route task changes
 
 26
@@ -119,30 +119,34 @@ Connected tools,
 clear rules,
 
 31
-00:00:39,130 --> 00:00:39,700
-and a person
+00:00:39,130 --> 00:00:40,240
+and a person ready
 
 32
-00:00:39,700 --> 00:00:42,057
-ready when something needs attention.
+00:00:40,250 --> 00:00:42,057
+when something needs attention.
 
 33
-00:00:42,057 --> 00:00:43,440
-Want your business to run
+00:00:42,057 --> 00:00:43,120
+Want this workflow
 
 34
-00:00:43,450 --> 00:00:44,400
-more smoothly?
+00:00:43,130 --> 00:00:44,080
+for your business?
 
 35
-00:00:44,410 --> 00:00:46,100
-Contact Sri Trilinga
+00:00:44,090 --> 00:00:44,880
+Follow us,
 
 36
-00:00:46,100 --> 00:00:46,960
-Technologies.
+00:00:44,890 --> 00:00:46,820
+then comment "workflow" below,
 
 37
-00:00:46,970 --> 00:00:48,700
-Let's build your automation.
+00:00:46,820 --> 00:00:48,000
+and we'll send it straight
+
+38
+00:00:48,010 --> 00:00:49,180
+to your inbox.
 

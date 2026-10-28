@@ -73,7 +73,7 @@ print(f"aligned {matched}/{len(flat)} sub-tokens from {len(raw)} transcript word
 
 # ---------------------------------------------------------------- caption groups (2–5 words)
 KEY = {"boring", "smarter", "ai", "automation", "interrupting", "crm", "review.", "review", "approved", "attention.",
-       "summaries", "check.", "updated.", "right", "connected", "rules,", "person", "smoothly?", "automation."}
+       "summaries", "check.", "updated.", "right", "connected", "rules,", "person", "smoothly?", "automation.", "workflow", "inbox.", "follow"}
 FUNC = {"in", "to", "the", "a", "and", "your", "when", "of", "for", "into", "can", "keep", "let"}
 groups, cur = [], []
 for i, w in enumerate(words):
@@ -86,7 +86,7 @@ for i, w in enumerate(words):
     if nxt is None or newscene or end_sent or (comma and len(cur) >= 2) or len(cur) >= 5 or (pause and len(cur) >= 3) or (nxt is not None and norm(nxt["text"]) == "and" and len(cur) >= 3):
         # never end a group on a small word: carry it into the next group
         carry = []
-        while len(cur) > 2 and norm(cur[-1]["text"]) in FUNC and not (nxt is None or newscene or end_sent):
+        while len(cur) > 2 and (norm(cur[-1]["text"]) in FUNC or cur[-1]["text"].lower().strip(".,") in FUNC) and not (nxt is None or newscene or end_sent):
             carry.insert(0, cur.pop())
         groups.append(cur); cur = carry
 if cur:

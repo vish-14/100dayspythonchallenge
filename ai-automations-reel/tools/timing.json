@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "vo_duration": 48.462,
+ "vo_duration": 48.953,
  "scenes": [
   {
    "id": "hook",
@@ -38,9 +38,9 @@
    "vo_end": 41.617
   },
   {
-   "id": "contact",
+   "id": "cta",
    "vo_start": 42.117,
-   "vo_end": 48.462
+   "vo_end": 48.953
   }
  ],
  "words": [
@@ -53,8 +53,8 @@
   {
    "text": "boring",
    "scene": "hook",
-   "start": 0.48,
-   "end": 0.8
+   "start": 0.4,
+   "end": 0.96
   },
   {
    "text": "tasks.",
@@ -96,12 +96,12 @@
    "text": "AI",
    "scene": "hook",
    "start": 3.6,
-   "end": 4.24
+   "end": 4.16
   },
   {
    "text": "automation",
    "scene": "hook",
-   "start": 4.24,
+   "start": 4.16,
    "end": 4.8
   },
   {
@@ -270,7 +270,7 @@
    "text": "review.",
    "scene": "a1",
    "start": 17.68,
-   "end": 18.32
+   "end": 18.4
   },
   {
    "text": "Two:",
@@ -300,7 +300,7 @@
    "text": "time.",
    "scene": "a2",
    "start": 19.6,
-   "end": 20.16
+   "end": 20
   },
   {
    "text": "Trigger",
@@ -396,12 +396,12 @@
    "text": "Extract",
    "scene": "a3",
    "start": 26.64,
-   "end": 27.2
+   "end": 27.28
   },
   {
    "text": "key",
    "scene": "a3",
-   "start": 27.2,
+   "start": 27.28,
    "end": 27.52
   },
   {
@@ -474,12 +474,12 @@
    "text": "updated.",
    "scene": "a4",
    "start": 31.68,
-   "end": 32.48
+   "end": 32.4
   },
   {
    "text": "Route",
    "scene": "a4",
-   "start": 32.48,
+   "start": 32.4,
    "end": 32.96
   },
   {
@@ -522,18 +522,18 @@
    "text": "the",
    "scene": "a4",
    "start": 35.36,
-   "end": 35.52
+   "end": 35.44
   },
   {
    "text": "right",
    "scene": "a4",
-   "start": 35.52,
-   "end": 35.84
+   "start": 35.44,
+   "end": 35.76
   },
   {
    "text": "people.",
    "scene": "a4",
-   "start": 35.84,
+   "start": 35.76,
    "end": 36.32
   },
   {
@@ -588,7 +588,7 @@
    "text": "person",
    "scene": "key",
    "start": 39.44,
-   "end": 39.6
+   "end": 39.76
   },
   {
    "text": "ready",
@@ -618,97 +618,127 @@
    "text": "attention.",
    "scene": "key",
    "start": 41.12,
-   "end": 41.92
+   "end": 42
   },
   {
    "text": "Want",
-   "scene": "contact",
+   "scene": "cta",
    "start": 42.117,
    "end": 42.32
   },
   {
-   "text": "your",
-   "scene": "contact",
+   "text": "this",
+   "scene": "cta",
    "start": 42.32,
    "end": 42.56
   },
   {
-   "text": "business",
-   "scene": "contact",
+   "text": "workflow",
+   "scene": "cta",
    "start": 42.56,
-   "end": 42.96
-  },
-  {
-   "text": "to",
-   "scene": "contact",
-   "start": 42.96,
    "end": 43.12
   },
   {
-   "text": "run",
-   "scene": "contact",
+   "text": "for",
+   "scene": "cta",
    "start": 43.12,
-   "end": 43.44
-  },
-  {
-   "text": "more",
-   "scene": "contact",
-   "start": 43.44,
-   "end": 43.6
-  },
-  {
-   "text": "smoothly?",
-   "scene": "contact",
-   "start": 43.6,
-   "end": 44.4
-  },
-  {
-   "text": "Contact",
-   "scene": "contact",
-   "start": 44.4,
-   "end": 44.88
-  },
-  {
-   "text": "Sri",
-   "scene": "contact",
-   "start": 45.04,
-   "end": 45.36
-  },
-  {
-   "text": "Trilinga",
-   "scene": "contact",
-   "start": 45.44,
-   "end": 46
-  },
-  {
-   "text": "Technologies.",
-   "scene": "contact",
-   "start": 46.16,
-   "end": 46.96
-  },
-  {
-   "text": "Let's",
-   "scene": "contact",
-   "start": 46.96,
-   "end": 47.28
-  },
-  {
-   "text": "build",
-   "scene": "contact",
-   "start": 47.28,
-   "end": 47.6
+   "end": 43.28
   },
   {
    "text": "your",
-   "scene": "contact",
+   "scene": "cta",
+   "start": 43.28,
+   "end": 43.44
+  },
+  {
+   "text": "business?",
+   "scene": "cta",
+   "start": 43.44,
+   "end": 44.08
+  },
+  {
+   "text": "Follow",
+   "scene": "cta",
+   "start": 44.08,
+   "end": 44.48
+  },
+  {
+   "text": "us,",
+   "scene": "cta",
+   "start": 44.48,
+   "end": 44.88
+  },
+  {
+   "text": "then",
+   "scene": "cta",
+   "start": 44.88,
+   "end": 45.2
+  },
+  {
+   "text": "comment",
+   "scene": "cta",
+   "start": 45.2,
+   "end": 45.68
+  },
+  {
+   "text": "\"workflow\"",
+   "scene": "cta",
+   "start": 45.76,
+   "end": 46.4
+  },
+  {
+   "text": "below,",
+   "scene": "cta",
+   "start": 46.4,
+   "end": 46.72
+  },
+  {
+   "text": "and",
+   "scene": "cta",
+   "start": 46.88,
+   "end": 47.04
+  },
+  {
+   "text": "we'll",
+   "scene": "cta",
+   "start": 47.04,
+   "end": 47.36
+  },
+  {
+   "text": "send",
+   "scene": "cta",
+   "start": 47.36,
+   "end": 47.6
+  },
+  {
+   "text": "it",
+   "scene": "cta",
    "start": 47.6,
    "end": 47.76
   },
   {
-   "text": "automation.",
-   "scene": "contact",
+   "text": "straight",
+   "scene": "cta",
    "start": 47.76,
-   "end": 48.4
+   "end": 48
+  },
+  {
+   "text": "to",
+   "scene": "cta",
+   "start": 48,
+   "end": 48.16
+  },
+  {
+   "text": "your",
+   "scene": "cta",
+   "start": 48.16,
+   "end": 48.32
+  },
+  {
+   "text": "inbox.",
+   "scene": "cta",
+   "start": 48.32,
+   "end": 48.88
   }
  ],
  "captions": [
@@ -726,8 +756,8 @@
     },
     {
      "text": "boring",
-     "start": 0.48,
-     "end": 0.8,
+     "start": 0.4,
+     "end": 0.96,
      "key": true
     },
     {
@@ -760,7 +790,7 @@
      "text": "workflow.",
      "start": 2.4,
      "end": 3.04,
-     "key": false
+     "key": true
     }
    ]
   },
@@ -785,12 +815,12 @@
     {
      "text": "AI",
      "start": 3.6,
-     "end": 4.24,
+     "end": 4.16,
      "key": true
     },
     {
      "text": "automation",
-     "start": 4.24,
+     "start": 4.16,
      "end": 4.8,
      "key": true
     },
@@ -1039,7 +1069,7 @@
     {
      "text": "review.",
      "start": 17.68,
-     "end": 18.32,
+     "end": 18.4,
      "key": true
     }
    ]
@@ -1047,7 +1077,7 @@
   {
    "id": "cap13",
    "scene": "a2",
-   "start": 18.403,
+   "start": 18.41,
    "end": 18.8,
    "words": [
     {
@@ -1062,13 +1092,13 @@
    "id": "cap14",
    "scene": "a2",
    "start": 18.81,
-   "end": 20.16,
+   "end": 20.1,
    "words": [
     {
      "text": "follow",
      "start": 18.8,
      "end": 19.2,
-     "key": false
+     "key": true
     },
     {
      "text": "up",
@@ -1085,7 +1115,7 @@
     {
      "text": "time.",
      "start": 19.6,
-     "end": 20.16,
+     "end": 20,
      "key": false
     }
    ]
@@ -1093,7 +1123,7 @@
   {
    "id": "cap15",
    "scene": "a2",
-   "start": 20.17,
+   "start": 20.1,
    "end": 22.56,
    "words": [
     {
@@ -1221,12 +1251,12 @@
     {
      "text": "Extract",
      "start": 26.64,
-     "end": 27.2,
+     "end": 27.28,
      "key": false
     },
     {
      "text": "key",
-     "start": 27.2,
+     "start": 27.28,
      "end": 27.52,
      "key": false
     },
@@ -1314,7 +1344,7 @@
    "id": "cap23",
    "scene": "a4",
    "start": 31.05,
-   "end": 32.48,
+   "end": 32.4,
    "words": [
     {
      "text": "keep",
@@ -1331,7 +1361,7 @@
     {
      "text": "updated.",
      "start": 31.68,
-     "end": 32.48,
+     "end": 32.4,
      "key": true
     }
    ]
@@ -1339,12 +1369,12 @@
   {
    "id": "cap24",
    "scene": "a4",
-   "start": 32.49,
+   "start": 32.41,
    "end": 33.94,
    "words": [
     {
      "text": "Route",
-     "start": 32.48,
+     "start": 32.4,
      "end": 32.96,
      "key": false
     },
@@ -1403,18 +1433,18 @@
     {
      "text": "the",
      "start": 35.36,
-     "end": 35.52,
+     "end": 35.44,
      "key": false
     },
     {
      "text": "right",
-     "start": 35.52,
-     "end": 35.84,
+     "start": 35.44,
+     "end": 35.76,
      "key": true
     },
     {
      "text": "people.",
-     "start": 35.84,
+     "start": 35.76,
      "end": 36.32,
      "key": false
     }
@@ -1484,7 +1514,7 @@
    "id": "cap30",
    "scene": "key",
    "start": 39.13,
-   "end": 39.7,
+   "end": 40.24,
    "words": [
     {
      "text": "and",
@@ -1501,23 +1531,23 @@
     {
      "text": "person",
      "start": 39.44,
-     "end": 39.6,
+     "end": 39.76,
      "key": true
+    },
+    {
+     "text": "ready",
+     "start": 39.76,
+     "end": 40.24,
+     "key": false
     }
    ]
   },
   {
    "id": "cap31",
    "scene": "key",
-   "start": 39.7,
+   "start": 40.25,
    "end": 42.057,
    "words": [
-    {
-     "text": "ready",
-     "start": 39.76,
-     "end": 40.24,
-     "key": false
-    },
     {
      "text": "when",
      "start": 40.24,
@@ -1539,16 +1569,16 @@
     {
      "text": "attention.",
      "start": 41.12,
-     "end": 41.92,
+     "end": 42,
      "key": true
     }
    ]
   },
   {
    "id": "cap32",
-   "scene": "contact",
+   "scene": "cta",
    "start": 42.057,
-   "end": 43.44,
+   "end": 43.12,
    "words": [
     {
      "text": "Want",
@@ -1557,123 +1587,161 @@
      "key": false
     },
     {
-     "text": "your",
+     "text": "this",
      "start": 42.32,
      "end": 42.56,
      "key": false
     },
     {
-     "text": "business",
+     "text": "workflow",
      "start": 42.56,
-     "end": 42.96,
-     "key": false
-    },
-    {
-     "text": "to",
-     "start": 42.96,
      "end": 43.12,
-     "key": false
-    },
-    {
-     "text": "run",
-     "start": 43.12,
-     "end": 43.44,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap33",
-   "scene": "contact",
-   "start": 43.45,
-   "end": 44.4,
-   "words": [
-    {
-     "text": "more",
-     "start": 43.44,
-     "end": 43.6,
-     "key": false
-    },
-    {
-     "text": "smoothly?",
-     "start": 43.6,
-     "end": 44.4,
      "key": true
     }
    ]
   },
   {
-   "id": "cap34",
-   "scene": "contact",
-   "start": 44.41,
-   "end": 46.1,
+   "id": "cap33",
+   "scene": "cta",
+   "start": 43.13,
+   "end": 44.08,
    "words": [
     {
-     "text": "Contact",
-     "start": 44.4,
+     "text": "for",
+     "start": 43.12,
+     "end": 43.28,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 43.28,
+     "end": 43.44,
+     "key": false
+    },
+    {
+     "text": "business?",
+     "start": 43.44,
+     "end": 44.08,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap34",
+   "scene": "cta",
+   "start": 44.09,
+   "end": 44.88,
+   "words": [
+    {
+     "text": "Follow",
+     "start": 44.08,
+     "end": 44.48,
+     "key": true
+    },
+    {
+     "text": "us,",
+     "start": 44.48,
      "end": 44.88,
-     "key": false
-    },
-    {
-     "text": "Sri",
-     "start": 45.04,
-     "end": 45.36,
-     "key": false
-    },
-    {
-     "text": "Trilinga",
-     "start": 45.44,
-     "end": 46,
      "key": false
     }
    ]
   },
   {
    "id": "cap35",
-   "scene": "contact",
-   "start": 46.1,
-   "end": 46.96,
+   "scene": "cta",
+   "start": 44.89,
+   "end": 46.82,
    "words": [
     {
-     "text": "Technologies.",
-     "start": 46.16,
-     "end": 46.96,
+     "text": "then",
+     "start": 44.88,
+     "end": 45.2,
+     "key": false
+    },
+    {
+     "text": "comment",
+     "start": 45.2,
+     "end": 45.68,
+     "key": false
+    },
+    {
+     "text": "\"workflow\"",
+     "start": 45.76,
+     "end": 46.4,
+     "key": true
+    },
+    {
+     "text": "below,",
+     "start": 46.4,
+     "end": 46.72,
      "key": false
     }
    ]
   },
   {
    "id": "cap36",
-   "scene": "contact",
-   "start": 46.97,
-   "end": 48.7,
+   "scene": "cta",
+   "start": 46.82,
+   "end": 48,
    "words": [
     {
-     "text": "Let's",
-     "start": 46.96,
-     "end": 47.28,
+     "text": "and",
+     "start": 46.88,
+     "end": 47.04,
      "key": false
     },
     {
-     "text": "build",
-     "start": 47.28,
+     "text": "we'll",
+     "start": 47.04,
+     "end": 47.36,
+     "key": false
+    },
+    {
+     "text": "send",
+     "start": 47.36,
      "end": 47.6,
      "key": false
     },
     {
-     "text": "your",
+     "text": "it",
      "start": 47.6,
      "end": 47.76,
      "key": false
     },
     {
-     "text": "automation.",
+     "text": "straight",
      "start": 47.76,
-     "end": 48.4,
+     "end": 48,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap37",
+   "scene": "cta",
+   "start": 48.01,
+   "end": 49.18,
+   "words": [
+    {
+     "text": "to",
+     "start": 48,
+     "end": 48.16,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 48.16,
+     "end": 48.32,
+     "key": false
+    },
+    {
+     "text": "inbox.",
+     "start": 48.32,
+     "end": 48.88,
      "key": true
     }
    ]
   }
  ],
- "visemes": "rrrrrrrrrraaaaooooaaaaaaaarrrreeeeerrrrrrrrrrrrrrroorrrrrmmmmmmmaaaaaaaaaaarrrrrbbmmrrrrrrrrrrraaaaaeeeaaaaarrreeaaaaaeeaabbbrrraabbooeeeeeeeooooeeeerrrrrrrrrrrrrrrrrrrrooooaaaaaaaaaaaaaaarrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrraaaarrrrrrrrrrraaabbbrrrrrrrrrrrrrrrrrraaaaaooooaaaaaaammrrrraaaarrrroooooaaarrrrooobbbbeeemmrrrrrrrrrrrrrrrrraaaaoooorrrreeeerrmmaaaaooooaaaaaaaammrrrrrrrrrrrrrrrrrrraaaaarrrrraaooooooorrrraaaaaaaaaaaarrrooaaammmmbbbbbbbaaaarrreeeeoommrrrrrrrrrrroooaaarrrrraaaaaaeeaaaaaaaaaaaaaarrrrrrrbbbrrrraaaaaarrbboooommmooorrrrrrrrrrrrrrrraaaaaarrrrrraaaaaaaaaaarraaaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaooooaaaaooaaaaammrrrrrrrrrrrrrraaaaaaaooeeeeeeemmeeeeerrrrrrrrrrraaaaaaaaammmaaaammbbrreeoommmmmrrrrrrrrrrrrrrrrraaaaaaaarrrrraaaaoooooaaaaaaaaaaaaaaaooooommmaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaarrrrrrraaaooaaaaaaaaaaaooorrrrrrrrrrrrooooooooaaaaammmmmooaaaaaaeeaaarrrreeaaoooobboooommeeerrrrrrrrrrrrrrrraaaaaaaarrrraaarrrrrrraaaaaaaarrrraaaabbbbrrrrrrrrrrrrrrraaaaaaarrrrreeaaarrrrmmaaaaooeeeeeerrrrrrrrrrrroooooaammmmaaammmmaaaaaaaaaaarrrrrrrrraabbbrrreeerrmmrrrrrrrrrrrrrrrrrrrrrrraaaaaarrrrrrraaaaaarrraaarrrrraabbbbbrrrrrrrrrrrreeaaaabbbaaabbooorrrrrrrrrraaaaarraaaaarrrrrraaaaaaaaaoooooooooooooooaaoooaaaaaaaarreeeoommmmrrrrrrrrrrrrrrrrrrrrrraaaaaaaaooooaaaaaaaaarrrrrooaaaaooooooooaaaaammrrooaaaaaaaaammrrrrrrrrrrraaaaooooorrrrrrrrrmmaaarrrrraaabbbbooooorrrrrrrrrrrbbbbbbeeerrrrrrrrrrrrrraaarrrrrrraaaooaaaarraaaaaoooeeeemmmmrrrr"
+ "visemes": "rrrrrrrrrraaaaooooaaaaaaaoooooeeeeerrrrrrrrrrrrrrroorrrrrmmmmmmmaaaaaaaaaaarrrrrbbmmrrrrrrrrrrraaaaaeeeaaaaarrreeaaaaaeeaabbbrrraabbooeeeeeeeooooeeeerrrrrrrrrrrrrrrrrrrrooooaaaaaaaaaaaaaaarrrrrrrrraaaaaaaaaaaaarrrrrrrrrrrrrrrraaaarrrrrrrrrrraaabbbrrrrrrrrrrrrrrrrrraaaaaooooaaaaaaammrrrraaaarrrroooooaaarreeooobbbbeeemmrrrrrrrrrrrrrrrrraaaaoooorrrreeeerrmmaaaaooooaaaaaaaammrrrrrrrrrrrrrrrrrrraaaaarrrrraaooooooorrrraaaaaaaaaooorrrooaaammmmbbbbbbbaaaarrreeeeoommrrrrrrrrrrroooaaarrrrraaaaaaeeaaaaaaaaaaaaaarrrrrrrbbbrrrraaaaaarrbboooommmooorrrrrrrrrrrrrrrraaaaaarrrrrraaaaaaaaaaarraaaooooooeeeemmrrrrrrrrrrrrrrrraaaaaaaaaaooooaaaaooaaaaammrrrrrrrrrrrrrraaaaaaaooeeeeeeemmeeeeerrrrrrrrrrraaaeeaaaammmaaaammbbrreeoommmmmrrrrrrrrrrrrrrrrraaaaaaaarrrrraaaaoooooaaaaaaaaaaaaaaaooooommmaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaarrrrrrraaaooaaaaaaaaaaaooorrrrrrrrrrrrooooooooaaaaammmmmooaaaaaaeeaaarrrreeaaoooobboooommeeerrrrrrrrrrrrrrrraaaaaaaarrrraaarrrrrrraaaaaaaarrrraaaabbbbrrrrrrrrrrrrrrraaaaaaarrrrreeaaarrrrmmaaaaooeeeeeerrrrrrrrrrrroooooaammmmaaammmmaaaaaaaaaaarrrrrrrrraabbbrrreeerrmmrrrrrrrrrrrrrrrrrrrrrrraaaaaarrrrrrraaaaaarrraaarrrrraabbbbbrrrrrrrrrrrreeaaaabbbaaabbooorrrrrrrrrraaaaarraaaammaaaaaaaaaaaaaaoooooooooooooooaaooooaaaaaaarreeeoommmmrrrrrrrrrrrrrrrrrrrrrraaaaarrrreemmmmaaarrrrraaaarraaaaaammmmeeeeeooorrrrrrrrrrrrrraaaaaaaaaabbbrrrrrrrrrrraaaoorrrrraaooaaaoorrrrrrraaaarrrrraaaammmmooaabbooorrrrrrrrrrrrraaaammmmaaooaaarrmmrrraaaaarrrraaaaaaooooooorrrrrrrrr"
 }

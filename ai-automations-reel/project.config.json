@@ -4,17 +4,14 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 51.0,
+    "duration": 54.0,
     "output": "ai_automations_sri_final.mp4"
   },
   "brand": {
     "company": "Sri Trilinga Technologies",
     "contact_name": "Sri",
-    "series_label": "SRI TRILINGA · AUTOMATION NOTES",
-    "emails": [
-      "vishwas@sritrilinga.com",
-      "support@sritrilinga.com"
-    ]
+    "series_label": "AI AUTOMATION · FIELD NOTES",
+    "cta_keyword": "WORKFLOW"
   },
   "colors": {
     "blue": "#2257EF",
@@ -96,8 +93,8 @@
       "layout": "takeover"
     },
     {
-      "id": "contact",
-      "chapter": "06 / CONTACT",
+      "id": "cta",
+      "chapter": "06 / YOUR TURN",
       "counter": "",
       "theme": "dark",
       "layout": "takeover"
@@ -237,11 +234,23 @@
       "exception": "Missing PO number",
       "review": "Assigned for human review"
     },
-    "contact": {
-      "line1": "Less busywork.",
-      "line2": "More flow.",
-      "label": "CONTACT",
-      "name": "Sri Trilinga Technologies"
+    "cta": {
+      "line1": "Want this",
+      "line2": "workflow?",
+      "comments": "COMMENTS",
+      "user": "you",
+      "typed": "WORKFLOW",
+      "reply_k": "INBOX · JUST NOW",
+      "reply": "Your workflow guide is here ✓",
+      "pill_a": "FOLLOW + COMMENT",
+      "pill_b": "“WORKFLOW”",
+      "pill_c": "",
+      "follow": "Follow",
+      "following": "Following ✓",
+      "follow_sub": "Follow us",
+      "step1": "STEP 1",
+      "step2": "STEP 2",
+      "dm_note": "The workflow guide lands in your DMs"
     }
   },
   "sfx": [
@@ -433,15 +442,39 @@
     },
     {
       "file": "whoosh.mp3",
-      "word": "contact:Want",
+      "word": "cta:Want",
       "offset": -0.12,
       "volume": 0.4
     },
     {
       "file": "pop.mp3",
-      "word": "contact:Contact",
+      "word": "cta:Follow",
       "offset": 0.0,
+      "volume": 0.35
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:us,",
+      "offset": 0.25,
+      "volume": 0.5
+    },
+    {
+      "file": "key-press.mp3",
+      "word": "cta:comment",
+      "offset": 0.1,
       "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:workflow_2",
+      "offset": 0.55,
+      "volume": 0.5
+    },
+    {
+      "file": "notification.mp3",
+      "word": "cta:inbox.",
+      "offset": 0.0,
+      "volume": 0.25
     }
   ]
 }

@@ -58,11 +58,11 @@
       <span id="a2-sent" class="tag ghost" style="color:var(--blue)">Sent ✓</span>
       <span id="a2-attn" class="tag ink">Needs attention</span>
     </div>
-    <div id="a2-chrome-top" class="chrome top mono t-blue"><span>SRI TRILINGA · AUTOMATION NOTES</span><span>02 / 04</span></div><div id="a2-chrome-bot" class="chrome bot mono t-blue"><span>02 / FOLLOW UP</span><span class="prog"><i id="a2-prog"></i></span></div>
+    <div id="a2-chrome-top" class="chrome top mono t-blue"><span>AI AUTOMATION · FIELD NOTES</span><span>02 / 04</span></div><div id="a2-chrome-bot" class="chrome bot mono t-blue"><span>02 / FOLLOW UP</span><span class="prog"><i id="a2-prog"></i></span></div>
   </div>
   <script>
     (() => {
-      const W = {"two": 0.15, "two_end": 0.487, "follow": 0.487, "follow_end": 0.887, "up": 0.887, "up_end": 1.127, "on": 1.127, "on_end": 1.287, "time": 1.287, "time_end": 1.847, "trigger": 1.847, "trigger_end": 2.327, "reminders": 2.327, "reminders_end": 2.887, "and": 2.967, "and_end": 3.207, "approved": 3.207, "approved_end": 3.767, "messages": 3.767, "messages_end": 4.247, "when": 4.247, "when_end": 4.487, "a": 4.487, "a_end": 4.647, "lead": 4.647, "lead_end": 4.967, "needs": 4.967, "needs_end": 5.287, "attention": 5.287, "attention_end": 6.007};
+      const W = {"two": 0.15, "two_end": 0.487, "follow": 0.487, "follow_end": 0.887, "up": 0.887, "up_end": 1.127, "on": 1.127, "on_end": 1.287, "time": 1.287, "time_end": 1.687, "trigger": 1.847, "trigger_end": 2.327, "reminders": 2.327, "reminders_end": 2.887, "and": 2.967, "and_end": 3.207, "approved": 3.207, "approved_end": 3.767, "messages": 3.767, "messages_end": 4.247, "when": 4.247, "when_end": 4.487, "a": 4.487, "a_end": 4.647, "lead": 4.647, "lead_end": 4.967, "needs": 4.967, "needs_end": 5.287, "attention": 5.287, "attention_end": 6.007};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.two - 0.04);
       tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.follow - 0.04);
@@ -87,7 +87,7 @@
       tl.to("#a2-lead", { x: 728, duration: 0.6, ease: "power2.inOut" }, W.when);
       tl.fromTo("#a2-attn", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.24, ease: "back.out(2)" }, W.lead + 0.05);
       tl.to("#a2-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.lead + 0.05);
-      tl.fromTo("#a2-prog", { scaleX: 0.3591 }, { scaleX: 0.4759, duration: 5.958, ease: "none" }, 0);
+      tl.fromTo("#a2-prog", { scaleX: 0.3391 }, { scaleX: 0.4495, duration: 5.958, ease: "none" }, 0);
       window.__timelines["a2"] = tl;
     })();
   </script>
