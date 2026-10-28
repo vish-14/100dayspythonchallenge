@@ -25,6 +25,8 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 | `scripts/make_sprite.py` | Regenerates every character layer (1080×920 each, 10× pixel scale) plus preview sheets |
 | `scripts/make_profile.py` | Regenerates the 1080×1080 Instagram profile picture, centred for the circle crop |
 | `assets/character/` | Ready-made layers, `instagram_profile_picture.png`, `character_expressions.png`, `avatar.png` |
+| `references/dm-playbook.md` | What commenters get: the guide, SuperProfile settings, every DM message (follower, non-follower, 24 h follow-up, BUILD reply) |
+| `assets/lead-magnet/` | The 4-task workflow guide (HTML page + PDF) sent to people who comment WORKFLOW |
 | `template/` | The working HyperFrames reel project (scenes, presenter, captions, config, tools, SFX), without the large audio files |
 
 ## Quick recipes
