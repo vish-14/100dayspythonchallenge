@@ -23,6 +23,6 @@ pip install kokoro-onnx soundfile numpy
 cd src
 python3 make_voices.py <hyperframes-project-dir> voices
 python3 make_audio.py timeline.json voices ../assets/stickman-sound.wav mouths.json
-cp template.html .. && cd .. && python3 src/build_stick.py . template.html && rm template.html   # or point build_stick.py at the paths directly
-npm run check && npm run render
+python3 build_stick.py .. template.html   # writes ../index.html with the timeline and mouth data
+cd .. && npm run check && npm run render
 ```
