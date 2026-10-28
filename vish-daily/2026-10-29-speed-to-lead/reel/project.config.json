@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 63.4,
+    "duration": 74.6,
     "output": "reel.mp4"
   },
   "brand": {
@@ -61,15 +61,22 @@
       "layout": "split"
     },
     {
+      "id": "solution",
+      "chapter": "00 / THE SOLUTION",
+      "counter": "00 / 04",
+      "theme": "dark",
+      "layout": "split"
+    },
+    {
       "id": "a1",
-      "chapter": "01 / REPLY INSTANTLY",
+      "chapter": "01 / RESPOND TO ENQUIRIES",
       "counter": "01 / 04",
       "theme": "dark",
       "layout": "split"
     },
     {
       "id": "a2",
-      "chapter": "02 / QUALIFY",
+      "chapter": "02 / QUALIFY BUYERS",
       "counter": "02 / 04",
       "theme": "blue",
       "layout": "split"
@@ -83,7 +90,7 @@
     },
     {
       "id": "a4",
-      "chapter": "04 / STAY WARM",
+      "chapter": "04 / FOLLOW UP",
       "counter": "04 / 04",
       "theme": "blue",
       "layout": "split"
@@ -126,8 +133,8 @@
     "a1": {
       "num": "01",
       "title": [
-        "REPLY",
-        "INSTANTLY"
+        "RESPOND TO",
+        "ENQUIRIES"
       ],
       "steps": [
         "PORTAL",
@@ -148,7 +155,10 @@
     },
     "a2": {
       "num": "02",
-      "title": "QUALIFY",
+      "title": [
+        "QUALIFY",
+        "BUYERS"
+      ],
       "qs": [
         "What's your budget?",
         "Which location do you prefer?",
@@ -182,8 +192,8 @@
         "ROUTE",
         "+ BOOK"
       ],
-      "alert_k": "WhatsApp · buyer alert",
-      "lead": "Ananya R. · HOT",
+      "alert_k": "WhatsApp · AI agent alert",
+      "lead": "Ananya R. · meets criteria",
       "detail": "2BHK Whitefield · ₹85L–1Cr",
       "slot_q": "Site visit: Sat 11:00?",
       "approve": "Approve",
@@ -234,7 +244,7 @@
         "IF new lead",
         "IF hot"
       ],
-      "exception": "Viewing request · Sat 11:00",
+      "exception": "Site visit request · Sat 11:00",
       "review": "Waiting for your approval"
     },
     "cta": {
@@ -255,6 +265,19 @@
       "step2": "STEP 2",
       "dm_note": "Follow first, so my reply can reach your DMs",
       "line1b": "built for your"
+    },
+    "solution": {
+      "kicker": "THE SOLUTION",
+      "h1a": "MY AI",
+      "h1b": "AGENT",
+      "h2": "FOR PROPERTY AGENTS",
+      "nodes": [
+        "RESPOND",
+        "QUALIFY",
+        "ROUTE + BOOK",
+        "FOLLOW UP"
+      ],
+      "pill": "4 CONNECTED WORKFLOWS"
     }
   },
   "sfx": [
@@ -308,7 +331,7 @@
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a1:One:",
+      "word": "a1:First,",
       "offset": 0,
       "volume": 0.3
     },
@@ -344,7 +367,7 @@
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a2:Two:",
+      "word": "a2:Second,",
       "offset": 0,
       "volume": 0.3
     },
@@ -380,13 +403,13 @@
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a3:Three:",
+      "word": "a3:Third,",
       "offset": 0,
       "volume": 0.3
     },
     {
       "file": "notification.mp3",
-      "word": "a3:alert",
+      "word": "a3:alerts",
       "offset": 0,
       "volume": 0.25
     },
@@ -398,7 +421,7 @@
     },
     {
       "file": "whoosh-short.mp3",
-      "word": "a3:site",
+      "word": "a3:site_2",
       "offset": 0,
       "volume": 0.3
     },
@@ -410,7 +433,7 @@
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a4:Four:",
+      "word": "a4:Fourth,",
       "offset": 0,
       "volume": 0.3
     },
@@ -503,6 +526,36 @@
       "word": "cta:DMs.",
       "offset": 0.0,
       "volume": 0.25
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "solution:That's",
+      "offset": -0.15,
+      "volume": 0.4
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "solution:AI",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "solution:four",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "solution:connected",
+      "offset": 0,
+      "volume": 0.28
+    },
+    {
+      "file": "ping.mp3",
+      "word": "solution:workflows.",
+      "offset": 0.3,
+      "volume": 0.22
     }
   ]
 }

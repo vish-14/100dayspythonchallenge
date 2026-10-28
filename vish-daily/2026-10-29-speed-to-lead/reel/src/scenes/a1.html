@@ -63,10 +63,10 @@
     (() => {
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.one - 0.04);
-      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.reply - 0.04);
-      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.instantly - 0.08);
-      tl.fromTo("#a1-steps", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.reply);
+      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.first - 0.04);
+      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.respond - 0.04);
+      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.enquiries - 0.08);
+      tl.fromTo("#a1-steps", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.respond);
       const step = (id, t) => {
         tl.to(id, { backgroundColor: "#2257EF", borderColor: "#2257EF", color: "#FFFFFF", duration: 0.2 }, t);
       };

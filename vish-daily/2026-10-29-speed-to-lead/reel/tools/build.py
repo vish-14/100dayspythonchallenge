@@ -137,9 +137,9 @@ blinks, t, k = [], pres_in + 1.1, 0
 while t < pres_out - 0.4:
     blinks.append(round(t, 3)); k += 1; t += (2.7, 3.6, 3.1, 4.0, 2.9)[k % 5]
 # brows lift on the numbered headlines and the hook
-brow_up = [round(abs_word(r), 3) for r in ("hook:cold", "problem:already", "a1:One:", "a2:Two:", "a3:Three:", "a4:Four:")]
+brow_up = [round(abs_word(r), 3) for r in ("hook:cold", "problem:already", "solution:built", "a1:First,", "a2:Second,", "a3:Third,", "a4:Fourth,")]
 # restrained head moves in whole sprite pixels (10 px): one small shift per scene, back to centre at the next
-moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("a1", 0, 0), ("a2", 10, 0), ("a3", 0, 10), ("a4", -10, 0))]
+moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("solution", 0, 0), ("a1", 10, 0), ("a2", 0, 0), ("a3", 0, 10), ("a4", -10, 0))]
 moves.append((round(abs_word("a1:style.") + 0.1, 3), 0, -10))
 moves.sort()
 src = open(P("src", "presenter.html")).read()

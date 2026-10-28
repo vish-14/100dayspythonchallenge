@@ -47,7 +47,7 @@
     <div id="a1-bg" class="panel bg-dark"></div>
     <div class="head" style="color:var(--paper)">
       <div class="mask"><div id="a1-num" class="disp num">01</div></div>
-      <div class="ttl disp"><div class="mask"><div id="a1-t1">REPLY</div></div><div class="mask"><div id="a1-t2">INSTANTLY</div></div></div>
+      <div class="ttl disp"><div class="mask"><div id="a1-t1">RESPOND TO</div></div><div class="mask"><div id="a1-t2">ENQUIRIES</div></div></div>
     </div>
     <div id="a1-steps" class="mono"><b id="a1-s1">PORTAL</b><em>→</em><b id="a1-s2">CRM</b><em>→</em><b id="a1-s3">AI REPLY</b><em>→</em><b id="a1-s4">SENT</b></div>
 
@@ -81,16 +81,16 @@
       <div id="a1-edit" class="a1-btn">Style: yours</div>
       <div id="a1-approve" class="a1-btn"><span id="a1-ap1">Sending…</span><span id="a1-ap2" style="position:absolute;left:0;right:0;top:14px;opacity:0">Sent ✓ 9:05 PM</span></div>
     </div>
-        <div id="a1-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>01 / 04</span></div><div id="a1-chrome-bot" class="chrome bot mono t-dark"><span>01 / REPLY INSTANTLY</span><span class="prog"><i id="a1-prog"></i></span></div>
+        <div id="a1-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>01 / 04</span></div><div id="a1-chrome-bot" class="chrome bot mono t-dark"><span>01 / RESPOND TO ENQUIRIES</span><span class="prog"><i id="a1-prog"></i></span></div>
   </div>
   <script>
     (() => {
-      const W = {"one": 0.15, "one_end": 0.505, "reply": 0.665, "reply_end": 1.305, "instantly": 1.305, "instantly_end": 2.265, "every": 2.265, "every_end": 2.665, "enquiry": 2.665, "enquiry_end": 3.305, "from": 3.465, "from_end": 3.705, "property": 3.705, "property_end": 4.265, "portals": 4.265, "portals_end": 4.745, "or": 4.745, "or_end": 4.905, "whatsapp": 4.905, "whatsapp_end": 5.625, "lands": 5.865, "lands_end": 6.345, "in": 6.345, "in_end": 6.505, "your": 6.505, "your_end": 6.745, "crm": 6.745, "crm_end": 7.705, "and": 7.865, "and_end": 8.185, "ai": 8.185, "ai_end": 8.745, "replies": 8.745, "replies_end": 9.385, "right": 9.385, "right_end": 9.705, "away": 9.705, "away_end": 10.105, "in_2": 10.265, "in_2_end": 10.505, "your_2": 10.505, "your_2_end": 10.745, "style": 10.745, "style_end": 11.385};
+      const W = {"first": 0.15, "first_end": 0.634, "respond": 0.634, "respond_end": 1.114, "to": 1.114, "to_end": 1.354, "enquiries": 1.354, "enquiries_end": 2.394, "every": 2.394, "every_end": 2.794, "enquiry": 2.794, "enquiry_end": 3.514, "from": 3.514, "from_end": 3.834, "property": 3.834, "property_end": 4.394, "portals": 4.394, "portals_end": 4.874, "or": 4.874, "or_end": 5.034, "whatsapp": 5.034, "whatsapp_end": 5.754, "lands": 5.994, "lands_end": 6.474, "in": 6.474, "in_end": 6.634, "your": 6.634, "your_end": 6.954, "crm": 6.954, "crm_end": 7.914, "and": 8.154, "and_end": 8.474, "ai": 8.474, "ai_end": 9.034, "replies": 9.034, "replies_end": 9.674, "right": 9.674, "right_end": 9.994, "away": 9.994, "away_end": 10.394, "in_2": 10.474, "in_2_end": 10.714, "your_2": 10.714, "your_2_end": 10.954, "style": 10.954, "style_end": 11.674};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.one - 0.04);
-      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.reply - 0.04);
-      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.instantly - 0.08);
-      tl.fromTo("#a1-steps", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.reply);
+      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.first - 0.04);
+      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.respond - 0.04);
+      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.enquiries - 0.08);
+      tl.fromTo("#a1-steps", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.respond);
       const step = (id, t) => {
         tl.to(id, { backgroundColor: "#2257EF", borderColor: "#2257EF", color: "#FFFFFF", duration: 0.2 }, t);
       };
@@ -124,7 +124,7 @@
       step("#a1-s4", W.away);
       tl.fromTo("#a1-edit", { borderColor: "#C6CBD5", color: "#4E5666" }, { borderColor: "#2257EF", color: "#2257EF", duration: 0.2 }, W.style - 0.1);
       tl.fromTo("#a1-edit", { scale: 1 }, { scale: 1.08, duration: 0.1, yoyo: true, repeat: 1 }, W.style - 0.1);
-      tl.fromTo("#a1-prog", { scaleX: 0.2141 }, { scaleX: 0.3931, duration: 11.349, ease: "none" }, 0);
+      tl.fromTo("#a1-prog", { scaleX: 0.2746 }, { scaleX: 0.4302, duration: 11.605, ease: "none" }, 0);
       window.__timelines["a1"] = tl;
     })();
   </script>

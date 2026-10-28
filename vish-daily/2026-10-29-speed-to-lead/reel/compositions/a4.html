@@ -57,18 +57,18 @@
       <div class="a4-k">Lead</div><div class="a4-v">Rohan K.</div>
       <div id="a4-tags"><span id="a4-tag1" class="tag ink">Not ready yet</span><span id="a4-tag2" class="tag blue">Still interested ✓</span></div>
     </div>
-    <div id="a4-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>04 / 04</span></div><div id="a4-chrome-bot" class="chrome bot mono t-blue"><span>04 / STAY WARM</span><span class="prog"><i id="a4-prog"></i></span></div>
+    <div id="a4-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>04 / 04</span></div><div id="a4-chrome-bot" class="chrome bot mono t-blue"><span>04 / FOLLOW UP</span><span class="prog"><i id="a4-prog"></i></span></div>
   </div>
   <script>
     (() => {
-      const W = {"four": 0.15, "four_end": 0.628, "follow": 0.628, "follow_end": 1.028, "up": 1.028, "up_end": 1.508, "not": 1.508, "not_end": 1.668, "ready": 1.748, "ready_end": 2.068, "yet": 2.068, "yet_end": 2.628, "friendly": 2.628, "friendly_end": 3.188, "checkins": 3.188, "checkins_end": 3.668, "and": 3.828, "and_end": 4.068, "new": 4.068, "new_end": 4.308, "matching": 4.308, "matching_end": 4.868, "properties": 4.868, "properties_end": 5.508, "keep": 5.508, "keep_end": 5.828, "them": 5.828, "them_end": 6.068, "interested": 6.068, "interested_end": 7.028};
+      const W = {"fourth": 0.15, "fourth_end": 0.667, "follow": 0.667, "follow_end": 0.987, "up": 0.987, "up_end": 1.467, "not": 1.467, "not_end": 1.627, "ready": 1.707, "ready_end": 2.107, "yet": 2.107, "yet_end": 2.667, "friendly": 2.667, "friendly_end": 3.147, "checkins": 3.147, "checkins_end": 3.627, "and": 3.867, "and_end": 4.107, "new": 4.107, "new_end": 4.347, "matching": 4.347, "matching_end": 4.907, "properties": 4.907, "properties_end": 5.547, "keep": 5.547, "keep_end": 5.867, "them": 5.867, "them_end": 6.107, "interested": 6.107, "interested_end": 6.747};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.four - 0.04);
+      tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.fourth - 0.04);
       tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.follow - 0.04);
       tl.fromTo("#a4-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.up - 0.06);
-      tl.fromTo("#a4-track", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, W.four);
-      tl.fromTo(["#a4-m1", "#a4-m2", "#a4-m3"], { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.1, ease: "back.out(2.5)" }, W.four + 0.2);
-      tl.fromTo(["#a4-d1", "#a4-d2", "#a4-d3"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, W.four + 0.3);
+      tl.fromTo("#a4-track", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, W.fourth);
+      tl.fromTo(["#a4-m1", "#a4-m2", "#a4-m3"], { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.1, ease: "back.out(2.5)" }, W.fourth + 0.2);
+      tl.fromTo(["#a4-d1", "#a4-d2", "#a4-d3"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, W.fourth + 0.3);
       tl.fromTo("#a4-lead", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, W.follow);
       tl.set(["#a4-tag1", "#a4-tag2"], { opacity: 0 }, 0);
       // "Not ready yet?"
@@ -86,7 +86,7 @@
       tl.set("#a4-tag1", { opacity: 0 }, W.interested - 0.05);
       tl.fromTo("#a4-tag2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.5)" }, W.interested - 0.05);
       tl.to("#a4-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.interested);
-      tl.fromTo("#a4-prog", { scaleX: 0.6311 }, { scaleX: 0.7416, duration: 7.006, ease: "none" }, 0);
+      tl.fromTo("#a4-prog", { scaleX: 0.6870 }, { scaleX: 0.7816, duration: 7.052, ease: "none" }, 0);
       window.__timelines["a4"] = tl;
     })();
   </script>

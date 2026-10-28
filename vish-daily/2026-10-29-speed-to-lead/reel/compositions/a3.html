@@ -49,9 +49,9 @@
       <div class="ttl disp"><div class="mask"><div id="a3-t1">ROUTE</div></div><div class="mask"><div id="a3-t2">+ BOOK</div></div></div>
     </div>
     <div id="a3-alert" class="card">
-      <div class="bar"><span class="dot b"></span>&nbsp;WhatsApp · buyer alert</div>
+      <div class="bar"><span class="dot b"></span>&nbsp;WhatsApp · AI agent alert</div>
       <div id="a3-ring"></div>
-      <div style="padding:22px 24px 0"><div class="a3-v">Ananya R. · HOT</div><div class="a3-s">2BHK Whitefield · ₹85L–1Cr</div></div>
+      <div style="padding:22px 24px 0"><div class="a3-v">Ananya R. · meets criteria</div><div class="a3-s">2BHK Whitefield · ₹85L–1Cr</div></div>
       <div id="a3-q">Site visit: Sat 11:00?</div>
       <div id="a3-btns"><div id="a3-ok" class="a3-btn"><span id="a3-ok1">Approve</span><span id="a3-ok2" style="position:absolute;left:0;right:0;top:16px;opacity:0">✓ Approved</span></div><div id="a3-chg" class="a3-btn">Change</div></div>
     </div>
@@ -68,18 +68,18 @@
   </div>
   <script>
     (() => {
-      const W = {"three": 0.15, "three_end": 0.648, "route": 0.648, "route_end": 1.048, "and": 1.048, "and_end": 1.288, "book": 1.288, "book_end": 1.928, "serious": 1.928, "serious_end": 2.408, "buyers": 2.408, "buyers_end": 2.968, "alert": 2.968, "alert_end": 3.368, "you": 3.368, "you_end": 3.528, "on": 3.528, "on_end": 3.688, "whatsapp": 3.688, "whatsapp_end": 4.488, "you_2": 4.488, "you_2_end": 4.728, "approve": 4.728, "approve_end": 5.368, "and_2": 5.368, "and_2_end": 5.528, "the": 5.528, "the_end": 5.688, "site": 5.688, "site_end": 6.088, "visit": 6.088, "visit_end": 6.568, "lands": 6.568, "lands_end": 6.888, "in": 6.888, "in_end": 7.048, "your": 7.048, "your_end": 7.208, "calendar": 7.208, "calendar_end": 8.008};
+      const W = {"third": 0.15, "third_end": 0.574, "route": 0.574, "route_end": 0.894, "leads": 1.054, "leads_end": 1.454, "and": 1.454, "and_end": 1.614, "book": 1.614, "book_end": 1.854, "site": 1.854, "site_end": 2.254, "visits": 2.254, "visits_end": 2.894, "the": 2.894, "the_end": 3.134, "agent": 3.134, "agent_end": 3.534, "alerts": 3.534, "alerts_end": 4.014, "you": 4.014, "you_end": 4.174, "on": 4.174, "on_end": 4.334, "whatsapp": 4.334, "whatsapp_end": 4.894, "when": 4.974, "when_end": 5.214, "a": 5.214, "a_end": 5.374, "buyer": 5.374, "buyer_end": 5.854, "meets": 5.854, "meets_end": 6.174, "your": 6.174, "your_end": 6.414, "criteria": 6.414, "criteria_end": 7.294, "you_2": 7.454, "you_2_end": 7.774, "approve": 7.774, "approve_end": 8.334, "and_2": 8.414, "and_2_end": 8.654, "the_2": 8.654, "the_2_end": 8.894, "site_2": 8.894, "site_2_end": 9.214, "visit": 9.214, "visit_end": 9.614, "lands": 9.614, "lands_end": 10.014, "in": 10.014, "in_end": 10.174, "your_2": 10.174, "your_2_end": 10.414, "calendar": 10.414, "calendar_end": 11.214};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
+      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.route - 0.04);
       tl.fromTo("#a3-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.book - 0.06);
       // the calendar waits on "book"
       tl.fromTo("#a3-cal", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, W.book);
       tl.set(["#a3-book", "#a3-stamp"], { opacity: 0 }, 0);
       // "Ready buyers ping you on WhatsApp"
-      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.serious - 0.1);
-      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alert);
-      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alert);
+      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.agent - 0.1);
+      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alerts);
+      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alerts);
       // "You approve"
       tl.fromTo("#a3-cursor", { x: 520, y: 1000, opacity: 0 }, { x: 250, y: 830, opacity: 1, duration: 0.45, ease: "power3.inOut" }, W.you_2 - 0.3);
       tl.to("#a3-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.1);
@@ -88,10 +88,10 @@
       tl.to("#a3-ok", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.16);
       tl.to("#a3-cursor", { opacity: 0, duration: 0.25 }, W.approve + 0.5);
       // "the viewing lands in your calendar"
-      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site - 0.05);
+      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site_2 - 0.05);
       tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.calendar + 0.1);
       tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.calendar + 0.1);
-      tl.fromTo("#a3-prog", { scaleX: 0.5059 }, { scaleX: 0.6311, duration: 7.940, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.5371 }, { scaleX: 0.6870, duration: 11.187, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

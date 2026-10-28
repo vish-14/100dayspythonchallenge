@@ -1,6 +1,6 @@
 # Post kit · Thu 29 Oct 2026 · Speed-to-lead (real estate)
 
-Files: `reel.mp4` (63.4 s, 1080×1920) · `cover.png` · `guide.pdf` (4 pages, "The Speed-to-Lead Playbook")
+Files: `reel.mp4` (74.6 s, 1080×1920) · `cover.png` · `guide.pdf` (4 pages, "The Speed-to-Lead Playbook")
 
 ## 1. When to post
 
@@ -22,11 +22,11 @@ Property agents: your enquiries go cold while you're out on site visits. Here's 
 
 A buyer enquires at 9 PM. You reply at 8:30 the next morning.
 By then, another broker is already talking to them.
-Here's how AI automation handles it, while you stay in control 👇
+That's why I built an AI agent for property agents, with 4 connected workflows. You stay in control 👇
 
-1️⃣ Instant enquiry reply: every enquiry from 99acres, MagicBricks, Housing.com or WhatsApp lands in your CRM and gets a reply right away, in your style
-2️⃣ Lead qualification: AI asks about budget, location, timeline and home loan, then scores the buyer
-3️⃣ Route + book: serious buyers alert you on WhatsApp, you approve, and the site visit lands in your calendar
+1️⃣ Respond to enquiries: every enquiry from 99acres, MagicBricks, Housing.com or WhatsApp lands in your CRM and gets a reply right away, in your style
+2️⃣ Qualify buyers: AI asks about budget, location, timeline and home loan, then scores the buyer
+3️⃣ Route + book: the agent alerts you on WhatsApp when a buyer meets your criteria, you approve, and the site visit lands in your calendar
 4️⃣ Follow-up automation: friendly check-ins and new matching properties keep slow buyers interested
 
 The AI replies fast. You still approve every site visit 🤝

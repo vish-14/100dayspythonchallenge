@@ -46,16 +46,16 @@
     (() => {
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
+      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.route - 0.04);
       tl.fromTo("#a3-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.book - 0.06);
       // the calendar waits on "book"
       tl.fromTo("#a3-cal", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, W.book);
       tl.set(["#a3-book", "#a3-stamp"], { opacity: 0 }, 0);
       // "Ready buyers ping you on WhatsApp"
-      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.serious - 0.1);
-      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alert);
-      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alert);
+      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.agent - 0.1);
+      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alerts);
+      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alerts);
       // "You approve"
       tl.fromTo("#a3-cursor", { x: 520, y: 1000, opacity: 0 }, { x: 250, y: 830, opacity: 1, duration: 0.45, ease: "power3.inOut" }, W.you_2 - 0.3);
       tl.to("#a3-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.1);
@@ -64,7 +64,7 @@
       tl.to("#a3-ok", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.16);
       tl.to("#a3-cursor", { opacity: 0, duration: 0.25 }, W.approve + 0.5);
       // "the viewing lands in your calendar"
-      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site - 0.05);
+      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site_2 - 0.05);
       tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.calendar + 0.1);
       tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.calendar + 0.1);
       tl.fromTo("#a3-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);

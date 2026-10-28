@@ -27,146 +27,154 @@ You reply the next morning.
 By then,
 
 8
-00:00:10,890 --> 00:00:12,960
+00:00:10,890 --> 00:00:13,040
 another broker is already talking
 
 9
-00:00:12,970 --> 00:00:13,680
+00:00:13,050 --> 00:00:13,765
 to them.
 
 10
-00:00:13,690 --> 00:00:14,180
-One:
+00:00:13,765 --> 00:00:15,200
+That's why I built an
 
 11
-00:00:14,180 --> 00:00:15,840
-reply instantly.
+00:00:15,210 --> 00:00:17,520
+AI agent solution for property
 
 12
-00:00:15,850 --> 00:00:16,980
-Every enquiry,
+00:00:17,530 --> 00:00:20,576
+agents, with four connected workflows.
 
 13
-00:00:16,980 --> 00:00:19,380
-from property portals or WhatsApp,
+00:00:20,576 --> 00:00:22,880
+First, respond to enquiries.
 
 14
-00:00:19,380 --> 00:00:21,380
-lands in your CRM,
+00:00:22,890 --> 00:00:24,000
+Every enquiry,
 
 15
-00:00:21,380 --> 00:00:23,780
-and AI replies right away,
+00:00:24,010 --> 00:00:26,420
+from property portals or WhatsApp,
 
 16
-00:00:23,780 --> 00:00:25,014
-in your style.
+00:00:26,420 --> 00:00:28,580
+lands in your CRM,
 
 17
-00:00:25,014 --> 00:00:25,440
-Two:
+00:00:28,580 --> 00:00:30,900
+and AI replies right away,
 
 18
-00:00:25,450 --> 00:00:26,320
-qualify.
+00:00:30,900 --> 00:00:32,181
+in your style.
 
 19
-00:00:26,330 --> 00:00:28,400
-AI asks about budget,
+00:00:32,181 --> 00:00:34,240
+Second, qualify buyers.
 
 20
-00:00:28,410 --> 00:00:30,160
-location, timeline,
+00:00:34,250 --> 00:00:36,400
+AI asks about budget,
 
 21
-00:00:30,170 --> 00:00:30,960
-and if they need
+00:00:36,410 --> 00:00:38,160
+location, timeline,
 
 22
-00:00:30,970 --> 00:00:32,162
-a home loan.
+00:00:38,170 --> 00:00:38,960
+and if they need
 
 23
-00:00:32,162 --> 00:00:32,720
-Three:
+00:00:38,970 --> 00:00:40,156
+a home loan.
 
 24
-00:00:32,730 --> 00:00:34,000
-route and book.
+00:00:40,156 --> 00:00:41,520
+Third, route leads
 
 25
-00:00:34,010 --> 00:00:35,760
-Serious buyers alert you on
+00:00:41,530 --> 00:00:42,960
+and book site visits.
 
 26
-00:00:35,770 --> 00:00:36,560
-WhatsApp.
+00:00:42,970 --> 00:00:44,400
+The agent alerts you on
 
 27
-00:00:36,570 --> 00:00:37,440
-You approve,
+00:00:44,410 --> 00:00:46,240
+WhatsApp when a buyer meets
 
 28
-00:00:37,450 --> 00:00:38,960
-and the site visit lands
+00:00:46,250 --> 00:00:47,460
+your criteria.
 
 29
-00:00:38,970 --> 00:00:40,102
-in your calendar.
+00:00:47,460 --> 00:00:48,420
+You approve,
 
 30
-00:00:40,102 --> 00:00:40,640
-Four:
+00:00:48,420 --> 00:00:50,080
+and the site visit lands
 
 31
-00:00:40,650 --> 00:00:41,520
-follow up.
+00:00:50,090 --> 00:00:51,343
+in your calendar.
 
 32
-00:00:41,530 --> 00:00:42,640
-Not ready yet?
+00:00:51,343 --> 00:00:52,720
+Fourth, follow up.
 
 33
-00:00:42,650 --> 00:00:44,880
-Friendly check-ins and new matching
+00:00:52,730 --> 00:00:53,920
+Not ready yet?
 
 34
-00:00:44,890 --> 00:00:47,108
-properties keep them interested.
+00:00:53,930 --> 00:00:56,160
+Friendly check-ins and new matching
 
 35
-00:00:47,108 --> 00:00:47,840
-The key?
+00:00:56,170 --> 00:00:58,300
+properties keep them interested.
 
 36
-00:00:47,850 --> 00:00:51,040
-Portals, CRM and calendar connected,
+00:00:58,395 --> 00:00:59,110
+The key?
 
 37
-00:00:51,050 --> 00:00:52,000
-clear rules,
+00:00:59,120 --> 00:01:02,310
+Portals, CRM and calendar connected,
 
 38
-00:00:52,010 --> 00:00:54,195
-and you approving what matters.
+00:01:02,320 --> 00:01:03,350
+clear rules,
 
 39
-00:00:54,195 --> 00:00:55,600
-Want this workflow built
+00:01:03,360 --> 00:01:04,210
+and you approving
 
 40
-00:00:55,610 --> 00:00:56,590
-for your business?
+00:01:04,330 --> 00:01:05,482
+what matters.
 
 41
-00:00:56,590 --> 00:00:58,910
-Follow me and comment "workflow",
+00:01:05,482 --> 00:01:06,870
+Want this workflow built
 
 42
-00:00:58,910 --> 00:00:59,850
-and I'll send you
+00:01:06,880 --> 00:01:07,910
+for your business?
 
 43
-00:00:59,860 --> 00:01:01,830
+00:01:07,920 --> 00:01:10,230
+Follow me and comment "workflow",
+
+44
+00:01:10,240 --> 00:01:11,110
+and I'll send you
+
+45
+00:01:11,120 --> 00:01:13,090
 the details in your DMs.
 

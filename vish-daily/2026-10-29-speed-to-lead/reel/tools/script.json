@@ -12,28 +12,34 @@
   "text": "A buyer enquires at 9 PM. You reply the next morning. By then, another broker is already talking to them."
  },
  {
+  "id": "solution",
+  "label": "00 / THE SOLUTION",
+  "say": "That's why I built an AI agent solution for property agents, with four connected workflows.",
+  "text": "That's why I built an AI agent solution for property agents, with four connected workflows."
+ },
+ {
   "id": "a1",
-  "label": "01 / REPLY INSTANTLY",
-  "say": "One: reply instantly. Every enquiry, from property portals or WhatsApp, lands in your C R M, and AI replies right away, in your style.",
-  "text": "One: reply instantly. Every enquiry, from property portals or WhatsApp, lands in your CRM, and AI replies right away, in your style."
+  "label": "01 / RESPOND TO ENQUIRIES",
+  "say": "First, respond to enquiries. Every enquiry, from property portals or WhatsApp, lands in your C R M, and AI replies right away, in your style.",
+  "text": "First, respond to enquiries. Every enquiry, from property portals or WhatsApp, lands in your CRM, and AI replies right away, in your style."
  },
  {
   "id": "a2",
-  "label": "02 / QUALIFY",
-  "say": "Two: qualify. AI asks about budget, location, timeline, and if they need a home loan.",
-  "text": "Two: qualify. AI asks about budget, location, timeline, and if they need a home loan."
+  "label": "02 / QUALIFY BUYERS",
+  "say": "Second, qualify buyers. AI asks about budget, location, timeline, and if they need a home loan.",
+  "text": "Second, qualify buyers. AI asks about budget, location, timeline, and if they need a home loan."
  },
  {
   "id": "a3",
   "label": "03 / ROUTE + BOOK",
-  "say": "Three: route and book. Serious buyers alert you on WhatsApp. You approve, and the site visit lands in your calendar.",
-  "text": "Three: route and book. Serious buyers alert you on WhatsApp. You approve, and the site visit lands in your calendar."
+  "say": "Third, route leads and book site visits. The agent alerts you on WhatsApp when a buyer meets your criteria. You approve, and the site visit lands in your calendar.",
+  "text": "Third, route leads and book site visits. The agent alerts you on WhatsApp when a buyer meets your criteria. You approve, and the site visit lands in your calendar."
  },
  {
   "id": "a4",
-  "label": "04 / STAY WARM",
-  "say": "Four: follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested.",
-  "text": "Four: follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested."
+  "label": "04 / FOLLOW UP",
+  "say": "Fourth, follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested.",
+  "text": "Fourth, follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested."
  },
  {
   "id": "key",

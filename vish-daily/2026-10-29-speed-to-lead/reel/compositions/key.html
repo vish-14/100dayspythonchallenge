@@ -66,7 +66,7 @@
     <div id="key-r2" class="k-rule tag ghost mono" style="left:462px;color:var(--paper)">IF hot</div>
     <div id="key-branch"></div>
     <div id="key-flag">!</div>
-    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">You approve</span><div class="k-v">Viewing request · Sat 11:00</div><div class="k-k" style="margin-top:6px">Waiting for your approval</div></div></div>
+    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">You approve</span><div class="k-v">Site visit request · Sat 11:00</div><div class="k-k" style="margin-top:6px">Waiting for your approval</div></div></div>
     <div id="key-emph">
       <div id="key-ecount" class="mono"><span id="key-ec1">01</span><span id="key-ec2" style="position:absolute;left:0;right:0;opacity:0">02</span><span id="key-ec3" style="position:absolute;left:0;right:0;opacity:0">03</span></div>
       <div class="mask" style="position:absolute;left:0;top:30px;width:1080px;height:140px">
@@ -79,7 +79,7 @@
   </div>
   <script>
     (() => {
-      const W = {"the": 0.15, "the_end": 0.27, "key": 0.262, "key_end": 0.822, "portals": 0.822, "portals_end": 1.702, "crm": 1.702, "crm_end": 2.502, "and": 2.582, "and_end": 2.742, "calendar": 2.742, "calendar_end": 3.302, "connected": 3.302, "connected_end": 4.022, "clear": 4.022, "clear_end": 4.422, "rules": 4.422, "rules_end": 4.982, "and_2": 4.982, "and_2_end": 5.222, "you": 5.222, "you_end": 5.382, "approving": 5.542, "approving_end": 6.022, "what": 6.022, "what_end": 6.262, "matters": 6.262, "matters_end": 7.062};
+      const W = {"the": 0.15, "the_end": 0.27, "key": 0.245, "key_end": 0.805, "portals": 0.805, "portals_end": 1.605, "crm": 1.765, "crm_end": 2.485, "and": 2.565, "and_end": 2.725, "calendar": 2.725, "calendar_end": 3.285, "connected": 3.285, "connected_end": 4.005, "clear": 4.005, "clear_end": 4.485, "rules": 4.485, "rules_end": 5.045, "and_2": 5.045, "and_2_end": 5.205, "you": 5.205, "you_end": 5.445, "approving": 5.445, "approving_end": 5.605, "what": 6.085, "what_end": 6.245, "matters": 6.245, "matters_end": 7.045};
       const tl = gsap.timeline({ paused: true });
       // "The key?" fills the screen, then becomes the scene's label
       tl.fromTo("#key-q", { scale: 1.35, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "power4.out" }, Math.max(0, W.key - 0.12));

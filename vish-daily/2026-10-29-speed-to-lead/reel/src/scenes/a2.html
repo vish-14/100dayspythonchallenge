@@ -1,7 +1,6 @@
 <template>
   <style>
     {{BASE_CSS}}
-    #a2-head .ttl { font-size: 104px; padding-top: 28px; }
     #a2-ask { left: 56px; top: 452px; width: 968px; height: 96px; display: flex; align-items: center; gap: 20px; padding: 0 24px; }
     #a2-qs { position: relative; flex: 1; height: 40px; }
     #a2-qs span { position: absolute; left: 0; top: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); white-space: nowrap; }
@@ -21,7 +20,7 @@
     <div id="a2-bg" class="panel bg-blue"></div>
     <div id="a2-head" class="head on-blue" style="color:var(--paper)">
       <div class="mask"><div id="a2-num" class="disp num">{{c.num}}</div></div>
-      <div class="ttl disp"><div class="mask"><div id="a2-t1">{{c.title}}</div></div></div>
+      <div class="ttl disp"><div class="mask"><div id="a2-t1">{{c.title.0}}</div></div><div class="mask"><div id="a2-t2">{{c.title.1}}</div></div></div>
     </div>
     <div id="a2-ask" class="card"><span class="tag blue">AI asks</span>
       <div id="a2-qs"><span id="a2-q0">{{c.qs.0}}</span><span id="a2-q1">{{c.qs.1}}</span><span id="a2-q2">{{c.qs.2}}</span><span id="a2-q3">{{c.qs.3}}</span></div>
@@ -42,10 +41,11 @@
     (() => {
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.two - 0.04);
+      tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.second - 0.04);
       tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.qualify - 0.06);
+      tl.fromTo("#a2-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.buyers - 0.06);
       // the lead record opens empty; "AI asks" one question per word, each answer fills its field
-      tl.fromTo("#a2-lead", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.qualify + 0.2);
+      tl.fromTo("#a2-lead", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.buyers + 0.2);
       tl.fromTo("#a2-ask", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.ai - 0.05);
       tl.set(["#a2-q0", "#a2-q1", "#a2-q2", "#a2-q3", "#a2-v0", "#a2-v1", "#a2-v2", "#a2-v3", "#a2-score"], { opacity: 0 }, 0);
       const Q = [W.asks - 0.05, W.location - 0.1, W.timeline - 0.1, W.if - 0.1];
