@@ -1,5 +1,5 @@
 ---
-name: vish-character
+name: vish
 description: Brand kit and production playbook for "Vish", the pixel-art AI-automation presenter of the Instagram page @vish.workflows (backend: Sri Trilinga Technologies Private Limited). Use whenever the user mentions Vish, @vish.workflows, the pixel character, the automation reels, the WORKFLOW comment CTA, or asks for a new reel, post, caption, bio, profile picture, thumbnail or character art for this page. Holds the exact character design (palette, pixel grid, layers), the page's voice and copy rules, the reel pipeline that worked (HyperFrames + Kokoro voice + MusicGen + Parakeet captions), and the scripts that regenerate the character exactly.
 ---
 

@@ -1,0 +1,51 @@
+[
+ {
+  "id": "hook",
+  "label": "00 / THE OPPORTUNITY",
+  "say": "Four boring tasks. One smarter workflow. Here's where AI automation helps.",
+  "text": "Four boring tasks. One smarter workflow. Here's where AI automation helps."
+ },
+ {
+  "id": "problem",
+  "label": "00 / THE PROBLEM",
+  "say": "Enquiries, follow-ups, updates, reports. Small jobs keep interrupting your day.",
+  "text": "Enquiries, follow-ups, updates, reports. Small jobs keep interrupting your day."
+ },
+ {
+  "id": "a1",
+  "label": "01 / CAPTURE ENQUIRIES",
+  "say": "One: capture enquiries. Save contact details in your C R M, and let AI draft a reply for review.",
+  "text": "One: capture enquiries. Save contact details in your CRM, and let AI draft a reply for review."
+ },
+ {
+  "id": "a2",
+  "label": "02 / FOLLOW UP",
+  "say": "Two: follow up on time. Trigger reminders and approved messages when a lead needs attention.",
+  "text": "Two: follow up on time. Trigger reminders and approved messages when a lead needs attention."
+ },
+ {
+  "id": "a3",
+  "label": "03 / PROCESS DOCUMENTS",
+  "say": "Three: turn documents into drafts. Extract key details and prepare summaries your team can check.",
+  "text": "Three: turn documents into drafts. Extract key details and prepare summaries your team can check."
+ },
+ {
+  "id": "a4",
+  "label": "04 / KEEP TEAMS UPDATED",
+  "say": "Four: keep everyone updated. Route task changes and useful summaries to the right people.",
+  "text": "Four: keep everyone updated. Route task changes and useful summaries to the right people."
+ },
+ {
+  "id": "key",
+  "label": "05 / RELIABILITY",
+  "say": "The key? Connected tools, clear rules, and a person ready when something needs attention.",
+  "text": "The key? Connected tools, clear rules, and a person ready when something needs attention."
+ },
+ {
+  "id": "cta",
+  "label": "06 / YOUR TURN",
+  "say": "Want this workflow built for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
+  "text": "Want this workflow built for your business? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
+  "speed": 1.1
+ }
+]
