@@ -1,0 +1,21 @@
+[
+ {
+  "id": "hook",
+  "label": "HOOK",
+  "say": "What if one AI agent handled your daily admin?",
+  "text": "What if one AI agent handled your daily admin?"
+ },
+ {
+  "id": "agent",
+  "label": "AI AGENT",
+  "say": "Here's how one AI agent helps. It replies to enquiries, follows up on time, summarises documents, and keeps your team updated. You approve what matters.",
+  "text": "Here's how one AI agent helps. | It replies to enquiries, | follows up on time, | summarises documents, | and keeps your team updated. | You approve what matters."
+ },
+ {
+  "id": "cta",
+  "label": "YOUR TURN",
+  "speed": 1.1,
+  "say": "Want it built for your business? Follow me and comment, workflow. I'll send the details to your DMs.",
+  "text": "Want it built | for your business? | Follow me | and comment “WORKFLOW”. | I'll send the details | to your DMs."
+ }
+]

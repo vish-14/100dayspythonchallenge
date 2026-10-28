@@ -1,0 +1,77 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #ag-spokes { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #ag-spokes line { stroke: rgba(245,245,247,.4); stroke-width: 6; }
+    #ag-spokes line.f { stroke: var(--paper); stroke-width: 8; }
+    #ag-agent { position: absolute; left: 445px; top: 445px; width: 190px; height: 190px; border-radius: 50%; background: var(--paper); color: var(--blue);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35); }
+    #ag-agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 60px; line-height: .9; }
+    #ag-agent span { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .24em; font-weight: 500; color: var(--ink); margin-top: 8px; }
+    .ag-node { position: absolute; width: 290px; height: 96px; border-radius: 20px; background: rgba(11,16,22,.28); border: 3px solid rgba(245,245,247,.45); color: var(--paper);
+      display: flex; align-items: center; gap: 16px; padding: 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 25px; letter-spacing: .12em; font-weight: 500; white-space: nowrap; }
+    .ag-node i { width: 46px; height: 46px; border-radius: 12px; background: rgba(245,245,247,.35); flex: none; }
+    .ag-chip { position: absolute; width: 290px; height: 52px; border-radius: 26px; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; white-space: nowrap; }
+    #ag-review { left: 120px; top: 432px; width: 840px; height: 150px; display: flex; align-items: center; gap: 22px; padding: 0 26px; }
+    #ag-who { width: 76px; height: 76px; border-radius: 50%; background: var(--ink); position: relative; flex: none; }
+    #ag-who::before { content: ""; position: absolute; left: 26px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper); }
+    #ag-who::after { content: ""; position: absolute; left: 15px; top: 42px; width: 46px; height: 24px; border-radius: 22px 22px 6px 6px; background: var(--paper); }
+    .ag-k { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .ag-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); margin-top: 6px; white-space: nowrap; }
+    #ag-btn { margin-left: auto; position: relative; min-width: 240px; height: 76px; border-radius: 16px; background: var(--blue); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; }
+    #ag-b1, #ag-b2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    #ag-cursor { position: absolute; left: 0; top: 0; width: 44px; height: 54px; }
+  </style>
+  <div id="root" data-composition-id="agent" data-width="1080" data-height="1920">
+    <div id="agent-bg" class="panel bg-blue"></div>
+    <svg id="ag-spokes" viewBox="0 0 1080 1010">
+      <line x1="540" y1="540" x2="245" y2="350"/><line x1="540" y1="540" x2="835" y2="350"/><line x1="540" y1="540" x2="245" y2="690"/><line x1="540" y1="540" x2="835" y2="690"/>
+      <line id="ag-f1" class="f" x1="540" y1="540" x2="245" y2="350"/><line id="ag-f2" class="f" x1="540" y1="540" x2="835" y2="350"/>
+      <line id="ag-f3" class="f" x1="540" y1="540" x2="245" y2="690"/><line id="ag-f4" class="f" x1="540" y1="540" x2="835" y2="690"/>
+    </svg>
+    <div id="ag-n1" class="ag-node" style="left:100px;top:302px"><i id="ag-i1"></i>{{c.nodes.0}}</div>
+    <div id="ag-n2" class="ag-node" style="left:690px;top:302px"><i id="ag-i2"></i>{{c.nodes.1}}</div>
+    <div id="ag-n3" class="ag-node" style="left:100px;top:642px"><i id="ag-i3"></i>{{c.nodes.2}}</div>
+    <div id="ag-n4" class="ag-node" style="left:690px;top:642px"><i id="ag-i4"></i>{{c.nodes.3}}</div>
+    <div id="ag-c1" class="ag-chip" style="left:100px;top:412px">{{c.chips.0}}</div>
+    <div id="ag-c2" class="ag-chip" style="left:690px;top:412px">{{c.chips.1}}</div>
+    <div id="ag-c3" class="ag-chip" style="left:100px;top:752px">{{c.chips.2}}</div>
+    <div id="ag-c4" class="ag-chip" style="left:690px;top:752px">{{c.chips.3}}</div>
+    <div id="ag-agent"><b>AI</b><span>AGENT</span></div>
+    <div id="ag-review" class="card"><div id="ag-who"></div><div><div class="ag-k">{{c.review_k}}</div><div class="ag-v">{{c.review_v}}</div></div>
+      <div id="ag-btn"><span id="ag-b1">Approve</span><span id="ag-b2">✓ Approved</span></div></div>
+    <svg id="ag-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // "Here's how one AI agent helps": the agent appears with its four tools
+      tl.fromTo("#ag-agent", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, W.heres - 0.1);
+      tl.fromTo(["#ag-n1", "#ag-n2", "#ag-n3", "#ag-n4"], { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.07, ease: "back.out(2)" }, W.one - 0.1);
+      tl.fromTo("#ag-spokes", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.agent - 0.1);
+      tl.set(["#ag-f1", "#ag-f2", "#ag-f3", "#ag-f4"], { opacity: 0 }, 0);
+      // each tool lights up with its result as it is named
+      [[1, W.enquiries], [2, W.time], [3, W.documents], [4, W.updated]].forEach(([i, t]) => {
+        tl.to(`#ag-f${i}`, { opacity: 1, duration: 0.15 }, t - 0.05);
+        tl.to(`#ag-n${i}`, { backgroundColor: "#F5F5F7", borderColor: "#F5F5F7", color: "#0B1016", duration: 0.18 }, t - 0.05);
+        tl.to(`#ag-i${i}`, { backgroundColor: "#2257EF", duration: 0.18 }, t - 0.05);
+        tl.fromTo(`#ag-c${i}`, { opacity: 0, y: -12, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "back.out(2.4)" }, t + 0.05);
+      });
+      tl.fromTo("#ag-agent", { boxShadow: "0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35)" },
+        { boxShadow: "0 0 0 28px rgba(245,245,247,.3), 0 28px 60px rgba(4,8,20,.35)", duration: 0.25, yoyo: true, repeat: 1 }, W.updated + 0.2);
+      // "You approve what matters": a person signs off before anything goes out
+      tl.fromTo("#ag-review", { opacity: 0, y: 50, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.38, ease: "back.out(1.6)" }, W.you - 0.12);
+      tl.set("#ag-b2", { opacity: 0 }, 0);
+      tl.fromTo("#ag-cursor", { x: 560, y: 760, opacity: 0 }, { x: 820, y: 530, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.you + 0.05);
+      tl.to("#ag-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.to("#ag-btn", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.set("#ag-b1", { opacity: 0 }, W.approve + 0.11); tl.set("#ag-b2", { opacity: 1 }, W.approve + 0.11);
+      tl.to("#ag-btn", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.11);
+      tl.fromTo("#agent-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["agent"] = tl;
+    })();
+  </script>
+</template>

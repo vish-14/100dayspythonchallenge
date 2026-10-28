@@ -1,0 +1,754 @@
+{
+ "fps": 30,
+ "vo_duration": 20.858,
+ "scenes": [
+  {
+   "id": "hook",
+   "vo_start": 0.08,
+   "vo_end": 3.66
+  },
+  {
+   "id": "agent",
+   "vo_start": 3.96,
+   "vo_end": 14.706
+  },
+  {
+   "id": "cta",
+   "vo_start": 15.106,
+   "vo_end": 20.858
+  }
+ ],
+ "words": [
+  {
+   "text": "What",
+   "scene": "hook",
+   "start": 0.08,
+   "end": 0.32
+  },
+  {
+   "text": "if",
+   "scene": "hook",
+   "start": 0.32,
+   "end": 0.56
+  },
+  {
+   "text": "one",
+   "scene": "hook",
+   "start": 0.56,
+   "end": 0.88
+  },
+  {
+   "text": "AI",
+   "scene": "hook",
+   "start": 0.88,
+   "end": 1.52
+  },
+  {
+   "text": "agent",
+   "scene": "hook",
+   "start": 1.52,
+   "end": 2.08
+  },
+  {
+   "text": "handled",
+   "scene": "hook",
+   "start": 2.08,
+   "end": 2.64
+  },
+  {
+   "text": "your",
+   "scene": "hook",
+   "start": 2.64,
+   "end": 2.8
+  },
+  {
+   "text": "daily",
+   "scene": "hook",
+   "start": 2.8,
+   "end": 3.12
+  },
+  {
+   "text": "admin?",
+   "scene": "hook",
+   "start": 3.12,
+   "end": 3.92
+  },
+  {
+   "text": "Here's",
+   "scene": "agent",
+   "start": 3.96,
+   "end": 4.32
+  },
+  {
+   "text": "how",
+   "scene": "agent",
+   "start": 4.32,
+   "end": 4.56
+  },
+  {
+   "text": "one",
+   "scene": "agent",
+   "start": 4.56,
+   "end": 4.72
+  },
+  {
+   "text": "AI",
+   "scene": "agent",
+   "start": 4.88,
+   "end": 5.44
+  },
+  {
+   "text": "agent",
+   "scene": "agent",
+   "start": 5.44,
+   "end": 5.92
+  },
+  {
+   "text": "helps.",
+   "scene": "agent",
+   "start": 5.92,
+   "end": 6.56
+  },
+  {
+   "text": "It",
+   "scene": "agent",
+   "start": 6.56,
+   "end": 6.72
+  },
+  {
+   "text": "replies",
+   "scene": "agent",
+   "start": 6.72,
+   "end": 7.2
+  },
+  {
+   "text": "to",
+   "scene": "agent",
+   "start": 7.2,
+   "end": 7.44
+  },
+  {
+   "text": "enquiries,",
+   "scene": "agent",
+   "start": 7.44,
+   "end": 8.4
+  },
+  {
+   "text": "follows",
+   "scene": "agent",
+   "start": 8.4,
+   "end": 8.88
+  },
+  {
+   "text": "up",
+   "scene": "agent",
+   "start": 8.88,
+   "end": 9.12
+  },
+  {
+   "text": "on",
+   "scene": "agent",
+   "start": 9.12,
+   "end": 9.36
+  },
+  {
+   "text": "time,",
+   "scene": "agent",
+   "start": 9.36,
+   "end": 10
+  },
+  {
+   "text": "summarises",
+   "scene": "agent",
+   "start": 10,
+   "end": 10.88
+  },
+  {
+   "text": "documents,",
+   "scene": "agent",
+   "start": 10.88,
+   "end": 11.52
+  },
+  {
+   "text": "and",
+   "scene": "agent",
+   "start": 11.52,
+   "end": 11.68
+  },
+  {
+   "text": "keeps",
+   "scene": "agent",
+   "start": 11.68,
+   "end": 12
+  },
+  {
+   "text": "your",
+   "scene": "agent",
+   "start": 12,
+   "end": 12.16
+  },
+  {
+   "text": "team",
+   "scene": "agent",
+   "start": 12.16,
+   "end": 12.48
+  },
+  {
+   "text": "updated.",
+   "scene": "agent",
+   "start": 12.48,
+   "end": 13.28
+  },
+  {
+   "text": "You",
+   "scene": "agent",
+   "start": 13.28,
+   "end": 13.52
+  },
+  {
+   "text": "approve",
+   "scene": "agent",
+   "start": 13.52,
+   "end": 14
+  },
+  {
+   "text": "what",
+   "scene": "agent",
+   "start": 14,
+   "end": 14.24
+  },
+  {
+   "text": "matters.",
+   "scene": "agent",
+   "start": 14.24,
+   "end": 14.96
+  },
+  {
+   "text": "Want",
+   "scene": "cta",
+   "start": 15.106,
+   "end": 15.28
+  },
+  {
+   "text": "it",
+   "scene": "cta",
+   "start": 15.28,
+   "end": 15.44
+  },
+  {
+   "text": "built",
+   "scene": "cta",
+   "start": 15.44,
+   "end": 15.76
+  },
+  {
+   "text": "for",
+   "scene": "cta",
+   "start": 15.76,
+   "end": 15.92
+  },
+  {
+   "text": "your",
+   "scene": "cta",
+   "start": 15.92,
+   "end": 16.08
+  },
+  {
+   "text": "business?",
+   "scene": "cta",
+   "start": 16.08,
+   "end": 16.64
+  },
+  {
+   "text": "Follow",
+   "scene": "cta",
+   "start": 16.64,
+   "end": 17.04
+  },
+  {
+   "text": "me",
+   "scene": "cta",
+   "start": 17.04,
+   "end": 17.28
+  },
+  {
+   "text": "and",
+   "scene": "cta",
+   "start": 17.28,
+   "end": 17.44
+  },
+  {
+   "text": "comment",
+   "scene": "cta",
+   "start": 17.44,
+   "end": 18
+  },
+  {
+   "text": "\u201cWORKFLOW\u201d.",
+   "scene": "cta",
+   "start": 18,
+   "end": 18.8
+  },
+  {
+   "text": "I'll",
+   "scene": "cta",
+   "start": 18.8,
+   "end": 19.12
+  },
+  {
+   "text": "send",
+   "scene": "cta",
+   "start": 19.12,
+   "end": 19.36
+  },
+  {
+   "text": "the",
+   "scene": "cta",
+   "start": 19.36,
+   "end": 19.44
+  },
+  {
+   "text": "details",
+   "scene": "cta",
+   "start": 19.44,
+   "end": 19.84
+  },
+  {
+   "text": "to",
+   "scene": "cta",
+   "start": 19.84,
+   "end": 20
+  },
+  {
+   "text": "your",
+   "scene": "cta",
+   "start": 20,
+   "end": 20.16
+  },
+  {
+   "text": "DMs.",
+   "scene": "cta",
+   "start": 20.16,
+   "end": 20.8
+  }
+ ],
+ "captions": [
+  {
+   "id": "cap00",
+   "scene": "hook",
+   "start": 0.02,
+   "end": 3.92,
+   "words": [
+    {
+     "text": "What",
+     "start": 0.08,
+     "end": 0.32,
+     "key": false
+    },
+    {
+     "text": "if",
+     "start": 0.32,
+     "end": 0.56,
+     "key": false
+    },
+    {
+     "text": "one",
+     "start": 0.56,
+     "end": 0.88,
+     "key": false
+    },
+    {
+     "text": "AI",
+     "start": 0.88,
+     "end": 1.52,
+     "key": false
+    },
+    {
+     "text": "agent",
+     "start": 1.52,
+     "end": 2.08,
+     "key": true
+    },
+    {
+     "text": "handled",
+     "start": 2.08,
+     "end": 2.64,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 2.64,
+     "end": 2.8,
+     "key": false
+    },
+    {
+     "text": "daily",
+     "start": 2.8,
+     "end": 3.12,
+     "key": false
+    },
+    {
+     "text": "admin?",
+     "start": 3.12,
+     "end": 3.92,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap01",
+   "scene": "agent",
+   "start": 3.93,
+   "end": 6.56,
+   "words": [
+    {
+     "text": "Here's",
+     "start": 3.96,
+     "end": 4.32,
+     "key": false
+    },
+    {
+     "text": "how",
+     "start": 4.32,
+     "end": 4.56,
+     "key": false
+    },
+    {
+     "text": "one",
+     "start": 4.56,
+     "end": 4.72,
+     "key": false
+    },
+    {
+     "text": "AI",
+     "start": 4.88,
+     "end": 5.44,
+     "key": false
+    },
+    {
+     "text": "agent",
+     "start": 5.44,
+     "end": 5.92,
+     "key": true
+    },
+    {
+     "text": "helps.",
+     "start": 5.92,
+     "end": 6.56,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap02",
+   "scene": "agent",
+   "start": 6.57,
+   "end": 8.4,
+   "words": [
+    {
+     "text": "It",
+     "start": 6.56,
+     "end": 6.72,
+     "key": false
+    },
+    {
+     "text": "replies",
+     "start": 6.72,
+     "end": 7.2,
+     "key": false
+    },
+    {
+     "text": "to",
+     "start": 7.2,
+     "end": 7.44,
+     "key": false
+    },
+    {
+     "text": "enquiries,",
+     "start": 7.44,
+     "end": 8.4,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap03",
+   "scene": "agent",
+   "start": 8.41,
+   "end": 10,
+   "words": [
+    {
+     "text": "follows",
+     "start": 8.4,
+     "end": 8.88,
+     "key": false
+    },
+    {
+     "text": "up",
+     "start": 8.88,
+     "end": 9.12,
+     "key": false
+    },
+    {
+     "text": "on",
+     "start": 9.12,
+     "end": 9.36,
+     "key": false
+    },
+    {
+     "text": "time,",
+     "start": 9.36,
+     "end": 10,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap04",
+   "scene": "agent",
+   "start": 10.01,
+   "end": 11.52,
+   "words": [
+    {
+     "text": "summarises",
+     "start": 10,
+     "end": 10.88,
+     "key": false
+    },
+    {
+     "text": "documents,",
+     "start": 10.88,
+     "end": 11.52,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap05",
+   "scene": "agent",
+   "start": 11.53,
+   "end": 13.28,
+   "words": [
+    {
+     "text": "and",
+     "start": 11.52,
+     "end": 11.68,
+     "key": false
+    },
+    {
+     "text": "keeps",
+     "start": 11.68,
+     "end": 12,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 12,
+     "end": 12.16,
+     "key": false
+    },
+    {
+     "text": "team",
+     "start": 12.16,
+     "end": 12.48,
+     "key": false
+    },
+    {
+     "text": "updated.",
+     "start": 12.48,
+     "end": 13.28,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap06",
+   "scene": "agent",
+   "start": 13.29,
+   "end": 15.046,
+   "words": [
+    {
+     "text": "You",
+     "start": 13.28,
+     "end": 13.52,
+     "key": false
+    },
+    {
+     "text": "approve",
+     "start": 13.52,
+     "end": 14,
+     "key": true
+    },
+    {
+     "text": "what",
+     "start": 14,
+     "end": 14.24,
+     "key": false
+    },
+    {
+     "text": "matters.",
+     "start": 14.24,
+     "end": 14.96,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap07",
+   "scene": "cta",
+   "start": 15.046,
+   "end": 15.76,
+   "words": [
+    {
+     "text": "Want",
+     "start": 15.106,
+     "end": 15.28,
+     "key": false
+    },
+    {
+     "text": "it",
+     "start": 15.28,
+     "end": 15.44,
+     "key": false
+    },
+    {
+     "text": "built",
+     "start": 15.44,
+     "end": 15.76,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap08",
+   "scene": "cta",
+   "start": 15.77,
+   "end": 16.64,
+   "words": [
+    {
+     "text": "for",
+     "start": 15.76,
+     "end": 15.92,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 15.92,
+     "end": 16.08,
+     "key": false
+    },
+    {
+     "text": "business?",
+     "start": 16.08,
+     "end": 16.64,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap09",
+   "scene": "cta",
+   "start": 16.65,
+   "end": 17.28,
+   "words": [
+    {
+     "text": "Follow",
+     "start": 16.64,
+     "end": 17.04,
+     "key": true
+    },
+    {
+     "text": "me",
+     "start": 17.04,
+     "end": 17.28,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap10",
+   "scene": "cta",
+   "start": 17.29,
+   "end": 18.8,
+   "words": [
+    {
+     "text": "and",
+     "start": 17.28,
+     "end": 17.44,
+     "key": false
+    },
+    {
+     "text": "comment",
+     "start": 17.44,
+     "end": 18,
+     "key": false
+    },
+    {
+     "text": "\u201cWORKFLOW\u201d.",
+     "start": 18,
+     "end": 18.8,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap11",
+   "scene": "cta",
+   "start": 18.81,
+   "end": 19.84,
+   "words": [
+    {
+     "text": "I'll",
+     "start": 18.8,
+     "end": 19.12,
+     "key": false
+    },
+    {
+     "text": "send",
+     "start": 19.12,
+     "end": 19.36,
+     "key": false
+    },
+    {
+     "text": "the",
+     "start": 19.36,
+     "end": 19.44,
+     "key": false
+    },
+    {
+     "text": "details",
+     "start": 19.44,
+     "end": 19.84,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap12",
+   "scene": "cta",
+   "start": 19.85,
+   "end": 21.1,
+   "words": [
+    {
+     "text": "to",
+     "start": 19.84,
+     "end": 20,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 20,
+     "end": 20.16,
+     "key": false
+    },
+    {
+     "text": "DMs.",
+     "start": 20.16,
+     "end": 20.8,
+     "key": true
+    }
+   ]
+  }
+ ],
+ "visemes": "rrrrraaaaaaarroooaaaaoooorrrrreeaaaaaaaaaaaaarrrraaaaeeeeeerrrrrrrrrrrraaooaaaoooaaaaaaaaeeebbrrraaammoooorrrrrrrrrrrrrraaaaaaaaaaaaaaaoooaaaaarrrrrreeaaaaaaaaaabbrrrraaaaeeeeeeeeeeerrrrrrrrrrrrrrrrrrrrrraaaaaaaaaaaarrraaaaoorrrraaaaaaaaaabbbrrrrrrrrrrrrrraaaaaaaaaaaaaaarrrraaaooooaaaaaeeeerrrrrrrrrrrrrrraaooaaaaaaaaeeaaaarrraaaarrrrraaooorrrrrrrrroorrrraaarrrrrrrrrrraaaaaaarrrrraaaaeemmrrrrrrrrrrrrrrooaaarrrrraaaaaaaaarrooeeeemmmrrrrrrrrrrrrrrrrrrrrraaaaaaammmaaaarrrraaaaaaaaaaaaaooaaaarrrrrrrrrrrraaaaaaaaaooaaaarrrroorrraaaaaaaaoorrrrrraaarrrrrbbmmrrrrrrrrrrrrraaammmmaaaoooooooaaaaaaaaaaaaarrrraaaaaaeeeeeeeemmrrrrrrr"
+}

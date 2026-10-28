@@ -1,0 +1,55 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #hook-text { position: absolute; left: 70px; right: 70px; top: 270px; color: var(--paper); font-size: 86px; }
+    #hook-text .hk-ln { display: block; white-space: nowrap; margin-bottom: 6px; }
+    #hook-text .w { display: inline-block; margin-right: .22em; transform-origin: 50% 70%; }
+    #hook-text .w.hl { color: #7EA2FF; }
+    #hook-chips { position: absolute; left: 70px; right: 70px; top: 738px; display: flex; gap: 14px; }
+    .hk-chip { flex: 1; height: 72px; border-radius: 16px; background: var(--paper); color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 25px; white-space: nowrap; position: relative; }
+    .hk-chip i { position: absolute; right: -10px; top: -14px; width: 36px; height: 36px; border-radius: 50%; background: var(--blue); color: #fff; font-style: normal;
+      font-size: 19px; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hook-bg" class="panel bg-dark"></div>
+    <div id="hook-text" class="disp"></div>
+    <div id="hook-chips">
+      <div class="hk-chip">{{c.chips.0}}<i>3</i></div><div class="hk-chip">{{c.chips.1}}<i>5</i></div>
+      <div class="hk-chip">{{c.chips.2}}<i>3</i></div><div class="hk-chip">{{c.chips.3}}<i>2</i></div>
+    </div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // the hook text is fully readable from frame 0; "*word*" marks a highlighted word, "|" a line break
+      const NUM = { "4": "four", "1": "one" };
+      const norm = (s) => { const k = s.toLowerCase().replace(/[^a-z0-9']/g, "").replace(/'/g, ""); return NUM[k] || k; };
+      const box = document.getElementById("hook-text"), seen = {}, pulses = [];
+      "{{c.text}}".split("|").forEach((line) => {
+        const ln = document.createElement("span"); ln.className = "hk-ln";
+        line.trim().split(/\s+/).forEach((raw) => {
+          const hl = raw.includes("*"), txt = raw.replace(/\*/g, "");
+          const w = document.createElement("span"); w.className = "w" + (hl ? " hl" : ""); w.textContent = txt; ln.appendChild(w);
+          txt.split("-").forEach((part) => {
+            const k = norm(part); if (!k) return;
+            seen[k] = (seen[k] || 0) + 1; const key = seen[k] === 1 ? k : `${k}_${seen[k]}`;
+            if (W[key] !== undefined) pulses.push([w, W[key], hl]);
+          });
+        });
+        box.appendChild(ln);
+      });
+      // each word punches as it is spoken
+      pulses.forEach(([w, t, hl]) => {
+        tl.fromTo(w, { scale: 1 }, { scale: hl ? 1.14 : 1.07, duration: 0.11, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, Math.max(0, t - 0.03));
+      });
+      // movement inside the first second: the four everyday tasks pop in with their unread counts
+      tl.fromTo(".hk-chip", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.09, ease: "back.out(2)" }, 0.12);
+      tl.fromTo(".hk-chip i", { scale: 0 }, { scale: 1, duration: 0.22, stagger: 0.09, ease: "back.out(3)" }, 0.45);
+      tl.fromTo("#hook-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

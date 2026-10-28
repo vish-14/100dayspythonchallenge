@@ -1,0 +1,17 @@
+[
+ {
+  "id": "hook",
+  "vo_start": 0.08,
+  "vo_end": 3.66
+ },
+ {
+  "id": "agent",
+  "vo_start": 3.96,
+  "vo_end": 14.706
+ },
+ {
+  "id": "cta",
+  "vo_start": 15.106,
+  "vo_end": 20.858
+ }
+]

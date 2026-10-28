@@ -1,0 +1,222 @@
+{
+  "_readme": "Central configuration. Edit copy, colours, contact details or asset paths here, then run: python3 tools/build.py && npx hyperframes check. Timings come from the real voiceover (tools/timing.json).",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 22.7,
+    "output": "ai_agent_four_tasks.mp4"
+  },
+  "brand": {
+    "company": "Sri Trilinga Technologies",
+    "contact_name": "Sri",
+    "series_label": "@VISH.WORKFLOWS · AI AGENTS",
+    "cta_keyword": "WORKFLOW",
+    "handle": "@vish.workflows",
+    "persona": "Vish"
+  },
+  "colors": {
+    "blue": "#2257EF",
+    "blue_deep": "#1A44C4",
+    "ink": "#0B1016",
+    "ink_2": "#151B24",
+    "paper": "#F5F5F7",
+    "gray": "#8A93A3",
+    "gray_dark": "#3A4252",
+    "gray_line": "#2A313D",
+    "ok": "#2257EF"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "mono": "JetBrains Mono",
+    "ui": "Inter"
+  },
+  "assets": {
+    "voiceover": "assets/audio/voiceover.wav",
+    "music_bed": "assets/audio/music_bed.wav",
+    "music_raw": "assets/audio/music.wav",
+    "sfx_dir": "assets/audio/sfx",
+    "presenter_dir": "assets/presenter",
+    "avatar": "assets/brand/avatar.png"
+  },
+  "audio": {
+    "voice_volume": 1.0,
+    "music_volume": 1.0,
+    "duck_db": -9.0,
+    "music_base_db": -2.0
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "chapter": "",
+      "counter": "",
+      "theme": "dark",
+      "layout": "split"
+    },
+    {
+      "id": "agent",
+      "chapter": "ONE AI AGENT",
+      "counter": "",
+      "theme": "blue",
+      "layout": "split"
+    },
+    {
+      "id": "cta",
+      "chapter": "YOUR TURN",
+      "counter": "",
+      "theme": "dark",
+      "layout": "takeover"
+    }
+  ],
+  "copy": {
+    "hook": {
+      "text": "What if *one*|*AI agent* handled|your daily admin?",
+      "chips": [
+        "Enquiries",
+        "Follow-ups",
+        "Documents",
+        "Team updates"
+      ]
+    },
+    "agent": {
+      "nodes": [
+        "INBOX",
+        "CRM",
+        "DOCUMENTS",
+        "TEAM CHAT"
+      ],
+      "chips": [
+        "Reply drafted ✓",
+        "Follow-up sent ✓",
+        "Summary ready ✓",
+        "Team updated ✓"
+      ],
+      "review_k": "AI draft · new lead",
+      "review_v": "Ready for your review"
+    },
+    "cta": {
+      "line1": "Want it built",
+      "line2": "business?",
+      "comments": "COMMENTS",
+      "user": "you",
+      "typed": "WORKFLOW",
+      "reply_k": "VISH · JUST NOW",
+      "reply": "Here's your workflow guide ✓",
+      "pill_a": "FOLLOW + COMMENT",
+      "pill_b": "“WORKFLOW”",
+      "pill_c": "",
+      "follow": "Follow",
+      "following": "Following ✓",
+      "follow_sub": "@vish.workflows",
+      "step1": "STEP 1",
+      "step2": "STEP 2",
+      "dm_note": "Follow first, so my reply can reach your DMs",
+      "line1b": "for your"
+    }
+  },
+  "sfx": [
+    {
+      "file": "whoosh.mp3",
+      "word": "agent:Here's",
+      "offset": -0.1,
+      "volume": 0.4
+    },
+    {
+      "file": "pop.mp3",
+      "word": "agent:enquiries,",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "agent:time,",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "agent:documents,",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "agent:updated.",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "click.mp3",
+      "word": "agent:approve",
+      "offset": 0.1,
+      "volume": 0.5
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "cta:Want",
+      "offset": -0.12,
+      "volume": 0.4
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:me",
+      "offset": 0.2,
+      "volume": 0.5
+    },
+    {
+      "file": "key-press.mp3",
+      "word": "cta:comment",
+      "offset": 0.1,
+      "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "cta:workflow.",
+      "offset": 0.55,
+      "volume": 0.5
+    },
+    {
+      "file": "notification.mp3",
+      "word": "cta:DMs.",
+      "offset": 0,
+      "volume": 0.25
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:What",
+      "offset": 0.0,
+      "volume": 0.3
+    }
+  ],
+  "presenter": {
+    "in": -1,
+    "out_scene": "cta",
+    "brows": [
+      "hook:What",
+      "agent:approve"
+    ],
+    "moves": [
+      [
+        "agent:Here's",
+        0.1,
+        -10,
+        0
+      ],
+      [
+        "agent:summarises",
+        0,
+        10,
+        0
+      ],
+      [
+        "agent:You",
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "no_burned_captions": [
+    "hook"
+  ]
+}

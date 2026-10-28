@@ -1,0 +1,25 @@
+<template>
+  <style>
+    #root{position:absolute;inset:0;pointer-events:none}
+    .cap{position:absolute;left:0;top:962px;width:1080px;height:96px;display:flex;align-items:center;justify-content:center;overflow:visible}
+    .cap .strip{display:inline-block;background:#F5F5F7;color:#0B1016;font-family:'Montserrat',sans-serif;font-weight:800;
+      line-height:1.05;padding:14px 30px 16px;letter-spacing:-.005em;box-shadow:0 10px 30px rgba(4,8,20,.28);white-space:nowrap}
+    .cap .key{color:#2257EF}
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1080" data-height="1920">
+    <div id="cap01" class="clip cap" data-start="3.930" data-duration="2.630" data-track-index="0"><span class="strip" style="font-size:46px"><span class="w">Here&#x27;s</span> <span class="w">how</span> <span class="w">one</span> <span class="w">AI</span> <span class="w key">agent</span> <span class="w">helps.</span></span></div><div id="cap02" class="clip cap" data-start="6.570" data-duration="1.830" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">It</span> <span class="w">replies</span> <span class="w">to</span> <span class="w">enquiries,</span></span></div><div id="cap03" class="clip cap" data-start="8.410" data-duration="1.590" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">follows</span> <span class="w">up</span> <span class="w">on</span> <span class="w">time,</span></span></div><div id="cap04" class="clip cap" data-start="10.010" data-duration="1.510" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">summarises</span> <span class="w">documents,</span></span></div><div id="cap05" class="clip cap" data-start="11.530" data-duration="1.750" data-track-index="0"><span class="strip" style="font-size:50px"><span class="w">and</span> <span class="w">keeps</span> <span class="w">your</span> <span class="w">team</span> <span class="w key">updated.</span></span></div><div id="cap06" class="clip cap" data-start="13.290" data-duration="1.756" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">You</span> <span class="w key">approve</span> <span class="w">what</span> <span class="w">matters.</span></span></div><div id="cap07" class="clip cap" data-start="15.046" data-duration="0.714" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">Want</span> <span class="w">it</span> <span class="w">built</span></span></div><div id="cap08" class="clip cap" data-start="15.770" data-duration="0.870" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">for</span> <span class="w">your</span> <span class="w">business?</span></span></div><div id="cap09" class="clip cap" data-start="16.650" data-duration="0.630" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w key">Follow</span> <span class="w">me</span></span></div><div id="cap10" class="clip cap" data-start="17.290" data-duration="1.510" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">and</span> <span class="w">comment</span> <span class="w key">“WORKFLOW”.</span></span></div><div id="cap11" class="clip cap" data-start="18.810" data-duration="1.030" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">I&#x27;ll</span> <span class="w">send</span> <span class="w">the</span> <span class="w">details</span></span></div><div id="cap12" class="clip cap" data-start="19.850" data-duration="1.250" data-track-index="0"><span class="strip" style="font-size:52px"><span class="w">to</span> <span class="w">your</span> <span class="w key">DMs.</span></span></div>
+  </div>
+  <script>
+    (() => {
+      const tl = gsap.timeline({ paused: true });
+      const G = [["cap01", 3.93, 6.56], ["cap02", 6.57, 8.4], ["cap03", 8.41, 10], ["cap04", 10.01, 11.52], ["cap05", 11.53, 13.28], ["cap06", 13.29, 15.046], ["cap07", 15.046, 15.76], ["cap08", 15.77, 16.64], ["cap09", 16.65, 17.28], ["cap10", 17.29, 18.8], ["cap11", 18.81, 19.84], ["cap12", 19.85, 21.1]];
+      G.forEach(([id, s, e]) => {
+        const strip = document.querySelector("#" + id + " .strip");
+        tl.fromTo(strip, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.12, ease: "power3.out" }, s);
+        tl.to(strip, { opacity: 0, duration: 0.08, ease: "power2.in" }, Math.max(s + 0.14, e - 0.08));
+        tl.set(strip, { opacity: 0 }, e);
+      });
+      window.__timelines["captions"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,111 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+.mh{width:150px;height:150px;flex:none;overflow:visible}
+.mh line{stroke:var(--gray-dark);stroke-width:5}
+.mh .n{fill:var(--ink);stroke:var(--gray-dark);stroke-width:5}
+.mh .n.on{fill:var(--blue);stroke:var(--blue)} .mh line.on{stroke:var(--blue)}
+.mh .c{fill:var(--blue)} .mh text{fill:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px}
+.on-blue .mh line{stroke:rgba(245,245,247,.4)} .on-blue .mh .n{fill:var(--blue);stroke:rgba(245,245,247,.45)}
+.on-blue .mh .n.on{fill:var(--paper);stroke:var(--paper)} .on-blue .mh line.on{stroke:var(--paper)}
+.on-blue .mh .c{fill:var(--paper)} .on-blue .mh text{fill:var(--blue)}
+.ttl .via{font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.2em;font-weight:500;color:var(--gray);margin-top:12px;line-height:1.2}
+.on-blue .ttl .via{color:rgba(245,245,247,.82)}
+
+    #ag-spokes { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #ag-spokes line { stroke: rgba(245,245,247,.4); stroke-width: 6; }
+    #ag-spokes line.f { stroke: var(--paper); stroke-width: 8; }
+    #ag-agent { position: absolute; left: 445px; top: 445px; width: 190px; height: 190px; border-radius: 50%; background: var(--paper); color: var(--blue);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35); }
+    #ag-agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 60px; line-height: .9; }
+    #ag-agent span { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .24em; font-weight: 500; color: var(--ink); margin-top: 8px; }
+    .ag-node { position: absolute; width: 290px; height: 96px; border-radius: 20px; background: rgba(11,16,22,.28); border: 3px solid rgba(245,245,247,.45); color: var(--paper);
+      display: flex; align-items: center; gap: 16px; padding: 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 25px; letter-spacing: .12em; font-weight: 500; white-space: nowrap; }
+    .ag-node i { width: 46px; height: 46px; border-radius: 12px; background: rgba(245,245,247,.35); flex: none; }
+    .ag-chip { position: absolute; width: 290px; height: 52px; border-radius: 26px; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; white-space: nowrap; }
+    #ag-review { left: 120px; top: 432px; width: 840px; height: 150px; display: flex; align-items: center; gap: 22px; padding: 0 26px; }
+    #ag-who { width: 76px; height: 76px; border-radius: 50%; background: var(--ink); position: relative; flex: none; }
+    #ag-who::before { content: ""; position: absolute; left: 26px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper); }
+    #ag-who::after { content: ""; position: absolute; left: 15px; top: 42px; width: 46px; height: 24px; border-radius: 22px 22px 6px 6px; background: var(--paper); }
+    .ag-k { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .ag-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); margin-top: 6px; white-space: nowrap; }
+    #ag-btn { margin-left: auto; position: relative; min-width: 240px; height: 76px; border-radius: 16px; background: var(--blue); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; }
+    #ag-b1, #ag-b2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    #ag-cursor { position: absolute; left: 0; top: 0; width: 44px; height: 54px; }
+  </style>
+  <div id="root" data-composition-id="agent" data-width="1080" data-height="1920">
+    <div id="agent-bg" class="panel bg-blue"></div>
+    <svg id="ag-spokes" viewBox="0 0 1080 1010">
+      <line x1="540" y1="540" x2="245" y2="350"/><line x1="540" y1="540" x2="835" y2="350"/><line x1="540" y1="540" x2="245" y2="690"/><line x1="540" y1="540" x2="835" y2="690"/>
+      <line id="ag-f1" class="f" x1="540" y1="540" x2="245" y2="350"/><line id="ag-f2" class="f" x1="540" y1="540" x2="835" y2="350"/>
+      <line id="ag-f3" class="f" x1="540" y1="540" x2="245" y2="690"/><line id="ag-f4" class="f" x1="540" y1="540" x2="835" y2="690"/>
+    </svg>
+    <div id="ag-n1" class="ag-node" style="left:100px;top:302px"><i id="ag-i1"></i>INBOX</div>
+    <div id="ag-n2" class="ag-node" style="left:690px;top:302px"><i id="ag-i2"></i>CRM</div>
+    <div id="ag-n3" class="ag-node" style="left:100px;top:642px"><i id="ag-i3"></i>DOCUMENTS</div>
+    <div id="ag-n4" class="ag-node" style="left:690px;top:642px"><i id="ag-i4"></i>TEAM CHAT</div>
+    <div id="ag-c1" class="ag-chip" style="left:100px;top:412px">Reply drafted ✓</div>
+    <div id="ag-c2" class="ag-chip" style="left:690px;top:412px">Follow-up sent ✓</div>
+    <div id="ag-c3" class="ag-chip" style="left:100px;top:752px">Summary ready ✓</div>
+    <div id="ag-c4" class="ag-chip" style="left:690px;top:752px">Team updated ✓</div>
+    <div id="ag-agent"><b>AI</b><span>AGENT</span></div>
+    <div id="ag-review" class="card"><div id="ag-who"></div><div><div class="ag-k">AI draft · new lead</div><div class="ag-v">Ready for your review</div></div>
+      <div id="ag-btn"><span id="ag-b1">Approve</span><span id="ag-b2">✓ Approved</span></div></div>
+    <svg id="ag-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    <div id="agent-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AGENTS</span><span></span></div><div id="agent-chrome-bot" class="chrome bot mono t-blue"><span>ONE AI AGENT</span><span class="prog"><i id="agent-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"heres": 0.15, "heres_end": 0.51, "how": 0.51, "how_end": 0.75, "one": 0.75, "one_end": 0.91, "ai": 1.07, "ai_end": 1.63, "agent": 1.63, "agent_end": 2.11, "helps": 2.11, "helps_end": 2.75, "it": 2.75, "it_end": 2.91, "replies": 2.91, "replies_end": 3.39, "to": 3.39, "to_end": 3.63, "enquiries": 3.63, "enquiries_end": 4.59, "follows": 4.59, "follows_end": 5.07, "up": 5.07, "up_end": 5.31, "on": 5.31, "on_end": 5.55, "time": 5.55, "time_end": 6.19, "summarises": 6.19, "summarises_end": 7.07, "documents": 7.07, "documents_end": 7.71, "and": 7.71, "and_end": 7.87, "keeps": 7.87, "keeps_end": 8.19, "your": 8.19, "your_end": 8.35, "team": 8.35, "team_end": 8.67, "updated": 8.67, "updated_end": 9.47, "you": 9.47, "you_end": 9.71, "approve": 9.71, "approve_end": 10.19, "what": 10.19, "what_end": 10.43, "matters": 10.43, "matters_end": 11.15};
+      const tl = gsap.timeline({ paused: true });
+      // "Here's how one AI agent helps": the agent appears with its four tools
+      tl.fromTo("#ag-agent", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, W.heres - 0.1);
+      tl.fromTo(["#ag-n1", "#ag-n2", "#ag-n3", "#ag-n4"], { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.07, ease: "back.out(2)" }, W.one - 0.1);
+      tl.fromTo("#ag-spokes", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.agent - 0.1);
+      tl.set(["#ag-f1", "#ag-f2", "#ag-f3", "#ag-f4"], { opacity: 0 }, 0);
+      // each tool lights up with its result as it is named
+      [[1, W.enquiries], [2, W.time], [3, W.documents], [4, W.updated]].forEach(([i, t]) => {
+        tl.to(`#ag-f${i}`, { opacity: 1, duration: 0.15 }, t - 0.05);
+        tl.to(`#ag-n${i}`, { backgroundColor: "#F5F5F7", borderColor: "#F5F5F7", color: "#0B1016", duration: 0.18 }, t - 0.05);
+        tl.to(`#ag-i${i}`, { backgroundColor: "#2257EF", duration: 0.18 }, t - 0.05);
+        tl.fromTo(`#ag-c${i}`, { opacity: 0, y: -12, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "back.out(2.4)" }, t + 0.05);
+      });
+      tl.fromTo("#ag-agent", { boxShadow: "0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35)" },
+        { boxShadow: "0 0 0 28px rgba(245,245,247,.3), 0 28px 60px rgba(4,8,20,.35)", duration: 0.25, yoyo: true, repeat: 1 }, W.updated + 0.2);
+      // "You approve what matters": a person signs off before anything goes out
+      tl.fromTo("#ag-review", { opacity: 0, y: 50, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.38, ease: "back.out(1.6)" }, W.you - 0.12);
+      tl.set("#ag-b2", { opacity: 0 }, 0);
+      tl.fromTo("#ag-cursor", { x: 560, y: 760, opacity: 0 }, { x: 820, y: 530, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.you + 0.05);
+      tl.to("#ag-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.to("#ag-btn", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.set("#ag-b1", { opacity: 0 }, W.approve + 0.11); tl.set("#ag-b2", { opacity: 1 }, W.approve + 0.11);
+      tl.to("#ag-btn", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.11);
+      tl.fromTo("#agent-prog", { scaleX: 0.1678 }, { scaleX: 0.6589, duration: 11.146, ease: "none" }, 0);
+      window.__timelines["agent"] = tl;
+    })();
+  </script>
+</template>

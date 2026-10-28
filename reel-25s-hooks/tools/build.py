@@ -1,0 +1,264 @@
+"""Assembles the HyperFrames project from project.config.json + tools/timing.json.
+
+Usage: python3 tools/build.py
+
+Writes index.html (scene hosts, presenter, captions, audio) and compositions/*.html from the
+templates in src/. Template tokens:
+  {{BASE_CSS}} {{CHROME}} {{W}} {{DUR}} {{ID}}       shared CSS, chrome labels, word cues (scene-local seconds), length, id
+  {{c.path.to.value}}                                 this scene's copy from config.copy.<scene>
+  {{brand.x}} {{colors.x}}                            config lookups
+Every timing comes from the real voiceover: a scene starts 0.15 s before its first word.
+"""
+import json, os, re, html
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+P = lambda *p: os.path.join(ROOT, *p)
+CFG = json.load(open(P("project.config.json")))
+TIM = json.load(open(P("tools", "timing.json")))
+VW, VH, DUR = CFG["video"]["width"], CFG["video"]["height"], CFG["video"]["duration"]
+COL = CFG["colors"]
+
+
+def norm(w):
+    return re.sub(r"[^a-z0-9']", "", w.lower()).replace("'", "")
+
+
+# ---------------------------------------------------------------- scene windows
+vo = {s["id"]: s for s in TIM["scenes"]}
+order = [s["id"] for s in CFG["scenes"]]
+starts = {sid: (0.0 if i == 0 else round(vo[sid]["vo_start"] - 0.15, 3)) for i, sid in enumerate(order)}
+win = {}
+for i, sid in enumerate(order):
+    end = starts[order[i + 1]] if i + 1 < len(order) else DUR
+    win[sid] = (starts[sid], round(end, 3))
+
+
+def word_cues(sid):
+    s0 = win[sid][0]; cues = {}; seen = {}
+    for w in TIM["words"]:
+        if w["scene"] != sid:
+            continue
+        k = norm(w["text"]); seen[k] = seen.get(k, 0) + 1
+        key = k if seen[k] == 1 else f"{k}_{seen[k]}"
+        cues[key] = round(w["start"] - s0, 3)
+        cues[key + "_end"] = round(w["end"] - s0, 3)
+    return cues
+
+
+def abs_word(ref):
+    """'scene:Word' → absolute start of that word; 'scene:word_2' → its second occurrence."""
+    sid, txt = ref.split(":", 1)
+    n = 1
+    m = re.match(r"(.+)_(\d+)$", txt)
+    if m:
+        txt, n = m.group(1), int(m.group(2))
+    hits = [w for w in TIM["words"] if w["scene"] == sid and (w["text"] == txt or norm(w["text"]) == norm(txt))]
+    if len(hits) < n:
+        raise KeyError(ref)
+    return hits[n - 1]["start"]
+
+
+# ---------------------------------------------------------------- shared CSS / chrome
+def css_vars():
+    return ";".join(f"--{k.replace('_', '-')}:{v}" for k, v in COL.items())
+
+
+BASE_CSS = """
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;%VARS%}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+.mh{width:150px;height:150px;flex:none;overflow:visible}
+.mh line{stroke:var(--gray-dark);stroke-width:5}
+.mh .n{fill:var(--ink);stroke:var(--gray-dark);stroke-width:5}
+.mh .n.on{fill:var(--blue);stroke:var(--blue)} .mh line.on{stroke:var(--blue)}
+.mh .c{fill:var(--blue)} .mh text{fill:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px}
+.on-blue .mh line{stroke:rgba(245,245,247,.4)} .on-blue .mh .n{fill:var(--blue);stroke:rgba(245,245,247,.45)}
+.on-blue .mh .n.on{fill:var(--paper);stroke:var(--paper)} .on-blue .mh line.on{stroke:var(--paper)}
+.on-blue .mh .c{fill:var(--paper)} .on-blue .mh text{fill:var(--blue)}
+.ttl .via{font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.2em;font-weight:500;color:var(--gray);margin-top:12px;line-height:1.2}
+.on-blue .ttl .via{color:rgba(245,245,247,.82)}
+"""
+
+
+def minihub(sid, active):
+    """Small hub icon: the AI agent in the centre, INBOX, CRM, DOCUMENTS, TEAM CHAT at the corners; active ones lit."""
+    pts = [(22, 22), (128, 22), (22, 128), (128, 128)]
+    ln = "".join(f'<line id="{sid}-mhl{i}" class="{'on' if i in active else ''}" x1="75" y1="75" x2="{x}" y2="{y}"/>' for i, (x, y) in enumerate(pts))
+    nd = "".join(f'<circle id="{sid}-mhn{i}" class="n{' on' if i in active else ''}" cx="{x}" cy="{y}" r="15"/>' for i, (x, y) in enumerate(pts))
+    return (f'<svg id="{sid}-mh" class="mh" viewBox="0 0 150 150">{ln}{nd}'
+            f'<circle id="{sid}-mhc" class="c" cx="75" cy="75" r="34"/><text x="75" y="84" text-anchor="middle">AI</text></svg>')
+
+
+def chrome(sc, s0, s1, top_only=False):
+    th = "t-blue" if sc["theme"] == "blue" else "t-dark"
+    p0, p1 = s0 / DUR, s1 / DUR
+    top = (f'<div id="{sc["id"]}-chrome-top" class="chrome top mono {th}"><span>{html.escape(CFG["brand"]["series_label"])}</span>'
+           f'<span>{html.escape(sc["counter"])}</span></div>')
+    if top_only:
+        return top, p0, p1
+    bot = (f'<div id="{sc["id"]}-chrome-bot" class="chrome bot mono {th}"><span>{html.escape(sc["chapter"])}</span>'
+           f'<span class="prog"><i id="{sc["id"]}-prog"></i></span></div>')
+    return top + bot, p0, p1
+
+
+def lookup(path, scope):
+    cur = scope
+    for part in path.split("."):
+        cur = cur[int(part)] if isinstance(cur, list) else cur[part]
+    return cur
+
+
+def render_template(src, sc):
+    sid = sc["id"]; s0, s1 = win[sid]
+    ch, p0, p1 = chrome(sc, s0, s1, top_only=sc["layout"] == "takeover")
+    out = src.replace("{{BASE_CSS}}", BASE_CSS.replace("%VARS%", css_vars()))
+    out = out.replace("{{CHROME}}", ch).replace("{{P0}}", f"{p0:.4f}").replace("{{P1}}", f"{p1:.4f}")
+    out = re.sub(r"\{\{MINIHUB:([\d,]*)\}\}", lambda m: minihub(sid, [int(x) for x in m.group(1).split(",") if x]), out)
+    out = out.replace("{{W}}", json.dumps(word_cues(sid))).replace("{{DUR}}", f"{s1 - s0:.3f}").replace("{{ID}}", sid)
+    scope = {"c": CFG["copy"].get(sid, {}), "brand": CFG["brand"], "colors": COL}
+    out = re.sub(r"\{\{((?:c|brand|colors)\.[\w.]+)\}\}", lambda m: html.escape(str(lookup(m.group(1), scope))), out)
+    assert "{{" not in out, re.findall(r"\{\{[^}]*\}\}", out)[:5]
+    return out
+
+
+# ---------------------------------------------------------------- scenes
+os.makedirs(P("compositions"), exist_ok=True)
+for sc in CFG["scenes"]:
+    src = open(P("src", "scenes", sc["id"] + ".html")).read()
+    open(P("compositions", sc["id"] + ".html"), "w").write(render_template(src, sc))
+
+# ---------------------------------------------------------------- presenter
+FPS = TIM["fps"]
+vis = TIM["visemes"]
+PC = CFG["presenter"]
+pres_in = PC["in"] if isinstance(PC["in"], (int, float)) else abs_word(PC["in"]) - 0.02
+pres_out = win[PC["out_scene"]][0]
+# blinks: every ~2.6–4 s, skipping moments the presenter is off screen
+blinks, t, k = [], max(pres_in, 0) + 1.1, 0
+while t < pres_out - 0.4:
+    blinks.append(round(t, 3)); k += 1; t += (2.7, 3.6, 3.1, 4.0, 2.9)[k % 5]
+brow_up = [round(abs_word(r), 3) for r in PC["brows"]]
+# restrained head moves in whole sprite pixels (10 px)
+moves = [(round(abs_word(r) + off, 3), dx, dy) for r, off, dx, dy in PC["moves"]]
+moves.sort()
+src = open(P("src", "presenter.html")).read()
+pres = (src.replace("{{BASE_CSS}}", BASE_CSS.replace("%VARS%", css_vars()))
+        .replace("{{VISEMES}}", json.dumps(vis)).replace("{{FPS}}", str(FPS))
+        .replace("{{BLINKS}}", json.dumps(blinks)).replace("{{BROWS}}", json.dumps(brow_up))
+        .replace("{{MOVES}}", json.dumps(moves)).replace("{{IN}}", f"{pres_in:.3f}").replace("{{OUT}}", f"{pres_out:.3f}")
+        .replace("{{DUR}}", f"{DUR:.3f}"))
+open(P("compositions", "presenter.html"), "w").write(pres)
+
+# ---------------------------------------------------------------- captions
+caps = [c for c in TIM["captions"] if c["scene"] not in CFG.get("no_burned_captions", [])]  # the SRT keeps every line
+groups_html, tweens = [], []
+for c in caps:
+    txt = " ".join(w["text"] for w in c["words"])
+    fs = int(min(52, 900 / (0.64 * max(8, len(txt)))))
+    words = " ".join(f'<span class="w{" key" if w["key"] else ""}">{html.escape(w["text"])}</span>' for w in c["words"])
+    d = round(c["end"] - c["start"], 3)
+    groups_html.append(f'<div id="{c["id"]}" class="clip cap" data-start="{c["start"]:.3f}" data-duration="{d:.3f}" data-track-index="0">'
+                       f'<span class="strip" style="font-size:{fs}px">{words}</span></div>')
+    tweens.append((c["id"], c["start"], c["end"]))
+cap_html = f"""<template>
+  <style>
+    #root{{position:absolute;inset:0;pointer-events:none}}
+    .cap{{position:absolute;left:0;top:962px;width:1080px;height:96px;display:flex;align-items:center;justify-content:center;overflow:visible}}
+    .cap .strip{{display:inline-block;background:{COL["paper"]};color:{COL["ink"]};font-family:'Montserrat',sans-serif;font-weight:800;
+      line-height:1.05;padding:14px 30px 16px;letter-spacing:-.005em;box-shadow:0 10px 30px rgba(4,8,20,.28);white-space:nowrap}}
+    .cap .key{{color:{COL["blue"]}}}
+  </style>
+  <div id="root" data-composition-id="captions" data-width="{VW}" data-height="{VH}">
+    {"".join(groups_html)}
+  </div>
+  <script>
+    (() => {{
+      const tl = gsap.timeline({{ paused: true }});
+      const G = {json.dumps(tweens)};
+      G.forEach(([id, s, e]) => {{
+        const strip = document.querySelector("#" + id + " .strip");
+        tl.fromTo(strip, {{ opacity: 0, y: 14 }}, {{ opacity: 1, y: 0, duration: 0.12, ease: "power3.out" }}, s);
+        tl.to(strip, {{ opacity: 0, duration: 0.08, ease: "power2.in" }}, Math.max(s + 0.14, e - 0.08));
+        tl.set(strip, {{ opacity: 0 }}, e);
+      }});
+      window.__timelines["captions"] = tl;
+    }})();
+  </script>
+</template>
+"""
+open(P("compositions", "captions.html"), "w").write(cap_html)
+
+# ---------------------------------------------------------------- root
+hosts = []
+for i, sc in enumerate(CFG["scenes"]):
+    s0, s1 = win[sc["id"]]
+    hosts.append(f'<div id="{sc["id"]}" data-composition-id="{sc["id"]}" data-composition-src="compositions/{sc["id"]}.html" '
+                 f'data-start="{s0:.3f}" data-duration="{s1 - s0:.3f}" data-track-index="1" data-track-kind="graphics" '
+                 f'data-width="{VW}" data-height="{VH}" style="z-index:{2}"></div>')
+# each effect gets its real length and the first free lane, so no two overlap on one track
+man = json.load(open(P(CFG["assets"]["sfx_dir"], "manifest.json")))
+lanes, sfx = [], []
+for i, s in enumerate(sorted(CFG["sfx"], key=lambda s: abs_word(s["word"]) + s.get("offset", 0))):
+    t = max(0.0, abs_word(s["word"]) + s.get("offset", 0))
+    d = man[s["file"].rsplit(".", 1)[0]]["duration"]
+    lane = next((k for k, end in enumerate(lanes) if end <= t), None)
+    if lane is None:
+        lanes.append(0); lane = len(lanes) - 1
+    lanes[lane] = t + d
+    sfx.append(f'<audio id="sfx{i:02d}" src="{CFG["assets"]["sfx_dir"]}/{s["file"]}" data-start="{t:.3f}" data-duration="{d}" '
+               f'data-volume="{s["volume"]}" data-track-index="{10 + lane}"></audio>')
+a = CFG["assets"]
+root_html = f"""<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width={VW}, height={VH}" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+      html, body {{ width: {VW}px; height: {VH}px; overflow: hidden; background: {COL["ink"]}; }}
+      #root {{ position: relative; width: 100%; height: 100%; }}
+      #bg {{ position: absolute; inset: 0; background: {COL["ink"]}; }}
+    </style>
+  </head>
+  <body>
+    <!-- Generated by tools/build.py from project.config.json and tools/timing.json. Edit those, then rebuild. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{DUR}" data-width="{VW}" data-height="{VH}">
+      <div id="bg"></div>
+      {chr(10).join("      " + h for h in hosts).strip()}
+      <div id="presenter" data-composition-id="presenter" data-composition-src="compositions/presenter.html" data-start="0" data-duration="{DUR}" data-track-index="2" data-track-kind="graphics" data-width="{VW}" data-height="{VH}" style="z-index:3"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="{DUR}" data-track-index="3" data-track-kind="captions" data-width="{VW}" data-height="{VH}" style="z-index:6"></div>
+      <audio id="voiceover" src="{a["voiceover"]}" data-start="0" data-volume="{CFG["audio"]["voice_volume"]}" data-track-index="4"></audio>
+      <audio id="music" src="{a["music_bed"]}" data-start="0" data-volume="{CFG["audio"]["music_volume"]}" data-track-index="8"></audio>
+      {chr(10).join("      " + s for s in sfx).strip()}
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {{}};
+      window.__timelines["main"] = gsap.timeline({{ paused: true }});
+    </script>
+  </body>
+</html>
+"""
+open(P("index.html"), "w").write(root_html)
+json.dump({k: {"start": v[0], "end": v[1]} for k, v in win.items()}, open(P("tools", "scene_windows.json"), "w"), indent=1)
+print("built:", ", ".join(f"{k} {v[0]:.2f}-{v[1]:.2f}" for k, v in win.items()))

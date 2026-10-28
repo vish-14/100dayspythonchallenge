@@ -1,0 +1,8 @@
+{
+ "h1": {"style": "Question", "say": "Still answering every enquiry and follow-up yourself?",
+        "text": "Still answering|every *enquiry*|and *follow-up*|yourself?", "brow": "hook:yourself?"},
+ "h2": {"style": "Call-out", "say": "Business owners: stop doing these four jobs by hand.",
+        "text": "*Business owners:*|stop doing these|4 jobs by hand.", "brow": "hook:stop"},
+ "h3": {"style": "What if", "say": "What if one AI agent handled your daily admin?",
+        "text": "What if *one*|*AI agent* handled|your daily admin?", "brow": "hook:What"}
+}
