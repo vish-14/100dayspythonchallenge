@@ -1,0 +1,128 @@
+1
+00:00:00,190 --> 00:00:01,840
+Four everyday tasks.
+
+2
+00:00:01,850 --> 00:00:03,680
+One AI agent.
+
+3
+00:00:03,690 --> 00:00:05,680
+Enquiries, follow-ups,
+
+4
+00:00:05,690 --> 00:00:07,520
+documents, and team updates.
+
+5
+00:00:07,530 --> 00:00:09,040
+Handling them manually
+
+6
+00:00:09,050 --> 00:00:10,640
+keeps interrupting your day.
+
+7
+00:00:10,650 --> 00:00:12,720
+Here's how one AI agent
+
+8
+00:00:12,730 --> 00:00:14,346
+can help with all four.
+
+9
+00:00:14,346 --> 00:00:16,560
+First, it captures enquiries,
+
+10
+00:00:16,570 --> 00:00:18,640
+saves them to your CRM,
+
+11
+00:00:18,650 --> 00:00:20,000
+and drafts replies
+
+12
+00:00:20,010 --> 00:00:21,233
+for you to review.
+
+13
+00:00:21,233 --> 00:00:22,400
+Second, it sends
+
+14
+00:00:22,410 --> 00:00:23,780
+timely follow-ups,
+
+15
+00:00:23,780 --> 00:00:24,880
+using messages
+
+16
+00:00:24,890 --> 00:00:26,740
+you've approved in advance.
+
+17
+00:00:26,740 --> 00:00:28,720
+Third, it pulls key details
+
+18
+00:00:28,730 --> 00:00:29,680
+from documents
+
+19
+00:00:29,690 --> 00:00:30,960
+and prepares summaries
+
+20
+00:00:30,970 --> 00:00:32,240
+for someone to check.
+
+21
+00:00:32,250 --> 00:00:33,280
+Fourth, it keeps
+
+22
+00:00:33,290 --> 00:00:34,560
+your team updated
+
+23
+00:00:34,570 --> 00:00:35,840
+by sharing changes
+
+24
+00:00:35,850 --> 00:00:37,194
+with the right people.
+
+25
+00:00:37,194 --> 00:00:38,000
+It works through
+
+26
+00:00:38,010 --> 00:00:39,200
+your connected tools
+
+27
+00:00:39,210 --> 00:00:40,340
+and clear rules,
+
+28
+00:00:40,340 --> 00:00:41,440
+and people approve
+
+29
+00:00:41,450 --> 00:00:42,604
+what matters.
+
+30
+00:00:42,604 --> 00:00:44,320
+Want an AI agent
+
+31
+00:00:44,330 --> 00:00:45,920
+like this for your business?
+
+32
+00:00:45,930 --> 00:00:48,620
+Contact Sri Trilinga Technologies.
+

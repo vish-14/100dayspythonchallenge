@@ -1,0 +1,52 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    .cta-h { position: absolute; left: 70px; font-size: 80px; padding-bottom: 16px; }
+    #cta-l1, #cta-l1b { color: var(--paper); } #cta-l2 { color: #6F95FF; }
+    #cta-card { left: 70px; top: 610px; width: 940px; height: 330px; }
+    #cta-body { position: absolute; left: 36px; right: 36px; top: 92px; display: flex; align-items: center; gap: 30px; }
+    #cta-mark { width: 120px; height: 120px; border-radius: 50%; background: var(--blue); color: #fff; flex: none; display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; }
+    .cta-co { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; line-height: .98; color: var(--ink); letter-spacing: -.02em; }
+    #cta-mail { position: absolute; left: 36px; right: 36px; bottom: 30px; height: 64px; border-radius: 16px; background: #EEF1F6; display: flex; align-items: center; gap: 18px; padding: 0 22px; }
+    .cta-env { width: 48px; height: 36px; border-radius: 7px; background: var(--blue); position: relative; flex: none; overflow: hidden; }
+    .cta-env::after { content: ""; position: absolute; left: 6px; top: -19px; width: 36px; height: 36px; border: 4px solid #fff; transform: rotate(45deg); border-radius: 3px; }
+    #cta-note { position: absolute; left: 0; top: 1110px; width: 1080px; text-align: center; font-size: 38px; font-weight: 700; color: var(--paper); }
+    #cta-mail span { font-family: 'JetBrains Mono', monospace; font-size: 30px; font-weight: 700; color: var(--ink); }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+    <div id="cta-bg" class="full bg-dark"></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>{{c.line1}}</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion>{{c.line1b}}</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>{{c.line2}}</div></div>
+    <div id="cta-card" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;{{c.label}}</div>
+      <div id="cta-body">
+        <div id="cta-mark">AI</div>
+        <div><div id="cta-co1" class="cta-co">{{c.co1}}</div><div id="cta-co2" class="cta-co">{{c.co2}}</div></div>
+      </div>
+      <div id="cta-mail"><span class="cta-env"></span><span>{{c.email}}</span></div>
+    </div>
+    <div id="cta-note">{{c.note}}</div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // "Want an AI agent like this for your business?"
+      tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.want - 0.05);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.like - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.business - 0.05);
+      // "Contact Sri Trilinga Technologies": the contact card, then the email to write to
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.contact - 0.1);
+      tl.fromTo("#cta-mark", { scale: 0.4 }, { scale: 1, duration: 0.35, ease: "back.out(2.4)" }, W.contact);
+      tl.fromTo("#cta-co1", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.sri - 0.05);
+      tl.fromTo("#cta-co2", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.technologies - 0.1);
+      tl.fromTo("#cta-mail", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, W.trilinga);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.technologies + 0.3);
+      // after the last word everything holds still, so the contact details stay readable to the end
+      window.__timelines["cta"] = tl;
+    })();
+  </script>
+</template>

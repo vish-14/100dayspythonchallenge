@@ -1,0 +1,93 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #key-spokes { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #key-spokes line { stroke: var(--gray-dark); stroke-width: 6; }
+    #key-spokes line.f { stroke: var(--blue); }
+    #key-spokes line.h { stroke: var(--paper); stroke-dasharray: 10 10; }
+    #key-agent { position: absolute; left: 445px; top: 425px; width: 190px; height: 190px; border-radius: 50%; background: var(--blue); color: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(34,87,239,.22); }
+    #key-agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 58px; line-height: .9; }
+    #key-agent span { font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .24em; font-weight: 500; margin-top: 8px; }
+    .k-node { position: absolute; width: 270px; height: 92px; border-radius: 20px; background: var(--ink-2); border: 3px solid var(--gray-line); color: var(--paper);
+      display: flex; align-items: center; gap: 16px; padding: 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: .14em; font-weight: 500; }
+    .k-node i { width: 44px; height: 44px; border-radius: 12px; background: var(--gray-dark); flex: none; display: flex; align-items: center; justify-content: center;
+      font-style: normal; color: #fff; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: 0; }
+    .k-rule { position: absolute; width: 300px; text-align: center; font-size: 19px; padding: 6px 8px; color: #9DB3FF; border-color: #4E6BC9; }
+    #key-human { left: 170px; top: 790px; width: 740px; height: 124px; display: flex; align-items: center; gap: 20px; padding: 0 22px; }
+    #key-who { width: 70px; height: 70px; border-radius: 50%; background: var(--blue); position: relative; flex: none; }
+    #key-who::before { content: ""; position: absolute; left: 23px; top: 12px; width: 24px; height: 24px; border-radius: 50%; background: #fff; }
+    #key-who::after { content: ""; position: absolute; left: 13px; top: 40px; width: 44px; height: 22px; border-radius: 22px 22px 6px 6px; background: #fff; }
+    .k-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 25px; color: var(--ink); margin-top: 8px; white-space: nowrap; }
+    #key-ok { margin-left: auto; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 24px; padding: 12px 18px; border-radius: 12px; background: var(--blue); color: #fff; white-space: nowrap; }
+    #key-emph { position: absolute; left: 0; top: 1100px; width: 1080px; height: 200px; }
+    .k-e { position: absolute; left: 0; top: 40px; width: 1080px; text-align: center; font-size: 90px; color: var(--paper); }
+    .k-e.blue { color: #6F95FF; }
+    #key-ecount { position: absolute; left: 0; top: 0; width: 1080px; text-align: center; font-size: 22px; color: var(--gray); }
+  </style>
+  <div id="root" data-composition-id="key" data-width="1080" data-height="1920">
+    <div id="key-bg" class="full bg-dark"></div>
+    <svg id="key-spokes" viewBox="0 0 1080 1010">
+      <line x1="540" y1="520" x2="235" y2="346"/><line x1="540" y1="520" x2="845" y2="346"/>
+      <line x1="540" y1="520" x2="235" y2="664"/><line x1="540" y1="520" x2="845" y2="664"/>
+      <line id="key-f1" class="f" x1="540" y1="520" x2="235" y2="346"/><line id="key-f2" class="f" x1="540" y1="520" x2="845" y2="346"/>
+      <line id="key-f3" class="f" x1="540" y1="520" x2="235" y2="664"/><line id="key-f4" class="f" x1="540" y1="520" x2="845" y2="664"/>
+      <line id="key-hl" class="h" x1="540" y1="615" x2="540" y2="790"/>
+    </svg>
+    <div id="key-n1" class="k-node" style="left:100px;top:300px"><i id="key-i1"><em id="key-c1" style="font-style:normal">✓</em></i>{{c.nodes.0}}</div>
+    <div id="key-n2" class="k-node" style="left:710px;top:300px"><i id="key-i2"><em id="key-c2" style="font-style:normal">✓</em></i>{{c.nodes.1}}</div>
+    <div id="key-n3" class="k-node" style="left:100px;top:618px"><i id="key-i3"><em id="key-c3" style="font-style:normal">✓</em></i>{{c.nodes.2}}</div>
+    <div id="key-n4" class="k-node" style="left:710px;top:618px"><i id="key-i4"><em id="key-c4" style="font-style:normal">✓</em></i>{{c.nodes.3}}</div>
+    <div id="key-r1" class="k-rule tag ghost" style="left:85px;top:404px">{{c.rules.0}}</div>
+    <div id="key-r2" class="k-rule tag ghost" style="left:695px;top:404px">{{c.rules.1}}</div>
+    <div id="key-r3" class="k-rule tag ghost" style="left:85px;top:722px">{{c.rules.2}}</div>
+    <div id="key-r4" class="k-rule tag ghost" style="left:695px;top:722px">{{c.rules.3}}</div>
+    <div id="key-agent"><b>{{c.agent.0}}</b><span>{{c.agent.1}}</span></div>
+    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">{{c.human_k}}</span><div class="k-v">{{c.human_v}}</div></div><div id="key-ok">✓</div></div>
+    <div id="key-emph">
+      <div id="key-ecount" class="mono"><span id="key-ec1">01</span><span id="key-ec2" style="position:absolute;left:0;right:0;opacity:0">02</span><span id="key-ec3" style="position:absolute;left:0;right:0;opacity:0">03</span></div>
+      <div class="mask" style="position:absolute;left:0;top:30px;width:1080px;height:140px">
+        <div data-layout-allow-overlap id="key-e1" class="k-e disp" style="top:10px">{{c.emph.0}}</div>
+        <div data-layout-allow-overlap id="key-e2" class="k-e disp" style="top:10px">{{c.emph.1}}</div>
+        <div data-layout-allow-overlap id="key-e3" class="k-e disp blue" style="top:10px">{{c.emph.2}}</div>
+      </div>
+    </div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // "It works through …": the same agent, now with its four tools in full view
+      tl.fromTo("#key-agent", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }, W.it - 0.12);
+      tl.fromTo(["#key-n1", "#key-n2", "#key-n3", "#key-n4"], { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "power3.out" }, W.it);
+      tl.fromTo("#key-spokes", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.it);
+      // "your connected tools": every connection goes live, every tool ticks
+      tl.set(["#key-f1", "#key-f2", "#key-f3", "#key-f4"], { opacity: 0 }, 0);
+      [1, 2, 3, 4].forEach((i, k) => {
+        const t = W.connected + k * 0.12;
+        tl.to(`#key-f${i}`, { opacity: 1, duration: 0.15 }, t);
+        tl.to(`#key-n${i}`, { borderColor: "#2257EF", duration: 0.15 }, t);
+        tl.to(`#key-i${i}`, { backgroundColor: "#2257EF", duration: 0.15 }, t);
+        tl.fromTo(`#key-c${i}`, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(3)" }, t + 0.1);
+      });
+      // "and clear rules": each connection gets the rule that starts it
+      tl.fromTo(["#key-r1", "#key-r2", "#key-r3", "#key-r4"], { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.09, ease: "back.out(2)" }, W.clear - 0.05);
+      // "and people approve what matters": a person signs off before anything important goes out
+      tl.fromTo("#key-hl", { opacity: 0 }, { opacity: 1, duration: 0.25 }, W.and_2);
+      tl.fromTo("#key-human", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.people - 0.05);
+      tl.fromTo("#key-ok", { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(3)" }, W.approve + 0.1);
+      tl.to("#key-human", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.matters);
+      // emphasis words below the caption band, one per idea
+      tl.fromTo("#key-emph", { opacity: 0 }, { opacity: 1, duration: 0.01 }, W.connected - 0.05);
+      tl.fromTo("#key-e1", { yPercent: 110 }, { yPercent: 0, duration: 0.34, ease: "power4.out" }, W.connected - 0.05);
+      tl.to("#key-e1", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.clear - 0.22);
+      tl.fromTo("#key-e2", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.clear - 0.04);
+      tl.set("#key-ec1", { opacity: 0 }, W.clear); tl.set("#key-ec2", { opacity: 1 }, W.clear);
+      tl.to("#key-e2", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.people - 0.22);
+      tl.fromTo("#key-e3", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.people - 0.04);
+      tl.set("#key-ec2", { opacity: 0 }, W.people); tl.set("#key-ec3", { opacity: 1 }, W.people);
+      window.__timelines["key"] = tl;
+    })();
+  </script>
+</template>

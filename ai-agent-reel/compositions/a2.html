@@ -1,0 +1,102 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+.mh{width:150px;height:150px;flex:none;overflow:visible}
+.mh line{stroke:var(--gray-dark);stroke-width:5}
+.mh .n{fill:var(--ink);stroke:var(--gray-dark);stroke-width:5}
+.mh .n.on{fill:var(--blue);stroke:var(--blue)} .mh line.on{stroke:var(--blue)}
+.mh .c{fill:var(--blue)} .mh text{fill:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px}
+.on-blue .mh line{stroke:rgba(245,245,247,.4)} .on-blue .mh .n{fill:var(--blue);stroke:rgba(245,245,247,.45)}
+.on-blue .mh .n.on{fill:var(--paper);stroke:var(--paper)} .on-blue .mh line.on{stroke:var(--paper)}
+.on-blue .mh .c{fill:var(--paper)} .on-blue .mh text{fill:var(--blue)}
+.ttl .via{font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.2em;font-weight:500;color:var(--gray);margin-top:12px;line-height:1.2}
+.on-blue .ttl .via{color:rgba(245,245,247,.82)}
+
+    #a2-track { position: absolute; left: 110px; top: 712px; width: 860px; height: 4px; background: rgba(245,245,247,.35); }
+    #a2-trackfill { position: absolute; left: 110px; top: 712px; width: 860px; height: 4px; background: var(--paper); transform-origin: 0 50%; }
+    .a2-mk { position: absolute; top: 698px; width: 32px; height: 32px; border-radius: 50%; background: var(--blue); border: 4px solid var(--paper); }
+    .a2-day { position: absolute; top: 744px; width: 200px; text-align: center; font-size: 22px; color: var(--paper); }
+    #a2-ring { position: absolute; left: 504px; top: 674px; width: 80px; height: 80px; border-radius: 50%; border: 4px solid var(--paper); opacity: 0; }
+    #a2-lead { left: 30px; top: 548px; width: 300px; height: 120px; padding: 16px 22px; }
+    .a2-k { font-family: 'JetBrains Mono', monospace; font-size: 17px; letter-spacing: .16em; color: #5B6372; text-transform: uppercase; }
+    .a2-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; color: var(--ink); margin-top: 4px; }
+    #a2-sent { position: absolute; right: 14px; top: -24px; background: var(--paper); }
+    #a2-attn { position: absolute; left: 22px; bottom: -22px; }
+    #a2-rem { left: 486px; top: 444px; width: 520px; height: 88px; display: flex; align-items: center; gap: 18px; padding: 0 22px; }
+    #a2-bell { width: 60px; height: 60px; border-radius: 16px; background: var(--blue); flex: none; position: relative; }
+    #a2-bell::before { content: ""; position: absolute; left: 17px; top: 13px; width: 26px; height: 26px; border-radius: 13px 13px 4px 4px; background: #fff; }
+    #a2-bell::after { content: ""; position: absolute; left: 25px; top: 41px; width: 10px; height: 7px; border-radius: 0 0 6px 6px; background: #fff; }
+    #a2-msg { left: 110px; top: 800px; width: 860px; height: 92px; display: flex; align-items: center; gap: 18px; padding: 0 24px; }
+  </style>
+  <div id="root" data-composition-id="a2" data-width="1080" data-height="1920">
+    <div id="a2-bg" class="panel bg-blue"></div>
+    <div class="head on-blue" style="color:var(--paper)">
+      <svg id="a2-mh" class="mh" viewBox="0 0 150 150"><line id="a2-mhl0" class="" x1="75" y1="75" x2="22" y2="22"/><line id="a2-mhl1" class="on" x1="75" y1="75" x2="128" y2="22"/><line id="a2-mhl2" class="" x1="75" y1="75" x2="22" y2="128"/><line id="a2-mhl3" class="" x1="75" y1="75" x2="128" y2="128"/><circle id="a2-mhn0" class="n" cx="22" cy="22" r="15"/><circle id="a2-mhn1" class="n on" cx="128" cy="22" r="15"/><circle id="a2-mhn2" class="n" cx="22" cy="128" r="15"/><circle id="a2-mhn3" class="n" cx="128" cy="128" r="15"/><circle id="a2-mhc" class="c" cx="75" cy="75" r="34"/><text x="75" y="84" text-anchor="middle">AI</text></svg>
+      <div class="ttl disp"><div class="mask"><div id="a2-t1">TIMELY</div></div><div class="mask"><div id="a2-t2">FOLLOW-UPS</div></div><div id="a2-via" class="via">VIA CRM · APPROVED MESSAGES</div></div>
+    </div>
+    <div id="a2-track"></div><div id="a2-trackfill"></div>
+    <div id="a2-m1" class="a2-mk" style="left:164px"></div><div id="a2-m2" class="a2-mk" style="left:528px"></div><div id="a2-m3" class="a2-mk" style="left:892px"></div>
+    <div id="a2-ring"></div>
+    <div id="a2-d1" class="a2-day mono" style="left:80px">DAY 1</div><div id="a2-d2" class="a2-day mono" style="left:444px">DAY 3</div><div id="a2-d3" class="a2-day mono" style="left:808px">DAY 7</div>
+    <div id="a2-rem" class="card"><div id="a2-bell"></div><div><div class="a2-k">Reminder · Day 3</div><div class="a2-v" style="font-size:27px">Follow up with Rahul</div></div></div>
+    <div id="a2-msg" class="card"><span class="tag blue">✓ Approved</span><span class="a2-v" style="font-size:26px;font-weight:700;font-family:Inter,sans-serif">Hi Rahul, just checking in on the quote.</span></div>
+    <div id="a2-lead" class="card" style="overflow:visible">
+      <div class="a2-k">Lead</div><div class="a2-v">Rahul M.</div><div class="a2-k" style="margin-top:2px">Quote sent</div>
+      <span id="a2-sent" class="tag ghost" style="color:var(--blue)">Sent ✓</span>
+    </div>
+    <div id="a2-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AGENTS</span><span>2 / 4</span></div><div id="a2-chrome-bot" class="chrome bot mono t-blue"><span>AGENT · FOLLOW-UPS</span><span class="prog"><i id="a2-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"second": 0.15, "second_end": 0.537, "it": 0.617, "it_end": 0.857, "sends": 0.857, "sends_end": 1.257, "timely": 1.257, "timely_end": 1.737, "followups": 1.737, "followups_end": 2.617, "using": 2.697, "using_end": 3.097, "messages": 3.097, "messages_end": 3.737, "youve": 3.737, "youve_end": 4.057, "approved": 4.057, "approved_end": 4.617, "in": 4.617, "in_end": 4.777, "advance": 4.777, "advance_end": 5.577};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a2-mh", { scale: 0.5, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, W.second - 0.04);
+      tl.fromTo(["#a2-mhn1"], { scale: 0.2, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, stagger: 0.08, ease: "back.out(3)" }, W.second + 0.3);
+      tl.fromTo(["#a2-mhl1"], { opacity: 0 }, { opacity: 1, duration: 0.25 }, W.second + 0.3);
+      tl.fromTo("#a2-via", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3 }, W.second + 0.45);
+      tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.timely - 0.04);
+      tl.fromTo("#a2-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.followups - 0.06);
+      // the follow-up timeline draws; the lead moves along it on "timely follow-ups"
+      tl.fromTo("#a2-track", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, W.second);
+      tl.fromTo(["#a2-m1", "#a2-m2", "#a2-m3"], { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.1, ease: "back.out(2.5)" }, W.second + 0.2);
+      tl.fromTo(["#a2-d1", "#a2-d2", "#a2-d3"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, W.second + 0.3);
+      tl.fromTo("#a2-lead", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, W.sends);
+      tl.fromTo("#a2-trackfill", { scaleX: 0 }, { scaleX: 0.42, duration: 0.7, ease: "power2.inOut" }, W.timely);
+      tl.to("#a2-lead", { x: 364, duration: 0.7, ease: "power2.inOut" }, W.timely);
+      // Day 3 arrives: the reminder fires
+      tl.fromTo("#a2-ring", { scale: 0.5, opacity: 1 }, { scale: 1.6, opacity: 0, duration: 0.6, ease: "power2.out" }, W.followups + 0.1);
+      tl.fromTo("#a2-rem", { opacity: 0, y: -24, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(2)" }, W.followups + 0.2);
+      // "using messages you've approved in advance": a pre-approved message is sent to the lead
+      tl.fromTo("#a2-msg", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, W.using - 0.05);
+      tl.to("#a2-msg", { x: 220, y: -210, scale: 0.3, opacity: 0, duration: 0.45, ease: "power3.in" }, W.advance + 0.15);
+      tl.fromTo("#a2-sent", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }, W.advance + 0.52);
+      tl.to("#a2-rem", { opacity: 0.35, duration: 0.3 }, W.advance + 0.52);
+
+      tl.fromTo("#a2-prog", { scaleX: 0.4229 }, { scaleX: 0.5330, duration: 5.507, ease: "none" }, 0);
+      window.__timelines["a2"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,86 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+.mh{width:150px;height:150px;flex:none;overflow:visible}
+.mh line{stroke:var(--gray-dark);stroke-width:5}
+.mh .n{fill:var(--ink);stroke:var(--gray-dark);stroke-width:5}
+.mh .n.on{fill:var(--blue);stroke:var(--blue)} .mh line.on{stroke:var(--blue)}
+.mh .c{fill:var(--blue)} .mh text{fill:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px}
+.on-blue .mh line{stroke:rgba(245,245,247,.4)} .on-blue .mh .n{fill:var(--blue);stroke:rgba(245,245,247,.45)}
+.on-blue .mh .n.on{fill:var(--paper);stroke:var(--paper)} .on-blue .mh line.on{stroke:var(--paper)}
+.on-blue .mh .c{fill:var(--paper)} .on-blue .mh text{fill:var(--blue)}
+.ttl .via{font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.2em;font-weight:500;color:var(--gray);margin-top:12px;line-height:1.2}
+.on-blue .ttl .via{color:rgba(245,245,247,.82)}
+
+    .cta-h { position: absolute; left: 70px; font-size: 80px; padding-bottom: 16px; }
+    #cta-l1, #cta-l1b { color: var(--paper); } #cta-l2 { color: #6F95FF; }
+    #cta-card { left: 70px; top: 610px; width: 940px; height: 330px; }
+    #cta-body { position: absolute; left: 36px; right: 36px; top: 92px; display: flex; align-items: center; gap: 30px; }
+    #cta-mark { width: 120px; height: 120px; border-radius: 50%; background: var(--blue); color: #fff; flex: none; display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; }
+    .cta-co { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; line-height: .98; color: var(--ink); letter-spacing: -.02em; }
+    #cta-mail { position: absolute; left: 36px; right: 36px; bottom: 30px; height: 64px; border-radius: 16px; background: #EEF1F6; display: flex; align-items: center; gap: 18px; padding: 0 22px; }
+    .cta-env { width: 48px; height: 36px; border-radius: 7px; background: var(--blue); position: relative; flex: none; overflow: hidden; }
+    .cta-env::after { content: ""; position: absolute; left: 6px; top: -19px; width: 36px; height: 36px; border: 4px solid #fff; transform: rotate(45deg); border-radius: 3px; }
+    #cta-note { position: absolute; left: 0; top: 1110px; width: 1080px; text-align: center; font-size: 38px; font-weight: 700; color: var(--paper); }
+    #cta-mail span { font-family: 'JetBrains Mono', monospace; font-size: 30px; font-weight: 700; color: var(--ink); }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+    <div id="cta-bg" class="full bg-dark"></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want an AI agent</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion>like this for your</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
+    <div id="cta-card" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;CONTACT</div>
+      <div id="cta-body">
+        <div id="cta-mark">AI</div>
+        <div><div id="cta-co1" class="cta-co">Sri Trilinga</div><div id="cta-co2" class="cta-co">Technologies</div></div>
+      </div>
+      <div id="cta-mail"><span class="cta-env"></span><span>support@sritrilinga.com</span></div>
+    </div>
+    <div id="cta-note">Tell us which task takes up most of your day.</div>
+    <div id="cta-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AGENTS</span><span></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"want": 0.15, "want_end": 0.366, "an": 0.526, "an_end": 0.766, "ai": 0.766, "ai_end": 1.326, "agent": 1.326, "agent_end": 1.806, "like": 1.806, "like_end": 2.126, "this": 2.126, "this_end": 2.366, "for": 2.366, "for_end": 2.526, "your": 2.526, "your_end": 2.766, "business": 2.766, "business_end": 3.406, "contact": 3.406, "contact_end": 3.966, "sri": 3.966, "sri_end": 4.286, "trilinga": 4.446, "trilinga_end": 5.006, "technologies": 5.166, "technologies_end": 5.806};
+      const tl = gsap.timeline({ paused: true });
+      // "Want an AI agent like this for your business?"
+      tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.want - 0.05);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.like - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.business - 0.05);
+      // "Contact Sri Trilinga Technologies": the contact card, then the email to write to
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.contact - 0.1);
+      tl.fromTo("#cta-mark", { scale: 0.4 }, { scale: 1, duration: 0.35, ease: "back.out(2.4)" }, W.contact);
+      tl.fromTo("#cta-co1", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.sri - 0.05);
+      tl.fromTo("#cta-co2", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.technologies - 0.1);
+      tl.fromTo("#cta-mail", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, W.trilinga);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.technologies + 0.3);
+      // after the last word everything holds still, so the contact details stay readable to the end
+      window.__timelines["cta"] = tl;
+    })();
+  </script>
+</template>

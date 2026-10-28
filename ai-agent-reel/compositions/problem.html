@@ -1,0 +1,148 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+.mh{width:150px;height:150px;flex:none;overflow:visible}
+.mh line{stroke:var(--gray-dark);stroke-width:5}
+.mh .n{fill:var(--ink);stroke:var(--gray-dark);stroke-width:5}
+.mh .n.on{fill:var(--blue);stroke:var(--blue)} .mh line.on{stroke:var(--blue)}
+.mh .c{fill:var(--blue)} .mh text{fill:#fff;font-family:'Montserrat',sans-serif;font-weight:900;font-size:26px}
+.on-blue .mh line{stroke:rgba(245,245,247,.4)} .on-blue .mh .n{fill:var(--blue);stroke:rgba(245,245,247,.45)}
+.on-blue .mh .n.on{fill:var(--paper);stroke:var(--paper)} .on-blue .mh line.on{stroke:var(--paper)}
+.on-blue .mh .c{fill:var(--paper)} .on-blue .mh text{fill:var(--blue)}
+.ttl .via{font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.2em;font-weight:500;color:var(--gray);margin-top:12px;line-height:1.2}
+.on-blue .ttl .via{color:rgba(245,245,247,.82)}
+
+    .pb-row { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-bottom: 2px solid #ECEEF2; font-size: 24px; font-weight: 600; color: #1B2230; }
+    .pb-row small { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #5B6372; font-weight: 500; }
+    .pb-ico { width: 34px; height: 34px; border-radius: 9px; background: #E3E8F6; flex: none; }
+    .pb-ico.doc { width: 28px; height: 36px; border-radius: 4px; background: #DCE5FD; border: 2px solid #9DB3F2; }
+    .pb-badge { position: absolute; top: -18px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: var(--ink); color: #fff;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; display: flex; align-items: center; justify-content: center; }
+    .pb-chat { margin: 14px 22px 0; padding: 12px 16px; border-radius: 14px; background: #EEF1F6; font-size: 22px; font-weight: 600; color: #1B2230; width: fit-content; }
+    .pb-chat.r { margin-left: auto; background: #DCE5FD; }
+    /* the hub: one AI agent connected to four tools */
+    #pb-hub { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #pb-spokes { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #pb-spokes line { stroke: rgba(245,245,247,.45); stroke-width: 6; }
+    #pb-spokes line.f { stroke: var(--paper); stroke-width: 6; }
+    #pb-agent { position: absolute; left: 440px; top: 460px; width: 200px; height: 200px; border-radius: 50%; background: var(--paper); color: var(--blue);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35); }
+    #pb-agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 60px; line-height: .9; }
+    #pb-agent span { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .24em; font-weight: 500; color: var(--ink); margin-top: 8px; }
+    .pb-node { position: absolute; width: 270px; height: 96px; border-radius: 20px; background: var(--paper); color: var(--ink); box-shadow: 0 20px 44px rgba(4,8,20,.3);
+      display: flex; align-items: center; gap: 16px; padding: 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: .14em; font-weight: 500; }
+    .pb-node i { width: 46px; height: 46px; border-radius: 12px; background: var(--blue); flex: none; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+
+    <div id="pb-hub">
+      <svg id="pb-spokes" viewBox="0 0 1080 1010">
+        <line id="pb-s1" x1="540" y1="560" x2="235" y2="390"/><line id="pb-s2" x1="540" y1="560" x2="845" y2="390"/>
+        <line id="pb-s3" x1="540" y1="560" x2="235" y2="730"/><line id="pb-s4" x1="540" y1="560" x2="845" y2="730"/>
+        <line id="pb-f1" class="f" x1="540" y1="560" x2="235" y2="390"/><line id="pb-f2" class="f" x1="540" y1="560" x2="845" y2="390"/>
+        <line id="pb-f3" class="f" x1="540" y1="560" x2="235" y2="730"/><line id="pb-f4" class="f" x1="540" y1="560" x2="845" y2="730"/>
+      </svg>
+      <div id="pb-n1" class="pb-node" style="left:100px;top:342px"><i></i>INBOX</div>
+      <div id="pb-n2" class="pb-node" style="left:710px;top:342px"><i></i>CRM</div>
+      <div id="pb-n3" class="pb-node" style="left:100px;top:682px"><i></i>DOCUMENTS</div>
+      <div id="pb-n4" class="pb-node" style="left:710px;top:682px"><i></i>TEAM CHAT</div>
+      <div id="pb-agent"><b>AI</b><span>AGENT</span></div>
+    </div>
+
+    <div id="pb-c1" class="card" style="left:66px;top:296px;width:520px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;INBOX</div>
+      <div class="pb-row"><span class="pb-ico"></span>New enquiry<small>09:12</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Quote request<small>09:40</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Booking question<small>10:05</small></div>
+      <div id="pb-b1" class="pb-badge">3</div>
+    </div>
+    <div id="pb-c2" class="card" style="left:500px;top:286px;width:500px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;FOLLOW-UPS</div>
+      <div class="pb-row"><span class="pb-ico"></span>Call back<small>TODAY</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Send the quote<small>TODAY</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Check in<small>FRI</small></div>
+      <div id="pb-b2" class="pb-badge">5</div>
+    </div>
+    <div id="pb-c3" class="card" style="left:96px;top:560px;width:480px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;DOCUMENTS</div>
+      <div class="pb-row"><span class="pb-ico doc"></span>Invoice_0457.pdf<small>NEW</small></div>
+      <div class="pb-row"><span class="pb-ico doc"></span>PO_2291.pdf<small>NEW</small></div>
+      <div class="pb-row"><span class="pb-ico doc"></span>Contract.docx<small>NEW</small></div>
+      <div id="pb-b3" class="pb-badge">3</div>
+    </div>
+    <div id="pb-c4" class="card" style="left:536px;top:548px;width:470px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;TEAM CHAT</div>
+      <div class="pb-chat">Any update on #214?</div>
+      <div class="pb-chat r">Checking now…</div>
+      <div class="pb-chat">Status?</div>
+      <div id="pb-b4" class="pb-badge">2</div>
+    </div>
+    <div id="problem-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AGENTS</span><span></span></div><div id="problem-chrome-bot" class="chrome bot mono t-blue"><span>THE PROBLEM</span><span class="prog"><i id="problem-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"enquiries": 0.15, "enquiries_end": 0.987, "followups": 1.147, "followups_end": 2.107, "documents": 2.107, "documents_end": 2.667, "and": 2.667, "and_end": 2.827, "team": 2.827, "team_end": 3.147, "updates": 3.147, "updates_end": 3.947, "handling": 3.947, "handling_end": 4.507, "them": 4.507, "them_end": 4.667, "manually": 4.827, "manually_end": 5.467, "keeps": 5.467, "keeps_end": 5.787, "interrupting": 5.787, "interrupting_end": 6.427, "your": 6.427, "your_end": 6.587, "day": 6.587, "day_end": 7.067, "heres": 7.067, "heres_end": 7.547, "how": 7.547, "how_end": 7.787, "one": 7.787, "one_end": 7.947, "ai": 8.187, "ai_end": 8.667, "agent": 8.667, "agent_end": 9.147, "can": 9.147, "can_end": 9.307, "help": 9.307, "help_end": 9.627, "with": 9.627, "with_end": 9.787, "all": 9.787, "all_end": 9.867, "four": 10.027, "four_end": 10.667};
+      const tl = gsap.timeline({ paused: true });
+      // each task lands on its word, from a different direction, and settles at a slight angle
+      const IN = [
+        ["#pb-c1", W.enquiries, { x: -260, y: 30, rotation: -12 }, -4],
+        ["#pb-c2", W.followups, { x: 260, y: -20, rotation: 10 }, 3],
+        ["#pb-c3", W.documents, { x: -60, y: 300, rotation: 6 }, 2.5],
+        ["#pb-c4", W.team, { x: 220, y: 260, rotation: -9 }, -3],
+      ];
+      IN.forEach(([id, t, from, rot]) => {
+        tl.fromTo(id, { ...from, opacity: 0, scale: 0.9 }, { x: 0, y: 0, rotation: rot, opacity: 1, scale: 1, duration: 0.42, ease: "expo.out" }, t - 0.06);
+      });
+      // "handling them manually keeps interrupting": badges pop, the pile jolts
+      ["#pb-b1", "#pb-b2", "#pb-b3", "#pb-b4"].forEach((b, i) => {
+        tl.fromTo(b, { scale: 0 }, { scale: 1, duration: 0.24, ease: "back.out(3)" }, W.handling + i * 0.16);
+      });
+      ["#pb-c1", "#pb-c2", "#pb-c3", "#pb-c4"].forEach((c, i) => {
+        tl.to(c, { x: [-14, 12, -10, 14][i], duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, W.interrupting + i * 0.05);
+      });
+      // "Here's how one AI agent can help": each task becomes a connected tool around one agent
+      tl.set(["#pb-n1", "#pb-n2", "#pb-n3", "#pb-n4", "#pb-agent"], { opacity: 0 }, 0);
+      ["#pb-c1", "#pb-c2", "#pb-c3", "#pb-c4"].forEach((c, i) => {
+        tl.to(c, { x: [40, 60, 30, 50][i], y: [40, 50, 120, 130][i], rotation: 0, scale: 0.5, opacity: 0, duration: 0.38, ease: "power3.in" }, W.heres - 0.05 + i * 0.04);
+      });
+      ["#pb-n1", "#pb-n2", "#pb-n3", "#pb-n4"].forEach((n, i) => {
+        tl.fromTo(n, { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.34, ease: "power3.out" }, W.heres + 0.28 + i * 0.05);
+      });
+      tl.fromTo("#pb-agent", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)" }, W.one - 0.05);
+      tl.fromTo(["#pb-s1", "#pb-s2", "#pb-s3", "#pb-s4"], { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.agent - 0.1);
+      // "all four": each connection lights up in turn
+      tl.set(["#pb-f1", "#pb-f2", "#pb-f3", "#pb-f4"], { opacity: 0 }, 0);
+      ["#pb-f1", "#pb-f2", "#pb-f3", "#pb-f4"].forEach((f, i) => {
+        tl.to(f, { opacity: 1, duration: 0.18 }, W.all + i * 0.12);
+      });
+      tl.fromTo("#pb-agent", { boxShadow: "0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35)" },
+        { boxShadow: "0 0 0 26px rgba(245,245,247,.28), 0 28px 60px rgba(4,8,20,.35)", duration: 0.3, yoyo: true, repeat: 1 }, W.four);
+      tl.fromTo("#problem-prog", { scaleX: 0.0715 }, { scaleX: 0.2851, duration: 10.683, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>

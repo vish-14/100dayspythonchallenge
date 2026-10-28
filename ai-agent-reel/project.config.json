@@ -1,0 +1,439 @@
+{
+  "_readme": "Central configuration. Edit copy, colours, contact details or asset paths here, then run: python3 tools/build.py && npx hyperframes check. Timings come from the real voiceover (tools/timing.json).",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 50.0,
+    "output": "ai_agent_four_tasks.mp4"
+  },
+  "brand": {
+    "company": "Sri Trilinga Technologies",
+    "contact_name": "Sri",
+    "series_label": "@VISH.WORKFLOWS · AI AGENTS",
+    "cta_keyword": "WORKFLOW",
+    "handle": "@vish.workflows",
+    "persona": "Vish"
+  },
+  "colors": {
+    "blue": "#2257EF",
+    "blue_deep": "#1A44C4",
+    "ink": "#0B1016",
+    "ink_2": "#151B24",
+    "paper": "#F5F5F7",
+    "gray": "#8A93A3",
+    "gray_dark": "#3A4252",
+    "gray_line": "#2A313D",
+    "ok": "#2257EF"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "mono": "JetBrains Mono",
+    "ui": "Inter"
+  },
+  "assets": {
+    "voiceover": "assets/audio/voiceover.wav",
+    "music_bed": "assets/audio/music_bed.wav",
+    "music_raw": "assets/audio/music.wav",
+    "sfx_dir": "assets/audio/sfx",
+    "presenter_dir": "assets/presenter",
+    "avatar": "assets/brand/avatar.png"
+  },
+  "audio": {
+    "voice_volume": 1.0,
+    "music_volume": 1.0,
+    "duck_db": -9.0,
+    "music_base_db": -2.0
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "chapter": "ONE AI AGENT",
+      "counter": "",
+      "theme": "dark",
+      "layout": "takeover-then-split"
+    },
+    {
+      "id": "problem",
+      "chapter": "THE PROBLEM",
+      "counter": "",
+      "theme": "blue",
+      "layout": "split"
+    },
+    {
+      "id": "a1",
+      "chapter": "AGENT · ENQUIRIES",
+      "counter": "1 / 4",
+      "theme": "dark",
+      "layout": "split"
+    },
+    {
+      "id": "a2",
+      "chapter": "AGENT · FOLLOW-UPS",
+      "counter": "2 / 4",
+      "theme": "blue",
+      "layout": "split"
+    },
+    {
+      "id": "a3",
+      "chapter": "AGENT · DOCUMENTS",
+      "counter": "3 / 4",
+      "theme": "dark",
+      "layout": "split"
+    },
+    {
+      "id": "a4",
+      "chapter": "AGENT · TEAM UPDATES",
+      "counter": "4 / 4",
+      "theme": "blue",
+      "layout": "split"
+    },
+    {
+      "id": "key",
+      "chapter": "HOW IT STAYS RELIABLE",
+      "counter": "",
+      "theme": "dark",
+      "layout": "takeover"
+    },
+    {
+      "id": "cta",
+      "chapter": "GET IN TOUCH",
+      "counter": "",
+      "theme": "dark",
+      "layout": "takeover"
+    }
+  ],
+  "copy": {
+    "hook": {
+      "l1": "4 EVERYDAY",
+      "l2": "TASKS.",
+      "l3": "AI AGENT."
+    },
+    "problem": {
+      "cards": [
+        "INBOX",
+        "FOLLOW-UPS",
+        "DOCUMENTS",
+        "TEAM CHAT"
+      ],
+      "nodes": [
+        "INBOX",
+        "CRM",
+        "DOCUMENTS",
+        "TEAM CHAT"
+      ],
+      "agent": [
+        "AI",
+        "AGENT"
+      ]
+    },
+    "a1": {
+      "title": [
+        "CAPTURE",
+        "ENQUIRIES"
+      ],
+      "steps": [
+        "ENQUIRY",
+        "CRM",
+        "AI DRAFT",
+        "REVIEW"
+      ],
+      "from": "Priya Nair",
+      "email": "priya@example.com",
+      "message": "Hi! Can you cater for 40 people this Friday?",
+      "draft": [
+        "Hi Priya, thanks for reaching out!",
+        "Yes, we can cater for 40 on Friday.",
+        "Sharing our menu and a quote shortly."
+      ],
+      "via": "VIA INBOX + CRM"
+    },
+    "a2": {
+      "title": [
+        "TIMELY",
+        "FOLLOW-UPS"
+      ],
+      "days": [
+        "DAY 1",
+        "DAY 3",
+        "DAY 7"
+      ],
+      "lead": "Rahul M.",
+      "lead_sub": "Quote sent",
+      "reminder": "Follow up with Rahul",
+      "message": "Hi Rahul, just checking in on the quote.",
+      "via": "VIA CRM · APPROVED MESSAGES"
+    },
+    "a3": {
+      "title": [
+        "DOCUMENT",
+        "SUMMARIES"
+      ],
+      "doc": "INVOICE_0457.PDF",
+      "fields": [
+        [
+          "SUPPLIER",
+          "Northline Supplies"
+        ],
+        [
+          "INVOICE",
+          "#0457"
+        ],
+        [
+          "AMOUNT",
+          "₹48,200"
+        ],
+        [
+          "DUE",
+          "15 Nov"
+        ]
+      ],
+      "summary": [
+        "Invoice #0457 from Northline",
+        "₹48,200 due on 15 Nov",
+        "Matches the purchase order"
+      ],
+      "via": "VIA DOCUMENTS",
+      "check": "Ready for a person to check"
+    },
+    "a4": {
+      "title": [
+        "TEAM",
+        "UPDATES"
+      ],
+      "task": "Order #214 · Catering",
+      "status_a": "IN PROGRESS",
+      "status_b": "DONE",
+      "summary": "Order delivered · invoice sent",
+      "teams": [
+        "SALES",
+        "OPERATIONS",
+        "FINANCE"
+      ],
+      "via": "VIA TEAM CHAT"
+    },
+    "key": {
+      "nodes": [
+        "INBOX",
+        "CRM",
+        "DOCUMENTS",
+        "TEAM CHAT"
+      ],
+      "agent": [
+        "AI",
+        "AGENT"
+      ],
+      "rules": [
+        "IF NEW ENQUIRY",
+        "IF NO REPLY · DAY 3",
+        "IF INVOICE ARRIVES",
+        "IF STATUS CHANGES"
+      ],
+      "emph": [
+        "CONNECTED TOOLS",
+        "CLEAR RULES",
+        "PEOPLE APPROVE"
+      ],
+      "human_k": "Human approval",
+      "human_v": "Replies · follow-ups · summaries"
+    },
+    "cta": {
+      "line1": "Want an AI agent",
+      "line1b": "like this for your",
+      "line2": "business?",
+      "label": "CONTACT",
+      "co1": "Sri Trilinga",
+      "co2": "Technologies",
+      "email": "support@sritrilinga.com",
+      "note": "Tell us which task takes up most of your day."
+    }
+  },
+  "sfx": [
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:tasks.",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "hook:One",
+      "offset": -0.05,
+      "volume": 0.45
+    },
+    {
+      "file": "pop.mp3",
+      "word": "problem:Enquiries,",
+      "offset": 0.03,
+      "volume": 0.4
+    },
+    {
+      "file": "pop.mp3",
+      "word": "problem:follow-ups,",
+      "offset": 0.03,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "problem:documents,",
+      "offset": 0.03,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "problem:team",
+      "offset": 0.03,
+      "volume": 0.35
+    },
+    {
+      "file": "click-soft.mp3",
+      "word": "problem:interrupting",
+      "offset": 0.17,
+      "volume": 0.5
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "problem:Here's",
+      "offset": -0.1,
+      "volume": 0.4
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "problem:agent",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a1:First,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "notification.mp3",
+      "word": "a1:enquiries,",
+      "offset": 0,
+      "volume": 0.22
+    },
+    {
+      "file": "click.mp3",
+      "word": "a1:CRM,",
+      "offset": 0.05,
+      "volume": 0.5
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a1:drafts",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "click.mp3",
+      "word": "a1:review.",
+      "offset": 0,
+      "volume": 0.55
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a2:Second,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "ping.mp3",
+      "word": "a2:timely",
+      "offset": 0,
+      "volume": 0.25
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "a2:messages",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a2:advance.",
+      "offset": 0.2,
+      "volume": 0.35
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a3:Third,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "a3:pulls",
+      "offset": 0,
+      "volume": 0.25
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a3:details",
+      "offset": 0.05,
+      "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "a3:check.",
+      "offset": 0.05,
+      "volume": 0.5
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a4:Fourth,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "click.mp3",
+      "word": "a4:sharing",
+      "offset": 0,
+      "volume": 0.5
+    },
+    {
+      "file": "ping.mp3",
+      "word": "a4:right",
+      "offset": 0,
+      "volume": 0.2
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "key:It",
+      "offset": -0.1,
+      "volume": 0.45
+    },
+    {
+      "file": "pop.mp3",
+      "word": "key:connected",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "key:clear",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "click-soft.mp3",
+      "word": "key:approve",
+      "offset": 0,
+      "volume": 0.5
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "cta:Want",
+      "offset": -0.12,
+      "volume": 0.4
+    },
+    {
+      "file": "pop.mp3",
+      "word": "cta:Contact",
+      "offset": 0,
+      "volume": 0.35
+    }
+  ]
+}

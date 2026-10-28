@@ -1,0 +1,77 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #a4-task { left: 200px; top: 462px; width: 680px; height: 110px; display: flex; align-items: center; padding: 0 28px; gap: 20px; }
+    .a4-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .16em; color: #5B6372; text-transform: uppercase; }
+    .a4-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); margin-top: 4px; }
+    #a4-status { margin-left: auto; position: relative; width: 210px; height: 50px; }
+    #a4-st1, #a4-st2 { position: absolute; right: 0; top: 0; }
+    #a4-st1 { color: #4E5666; }
+    #a4-chip { position: absolute; left: 290px; top: 586px; width: 500px; height: 56px; border-radius: 28px; background: var(--ink); color: var(--paper);
+      display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 24px; font-weight: 700; }
+    .a4-wire { position: absolute; background: rgba(245,245,247,.55); }
+    .a4-pkt { position: absolute; left: 529px; top: 689px; width: 22px; height: 22px; border-radius: 50%; background: var(--paper); box-shadow: 0 0 16px 4px rgba(245,245,247,.6); opacity: 0; }
+    .a4-team { position: absolute; top: 760px; width: 300px; height: 126px; border-radius: 20px; background: rgba(11,16,22,.28); border: 2px solid rgba(245,245,247,.35);
+      display: flex; align-items: center; gap: 16px; padding: 0 20px; color: var(--paper); }
+    .a4-av { width: 56px; height: 56px; border-radius: 50%; background: var(--paper); flex: none; position: relative; }
+    .a4-av::after { content: ""; position: absolute; left: 18px; top: 12px; width: 20px; height: 20px; border-radius: 50%; background: var(--blue); }
+    .a4-tn { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .16em; }
+    .a4-ok { font-size: 21px; font-weight: 700; margin-top: 6px; }
+  </style>
+  <div id="root" data-composition-id="a4" data-width="1080" data-height="1920">
+    <div id="a4-bg" class="panel bg-blue"></div>
+    <div class="head on-blue" style="color:var(--paper)">
+      {{MINIHUB:3}}
+      <div class="ttl disp"><div class="mask"><div id="a4-t1">{{c.title.0}}</div></div><div class="mask"><div id="a4-t2">{{c.title.1}}</div></div><div id="a4-via" class="via">{{c.via}}</div></div>
+    </div>
+    <div id="a4-task" class="card">
+      <div><div class="a4-k">Task</div><div class="a4-v">{{c.task}}</div></div>
+      <div id="a4-status"><span id="a4-st1" class="tag ghost">{{c.status_a}}</span><span id="a4-st2" class="tag blue">✓ {{c.status_b}}</span></div>
+    </div>
+    <div id="a4-chip">Update · {{c.summary}}</div>
+    <div id="a4-w0" class="a4-wire" style="left:538px;top:648px;width:4px;height:52px"></div>
+    <div id="a4-w1" class="a4-wire" style="left:190px;top:698px;width:702px;height:4px"></div>
+    <div id="a4-wa" class="a4-wire" style="left:188px;top:700px;width:4px;height:60px"></div>
+    <div id="a4-wb" class="a4-wire" style="left:538px;top:700px;width:4px;height:60px"></div>
+    <div id="a4-wc" class="a4-wire" style="left:888px;top:700px;width:4px;height:60px"></div>
+    <div id="a4-p1" class="a4-pkt"></div><div id="a4-p2" class="a4-pkt"></div><div id="a4-p3" class="a4-pkt"></div>
+    <div id="a4-tm1" class="a4-team" style="left:40px"><div class="a4-av"></div><div><div class="a4-tn">{{c.teams.0}}</div><div id="a4-ok1" class="a4-ok">Updated ✓</div></div></div>
+    <div id="a4-tm2" class="a4-team" style="left:390px"><div class="a4-av"></div><div><div class="a4-tn">{{c.teams.1}}</div><div id="a4-ok2" class="a4-ok">Updated ✓</div></div></div>
+    <div id="a4-tm3" class="a4-team" style="left:740px"><div class="a4-av"></div><div><div class="a4-tn">{{c.teams.2}}</div><div id="a4-ok3" class="a4-ok">Updated ✓</div></div></div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a4-mh", { scale: 0.5, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, W.fourth - 0.04);
+      tl.fromTo(["#a4-mhn3"], { scale: 0.2, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, stagger: 0.08, ease: "back.out(3)" }, W.fourth + 0.3);
+      tl.fromTo(["#a4-mhl3"], { opacity: 0 }, { opacity: 1, duration: 0.25 }, W.fourth + 0.3);
+      tl.fromTo("#a4-via", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3 }, W.fourth + 0.45);
+      tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.fourth + 0.12);
+      tl.fromTo("#a4-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.team - 0.04);
+      // the task and the teams it concerns
+      tl.fromTo("#a4-task", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.keeps);
+      tl.fromTo(["#a4-tm1", "#a4-tm2", "#a4-tm3"], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.34, stagger: 0.08, ease: "power3.out" }, W.updated);
+      tl.fromTo(["#a4-w0", "#a4-w1", "#a4-wa", "#a4-wb", "#a4-wc"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.05 }, W.by);
+      tl.set(["#a4-ok1", "#a4-ok2", "#a4-ok3"], { opacity: 0 }, 0);
+      // "by sharing changes": the status flips
+      tl.set("#a4-st2", { opacity: 0 }, 0);
+      tl.to("#a4-st1", { opacity: 0, y: -14, duration: 0.14 }, W.sharing);
+      tl.fromTo("#a4-st2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2, ease: "back.out(2)" }, W.sharing + 0.06);
+      // "with the right people": the update travels to each team
+      tl.fromTo("#a4-chip", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.changes);
+      [["#a4-p1", -350, "#a4-ok1", "#a4-tm1"], ["#a4-p2", 0, "#a4-ok2", "#a4-tm2"], ["#a4-p3", 350, "#a4-ok3", "#a4-tm3"]].forEach(([p, dx, ok, tm], i) => {
+        const t = W.right + i * 0.12;
+        tl.fromTo(p, { x: 0, y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.16, ease: "none" }, t - 0.3);
+        tl.to(p, { x: dx, duration: 0.24, ease: "power1.inOut" }, t - 0.14);
+        tl.to(p, { y: 66, duration: 0.16, ease: "power1.in" }, t + 0.1);
+        tl.set(p, { opacity: 0 }, t + 0.26);
+        tl.to(tm, { backgroundColor: "rgba(245,245,247,.16)", borderColor: "#F5F5F7", duration: 0.2 }, t + 0.26);
+        tl.fromTo(ok, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.2 }, t + 0.26);
+      });
+      tl.fromTo("#a4-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a4"] = tl;
+    })();
+  </script>
+</template>

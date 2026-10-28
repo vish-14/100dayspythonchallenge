@@ -1,0 +1,114 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    .pb-row { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-bottom: 2px solid #ECEEF2; font-size: 24px; font-weight: 600; color: #1B2230; }
+    .pb-row small { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #5B6372; font-weight: 500; }
+    .pb-ico { width: 34px; height: 34px; border-radius: 9px; background: #E3E8F6; flex: none; }
+    .pb-ico.doc { width: 28px; height: 36px; border-radius: 4px; background: #DCE5FD; border: 2px solid #9DB3F2; }
+    .pb-badge { position: absolute; top: -18px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: var(--ink); color: #fff;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; display: flex; align-items: center; justify-content: center; }
+    .pb-chat { margin: 14px 22px 0; padding: 12px 16px; border-radius: 14px; background: #EEF1F6; font-size: 22px; font-weight: 600; color: #1B2230; width: fit-content; }
+    .pb-chat.r { margin-left: auto; background: #DCE5FD; }
+    /* the hub: one AI agent connected to four tools */
+    #pb-hub { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #pb-spokes { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; }
+    #pb-spokes line { stroke: rgba(245,245,247,.45); stroke-width: 6; }
+    #pb-spokes line.f { stroke: var(--paper); stroke-width: 6; }
+    #pb-agent { position: absolute; left: 440px; top: 460px; width: 200px; height: 200px; border-radius: 50%; background: var(--paper); color: var(--blue);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35); }
+    #pb-agent b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 60px; line-height: .9; }
+    #pb-agent span { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .24em; font-weight: 500; color: var(--ink); margin-top: 8px; }
+    .pb-node { position: absolute; width: 270px; height: 96px; border-radius: 20px; background: var(--paper); color: var(--ink); box-shadow: 0 20px 44px rgba(4,8,20,.3);
+      display: flex; align-items: center; gap: 16px; padding: 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: .14em; font-weight: 500; }
+    .pb-node i { width: 46px; height: 46px; border-radius: 12px; background: var(--blue); flex: none; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+
+    <div id="pb-hub">
+      <svg id="pb-spokes" viewBox="0 0 1080 1010">
+        <line id="pb-s1" x1="540" y1="560" x2="235" y2="390"/><line id="pb-s2" x1="540" y1="560" x2="845" y2="390"/>
+        <line id="pb-s3" x1="540" y1="560" x2="235" y2="730"/><line id="pb-s4" x1="540" y1="560" x2="845" y2="730"/>
+        <line id="pb-f1" class="f" x1="540" y1="560" x2="235" y2="390"/><line id="pb-f2" class="f" x1="540" y1="560" x2="845" y2="390"/>
+        <line id="pb-f3" class="f" x1="540" y1="560" x2="235" y2="730"/><line id="pb-f4" class="f" x1="540" y1="560" x2="845" y2="730"/>
+      </svg>
+      <div id="pb-n1" class="pb-node" style="left:100px;top:342px"><i></i>{{c.nodes.0}}</div>
+      <div id="pb-n2" class="pb-node" style="left:710px;top:342px"><i></i>{{c.nodes.1}}</div>
+      <div id="pb-n3" class="pb-node" style="left:100px;top:682px"><i></i>{{c.nodes.2}}</div>
+      <div id="pb-n4" class="pb-node" style="left:710px;top:682px"><i></i>{{c.nodes.3}}</div>
+      <div id="pb-agent"><b>{{c.agent.0}}</b><span>{{c.agent.1}}</span></div>
+    </div>
+
+    <div id="pb-c1" class="card" style="left:66px;top:296px;width:520px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.0}}</div>
+      <div class="pb-row"><span class="pb-ico"></span>New enquiry<small>09:12</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Quote request<small>09:40</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Booking question<small>10:05</small></div>
+      <div id="pb-b1" class="pb-badge">3</div>
+    </div>
+    <div id="pb-c2" class="card" style="left:500px;top:286px;width:500px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.1}}</div>
+      <div class="pb-row"><span class="pb-ico"></span>Call back<small>TODAY</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Send the quote<small>TODAY</small></div>
+      <div class="pb-row"><span class="pb-ico"></span>Check in<small>FRI</small></div>
+      <div id="pb-b2" class="pb-badge">5</div>
+    </div>
+    <div id="pb-c3" class="card" style="left:96px;top:560px;width:480px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.2}}</div>
+      <div class="pb-row"><span class="pb-ico doc"></span>Invoice_0457.pdf<small>NEW</small></div>
+      <div class="pb-row"><span class="pb-ico doc"></span>PO_2291.pdf<small>NEW</small></div>
+      <div class="pb-row"><span class="pb-ico doc"></span>Contract.docx<small>NEW</small></div>
+      <div id="pb-b3" class="pb-badge">3</div>
+    </div>
+    <div id="pb-c4" class="card" style="left:536px;top:548px;width:470px;height:300px" data-layout-allow-overlap>
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.3}}</div>
+      <div class="pb-chat">Any update on #214?</div>
+      <div class="pb-chat r">Checking now…</div>
+      <div class="pb-chat">Status?</div>
+      <div id="pb-b4" class="pb-badge">2</div>
+    </div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // each task lands on its word, from a different direction, and settles at a slight angle
+      const IN = [
+        ["#pb-c1", W.enquiries, { x: -260, y: 30, rotation: -12 }, -4],
+        ["#pb-c2", W.followups, { x: 260, y: -20, rotation: 10 }, 3],
+        ["#pb-c3", W.documents, { x: -60, y: 300, rotation: 6 }, 2.5],
+        ["#pb-c4", W.team, { x: 220, y: 260, rotation: -9 }, -3],
+      ];
+      IN.forEach(([id, t, from, rot]) => {
+        tl.fromTo(id, { ...from, opacity: 0, scale: 0.9 }, { x: 0, y: 0, rotation: rot, opacity: 1, scale: 1, duration: 0.42, ease: "expo.out" }, t - 0.06);
+      });
+      // "handling them manually keeps interrupting": badges pop, the pile jolts
+      ["#pb-b1", "#pb-b2", "#pb-b3", "#pb-b4"].forEach((b, i) => {
+        tl.fromTo(b, { scale: 0 }, { scale: 1, duration: 0.24, ease: "back.out(3)" }, W.handling + i * 0.16);
+      });
+      ["#pb-c1", "#pb-c2", "#pb-c3", "#pb-c4"].forEach((c, i) => {
+        tl.to(c, { x: [-14, 12, -10, 14][i], duration: 0.06, yoyo: true, repeat: 3, ease: "none" }, W.interrupting + i * 0.05);
+      });
+      // "Here's how one AI agent can help": each task becomes a connected tool around one agent
+      tl.set(["#pb-n1", "#pb-n2", "#pb-n3", "#pb-n4", "#pb-agent"], { opacity: 0 }, 0);
+      ["#pb-c1", "#pb-c2", "#pb-c3", "#pb-c4"].forEach((c, i) => {
+        tl.to(c, { x: [40, 60, 30, 50][i], y: [40, 50, 120, 130][i], rotation: 0, scale: 0.5, opacity: 0, duration: 0.38, ease: "power3.in" }, W.heres - 0.05 + i * 0.04);
+      });
+      ["#pb-n1", "#pb-n2", "#pb-n3", "#pb-n4"].forEach((n, i) => {
+        tl.fromTo(n, { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.34, ease: "power3.out" }, W.heres + 0.28 + i * 0.05);
+      });
+      tl.fromTo("#pb-agent", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)" }, W.one - 0.05);
+      tl.fromTo(["#pb-s1", "#pb-s2", "#pb-s3", "#pb-s4"], { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.agent - 0.1);
+      // "all four": each connection lights up in turn
+      tl.set(["#pb-f1", "#pb-f2", "#pb-f3", "#pb-f4"], { opacity: 0 }, 0);
+      ["#pb-f1", "#pb-f2", "#pb-f3", "#pb-f4"].forEach((f, i) => {
+        tl.to(f, { opacity: 1, duration: 0.18 }, W.all + i * 0.12);
+      });
+      tl.fromTo("#pb-agent", { boxShadow: "0 0 0 14px rgba(245,245,247,.18), 0 28px 60px rgba(4,8,20,.35)" },
+        { boxShadow: "0 0 0 26px rgba(245,245,247,.28), 0 28px 60px rgba(4,8,20,.35)", duration: 0.3, yoyo: true, repeat: 1 }, W.four);
+      tl.fromTo("#problem-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>

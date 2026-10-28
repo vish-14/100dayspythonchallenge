@@ -1,0 +1,50 @@
+[
+ {
+  "id": "hook",
+  "label": "FOUR TASKS, ONE AGENT",
+  "say": "Four everyday tasks. One AI agent.",
+  "text": "Four everyday tasks. | One AI agent."
+ },
+ {
+  "id": "problem",
+  "label": "THE PROBLEM",
+  "say": "Enquiries, follow-ups, documents, and team updates. Handling them manually keeps interrupting your day. Here's how one AI agent can help with all four.",
+  "text": "Enquiries, follow-ups, | documents, and team updates. | Handling them manually | keeps interrupting your day. | Here's how one AI agent | can help with all four."
+ },
+ {
+  "id": "a1",
+  "label": "ENQUIRIES",
+  "say": "First, it captures enquiries, saves them to your C R M, and drafts replies for you to review.",
+  "text": "First, it captures enquiries, | saves them to your CRM, | and drafts replies | for you to review."
+ },
+ {
+  "id": "a2",
+  "label": "FOLLOW-UPS",
+  "say": "Second, it sends timely follow-ups, using messages you've approved in advance.",
+  "text": "Second, it sends | timely follow-ups, | using messages | you've approved in advance."
+ },
+ {
+  "id": "a3",
+  "label": "DOCUMENTS",
+  "say": "Third, it pulls key details from documents, and prepares summaries for someone to check.",
+  "text": "Third, it pulls key details | from documents | and prepares summaries | for someone to check."
+ },
+ {
+  "id": "a4",
+  "label": "TEAM UPDATES",
+  "say": "Fourth, it keeps your team updated, by sharing changes with the right people.",
+  "text": "Fourth, it keeps | your team updated | by sharing changes | with the right people."
+ },
+ {
+  "id": "key",
+  "label": "HOW IT STAYS RELIABLE",
+  "say": "It works through your connected tools and clear rules, and people approve what matters.",
+  "text": "It works through | your connected tools | and clear rules, | and people approve | what matters."
+ },
+ {
+  "id": "cta",
+  "label": "GET IN TOUCH",
+  "say": "Want an AI agent like this for your business? Contact Shree Trilinga Technologies.",
+  "text": "Want an AI agent | like this for your business? | Contact Sri Trilinga Technologies."
+ }
+]
