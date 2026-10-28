@@ -36,7 +36,7 @@ Link in bio: the SuperProfile page, titled **"Get your free workflow →"**.
 
 ## CTA (video and caption)
 
-- **Video voice (1.1× speed):** "Want this workflow built for your business? Follow me and comment 'workflow', and I'll send you the details in your DMs."
+- **Video voice (1.0× speed, en-gb pronunciation):** "Want this workflow built for your business? Follow me and comment 'workflow', and I'll send you the details in your DMs."
 - **Video screen:** "Want this workflow built for your business?", then step 1 (avatar + @vish.workflows + Follow → Following ✓), then step 2 (a comment box types WORKFLOW), then a DM from VISH, the pill **FOLLOW + COMMENT "WORKFLOW"** and the line "Follow first, so my reply can reach your DMs". Keep the CTA to about 9 s.
 
 ## Reel caption template (SEO)

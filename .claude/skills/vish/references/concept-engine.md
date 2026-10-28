@@ -86,7 +86,7 @@ Add new rows when research finds a niche with a clear, repeated pain.
 - "Most businesses automate the wrong thing first."
 - "Before vs after: a [industry] owner's Monday."
 
-Rules: name the industry or role in the first line when it's an industry reel; promise a mechanism, not a result; no fake numbers; keep it under 10 words on screen.
+Rules: use the words the target owner actually says (in India: "property agents", "site visits", "enquiries", "clinic", "shop"; not US terms like "realtors" or "viewings"); name the industry or role in the first line when it's an industry reel; promise a mechanism, not a result; no fake numbers; keep it under 10 words on screen.
 
 ## 6. What to show the user at the approval gate
 

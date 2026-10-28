@@ -140,7 +140,7 @@ while t < pres_out - 0.4:
 brow_up = [round(abs_word(r), 3) for r in ("hook:cold", "problem:already", "a1:One:", "a2:Two:", "a3:Three:", "a4:Four:")]
 # restrained head moves in whole sprite pixels (10 px): one small shift per scene, back to centre at the next
 moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("a1", 0, 0), ("a2", 10, 0), ("a3", 0, 10), ("a4", -10, 0))]
-moves.append((round(abs_word("a1:tone.") + 0.1, 3), 0, -10))
+moves.append((round(abs_word("a1:style.") + 0.1, 3), 0, -10))
 moves.sort()
 src = open(P("src", "presenter.html")).read()
 pres = (src.replace("{{BASE_CSS}}", BASE_CSS.replace("%VARS%", css_vars()))

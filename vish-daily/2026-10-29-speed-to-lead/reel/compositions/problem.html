@@ -47,7 +47,7 @@
     <div id="pb-clock"><div id="pb-ca" class="disp">9:04 PM</div><div id="pb-cb" class="disp">8:30 AM</div></div>
     <div id="pb-clab" class="mono"><span id="pb-la">BUYER ENQUIRES</span><span id="pb-lb">YOU REPLY</span></div>
     <div id="pb-other" class="card">
-      <div class="pb-k">ANOTHER AGENT · 9:06 PM</div>
+      <div class="pb-k">ANOTHER BROKER · 9:06 PM</div>
       <div class="pb-v"><span id="pb-live"></span>On a call with your buyer</div>
     </div>
     <div id="pb-chat" class="card">
@@ -61,7 +61,7 @@
   </div>
   <script>
     (() => {
-      const W = {"a": 0.15, "a_end": 0.27, "buyer": 0.247, "buyer_end": 0.647, "enquires": 0.647, "enquires_end": 1.207, "at": 1.207, "at_end": 1.447, "9": 1.447, "9_end": 1.847, "pm": 1.847, "pm_end": 2.567, "you": 2.727, "you_end": 2.967, "reply": 2.967, "reply_end": 3.367, "the": 3.367, "the_end": 3.527, "next": 3.527, "next_end": 3.847, "morning": 3.847, "morning_end": 4.487, "by": 4.487, "by_end": 4.727, "then": 4.727, "then_end": 5.287, "another": 5.287, "another_end": 5.767, "agent": 5.767, "agent_end": 6.327, "is": 6.327, "is_end": 6.487, "already": 6.487, "already_end": 6.887, "talking": 6.887, "talking_end": 7.287, "to": 7.287, "to_end": 7.447, "them": 7.447, "them_end": 7.927};
+      const W = {"a": 0.15, "a_end": 0.28, "buyer": 0.28, "buyer_end": 0.76, "enquires": 0.76, "enquires_end": 1.32, "at": 1.32, "at_end": 1.48, "9": 1.48, "9_end": 1.96, "pm": 1.96, "pm_end": 2.68, "you": 2.92, "you_end": 3.16, "reply": 3.16, "reply_end": 3.64, "the": 3.64, "the_end": 3.8, "next": 3.8, "next_end": 4.12, "morning": 4.12, "morning_end": 4.84, "by": 4.84, "by_end": 5.08, "then": 5.08, "then_end": 5.72, "another": 5.72, "another_end": 6.2, "broker": 6.2, "broker_end": 6.76, "is": 6.76, "is_end": 6.92, "already": 6.92, "already_end": 7.4, "talking": 7.4, "talking_end": 7.8, "to": 7.8, "to_end": 7.96, "them": 7.96, "them_end": 8.28};
       const tl = gsap.timeline({ paused: true });
       // "A buyer enquires": the conversation opens, the message lands
       tl.fromTo("#pb-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.a - 0.1);
@@ -78,10 +78,10 @@
       tl.fromTo("#pb-meta", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.morning + 0.25);
       // "another agent is already talking to them"
       tl.fromTo("#pb-other", { opacity: 0, x: 300, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: 0.45, ease: "expo.out" }, W.another - 0.08);
-      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.agent);
+      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.broker);
       tl.fromTo("#pb-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.talking);
       tl.to("#pb-b2", { opacity: 0.45, duration: 0.3 }, W.talking + 0.1);
-      tl.fromTo("#problem-prog", { scaleX: 0.0747 }, { scaleX: 0.2192, duration: 7.875, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.0844 }, { scaleX: 0.2151, duration: 8.366, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

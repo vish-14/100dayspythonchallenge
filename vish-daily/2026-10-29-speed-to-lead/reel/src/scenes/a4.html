@@ -57,11 +57,11 @@
       tl.to("#a4-trackfill", { scaleX: 0.48, duration: 0.6, ease: "power2.inOut" }, W.new - 0.1);
       tl.to("#a4-lead", { x: 364, duration: 0.6, ease: "power2.inOut" }, W.new - 0.1);
       tl.fromTo("#a4-ring", { scale: 0.5, opacity: 1 }, { scale: 1.6, opacity: 0, duration: 0.6, ease: "power2.out" }, W.matching);
-      tl.fromTo("#a4-match", { opacity: 0, y: -24, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(2)" }, W.listings - 0.15);
+      tl.fromTo("#a4-match", { opacity: 0, y: -24, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(2)" }, W.properties - 0.15);
       // "keep them warm"
-      tl.set("#a4-tag1", { opacity: 0 }, W.warm - 0.05);
-      tl.fromTo("#a4-tag2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.5)" }, W.warm - 0.05);
-      tl.to("#a4-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.warm);
+      tl.set("#a4-tag1", { opacity: 0 }, W.interested - 0.05);
+      tl.fromTo("#a4-tag2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.5)" }, W.interested - 0.05);
+      tl.to("#a4-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.interested);
       tl.fromTo("#a4-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
       window.__timelines["a4"] = tl;
     })();

@@ -54,7 +54,7 @@
       tl.fromTo("#pb-meta", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.morning + 0.25);
       // "another agent is already talking to them"
       tl.fromTo("#pb-other", { opacity: 0, x: 300, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: 0.45, ease: "expo.out" }, W.another - 0.08);
-      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.agent);
+      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.broker);
       tl.fromTo("#pb-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.talking);
       tl.to("#pb-b2", { opacity: 0.45, duration: 0.3 }, W.talking + 0.1);
       tl.fromTo("#problem-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);

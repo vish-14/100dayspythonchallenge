@@ -49,17 +49,17 @@
       <div class="ttl disp"><div class="mask"><div id="a3-t1">ROUTE</div></div><div class="mask"><div id="a3-t2">+ BOOK</div></div></div>
     </div>
     <div id="a3-alert" class="card">
-      <div class="bar"><span class="dot b"></span>&nbsp;WhatsApp · lead alert</div>
+      <div class="bar"><span class="dot b"></span>&nbsp;WhatsApp · buyer alert</div>
       <div id="a3-ring"></div>
       <div style="padding:22px 24px 0"><div class="a3-v">Ananya R. · HOT</div><div class="a3-s">2BHK Whitefield · ₹85L–1Cr</div></div>
-      <div id="a3-q">Viewing: Sat 11:00?</div>
+      <div id="a3-q">Site visit: Sat 11:00?</div>
       <div id="a3-btns"><div id="a3-ok" class="a3-btn"><span id="a3-ok1">Approve</span><span id="a3-ok2" style="position:absolute;left:0;right:0;top:16px;opacity:0">✓ Approved</span></div><div id="a3-chg" class="a3-btn">Change</div></div>
     </div>
     <div id="a3-cal" class="card">
       <div class="bar"><span class="dot b"></span>&nbsp;Calendar · Sat</div>
       <span id="a3-stamp" class="tag blue">Booked ✓</span>
       <div class="a3-row"><span class="a3-k">10:00</span></div>
-      <div class="a3-row"><span class="a3-k">11:00</span><div id="a3-book">Viewing · Ananya R.</div></div>
+      <div class="a3-row"><span class="a3-k">11:00</span><div id="a3-book">Site visit · Ananya R.</div></div>
       <div class="a3-row"><span class="a3-k">12:00</span></div>
       <div class="a3-row" style="border:none"><span class="a3-k">13:00</span></div>
     </div>
@@ -68,7 +68,7 @@
   </div>
   <script>
     (() => {
-      const W = {"three": 0.15, "three_end": 0.421, "route": 0.581, "route_end": 0.981, "and": 0.981, "and_end": 1.141, "book": 1.141, "book_end": 1.541, "ready": 1.701, "ready_end": 2.101, "buyers": 2.101, "buyers_end": 2.421, "ping": 2.501, "ping_end": 2.821, "you": 2.821, "you_end": 2.981, "on": 2.981, "on_end": 3.141, "whatsapp": 3.141, "whatsapp_end": 3.861, "you_2": 3.861, "you_2_end": 4.101, "approve": 4.101, "approve_end": 4.581, "and_2": 4.661, "and_2_end": 4.821, "the": 4.821, "the_end": 4.981, "viewing": 4.981, "viewing_end": 5.461, "lands": 5.461, "lands_end": 5.781, "in": 5.781, "in_end": 5.861, "your": 5.861, "your_end": 6.021, "calendar": 6.021, "calendar_end": 6.741};
+      const W = {"three": 0.15, "three_end": 0.608, "route": 0.608, "route_end": 1.008, "and": 1.008, "and_end": 1.248, "book": 1.248, "book_end": 1.888, "serious": 1.888, "serious_end": 2.448, "buyers": 2.448, "buyers_end": 3.008, "alert": 3.008, "alert_end": 3.408, "you": 3.408, "you_end": 3.568, "on": 3.568, "on_end": 3.728, "whatsapp": 3.728, "whatsapp_end": 4.528, "you_2": 4.528, "you_2_end": 4.768, "approve": 4.768, "approve_end": 5.328, "and_2": 5.408, "and_2_end": 5.648, "the": 5.648, "the_end": 5.808, "site": 5.808, "site_end": 6.208, "visit": 6.208, "visit_end": 6.608, "lands": 6.608, "lands_end": 7.008, "in": 7.008, "in_end": 7.088, "your": 7.088, "your_end": 7.248, "calendar": 7.248, "calendar_end": 8.048};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.route - 0.04);
@@ -77,9 +77,9 @@
       tl.fromTo("#a3-cal", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, W.book);
       tl.set(["#a3-book", "#a3-stamp"], { opacity: 0 }, 0);
       // "Ready buyers ping you on WhatsApp"
-      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.ready - 0.1);
-      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.ping);
-      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.ping);
+      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.serious - 0.1);
+      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alert);
+      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alert);
       // "You approve"
       tl.fromTo("#a3-cursor", { x: 520, y: 1000, opacity: 0 }, { x: 250, y: 830, opacity: 1, duration: 0.45, ease: "power3.inOut" }, W.you_2 - 0.3);
       tl.to("#a3-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.1);
@@ -88,10 +88,10 @@
       tl.to("#a3-ok", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.16);
       tl.to("#a3-cursor", { opacity: 0, duration: 0.25 }, W.approve + 0.5);
       // "the viewing lands in your calendar"
-      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.viewing - 0.05);
+      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site - 0.05);
       tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.calendar + 0.1);
       tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.calendar + 0.1);
-      tl.fromTo("#a3-prog", { scaleX: 0.4826 }, { scaleX: 0.6060, duration: 6.730, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.5055 }, { scaleX: 0.6305, duration: 7.998, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

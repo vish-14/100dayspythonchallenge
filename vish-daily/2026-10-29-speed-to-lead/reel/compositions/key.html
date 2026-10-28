@@ -79,7 +79,7 @@
   </div>
   <script>
     (() => {
-      const W = {"the": 0.15, "the_end": 0.27, "key": 0.157, "key_end": 0.717, "portals": 0.717, "portals_end": 1.517, "crm": 1.517, "crm_end": 2.237, "and": 2.317, "and_end": 2.477, "calendar": 2.477, "calendar_end": 2.957, "connected": 2.957, "connected_end": 3.677, "clear": 3.677, "clear_end": 4.077, "rules": 4.077, "rules_end": 4.557, "and_2": 4.557, "and_2_end": 4.797, "you": 4.797, "you_end": 5.037, "approving": 5.037, "approving_end": 5.517, "what": 5.517, "what_end": 5.757, "matters": 5.757, "matters_end": 6.557};
+      const W = {"the": 0.15, "the_end": 0.27, "key": 0.208, "key_end": 0.848, "portals": 0.848, "portals_end": 1.568, "crm": 1.728, "crm_end": 2.608, "and": 2.688, "and_end": 2.848, "calendar": 2.848, "calendar_end": 3.408, "connected": 3.408, "connected_end": 4.128, "clear": 4.128, "clear_end": 4.608, "rules": 4.608, "rules_end": 5.168, "and_2": 5.168, "and_2_end": 5.408, "you": 5.408, "you_end": 5.648, "approving": 5.648, "approving_end": 6.208, "what": 6.208, "what_end": 6.448, "matters": 6.448, "matters_end": 7.248};
       const tl = gsap.timeline({ paused: true });
       // "The key?" fills the screen, then becomes the scene's label
       tl.fromTo("#key-q", { scale: 1.35, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "power4.out" }, Math.max(0, W.key - 0.12));

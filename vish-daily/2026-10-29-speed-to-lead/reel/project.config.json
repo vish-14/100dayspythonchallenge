@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 54.5,
+    "duration": 64.0,
     "output": "reel.mp4"
   },
   "brand": {
@@ -105,13 +105,13 @@
   ],
   "copy": {
     "hook": {
-      "kicker": "REALTORS · PORTAL LEADS",
-      "l1": "YOUR LEADS",
+      "kicker": "PROPERTY AGENTS · BROKERS",
+      "l1": "YOUR ENQUIRIES",
       "l2": "GO COLD",
-      "card_k": "NEW PORTAL LEAD",
+      "card_k": "NEW ENQUIRY · PROPERTY PORTAL",
       "card_v": "2BHK enquiry · Whitefield",
       "unread": "UNANSWERED",
-      "viewing": "YOU · AT A VIEWING"
+      "viewing": "YOU · ON A SITE VISIT"
     },
     "problem": {
       "clock_a": "9:04 PM",
@@ -120,7 +120,7 @@
       "ask": "Is the 2BHK still available? Can I see it this week?",
       "reply": "Hi! Yes, it's still available.",
       "seen": "Seen · no reply",
-      "other_k": "ANOTHER AGENT · 9:06 PM",
+      "other_k": "ANOTHER BROKER · 9:06 PM",
       "other_v": "On a call with your buyer"
     },
     "a1": {
@@ -139,21 +139,21 @@
       "src": "Property portal · 9:04 PM",
       "message": "Is the 2BHK in Whitefield still available? Can I see it this week?",
       "draft": [
-        "Hi Ananya, thanks for asking!",
-        "Yes, it's available. Viewings run Thu–Sat.",
-        "What budget and move-in date suit you?"
+        "Hi Ananya, thanks for your enquiry!",
+        "Yes, it's available. Site visits Thu–Sat.",
+        "What budget and possession date suit you?"
       ],
       "sent": "Sent ✓ 9:05 PM",
-      "tone": "Tone: yours"
+      "tone": "Style: yours"
     },
     "a2": {
       "num": "02",
       "title": "QUALIFY",
       "qs": [
         "What's your budget?",
-        "Which area do you prefer?",
-        "When do you want to move?",
-        "How are you paying?"
+        "Which location do you prefer?",
+        "When do you plan to buy?",
+        "Do you need a home loan?"
       ],
       "lead": "Ananya R.",
       "fields": [
@@ -162,7 +162,7 @@
           "₹85L – 1Cr"
         ],
         [
-          "AREA",
+          "LOCATION",
           "Whitefield"
         ],
         [
@@ -170,8 +170,8 @@
           "Within 2 months"
         ],
         [
-          "PAYING",
-          "Home loan, approved"
+          "HOME LOAN",
+          "Yes, pre-approved"
         ]
       ],
       "score": "HOT LEAD"
@@ -182,10 +182,10 @@
         "ROUTE",
         "+ BOOK"
       ],
-      "alert_k": "WhatsApp · lead alert",
+      "alert_k": "WhatsApp · buyer alert",
       "lead": "Ananya R. · HOT",
       "detail": "2BHK Whitefield · ₹85L–1Cr",
-      "slot_q": "Viewing: Sat 11:00?",
+      "slot_q": "Site visit: Sat 11:00?",
       "approve": "Approve",
       "change": "Change",
       "cal_k": "Calendar · Sat",
@@ -195,7 +195,7 @@
         "12:00",
         "13:00"
       ],
-      "booked": "Viewing · Ananya R.",
+      "booked": "Site visit · Ananya R.",
       "stamp": "Booked ✓"
     },
     "a4": {
@@ -215,7 +215,7 @@
       "match_k": "NEW MATCH",
       "match_v": "3BHK · Indiranagar",
       "match_s": "Fits budget + area",
-      "warm": "Still warm ✓"
+      "warm": "Still interested ✓"
     },
     "key": {
       "q": "THE KEY?",
@@ -272,7 +272,7 @@
     },
     {
       "file": "notification.mp3",
-      "word": "hook:viewings.",
+      "word": "hook:visits.",
       "offset": 0,
       "volume": 0.22
     },
@@ -314,7 +314,7 @@
     },
     {
       "file": "notification.mp3",
-      "word": "a1:portal",
+      "word": "a1:portals",
       "offset": 0,
       "volume": 0.22
     },
@@ -338,7 +338,7 @@
     },
     {
       "file": "click-soft.mp3",
-      "word": "a1:tone.",
+      "word": "a1:style.",
       "offset": 0,
       "volume": 0.45
     },
@@ -356,7 +356,7 @@
     },
     {
       "file": "pop.mp3",
-      "word": "a2:area,",
+      "word": "a2:location,",
       "offset": 0,
       "volume": 0.3
     },
@@ -368,13 +368,13 @@
     },
     {
       "file": "pop.mp3",
-      "word": "a2:paying.",
+      "word": "a2:loan.",
       "offset": 0,
       "volume": 0.3
     },
     {
       "file": "ping.mp3",
-      "word": "a2:paying.",
+      "word": "a2:loan.",
       "offset": 0.45,
       "volume": 0.22
     },
@@ -386,7 +386,7 @@
     },
     {
       "file": "notification.mp3",
-      "word": "a3:ping",
+      "word": "a3:alert",
       "offset": 0,
       "volume": 0.25
     },
@@ -398,7 +398,7 @@
     },
     {
       "file": "whoosh-short.mp3",
-      "word": "a3:viewing",
+      "word": "a3:site",
       "offset": 0,
       "volume": 0.3
     },
@@ -422,13 +422,13 @@
     },
     {
       "file": "ping.mp3",
-      "word": "a4:listings",
+      "word": "a4:properties",
       "offset": 0,
       "volume": 0.22
     },
     {
       "file": "click-soft.mp3",
-      "word": "a4:warm.",
+      "word": "a4:interested.",
       "offset": 0,
       "volume": 0.45
     },

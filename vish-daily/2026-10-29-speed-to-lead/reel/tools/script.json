@@ -2,38 +2,38 @@
  {
   "id": "hook",
   "label": "00 / THE LEAK",
-  "say": "Realtors: your portal leads go cold while you're at viewings.",
-  "text": "Realtors: your portal leads go cold while you're at viewings."
+  "say": "Property agents, your enquiries go cold while you're out on site visits.",
+  "text": "Property agents: your enquiries go cold while you're out on site visits."
  },
  {
   "id": "problem",
   "label": "00 / THE PROBLEM",
-  "say": "A buyer enquires at nine P M. You reply the next morning. By then, another agent is already talking to them.",
-  "text": "A buyer enquires at 9 PM. You reply the next morning. By then, another agent is already talking to them."
+  "say": "A buyer enquires at nine P M. You reply the next morning. By then, another broker is already talking to them.",
+  "text": "A buyer enquires at 9 PM. You reply the next morning. By then, another broker is already talking to them."
  },
  {
   "id": "a1",
   "label": "01 / REPLY INSTANTLY",
-  "say": "One: reply instantly. Every portal lead lands in your C R M, and AI sends a reply right away, in your tone.",
-  "text": "One: reply instantly. Every portal lead lands in your CRM, and AI sends a reply right away, in your tone."
+  "say": "One: reply instantly. Every enquiry, from property portals or WhatsApp, lands in your C R M, and AI replies right away, in your style.",
+  "text": "One: reply instantly. Every enquiry, from property portals or WhatsApp, lands in your CRM, and AI replies right away, in your style."
  },
  {
   "id": "a2",
   "label": "02 / QUALIFY",
-  "say": "Two: qualify. AI asks about budget, area, timeline, and how they're paying.",
-  "text": "Two: qualify. AI asks about budget, area, timeline, and how they're paying."
+  "say": "Two: qualify. AI asks about budget, location, timeline, and if they need a home loan.",
+  "text": "Two: qualify. AI asks about budget, location, timeline, and if they need a home loan."
  },
  {
   "id": "a3",
   "label": "03 / ROUTE + BOOK",
-  "say": "Three: route and book. Ready buyers ping you on WhatsApp. You approve, and the viewing lands in your calendar.",
-  "text": "Three: route and book. Ready buyers ping you on WhatsApp. You approve, and the viewing lands in your calendar."
+  "say": "Three: route and book. Serious buyers alert you on WhatsApp. You approve, and the site visit lands in your calendar.",
+  "text": "Three: route and book. Serious buyers alert you on WhatsApp. You approve, and the site visit lands in your calendar."
  },
  {
   "id": "a4",
   "label": "04 / STAY WARM",
-  "say": "Four: follow up. Not ready yet? Friendly check-ins and new matching listings keep them warm.",
-  "text": "Four: follow up. Not ready yet? Friendly check-ins and new matching listings keep them warm."
+  "say": "Four: follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested.",
+  "text": "Four: follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested."
  },
  {
   "id": "key",
@@ -46,6 +46,6 @@
   "label": "06 / YOUR TURN",
   "say": "Want this workflow built for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
   "text": "Want this workflow built for your business? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
-  "speed": 1.1
+  "speed": 1.0
  }
 ]

@@ -26,7 +26,7 @@ Show the 3 concepts in the format from concept-engine §6, ranked. Ask with AskU
 
 ## Step 2: Script and storyboard (≈10 min)
 
-- Use the length and structure from `references/reel-pipeline.md`: about 40–55 s of explainer at 1.0× speed, then the standard ~9 s WORKFLOW CTA at 1.1×.
+- Use the length and structure from `references/reel-pipeline.md`: about 45–55 s of explainer at 0.9× speed with en-gb pronunciation, then the standard ~8 s WORKFLOW CTA at 1.0×. Clarity beats speed: the audience is largely Indian, and the first version at 1.0×/1.1× with US pronunciation was reported as hard to understand.
 - Structure:
   - **Hook** (≤2 s, names the industry or pain).
   - **Problem** (relatable, in the owner's words).

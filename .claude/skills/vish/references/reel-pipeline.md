@@ -21,7 +21,7 @@ npx hyperframes models install parakeet --json < /dev/null   # word timestamps
 
 # 1. Script: one entry per scene in tools/script.json
 #    {"id","label","say" (what the voice reads; spell C R M etc.),"text" (captions),"speed" (1.0; CTA 1.1)}
-# 2. Voice: Kokoro voice hm_omega (Indian English male), one clip per scene, short pauses
+# 2. Voice: Kokoro voice hm_omega, lang en-gb (British phonemes read clearer for Indian listeners than en-us), speed 0.9 (CTA 1.0), one clip per scene, short pauses
 cd tools && python3 make_vo.py && cp voiceover.wav ../assets/audio/voiceover.wav && rm voiceover.wav && cd ..
 # 3. Real word timings from the actual audio
 npx hyperframes transcribe assets/audio/voiceover.wav --engine parakeet --json   # → transcript.json
@@ -47,6 +47,9 @@ npx hyperframes render -q delivery --fps 30 -o vish_reel.mp4
 - `src/scenes/cta.html`: the follow + comment WORKFLOW ending (avatar at `assets/brand/avatar.png`).
 
 ## Lessons learned (avoid repeating these)
+
+- **Voice clarity (user feedback, Oct 2026):** hm_omega with `lang='en-us'` at 1.0× was hard to understand for Indian viewers. Use `lang='en-gb'` at 0.9× (CTA 1.0×). Check every voiceover with Parakeet: any real mishearing ("hot"→"heart", "portals"→"orals", a dropped "-ed") means reword the line, not just re-roll it.
+- **Say it the Indian way:** for Indian industries use local terms, not US ones: "property agents/brokers" not "realtors", "site visit" not "viewing", "enquiry", "home loan", "possession date", portals like 99acres, MagicBricks, Housing.com. Ask: would an Indian owner say this word out loud?
 
 - Kokoro mispronounces "Sri Trilinga"; spell it "Shree Trilinga" in `say` and verify with Parakeet. (The current reels don't speak the company name.)
 - Parakeet puts a file's first word at 0 s; `analyze_voice.py` already clamps each scene's first word to its clip start.

@@ -48,8 +48,8 @@
       tl.fromTo("#a2-lead", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.qualify + 0.2);
       tl.fromTo("#a2-ask", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.ai - 0.05);
       tl.set(["#a2-q0", "#a2-q1", "#a2-q2", "#a2-q3", "#a2-v0", "#a2-v1", "#a2-v2", "#a2-v3", "#a2-score"], { opacity: 0 }, 0);
-      const Q = [W.asks - 0.05, W.area - 0.1, W.timeline - 0.1, W.how - 0.1];
-      const A = [W.budget + 0.2, W.area + 0.25, W.timeline + 0.25, W.paying + 0.15];
+      const Q = [W.asks - 0.05, W.location - 0.1, W.timeline - 0.1, W.if - 0.1];
+      const A = [W.budget + 0.2, W.location + 0.25, W.timeline + 0.25, W.loan + 0.15];
       Q.forEach((t, i) => {
         tl.fromTo(`#a2-q${i}`, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.out" }, t);
         if (i < 3) tl.to(`#a2-q${i}`, { opacity: 0, y: -16, duration: 0.12, ease: "power2.in" }, Q[i + 1] - 0.12);
@@ -61,8 +61,8 @@
         tl.to(`#a2-v${i}`, { backgroundColor: "rgba(220,229,253,0)", duration: 0.5 }, t + 0.2);
       });
       // scored: hot lead
-      tl.fromTo("#a2-score", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, W.paying + 0.45);
-      tl.to("#a2-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.paying + 0.45);
+      tl.fromTo("#a2-score", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, W.loan + 0.45);
+      tl.to("#a2-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.loan + 0.45);
       tl.fromTo("#a2-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
       window.__timelines["a2"] = tl;
     })();
