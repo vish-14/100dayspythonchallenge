@@ -1,5 +1,5 @@
 {
   "name": "vish",
-  "version": "1.0.0",
-  "description": "Vish: the pixel-art AI-automation presenter of @vish.workflows. Character bible, brand and page playbook, reel production pipeline, and scripts that regenerate the character exactly."
+  "version": "1.1.0",
+  "description": "Vish: daily content engine for @vish.workflows. Researches reel concepts across every industry, gets approval, makes the reel and a matching PDF guide, writes the caption and post time, and logs results to win AI automation projects. Includes the character bible, brand playbook and reel pipeline."
 }

@@ -1,9 +1,21 @@
 ---
 name: vish
-description: Brand kit and production playbook for "Vish", the pixel-art AI-automation presenter of the Instagram page @vish.workflows (backend: Sri Trilinga Technologies Private Limited). Use whenever the user mentions Vish, @vish.workflows, the pixel character, the automation reels, the WORKFLOW comment CTA, or asks for a new reel, post, caption, bio, profile picture, thumbnail or character art for this page. Holds the exact character design (palette, pixel grid, layers), the page's voice and copy rules, the reel pipeline that worked (HyperFrames + Kokoro voice + MusicGen + Parakeet captions), and the scripts that regenerate the character exactly.
+description: Daily content engine, brand kit and production playbook for "Vish", the pixel-art AI-automation presenter of the Instagram page @vish.workflows (backend: Sri Trilinga Technologies Private Limited), built to win AI automation and AI agent projects from every industry worldwide. Use whenever the user types /vish or /vish daily, asks for today's reel, daily content, reel ideas or research, a lead-magnet PDF guide, captions or posting times, or mentions Vish, @vish.workflows, the pixel character, the automation reels or the WORKFLOW comment CTA, or asks for a new reel, post, caption, bio, profile picture, thumbnail or character art for this page. Holds the exact character design (palette, pixel grid, layers), the page's voice and copy rules, the reel pipeline that worked (HyperFrames + Kokoro voice + MusicGen + Parakeet captions), and the scripts that regenerate the character exactly.
 ---
 
 # Vish — character and page playbook
+
+## Daily mode (`/vish daily`, "today's reel", or `/vish` with no other request)
+
+Follow `references/daily-run.md` from start to finish:
+1. Research and score fresh concepts across all industries (`references/concept-engine.md`).
+2. **Get the user's pick.**
+3. Write the script and **get approval**.
+4. Make the reel and the topic PDF guide (`references/guide-pdf.md`).
+5. Write the post kit: caption, cover, pinned comment, SuperProfile setup and the post time in IST plus world times.
+6. Log it in `vish-daily/content-log.md`.
+
+Everything serves leads: `references/lead-engine.md`.
 
 Vish is the on-screen persona of the Instagram page **@vish.workflows** (display name **"Vish | AI Automation"**). He explains practical AI automations to business owners worldwide and invites them to comment **"WORKFLOW"** to get a workflow built. The business behind the page is **Sri Trilinga Technologies Private Limited**, which stays in the background.
 
@@ -26,13 +38,22 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 | `scripts/make_profile.py` | Regenerates the 1080×1080 Instagram profile picture, centred for the circle crop |
 | `assets/character/` | Ready-made layers, `instagram_profile_picture.png`, `character_expressions.png`, `avatar.png` |
 | `references/dm-playbook.md` | What commenters get: the guide, SuperProfile settings, every DM message (follower, non-follower, 24 h follow-up, BUILD reply) |
-| `assets/lead-magnet/` | The 4-task workflow guide (HTML page + PDF) sent to people who comment WORKFLOW |
+| `references/daily-run.md` | The daily routine: research → Gate 1 concept → Gate 2 script → reel → PDF → post kit → log |
+| `references/concept-engine.md` | Research lenses, scoring, rotation rules, the industry map (pains → automations) and buyer hooks |
+| `references/lead-engine.md` | Comment → DM → call → proposal → pilot, discovery questions per industry, metrics to track |
+| `references/guide-pdf.md` | How to write `guide.json` and build the PDF guide; layout and writing rules |
+| `scripts/guide/make_guide.py` | JSON → A4 PDF guide in the house style, with page PNGs and a link check (`render.js`, `guide.css` and bundled Inter fonts beside it) |
+| `scripts/setup.sh` | One-time install and check of the toolchain and models in a fresh container |
+| `assets/content-log.template.md` | Starting point for `vish-daily/content-log.md` |
+| `assets/lead-magnet/` | The first guide: web page, PDF and its `4-task-workflow.guide.json` source |
 | `template/` | The working HyperFrames reel project (scenes, presenter, captions, config, tools, SFX), without the large audio files |
 
 ## Quick recipes
 
 - **Profile picture or avatar:** use `assets/character/instagram_profile_picture.png` as is, or run `python3 scripts/make_profile.py assets/character out.png circle_preview.png`.
 - **Character art in a new pose or expression:** combine existing layers (body, head, eyes_*, brows_*, mouth_*, mustache) in that order. For anything new, add it to `make_sprite.py` using only the palette in the character bible, and check it at 1× and 10× before using it.
+- **Daily post:** follow `references/daily-run.md`.
+- **PDF guide only:** write a `guide.json` (see `references/guide-pdf.md`) and run `scripts/guide/make_guide.py`.
 - **New reel:** follow `references/reel-pipeline.md`. Copy `template/` to a new folder, edit `project.config.json` and `tools/script.json`, then run the pipeline.
 - **Caption or bio:** use the templates in `references/brand-and-page.md`. Keep the company line last.
 

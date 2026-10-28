@@ -9,7 +9,7 @@
 | Username | **@vish.workflows** |
 | Audience | Business owners and small teams worldwide: India, Gulf, UK, US and beyond |
 | Promise | "I build AI agents that help businesses scale": automating leads, follow-ups, documents and ops, with a human always in control |
-| Booking | Free 15-min call: https://cal.com/vishworkflows/discovery (Cal.com name "Vish \| AI Automation") |
+| Booking | Free discovery call: https://cal.com/vishworkflows/discovery (Cal.com name "Vish \| AI Automation") |
 | Support email | support@sritrilinga.com (only place the company domain appears outside captions) |
 | Backend business | Sri Trilinga Technologies Private Limited (named **only** at the end of reel captions, for SEO) |
 | Account type | Instagram **Business** account, category *Information Technology Company* |
@@ -30,7 +30,7 @@ I build AI agents that help businesses scale 🚀
 💬 Comment "WORKFLOW" on any reel 👇
 ```
 
-Cal.com bio: "I build AI agents and automations for growing businesses: they handle enquiries, follow-ups, documents and team updates, so your team can focus on scaling. Book a free 15-min call and we'll map the first AI agent for your business. Support: support@sritrilinga.com"
+Cal.com bio: "I build AI agents and automations for growing businesses: they handle enquiries, follow-ups, documents and team updates, so your team can focus on scaling. Book a free discovery call and we'll map the first AI agent for your business. Support: support@sritrilinga.com"
 
 Link in bio: the SuperProfile page, titled **"Get your free workflow →"**.
 
@@ -71,16 +71,16 @@ Rules:
 ## SuperProfile auto-DM
 
 1. Connect Instagram through the official Meta login only (never share the password).
-2. Trigger: comment contains `WORKFLOW` (not case-sensitive), on the reel or on all reels.
+2. Trigger: comment contains `WORKFLOW` (not case-sensitive). Make **one automation per reel**, each sending that reel's own PDF guide.
 3. Condition: **followers only**. Non-followers get: "Follow @vish.workflows first, then comment WORKFLOW again 🙌".
-4. Followers get: "Hey! 👋 Here's how I'd build this workflow for your business: [guide link]. Want a free 15-min call? [booking link]".
+4. Followers get: "Hey! 👋 Here's how I'd build this workflow for your business: [guide link]. Want a free discovery call? https://cal.com/vishworkflows/discovery".
 5. Test from a second account (as a follower and as a non-follower) before every new post.
 6. On a new account, ramp up slowly: about 50–100 DMs a day at first.
 
 ## Posting
 
 - **Best slot (South Asia base, global audience):** **7:30–8:30 PM IST, ideally 8:00 PM.** That is evening in India, early evening in the UAE, afternoon in the UK and morning on the US East Coast. Remember the US and UK daylight-saving changes: check the offsets each season.
-- **Cadence:** about 3 reels a week (for example Mon, Wed and Fri at 8 PM IST). After 2–3 weeks, follow Insights → Most active times.
+- **Cadence:** one reel a day with the daily run, always in the same slot. Daily is fine while quality holds; if a day's concept is weak, skip the day rather than post filler. After 2–3 weeks, follow Insights → Most active times and record the better slot in the content log.
 - **Each post:** cover = the hook frame; pin a comment ("Comment WORKFLOW to get this built for your business 👇"); share to Story; reply to every comment in the first 60 minutes.
 - **Highlights:** "Start here", "Workflows", and later "Clients" (real results only).
 
