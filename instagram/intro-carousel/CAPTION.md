@@ -1,14 +1,16 @@
 # Intro carousel: caption and posting
 
-**When:** Wednesday 28 October 2026, 7:30 PM IST (Dubai 6:00 PM · London 2:00 PM · New York 10:00 AM).
-If the SuperProfile WORKFLOW automation isn't live and tested by then, post Thursday at 8:00 PM IST instead.
+**When:** posted on Wednesday 28 October 2026, around 6:15 PM IST, before the scheduled reels.
 
-**Order of the first posts:**
-1. This carousel
-2. "Four everyday tasks. One AI agent." reel, the next day at 8:00 PM IST
-3. "4 boring tasks" reel, the day after, at 8:00 PM IST
+**Schedule:**
+| Day | Post | Time (IST) |
+| --- | --- | --- |
+| Wed 28 Oct | Intro carousel | now (~6:15 PM) |
+| Wed 28 Oct | "4 boring tasks" reel (scheduled) | 8:00 PM |
+| Thu 29 Oct | Real-estate reel (scheduled) | 8:00 PM |
+| Fri 30 Oct | "Four everyday tasks. One AI agent." reel | 8:00 PM |
 
-Pin all three.
+Pin the carousel and the two best reels.
 
 **Format:** upload `vish-intro-1.png` … `vish-intro-5.png` in order, at 4:5 (1080 × 1350). Choose "Original" in the crop step, so nothing gets cut.
 
