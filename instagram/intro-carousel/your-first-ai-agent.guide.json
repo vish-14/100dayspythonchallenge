@@ -1,0 +1,192 @@
+{
+  "title": "Your First AI Agent",
+  "kicker": "The guide from my intro post · @vish.workflows",
+  "subtitle": "One AI agent, connected to your inbox, CRM, documents and team chat, handling four everyday tasks, with a person approving what matters.",
+  "overview": {
+    "heading": "What one AI agent can handle",
+    "intro": "These are four capabilities of the same agent, not steps in a fixed order. It works through the tools you already use, so you can start with the one task that costs you the most time.",
+    "columns": [
+      "Capability",
+      "Starts when",
+      "You approve"
+    ],
+    "rows": [
+      [
+        "Capture enquiries",
+        "A new message arrives from your website, email, Instagram or WhatsApp.",
+        "Each reply, before it goes out."
+      ],
+      [
+        "Follow up on time",
+        "A lead or quote has gone quiet for the number of days you set.",
+        "The message templates, once, in advance."
+      ],
+      [
+        "Process documents",
+        "An invoice, purchase order or contract arrives.",
+        "Anything that is paid or signed."
+      ],
+      [
+        "Keep teams updated",
+        "A task or order changes status.",
+        "Who receives which updates."
+      ]
+    ]
+  },
+  "rules": {
+    "label": "How it stays in your control",
+    "heading": "It runs on your rules",
+    "items": [
+      {
+        "title": "Connected tools",
+        "text": "It works inside the inbox, CRM and apps you already use, so nothing is typed twice."
+      },
+      {
+        "title": "Clear rules",
+        "text": "You decide when it acts, what it does and when it stops."
+      },
+      {
+        "title": "Human approval",
+        "text": "Replies, payments and anything unusual wait for a person. Every step is logged."
+      }
+    ]
+  },
+  "workflows": [
+    {
+      "name": "Capture enquiries",
+      "goal": "Every enquiry is recorded and answered quickly, in your tone, without anyone copying details by hand.",
+      "trigger": "A new message from your website form, email inbox, Instagram DM or WhatsApp Business.",
+      "steps": [
+        "Read the message and pull out the name, contact details and request.",
+        "Create or update the contact in your CRM and tag where it came from.",
+        "Draft a reply in your tone, using your price list or FAQ.",
+        "Send the draft to you, and send it to the customer only after you approve."
+      ],
+      "tools": [
+        [
+          "Automation",
+          "Make, Zapier or n8n"
+        ],
+        [
+          "CRM",
+          "HubSpot, Zoho CRM, Pipedrive or a Google Sheet"
+        ],
+        [
+          "Email and AI",
+          "Gmail or Outlook, with ChatGPT or Claude"
+        ]
+      ],
+      "approval": "every reply stays a draft until you approve it. Nothing reaches a customer without you.",
+      "label": "Capability 01"
+    },
+    {
+      "name": "Follow up on time",
+      "goal": "No lead or quote is forgotten, and follow-ups go out on a rhythm you choose.",
+      "trigger": "A lead hasn’t replied, or a quote is still open, after the days you set (for example day 1, 3 and 7).",
+      "steps": [
+        "Check the CRM each morning for leads that are due.",
+        "Remind you, or whoever owns the lead, with the context in one message.",
+        "Send a follow-up from your pre-approved templates.",
+        "Mark the lead “needs attention” if there is still no reply after the last step."
+      ],
+      "tools": [
+        [
+          "Sequences",
+          "your CRM’s built-in follow-ups, or Make, Zapier or n8n"
+        ],
+        [
+          "Channels",
+          "WhatsApp Business or email"
+        ],
+        [
+          "Reminders",
+          "Slack, Microsoft Teams or WhatsApp"
+        ]
+      ],
+      "approval": "only messages you approved in advance go out automatically. Anything unusual comes back to you.",
+      "label": "Capability 02"
+    },
+    {
+      "name": "Process documents",
+      "goal": "Key details are read, checked and filed for you, ready for a person to confirm.",
+      "trigger": "An invoice, purchase order, contract or form arrives by email or lands in a shared folder.",
+      "steps": [
+        "Read the document and extract the key fields: supplier, number, amount and due date.",
+        "Check them against what you expect, such as a matching purchase order.",
+        "Write a short summary and save the fields to your sheet or accounting tool.",
+        "Queue it for a teammate to check before anything is paid or signed."
+      ],
+      "tools": [
+        [
+          "Storage",
+          "Google Drive or OneDrive"
+        ],
+        [
+          "Reading",
+          "ChatGPT or Claude"
+        ],
+        [
+          "Records",
+          "Google Sheets, Excel, Zoho Books, Xero or QuickBooks"
+        ]
+      ],
+      "approval": "the AI prepares and a person checks. Mismatches are flagged, never silently fixed.",
+      "label": "Capability 03"
+    },
+    {
+      "name": "Keep teams updated",
+      "goal": "The right people hear about changes as they happen, so nobody has to chase for an update.",
+      "trigger": "A task or order changes status: started, done, delayed or blocked.",
+      "steps": [
+        "Detect the status change in your task tool or CRM.",
+        "Write a one-line summary of what changed and what happens next.",
+        "Send it only to the people it concerns: sales, operations or finance.",
+        "Post a short daily digest of everything that moved."
+      ],
+      "tools": [
+        [
+          "Tasks",
+          "Trello, Asana, ClickUp or Notion"
+        ],
+        [
+          "Messages",
+          "Slack, Microsoft Teams, WhatsApp groups or email"
+        ],
+        [
+          "Automation",
+          "Make, Zapier or n8n"
+        ]
+      ],
+      "approval": "you decide who hears about what. Sensitive updates can always wait for a person.",
+      "label": "Capability 04"
+    }
+  ],
+  "start": {
+    "label": "Your first steps",
+    "heading": "Start this week",
+    "intro": "Five small steps, no software needed yet. Each one makes the first automation faster to build.",
+    "items": [
+      {
+        "lead": "Map your enquiries.",
+        "text": "Write down where they come in today, and who answers them."
+      },
+      {
+        "lead": "Choose one home for contacts.",
+        "text": "A CRM, or even a single Google Sheet."
+      },
+      {
+        "lead": "Write three reply templates",
+        "text": "you would be happy to send to any new lead."
+      },
+      {
+        "lead": "Set your follow-up rhythm,",
+        "text": "for example day 1, day 3 and day 7."
+      },
+      {
+        "lead": "Pick the task that interrupts you most,",
+        "text": "and automate that one first."
+      }
+    ]
+  },
+  "footer": "Your First AI Agent · Vish | AI Automation · @vish.workflows"
+}
