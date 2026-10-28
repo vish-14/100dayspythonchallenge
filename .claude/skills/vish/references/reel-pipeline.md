@@ -21,7 +21,8 @@ npx hyperframes models install parakeet --json < /dev/null   # word timestamps
 
 # 1. Script: one entry per scene in tools/script.json
 #    {"id","label","say" (what the voice reads; spell C R M etc.),"text" (captions),"speed" (1.0; CTA 1.1)}
-# 2. Voice: Kokoro voice hm_omega, lang en-gb (British phonemes read clearer for Indian listeners than en-us), speed 0.9 (CTA 1.0), one clip per scene, short pauses
+# 2. Voice "Vish warm" (picked by the user from 6 samples, Oct 2026): 50/50 blend of Kokoro hm_omega + hm_psi, lang en-gb,
+#    speed 0.9 (CTA 1.0), pitch −1 semitone (formants kept), clarity EQ + de-ess + compression. All in tools/make_vo.py; keep it identical every day.
 cd tools && python3 make_vo.py && cp voiceover.wav ../assets/audio/voiceover.wav && rm voiceover.wav && cd ..
 # 3. Real word timings from the actual audio
 npx hyperframes transcribe assets/audio/voiceover.wav --engine parakeet --json   # → transcript.json

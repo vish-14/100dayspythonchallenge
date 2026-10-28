@@ -1,46 +1,46 @@
 {
  "fps": 30,
- "vo_duration": 62.156,
+ "vo_duration": 61.536,
  "scenes": [
   {
    "id": "hook",
    "vo_start": 0.25,
-   "vo_end": 5.25
+   "vo_end": 5.186
   },
   {
    "id": "problem",
-   "vo_start": 5.55,
-   "vo_end": 13.566
+   "vo_start": 5.486,
+   "vo_end": 13.375
   },
   {
    "id": "a1",
-   "vo_start": 13.916,
-   "vo_end": 24.926
+   "vo_start": 13.725,
+   "vo_end": 24.724
   },
   {
    "id": "a2",
-   "vo_start": 25.276,
-   "vo_end": 32.152
+   "vo_start": 25.074,
+   "vo_end": 31.872
   },
   {
    "id": "a3",
-   "vo_start": 32.502,
-   "vo_end": 40.15
+   "vo_start": 32.222,
+   "vo_end": 39.812
   },
   {
    "id": "a4",
-   "vo_start": 40.5,
-   "vo_end": 47.142
+   "vo_start": 40.162,
+   "vo_end": 46.768
   },
   {
    "id": "key",
-   "vo_start": 47.542,
-   "vo_end": 54.311
+   "vo_start": 47.168,
+   "vo_end": 53.755
   },
   {
    "id": "cta",
-   "vo_start": 54.811,
-   "vo_end": 62.156
+   "vo_start": 54.255,
+   "vo_end": 61.536
   }
  ],
  "words": [
@@ -54,13 +54,13 @@
    "text": "agents:",
    "scene": "hook",
    "start": 0.72,
-   "end": 1.52
+   "end": 1.44
   },
   {
    "text": "your",
    "scene": "hook",
-   "start": 1.52,
-   "end": 1.68
+   "start": 1.44,
+   "end": 1.6
   },
   {
    "text": "enquiries",
@@ -72,36 +72,36 @@
    "text": "go",
    "scene": "hook",
    "start": 2.56,
-   "end": 2.72
+   "end": 2.8
   },
   {
    "text": "cold",
    "scene": "hook",
-   "start": 2.88,
-   "end": 3.36
+   "start": 2.8,
+   "end": 3.28
   },
   {
    "text": "while",
    "scene": "hook",
    "start": 3.36,
-   "end": 3.68
+   "end": 3.6
   },
   {
    "text": "you're",
    "scene": "hook",
-   "start": 3.68,
+   "start": 3.6,
    "end": 3.92
   },
   {
    "text": "out",
    "scene": "hook",
    "start": 3.92,
-   "end": 4.16
+   "end": 4.08
   },
   {
    "text": "on",
    "scene": "hook",
-   "start": 4.16,
+   "start": 4.08,
    "end": 4.32
   },
   {
@@ -114,769 +114,769 @@
    "text": "visits.",
    "scene": "hook",
    "start": 4.72,
-   "end": 5.44
+   "end": 5.36
   },
   {
    "text": "A",
    "scene": "problem",
-   "start": 5.55,
-   "end": 5.68
+   "start": 5.486,
+   "end": 5.606
   },
   {
    "text": "buyer",
    "scene": "problem",
-   "start": 5.68,
-   "end": 6.16
+   "start": 5.6,
+   "end": 6.08
   },
   {
    "text": "enquires",
    "scene": "problem",
-   "start": 6.16,
-   "end": 6.72
+   "start": 6.08,
+   "end": 6.64
   },
   {
    "text": "at",
    "scene": "problem",
-   "start": 6.72,
-   "end": 6.88
+   "start": 6.64,
+   "end": 6.8
   },
   {
    "text": "9",
    "scene": "problem",
-   "start": 6.88,
-   "end": 7.36
+   "start": 6.8,
+   "end": 7.28
   },
   {
    "text": "PM.",
    "scene": "problem",
-   "start": 7.36,
-   "end": 8.08
+   "start": 7.28,
+   "end": 8
   },
   {
    "text": "You",
    "scene": "problem",
-   "start": 8.32,
-   "end": 8.56
+   "start": 8.16,
+   "end": 8.4
   },
   {
    "text": "reply",
    "scene": "problem",
-   "start": 8.56,
-   "end": 9.04
+   "start": 8.4,
+   "end": 8.88
   },
   {
    "text": "the",
    "scene": "problem",
-   "start": 9.04,
-   "end": 9.2
+   "start": 8.88,
+   "end": 9.04
   },
   {
    "text": "next",
    "scene": "problem",
-   "start": 9.2,
-   "end": 9.52
+   "start": 9.04,
+   "end": 9.36
   },
   {
    "text": "morning.",
    "scene": "problem",
-   "start": 9.52,
-   "end": 10.24
+   "start": 9.36,
+   "end": 10
   },
   {
    "text": "By",
    "scene": "problem",
-   "start": 10.24,
-   "end": 10.48
+   "start": 10,
+   "end": 10.32
   },
   {
    "text": "then,",
    "scene": "problem",
-   "start": 10.48,
-   "end": 11.12
+   "start": 10.32,
+   "end": 10.88
   },
   {
    "text": "another",
    "scene": "problem",
-   "start": 11.12,
-   "end": 11.6
+   "start": 10.88,
+   "end": 11.36
   },
   {
    "text": "broker",
    "scene": "problem",
-   "start": 11.6,
-   "end": 12.16
+   "start": 11.36,
+   "end": 11.92
   },
   {
    "text": "is",
    "scene": "problem",
-   "start": 12.16,
-   "end": 12.32
+   "start": 11.92,
+   "end": 12.16
   },
   {
    "text": "already",
    "scene": "problem",
-   "start": 12.32,
-   "end": 12.8
+   "start": 12.16,
+   "end": 12.56
   },
   {
    "text": "talking",
    "scene": "problem",
-   "start": 12.8,
-   "end": 13.2
+   "start": 12.56,
+   "end": 12.96
   },
   {
    "text": "to",
    "scene": "problem",
-   "start": 13.2,
-   "end": 13.36
+   "start": 12.96,
+   "end": 13.2
   },
   {
    "text": "them.",
    "scene": "problem",
-   "start": 13.36,
+   "start": 13.2,
    "end": 13.68
   },
   {
    "text": "One:",
    "scene": "a1",
-   "start": 13.92,
-   "end": 14.32
+   "start": 13.725,
+   "end": 14.08
   },
   {
    "text": "reply",
    "scene": "a1",
-   "start": 14.48,
-   "end": 15.12
+   "start": 14.24,
+   "end": 14.88
   },
   {
    "text": "instantly.",
    "scene": "a1",
-   "start": 15.12,
-   "end": 16.08
+   "start": 14.88,
+   "end": 15.84
   },
   {
    "text": "Every",
    "scene": "a1",
-   "start": 16.08,
-   "end": 16.56
+   "start": 15.84,
+   "end": 16.24
   },
   {
    "text": "enquiry,",
    "scene": "a1",
-   "start": 16.56,
-   "end": 17.28
+   "start": 16.24,
+   "end": 16.88
   },
   {
    "text": "from",
    "scene": "a1",
-   "start": 17.28,
-   "end": 17.52
+   "start": 17.04,
+   "end": 17.28
   },
   {
    "text": "property",
    "scene": "a1",
-   "start": 17.52,
-   "end": 18.08
+   "start": 17.28,
+   "end": 17.84
   },
   {
    "text": "portals",
    "scene": "a1",
-   "start": 18.08,
-   "end": 18.48
+   "start": 17.84,
+   "end": 18.32
   },
   {
    "text": "or",
    "scene": "a1",
-   "start": 18.56,
-   "end": 18.72
+   "start": 18.32,
+   "end": 18.48
   },
   {
    "text": "WhatsApp,",
    "scene": "a1",
-   "start": 18.72,
-   "end": 19.44
+   "start": 18.48,
+   "end": 19.2
   },
   {
    "text": "lands",
    "scene": "a1",
-   "start": 19.68,
-   "end": 20.16
+   "start": 19.44,
+   "end": 19.92
   },
   {
    "text": "in",
    "scene": "a1",
-   "start": 20.16,
-   "end": 20.32
+   "start": 19.92,
+   "end": 20.08
   },
   {
    "text": "your",
    "scene": "a1",
-   "start": 20.32,
-   "end": 20.56
+   "start": 20.08,
+   "end": 20.32
   },
   {
    "text": "CRM,",
    "scene": "a1",
-   "start": 20.56,
-   "end": 21.52
+   "start": 20.32,
+   "end": 21.28
   },
   {
    "text": "and",
    "scene": "a1",
-   "start": 21.76,
-   "end": 22
+   "start": 21.44,
+   "end": 21.76
   },
   {
    "text": "AI",
    "scene": "a1",
-   "start": 22,
-   "end": 22.64
+   "start": 21.76,
+   "end": 22.32
   },
   {
    "text": "replies",
    "scene": "a1",
-   "start": 22.64,
-   "end": 23.28
+   "start": 22.32,
+   "end": 22.96
   },
   {
    "text": "right",
    "scene": "a1",
-   "start": 23.28,
-   "end": 23.52
+   "start": 22.96,
+   "end": 23.28
   },
   {
    "text": "away,",
    "scene": "a1",
-   "start": 23.52,
-   "end": 24
+   "start": 23.28,
+   "end": 23.68
   },
   {
    "text": "in",
    "scene": "a1",
-   "start": 24,
-   "end": 24.24
+   "start": 23.84,
+   "end": 24.08
   },
   {
    "text": "your",
    "scene": "a1",
-   "start": 24.24,
-   "end": 24.48
+   "start": 24.08,
+   "end": 24.32
   },
   {
    "text": "style.",
    "scene": "a1",
-   "start": 24.48,
-   "end": 25.12
+   "start": 24.32,
+   "end": 24.96
   },
   {
    "text": "Two:",
    "scene": "a2",
-   "start": 25.276,
-   "end": 25.6
+   "start": 25.074,
+   "end": 25.44
   },
   {
    "text": "qualify.",
    "scene": "a2",
-   "start": 25.6,
-   "end": 26.56
+   "start": 25.44,
+   "end": 26.32
   },
   {
    "text": "AI",
    "scene": "a2",
-   "start": 26.56,
-   "end": 27.2
+   "start": 26.32,
+   "end": 26.96
   },
   {
    "text": "asks",
    "scene": "a2",
-   "start": 27.2,
-   "end": 27.68
+   "start": 26.96,
+   "end": 27.44
   },
   {
    "text": "about",
    "scene": "a2",
-   "start": 27.68,
-   "end": 27.92
+   "start": 27.44,
+   "end": 27.68
   },
   {
    "text": "budget,",
    "scene": "a2",
-   "start": 27.92,
-   "end": 28.64
+   "start": 27.68,
+   "end": 28.4
   },
   {
    "text": "location,",
    "scene": "a2",
-   "start": 28.64,
-   "end": 29.52
+   "start": 28.4,
+   "end": 29.28
   },
   {
    "text": "timeline,",
    "scene": "a2",
-   "start": 29.52,
-   "end": 30.4
+   "start": 29.28,
+   "end": 30.16
   },
   {
    "text": "and",
    "scene": "a2",
-   "start": 30.4,
-   "end": 30.56
+   "start": 30.16,
+   "end": 30.32
   },
   {
    "text": "if",
    "scene": "a2",
-   "start": 30.56,
-   "end": 30.8
+   "start": 30.32,
+   "end": 30.56
   },
   {
    "text": "they",
    "scene": "a2",
-   "start": 30.8,
-   "end": 30.96
+   "start": 30.56,
+   "end": 30.72
   },
   {
    "text": "need",
    "scene": "a2",
-   "start": 30.96,
-   "end": 31.2
+   "start": 30.72,
+   "end": 30.96
   },
   {
    "text": "a",
    "scene": "a2",
-   "start": 31.2,
-   "end": 31.28
+   "start": 30.96,
+   "end": 31.04
   },
   {
    "text": "home",
    "scene": "a2",
-   "start": 31.28,
-   "end": 31.68
+   "start": 31.04,
+   "end": 31.44
   },
   {
    "text": "loan.",
    "scene": "a2",
-   "start": 31.68,
-   "end": 32.4
+   "start": 31.44,
+   "end": 32.08
   },
   {
    "text": "Three:",
    "scene": "a3",
-   "start": 32.502,
-   "end": 32.96
+   "start": 32.222,
+   "end": 32.72
   },
   {
    "text": "route",
    "scene": "a3",
-   "start": 32.96,
-   "end": 33.36
+   "start": 32.72,
+   "end": 33.12
   },
   {
    "text": "and",
    "scene": "a3",
-   "start": 33.36,
-   "end": 33.6
+   "start": 33.12,
+   "end": 33.36
   },
   {
    "text": "book.",
    "scene": "a3",
-   "start": 33.6,
-   "end": 34.24
+   "start": 33.36,
+   "end": 34
   },
   {
    "text": "Serious",
    "scene": "a3",
-   "start": 34.24,
-   "end": 34.8
+   "start": 34,
+   "end": 34.48
   },
   {
    "text": "buyers",
    "scene": "a3",
-   "start": 34.8,
-   "end": 35.36
+   "start": 34.48,
+   "end": 35.04
   },
   {
    "text": "alert",
    "scene": "a3",
-   "start": 35.36,
-   "end": 35.76
+   "start": 35.04,
+   "end": 35.44
   },
   {
    "text": "you",
    "scene": "a3",
-   "start": 35.76,
-   "end": 35.92
+   "start": 35.44,
+   "end": 35.6
   },
   {
    "text": "on",
    "scene": "a3",
-   "start": 35.92,
-   "end": 36.08
+   "start": 35.6,
+   "end": 35.76
   },
   {
    "text": "WhatsApp.",
    "scene": "a3",
-   "start": 36.08,
-   "end": 36.88
+   "start": 35.76,
+   "end": 36.56
   },
   {
    "text": "You",
    "scene": "a3",
-   "start": 36.88,
-   "end": 37.12
+   "start": 36.56,
+   "end": 36.8
   },
   {
    "text": "approve,",
    "scene": "a3",
-   "start": 37.12,
-   "end": 37.68
+   "start": 36.8,
+   "end": 37.44
   },
   {
    "text": "and",
    "scene": "a3",
-   "start": 37.76,
-   "end": 38
+   "start": 37.44,
+   "end": 37.6
   },
   {
    "text": "the",
    "scene": "a3",
-   "start": 38,
-   "end": 38.16
+   "start": 37.6,
+   "end": 37.76
   },
   {
    "text": "site",
    "scene": "a3",
-   "start": 38.16,
-   "end": 38.56
+   "start": 37.76,
+   "end": 38.16
   },
   {
    "text": "visit",
    "scene": "a3",
-   "start": 38.56,
-   "end": 38.96
+   "start": 38.16,
+   "end": 38.64
   },
   {
    "text": "lands",
    "scene": "a3",
-   "start": 38.96,
-   "end": 39.36
+   "start": 38.64,
+   "end": 38.96
   },
   {
    "text": "in",
    "scene": "a3",
-   "start": 39.36,
-   "end": 39.44
+   "start": 38.96,
+   "end": 39.12
   },
   {
    "text": "your",
    "scene": "a3",
-   "start": 39.44,
-   "end": 39.6
+   "start": 39.12,
+   "end": 39.28
   },
   {
    "text": "calendar.",
    "scene": "a3",
-   "start": 39.6,
-   "end": 40.4
+   "start": 39.28,
+   "end": 40.08
   },
   {
    "text": "Four:",
    "scene": "a4",
-   "start": 40.5,
-   "end": 40.8
+   "start": 40.162,
+   "end": 40.64
   },
   {
    "text": "follow",
    "scene": "a4",
-   "start": 40.96,
-   "end": 41.36
+   "start": 40.64,
+   "end": 41.04
   },
   {
    "text": "up.",
    "scene": "a4",
-   "start": 41.36,
-   "end": 41.84
+   "start": 41.04,
+   "end": 41.52
   },
   {
    "text": "Not",
    "scene": "a4",
-   "start": 41.84,
-   "end": 42
+   "start": 41.52,
+   "end": 41.68
   },
   {
    "text": "ready",
    "scene": "a4",
-   "start": 42.08,
-   "end": 42.48
+   "start": 41.76,
+   "end": 42.08
   },
   {
    "text": "yet?",
    "scene": "a4",
-   "start": 42.48,
-   "end": 43.12
+   "start": 42.08,
+   "end": 42.64
   },
   {
    "text": "Friendly",
    "scene": "a4",
-   "start": 43.12,
-   "end": 43.6
+   "start": 42.64,
+   "end": 43.2
   },
   {
    "text": "check-ins",
    "scene": "a4",
-   "start": 43.6,
-   "end": 44.08
+   "start": 43.2,
+   "end": 43.68
   },
   {
    "text": "and",
    "scene": "a4",
-   "start": 44.32,
-   "end": 44.48
+   "start": 43.84,
+   "end": 44.08
   },
   {
    "text": "new",
    "scene": "a4",
-   "start": 44.48,
-   "end": 44.72
+   "start": 44.08,
+   "end": 44.32
   },
   {
    "text": "matching",
    "scene": "a4",
-   "start": 44.72,
-   "end": 45.36
+   "start": 44.32,
+   "end": 44.88
   },
   {
    "text": "properties",
    "scene": "a4",
-   "start": 45.36,
-   "end": 46
+   "start": 44.88,
+   "end": 45.52
   },
   {
    "text": "keep",
    "scene": "a4",
-   "start": 46,
-   "end": 46.24
+   "start": 45.52,
+   "end": 45.84
   },
   {
    "text": "them",
    "scene": "a4",
-   "start": 46.24,
-   "end": 46.48
+   "start": 45.84,
+   "end": 46.08
   },
   {
    "text": "interested.",
    "scene": "a4",
-   "start": 46.48,
-   "end": 47.36
+   "start": 46.08,
+   "end": 47.04
   },
   {
    "text": "The",
    "scene": "key",
-   "start": 47.542,
-   "end": 47.662
+   "start": 47.168,
+   "end": 47.288
   },
   {
    "text": "key?",
    "scene": "key",
-   "start": 47.6,
-   "end": 48.24
+   "start": 47.28,
+   "end": 47.84
   },
   {
    "text": "Portals,",
    "scene": "key",
-   "start": 48.24,
-   "end": 48.96
+   "start": 47.84,
+   "end": 48.72
   },
   {
    "text": "CRM",
    "scene": "key",
-   "start": 49.12,
-   "end": 50
+   "start": 48.72,
+   "end": 49.52
   },
   {
    "text": "and",
    "scene": "key",
-   "start": 50.08,
-   "end": 50.24
+   "start": 49.6,
+   "end": 49.76
   },
   {
    "text": "calendar",
    "scene": "key",
-   "start": 50.24,
-   "end": 50.8
+   "start": 49.76,
+   "end": 50.32
   },
   {
    "text": "connected,",
    "scene": "key",
-   "start": 50.8,
-   "end": 51.52
+   "start": 50.32,
+   "end": 51.04
   },
   {
    "text": "clear",
    "scene": "key",
-   "start": 51.52,
-   "end": 52
+   "start": 51.04,
+   "end": 51.44
   },
   {
    "text": "rules,",
    "scene": "key",
-   "start": 52,
-   "end": 52.56
+   "start": 51.44,
+   "end": 52
   },
   {
    "text": "and",
    "scene": "key",
-   "start": 52.56,
-   "end": 52.8
+   "start": 52,
+   "end": 52.24
   },
   {
    "text": "you",
    "scene": "key",
-   "start": 52.8,
-   "end": 53.04
+   "start": 52.24,
+   "end": 52.4
   },
   {
    "text": "approving",
    "scene": "key",
-   "start": 53.04,
-   "end": 53.6
+   "start": 52.56,
+   "end": 53.04
   },
   {
    "text": "what",
    "scene": "key",
-   "start": 53.6,
-   "end": 53.84
+   "start": 53.04,
+   "end": 53.28
   },
   {
    "text": "matters.",
    "scene": "key",
-   "start": 53.84,
-   "end": 54.64
+   "start": 53.28,
+   "end": 54.08
   },
   {
    "text": "Want",
    "scene": "cta",
-   "start": 54.811,
-   "end": 55.04
+   "start": 54.255,
+   "end": 54.48
   },
   {
    "text": "this",
    "scene": "cta",
-   "start": 55.04,
-   "end": 55.28
+   "start": 54.48,
+   "end": 54.72
   },
   {
    "text": "workflow",
    "scene": "cta",
-   "start": 55.28,
-   "end": 55.84
+   "start": 54.72,
+   "end": 55.28
   },
   {
    "text": "built",
    "scene": "cta",
-   "start": 55.84,
-   "end": 56.16
+   "start": 55.28,
+   "end": 55.6
   },
   {
    "text": "for",
    "scene": "cta",
-   "start": 56.16,
-   "end": 56.32
+   "start": 55.6,
+   "end": 55.76
   },
   {
    "text": "your",
    "scene": "cta",
-   "start": 56.32,
-   "end": 56.48
+   "start": 55.76,
+   "end": 55.92
   },
   {
    "text": "business?",
    "scene": "cta",
-   "start": 56.48,
-   "end": 57.04
+   "start": 55.92,
+   "end": 56.48
   },
   {
    "text": "Follow",
    "scene": "cta",
-   "start": 57.15,
-   "end": 57.63
+   "start": 56.65,
+   "end": 57.13
   },
   {
    "text": "me",
    "scene": "cta",
-   "start": 57.63,
-   "end": 57.79
+   "start": 57.13,
+   "end": 57.29
   },
   {
    "text": "and",
    "scene": "cta",
-   "start": 57.79,
-   "end": 58.03
+   "start": 57.29,
+   "end": 57.53
   },
   {
    "text": "comment",
    "scene": "cta",
-   "start": 58.03,
-   "end": 58.51
+   "start": 57.53,
+   "end": 58.01
   },
   {
    "text": "\"workflow\",",
    "scene": "cta",
-   "start": 58.75,
-   "end": 59.47
+   "start": 58.17,
+   "end": 58.89
   },
   {
    "text": "and",
    "scene": "cta",
-   "start": 59.55,
-   "end": 59.71
+   "start": 58.97,
+   "end": 59.13
   },
   {
    "text": "I'll",
    "scene": "cta",
-   "start": 59.71,
-   "end": 60.03
+   "start": 59.13,
+   "end": 59.45
   },
   {
    "text": "send",
    "scene": "cta",
-   "start": 60.03,
-   "end": 60.27
+   "start": 59.45,
+   "end": 59.69
   },
   {
    "text": "you",
    "scene": "cta",
-   "start": 60.27,
-   "end": 60.43
+   "start": 59.69,
+   "end": 59.85
   },
   {
    "text": "the",
    "scene": "cta",
-   "start": 60.43,
-   "end": 60.59
+   "start": 59.85,
+   "end": 59.93
   },
   {
    "text": "details",
    "scene": "cta",
-   "start": 60.59,
-   "end": 60.99
+   "start": 59.93,
+   "end": 60.41
   },
   {
    "text": "in",
    "scene": "cta",
-   "start": 60.99,
-   "end": 61.15
+   "start": 60.41,
+   "end": 60.57
   },
   {
    "text": "your",
    "scene": "cta",
-   "start": 61.15,
-   "end": 61.39
+   "start": 60.57,
+   "end": 60.73
   },
   {
    "text": "DMs.",
    "scene": "cta",
-   "start": 61.39,
-   "end": 62.11
+   "start": 60.73,
+   "end": 61.53
   }
  ],
  "captions": [
@@ -884,7 +884,7 @@
    "id": "cap00",
    "scene": "hook",
    "start": 0.19,
-   "end": 1.52,
+   "end": 1.44,
    "words": [
     {
      "text": "Property",
@@ -895,7 +895,7 @@
     {
      "text": "agents:",
      "start": 0.72,
-     "end": 1.52,
+     "end": 1.44,
      "key": false
     }
    ]
@@ -903,13 +903,13 @@
   {
    "id": "cap01",
    "scene": "hook",
-   "start": 1.53,
-   "end": 2.82,
+   "start": 1.45,
+   "end": 3.6,
    "words": [
     {
      "text": "your",
-     "start": 1.52,
-     "end": 1.68,
+     "start": 1.44,
+     "end": 1.6,
      "key": false
     },
     {
@@ -921,7 +921,19 @@
     {
      "text": "go",
      "start": 2.56,
-     "end": 2.72,
+     "end": 2.8,
+     "key": false
+    },
+    {
+     "text": "cold",
+     "start": 2.8,
+     "end": 3.28,
+     "key": true
+    },
+    {
+     "text": "while",
+     "start": 3.36,
+     "end": 3.6,
      "key": false
     }
    ]
@@ -929,47 +941,27 @@
   {
    "id": "cap02",
    "scene": "hook",
-   "start": 2.82,
-   "end": 4.32,
+   "start": 3.61,
+   "end": 5.426,
    "words": [
     {
-     "text": "cold",
-     "start": 2.88,
-     "end": 3.36,
-     "key": true
-    },
-    {
-     "text": "while",
-     "start": 3.36,
-     "end": 3.68,
-     "key": false
-    },
-    {
      "text": "you're",
-     "start": 3.68,
+     "start": 3.6,
      "end": 3.92,
      "key": false
     },
     {
      "text": "out",
      "start": 3.92,
-     "end": 4.16,
+     "end": 4.08,
      "key": false
     },
     {
      "text": "on",
-     "start": 4.16,
+     "start": 4.08,
      "end": 4.32,
      "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap03",
-   "scene": "hook",
-   "start": 4.33,
-   "end": 5.49,
-   "words": [
+    },
     {
      "text": "site",
      "start": 4.32,
@@ -979,45 +971,59 @@
     {
      "text": "visits.",
      "start": 4.72,
-     "end": 5.44,
+     "end": 5.36,
      "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap03",
+   "scene": "problem",
+   "start": 5.426,
+   "end": 7.28,
+   "words": [
+    {
+     "text": "A",
+     "start": 5.486,
+     "end": 5.606,
+     "key": false
+    },
+    {
+     "text": "buyer",
+     "start": 5.6,
+     "end": 6.08,
+     "key": false
+    },
+    {
+     "text": "enquires",
+     "start": 6.08,
+     "end": 6.64,
+     "key": false
+    },
+    {
+     "text": "at",
+     "start": 6.64,
+     "end": 6.8,
+     "key": false
+    },
+    {
+     "text": "9",
+     "start": 6.8,
+     "end": 7.28,
+     "key": true
     }
    ]
   },
   {
    "id": "cap04",
    "scene": "problem",
-   "start": 5.49,
-   "end": 7.36,
+   "start": 7.29,
+   "end": 8.1,
    "words": [
     {
-     "text": "A",
-     "start": 5.55,
-     "end": 5.68,
-     "key": false
-    },
-    {
-     "text": "buyer",
-     "start": 5.68,
-     "end": 6.16,
-     "key": false
-    },
-    {
-     "text": "enquires",
-     "start": 6.16,
-     "end": 6.72,
-     "key": false
-    },
-    {
-     "text": "at",
-     "start": 6.72,
-     "end": 6.88,
-     "key": false
-    },
-    {
-     "text": "9",
-     "start": 6.88,
-     "end": 7.36,
+     "text": "PM.",
+     "start": 7.28,
+     "end": 8,
      "key": true
     }
    ]
@@ -1025,51 +1031,57 @@
   {
    "id": "cap05",
    "scene": "problem",
-   "start": 7.37,
-   "end": 8.26,
+   "start": 8.1,
+   "end": 10,
    "words": [
     {
-     "text": "PM.",
-     "start": 7.36,
-     "end": 8.08,
-     "key": true
+     "text": "You",
+     "start": 8.16,
+     "end": 8.4,
+     "key": false
+    },
+    {
+     "text": "reply",
+     "start": 8.4,
+     "end": 8.88,
+     "key": false
+    },
+    {
+     "text": "the",
+     "start": 8.88,
+     "end": 9.04,
+     "key": false
+    },
+    {
+     "text": "next",
+     "start": 9.04,
+     "end": 9.36,
+     "key": false
+    },
+    {
+     "text": "morning.",
+     "start": 9.36,
+     "end": 10,
+     "key": false
     }
    ]
   },
   {
    "id": "cap06",
    "scene": "problem",
-   "start": 8.26,
-   "end": 10.24,
+   "start": 10.01,
+   "end": 10.88,
    "words": [
     {
-     "text": "You",
-     "start": 8.32,
-     "end": 8.56,
+     "text": "By",
+     "start": 10,
+     "end": 10.32,
      "key": false
     },
     {
-     "text": "reply",
-     "start": 8.56,
-     "end": 9.04,
-     "key": false
-    },
-    {
-     "text": "the",
-     "start": 9.04,
-     "end": 9.2,
-     "key": false
-    },
-    {
-     "text": "next",
-     "start": 9.2,
-     "end": 9.52,
-     "key": false
-    },
-    {
-     "text": "morning.",
-     "start": 9.52,
-     "end": 10.24,
+     "text": "then,",
+     "start": 10.32,
+     "end": 10.88,
      "key": false
     }
    ]
@@ -1077,19 +1089,37 @@
   {
    "id": "cap07",
    "scene": "problem",
-   "start": 10.25,
-   "end": 11.12,
+   "start": 10.89,
+   "end": 12.96,
    "words": [
     {
-     "text": "By",
-     "start": 10.24,
-     "end": 10.48,
+     "text": "another",
+     "start": 10.88,
+     "end": 11.36,
+     "key": true
+    },
+    {
+     "text": "broker",
+     "start": 11.36,
+     "end": 11.92,
      "key": false
     },
     {
-     "text": "then,",
-     "start": 10.48,
-     "end": 11.12,
+     "text": "is",
+     "start": 11.92,
+     "end": 12.16,
+     "key": false
+    },
+    {
+     "text": "already",
+     "start": 12.16,
+     "end": 12.56,
+     "key": false
+    },
+    {
+     "text": "talking",
+     "start": 12.56,
+     "end": 12.96,
      "key": false
     }
    ]
@@ -1097,57 +1127,33 @@
   {
    "id": "cap08",
    "scene": "problem",
-   "start": 11.13,
-   "end": 13.2,
+   "start": 12.97,
+   "end": 13.68,
    "words": [
     {
-     "text": "another",
-     "start": 11.12,
-     "end": 11.6,
-     "key": true
-    },
-    {
-     "text": "broker",
-     "start": 11.6,
-     "end": 12.16,
-     "key": false
-    },
-    {
-     "text": "is",
-     "start": 12.16,
-     "end": 12.32,
-     "key": false
-    },
-    {
-     "text": "already",
-     "start": 12.32,
-     "end": 12.8,
-     "key": false
-    },
-    {
-     "text": "talking",
-     "start": 12.8,
+     "text": "to",
+     "start": 12.96,
      "end": 13.2,
+     "key": false
+    },
+    {
+     "text": "them.",
+     "start": 13.2,
+     "end": 13.68,
      "key": false
     }
    ]
   },
   {
    "id": "cap09",
-   "scene": "problem",
-   "start": 13.21,
-   "end": 13.86,
+   "scene": "a1",
+   "start": 13.69,
+   "end": 14.18,
    "words": [
     {
-     "text": "to",
-     "start": 13.2,
-     "end": 13.36,
-     "key": false
-    },
-    {
-     "text": "them.",
-     "start": 13.36,
-     "end": 13.68,
+     "text": "One:",
+     "start": 13.725,
+     "end": 14.08,
      "key": false
     }
    ]
@@ -1155,91 +1161,109 @@
   {
    "id": "cap10",
    "scene": "a1",
-   "start": 13.86,
-   "end": 14.42,
+   "start": 14.18,
+   "end": 15.84,
    "words": [
     {
-     "text": "One:",
-     "start": 13.92,
-     "end": 14.32,
+     "text": "reply",
+     "start": 14.24,
+     "end": 14.88,
      "key": false
+    },
+    {
+     "text": "instantly.",
+     "start": 14.88,
+     "end": 15.84,
+     "key": true
     }
    ]
   },
   {
    "id": "cap11",
    "scene": "a1",
-   "start": 14.42,
-   "end": 16.08,
+   "start": 15.85,
+   "end": 16.98,
    "words": [
     {
-     "text": "reply",
-     "start": 14.48,
-     "end": 15.12,
+     "text": "Every",
+     "start": 15.84,
+     "end": 16.24,
      "key": false
     },
     {
-     "text": "instantly.",
-     "start": 15.12,
-     "end": 16.08,
-     "key": true
+     "text": "enquiry,",
+     "start": 16.24,
+     "end": 16.88,
+     "key": false
     }
    ]
   },
   {
    "id": "cap12",
    "scene": "a1",
-   "start": 16.09,
-   "end": 17.28,
+   "start": 16.98,
+   "end": 19.38,
    "words": [
     {
-     "text": "Every",
-     "start": 16.08,
-     "end": 16.56,
+     "text": "from",
+     "start": 17.04,
+     "end": 17.28,
      "key": false
     },
     {
-     "text": "enquiry,",
-     "start": 16.56,
-     "end": 17.28,
+     "text": "property",
+     "start": 17.28,
+     "end": 17.84,
      "key": false
+    },
+    {
+     "text": "portals",
+     "start": 17.84,
+     "end": 18.32,
+     "key": false
+    },
+    {
+     "text": "or",
+     "start": 18.32,
+     "end": 18.48,
+     "key": false
+    },
+    {
+     "text": "WhatsApp,",
+     "start": 18.48,
+     "end": 19.2,
+     "key": true
     }
    ]
   },
   {
    "id": "cap13",
    "scene": "a1",
-   "start": 17.29,
-   "end": 19.62,
+   "start": 19.38,
+   "end": 21.38,
    "words": [
     {
-     "text": "from",
-     "start": 17.28,
-     "end": 17.52,
+     "text": "lands",
+     "start": 19.44,
+     "end": 19.92,
      "key": false
     },
     {
-     "text": "property",
-     "start": 17.52,
-     "end": 18.08,
+     "text": "in",
+     "start": 19.92,
+     "end": 20.08,
      "key": false
     },
     {
-     "text": "portals",
-     "start": 18.08,
-     "end": 18.48,
+     "text": "your",
+     "start": 20.08,
+     "end": 20.32,
      "key": false
     },
     {
-     "text": "or",
-     "start": 18.56,
-     "end": 18.72,
-     "key": false
-    },
-    {
-     "text": "WhatsApp,",
-     "start": 18.72,
-     "end": 19.44,
+     "text": "CRM,",
+     "start": 20.32,
+     "end": 21.28,
      "key": true
     }
    ]
@@ -1247,95 +1271,77 @@
   {
    "id": "cap14",
    "scene": "a1",
-   "start": 19.62,
-   "end": 21.7,
+   "start": 21.38,
+   "end": 23.78,
    "words": [
     {
-     "text": "lands",
-     "start": 19.68,
-     "end": 20.16,
+     "text": "and",
+     "start": 21.44,
+     "end": 21.76,
      "key": false
     },
     {
-     "text": "in",
-     "start": 20.16,
-     "end": 20.32,
-     "key": false
-    },
-    {
-     "text": "your",
-     "start": 20.32,
-     "end": 20.56,
-     "key": false
-    },
-    {
-     "text": "CRM,",
-     "start": 20.56,
-     "end": 21.52,
+     "text": "AI",
+     "start": 21.76,
+     "end": 22.32,
      "key": true
+    },
+    {
+     "text": "replies",
+     "start": 22.32,
+     "end": 22.96,
+     "key": false
+    },
+    {
+     "text": "right",
+     "start": 22.96,
+     "end": 23.28,
+     "key": false
+    },
+    {
+     "text": "away,",
+     "start": 23.28,
+     "end": 23.68,
+     "key": false
     }
    ]
   },
   {
    "id": "cap15",
    "scene": "a1",
-   "start": 21.7,
-   "end": 24,
+   "start": 23.78,
+   "end": 25.014,
    "words": [
     {
-     "text": "and",
-     "start": 21.76,
-     "end": 22,
+     "text": "in",
+     "start": 23.84,
+     "end": 24.08,
      "key": false
     },
     {
-     "text": "AI",
-     "start": 22,
-     "end": 22.64,
-     "key": true
-    },
-    {
-     "text": "replies",
-     "start": 22.64,
-     "end": 23.28,
+     "text": "your",
+     "start": 24.08,
+     "end": 24.32,
      "key": false
     },
     {
-     "text": "right",
-     "start": 23.28,
-     "end": 23.52,
-     "key": false
-    },
-    {
-     "text": "away,",
-     "start": 23.52,
-     "end": 24,
+     "text": "style.",
+     "start": 24.32,
+     "end": 24.96,
      "key": false
     }
    ]
   },
   {
    "id": "cap16",
-   "scene": "a1",
-   "start": 24.01,
-   "end": 25.216,
+   "scene": "a2",
+   "start": 25.014,
+   "end": 25.44,
    "words": [
     {
-     "text": "in",
-     "start": 24,
-     "end": 24.24,
-     "key": false
-    },
-    {
-     "text": "your",
-     "start": 24.24,
-     "end": 24.48,
-     "key": false
-    },
-    {
-     "text": "style.",
-     "start": 24.48,
-     "end": 25.12,
+     "text": "Two:",
+     "start": 25.074,
+     "end": 25.44,
      "key": false
     }
    ]
@@ -1343,59 +1349,65 @@
   {
    "id": "cap17",
    "scene": "a2",
-   "start": 25.216,
-   "end": 25.6,
+   "start": 25.45,
+   "end": 26.32,
    "words": [
     {
-     "text": "Two:",
-     "start": 25.276,
-     "end": 25.6,
-     "key": false
+     "text": "qualify.",
+     "start": 25.44,
+     "end": 26.32,
+     "key": true
     }
    ]
   },
   {
    "id": "cap18",
    "scene": "a2",
-   "start": 25.61,
-   "end": 26.56,
+   "start": 26.33,
+   "end": 28.4,
    "words": [
     {
-     "text": "qualify.",
-     "start": 25.6,
-     "end": 26.56,
+     "text": "AI",
+     "start": 26.32,
+     "end": 26.96,
      "key": true
+    },
+    {
+     "text": "asks",
+     "start": 26.96,
+     "end": 27.44,
+     "key": false
+    },
+    {
+     "text": "about",
+     "start": 27.44,
+     "end": 27.68,
+     "key": false
+    },
+    {
+     "text": "budget,",
+     "start": 27.68,
+     "end": 28.4,
+     "key": false
     }
    ]
   },
   {
    "id": "cap19",
    "scene": "a2",
-   "start": 26.57,
-   "end": 28.64,
+   "start": 28.41,
+   "end": 30.16,
    "words": [
     {
-     "text": "AI",
-     "start": 26.56,
-     "end": 27.2,
-     "key": true
-    },
-    {
-     "text": "asks",
-     "start": 27.2,
-     "end": 27.68,
+     "text": "location,",
+     "start": 28.4,
+     "end": 29.28,
      "key": false
     },
     {
-     "text": "about",
-     "start": 27.68,
-     "end": 27.92,
-     "key": false
-    },
-    {
-     "text": "budget,",
-     "start": 27.92,
-     "end": 28.64,
+     "text": "timeline,",
+     "start": 29.28,
+     "end": 30.16,
      "key": false
     }
    ]
@@ -1403,19 +1415,31 @@
   {
    "id": "cap20",
    "scene": "a2",
-   "start": 28.65,
-   "end": 30.4,
+   "start": 30.17,
+   "end": 30.96,
    "words": [
     {
-     "text": "location,",
-     "start": 28.64,
-     "end": 29.52,
+     "text": "and",
+     "start": 30.16,
+     "end": 30.32,
      "key": false
     },
     {
-     "text": "timeline,",
-     "start": 29.52,
-     "end": 30.4,
+     "text": "if",
+     "start": 30.32,
+     "end": 30.56,
+     "key": false
+    },
+    {
+     "text": "they",
+     "start": 30.56,
+     "end": 30.72,
+     "key": false
+    },
+    {
+     "text": "need",
+     "start": 30.72,
+     "end": 30.96,
      "key": false
     }
    ]
@@ -1423,71 +1447,65 @@
   {
    "id": "cap21",
    "scene": "a2",
-   "start": 30.41,
-   "end": 31.2,
+   "start": 30.97,
+   "end": 32.162,
    "words": [
     {
-     "text": "and",
-     "start": 30.4,
-     "end": 30.56,
-     "key": false
-    },
-    {
-     "text": "if",
-     "start": 30.56,
-     "end": 30.8,
-     "key": false
-    },
-    {
-     "text": "they",
-     "start": 30.8,
-     "end": 30.96,
-     "key": false
-    },
-    {
-     "text": "need",
+     "text": "a",
      "start": 30.96,
-     "end": 31.2,
+     "end": 31.04,
      "key": false
+    },
+    {
+     "text": "home",
+     "start": 31.04,
+     "end": 31.44,
+     "key": false
+    },
+    {
+     "text": "loan.",
+     "start": 31.44,
+     "end": 32.08,
+     "key": true
     }
    ]
   },
   {
    "id": "cap22",
-   "scene": "a2",
-   "start": 31.21,
-   "end": 32.442,
+   "scene": "a3",
+   "start": 32.162,
+   "end": 32.72,
    "words": [
     {
-     "text": "a",
-     "start": 31.2,
-     "end": 31.28,
+     "text": "Three:",
+     "start": 32.222,
+     "end": 32.72,
      "key": false
-    },
-    {
-     "text": "home",
-     "start": 31.28,
-     "end": 31.68,
-     "key": false
-    },
-    {
-     "text": "loan.",
-     "start": 31.68,
-     "end": 32.4,
-     "key": true
     }
    ]
   },
   {
    "id": "cap23",
    "scene": "a3",
-   "start": 32.442,
-   "end": 32.96,
+   "start": 32.73,
+   "end": 34,
    "words": [
     {
-     "text": "Three:",
-     "start": 32.502,
-     "end": 32.96,
+     "text": "route",
+     "start": 32.72,
+     "end": 33.12,
+     "key": false
+    },
+    {
+     "text": "and",
+     "start": 33.12,
+     "end": 33.36,
+     "key": false
+    },
+    {
+     "text": "book.",
+     "start": 33.36,
+     "end": 34,
      "key": false
     }
    ]
@@ -1495,25 +1513,37 @@
   {
    "id": "cap24",
    "scene": "a3",
-   "start": 32.97,
-   "end": 34.24,
+   "start": 34.01,
+   "end": 35.76,
    "words": [
     {
-     "text": "route",
-     "start": 32.96,
-     "end": 33.36,
+     "text": "Serious",
+     "start": 34,
+     "end": 34.48,
      "key": false
     },
     {
-     "text": "and",
-     "start": 33.36,
-     "end": 33.6,
+     "text": "buyers",
+     "start": 34.48,
+     "end": 35.04,
      "key": false
     },
     {
-     "text": "book.",
-     "start": 33.6,
-     "end": 34.24,
+     "text": "alert",
+     "start": 35.04,
+     "end": 35.44,
+     "key": false
+    },
+    {
+     "text": "you",
+     "start": 35.44,
+     "end": 35.6,
+     "key": false
+    },
+    {
+     "text": "on",
+     "start": 35.6,
+     "end": 35.76,
      "key": false
     }
    ]
@@ -1521,51 +1551,33 @@
   {
    "id": "cap25",
    "scene": "a3",
-   "start": 34.25,
-   "end": 36.08,
+   "start": 35.77,
+   "end": 36.56,
    "words": [
     {
-     "text": "Serious",
-     "start": 34.24,
-     "end": 34.8,
-     "key": false
-    },
-    {
-     "text": "buyers",
-     "start": 34.8,
-     "end": 35.36,
-     "key": false
-    },
-    {
-     "text": "alert",
-     "start": 35.36,
-     "end": 35.76,
-     "key": false
-    },
-    {
-     "text": "you",
+     "text": "WhatsApp.",
      "start": 35.76,
-     "end": 35.92,
-     "key": false
-    },
-    {
-     "text": "on",
-     "start": 35.92,
-     "end": 36.08,
-     "key": false
+     "end": 36.56,
+     "key": true
     }
    ]
   },
   {
    "id": "cap26",
    "scene": "a3",
-   "start": 36.09,
-   "end": 36.88,
+   "start": 36.57,
+   "end": 37.44,
    "words": [
     {
-     "text": "WhatsApp.",
-     "start": 36.08,
-     "end": 36.88,
+     "text": "You",
+     "start": 36.56,
+     "end": 36.8,
+     "key": false
+    },
+    {
+     "text": "approve,",
+     "start": 36.8,
+     "end": 37.44,
      "key": true
     }
    ]
@@ -1573,97 +1585,97 @@
   {
    "id": "cap27",
    "scene": "a3",
-   "start": 36.89,
-   "end": 37.7,
+   "start": 37.45,
+   "end": 38.96,
    "words": [
     {
-     "text": "You",
-     "start": 36.88,
-     "end": 37.12,
+     "text": "and",
+     "start": 37.44,
+     "end": 37.6,
      "key": false
     },
     {
-     "text": "approve,",
-     "start": 37.12,
-     "end": 37.68,
-     "key": true
+     "text": "the",
+     "start": 37.6,
+     "end": 37.76,
+     "key": false
+    },
+    {
+     "text": "site",
+     "start": 37.76,
+     "end": 38.16,
+     "key": false
+    },
+    {
+     "text": "visit",
+     "start": 38.16,
+     "end": 38.64,
+     "key": false
+    },
+    {
+     "text": "lands",
+     "start": 38.64,
+     "end": 38.96,
+     "key": false
     }
    ]
   },
   {
    "id": "cap28",
    "scene": "a3",
-   "start": 37.7,
-   "end": 39.36,
+   "start": 38.97,
+   "end": 40.102,
    "words": [
     {
-     "text": "and",
-     "start": 37.76,
-     "end": 38,
-     "key": false
-    },
-    {
-     "text": "the",
-     "start": 38,
-     "end": 38.16,
-     "key": false
-    },
-    {
-     "text": "site",
-     "start": 38.16,
-     "end": 38.56,
-     "key": false
-    },
-    {
-     "text": "visit",
-     "start": 38.56,
-     "end": 38.96,
-     "key": false
-    },
-    {
-     "text": "lands",
+     "text": "in",
      "start": 38.96,
-     "end": 39.36,
+     "end": 39.12,
      "key": false
+    },
+    {
+     "text": "your",
+     "start": 39.12,
+     "end": 39.28,
+     "key": false
+    },
+    {
+     "text": "calendar.",
+     "start": 39.28,
+     "end": 40.08,
+     "key": true
     }
    ]
   },
   {
    "id": "cap29",
-   "scene": "a3",
-   "start": 39.37,
-   "end": 40.44,
+   "scene": "a4",
+   "start": 40.102,
+   "end": 40.64,
    "words": [
     {
-     "text": "in",
-     "start": 39.36,
-     "end": 39.44,
+     "text": "Four:",
+     "start": 40.162,
+     "end": 40.64,
      "key": false
-    },
-    {
-     "text": "your",
-     "start": 39.44,
-     "end": 39.6,
-     "key": false
-    },
-    {
-     "text": "calendar.",
-     "start": 39.6,
-     "end": 40.4,
-     "key": true
     }
    ]
   },
   {
    "id": "cap30",
    "scene": "a4",
-   "start": 40.44,
-   "end": 40.9,
+   "start": 40.65,
+   "end": 41.52,
    "words": [
     {
-     "text": "Four:",
-     "start": 40.5,
-     "end": 40.8,
+     "text": "follow",
+     "start": 40.64,
+     "end": 41.04,
+     "key": true
+    },
+    {
+     "text": "up.",
+     "start": 41.04,
+     "end": 41.52,
      "key": false
     }
    ]
@@ -1671,19 +1683,25 @@
   {
    "id": "cap31",
    "scene": "a4",
-   "start": 40.9,
-   "end": 41.84,
+   "start": 41.53,
+   "end": 42.64,
    "words": [
     {
-     "text": "follow",
-     "start": 40.96,
-     "end": 41.36,
-     "key": true
+     "text": "Not",
+     "start": 41.52,
+     "end": 41.68,
+     "key": false
     },
     {
-     "text": "up.",
-     "start": 41.36,
-     "end": 41.84,
+     "text": "ready",
+     "start": 41.76,
+     "end": 42.08,
+     "key": false
+    },
+    {
+     "text": "yet?",
+     "start": 42.08,
+     "end": 42.64,
      "key": false
     }
    ]
@@ -1691,25 +1709,37 @@
   {
    "id": "cap32",
    "scene": "a4",
-   "start": 41.85,
-   "end": 43.12,
+   "start": 42.65,
+   "end": 44.88,
    "words": [
     {
-     "text": "Not",
-     "start": 41.84,
-     "end": 42,
+     "text": "Friendly",
+     "start": 42.64,
+     "end": 43.2,
      "key": false
     },
     {
-     "text": "ready",
-     "start": 42.08,
-     "end": 42.48,
+     "text": "check-ins",
+     "start": 43.2,
+     "end": 43.68,
      "key": false
     },
     {
-     "text": "yet?",
-     "start": 42.48,
-     "end": 43.12,
+     "text": "and",
+     "start": 43.84,
+     "end": 44.08,
+     "key": false
+    },
+    {
+     "text": "new",
+     "start": 44.08,
+     "end": 44.32,
+     "key": false
+    },
+    {
+     "text": "matching",
+     "start": 44.32,
+     "end": 44.88,
      "key": false
     }
    ]
@@ -1717,127 +1747,109 @@
   {
    "id": "cap33",
    "scene": "a4",
-   "start": 43.13,
-   "end": 45.36,
+   "start": 44.89,
+   "end": 47.108,
    "words": [
     {
-     "text": "Friendly",
-     "start": 43.12,
-     "end": 43.6,
+     "text": "properties",
+     "start": 44.88,
+     "end": 45.52,
      "key": false
     },
     {
-     "text": "check-ins",
-     "start": 43.6,
-     "end": 44.08,
+     "text": "keep",
+     "start": 45.52,
+     "end": 45.84,
      "key": false
     },
     {
-     "text": "and",
-     "start": 44.32,
-     "end": 44.48,
+     "text": "them",
+     "start": 45.84,
+     "end": 46.08,
      "key": false
     },
     {
-     "text": "new",
-     "start": 44.48,
-     "end": 44.72,
-     "key": false
-    },
-    {
-     "text": "matching",
-     "start": 44.72,
-     "end": 45.36,
-     "key": false
+     "text": "interested.",
+     "start": 46.08,
+     "end": 47.04,
+     "key": true
     }
    ]
   },
   {
    "id": "cap34",
-   "scene": "a4",
-   "start": 45.37,
-   "end": 47.482,
+   "scene": "key",
+   "start": 47.108,
+   "end": 47.84,
    "words": [
     {
-     "text": "properties",
-     "start": 45.36,
-     "end": 46,
+     "text": "The",
+     "start": 47.168,
+     "end": 47.288,
      "key": false
     },
     {
-     "text": "keep",
-     "start": 46,
-     "end": 46.24,
+     "text": "key?",
+     "start": 47.28,
+     "end": 47.84,
      "key": false
-    },
-    {
-     "text": "them",
-     "start": 46.24,
-     "end": 46.48,
-     "key": false
-    },
-    {
-     "text": "interested.",
-     "start": 46.48,
-     "end": 47.36,
-     "key": true
     }
    ]
   },
   {
    "id": "cap35",
    "scene": "key",
-   "start": 47.482,
-   "end": 48.24,
+   "start": 47.85,
+   "end": 51.04,
    "words": [
     {
-     "text": "The",
-     "start": 47.542,
-     "end": 47.662,
+     "text": "Portals,",
+     "start": 47.84,
+     "end": 48.72,
      "key": false
     },
     {
-     "text": "key?",
-     "start": 47.6,
-     "end": 48.24,
+     "text": "CRM",
+     "start": 48.72,
+     "end": 49.52,
+     "key": true
+    },
+    {
+     "text": "and",
+     "start": 49.6,
+     "end": 49.76,
      "key": false
+    },
+    {
+     "text": "calendar",
+     "start": 49.76,
+     "end": 50.32,
+     "key": true
+    },
+    {
+     "text": "connected,",
+     "start": 50.32,
+     "end": 51.04,
+     "key": true
     }
    ]
   },
   {
    "id": "cap36",
    "scene": "key",
-   "start": 48.25,
-   "end": 51.52,
+   "start": 51.05,
+   "end": 52,
    "words": [
     {
-     "text": "Portals,",
-     "start": 48.24,
-     "end": 48.96,
+     "text": "clear",
+     "start": 51.04,
+     "end": 51.44,
      "key": false
     },
     {
-     "text": "CRM",
-     "start": 49.12,
-     "end": 50,
-     "key": true
-    },
-    {
-     "text": "and",
-     "start": 50.08,
-     "end": 50.24,
-     "key": false
-    },
-    {
-     "text": "calendar",
-     "start": 50.24,
-     "end": 50.8,
-     "key": true
-    },
-    {
-     "text": "connected,",
-     "start": 50.8,
-     "end": 51.52,
+     "text": "rules,",
+     "start": 51.44,
+     "end": 52,
      "key": true
     }
    ]
@@ -1845,57 +1857,69 @@
   {
    "id": "cap37",
    "scene": "key",
-   "start": 51.53,
-   "end": 52.56,
+   "start": 52.01,
+   "end": 54.195,
    "words": [
     {
-     "text": "clear",
-     "start": 51.52,
-     "end": 52,
+     "text": "and",
+     "start": 52,
+     "end": 52.24,
      "key": false
     },
     {
-     "text": "rules,",
-     "start": 52,
-     "end": 52.56,
+     "text": "you",
+     "start": 52.24,
+     "end": 52.4,
+     "key": false
+    },
+    {
+     "text": "approving",
+     "start": 52.56,
+     "end": 53.04,
      "key": true
+    },
+    {
+     "text": "what",
+     "start": 53.04,
+     "end": 53.28,
+     "key": false
+    },
+    {
+     "text": "matters.",
+     "start": 53.28,
+     "end": 54.08,
+     "key": false
     }
    ]
   },
   {
    "id": "cap38",
-   "scene": "key",
-   "start": 52.57,
-   "end": 54.751,
+   "scene": "cta",
+   "start": 54.195,
+   "end": 55.6,
    "words": [
     {
-     "text": "and",
-     "start": 52.56,
-     "end": 52.8,
+     "text": "Want",
+     "start": 54.255,
+     "end": 54.48,
      "key": false
     },
     {
-     "text": "you",
-     "start": 52.8,
-     "end": 53.04,
+     "text": "this",
+     "start": 54.48,
+     "end": 54.72,
      "key": false
     },
     {
-     "text": "approving",
-     "start": 53.04,
-     "end": 53.6,
+     "text": "workflow",
+     "start": 54.72,
+     "end": 55.28,
      "key": true
     },
     {
-     "text": "what",
-     "start": 53.6,
-     "end": 53.84,
-     "key": false
-    },
-    {
-     "text": "matters.",
-     "start": 53.84,
-     "end": 54.64,
+     "text": "built",
+     "start": 55.28,
+     "end": 55.6,
      "key": false
     }
    ]
@@ -1903,31 +1927,25 @@
   {
    "id": "cap39",
    "scene": "cta",
-   "start": 54.751,
-   "end": 56.16,
+   "start": 55.61,
+   "end": 56.59,
    "words": [
     {
-     "text": "Want",
-     "start": 54.811,
-     "end": 55.04,
+     "text": "for",
+     "start": 55.6,
+     "end": 55.76,
      "key": false
     },
     {
-     "text": "this",
-     "start": 55.04,
-     "end": 55.28,
+     "text": "your",
+     "start": 55.76,
+     "end": 55.92,
      "key": false
     },
     {
-     "text": "workflow",
-     "start": 55.28,
-     "end": 55.84,
-     "key": true
-    },
-    {
-     "text": "built",
-     "start": 55.84,
-     "end": 56.16,
+     "text": "business?",
+     "start": 55.92,
+     "end": 56.48,
      "key": false
     }
    ]
@@ -1935,137 +1953,111 @@
   {
    "id": "cap40",
    "scene": "cta",
-   "start": 56.17,
-   "end": 57.09,
+   "start": 56.59,
+   "end": 58.91,
    "words": [
     {
-     "text": "for",
-     "start": 56.16,
-     "end": 56.32,
+     "text": "Follow",
+     "start": 56.65,
+     "end": 57.13,
+     "key": true
+    },
+    {
+     "text": "me",
+     "start": 57.13,
+     "end": 57.29,
      "key": false
     },
     {
-     "text": "your",
-     "start": 56.32,
-     "end": 56.48,
+     "text": "and",
+     "start": 57.29,
+     "end": 57.53,
      "key": false
     },
     {
-     "text": "business?",
-     "start": 56.48,
-     "end": 57.04,
+     "text": "comment",
+     "start": 57.53,
+     "end": 58.01,
      "key": false
+    },
+    {
+     "text": "\"workflow\",",
+     "start": 58.17,
+     "end": 58.89,
+     "key": true
     }
    ]
   },
   {
    "id": "cap41",
    "scene": "cta",
-   "start": 57.09,
-   "end": 59.49,
+   "start": 58.91,
+   "end": 59.85,
    "words": [
     {
-     "text": "Follow",
-     "start": 57.15,
-     "end": 57.63,
-     "key": true
-    },
-    {
-     "text": "me",
-     "start": 57.63,
-     "end": 57.79,
-     "key": false
-    },
-    {
      "text": "and",
-     "start": 57.79,
-     "end": 58.03,
+     "start": 58.97,
+     "end": 59.13,
      "key": false
     },
     {
-     "text": "comment",
-     "start": 58.03,
-     "end": 58.51,
+     "text": "I'll",
+     "start": 59.13,
+     "end": 59.45,
      "key": false
     },
     {
-     "text": "\"workflow\",",
-     "start": 58.75,
-     "end": 59.47,
-     "key": true
+     "text": "send",
+     "start": 59.45,
+     "end": 59.69,
+     "key": false
+    },
+    {
+     "text": "you",
+     "start": 59.69,
+     "end": 59.85,
+     "key": false
     }
    ]
   },
   {
    "id": "cap42",
    "scene": "cta",
-   "start": 59.49,
-   "end": 60.43,
-   "words": [
-    {
-     "text": "and",
-     "start": 59.55,
-     "end": 59.71,
-     "key": false
-    },
-    {
-     "text": "I'll",
-     "start": 59.71,
-     "end": 60.03,
-     "key": false
-    },
-    {
-     "text": "send",
-     "start": 60.03,
-     "end": 60.27,
-     "key": false
-    },
-    {
-     "text": "you",
-     "start": 60.27,
-     "end": 60.43,
-     "key": false
-    }
-   ]
-  },
-  {
-   "id": "cap43",
-   "scene": "cta",
-   "start": 60.44,
-   "end": 62.41,
+   "start": 59.86,
+   "end": 61.83,
    "words": [
     {
      "text": "the",
-     "start": 60.43,
-     "end": 60.59,
+     "start": 59.85,
+     "end": 59.93,
      "key": false
     },
     {
      "text": "details",
-     "start": 60.59,
-     "end": 60.99,
+     "start": 59.93,
+     "end": 60.41,
      "key": false
     },
     {
      "text": "in",
-     "start": 60.99,
-     "end": 61.15,
+     "start": 60.41,
+     "end": 60.57,
      "key": false
     },
     {
      "text": "your",
-     "start": 61.15,
-     "end": 61.39,
+     "start": 60.57,
+     "end": 60.73,
      "key": false
     },
     {
      "text": "DMs.",
-     "start": 61.39,
-     "end": 62.11,
+     "start": 60.73,
+     "end": 61.53,
      "key": false
     }
    ]
   }
  ],
- "visemes": "rrrrrrrrraaaaaaaaaaaaaeeaaammmaaooorrrrrrrrrrrrrraaaaaaaooorrraaaaaaaaaaaaeeeeaaaarrrrrraaaaaooommrrrrrrrrrrraaooaaaarreeaaaaaaaoommmmmmeeeeeeeeeeeemmrrrrrrrrrrrrrrrrrraaammaaaaaaaaaarrrooorrraaaaaaaaammmmmrrooooeeeaaaooorrreeeeerrreeeeemmrrrrrrrrrrrrrrrooaaaaarrrraaaaaaaaaoooooommrroooaaaaaammrrrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaabbaaammmaaaaarrraaarrrrreeerrrrrbbaaaaaarrrbbbrrrroorrbbbeemmrrrrrrrrrrrrrrroooaaaaaoooorrrrrrrrrrrrraaaaabbrrrroooorrraaaaaaaarrrrrrrrrrrrrrrrrraaooaaaaaooorrrraaaaaaaabbbbbrrrrrrrrrroorrrrrrrbbbbaaaaaaaaaaaaaaarrrrraaaaaaarrrrreeaaarrrrrrrrrrrrrrrroooaaaaaaoooooaaooooaaaammmmmmbbrrraaaaaarrreeeeeemmmrrrrrrrrrrrrrrrrrraaaaaaeeaaaaaaaaarrrraaaaaaaammrrmmmmmmaaaaaabbaabbbbbbrrrrrrooooaaammrrrreeemmrrrrrrrrrrrrrrrrraaaaaarrrraaaaaarraaaaeemmrrrrrrrrrrrrrrrraaaaaaaaaaaaarrreeaaaaarrrrooaaaammmmaaoooeeeeerrrrrrrrrooaaaarrraaaeeeeaaoooorrrrrrrrrrrraaaooaaaaeeeooorrrrrrrrrraaaaaarrrraaaoooaaaaaeerrrraaaooooooobbbmmmrrrrrrrrrrrrrrrrrrraaaaaaaaarrrroooaaaaarrrrooooooaaaarrrrrrrrrrrrrrrrmmmmaaaaaaaaaaaarrrrrraaaaaaaarrrroooaaaaarrraaaaooooorrrraaeeerrrrrrrrrrrrrrrrreeeaaaarrrrraaaabbbbrrrrrrrrrrrroooommmmmmaammmmmmeeeaaaaaabbbeeaaoooooooaaaarreeebbbooommmrrrrrrrrrrrrrrrrrraaaaaaarrrrrraaaaaaaaaaaaarrrrrrrrrrrrrooaaaaaaaaaaaaaeeeaaabbbrrrrrrrrrrrrrrrraaaooooaaaaaeeeeeerrrrrroorrrrrrrrrrrrrooooaaaooaaaaarreeeooorrrrrrbbbeeeaaammrrrrrrrrrrrrrrrrrrroooooeerrrrrmmrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaabbbrrrrrrrraaaaaaaaaoommrrrrrrrrrrrmmmaaaaarrraaaaaaarrreeaaooaaoorrrraabbooooorrrrrrreerrrrrrrrrrrrrrrrrrrrreeaaaaaaaoooaaaaaaaoooorrrrrrrrrreeooooaaaarrrraaaaaaaooooaaaaaaaaaaeemmrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaaaeeeeeeeaaaarrrraaaaammaaaaarrrrrbbaaaaaaaaaaaaaaarrrrrrrrrrrrrrrraaaaaaaaooaaaaarrrroorrraaaaeeooorrrrrrrrrrrrraaaarrrrrbbbbbbrrrrrrrrrrrrraaaaaammmmaaooooaaaaaarreeeerraaaaaaaarrrrooooaaaaaeeeeeeeeeeerrrrrrrrr"
+ "visemes": "rrrrrrrrraaaaaaaaaaaaaaaaaaeeaaooommmrrrrrrrrrrraarraaaoommmmaaaaaaaaaaaaeeeeaaaarrreeaaaaaoooooorrrrrrrrrraaooaaaaaaaaaaaaaaaaaeeeeeaaaaaaaaaaeeeeerrrmmrrrrrrrrrrrrraaoooaaaaaaaaaaaaaoommmmaaaaaaaeeeeaaarroooaaaaaaaooorrrraaaaaaaeeeeemmrrrrrrrrrrrrrooooaaaaaaaaaaaaaaaaaaaaaeerrrooaaaaaaaarrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrraaaaaaaaaooooaaaaaaaaaaaarrrreeeeeeaaaaaaaaaarrraaaaaaaoooooooeeeerrrrrrrrrrrrrrroooaaaaaooorrrrrrraaaaaaaaaaaaaarrroooeeeeeeoooeeeerrrrrrrrrrrrrrrraaaaaaaaaaoommmmaaaaaaabbbbbrrrrrrrrraaoorrraaaaaaaaaaaaaaaammaaaaammrraaaaaaaaaaaaaeeaaaarrrrrrrrrrrrrrooaaaaaaabbbbeeaaoooaaaaeeeeeeeeeeeeaaaaaarrraaaaooommrrrrrrrrrraaaaaaaaaaaaaaaaaaaooooooooaaaaaaaaeeerrrrooaaaaaaaaaaaaaaaeeeerrrrrrrrroooaaaaeeeeeaaeeemmrrrrrrrrrrrrrrrraaaaarrrraaaaaammmaaaeeemmrrrrrrrrrrrraaaaaaaaaaaaaaarreeeaaaeeeeeeeaaaaoommaaaooeeaaaarrrrrrrrrooaaaarrraaaeeeeaaaooorrrrrrrrrraaaaaoooaabbbbooorrrrrrrrrraaaaaarrraaaaooaaaaaaeeeeaaaaooooaaaaaoommmrrrrrrrrrrrrrrrrraaaaaaaaarrrrooooaaaarrrraaooooaaabbrrrrrrrrrrrrrrrrreeeaaaaaaaaaeemmmaaaaaaaaeeerrraaooaaaaaaaaaaaaoooaaaaeeaaeeerrrrrrrrrrrrrrroooaaaaaaaaaaaaaaooorrrrrrrrrrrroooeeeeeaaaaooooaaeeeaaaaabbaaaaaaooeeaaooaaaaaeeaaaaaoooooorrrrrrrrrrrrrrrrraaaaaaaaarrrraaaaaaaaaaaaaarrrrrrrrrrrrooaaaaaaaaaaaaaaaaaaaaaarrrrrrrrrrrrrraaaoooaaaaaeeeaaaaaaaaaoooorrrrrrrrrraaoooaaaaooaaaaaaeeeeoooooaaaaaaaaaaaaeeerrrrrraaaarrrrooorraaooeeeeeerrrbbmmrrrrrrrrrrrrrrrrrraaaaeeaaaaaaoorrrrrrrraaaaaaaaaaeeeerrrrrrrrrreeeaaaaaaaaaaaaaaarrraaaaaaaoooeeaaaaaooaaaaaaaooaaarrrrrrrrrrrrrrrrrreeaaaaaaaaaaaaaaaaaaooommmrrrrrrrrraaoooorrrrrrraaaaooaaoooaaaaaaaaaaeeemmmmmmrrrrrrrrrrrrrrrrrooaaaarraaaeeeeeaaaaarrmmaaaaoooaaaaarrrraaaaaaoooaaeeeeeemmmmrrrrrrrrrrrrrraaaaaaaaooaaaaarrraaoooooaaaaaaoorrrrrrrrrrooaaaarrmmmmmbbbbbrrrrrrrrraaaaaaaeeeeeaaoooaaaaaaaaaaaaaaaaaaaaoooorrrrooaaaaammmaaaeeebbbbrrrrrrrr"
 }

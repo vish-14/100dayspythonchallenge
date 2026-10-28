@@ -1,0 +1,320 @@
+[
+  {
+    "id": "w0",
+    "text": "Property",
+    "start": 0,
+    "end": 0.56
+  },
+  {
+    "id": "w1",
+    "text": "agents,",
+    "start": 0.56,
+    "end": 1.28
+  },
+  {
+    "id": "w2",
+    "text": "your",
+    "start": 1.28,
+    "end": 1.44
+  },
+  {
+    "id": "w3",
+    "text": "inquiries",
+    "start": 1.52,
+    "end": 2.32
+  },
+  {
+    "id": "w4",
+    "text": "go",
+    "start": 2.32,
+    "end": 2.56
+  },
+  {
+    "id": "w5",
+    "text": "cold",
+    "start": 2.56,
+    "end": 3.12
+  },
+  {
+    "id": "w6",
+    "text": "while",
+    "start": 3.12,
+    "end": 3.36
+  },
+  {
+    "id": "w7",
+    "text": "you're",
+    "start": 3.36,
+    "end": 3.68
+  },
+  {
+    "id": "w8",
+    "text": "out",
+    "start": 3.68,
+    "end": 3.84
+  },
+  {
+    "id": "w9",
+    "text": "on",
+    "start": 3.84,
+    "end": 4.08
+  },
+  {
+    "id": "w10",
+    "text": "site",
+    "start": 4.08,
+    "end": 4.4
+  },
+  {
+    "id": "w11",
+    "text": "visits.",
+    "start": 4.4,
+    "end": 5.36
+  },
+  {
+    "id": "w12",
+    "text": "3.",
+    "start": 5.36,
+    "end": 5.84
+  },
+  {
+    "id": "w13",
+    "text": "Root",
+    "start": 6,
+    "end": 6.4
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 6.4,
+    "end": 6.64
+  },
+  {
+    "id": "w15",
+    "text": "Book.",
+    "start": 6.64,
+    "end": 7.28
+  },
+  {
+    "id": "w16",
+    "text": "Serious",
+    "start": 7.28,
+    "end": 7.76
+  },
+  {
+    "id": "w17",
+    "text": "buyers",
+    "start": 7.76,
+    "end": 8.32
+  },
+  {
+    "id": "w18",
+    "text": "alert",
+    "start": 8.32,
+    "end": 8.72
+  },
+  {
+    "id": "w19",
+    "text": "you",
+    "start": 8.72,
+    "end": 8.88
+  },
+  {
+    "id": "w20",
+    "text": "on",
+    "start": 8.88,
+    "end": 9.04
+  },
+  {
+    "id": "w21",
+    "text": "WhatsApp.",
+    "start": 9.04,
+    "end": 9.84
+  },
+  {
+    "id": "w22",
+    "text": "You",
+    "start": 9.84,
+    "end": 10.08
+  },
+  {
+    "id": "w23",
+    "text": "approve,",
+    "start": 10.08,
+    "end": 10.72
+  },
+  {
+    "id": "w24",
+    "text": "and",
+    "start": 10.72,
+    "end": 10.96
+  },
+  {
+    "id": "w25",
+    "text": "the",
+    "start": 10.96,
+    "end": 11.12
+  },
+  {
+    "id": "w26",
+    "text": "site",
+    "start": 11.12,
+    "end": 11.44
+  },
+  {
+    "id": "w27",
+    "text": "visit",
+    "start": 11.44,
+    "end": 11.84
+  },
+  {
+    "id": "w28",
+    "text": "lands",
+    "start": 11.84,
+    "end": 12.24
+  },
+  {
+    "id": "w29",
+    "text": "in",
+    "start": 12.24,
+    "end": 12.4
+  },
+  {
+    "id": "w30",
+    "text": "your",
+    "start": 12.4,
+    "end": 12.56
+  },
+  {
+    "id": "w31",
+    "text": "calendar.",
+    "start": 12.56,
+    "end": 13.52
+  },
+  {
+    "id": "w32",
+    "text": "Want",
+    "start": 13.52,
+    "end": 13.92
+  },
+  {
+    "id": "w33",
+    "text": "this",
+    "start": 13.92,
+    "end": 14.16
+  },
+  {
+    "id": "w34",
+    "text": "workflow",
+    "start": 14.16,
+    "end": 14.8
+  },
+  {
+    "id": "w35",
+    "text": "built",
+    "start": 14.8,
+    "end": 15.12
+  },
+  {
+    "id": "w36",
+    "text": "for",
+    "start": 15.12,
+    "end": 15.28
+  },
+  {
+    "id": "w37",
+    "text": "your",
+    "start": 15.28,
+    "end": 15.44
+  },
+  {
+    "id": "w38",
+    "text": "business?",
+    "start": 15.44,
+    "end": 16.24
+  },
+  {
+    "id": "w39",
+    "text": "Follow",
+    "start": 16.24,
+    "end": 16.72
+  },
+  {
+    "id": "w40",
+    "text": "me",
+    "start": 16.72,
+    "end": 16.96
+  },
+  {
+    "id": "w41",
+    "text": "and",
+    "start": 16.96,
+    "end": 17.2
+  },
+  {
+    "id": "w42",
+    "text": "comment,",
+    "start": 17.2,
+    "end": 17.92
+  },
+  {
+    "id": "w43",
+    "text": "workflow,",
+    "start": 17.92,
+    "end": 18.88
+  },
+  {
+    "id": "w44",
+    "text": "and",
+    "start": 18.88,
+    "end": 19.04
+  },
+  {
+    "id": "w45",
+    "text": "I'll",
+    "start": 19.04,
+    "end": 19.36
+  },
+  {
+    "id": "w46",
+    "text": "send",
+    "start": 19.36,
+    "end": 19.6
+  },
+  {
+    "id": "w47",
+    "text": "you",
+    "start": 19.6,
+    "end": 19.76
+  },
+  {
+    "id": "w48",
+    "text": "the",
+    "start": 19.76,
+    "end": 19.92
+  },
+  {
+    "id": "w49",
+    "text": "details",
+    "start": 19.92,
+    "end": 20.48
+  },
+  {
+    "id": "w50",
+    "text": "in",
+    "start": 20.48,
+    "end": 20.64
+  },
+  {
+    "id": "w51",
+    "text": "your",
+    "start": 20.64,
+    "end": 20.96
+  },
+  {
+    "id": "w52",
+    "text": "DMs.",
+    "start": 20.96,
+    "end": 22
+  }
+]

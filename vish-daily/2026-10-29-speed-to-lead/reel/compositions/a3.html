@@ -68,7 +68,7 @@
   </div>
   <script>
     (() => {
-      const W = {"three": 0.15, "three_end": 0.608, "route": 0.608, "route_end": 1.008, "and": 1.008, "and_end": 1.248, "book": 1.248, "book_end": 1.888, "serious": 1.888, "serious_end": 2.448, "buyers": 2.448, "buyers_end": 3.008, "alert": 3.008, "alert_end": 3.408, "you": 3.408, "you_end": 3.568, "on": 3.568, "on_end": 3.728, "whatsapp": 3.728, "whatsapp_end": 4.528, "you_2": 4.528, "you_2_end": 4.768, "approve": 4.768, "approve_end": 5.328, "and_2": 5.408, "and_2_end": 5.648, "the": 5.648, "the_end": 5.808, "site": 5.808, "site_end": 6.208, "visit": 6.208, "visit_end": 6.608, "lands": 6.608, "lands_end": 7.008, "in": 7.008, "in_end": 7.088, "your": 7.088, "your_end": 7.248, "calendar": 7.248, "calendar_end": 8.048};
+      const W = {"three": 0.15, "three_end": 0.648, "route": 0.648, "route_end": 1.048, "and": 1.048, "and_end": 1.288, "book": 1.288, "book_end": 1.928, "serious": 1.928, "serious_end": 2.408, "buyers": 2.408, "buyers_end": 2.968, "alert": 2.968, "alert_end": 3.368, "you": 3.368, "you_end": 3.528, "on": 3.528, "on_end": 3.688, "whatsapp": 3.688, "whatsapp_end": 4.488, "you_2": 4.488, "you_2_end": 4.728, "approve": 4.728, "approve_end": 5.368, "and_2": 5.368, "and_2_end": 5.528, "the": 5.528, "the_end": 5.688, "site": 5.688, "site_end": 6.088, "visit": 6.088, "visit_end": 6.568, "lands": 6.568, "lands_end": 6.888, "in": 6.888, "in_end": 7.048, "your": 7.048, "your_end": 7.208, "calendar": 7.208, "calendar_end": 8.008};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.route - 0.04);
@@ -91,7 +91,7 @@
       tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.site - 0.05);
       tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.calendar + 0.1);
       tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.calendar + 0.1);
-      tl.fromTo("#a3-prog", { scaleX: 0.5055 }, { scaleX: 0.6305, duration: 7.998, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.5059 }, { scaleX: 0.6311, duration: 7.940, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

@@ -1,6 +1,6 @@
 # Post kit · Thu 29 Oct 2026 · Speed-to-lead (real estate)
 
-Files: `reel.mp4` (64 s, 1080×1920) · `cover.png` · `guide.pdf` (4 pages, "The Speed-to-Lead Playbook")
+Files: `reel.mp4` (63.4 s, 1080×1920) · `cover.png` · `guide.pdf` (4 pages, "The Speed-to-Lead Playbook")
 
 ## 1. When to post
 

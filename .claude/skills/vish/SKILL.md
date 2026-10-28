@@ -25,7 +25,7 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 2. **The persona speaks in the first person** ("Follow me… I'll send you…"). The company name never appears in the video, bio or on-screen text. It appears **only once, at the very end of a reel caption**, for SEO (see `references/brand-and-page.md`).
 3. **The CTA keyword is `WORKFLOW`** everywhere: voice, on-screen pill, caption, SuperProfile trigger. Follow first, then comment (the auto-DM only reaches followers).
 4. **No invented statistics, client results or guaranteed savings.** Example names and values on UI cards are illustrative.
-5. **No copyrighted audio.** Voice comes from Kokoro (offline). Music is original (MusicGen, run locally) or properly licensed. SFX come from the HyperFrames bundle (Pixabay licence).
+5. **No copyrighted audio.** Voice comes from Kokoro (offline), always the "Vish warm" voice in `template/tools/make_vo.py` (hm_omega + hm_psi blend, en-gb, 0.9×, −1 semitone, clarity chain). Music is original (MusicGen, run locally) or properly licensed. SFX come from the HyperFrames bundle (Pixabay licence).
 
 ## What's in this skill
 
