@@ -10,7 +10,7 @@ description: Daily content engine, brand kit and production playbook for "Vish",
 Follow `references/daily-run.md` from start to finish:
 1. Research and score fresh concepts across all industries (`references/concept-engine.md`).
 2. **Get the user's pick.**
-3. Write the script and **get approval**.
+3. Write the script (problem → my solution → its workflows, each introduced with "First, … Second, …" and explained at once → CTA) and **get approval**.
 4. Make the reel and the topic PDF guide (`references/guide-pdf.md`).
 5. Write the post kit: caption, cover, pinned comment, SuperProfile setup and the post time in IST plus world times.
 6. Log it in `vish-daily/content-log.md`.
@@ -46,7 +46,7 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 | `scripts/setup.sh` | One-time install and check of the toolchain and models in a fresh container |
 | `assets/content-log.template.md` | Starting point for `vish-daily/content-log.md` |
 | `assets/lead-magnet/` | The first guide: web page, PDF and its `4-task-workflow.guide.json` source |
-| `template/` | The working HyperFrames reel project (scenes, presenter, captions, config, tools, SFX), without the large audio files |
+| `template/` | The working HyperFrames reel project (latest: speed-to-lead v4, with hook → problem → solution → 4 workflows → key → CTA), without the large audio files. It builds as-is after a copy |
 
 ## Quick recipes
 

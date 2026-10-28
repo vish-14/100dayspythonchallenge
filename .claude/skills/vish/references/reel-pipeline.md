@@ -19,7 +19,7 @@ npm i -g hyperframes@0.8.209            # or use npx
 pip install kokoro-onnx soundfile numpy torch transformers   # voice + music (torch is CPU fine)
 npx hyperframes models install parakeet --json < /dev/null   # word timestamps
 
-# 1. Script: one entry per scene in tools/script.json
+# 1. Script: one entry per scene in tools/script.json (hook, problem, solution, a1–a4, key, cta)
 #    {"id","label","say" (what the voice reads; spell C R M etc.),"text" (captions),"speed" (1.0; CTA 1.1)}
 # 2. Voice "Vish warm" (picked by the user from 6 samples, Oct 2026): 50/50 blend of Kokoro hm_omega + hm_psi, lang en-gb,
 #    speed 0.9 (CTA 1.0), pitch −1 semitone (formants kept), clarity EQ + de-ess + compression. All in tools/make_vo.py; keep it identical every day.
@@ -48,6 +48,10 @@ npx hyperframes render -q delivery --fps 30 -o vish_reel.mp4
 - `src/scenes/cta.html`: the follow + comment WORKFLOW ending (avatar at `assets/brand/avatar.png`).
 
 ## Lessons learned (avoid repeating these)
+
+- **Story flow (user feedback, Oct 2026):** the reel must go problem → solution → workflows → CTA. A `solution` scene ("That's why I built an AI agent solution for … with four connected workflows") sits between `problem` and `a1`, and each workflow starts "First, … / Second, …" and is explained right away. See `daily-run.md` Step 2.
+- **The automation is the actor:** "Serious buyers alert you on WhatsApp" wrongly implied the buyers send the alert. Write "The agent alerts you on WhatsApp when a buyer meets your criteria", and label UI cards the same way ("WhatsApp · AI agent alert", "meets criteria").
+- **Long-file transcription slips:** on a 70 s+ voiceover, Parakeet sometimes mishears words that are clear on their own ("matching" → "marching"). Before rewording, regenerate just that line and transcribe it alone. Reword only if it fails in isolation too.
 
 - **Voice clarity (user feedback, Oct 2026):** hm_omega with `lang='en-us'` at 1.0× was hard to understand for Indian viewers. Use `lang='en-gb'` at 0.9× (CTA 1.0×). Check every voiceover with Parakeet: any real mishearing ("hot"→"heart", "portals"→"orals", a dropped "-ed") means reword the line, not just re-roll it.
 - **Say it the Indian way:** for Indian industries use local terms, not US ones: "property agents/brokers" not "realtors", "site visit" not "viewing", "enquiry", "home loan", "possession date", portals like 99acres, MagicBricks, Housing.com. Ask: would an Indian owner say this word out loud?

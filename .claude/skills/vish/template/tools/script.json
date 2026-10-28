@@ -1,45 +1,51 @@
 [
  {
   "id": "hook",
-  "label": "00 / THE OPPORTUNITY",
-  "say": "Four boring tasks. One smarter workflow. Here's where AI automation helps.",
-  "text": "Four boring tasks. One smarter workflow. Here's where AI automation helps."
+  "label": "00 / THE LEAK",
+  "say": "Property agents, your enquiries go cold while you're out on site visits.",
+  "text": "Property agents: your enquiries go cold while you're out on site visits."
  },
  {
   "id": "problem",
   "label": "00 / THE PROBLEM",
-  "say": "Enquiries, follow-ups, updates, reports. Small jobs keep interrupting your day.",
-  "text": "Enquiries, follow-ups, updates, reports. Small jobs keep interrupting your day."
+  "say": "A buyer enquires at nine P M. You reply the next morning. By then, another broker is already talking to them.",
+  "text": "A buyer enquires at 9 PM. You reply the next morning. By then, another broker is already talking to them."
+ },
+ {
+  "id": "solution",
+  "label": "00 / THE SOLUTION",
+  "say": "That's why I built an AI agent solution for property agents, with four connected workflows.",
+  "text": "That's why I built an AI agent solution for property agents, with four connected workflows."
  },
  {
   "id": "a1",
-  "label": "01 / CAPTURE ENQUIRIES",
-  "say": "One: capture enquiries. Save contact details in your C R M, and let AI draft a reply for review.",
-  "text": "One: capture enquiries. Save contact details in your CRM, and let AI draft a reply for review."
+  "label": "01 / RESPOND TO ENQUIRIES",
+  "say": "First, respond to enquiries. Every enquiry, from property portals or WhatsApp, lands in your C R M, and AI replies right away, in your style.",
+  "text": "First, respond to enquiries. Every enquiry, from property portals or WhatsApp, lands in your CRM, and AI replies right away, in your style."
  },
  {
   "id": "a2",
-  "label": "02 / FOLLOW UP",
-  "say": "Two: follow up on time. Trigger reminders and approved messages when a lead needs attention.",
-  "text": "Two: follow up on time. Trigger reminders and approved messages when a lead needs attention."
+  "label": "02 / QUALIFY BUYERS",
+  "say": "Second, qualify buyers. AI asks about budget, location, timeline, and if they need a home loan.",
+  "text": "Second, qualify buyers. AI asks about budget, location, timeline, and if they need a home loan."
  },
  {
   "id": "a3",
-  "label": "03 / PROCESS DOCUMENTS",
-  "say": "Three: turn documents into drafts. Extract key details and prepare summaries your team can check.",
-  "text": "Three: turn documents into drafts. Extract key details and prepare summaries your team can check."
+  "label": "03 / ROUTE + BOOK",
+  "say": "Third, route leads and book site visits. The agent alerts you on WhatsApp when a buyer meets your criteria. You approve, and the site visit lands in your calendar.",
+  "text": "Third, route leads and book site visits. The agent alerts you on WhatsApp when a buyer meets your criteria. You approve, and the site visit lands in your calendar."
  },
  {
   "id": "a4",
-  "label": "04 / KEEP TEAMS UPDATED",
-  "say": "Four: keep everyone updated. Route task changes and useful summaries to the right people.",
-  "text": "Four: keep everyone updated. Route task changes and useful summaries to the right people."
+  "label": "04 / FOLLOW UP",
+  "say": "Fourth, follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested.",
+  "text": "Fourth, follow up. Not ready yet? Friendly check-ins and new matching properties keep them interested."
  },
  {
   "id": "key",
   "label": "05 / RELIABILITY",
-  "say": "The key? Connected tools, clear rules, and a person ready when something needs attention.",
-  "text": "The key? Connected tools, clear rules, and a person ready when something needs attention."
+  "say": "The key? Portals, C R M and calendar connected, clear rules, and you approving what matters.",
+  "text": "The key? Portals, CRM and calendar connected, clear rules, and you approving what matters."
  },
  {
   "id": "cta",

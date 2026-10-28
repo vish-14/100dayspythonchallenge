@@ -1,148 +1,180 @@
 1
-00:00:00,190 --> 00:00:01,620
-Four boring tasks.
+00:00:00,190 --> 00:00:01,440
+Property agents:
 
 2
-00:00:01,620 --> 00:00:03,280
-One smarter workflow.
+00:00:01,450 --> 00:00:03,600
+your enquiries go cold while
 
 3
-00:00:03,290 --> 00:00:05,920
-Here's where AI automation helps.
+00:00:03,610 --> 00:00:05,426
+you're out on site visits.
 
 4
-00:00:05,930 --> 00:00:07,760
-Enquiries, follow-ups,
+00:00:05,426 --> 00:00:07,280
+A buyer enquires at 9
 
 5
-00:00:07,770 --> 00:00:09,200
-updates, reports.
+00:00:07,290 --> 00:00:08,100
+PM.
 
 6
-00:00:09,210 --> 00:00:10,960
-Small jobs keep interrupting
+00:00:08,100 --> 00:00:10,000
+You reply the next morning.
 
 7
-00:00:10,970 --> 00:00:11,702
-your day.
+00:00:10,010 --> 00:00:10,880
+By then,
 
 8
-00:00:11,702 --> 00:00:12,240
-One:
+00:00:10,890 --> 00:00:13,040
+another broker is already talking
 
 9
-00:00:12,250 --> 00:00:13,680
-capture enquiries.
+00:00:13,050 --> 00:00:13,765
+to them.
 
 10
-00:00:13,690 --> 00:00:15,200
-Save contact details
+00:00:13,765 --> 00:00:15,200
+That's why I built an
 
 11
-00:00:15,210 --> 00:00:16,500
-in your CRM,
+00:00:15,210 --> 00:00:17,520
+AI agent solution for property
 
 12
-00:00:16,500 --> 00:00:18,160
-and let AI draft
+00:00:17,530 --> 00:00:20,576
+agents, with four connected workflows.
 
 13
-00:00:18,170 --> 00:00:19,659
-a reply for review.
+00:00:20,576 --> 00:00:22,880
+First, respond to enquiries.
 
 14
-00:00:19,659 --> 00:00:20,080
-Two:
+00:00:22,890 --> 00:00:24,000
+Every enquiry,
 
 15
-00:00:20,090 --> 00:00:21,520
-follow up on time.
+00:00:24,010 --> 00:00:26,420
+from property portals or WhatsApp,
 
 16
-00:00:21,530 --> 00:00:24,160
-Trigger reminders and approved messages
+00:00:26,420 --> 00:00:28,580
+lands in your CRM,
 
 17
-00:00:24,170 --> 00:00:26,054
-when a lead needs attention.
+00:00:28,580 --> 00:00:30,900
+and AI replies right away,
 
 18
-00:00:26,054 --> 00:00:26,560
-Three:
+00:00:30,900 --> 00:00:32,181
+in your style.
 
 19
-00:00:26,570 --> 00:00:28,480
-turn documents into drafts.
+00:00:32,181 --> 00:00:34,240
+Second, qualify buyers.
 
 20
-00:00:28,490 --> 00:00:30,020
-Extract key details
+00:00:34,250 --> 00:00:36,400
+AI asks about budget,
 
 21
-00:00:30,020 --> 00:00:31,840
-and prepare summaries your team
+00:00:36,410 --> 00:00:38,160
+location, timeline,
 
 22
-00:00:31,850 --> 00:00:32,677
-can check.
+00:00:38,170 --> 00:00:38,960
+and if they need
 
 23
-00:00:32,677 --> 00:00:33,140
-Four:
+00:00:38,970 --> 00:00:40,156
+a home loan.
 
 24
-00:00:33,140 --> 00:00:34,720
-keep everyone updated.
+00:00:40,156 --> 00:00:41,520
+Third, route leads
 
 25
-00:00:34,730 --> 00:00:36,260
-Route task changes
+00:00:41,530 --> 00:00:42,960
+and book site visits.
 
 26
-00:00:36,260 --> 00:00:37,600
-and useful summaries
+00:00:42,970 --> 00:00:44,400
+The agent alerts you on
 
 27
-00:00:37,610 --> 00:00:38,881
-to the right people.
+00:00:44,410 --> 00:00:46,240
+WhatsApp when a buyer meets
 
 28
-00:00:38,881 --> 00:00:39,540
-The key?
+00:00:46,250 --> 00:00:47,460
+your criteria.
 
 29
-00:00:39,540 --> 00:00:40,880
-Connected tools,
+00:00:47,460 --> 00:00:48,420
+You approve,
 
 30
-00:00:40,890 --> 00:00:41,760
-clear rules,
+00:00:48,420 --> 00:00:50,080
+and the site visit lands
 
 31
-00:00:41,770 --> 00:00:42,500
-and a person
+00:00:50,090 --> 00:00:51,343
+in your calendar.
 
 32
-00:00:42,500 --> 00:00:44,869
-ready when something needs attention.
+00:00:51,343 --> 00:00:52,720
+Fourth, follow up.
 
 33
-00:00:44,869 --> 00:00:46,240
-Want this workflow built
+00:00:52,730 --> 00:00:53,920
+Not ready yet?
 
 34
-00:00:46,250 --> 00:00:47,280
-for your business?
+00:00:53,930 --> 00:00:56,160
+Friendly check-ins and new matching
 
 35
-00:00:47,290 --> 00:00:49,520
-Follow me and comment "workflow",
+00:00:56,170 --> 00:00:58,300
+properties keep them interested.
 
 36
-00:00:49,530 --> 00:00:50,400
-and I'll send you
+00:00:58,395 --> 00:00:59,110
+The key?
 
 37
-00:00:50,410 --> 00:00:52,140
+00:00:59,120 --> 00:01:02,310
+Portals, CRM and calendar connected,
+
+38
+00:01:02,320 --> 00:01:03,350
+clear rules,
+
+39
+00:01:03,360 --> 00:01:04,210
+and you approving
+
+40
+00:01:04,330 --> 00:01:05,482
+what matters.
+
+41
+00:01:05,482 --> 00:01:06,870
+Want this workflow built
+
+42
+00:01:06,880 --> 00:01:07,910
+for your business?
+
+43
+00:01:07,920 --> 00:01:10,230
+Follow me and comment "workflow",
+
+44
+00:01:10,240 --> 00:01:11,110
+and I'll send you
+
+45
+00:01:11,120 --> 00:01:13,090
 the details in your DMs.
 

@@ -26,32 +26,35 @@ Show the 3 concepts in the format from concept-engine §6, ranked. Ask with AskU
 
 ## Step 2: Script and storyboard (≈10 min)
 
-- Use the length and structure from `references/reel-pipeline.md`: about 45–55 s of explainer at 0.9× speed with en-gb pronunciation, then the standard ~8 s WORKFLOW CTA at 1.0×. Clarity beats speed: the audience is largely Indian, and the first version at 1.0×/1.1× with US pronunciation was reported as hard to understand.
-- Structure:
-  - **Hook** (≤2 s, names the industry or pain).
-  - **Problem** (relatable, in the owner's words).
-  - **3–4 workflow beats**: trigger → AI step → human approval → result.
-  - **Reliability beat**: connected tools, clear rules, human review.
-  - **CTA**: "Want this workflow built for your business? Follow me and comment workflow, and I'll send you the details in your DMs."
+- Pacing: about 55–65 s of explainer at 0.9× with en-gb pronunciation, then the standard ~8 s WORKFLOW CTA at 1.0× (about 70–75 s in total). Clarity beats speed: the audience is largely Indian, and the first version at 1.0×/1.1× with US pronunciation was reported as hard to understand. Don't rush the problem → solution turn; it gets a slightly longer pause (`GAP` in `make_vo.py`).
+- **Narrative (required): problem → my solution → how its workflows work → CTA.** Never jump from the problem straight into a numbered list.
+  - **Hook** (≤2 s, names the audience and the pain, in their own words: "Property agents: your enquiries go cold while you're out on site visits.").
+  - **Problem** (one relatable moment: "A buyer enquires at 9 PM. You reply the next morning. By then, another broker is already talking to them.").
+  - **Solution** (the turn, first person, names the solution and the number of workflows): "That's why I built an AI agent solution for [audience], with [four] connected workflows."
+  - **Workflow beats** (3 or 4, each an ordinal intro **followed at once** by its explanation): "First, respond to enquiries. [what happens]" / "Second, qualify buyers. […]" / "Third, route leads and book site visits. […]" / "Fourth, follow up. […]". Use "First / Second / Third / Fourth", not "One: / Two:", and don't list all the names up front and explain them later. Each explanation shows trigger → AI step → human approval → result.
+  - **Reliability beat**: connected tools, clear rules, you approving what matters.
+  - **CTA** (unchanged, never reworded): "Want this workflow built for your business? Follow me and comment workflow, and I'll send you the details in your DMs."
+- **Say who acts.** The AI agent or the automation does the work and sends the alerts; customers only enquire or reply. Write "The agent alerts you on WhatsApp when a buyer meets your criteria", never "Serious buyers alert you on WhatsApp". Read every sentence and ask: who is the subject, and does that person really do this?
 - Write `tools/script.json`. `say` is what Kokoro reads: spell out acronyms ("C R M") and write numbers as words. `text` is the caption.
 - Plan the on-screen beats per scene. Every reveal lands on the word that names it, and something changes every 1–2 s.
 
 ## Gate 2: Script approval (required)
 
-Show the voiceover script (with an estimated duration at ~2.6 words/s), the on-screen headline per scene, and the PDF outline (title + workflow names). Ask: approve, or edit. Apply edits, then continue without further gates unless something is unclear.
+Show the voiceover script (with an estimated duration at ~2.3 words/s, the rate at 0.9×), the on-screen headline per scene, and the PDF outline (title + workflow names). Ask: approve, or edit. Apply edits, then continue without further gates unless something is unclear.
 
 ## Step 3: Produce the reel (≈30–60 min)
 
 1. `cp -r <skill>/template vish-daily/<date>-<slug>/reel`, then work in that folder.
 2. Edit `project.config.json`: video duration, copy per scene, chapter labels, SFX cues tied to the new words. The brand, handle and CTA stay unchanged.
 3. Rebuild the scenes in `src/scenes/` for the new topic, reusing the template's patterns:
-   - `hook.html`: full-screen takeover;
-   - `problem.html`: chaos to order;
-   - `a1–a4.html`: one numbered workflow beat each, with a UI card that animates the trigger → AI → approval;
+   - `hook.html`: full-screen takeover (also the cover frame);
+   - `problem.html`: the relatable moment;
+   - `solution.html`: the turn. A light panel: THE SOLUTION, MY AI AGENT, FOR [AUDIENCE], then the numbered workflow nodes that pop on "four", link on "connected" and label on "workflows". Node 01 lights up as the hand-off to the first beat. Keep the node labels identical to the beat titles;
+   - `a1–a4.html`: one workflow each. The title matches the spoken intro ("01 RESPOND TO ENQUIRIES") and lands on those words, then a UI card animates the trigger → AI → approval;
    - `key.html`: the reliability takeover;
    - `cta.html`: **keep as is**.
 
-   Use 3 or 4 beats. If you use 3, drop `a4` from the config and the script.
+   Use 3 or 4 beats. If you use 3, drop `a4` from the config and the script, delete node 04 in `solution.html`, and say "three connected workflows".
 4. Run the voice → transcription → analysis → music → mix → build pipeline exactly as in `reel-pipeline.md`.
 5. **Update the word anchors in `tools/build.py`** for the presenter's entrance and exit, brow lifts and head moves (the `abs_word("scene:word")` calls near line 130). They must name words in the new script.
 6. Run `npx hyperframes check`, then look at snapshots across the whole timeline. Fix overlaps, clipped text, captions under the Instagram UI and empty frames.

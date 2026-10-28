@@ -20,7 +20,7 @@ vo, sr = sf.read(T("assets", "audio", "voiceover.wav"))
 if vo.ndim > 1:
     vo = vo.mean(1)
 
-NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "for": "four", "inquiries": "enquiries"}
+NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "for": "four", "inquiries": "enquiries", "9": "nine"}
 
 
 def norm(w):
@@ -72,8 +72,7 @@ for w in words:
 print(f"aligned {matched}/{len(flat)} sub-tokens from {len(raw)} transcript words")
 
 # ---------------------------------------------------------------- caption groups (2–5 words)
-KEY = {"boring", "smarter", "ai", "automation", "interrupting", "crm", "review.", "review", "approved", "attention.",
-       "summaries", "check.", "updated.", "right", "connected", "rules,", "person", "smoothly?", "automation.", "workflow", "inbox.", "follow"}
+KEY = {"cold", "agent", "connected", "workflows.", "enquiries.", "crm,", "crm", "ai", "buyers.", "whatsapp", "criteria.", "approve,", "calendar.", "interested.", "rules,", "approving", "workflow", "follow", "9", "pm.", "another", "loan."}
 FUNC = {"in", "to", "the", "a", "and", "your", "when", "of", "for", "into", "can", "keep", "let"}
 groups, cur = [], []
 for i, w in enumerate(words):

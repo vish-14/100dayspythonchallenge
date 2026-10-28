@@ -4,8 +4,8 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 54.0,
-    "output": "ai_automations_sri_final.mp4"
+    "duration": 74.6,
+    "output": "reel.mp4"
   },
   "brand": {
     "company": "Sri Trilinga Technologies",
@@ -48,7 +48,7 @@
   "scenes": [
     {
       "id": "hook",
-      "chapter": "00 / THE OPPORTUNITY",
+      "chapter": "00 / THE LEAK",
       "counter": "00 / 04",
       "theme": "dark",
       "layout": "takeover-then-split"
@@ -61,29 +61,36 @@
       "layout": "split"
     },
     {
+      "id": "solution",
+      "chapter": "00 / THE SOLUTION",
+      "counter": "00 / 04",
+      "theme": "dark",
+      "layout": "split"
+    },
+    {
       "id": "a1",
-      "chapter": "01 / CAPTURE ENQUIRIES",
+      "chapter": "01 / RESPOND TO ENQUIRIES",
       "counter": "01 / 04",
       "theme": "dark",
       "layout": "split"
     },
     {
       "id": "a2",
-      "chapter": "02 / FOLLOW UP",
+      "chapter": "02 / QUALIFY BUYERS",
       "counter": "02 / 04",
       "theme": "blue",
       "layout": "split"
     },
     {
       "id": "a3",
-      "chapter": "03 / PROCESS DOCUMENTS",
+      "chapter": "03 / ROUTE + BOOK",
       "counter": "03 / 04",
       "theme": "dark",
       "layout": "split"
     },
     {
       "id": "a4",
-      "chapter": "04 / KEEP TEAMS UPDATED",
+      "chapter": "04 / FOLLOW UP",
       "counter": "04 / 04",
       "theme": "blue",
       "layout": "split"
@@ -105,137 +112,140 @@
   ],
   "copy": {
     "hook": {
-      "num": "4",
-      "word_a": "B",
-      "word_b": "RING",
-      "word2": "TASKS",
-      "sub": "ONE SMARTER WORKFLOW",
-      "typed": "AI AUTOMATION",
-      "nodes": [
-        "ENQUIRIES",
-        "FOLLOW-UPS",
-        "DOCUMENTS",
-        "UPDATES"
-      ]
+      "kicker": "PROPERTY AGENTS · BROKERS",
+      "l1": "YOUR ENQUIRIES",
+      "l2": "GO COLD",
+      "card_k": "NEW ENQUIRY · PROPERTY PORTAL",
+      "card_v": "2BHK enquiry · Whitefield",
+      "unread": "UNANSWERED",
+      "viewing": "YOU · ON A SITE VISIT"
     },
     "problem": {
-      "cards": [
-        "INBOX",
-        "FOLLOW-UPS",
-        "TEAM CHAT",
-        "WEEKLY_REPORT.XLSX"
-      ],
-      "queue": [
-        "Enquiries",
-        "Follow-ups",
-        "Updates",
-        "Reports"
-      ],
-      "queue_title": "ONE QUEUE"
+      "clock_a": "9:04 PM",
+      "clock_b": "8:30 AM",
+      "buyer": "Buyer · property portal",
+      "ask": "Is the 2BHK still available? Can I see it this week?",
+      "reply": "Hi! Yes, it's still available.",
+      "seen": "Seen · no reply",
+      "other_k": "ANOTHER BROKER · 9:06 PM",
+      "other_v": "On a call with your buyer"
     },
     "a1": {
       "num": "01",
       "title": [
-        "CAPTURE",
+        "RESPOND TO",
         "ENQUIRIES"
       ],
       "steps": [
-        "ENQUIRY",
+        "PORTAL",
         "CRM",
-        "AI DRAFT",
-        "REVIEW"
+        "AI REPLY",
+        "SENT"
       ],
-      "from": "Priya Nair",
-      "email": "priya@example.com",
-      "message": "Hi! Can you cater for 40 people this Friday?",
+      "from": "Ananya R.",
+      "src": "Property portal · 9:04 PM",
+      "message": "Is the 2BHK in Whitefield still available? Can I see it this week?",
       "draft": [
-        "Hi Priya, thanks for reaching out!",
-        "Yes, we can cater for 40 on Friday.",
-        "Sharing our menu and a quote shortly."
-      ]
+        "Hi Ananya, thanks for your enquiry!",
+        "Yes, it's available. Site visits Thu–Sat.",
+        "What budget and possession date suit you?"
+      ],
+      "sent": "Sent ✓ 9:05 PM",
+      "tone": "Style: yours"
     },
     "a2": {
       "num": "02",
+      "title": [
+        "QUALIFY",
+        "BUYERS"
+      ],
+      "qs": [
+        "What's your budget?",
+        "Which location do you prefer?",
+        "When do you plan to buy?",
+        "Do you need a home loan?"
+      ],
+      "lead": "Ananya R.",
+      "fields": [
+        [
+          "BUDGET",
+          "₹85L – 1Cr"
+        ],
+        [
+          "LOCATION",
+          "Whitefield"
+        ],
+        [
+          "TIMELINE",
+          "Within 2 months"
+        ],
+        [
+          "HOME LOAN",
+          "Yes, pre-approved"
+        ]
+      ],
+      "score": "HOT LEAD"
+    },
+    "a3": {
+      "num": "03",
+      "title": [
+        "ROUTE",
+        "+ BOOK"
+      ],
+      "alert_k": "WhatsApp · AI agent alert",
+      "lead": "Ananya R. · meets criteria",
+      "detail": "2BHK Whitefield · ₹85L–1Cr",
+      "slot_q": "Site visit: Sat 11:00?",
+      "approve": "Approve",
+      "change": "Change",
+      "cal_k": "Calendar · Sat",
+      "slots": [
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00"
+      ],
+      "booked": "Site visit · Ananya R.",
+      "stamp": "Booked ✓"
+    },
+    "a4": {
+      "num": "04",
       "title": [
         "FOLLOW",
         "UP"
       ],
       "days": [
-        "DAY 1",
-        "DAY 3",
-        "DAY 7"
+        "DAY 2",
+        "DAY 7",
+        "DAY 14"
       ],
-      "lead": "Rahul M.",
-      "lead_sub": "Quote sent",
-      "reminder": "Follow up with Rahul",
-      "message": "Hi Rahul, just checking in on the quote."
-    },
-    "a3": {
-      "num": "03",
-      "title": [
-        "PROCESS",
-        "DOCUMENTS"
-      ],
-      "doc": "INVOICE_0457.PDF",
-      "fields": [
-        [
-          "SUPPLIER",
-          "Northline Supplies"
-        ],
-        [
-          "INVOICE",
-          "#0457"
-        ],
-        [
-          "AMOUNT",
-          "₹48,200"
-        ],
-        [
-          "DUE",
-          "15 Nov"
-        ]
-      ],
-      "summary": [
-        "Invoice #0457 from Northline",
-        "₹48,200 due on 15 Nov",
-        "Matches the purchase order"
-      ]
-    },
-    "a4": {
-      "num": "04",
-      "title": [
-        "KEEP TEAMS",
-        "UPDATED"
-      ],
-      "task": "Order #214 · Catering",
-      "status_a": "IN PROGRESS",
-      "status_b": "DONE",
-      "summary": "Order delivered · invoice sent",
-      "teams": [
-        "SALES",
-        "OPERATIONS",
-        "FINANCE"
-      ]
+      "lead": "Rohan K.",
+      "lead_sub": "Not ready yet",
+      "checkin": "Hi Rohan, any questions on the flats you saw?",
+      "match_k": "NEW MATCH",
+      "match_v": "3BHK · Indiranagar",
+      "match_s": "Fits budget + area",
+      "warm": "Still interested ✓"
     },
     "key": {
       "q": "THE KEY?",
       "nodes": [
-        "ENQUIRY",
+        "PORTALS",
         "CRM",
-        "AI DRAFT",
-        "TEAM"
+        "AI AGENT",
+        "CALENDAR"
       ],
       "emph": [
         "CONNECTED TOOLS",
         "CLEAR RULES",
-        "HUMAN REVIEW"
+        "YOU APPROVE"
       ],
       "rules": [
         "IF new lead",
-        "IF approved"
+        "IF hot"
       ],
-      "exception": "Missing PO number",
-      "review": "Assigned for human review"
+      "exception": "Site visit request · Sat 11:00",
+      "review": "Waiting for your approval"
     },
     "cta": {
       "line1": "Want this workflow",
@@ -255,73 +265,80 @@
       "step2": "STEP 2",
       "dm_note": "Follow first, so my reply can reach your DMs",
       "line1b": "built for your"
+    },
+    "solution": {
+      "kicker": "THE SOLUTION",
+      "h1a": "MY AI",
+      "h1b": "AGENT",
+      "h2": "FOR PROPERTY AGENTS",
+      "nodes": [
+        "RESPOND",
+        "QUALIFY",
+        "ROUTE + BOOK",
+        "FOLLOW UP"
+      ],
+      "pill": "4 CONNECTED WORKFLOWS"
     }
   },
   "sfx": [
     {
       "file": "impact-bass-1.mp3",
-      "word": "hook:tasks.",
-      "offset": 0.0,
+      "word": "hook:cold",
+      "offset": 0,
       "volume": 0.35
     },
     {
       "file": "whoosh.mp3",
-      "word": "hook:One",
+      "word": "hook:while",
       "offset": -0.05,
+      "volume": 0.4
+    },
+    {
+      "file": "notification.mp3",
+      "word": "hook:visits.",
+      "offset": 0,
+      "volume": 0.22
+    },
+    {
+      "file": "pop.mp3",
+      "word": "problem:enquires",
+      "offset": 0.0,
+      "volume": 0.4
+    },
+    {
+      "file": "click-soft.mp3",
+      "word": "problem:9",
+      "offset": 0,
       "volume": 0.45
     },
     {
       "file": "whoosh-short.mp3",
-      "word": "hook:workflow.",
-      "offset": -0.05,
-      "volume": 0.35
-    },
-    {
-      "file": "key-press.mp3",
-      "word": "hook:AI",
-      "offset": 0.0,
-      "volume": 0.25
-    },
-    {
-      "file": "pop.mp3",
-      "word": "problem:Enquiries,",
-      "offset": 0.03,
-      "volume": 0.4
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "problem:follow-ups,",
-      "offset": 0.0,
+      "word": "problem:morning.",
+      "offset": -0.1,
       "volume": 0.3
     },
     {
       "file": "pop.mp3",
-      "word": "problem:updates,",
-      "offset": 0.03,
-      "volume": 0.35
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "problem:reports.",
-      "offset": 0.0,
+      "word": "problem:reply",
+      "offset": 0,
       "volume": 0.3
     },
     {
-      "file": "click-soft.mp3",
-      "word": "problem:interrupting",
-      "offset": 0.17,
-      "volume": 0.5
+      "file": "ping.mp3",
+      "word": "problem:another",
+      "offset": 0,
+      "volume": 0.22
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a1:One:",
-      "offset": 0.0,
+      "word": "a1:First,",
+      "offset": 0,
       "volume": 0.3
     },
     {
       "file": "notification.mp3",
-      "word": "a1:enquiries.",
-      "offset": 0.0,
+      "word": "a1:portals",
+      "offset": 0,
       "volume": 0.22
     },
     {
@@ -331,88 +348,112 @@
       "volume": 0.5
     },
     {
+      "file": "typing.mp3",
+      "word": "a1:AI",
+      "offset": 0.3,
+      "volume": 0.18
+    },
+    {
       "file": "pop.mp3",
-      "word": "a1:reply",
-      "offset": 0.0,
+      "word": "a1:away,",
+      "offset": 0,
       "volume": 0.35
     },
     {
+      "file": "click-soft.mp3",
+      "word": "a1:style.",
+      "offset": 0,
+      "volume": 0.45
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a2:Second,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a2:budget,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a2:location,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a2:timeline,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "a2:loan.",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "ping.mp3",
+      "word": "a2:loan.",
+      "offset": 0.45,
+      "volume": 0.22
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "a3:Third,",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "notification.mp3",
+      "word": "a3:alerts",
+      "offset": 0,
+      "volume": 0.25
+    },
+    {
       "file": "click.mp3",
-      "word": "a1:review.",
-      "offset": 0.0,
+      "word": "a3:approve,",
+      "offset": 0.1,
       "volume": 0.55
     },
     {
-      "file": "impact-bass-1.mp3",
-      "word": "a2:Two:",
-      "offset": 0.0,
-      "volume": 0.3
-    },
-    {
-      "file": "ping.mp3",
-      "word": "a2:reminders",
-      "offset": 0.0,
-      "volume": 0.25
-    },
-    {
       "file": "whoosh-short.mp3",
-      "word": "a2:approved",
-      "offset": 0.0,
+      "word": "a3:site_2",
+      "offset": 0,
       "volume": 0.3
     },
     {
       "file": "pop.mp3",
-      "word": "a2:lead",
-      "offset": 0.05,
+      "word": "a3:calendar.",
+      "offset": 0.1,
       "volume": 0.35
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "a3:Three:",
-      "offset": 0.0,
+      "word": "a4:Fourth,",
+      "offset": 0,
       "volume": 0.3
     },
     {
       "file": "whoosh-short.mp3",
-      "word": "a3:Extract",
-      "offset": 0.0,
-      "volume": 0.25
-    },
-    {
-      "file": "pop.mp3",
-      "word": "a3:key",
-      "offset": 0.05,
-      "volume": 0.3
-    },
-    {
-      "file": "click.mp3",
-      "word": "a3:check.",
-      "offset": 0.05,
-      "volume": 0.5
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "a4:Four:",
-      "offset": 0.0,
-      "volume": 0.3
-    },
-    {
-      "file": "click.mp3",
-      "word": "a4:changes",
-      "offset": 0.0,
-      "volume": 0.5
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "a4:useful",
-      "offset": 0.0,
+      "word": "a4:check-ins",
+      "offset": 0,
       "volume": 0.25
     },
     {
       "file": "ping.mp3",
-      "word": "a4:right",
-      "offset": 0.0,
-      "volume": 0.2
+      "word": "a4:properties",
+      "offset": 0,
+      "volume": 0.22
+    },
+    {
+      "file": "click-soft.mp3",
+      "word": "a4:interested.",
+      "offset": 0,
+      "volume": 0.45
     },
     {
       "file": "whoosh.mp3",
@@ -423,25 +464,31 @@
     {
       "file": "impact-bass-1.mp3",
       "word": "key:key?",
-      "offset": 0.0,
+      "offset": 0,
       "volume": 0.4
     },
     {
       "file": "pop.mp3",
-      "word": "key:Connected",
-      "offset": 0.0,
+      "word": "key:Portals,",
+      "offset": 0,
       "volume": 0.3
     },
     {
       "file": "pop.mp3",
-      "word": "key:clear",
-      "offset": 0.0,
+      "word": "key:CRM",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "pop.mp3",
+      "word": "key:calendar",
+      "offset": 0,
       "volume": 0.3
     },
     {
       "file": "click-soft.mp3",
-      "word": "key:person",
-      "offset": 0.0,
+      "word": "key:approving",
+      "offset": 0,
       "volume": 0.5
     },
     {
@@ -479,6 +526,36 @@
       "word": "cta:DMs.",
       "offset": 0.0,
       "volume": 0.25
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "solution:That's",
+      "offset": -0.15,
+      "volume": 0.4
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "solution:AI",
+      "offset": 0,
+      "volume": 0.35
+    },
+    {
+      "file": "pop.mp3",
+      "word": "solution:four",
+      "offset": 0,
+      "volume": 0.3
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "solution:connected",
+      "offset": 0,
+      "volume": 0.28
+    },
+    {
+      "file": "ping.mp3",
+      "word": "solution:workflows.",
+      "offset": 0.3,
+      "volume": 0.22
     }
   ]
 }

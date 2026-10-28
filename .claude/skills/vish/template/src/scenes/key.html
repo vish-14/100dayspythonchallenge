@@ -10,7 +10,7 @@
     .k-rule { position: absolute; top: 338px; font-size: 18px; padding: 6px 10px; }
     #key-flag { position: absolute; left: 640px; top: 360px; width: 48px; height: 48px; border-radius: 50%; background: var(--paper); color: var(--ink);
       font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 32px; display: flex; align-items: center; justify-content: center; }
-    #key-branch { position: absolute; left: 668px; top: 480px; width: 4px; height: 120px; background: var(--paper); transform-origin: 50% 0; }
+    #key-branch { position: absolute; left: 668px; top: 532px; width: 4px; height: 68px; background: var(--paper); transform-origin: 50% 0; }
     #key-human { left: 446px; top: 600px; width: 578px; height: 150px; display: flex; align-items: center; gap: 22px; padding: 0 24px; }
     #key-who { width: 74px; height: 74px; border-radius: 50%; background: var(--blue); position: relative; flex: none; }
     #key-who::before { content: ""; position: absolute; left: 25px; top: 13px; width: 24px; height: 24px; border-radius: 50%; background: #fff; }
@@ -42,7 +42,7 @@
     <div id="key-r2" class="k-rule tag ghost mono" style="left:462px;color:var(--paper)">{{c.rules.1}}</div>
     <div id="key-branch"></div>
     <div id="key-flag">!</div>
-    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">Human review</span><div class="k-v">{{c.exception}}</div><div class="k-k" style="margin-top:6px">{{c.review}}</div></div></div>
+    <div id="key-human" class="card"><div id="key-who"></div><div><span class="tag ink">You approve</span><div class="k-v">{{c.exception}}</div><div class="k-k" style="margin-top:6px">{{c.review}}</div></div></div>
     <div id="key-emph">
       <div id="key-ecount" class="mono"><span id="key-ec1">01</span><span id="key-ec2" style="position:absolute;left:0;right:0;opacity:0">02</span><span id="key-ec3" style="position:absolute;left:0;right:0;opacity:0">03</span></div>
       <div class="mask" style="position:absolute;left:0;top:30px;width:1080px;height:140px">
@@ -58,18 +58,22 @@
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
       // "The key?" fills the screen, then becomes the scene's label
-      tl.fromTo("#key-q", { scale: 1.35, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "power4.out" }, W.key - 0.12);
-      tl.to("#key-q", { y: -215, scale: 0.42, duration: 0.45, ease: "power3.inOut" }, W.connected - 0.25);
-      // the complete workflow runs, every step checks
-      tl.fromTo(["#key-n1", "#key-n2", "#key-n3", "#key-n4"], { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, stagger: 0.06, ease: "back.out(2)" }, W.connected - 0.1);
-      tl.fromTo(["#key-l1", "#key-l2", "#key-l3"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.connected);
-      tl.fromTo(["#key-lb1", "#key-lb2", "#key-lb3", "#key-lb4"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.05 }, W.connected + 0.1);
+      tl.fromTo("#key-q", { scale: 1.35, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "power4.out" }, Math.max(0, W.key - 0.12));
+      tl.to("#key-q", { y: -215, scale: 0.42, duration: 0.4, ease: "power3.inOut" }, W.portals - 0.15);
+      // one node per tool as it is named: portals, CRM, the AI agent, calendar
+      const N = [W.portals, W.crm, W.and, W.calendar];
+      N.forEach((t, i) => {
+        tl.fromTo(`#key-n${i + 1}`, { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, t - 0.05);
+        tl.fromTo(`#key-lb${i + 1}`, { opacity: 0 }, { opacity: 1, duration: 0.25 }, t + 0.05);
+        if (i > 0) tl.fromTo(`#key-l${i}`, { opacity: 0 }, { opacity: 1, duration: 0.2 }, t - 0.1);
+      });
+      // "connected": every step checks in sequence
       tl.set(["#key-c1", "#key-c2", "#key-c3", "#key-c4"], { scale: 0 }, 0);
       tl.set(["#key-f1", "#key-f2", "#key-f3"], { scaleX: 0 }, 0);
       [0, 1, 2, 3].forEach((i) => {
-        const t = W.connected + 0.25 + i * 0.22;
+        const t = W.connected + i * 0.16;
         tl.to(`#key-c${i + 1}`, { scale: 1, duration: 0.18, ease: "back.out(3)" }, t);
-        if (i < 3) tl.to(`#key-f${i + 1}`, { scaleX: 1, duration: 0.2, ease: "none" }, t + 0.04);
+        if (i < 3) tl.to(`#key-f${i + 1}`, { scaleX: 1, duration: 0.16, ease: "none" }, t + 0.04);
       });
       // emphasis words below the caption band, one per beat
       tl.fromTo("#key-emph", { opacity: 0 }, { opacity: 1, duration: 0.01 }, W.connected - 0.05);
@@ -79,16 +83,16 @@
       tl.set("#key-ec1", { opacity: 0 }, W.clear); tl.set("#key-ec2", { opacity: 1 }, W.clear);
       // "clear rules": conditions sit on the connectors
       tl.fromTo(["#key-r1", "#key-r2"], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.26, stagger: 0.1, ease: "back.out(2)" }, W.clear);
-      // "a person ready when something needs attention": one item branches to human review
-      tl.to("#key-e2", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.person - 0.22);
-      tl.fromTo("#key-e3", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.person - 0.04);
-      tl.set("#key-ec2", { opacity: 0 }, W.person); tl.set("#key-ec3", { opacity: 1 }, W.person);
-      tl.to("#key-c3", { scale: 0, duration: 0.12 }, W.person - 0.1);
-      tl.to("#key-n3", { borderColor: "#F5F5F7", duration: 0.15 }, W.person - 0.1);
-      tl.fromTo("#key-flag", { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(3)" }, W.person - 0.05);
-      tl.fromTo("#key-branch", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.out" }, W.ready - 0.1);
-      tl.fromTo("#key-human", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.ready + 0.12);
-      tl.to("#key-human", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.attention);
+      // "you approving what matters": the AI agent hands the viewing request to you
+      tl.to("#key-e2", { yPercent: -110, opacity: 0, duration: 0.26, ease: "power3.in" }, W.you - 0.22);
+      tl.fromTo("#key-e3", { yPercent: 110, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.34, ease: "power4.out" }, W.you - 0.04);
+      tl.set("#key-ec2", { opacity: 0 }, W.you); tl.set("#key-ec3", { opacity: 1 }, W.you);
+      tl.to("#key-c3", { scale: 0, duration: 0.12 }, W.you - 0.1);
+      tl.to("#key-n3", { borderColor: "#F5F5F7", duration: 0.15 }, W.you - 0.1);
+      tl.fromTo("#key-flag", { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(3)" }, W.you - 0.05);
+      tl.fromTo("#key-branch", { scaleY: 0 }, { scaleY: 1, duration: 0.3, ease: "power2.out" }, W.approving - 0.1);
+      tl.fromTo("#key-human", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.approving + 0.12);
+      tl.to("#key-human", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.matters);
       window.__timelines["key"] = tl;
     })();
   </script>

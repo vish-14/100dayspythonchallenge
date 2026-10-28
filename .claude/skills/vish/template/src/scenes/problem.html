@@ -1,55 +1,37 @@
 <template>
   <style>
     {{BASE_CSS}}
-    .pb-row { display: flex; align-items: center; gap: 14px; padding: 14px 24px; border-bottom: 2px solid #ECEEF2; font-size: 24px; font-weight: 600; color: #1B2230; }
-    .pb-row small { margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #5B6372; font-weight: 500; }
-    .pb-ico { width: 34px; height: 34px; border-radius: 9px; background: #E3E8F6; flex: none; }
-    .pb-badge { position: absolute; top: -18px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: var(--ink); color: #fff;
-      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; display: flex; align-items: center; justify-content: center; }
-    .pb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 18px 22px; }
-    .pb-grid i { height: 30px; border-radius: 6px; background: #E3E6EC; }
-    .pb-grid i.h { background: #CBD6F7; }
-    .pb-chat { margin: 14px 22px 0; padding: 12px 16px; border-radius: 14px; background: #EEF1F6; font-size: 22px; font-weight: 600; color: #1B2230; width: fit-content; }
-    .pb-chat.r { margin-left: auto; background: #DCE5FD; }
-    #pb-queue { left: 90px; top: 300px; width: 900px; height: 540px; }
-    .pb-q { display: flex; align-items: center; gap: 22px; height: 110px; padding: 0 34px; border-bottom: 2px solid #ECEEF2; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--ink); }
-    .pb-q .box { width: 40px; height: 40px; border-radius: 10px; border: 4px solid var(--blue); flex: none; }
-    .pb-q .st { margin-left: auto; }
+    #pb-clock { position: absolute; left: 56px; top: 262px; width: 470px; height: 130px; }
+    #pb-clock .disp { position: absolute; left: 0; top: 0; font-size: 124px; color: var(--paper); white-space: nowrap; }
+    #pb-clab { position: absolute; left: 60px; top: 396px; width: 460px; height: 30px; font-size: 22px; color: rgba(245,245,247,.86); }
+    #pb-clab span { position: absolute; left: 0; top: 0; }
+    #pb-other { left: 560px; top: 262px; width: 464px; height: 150px; padding: 20px 24px; overflow: visible; }
+    .pb-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .pb-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 28px; color: var(--ink); margin-top: 10px; display: flex; align-items: center; gap: 12px; }
+    #pb-live { width: 18px; height: 18px; border-radius: 50%; background: var(--blue); flex: none; }
+    #pb-chat { left: 56px; top: 450px; width: 968px; height: 410px; }
+    .pb-lab { margin: 22px 30px 0; }
+    .pb-bub { margin: 10px 30px 0; padding: 18px 24px; border-radius: 20px; font-size: 30px; font-weight: 600; color: #141A24; width: fit-content; max-width: 720px; line-height: 1.25; }
+    #pb-b1 { background: #EEF1F6; border-top-left-radius: 6px; }
+    #pb-b2 { background: #DCE5FD; margin-left: auto; margin-right: 30px; border-top-right-radius: 6px; }
+    #pb-meta { display: flex; justify-content: flex-end; gap: 16px; margin: 10px 30px 0; font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .1em; color: #5B6372; }
+    #pb-seen { color: var(--ink); font-weight: 700; }
+    #pb-ca, #pb-cb, #pb-la, #pb-lb, #pb-b1, #pb-l1, #pb-b2, #pb-meta, #pb-seen { opacity: 0; }
   </style>
   <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
     <div id="problem-bg" class="panel bg-blue"></div>
-    <div id="pb-c1" class="card" style="left:66px;top:296px;width:520px;height:300px" data-layout-allow-overlap>
-      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.0}}</div>
-      <div class="pb-row"><span class="pb-ico"></span>New enquiry<small>09:12</small></div>
-      <div class="pb-row"><span class="pb-ico"></span>Quote request<small>09:40</small></div>
-      <div class="pb-row"><span class="pb-ico"></span>Booking question<small>10:05</small></div>
-      <div id="pb-b1" class="pb-badge">3</div>
+    <div id="pb-clock"><div id="pb-ca" class="disp">{{c.clock_a}}</div><div id="pb-cb" class="disp">{{c.clock_b}}</div></div>
+    <div id="pb-clab" class="mono"><span id="pb-la">BUYER ENQUIRES</span><span id="pb-lb">YOU REPLY</span></div>
+    <div id="pb-other" class="card">
+      <div class="pb-k">{{c.other_k}}</div>
+      <div class="pb-v"><span id="pb-live"></span>{{c.other_v}}</div>
     </div>
-    <div id="pb-c2" class="card" style="left:500px;top:286px;width:500px;height:300px" data-layout-allow-overlap>
-      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.1}}</div>
-      <div class="pb-row"><span class="pb-ico"></span>Call back<small>TODAY</small></div>
-      <div class="pb-row"><span class="pb-ico"></span>Send the quote<small>TODAY</small></div>
-      <div class="pb-row"><span class="pb-ico"></span>Check in<small>FRI</small></div>
-      <div id="pb-b2" class="pb-badge">5</div>
-    </div>
-    <div id="pb-c3" class="card" style="left:110px;top:560px;width:470px;height:290px" data-layout-allow-overlap>
-      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.2}}</div>
-      <div class="pb-chat">Any update on #214?</div>
-      <div class="pb-chat r">Checking now…</div>
-      <div class="pb-chat">Status?</div>
-      <div id="pb-b3" class="pb-badge">2</div>
-    </div>
-    <div id="pb-c4" class="card" style="left:536px;top:548px;width:470px;height:300px" data-layout-allow-overlap>
-      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.cards.3}}</div>
-      <div class="pb-grid"><i class="h"></i><i class="h"></i><i class="h"></i><i class="h"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <div id="pb-b4" class="pb-badge">1</div>
-    </div>
-    <div id="pb-queue" class="card">
-      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.queue_title}}</div>
-      <div id="pb-q1" class="pb-q"><span class="box"></span>{{c.queue.0}}<span class="st tag ghost" style="color:#4E5666">Queued</span></div>
-      <div id="pb-q2" class="pb-q"><span class="box"></span>{{c.queue.1}}<span class="st tag ghost" style="color:#4E5666">Queued</span></div>
-      <div id="pb-q3" class="pb-q"><span class="box"></span>{{c.queue.2}}<span class="st tag ghost" style="color:#4E5666">Queued</span></div>
-      <div id="pb-q4" class="pb-q" style="border:none"><span class="box"></span>{{c.queue.3}}<span class="st tag ghost" style="color:#4E5666">Queued</span></div>
+    <div id="pb-chat" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;Portal · messages</div>
+      <div id="pb-l1" class="pb-k pb-lab">{{c.buyer}}</div>
+      <div id="pb-b1" class="pb-bub">{{c.ask}}</div>
+      <div id="pb-b2" class="pb-bub">{{c.reply}}</div>
+      <div id="pb-meta"><span id="pb-time">8:31 AM</span><span id="pb-seen">{{c.seen}}</span></div>
     </div>
     {{CHROME}}
   </div>
@@ -57,26 +39,24 @@
     (() => {
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
-      const IN = [
-        ["#pb-c1", W.enquiries, { x: -260, y: 30, rotation: -12 }, -4],
-        ["#pb-c2", W.followups, { x: 260, y: -20, rotation: 10 }, 3],
-        ["#pb-c3", W.updates, { x: -40, y: 300, rotation: 6 }, 2.5],
-        ["#pb-c4", W.reports, { x: 200, y: 260, rotation: -9 }, -3],
-      ];
-      // each card lands on its word, from a different direction, and settles at a slight angle
-      IN.forEach(([id, t, from, rot]) => {
-        tl.fromTo(id, { ...from, opacity: 0, scale: 0.9 }, { x: 0, y: 0, rotation: rot, opacity: 1, scale: 1, duration: 0.42, ease: "expo.out" }, t - 0.06);
-      });
-      // small jobs keep interrupting: badges pop one by one, the pile tilts further
-      ["#pb-b1", "#pb-b2", "#pb-b3", "#pb-b4"].forEach((b, i) => {
-        tl.fromTo(b, { scale: 0 }, { scale: 1, duration: 0.24, ease: "back.out(3)" }, W.small + i * 0.14);
-      });
-            // "interrupting your day": the clutter compresses into one organised queue
-      ["#pb-c1", "#pb-c2", "#pb-c3", "#pb-c4"].forEach((c, i) => {
-        tl.to(c, { x: [180, -150, 160, -170][i], y: [120, 150, -60, -40][i], rotation: 0, scale: 0.35, opacity: 0, duration: 0.36, ease: "power3.in" }, W.interrupting - 0.05 + i * 0.03);
-      });
-      tl.fromTo("#pb-queue", { opacity: 0, scale: 0.86 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }, W.interrupting + 0.22);
-      tl.fromTo(["#pb-q1", "#pb-q2", "#pb-q3", "#pb-q4"], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.26, stagger: 0.06, ease: "power2.out" }, W.interrupting + 0.3);
+      // "A buyer enquires": the conversation opens, the message lands
+      tl.fromTo("#pb-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.a - 0.1);
+      tl.fromTo("#pb-l1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.buyer);
+      tl.fromTo("#pb-b1", { opacity: 0, scale: 0.8, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.enquires);
+      // "at 9 PM": the clock
+      tl.fromTo("#pb-ca", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, W["9"] - 0.08);
+      tl.to("#pb-la", { opacity: 1, duration: 0.25 }, W["9"] + 0.1);
+      // "the next morning": the clock flips
+      tl.to("#pb-ca", { rotationX: 90, opacity: 0, duration: 0.18, ease: "power2.in" }, W.next - 0.12);
+      tl.fromTo("#pb-cb", { rotationX: -90, opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.24, ease: "power2.out" }, W.next + 0.06);
+      tl.set("#pb-la", { opacity: 0 }, W.next); tl.set("#pb-lb", { opacity: 1 }, W.next + 0.1);
+      tl.fromTo("#pb-b2", { opacity: 0, scale: 0.8, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.morning);
+      tl.fromTo("#pb-meta", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.morning + 0.25);
+      // "another agent is already talking to them"
+      tl.fromTo("#pb-other", { opacity: 0, x: 300, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: 0.45, ease: "expo.out" }, W.another - 0.08);
+      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.broker);
+      tl.fromTo("#pb-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.talking);
+      tl.to("#pb-b2", { opacity: 0.45, duration: 0.3 }, W.talking + 0.1);
       tl.fromTo("#problem-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();

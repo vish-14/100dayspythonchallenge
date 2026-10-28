@@ -45,9 +45,9 @@ Link in bio: the SuperProfile page, titled **"Get your free workflow →"**.
 [Hook line that names the pain, ≤125 characters] ⏳
 
 [2–3 short lines framing the problem]
-Here's how AI automation handles it, while you stay in control 👇
+That's why I built an AI agent for [audience], with [4] connected workflows. You stay in control 👇
 
-1️⃣ [Step]: [what it does, using a searchable phrase]
+1️⃣ [Workflow name, same as in the video]: [what it does, using a searchable phrase]
 2️⃣ …
 3️⃣ …
 
