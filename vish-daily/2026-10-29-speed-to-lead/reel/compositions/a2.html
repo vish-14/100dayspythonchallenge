@@ -54,10 +54,10 @@
       <div class="bar"><span class="dot b"></span>&nbsp;CRM · Ananya R.</div>
       <span id="a2-score" class="tag blue">HOT LEAD</span>
       <div id="a2-grid">
-        <div class="a2-f"><div class="a2-k">BUDGET</div><div class="a2-slot"><i>—</i><b id="a2-v0">₹85L – 1Cr</b></div></div>
-        <div class="a2-f"><div class="a2-k">AREA</div><div class="a2-slot"><i>—</i><b id="a2-v1">Whitefield</b></div></div>
-        <div class="a2-f"><div class="a2-k">TIMELINE</div><div class="a2-slot"><i>—</i><b id="a2-v2">Within 2 months</b></div></div>
-        <div class="a2-f"><div class="a2-k">PAYING</div><div class="a2-slot"><i>—</i><b id="a2-v3">Home loan, approved</b></div></div>
+        <div class="a2-f"><div class="a2-k">BUDGET</div><div class="a2-slot"><i id="a2-p0">—</i><b id="a2-v0">₹85L – 1Cr</b></div></div>
+        <div class="a2-f"><div class="a2-k">AREA</div><div class="a2-slot"><i id="a2-p1">—</i><b id="a2-v1">Whitefield</b></div></div>
+        <div class="a2-f"><div class="a2-k">TIMELINE</div><div class="a2-slot"><i id="a2-p2">—</i><b id="a2-v2">Within 2 months</b></div></div>
+        <div class="a2-f"><div class="a2-k">PAYING</div><div class="a2-slot"><i id="a2-p3">—</i><b id="a2-v3">Home loan, approved</b></div></div>
       </div>
     </div>
     <div id="a2-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>02 / 04</span></div><div id="a2-chrome-bot" class="chrome bot mono t-blue"><span>02 / QUALIFY</span><span class="prog"><i id="a2-prog"></i></span></div>
@@ -80,6 +80,7 @@
       });
       A.forEach((t, i) => {
         tl.fromTo(`#a2-v${i}`, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, t);
+        tl.set(`#a2-p${i}`, { opacity: 0 }, t);
         tl.set(`#a2-v${i}`, { backgroundColor: "#DCE5FD" }, t);
         tl.to(`#a2-v${i}`, { backgroundColor: "rgba(220,229,253,0)", duration: 0.5 }, t + 0.2);
       });

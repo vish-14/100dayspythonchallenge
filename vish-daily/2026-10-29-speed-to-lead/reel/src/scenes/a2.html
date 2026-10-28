@@ -30,10 +30,10 @@
       <div class="bar"><span class="dot b"></span>&nbsp;CRM · {{c.lead}}</div>
       <span id="a2-score" class="tag blue">{{c.score}}</span>
       <div id="a2-grid">
-        <div class="a2-f"><div class="a2-k">{{c.fields.0.0}}</div><div class="a2-slot"><i>—</i><b id="a2-v0">{{c.fields.0.1}}</b></div></div>
-        <div class="a2-f"><div class="a2-k">{{c.fields.1.0}}</div><div class="a2-slot"><i>—</i><b id="a2-v1">{{c.fields.1.1}}</b></div></div>
-        <div class="a2-f"><div class="a2-k">{{c.fields.2.0}}</div><div class="a2-slot"><i>—</i><b id="a2-v2">{{c.fields.2.1}}</b></div></div>
-        <div class="a2-f"><div class="a2-k">{{c.fields.3.0}}</div><div class="a2-slot"><i>—</i><b id="a2-v3">{{c.fields.3.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.0.0}}</div><div class="a2-slot"><i id="a2-p0">—</i><b id="a2-v0">{{c.fields.0.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.1.0}}</div><div class="a2-slot"><i id="a2-p1">—</i><b id="a2-v1">{{c.fields.1.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.2.0}}</div><div class="a2-slot"><i id="a2-p2">—</i><b id="a2-v2">{{c.fields.2.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.3.0}}</div><div class="a2-slot"><i id="a2-p3">—</i><b id="a2-v3">{{c.fields.3.1}}</b></div></div>
       </div>
     </div>
     {{CHROME}}
@@ -56,6 +56,7 @@
       });
       A.forEach((t, i) => {
         tl.fromTo(`#a2-v${i}`, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, t);
+        tl.set(`#a2-p${i}`, { opacity: 0 }, t);
         tl.set(`#a2-v${i}`, { backgroundColor: "#DCE5FD" }, t);
         tl.to(`#a2-v${i}`, { backgroundColor: "rgba(220,229,253,0)", duration: 0.5 }, t + 0.2);
       });
