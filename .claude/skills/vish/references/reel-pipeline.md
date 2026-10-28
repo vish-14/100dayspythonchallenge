@@ -21,7 +21,9 @@ npx hyperframes models install parakeet --json < /dev/null   # word timestamps
 
 # 1. Script: one entry per scene in tools/script.json
 #    {"id","label","say" (what the voice reads; spell C R M etc.),"text" (captions),"speed" (1.0; CTA 1.1)}
-# 2. Voice: Kokoro voice hm_omega (Indian English male), one clip per scene, short pauses
+# 2. Voice: the "Vish warm voice" = Kokoro am_michael at 1.0× (CTA 1.05×), one clip per scene, short pauses.
+#    Then clarity EQ: ffmpeg -af "highpass=f=80,equalizer=f=250:t=q:w=1:g=-2,equalizer=f=3200:t=q:w=1.2:g=3"
+#    (hm_omega was dropped: it sounded muffled on phone speakers.)
 cd tools && python3 make_vo.py && cp voiceover.wav ../assets/audio/voiceover.wav && rm voiceover.wav && cd ..
 # 3. Real word timings from the actual audio
 npx hyperframes transcribe assets/audio/voiceover.wav --engine parakeet --json   # → transcript.json
@@ -47,6 +49,9 @@ npx hyperframes render -q delivery --fps 30 -o vish_reel.mp4
 - `src/scenes/cta.html`: the follow + comment WORKFLOW ending (avatar at `assets/brand/avatar.png`).
 
 ## Lessons learned (avoid repeating these)
+
+- **Format that holds attention:** 20–30 s, Vish on screen and speaking from frame 1, the hook readable on frame 0, something moving inside the first second, one idea per reel. The first 52 s reel had a 53% skip rate and 13 s average watch. See `reel-25s-hooks/` for the 3-scene template (hook → agent → CTA) and `tools/make_variant.py` for hook A/B versions (post them as Trial Reels).
+- **Voice:** use the "Vish warm voice" (am_michael), not hm_omega. Lower the music under speech (duck −12 dB), and finish with loudnorm to about −16 LUFS.
 
 - Kokoro mispronounces "Sri Trilinga"; spell it "Shree Trilinga" in `say` and verify with Parakeet. (The current reels don't speak the company name.)
 - Parakeet puts a file's first word at 0 s; `analyze_voice.py` already clamps each scene's first word to its clip start.
