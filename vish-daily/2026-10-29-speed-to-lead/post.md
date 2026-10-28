@@ -59,13 +59,23 @@ The first line is 89 characters, so it shows before "more". Line 2 is the keywor
 
 ## 3. Cover and alt text
 
-- **Cover:** `cover.png`, the hook frame. Its on-screen text reads "YOUR ENQUIRIES GO COLD".
-- **Alt text:** "Pixel-art presenter Vish explains a real estate automation: property enquiries get an instant AI reply, are qualified, routed to the agent on WhatsApp for approval, booked as a site visit and followed up with matching properties."
+- **Cover:** `cover.png`, a custom design (built from `cover-src/cover.html`): PROPERTY AGENTS · BROKERS, YOUR ENQUIRIES / GO COLD, a "The fix: 4 AI workflows" pill, the @vish.workflows label and Vish on the blue panel. Everything important sits inside the 3:4 grid crop (y 240–1680).
+- In Instagram: Edit cover → Add from camera roll → `cover.png`.
+- **Alt text:** "AI agent for real estate agents: property enquiries from 99acres and WhatsApp get an instant reply, are qualified, routed on WhatsApp for approval and booked as site visits."
 - Turn on Instagram's auto-captions as well (the burned-in captions stay).
+
+### Hashtags (5)
+
+`#RealEstateIndia #AIAutomation #RealEstateAgent #PropertyDealer #WhatsAppAutomation`
+
+Swap-ins for later reels (keep 5 in total): #RealEstateMarketing #PropertyConsultant #ChannelPartner #RealEstateBroker #BusinessAutomation #AIAgents #LeadGeneration
 
 ## 4. Pinned comment
 
-> Comment WORKFLOW and I'll send you the full Speed-to-Lead Playbook 👇 (follow first so it reaches your DMs)
+> Comment WORKFLOW and I'll send you the free Speed-to-Lead Playbook 📩 4 AI workflows for property agents: instant enquiry reply, buyer qualification, site visit booking and follow-up. (Follow first so it reaches your DMs 👇)
+
+Reply under your own pinned comment with the engagement question, so the thread starts itself:
+> Quick question for agents: how fast do you reply to a new enquiry today? 5 min, 1 hour or next day?
 
 ## 5. Story share
 
