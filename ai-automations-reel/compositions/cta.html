@@ -63,9 +63,9 @@
   </style>
   <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
     <div id="cta-bg" class="full bg-dark"></div>
-    <div class="cta-h mask" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want this workflow</div></div>
-    <div class="cta-h mask" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">built for your</div></div>
-    <div class="cta-h mask" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want this workflow</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">built for your</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
     <div id="cta-card" class="card">
       <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;COMMENTS · comment “WORKFLOW”</div>
       <div id="cta-rowA">
@@ -97,9 +97,9 @@
       const W = {"want": 0.15, "want_end": 0.341, "this": 0.341, "this_end": 0.581, "workflow": 0.581, "workflow_end": 1.141, "built": 1.141, "built_end": 1.461, "for": 1.461, "for_end": 1.621, "your": 1.621, "your_end": 1.781, "business": 1.781, "business_end": 2.501, "follow": 2.501, "follow_end": 2.901, "me": 2.901, "me_end": 3.141, "and": 3.141, "and_end": 3.381, "comment": 3.381, "comment_end": 4.021, "workflow_2": 4.021, "workflow_2_end": 4.741, "and_2": 4.741, "and_2_end": 4.981, "ill": 4.981, "ill_end": 5.221, "send": 5.221, "send_end": 5.461, "you": 5.461, "you_end": 5.621, "the": 5.621, "the_end": 5.701, "details": 5.701, "details_end": 6.181, "in": 6.181, "in_end": 6.261, "your_2": 6.261, "your_2_end": 6.421, "dms": 6.421, "dms_end": 7.061};
       const tl = gsap.timeline({ paused: true });
       // "Want this workflow?"
-      tl.fromTo("#cta-l1", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.want);
-      tl.fromTo("#cta-l1b", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.built - 0.05);
-      tl.fromTo("#cta-l2", { yPercent: 105 }, { yPercent: 0, duration: 0.5, ease: "power3.out" }, W.business - 0.05);
+      tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.want);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.built - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.business - 0.05);
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
