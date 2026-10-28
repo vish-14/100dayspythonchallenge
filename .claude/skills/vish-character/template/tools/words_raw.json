@@ -1,0 +1,710 @@
+[
+{
+"id": "w0",
+"text": "4",
+"start": 0,
+"end": 0.32
+},
+{
+"id": "w1",
+"text": "Boring",
+"start": 0.48,
+"end": 1.04
+},
+{
+"id": "w2",
+"text": "Tasks",
+"start": 1.04,
+"end": 1.44
+},
+{
+"id": "w3",
+"text": "One",
+"start": 1.68,
+"end": 2.08
+},
+{
+"id": "w4",
+"text": "Smarter",
+"start": 2.08,
+"end": 2.4
+},
+{
+"id": "w5",
+"text": "Workflow.",
+"start": 2.56,
+"end": 3.28
+},
+{
+"id": "w6",
+"text": "Here's",
+"start": 3.28,
+"end": 3.68
+},
+{
+"id": "w7",
+"text": "where",
+"start": 3.68,
+"end": 3.92
+},
+{
+"id": "w8",
+"text": "AI",
+"start": 3.92,
+"end": 4.56
+},
+{
+"id": "w9",
+"text": "automation",
+"start": 4.56,
+"end": 5.2
+},
+{
+"id": "w10",
+"text": "helps.",
+"start": 5.2,
+"end": 5.92
+},
+{
+"id": "w11",
+"text": "Inquiries,",
+"start": 5.92,
+"end": 6.88
+},
+{
+"id": "w12",
+"text": "follow",
+"start": 6.88,
+"end": 7.36
+},
+{
+"id": "w13",
+"text": "ups,",
+"start": 7.36,
+"end": 7.76
+},
+{
+"id": "w14",
+"text": "updates,",
+"start": 7.76,
+"end": 8.4
+},
+{
+"id": "w15",
+"text": "reports.",
+"start": 8.4,
+"end": 9.2
+},
+{
+"id": "w16",
+"text": "Small",
+"start": 9.2,
+"end": 9.6
+},
+{
+"id": "w17",
+"text": "jobs",
+"start": 9.6,
+"end": 10.08
+},
+{
+"id": "w18",
+"text": "keep",
+"start": 10.08,
+"end": 10.4
+},
+{
+"id": "w19",
+"text": "interrupting",
+"start": 10.4,
+"end": 10.96
+},
+{
+"id": "w20",
+"text": "your",
+"start": 10.96,
+"end": 11.12
+},
+{
+"id": "w21",
+"text": "day.",
+"start": 11.12,
+"end": 11.68
+},
+{
+"id": "w22",
+"text": "1.",
+"start": 11.68,
+"end": 12.24
+},
+{
+"id": "w23",
+"text": "Capture",
+"start": 12.24,
+"end": 12.72
+},
+{
+"id": "w24",
+"text": "inquiries.",
+"start": 12.72,
+"end": 13.68
+},
+{
+"id": "w25",
+"text": "Save",
+"start": 13.68,
+"end": 14.08
+},
+{
+"id": "w26",
+"text": "contact",
+"start": 14.08,
+"end": 14.72
+},
+{
+"id": "w27",
+"text": "details",
+"start": 14.72,
+"end": 15.2
+},
+{
+"id": "w28",
+"text": "in",
+"start": 15.2,
+"end": 15.36
+},
+{
+"id": "w29",
+"text": "your",
+"start": 15.36,
+"end": 15.52
+},
+{
+"id": "w30",
+"text": "CRM",
+"start": 15.52,
+"end": 16.48
+},
+{
+"id": "w31",
+"text": "and",
+"start": 16.56,
+"end": 16.8
+},
+{
+"id": "w32",
+"text": "let",
+"start": 16.8,
+"end": 17.12
+},
+{
+"id": "w33",
+"text": "AI",
+"start": 17.12,
+"end": 17.68
+},
+{
+"id": "w34",
+"text": "draft",
+"start": 17.68,
+"end": 18.16
+},
+{
+"id": "w35",
+"text": "a",
+"start": 18.16,
+"end": 18.24
+},
+{
+"id": "w36",
+"text": "reply",
+"start": 18.24,
+"end": 18.72
+},
+{
+"id": "w37",
+"text": "for",
+"start": 18.72,
+"end": 18.96
+},
+{
+"id": "w38",
+"text": "review.",
+"start": 18.96,
+"end": 19.6
+},
+{
+"id": "w39",
+"text": "2.",
+"start": 19.6,
+"end": 20.08
+},
+{
+"id": "w40",
+"text": "Follow",
+"start": 20.08,
+"end": 20.48
+},
+{
+"id": "w41",
+"text": "up",
+"start": 20.48,
+"end": 20.72
+},
+{
+"id": "w42",
+"text": "on",
+"start": 20.72,
+"end": 20.96
+},
+{
+"id": "w43",
+"text": "time.",
+"start": 20.96,
+"end": 21.52
+},
+{
+"id": "w44",
+"text": "Trigger",
+"start": 21.52,
+"end": 22
+},
+{
+"id": "w45",
+"text": "reminders",
+"start": 22,
+"end": 22.64
+},
+{
+"id": "w46",
+"text": "and",
+"start": 22.72,
+"end": 22.96
+},
+{
+"id": "w47",
+"text": "approved",
+"start": 22.96,
+"end": 23.52
+},
+{
+"id": "w48",
+"text": "messages",
+"start": 23.52,
+"end": 24.16
+},
+{
+"id": "w49",
+"text": "when",
+"start": 24.16,
+"end": 24.4
+},
+{
+"id": "w50",
+"text": "a",
+"start": 24.4,
+"end": 24.56
+},
+{
+"id": "w51",
+"text": "lead",
+"start": 24.56,
+"end": 24.88
+},
+{
+"id": "w52",
+"text": "needs",
+"start": 24.88,
+"end": 25.2
+},
+{
+"id": "w53",
+"text": "attention.",
+"start": 25.2,
+"end": 26
+},
+{
+"id": "w54",
+"text": "3.",
+"start": 26,
+"end": 26.56
+},
+{
+"id": "w55",
+"text": "Turn",
+"start": 26.56,
+"end": 26.88
+},
+{
+"id": "w56",
+"text": "documents",
+"start": 26.88,
+"end": 27.44
+},
+{
+"id": "w57",
+"text": "into",
+"start": 27.44,
+"end": 27.68
+},
+{
+"id": "w58",
+"text": "drafts.",
+"start": 27.68,
+"end": 28.48
+},
+{
+"id": "w59",
+"text": "Extract",
+"start": 28.48,
+"end": 29.04
+},
+{
+"id": "w60",
+"text": "key",
+"start": 29.04,
+"end": 29.36
+},
+{
+"id": "w61",
+"text": "details",
+"start": 29.36,
+"end": 29.92
+},
+{
+"id": "w62",
+"text": "and",
+"start": 30.08,
+"end": 30.24
+},
+{
+"id": "w63",
+"text": "prepare",
+"start": 30.24,
+"end": 30.72
+},
+{
+"id": "w64",
+"text": "summaries",
+"start": 30.72,
+"end": 31.28
+},
+{
+"id": "w65",
+"text": "your",
+"start": 31.28,
+"end": 31.52
+},
+{
+"id": "w66",
+"text": "team",
+"start": 31.52,
+"end": 31.84
+},
+{
+"id": "w67",
+"text": "can",
+"start": 31.84,
+"end": 32
+},
+{
+"id": "w68",
+"text": "check.",
+"start": 32,
+"end": 32.64
+},
+{
+"id": "w69",
+"text": "4.",
+"start": 32.64,
+"end": 33.04
+},
+{
+"id": "w70",
+"text": "Keep",
+"start": 33.2,
+"end": 33.44
+},
+{
+"id": "w71",
+"text": "everyone",
+"start": 33.44,
+"end": 33.84
+},
+{
+"id": "w72",
+"text": "updated.",
+"start": 33.84,
+"end": 34.72
+},
+{
+"id": "w73",
+"text": "Route",
+"start": 34.72,
+"end": 35.28
+},
+{
+"id": "w74",
+"text": "task",
+"start": 35.28,
+"end": 35.68
+},
+{
+"id": "w75",
+"text": "changes",
+"start": 35.68,
+"end": 36.24
+},
+{
+"id": "w76",
+"text": "and",
+"start": 36.32,
+"end": 36.64
+},
+{
+"id": "w77",
+"text": "useful",
+"start": 36.64,
+"end": 37.04
+},
+{
+"id": "w78",
+"text": "summaries",
+"start": 37.04,
+"end": 37.6
+},
+{
+"id": "w79",
+"text": "to",
+"start": 37.6,
+"end": 37.76
+},
+{
+"id": "w80",
+"text": "the",
+"start": 37.76,
+"end": 37.92
+},
+{
+"id": "w81",
+"text": "right",
+"start": 37.92,
+"end": 38.24
+},
+{
+"id": "w82",
+"text": "people.",
+"start": 38.24,
+"end": 38.8
+},
+{
+"id": "w83",
+"text": "The",
+"start": 38.8,
+"end": 39.04
+},
+{
+"id": "w84",
+"text": "key",
+"start": 39.04,
+"end": 39.36
+},
+{
+"id": "w85",
+"text": "connected",
+"start": 39.6,
+"end": 40.24
+},
+{
+"id": "w86",
+"text": "tools,",
+"start": 40.24,
+"end": 40.88
+},
+{
+"id": "w87",
+"text": "clear",
+"start": 40.88,
+"end": 41.28
+},
+{
+"id": "w88",
+"text": "rules,",
+"start": 41.28,
+"end": 41.76
+},
+{
+"id": "w89",
+"text": "and",
+"start": 41.76,
+"end": 42
+},
+{
+"id": "w90",
+"text": "a",
+"start": 42,
+"end": 42.16
+},
+{
+"id": "w91",
+"text": "person",
+"start": 42.16,
+"end": 42.4
+},
+{
+"id": "w92",
+"text": "ready",
+"start": 42.56,
+"end": 42.96
+},
+{
+"id": "w93",
+"text": "when",
+"start": 42.96,
+"end": 43.2
+},
+{
+"id": "w94",
+"text": "something",
+"start": 43.2,
+"end": 43.52
+},
+{
+"id": "w95",
+"text": "needs",
+"start": 43.52,
+"end": 43.92
+},
+{
+"id": "w96",
+"text": "attention.",
+"start": 43.92,
+"end": 44.8
+},
+{
+"id": "w97",
+"text": "Want",
+"start": 44.8,
+"end": 45.12
+},
+{
+"id": "w98",
+"text": "this",
+"start": 45.12,
+"end": 45.36
+},
+{
+"id": "w99",
+"text": "workflow",
+"start": 45.36,
+"end": 45.92
+},
+{
+"id": "w100",
+"text": "built",
+"start": 45.92,
+"end": 46.24
+},
+{
+"id": "w101",
+"text": "for",
+"start": 46.24,
+"end": 46.4
+},
+{
+"id": "w102",
+"text": "your",
+"start": 46.4,
+"end": 46.56
+},
+{
+"id": "w103",
+"text": "business.",
+"start": 46.56,
+"end": 47.28
+},
+{
+"id": "w104",
+"text": "Follow",
+"start": 47.28,
+"end": 47.68
+},
+{
+"id": "w105",
+"text": "me",
+"start": 47.68,
+"end": 47.92
+},
+{
+"id": "w106",
+"text": "and",
+"start": 47.92,
+"end": 48.16
+},
+{
+"id": "w107",
+"text": "comment,",
+"start": 48.16,
+"end": 48.8
+},
+{
+"id": "w108",
+"text": "workflow,",
+"start": 48.8,
+"end": 49.52
+},
+{
+"id": "w109",
+"text": "and",
+"start": 49.52,
+"end": 49.76
+},
+{
+"id": "w110",
+"text": "I'll",
+"start": 49.76,
+"end": 50
+},
+{
+"id": "w111",
+"text": "send",
+"start": 50,
+"end": 50.24
+},
+{
+"id": "w112",
+"text": "you",
+"start": 50.24,
+"end": 50.4
+},
+{
+"id": "w113",
+"text": "the",
+"start": 50.4,
+"end": 50.48
+},
+{
+"id": "w114",
+"text": "details",
+"start": 50.48,
+"end": 50.96
+},
+{
+"id": "w115",
+"text": "in",
+"start": 50.96,
+"end": 51.04
+},
+{
+"id": "w116",
+"text": "your",
+"start": 51.04,
+"end": 51.2
+},
+{
+"id": "w117",
+"text": "DMs.",
+"start": 51.2,
+"end": 51.84
+}
+]
