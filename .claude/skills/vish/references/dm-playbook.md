@@ -6,7 +6,7 @@ What people get after they **follow @vish.workflows** and **comment "WORKFLOW"**
 
 - **Guide page:** "The 4-task workflow" (claude.ai artifact; the source is `assets/lead-magnet/the-4-task-workflow.html`). Set its Share menu to "anyone with the link" before using the link in DMs.
 - **PDF copy:** `assets/lead-magnet/vish-4-task-workflow.pdf`. Upload it to SuperProfile as a free resource, or use it as a fallback link.
-- **Booking:** free 15-min call at **https://cal.com/vishworkflows/15min** (Cal.com username `vishworkflows`; event "Free AI agent call").
+- **Booking:** free 15-min call at **https://cal.com/vishworkflows/discovery** (Cal.com username `vishworkflows`; event "Free AI agent call").
 - **Support:** support@sritrilinga.com
 - **Ask:** book the call, or reply **BUILD** with business, tools and the task that eats their time.
 
@@ -30,14 +30,14 @@ What people get after they **follow @vish.workflows** and **comment "WORKFLOW"**
 > 👉 [button: Open the workflow] → guide link
 > It shows how enquiries, follow-ups, documents and team updates run on their own, with you approving what matters.
 > Want me to build AI agents like this for your business?
-> 📅 [button: Book a free 15-min call] → https://cal.com/vishworkflows/15min
+> 📅 [button: Book a free 15-min call] → https://cal.com/vishworkflows/discovery
 > Or reply **BUILD** and tell me your business, the tools you use, and the task that eats your time.
 
 ### Message C (24 h later, once, only if no reply)
 > Quick one: which of the 4 tasks takes most of your week? Enquiries, follow-ups, documents or team updates? Reply with one word and I'll tell you how I'd automate it first.
 
 ### Message D (they replied BUILD)
-> Love it 🙌 Thanks for sharing. Based on what you said, I'd start with [task]. Grab a free 15-min slot here and we'll map it together: https://cal.com/vishworkflows/15min (times show in your time zone 🌍).
+> Love it 🙌 Thanks for sharing. Based on what you said, I'd start with [task]. Grab a free 15-min slot here and we'll map it together: https://cal.com/vishworkflows/discovery (times show in your time zone 🌍).
 
 ## Rules
 

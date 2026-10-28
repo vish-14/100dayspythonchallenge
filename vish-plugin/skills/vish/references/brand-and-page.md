@@ -9,7 +9,7 @@
 | Username | **@vish.workflows** |
 | Audience | Business owners and small teams worldwide: India, Gulf, UK, US and beyond |
 | Promise | "I build AI agents that help businesses scale": automating leads, follow-ups, documents and ops, with a human always in control |
-| Booking | Free 15-min call: https://cal.com/vishworkflows/15min (Cal.com name "Vish \| AI Automation") |
+| Booking | Free 15-min call: https://cal.com/vishworkflows/discovery (Cal.com name "Vish \| AI Automation") |
 | Support email | support@sritrilinga.com (only place the company domain appears outside captions) |
 | Backend business | Sri Trilinga Technologies Private Limited (named **only** at the end of reel captions, for SEO) |
 | Account type | Instagram **Business** account, category *Information Technology Company* |
