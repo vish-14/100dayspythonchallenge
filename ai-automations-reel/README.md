@@ -32,7 +32,7 @@ The HyperFrames desktop app is a nicer way to keep editing visually: <https://hy
 
 | Step | Tool | Script |
 | --- | --- | --- |
-| Voiceover | Kokoro-82M, voice `hm_omega` (Indian English male) at natural 1.0× speed, one clip per scene at 1.1× speed | `tools/make_vo.py` (needs `pip install kokoro-onnx soundfile`) |
+| Voiceover | Kokoro-82M, voice `hm_omega` (Indian English male) at natural 1.0× speed, one clip per scene | `tools/make_vo.py` (needs `pip install kokoro-onnx soundfile`) |
 | Word timings | Parakeet TDT 0.6B via `npx hyperframes transcribe --engine parakeet`, aligned to the script's exact wording | `tools/analyze_voice.py` |
 | Captions and mouth shapes | Caption groups of 2–5 words; six mouth shapes per frame from the audio | `tools/analyze_voice.py` → `tools/timing.json`, `captions.srt` |
 | Presenter | Original pixel-art sprite drawn in code (body, head, 3 eye states, 2 brow states, 6 mouths), 10× nearest-neighbour | `tools/make_sprite.py` |
