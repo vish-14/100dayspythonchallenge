@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The 4-Task Workflow</title>
+<style>
+:root {
+  --text: #1B1F27;
+  --muted: #5A6170;
+  --blue: #1F4FD8;
+  --blue-soft: #F1F4FC;
+  --rule: #E2E5EB;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; color: var(--text); }
+body { font-family: "Inter", sans-serif; font-size: 10.5pt; line-height: 1.55; font-feature-settings: "ss01", "cv11"; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+h1 { font-size: 30pt; letter-spacing: -0.02em; line-height: 1.08; }
+h2 { font-size: 17pt; }
+h3 { font-size: 11pt; }
+a { color: var(--blue); }
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+
+/* section label: sentence case, readable */
+.label { font-size: 9.5pt; font-weight: 600; color: var(--blue); margin-bottom: 4pt; }
+.muted { color: var(--muted); }
+
+/* cover */
+.brand { display: flex; align-items: center; gap: 10pt; padding-bottom: 14pt; border-bottom: 1px solid var(--rule); }
+.brand img { width: 34pt; height: 34pt; border-radius: 50%; image-rendering: pixelated; }
+.brand b { display: block; font-size: 10.5pt; }
+.brand span { font-size: 9.5pt; color: var(--muted); }
+.cover-title { padding: 28pt 0 22pt; }
+.cover-title h1 { margin: 2pt 0 12pt; }
+.cover-title .lede { font-size: 12.5pt; line-height: 1.5; color: var(--muted); max-width: 150mm; }
+
+.overview h2 { margin-bottom: 6pt; }
+.overview .intro { margin-bottom: 14pt; max-width: 155mm; }
+table.at-a-glance { width: 100%; border-collapse: collapse; }
+.at-a-glance th { text-align: left; font-size: 9.5pt; font-weight: 600; color: var(--muted); padding: 0 10pt 6pt 0; border-bottom: 1.5px solid var(--text); }
+.at-a-glance td { vertical-align: top; padding: 8pt 10pt 8pt 0; border-bottom: 1px solid var(--rule); }
+.at-a-glance td.n { width: 22pt; font-weight: 700; color: var(--blue); }
+.at-a-glance td.name { width: 44mm; font-weight: 600; }
+.at-a-glance td:last-child { padding-right: 0; }
+.reliable { margin-top: 30pt; }
+
+/* automation blocks */
+.auto { padding-top: 2pt; }
+.auto + .auto { margin-top: 24pt; padding-top: 22pt; border-top: 1px solid var(--rule); }
+.auto h2 { margin-bottom: 4pt; }
+.auto .goal { color: var(--muted); margin-bottom: 12pt; max-width: 160mm; }
+.rows { display: grid; grid-template-columns: 24mm 1fr; column-gap: 12pt; row-gap: 10pt; }
+.rows > dt { font-weight: 600; font-size: 10pt; padding-top: 0.5pt; }
+.rows > dd { margin: 0; }
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 3pt; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 14pt 1fr; }
+ol.steps li::before { content: counter(s) "."; font-weight: 600; color: var(--blue); }
+.tools p + p { margin-top: 1pt; }
+.tools b { font-weight: 600; }
+.approve { margin-top: 12pt; background: var(--blue-soft); border-left: 3px solid var(--blue); padding: 8pt 12pt; }
+.approve b { font-weight: 600; }
+
+/* rules + checklist */
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16pt; margin-top: 12pt; }
+.rules > div { border-top: 2px solid var(--blue); padding-top: 9pt; }
+.rules h3 { margin-bottom: 4pt; }
+.rules p { color: var(--muted); }
+.start { }
+.start .intro { margin: 6pt 0 16pt; color: var(--muted); }
+ul.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+ul.check li { display: grid; grid-template-columns: 22pt 1fr; padding: 11pt 0; border-bottom: 1px solid var(--rule); }
+ul.check li:first-child { border-top: 1px solid var(--rule); }
+ul.check li::before { content: ""; width: 10pt; height: 10pt; margin-top: 2.5pt; border: 1.5px solid var(--blue); border-radius: 2pt; }
+ul.check b { font-weight: 600; }
+
+/* closing */
+.close { margin-top: 44pt; }
+.close .lede { font-size: 11pt; max-width: 170mm; margin: 6pt 0 14pt; }
+.book { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-weight: 600; font-size: 11pt; padding: 10pt 16pt; border-radius: 4pt; }
+.book-url { margin-top: 8pt; font-size: 9.5pt; color: var(--muted); }
+.book-url a { color: var(--muted); }
+.call { margin-top: 26pt; }
+.call ol.steps { margin-top: 8pt; }
+.contact { margin-top: 22pt; padding-top: 16pt; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr; gap: 16pt; }
+.contact h3 { font-size: 10.5pt; margin-bottom: 3pt; }
+</style>
+</head>
+<body>
+
+<!-- Page 1: cover + overview -->
+<section class="page">
+  <div class="brand">
+    <img src="avatar.png" alt="">
+    <div><b>Vish | AI Automation</b><span>@vish.workflows</span></div>
+  </div>
+  <div class="cover-title">
+    <div class="label">A practical guide for growing businesses</div>
+    <h1>The 4-Task Workflow</h1>
+    <p class="lede">How to automate enquiries, follow-ups, documents and team updates, with a person approving every step that matters.</p>
+  </div>
+
+  <div class="overview">
+    <h2>The four automations at a glance</h2>
+    <p class="intro">Each automation runs on its own. They can share the same contacts and data, but none depends on another, so start with the task that costs you the most time.</p>
+    <table class="at-a-glance">
+      <thead><tr><th></th><th>Automation</th><th>Starts when</th><th>You approve</th></tr></thead>
+      <tbody>
+        <tr><td class="n">01</td><td class="name">Capture enquiries</td><td>A new message arrives from your website, email, Instagram or WhatsApp.</td><td>Each reply, before it goes out.</td></tr>
+        <tr><td class="n">02</td><td class="name">Follow up on time</td><td>A lead or quote has gone quiet for the number of days you set.</td><td>The message templates, once, in advance.</td></tr>
+        <tr><td class="n">03</td><td class="name">Process documents</td><td>An invoice, purchase order or contract arrives.</td><td>Anything that is paid or signed.</td></tr>
+        <tr><td class="n">04</td><td class="name">Keep teams updated</td><td>A task or order changes status.</td><td>Who receives which updates.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reliable">
+    <div class="label">What makes it reliable</div>
+    <h2>Three rules that keep it working</h2>
+    <div class="rules">
+      <div><h3>Connected tools</h3><p>Your inbox, CRM, documents and chat share the same data, so nothing is typed twice.</p></div>
+      <div><h3>Clear rules</h3><p>Every automation states when it runs, what it does and when it stops.</p></div>
+      <div><h3>Human review</h3><p>A person approves messages, payments and anything unusual. Every step is logged.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Page 2: automations 01–02 -->
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 01</div>
+    <h2>Capture enquiries</h2>
+    <p class="goal">Every enquiry is recorded and answered quickly, in your tone, without anyone copying details by hand.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A new message from your website form, email inbox, Instagram DM or WhatsApp Business.</dd>
+      <dt>Steps</dt><dd><ol class="steps">
+        <li><span>Read the message and pull out the name, contact details and request.</span></li>
+        <li><span>Create or update the contact in your CRM and tag where it came from.</span></li>
+        <li><span>Draft a reply in your tone, using your price list or FAQ.</span></li>
+        <li><span>Send the draft to you, and send it to the customer only after you approve.</span></li>
+      </ol></dd>
+      <dt>Tools</dt><dd class="tools">
+        <p><b>Automation:</b> Make, Zapier or n8n</p>
+        <p><b>CRM:</b> HubSpot, Zoho CRM, Pipedrive or a Google Sheet</p>
+        <p><b>Email and AI:</b> Gmail or Outlook, with ChatGPT or Claude</p>
+      </dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> every reply stays a draft until you approve it. Nothing reaches a customer without you.</div>
+  </article>
+
+  <article class="auto">
+    <div class="label">Automation 02</div>
+    <h2>Follow up on time</h2>
+    <p class="goal">No lead or quote is forgotten, and follow-ups go out on a rhythm you choose.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A lead hasn’t replied, or a quote is still open, after the days you set (for example day 1, 3 and 7).</dd>
+      <dt>Steps</dt><dd><ol class="steps">
+        <li><span>Check the CRM each morning for leads that are due.</span></li>
+        <li><span>Remind you, or whoever owns the lead, with the context in one message.</span></li>
+        <li><span>Send a follow-up from your pre-approved templates.</span></li>
+        <li><span>Mark the lead “needs attention” if there is still no reply after the last step.</span></li>
+      </ol></dd>
+      <dt>Tools</dt><dd class="tools">
+        <p><b>Sequences:</b> your CRM’s built-in follow-ups, or Make, Zapier or n8n</p>
+        <p><b>Channels:</b> WhatsApp Business or email</p>
+        <p><b>Reminders:</b> Slack, Microsoft Teams or WhatsApp</p>
+      </dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> only messages you approved in advance go out automatically. Anything unusual comes back to you.</div>
+  </article>
+</section>
+
+<!-- Page 3: automations 03–04 -->
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 03</div>
+    <h2>Process documents</h2>
+    <p class="goal">Key details are read, checked and filed for you, ready for a person to confirm.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>An invoice, purchase order, contract or form arrives by email or lands in a shared folder.</dd>
+      <dt>Steps</dt><dd><ol class="steps">
+        <li><span>Read the document and extract the key fields: supplier, number, amount and due date.</span></li>
+        <li><span>Check them against what you expect, such as a matching purchase order.</span></li>
+        <li><span>Write a short summary and save the fields to your sheet or accounting tool.</span></li>
+        <li><span>Queue it for a teammate to check before anything is paid or signed.</span></li>
+      </ol></dd>
+      <dt>Tools</dt><dd class="tools">
+        <p><b>Storage:</b> Google Drive or OneDrive</p>
+        <p><b>Reading:</b> ChatGPT or Claude</p>
+        <p><b>Records:</b> Google Sheets, Excel, Zoho Books, Xero or QuickBooks</p>
+      </dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> the AI prepares and a person checks. Mismatches are flagged, never silently fixed.</div>
+  </article>
+
+  <article class="auto">
+    <div class="label">Automation 04</div>
+    <h2>Keep teams updated</h2>
+    <p class="goal">The right people hear about changes as they happen, so nobody has to chase for an update.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A task or order changes status: started, done, delayed or blocked.</dd>
+      <dt>Steps</dt><dd><ol class="steps">
+        <li><span>Detect the status change in your task tool or CRM.</span></li>
+        <li><span>Write a one-line summary of what changed and what happens next.</span></li>
+        <li><span>Send it only to the people it concerns: sales, operations or finance.</span></li>
+        <li><span>Post a short daily digest of everything that moved.</span></li>
+      </ol></dd>
+      <dt>Tools</dt><dd class="tools">
+        <p><b>Tasks:</b> Trello, Asana, ClickUp or Notion</p>
+        <p><b>Messages:</b> Slack, Microsoft Teams, WhatsApp groups or email</p>
+        <p><b>Automation:</b> Make, Zapier or n8n</p>
+      </dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> you decide who hears about what. Sensitive updates can always wait for a person.</div>
+  </article>
+</section>
+
+<!-- Page 4: start this week + invitation -->
+<section class="page">
+  <div class="start first">
+    <div class="label">Your first steps</div>
+    <h2>Start this week</h2>
+    <p class="intro">Five small steps, no software needed yet. Each one makes the first automation faster to build.</p>
+    <ul class="check">
+      <li><span><b>Map your enquiries.</b> Write down where they come in today, and who answers them.</span></li>
+      <li><span><b>Choose one home for contacts.</b> A CRM, or even a single Google Sheet.</span></li>
+      <li><span><b>Write three reply templates</b> you would be happy to send to any new lead.</span></li>
+      <li><span><b>Set your follow-up rhythm,</b> for example day 1, day 3 and day 7.</span></li>
+      <li><span><b>Pick the task that interrupts you most,</b> and automate that one first.</span></li>
+    </ul>
+  </div>
+
+  <div class="close">
+    <div class="label">Want it built for you?</div>
+    <h2>I build AI agents around your business.</h2>
+    <p class="lede">In a free call, we’ll find the one workflow that frees up the most time for you and your team.</p>
+    <a class="book" href="https://cal.com/vishworkflows/discovery">Book a free discovery call</a>
+    <p class="book-url"><a href="https://cal.com/vishworkflows/discovery">cal.com/vishworkflows/discovery</a> · online, shown in your time zone</p>
+    <div class="contact">
+      <div><h3>Prefer to chat?</h3><p class="muted">Reply <b>BUILD</b> to my Instagram DM with your business, your tools and the task that eats your time.</p></div>
+      <div><h3>Support</h3><p class="muted"><a href="mailto:support@sritrilinga.com">support@sritrilinga.com</a><br>Instagram: @vish.workflows</p></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

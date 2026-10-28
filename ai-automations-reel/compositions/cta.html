@@ -1,0 +1,127 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    .cta-h { position: absolute; left: 70px; font-size: 80px; padding-bottom: 16px; }
+    #cta-ben { position: absolute; left: 70px; top: 560px; width: 940px; }
+    .cta-bn { height: 104px; margin-bottom: 18px; border-radius: 22px; background: var(--ink-2); border: 2px solid var(--gray-line); display: flex; align-items: center; gap: 22px; padding: 0 28px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--paper); }
+    .cta-tick { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+    #cta-l1 { color: var(--paper); } #cta-l2 { color: #5C87FF; }
+    #cta-card { left: 70px; top: 652px; width: 940px; height: 292px; }
+    .cta-av { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); flex: none; position: relative; }
+    .cta-av::before { content: ""; position: absolute; left: 21px; top: 11px; width: 22px; height: 22px; border-radius: 50%; background: #fff; }
+    .cta-av::after { content: ""; position: absolute; left: 12px; top: 37px; width: 40px; height: 20px; border-radius: 20px 20px 6px 6px; background: #fff; }
+    #cta-rowA { position: absolute; left: 26px; right: 26px; top: 82px; height: 92px; display: flex; align-items: center; gap: 20px; }
+    #cta-input { flex: 1; height: 76px; border-radius: 38px; border: 3px solid #C6CBD5; display: flex; align-items: center; padding: 0 28px; position: relative; }
+    #cta-typed { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; color: var(--ink); letter-spacing: .02em; }
+    #cta-ph { position: absolute; left: 28px; font-size: 28px; color: #6A7180; font-weight: 600; }
+    #cta-send { width: 76px; height: 76px; border-radius: 50%; background: var(--blue); flex: none; display: flex; align-items: center; justify-content: center; }
+    #cta-posted { position: absolute; left: 26px; right: 26px; top: 82px; height: 92px; display: flex; align-items: center; gap: 20px; }
+    .cta-k { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .cta-v { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; color: var(--ink); margin-top: 2px; }
+    #cta-dm { position: absolute; left: 26px; right: 26px; top: 190px; height: 94px; border-radius: 20px; background: var(--ink); display: flex; align-items: center; gap: 20px; padding: 0 24px; }
+    .cta-env { width: 62px; height: 46px; border-radius: 9px; background: var(--blue); position: relative; flex: none; overflow: hidden; }
+    .cta-env::after { content: ""; position: absolute; left: 8px; top: -24px; width: 46px; height: 46px; border: 4px solid #fff; transform: rotate(45deg); border-radius: 4px; }
+    #cta-dm .t { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--paper); margin-top: 4px; }
+    #cta-dm .cta-k { color: #A9B0BD; }
+    #cta-pill { position: absolute; left: 70px; top: 1092px; width: 940px; height: 112px; border-radius: 56px; background: var(--blue);
+      display: flex; align-items: center; justify-content: center; gap: 16px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; white-space: nowrap; }
+    #cta-note { position: absolute; left: 0; top: 1240px; width: 1080px; text-align: center; font-size: 32px; font-weight: 700; color: var(--paper); }
+    .cta-num { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--paper); color: var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; }
+    #cta-pill span.lt { font-weight: 700; opacity: .9; }
+    #cta-followrow { position: absolute; left: 70px; top: 548px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
+    #cta-follow { position: relative; width: 260px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
+    #cta-f1, #cta-f2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; border-radius: 20px; }
+    #cta-f1 { color: var(--ink); } #cta-f2 { color: var(--paper); background: var(--ink-2); border: 3px solid var(--paper); }
+    #cta-fsub { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: var(--paper); margin-right: auto; }
+    #cta-avatar { width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--paper); flex: none; }
+    #cta-cursor { position: absolute; left: 0; top: 0; width: 46px; height: 56px; }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+    <div id="cta-bg" class="full bg-dark"></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want this workflow</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">built for your</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
+    <div id="cta-card" class="card">
+      <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;COMMENTS · comment “WORKFLOW”</div>
+      <div id="cta-rowA">
+        <div class="cta-av"></div>
+        <div id="cta-input"><span id="cta-ph">Add a comment…</span><span id="cta-typed">WORKFLOW</span></div>
+        <div id="cta-send"><svg width="38" height="38" viewBox="0 0 24 24"><path d="M3 11.5 L21 3 L13.5 21 L11 13 Z" fill="#fff"/></svg></div>
+      </div>
+      <div id="cta-posted">
+        <div class="cta-av"></div>
+        <div><div class="cta-k">you · now</div><div class="cta-v">WORKFLOW</div></div>
+      </div>
+      <div id="cta-dm"><span class="cta-env"></span><div><div class="cta-k">VISH · JUST NOW</div><div class="t">Here&#x27;s your workflow guide ✓</div></div></div>
+    </div>
+
+    <div id="cta-pill">FOLLOW + COMMENT “WORKFLOW”
+      <svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 4 V19 M5 12 L12 19 L19 12" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div id="cta-note">Follow first, so my reply can reach your DMs</div>
+    <div id="cta-followrow">
+      <div class="cta-num">1</div>
+      <img id="cta-avatar" src="assets/brand/avatar.png" alt="" />
+      <div id="cta-fsub">@vish.workflows</div>
+      <div id="cta-follow"><div id="cta-f1">+ Follow</div><div id="cta-f2">Following ✓</div></div>
+    </div>
+    <svg id="cta-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    <div id="cta-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"want": 0.15, "want_end": 0.341, "this": 0.341, "this_end": 0.581, "workflow": 0.581, "workflow_end": 1.141, "built": 1.141, "built_end": 1.461, "for": 1.461, "for_end": 1.621, "your": 1.621, "your_end": 1.781, "business": 1.781, "business_end": 2.501, "follow": 2.501, "follow_end": 2.901, "me": 2.901, "me_end": 3.141, "and": 3.141, "and_end": 3.381, "comment": 3.381, "comment_end": 4.021, "workflow_2": 4.021, "workflow_2_end": 4.741, "and_2": 4.741, "and_2_end": 4.981, "ill": 4.981, "ill_end": 5.221, "send": 5.221, "send_end": 5.461, "you": 5.461, "you_end": 5.621, "the": 5.621, "the_end": 5.701, "details": 5.701, "details_end": 6.181, "in": 6.181, "in_end": 6.261, "your_2": 6.261, "your_2_end": 6.421, "dms": 6.421, "dms_end": 7.061};
+      const tl = gsap.timeline({ paused: true });
+      // "Want this workflow?"
+      tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.want);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.built - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.business - 0.05);
+      // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
+      tl.set("#cta-f2", { opacity: 0 }, 0);
+      tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
+      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 880, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.me + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.me + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.me + 0.26);
+      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.me + 0.55);
+      // STEP 2 · "then comment workflow below": the comment types and posts
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.and - 0.1);
+      tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);
+      tl.fromTo("#cta-typed", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "steps(8)" }, W.comment + 0.1);
+      tl.to("#cta-ph", { opacity: 0, duration: 0.05 }, W.comment + 0.1);
+      tl.to("#cta-send", { scale: 0.86, duration: 0.07, yoyo: true, repeat: 1 }, W.workflow_2 + 0.55);
+      tl.to("#cta-rowA", { opacity: 0, y: -10, duration: 0.18 }, W.workflow_2 + 0.65);
+      tl.fromTo("#cta-posted", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out" }, W.workflow_2 + 0.75);
+      tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.comment);
+      // "we'll send it straight to your inbox"
+      tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.dms);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.send);
+      // after the last word everything holds still, so the call to action stays readable to the end
+      window.__timelines["cta"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,104 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #a3-doc { left: 56px; top: 466px; width: 390px; height: 424px; }
+    #a3-doc .pad { padding: 18px 24px; }
+    .a3-row { display: flex; gap: 12px; margin-top: 12px; } .a3-row .ln { flex: 1; }
+    #a3-scan { position: absolute; left: 56px; top: 524px; width: 390px; height: 6px; background: var(--blue); box-shadow: 0 0 24px 6px rgba(34,87,239,.55); opacity: 0; }
+    .a3-f { position: absolute; left: 488px; width: 536px; height: 86px; border-radius: 16px; background: var(--ink-2); border: 2px solid var(--gray-line);
+      display: flex; align-items: center; justify-content: space-between; padding: 0 22px; }
+    .a3-f .k { font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .16em; color: var(--gray); }
+    .a3-f .v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; color: var(--paper); }
+    .a3-f .hl { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; border-radius: 16px 0 0 16px; background: var(--blue); }
+    #a3-sum { left: 56px; top: 466px; width: 968px; height: 410px; padding: 0; }
+    .a3-b { display: flex; align-items: center; gap: 16px; margin: 20px 30px 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: var(--ink); }
+    .a3-b i { width: 14px; height: 14px; border-radius: 50%; background: var(--blue); flex: none; }
+    #a3-check { position: absolute; left: 30px; bottom: 26px; display: flex; align-items: center; gap: 16px; font-size: 27px; font-weight: 700; color: #2A3242; }
+    #a3-box { width: 44px; height: 44px; border-radius: 10px; border: 4px solid var(--blue); position: relative; }
+    #a3-tick { position: absolute; inset: 0; background: var(--blue); border-radius: 4px; color: #fff; font-weight: 900; font-size: 30px; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <div id="root" data-composition-id="a3" data-width="1080" data-height="1920">
+    <div id="a3-bg" class="panel bg-dark"></div>
+    <div class="head" style="color:var(--paper)">
+      <div class="mask"><div id="a3-num" class="disp num">03</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a3-t1">PROCESS</div></div><div class="mask"><div id="a3-t2">DOCUMENTS</div></div></div>
+    </div>
+    <div id="a3-doc" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;INVOICE_0457.PDF</div>
+      <div class="pad">
+        <div class="disp" style="font-size:34px;color:var(--ink)">INVOICE</div>
+        <div class="a3-row"><div class="ln" style="background:#CBD6F7"></div><div class="ln"></div></div>
+        <div class="a3-row"><div class="ln"></div><div class="ln" style="background:#CBD6F7"></div></div>
+        <div class="a3-row" style="margin-top:22px"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        <div class="a3-row"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        <div class="a3-row"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        <div class="a3-row" style="margin-top:22px"><div class="ln" style="flex:2"></div><div class="ln" style="background:#CBD6F7"></div></div>
+      </div>
+    </div>
+    <div id="a3-scan"></div>
+    <div id="a3-f1" class="a3-f" style="top:470px"><span class="hl"></span><span class="k">SUPPLIER</span><span class="v">Northline Supplies</span></div>
+    <div id="a3-f2" class="a3-f" style="top:574px"><span class="hl"></span><span class="k">INVOICE</span><span class="v">#0457</span></div>
+    <div id="a3-f3" class="a3-f" style="top:678px"><span class="hl"></span><span class="k">AMOUNT</span><span class="v">₹48,200</span></div>
+    <div id="a3-f4" class="a3-f" style="top:782px"><span class="hl"></span><span class="k">DUE</span><span class="v">15 Nov</span></div>
+    <div id="a3-sum" class="card">
+      <div class="bar"><span class="tag blue" style="padding:4px 10px">AI summary</span>&nbsp;Draft · for review</div>
+      <div id="a3-s1" class="a3-b"><i></i>Invoice #0457 from Northline</div>
+      <div id="a3-s2" class="a3-b"><i></i>₹48,200 due on 15 Nov</div>
+      <div id="a3-s3" class="a3-b"><i></i>Matches the purchase order</div>
+      <div id="a3-check"><div id="a3-box"><div id="a3-tick">✓</div></div>Ready for the team to check</div>
+    </div>
+    <div id="a3-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>03 / 04</span></div><div id="a3-chrome-bot" class="chrome bot mono t-dark"><span>03 / PROCESS DOCUMENTS</span><span class="prog"><i id="a3-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"three": 0.15, "three_end": 0.596, "turn": 0.596, "turn_end": 0.916, "documents": 0.916, "documents_end": 1.476, "into": 1.476, "into_end": 1.716, "drafts": 1.716, "drafts_end": 2.516, "extract": 2.516, "extract_end": 3.076, "key": 3.076, "key_end": 3.396, "details": 3.396, "details_end": 3.956, "and": 4.116, "and_end": 4.276, "prepare": 4.276, "prepare_end": 4.756, "summaries": 4.756, "summaries_end": 5.316, "your": 5.316, "your_end": 5.556, "team": 5.556, "team_end": 5.876, "can": 5.876, "can_end": 6.036, "check": 6.036, "check_end": 6.676};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.three - 0.04);
+      tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.turn - 0.04);
+      tl.fromTo("#a3-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.documents - 0.04);
+      // a document arrives
+      tl.fromTo("#a3-doc", { y: 80, opacity: 0, rotation: -3 }, { y: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "expo.out" }, W.documents);
+      // "Extract": a scan passes over it
+      tl.fromTo("#a3-scan", { y: 0, opacity: 0 }, { y: 330, opacity: 1, duration: 0.6, ease: "power1.inOut" }, W.extract);
+      tl.to("#a3-scan", { opacity: 0, duration: 0.12 }, W.extract + 0.6);
+      // "key details": labelled fields separate out of the page, one by one
+      ["#a3-f1", "#a3-f2", "#a3-f3", "#a3-f4"].forEach((f, i) => {
+        tl.fromTo(f, { x: -300, opacity: 0, scale: 0.7 }, { x: 0, opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, W.key + i * 0.14);
+      });
+      // "prepare summaries": page and fields collapse into one summary card
+      tl.to("#a3-doc", { scale: 0.5, x: -60, y: -60, opacity: 0, duration: 0.4, ease: "power3.in" }, W.prepare);
+      tl.to(["#a3-f1", "#a3-f2", "#a3-f3", "#a3-f4"], { x: -420, scale: 0.6, opacity: 0, duration: 0.36, ease: "power3.in", stagger: 0.03 }, W.prepare + 0.05);
+      tl.fromTo("#a3-sum", { opacity: 0, scale: 0.9, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.42, ease: "expo.out" }, W.summaries - 0.05);
+      tl.fromTo(["#a3-s1", "#a3-s2", "#a3-s3"], { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.26, stagger: 0.12, ease: "power2.out" }, W.summaries + 0.12);
+      // "your team can check"
+      tl.fromTo("#a3-check", { opacity: 0 }, { opacity: 1, duration: 0.25 }, W.team);
+      tl.fromTo("#a3-tick", { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(3)" }, W.check + 0.05);
+      tl.fromTo("#a3-prog", { scaleX: 0.4808 }, { scaleX: 0.6035, duration: 6.623, ease: "none" }, 0);
+      window.__timelines["a3"] = tl;
+    })();
+  </script>
+</template>

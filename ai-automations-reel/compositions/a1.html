@@ -1,0 +1,133 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #a1-steps { position: absolute; left: 56px; top: 444px; display: flex; gap: 14px; align-items: center; font-size: 20px; color: var(--gray); }
+    #a1-steps b { font-weight: 500; padding: 7px 12px; border-radius: 8px; border: 2px solid var(--gray-line); }
+    #a1-steps em { font-style: normal; color: var(--gray); }
+    .a1-lbl { font-family: 'JetBrains Mono', monospace; font-size: 17px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .a1-val { font-size: 25px; font-weight: 700; color: #141A24; margin-top: 4px; }
+    .a1-crmrow { padding: 12px 22px; border-bottom: 2px solid #ECEEF2; height: 74px; }
+    .a1-chip { position: absolute; padding: 8px 14px; border-radius: 10px; background: #DCE5FD; color: #12307F; font-weight: 700; font-size: 24px; white-space: nowrap; }
+    #a1-stamp { position: absolute; right: 18px; top: 10px; }
+    .a1-line { font-size: 30px; font-weight: 600; color: #141A24; margin: 18px 30px 0; white-space: nowrap; }
+    #a1-review { left: 70px; top: 750px; width: 940px; height: 132px; display: flex; align-items: center; gap: 22px; padding: 0 26px; }
+    #a1-who { width: 70px; height: 70px; border-radius: 50%; background: var(--ink); position: relative; flex: none; }
+    #a1-who::before { content: ""; position: absolute; left: 23px; top: 12px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper); }
+    #a1-who::after { content: ""; position: absolute; left: 13px; top: 40px; width: 44px; height: 22px; border-radius: 22px 22px 6px 6px; background: var(--paper); }
+    .a1-btn { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 26px; padding: 14px 26px; border-radius: 14px; }
+    #a1-approve { background: var(--blue); color: #fff; margin-left: auto; position: relative; min-width: 236px; text-align: center; }
+    #a1-edit { border: 3px solid #C6CBD5; color: #4E5666; }
+    #a1-cursor { position: absolute; left: 0; top: 0; width: 44px; height: 54px; }
+  </style>
+  <div id="root" data-composition-id="a1" data-width="1080" data-height="1920">
+    <div id="a1-bg" class="panel bg-dark"></div>
+    <div class="head" style="color:var(--paper)">
+      <div class="mask"><div id="a1-num" class="disp num">01</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a1-t1">CAPTURE</div></div><div class="mask"><div id="a1-t2">ENQUIRIES</div></div></div>
+    </div>
+    <div id="a1-steps" class="mono"><b id="a1-s1">ENQUIRY</b><em>→</em><b id="a1-s2">CRM</b><em>→</em><b id="a1-s3">AI DRAFT</b><em>→</em><b id="a1-s4">REVIEW</b></div>
+
+    <div id="a1-enq" class="card" style="left:56px;top:510px;width:560px;height:330px">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;New enquiry · web form</div>
+      <div style="padding:18px 24px">
+        <div class="a1-lbl">From</div><div id="a1-from" class="a1-val">Priya Nair</div>
+        <div class="a1-lbl" style="margin-top:10px">Email</div><div id="a1-mail" class="a1-val" style="font-family:'JetBrains Mono',monospace;font-size:22px">priya@example.com</div>
+        <div class="a1-val" style="margin-top:14px;font-weight:600;font-size:24px;color:#2A3242">“Hi! Can you cater for 40 people this Friday?”</div>
+      </div>
+    </div>
+    <div id="a1-crm" class="card" style="left:646px;top:510px;width:378px;height:330px">
+      <div class="bar"><span class="dot b"></span>&nbsp;CRM · contact</div>
+      <div class="a1-crmrow"><div class="a1-lbl">Name</div><div id="a1-cn" class="a1-val">Priya Nair</div></div>
+      <div class="a1-crmrow"><div class="a1-lbl">Email</div><div id="a1-ce" class="a1-val" style="font-family:'JetBrains Mono',monospace;font-size:19px">priya@example.com</div></div>
+      <div class="a1-crmrow" style="border:none"><div class="a1-lbl">Status</div><div id="a1-cs" class="a1-val">New lead</div></div>
+      <div id="a1-stamp" class="tag blue">Saved ✓</div>
+    </div>
+    <div id="a1-chip1" class="a1-chip" style="left:72px;top:600px">Priya Nair</div>
+    <div id="a1-chip2" class="a1-chip" style="left:72px;top:686px;font-family:'JetBrains Mono',monospace;font-size:20px">priya@example.com</div>
+
+    <div id="a1-draft" class="card" style="left:56px;top:500px;width:968px;height:236px">
+      <div class="bar"><span class="tag blue" style="padding:4px 10px">AI draft</span>&nbsp;Reply to Priya Nair</div>
+      <div id="a1-d1" class="a1-line">Hi Priya, thanks for reaching out!</div>
+      <div id="a1-d2" class="a1-line">Yes, we can cater for 40 on Friday.</div>
+      <div id="a1-d3" class="a1-line" style="color:#4E5666">Sharing our menu and a quote shortly.</div>
+    </div>
+    <div id="a1-review" class="card">
+      <div id="a1-who"></div>
+      <div><div class="tag ink">Human review</div><div class="a1-val" style="margin-top:8px;font-size:24px">Check the draft before it sends</div></div>
+      <div id="a1-edit" class="a1-btn">Edit</div>
+      <div id="a1-approve" class="a1-btn"><span id="a1-ap1">Approve</span><span id="a1-ap2" style="position:absolute;left:0;right:0;top:14px;opacity:0">✓ Approved</span></div>
+    </div>
+    <svg id="a1-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    <div id="a1-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>01 / 04</span></div><div id="a1-chrome-bot" class="chrome bot mono t-dark"><span>01 / CAPTURE ENQUIRIES</span><span class="prog"><i id="a1-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"one": 0.15, "one_end": 0.628, "capture": 0.628, "capture_end": 1.108, "enquiries": 1.108, "enquiries_end": 2.068, "save": 2.068, "save_end": 2.468, "contact": 2.468, "contact_end": 3.108, "details": 3.108, "details_end": 3.588, "in": 3.588, "in_end": 3.748, "your": 3.748, "your_end": 3.908, "crm": 3.908, "crm_end": 4.868, "and": 4.948, "and_end": 5.188, "let": 5.188, "let_end": 5.508, "ai": 5.508, "ai_end": 6.068, "draft": 6.068, "draft_end": 6.548, "a": 6.548, "a_end": 6.628, "reply": 6.628, "reply_end": 7.108, "for": 7.108, "for_end": 7.348, "review": 7.348, "review_end": 7.988};
+      const tl = gsap.timeline({ paused: true });
+      // headline: masked rise on "One", title on "capture"
+      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.one - 0.04);
+      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.capture - 0.04);
+      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.enquiries - 0.08);
+      tl.fromTo("#a1-steps", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W.capture);
+      const step = (id, t) => {
+        tl.to(id, { backgroundColor: "#2257EF", borderColor: "#2257EF", color: "#FFFFFF", duration: 0.2 }, t);
+      };
+      // an enquiry arrives
+      tl.fromTo("#a1-enq", { x: 420, opacity: 0, rotation: 4 }, { x: 0, opacity: 1, rotation: 0, duration: 0.5, ease: "expo.out" }, W.enquiries - 0.05);
+      step("#a1-s1", W.enquiries);
+      // "Save contact details": the fields lift out of the enquiry and land in the CRM record
+      tl.fromTo("#a1-crm", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, W.save - 0.1);
+      tl.set(["#a1-cn", "#a1-ce", "#a1-cs"], { opacity: 0 }, 0);
+      tl.fromTo("#a1-chip1", { opacity: 0, x: 0, y: 0 }, { opacity: 1, duration: 0.1 }, W.contact);
+      tl.to("#a1-chip1", { x: 596, y: 4, duration: 0.5, ease: "power3.inOut" }, W.contact + 0.1);
+      tl.set("#a1-chip1", { opacity: 0 }, W.contact + 0.6); tl.set("#a1-cn", { opacity: 1 }, W.contact + 0.6);
+      tl.fromTo("#a1-chip2", { opacity: 0, x: 0, y: 0 }, { opacity: 1, duration: 0.1 }, W.details);
+      tl.to("#a1-chip2", { x: 596, y: -4, duration: 0.5, ease: "power3.inOut" }, W.details + 0.1);
+      tl.set("#a1-chip2", { opacity: 0 }, W.details + 0.6); tl.set("#a1-ce", { opacity: 1 }, W.details + 0.6);
+      tl.set("#a1-cs", { opacity: 1 }, W.crm - 0.1);
+      tl.fromTo("#a1-stamp", { scale: 2.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "back.out(2)" }, W.crm);
+      step("#a1-s2", W.crm);
+      // "let AI draft a reply": the record steps back, the draft writes itself
+      tl.to(["#a1-enq", "#a1-crm"], { y: -40, opacity: 0, scale: 0.94, duration: 0.35, ease: "power3.in", stagger: 0.04 }, W.ai - 0.35);
+      tl.fromTo("#a1-draft", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.ai - 0.05);
+      step("#a1-s3", W.draft);
+      ["#a1-d1", "#a1-d2", "#a1-d3"].forEach((d, i) => {
+        tl.fromTo(d, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.42, ease: "steps(18)" }, W.draft + i * 0.36);
+      });
+      // review: a person approves before anything sends
+      tl.fromTo("#a1-review", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.32, ease: "back.out(1.6)" }, W.reply - 0.05);
+      step("#a1-s4", W.reply);
+      tl.fromTo("#a1-cursor", { x: 520, y: 980, opacity: 0 }, { x: 860, y: 826, opacity: 1, duration: 0.5, ease: "power3.inOut" }, W.reply + 0.1);
+      tl.to("#a1-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.review);
+      tl.to("#a1-approve", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.review);
+      tl.set("#a1-ap1", { opacity: 0 }, W.review + 0.06); tl.set("#a1-ap2", { opacity: 1 }, W.review + 0.06);
+      tl.to("#a1-approve", { backgroundColor: "#0B1016", duration: 0.15 }, W.review + 0.06);
+      tl.fromTo("#a1-prog", { scaleX: 0.2150 }, { scaleX: 0.3624, duration: 7.957, ease: "none" }, 0);
+      window.__timelines["a1"] = tl;
+    })();
+  </script>
+</template>
