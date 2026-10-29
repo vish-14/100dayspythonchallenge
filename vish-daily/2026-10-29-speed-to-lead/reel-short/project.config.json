@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 46.2,
+    "duration": 46.8,
     "output": "reel.mp4"
   },
   "brand": {
@@ -51,7 +51,7 @@
       "chapter": "00 / BREAKING",
       "counter": "00 / 04",
       "theme": "dark",
-      "layout": "split"
+      "layout": "takeover"
     },
     {
       "id": "problem",
@@ -112,7 +112,11 @@
       "l3": "THANDI NAHI!",
       "tick_tag": "PROPERTY AGENTS",
       "ticker": "AI agent replies to every enquiry · qualifies buyers · books site visits you approve · follows up",
-      "alert": "ALERT FOR PROPERTY AGENTS"
+      "alert": "ALERT FOR PROPERTY AGENTS",
+      "f1sub": "PROPERTY AGENTS · ALERT",
+      "f4sub": "@VISH.WORKFLOWS · AI AUTOMATION",
+      "note_k": "NEW ENQUIRY · 9:04 PM",
+      "note_v": "2BHK still available?"
     },
     "problem": {
       "clock_a": "9:04 PM",
@@ -410,54 +414,6 @@
       "volume": 0.25
     },
     {
-      "file": "siren.mp3",
-      "word": "hook:Breaking",
-      "offset": -0.75,
-      "volume": 0.28
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:Breaking",
-      "offset": -0.7,
-      "volume": 0.5
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "hook:Breaking",
-      "offset": -0.78,
-      "volume": 0.35
-    },
-    {
-      "file": "notification.mp3",
-      "word": "hook:news!",
-      "offset": 0.1,
-      "volume": 0.25
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:Aaj",
-      "offset": -0.04,
-      "volume": 0.4
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:koi",
-      "offset": -0.04,
-      "volume": 0.4
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:thandi",
-      "offset": -0.05,
-      "volume": 0.55
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "hook:padegi.",
-      "offset": 0.35,
-      "volume": 0.4
-    },
-    {
       "file": "whoosh-short.mp3",
       "word": "problem:A",
       "offset": -0.12,
@@ -504,6 +460,54 @@
       "word": "solution:AI",
       "offset": -10.03,
       "volume": 0.18
+    },
+    {
+      "file": "news-sting.mp3",
+      "word": "hook:Breaking",
+      "offset": -1.4,
+      "volume": 0.85
+    },
+    {
+      "file": "siren-police.mp3",
+      "word": "hook:Breaking",
+      "offset": -1.4,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "hook:Breaking",
+      "offset": -0.06,
+      "volume": 0.35
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:Aaj",
+      "offset": -0.05,
+      "volume": 0.5
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:koi",
+      "offset": -0.05,
+      "volume": 0.5
+    },
+    {
+      "file": "notification.mp3",
+      "word": "hook:property",
+      "offset": -0.05,
+      "volume": 0.3
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:thandi",
+      "offset": -0.05,
+      "volume": 0.6
+    },
+    {
+      "file": "whoosh.mp3",
+      "word": "hook:padegi.",
+      "offset": 0.35,
+      "volume": 0.4
     }
   ]
 }

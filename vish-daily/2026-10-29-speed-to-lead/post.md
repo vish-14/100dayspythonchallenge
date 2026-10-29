@@ -1,6 +1,6 @@
 # ▶ POST THIS: short "Breaking news" version
 
-Files: `reel-short.mp4` (46.2 s, 1080×1920) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)
+Files: `reel-short.mp4` (46.8 s, 1080×1920; v6 opening: 7 fast-cut frames, police siren, news sting) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)
 Time: **Thu 29 Oct, 8:00 PM IST** (Dubai 6:30 PM · London 2:30 PM · New York 10:30 AM)
 
 ## Caption (short version)

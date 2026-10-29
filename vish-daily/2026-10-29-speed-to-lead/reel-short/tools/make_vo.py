@@ -13,11 +13,15 @@ PITCH_SEMITONES = -1.0
 CLARITY = ("highpass=f=80,equalizer=f=250:t=q:w=1.2:g=-3,equalizer=f=3200:t=q:w=1.0:g=4,"
            "equalizer=f=8000:t=q:w=1.2:g=1.5,deesser=i=0.3,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2")
 SC = json.load(open('script.json'))
-LEAD = 0.8
+LEAD = 1.4
 GAP = {'hook': 0.4, 'problem': 0.9, 'solution': 0.4, 'a1': 0.3, 'a2': 0.3, 'a3': 0.65, 'a4': 0.45}
 SR = 24000; parts = [np.zeros(int(LEAD * SR), np.float32)]; t = LEAD; scenes = []
 for s in SC:
-    a, sr = k.create(s['say'], voice=VOICE, speed=s.get('speed', 0.9), lang=s.get('lang', 'en-gb')); assert sr == SR
+    if s.get('audio'):  # a recorded or Parler-TTS clip, resampled to 24 kHz mono
+        a = subprocess.run(['ffmpeg', '-v', 'error', '-i', s['audio'], '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+        a, sr = np.frombuffer(a, dtype=np.float32), SR
+    else:
+        a, sr = k.create(s['say'], voice=VOICE, speed=s.get('speed', 0.9), lang=s.get('lang', 'en-gb')); assert sr == SR
     a = np.asarray(a, dtype=np.float32); thr = 0.01 * np.abs(a).max(); idx = np.where(np.abs(a) > thr)[0]
     a = a[max(0, idx[0] - int(0.02 * sr)):idx[-1] + int(0.08 * sr)]
     scenes.append({'id': s['id'], 'vo_start': round(t, 3), 'vo_end': round(t + len(a) / SR, 3)})

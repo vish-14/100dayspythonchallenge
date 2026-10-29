@@ -68,7 +68,7 @@
   </div>
   <script>
     (() => {
-      const W = {"third": 0.15, "third_end": 0.581, "it": 0.581, "it_end": 0.821, "alerts": 0.821, "alerts_end": 1.301, "you": 1.301, "you_end": 1.461, "on": 1.461, "on_end": 1.621, "whatsapp": 1.621, "whatsapp_end": 2.181, "and": 2.261, "and_end": 2.501, "books": 2.501, "books_end": 2.901, "the": 2.901, "the_end": 2.981, "site": 2.981, "site_end": 3.381, "visit": 3.381, "visit_end": 3.781, "you_2": 3.781, "you_2_end": 4.021, "approve": 4.021, "approve_end": 5.061};
+      const W = {"third": 0.15, "third_end": 0.461, "it": 0.621, "it_end": 0.781, "alerts": 0.781, "alerts_end": 1.261, "you": 1.261, "you_end": 1.421, "on": 1.421, "on_end": 1.581, "whatsapp": 1.581, "whatsapp_end": 2.221, "and": 2.301, "and_end": 2.541, "books": 2.541, "books_end": 2.861, "the": 2.861, "the_end": 3.021, "site": 3.021, "site_end": 3.421, "visit": 3.421, "visit_end": 3.821, "you_2": 3.821, "you_2_end": 4.061, "approve": 4.061, "approve_end": 5.021};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.alerts - 0.04);
@@ -91,7 +91,7 @@
       tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.approve + 0.2);
       tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.approve + 0.5);
       tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.approve + 0.5);
-      tl.fromTo("#a3-prog", { scaleX: 0.6229 }, { scaleX: 0.7321, duration: 5.044, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.6278 }, { scaleX: 0.7355, duration: 5.044, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

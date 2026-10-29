@@ -17,7 +17,11 @@ LEAD = 0.25
 GAP = {'hook': 0.3, 'problem': 0.45, 'solution': 0.45, 'a1': 0.35, 'a2': 0.35, 'a3': 0.35, 'a4': 0.4, 'key': 0.5}
 SR = 24000; parts = [np.zeros(int(LEAD * SR), np.float32)]; t = LEAD; scenes = []
 for s in SC:
-    a, sr = k.create(s['say'], voice=VOICE, speed=s.get('speed', 0.9), lang='en-gb'); assert sr == SR
+    if s.get('audio'):  # a recorded or Parler-TTS clip, resampled to 24 kHz mono
+        a = subprocess.run(['ffmpeg', '-v', 'error', '-i', s['audio'], '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
+        a, sr = np.frombuffer(a, dtype=np.float32), SR
+    else:
+        a, sr = k.create(s['say'], voice=VOICE, speed=s.get('speed', 0.9), lang=s.get('lang', 'en-gb')); assert sr == SR
     a = np.asarray(a, dtype=np.float32); thr = 0.01 * np.abs(a).max(); idx = np.where(np.abs(a) > thr)[0]
     a = a[max(0, idx[0] - int(0.02 * sr)):idx[-1] + int(0.08 * sr)]
     scenes.append({'id': s['id'], 'vo_start': round(t, 3), 'vo_end': round(t + len(a) / SR, 3)})

@@ -67,7 +67,7 @@
   </div>
   <script>
     (() => {
-      const W = {"a": 0.15, "a_end": 0.317, "buyer": 0.317, "buyer_end": 0.717, "enquires": 0.717, "enquires_end": 1.357, "at": 1.357, "at_end": 1.517, "9": 1.517, "9_end": 1.997, "pm": 1.997, "pm_end": 2.637, "you": 2.877, "you_end": 3.117, "reply": 3.117, "reply_end": 3.517, "the": 3.517, "the_end": 3.677, "next": 3.677, "next_end": 3.997, "morning": 3.997, "morning_end": 4.717, "by": 4.717, "by_end": 4.957, "then": 4.957, "then_end": 5.597, "another": 5.597, "another_end": 6.077, "broker": 6.077, "broker_end": 6.637, "is": 6.637, "is_end": 6.797, "already": 6.797, "already_end": 7.277, "talking": 7.277, "talking_end": 7.757, "to": 7.757, "to_end": 7.997, "them": 7.997, "them_end": 8.397};
+      const W = {"a": 0.15, "a_end": 0.277, "buyer": 0.277, "buyer_end": 0.757, "enquires": 0.757, "enquires_end": 1.317, "at": 1.317, "at_end": 1.477, "9": 1.477, "9_end": 1.957, "pm": 1.957, "pm_end": 2.597, "you": 2.837, "you_end": 3.077, "reply": 3.077, "reply_end": 3.557, "the": 3.557, "the_end": 3.717, "next": 3.717, "next_end": 4.037, "morning": 4.037, "morning_end": 4.677, "by": 4.677, "by_end": 4.997, "then": 4.997, "then_end": 5.557, "another": 5.557, "another_end": 6.037, "broker": 6.037, "broker_end": 6.597, "is": 6.597, "is_end": 6.837, "already": 6.837, "already_end": 7.237, "talking": 7.237, "talking_end": 7.717, "to": 7.717, "to_end": 7.957, "them": 7.957, "them_end": 8.677};
       const tl = gsap.timeline({ paused: true });
       // "A buyer enquires": the conversation opens, the message lands
       tl.fromTo("#pb-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.a - 0.1);
@@ -99,7 +99,7 @@
       tl.fromTo("#pb-lost", { opacity: 0, scale: 3, rotation: -8 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.2, ease: "power4.out" }, W.them - 0.05);
       tl.fromTo("#pb-flash", { opacity: 0.5 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.them);
       tl.fromTo("#pb-lost", { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.them + 0.15);
-      tl.fromTo("#problem-prog", { scaleX: 0.1507 }, { scaleX: 0.3410, duration: 8.789, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.1616 }, { scaleX: 0.3494, duration: 8.789, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

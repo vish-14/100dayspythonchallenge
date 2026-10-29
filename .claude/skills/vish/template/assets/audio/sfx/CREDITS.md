@@ -33,3 +33,4 @@ All files are distributed under the [Pixabay Content License](https://pixabay.co
 - Redistribution as part of derivative works (such as videos rendered with HyperFrames)
 
 without any attribution requirement.
+- siren-police.mp3, news-sting.mp3: original, synthesised for @vish.workflows with scripts/make_news_sfx.py (no third-party audio).

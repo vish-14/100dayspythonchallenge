@@ -130,7 +130,7 @@ for sc in CFG["scenes"]:
 # ---------------------------------------------------------------- presenter
 FPS = TIM["fps"]
 vis = TIM["visemes"]
-pres_in = 0.05
+pres_in = win["problem"][0] + 0.05
 pres_out = win["cta"][0]
 # blinks: every ~2.6–4 s, skipping moments the presenter is off screen
 blinks, t, k = [], pres_in + 1.1, 0

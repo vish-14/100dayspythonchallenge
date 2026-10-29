@@ -25,6 +25,7 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 2. **The persona speaks in the first person** ("Follow me… I'll send you…"). The company name never appears in the video, bio or on-screen text. It appears **only once, at the very end of a reel caption**, for SEO (see `references/brand-and-page.md`).
 3. **The CTA keyword is `WORKFLOW`** everywhere: voice, on-screen pill, caption, SuperProfile trigger. Follow first, then comment (the auto-DM only reaches followers).
 4. **No invented statistics, client results or guaranteed savings.** Example names and values on UI cards are illustrative.
+6. **Never impersonate real people.** No real politician, celebrity or public figure as a character, and no cloned or imitated voices of real people (for example the Prime Minister), even as a joke. Channel jingles (TV9, Aaj Tak and so on) are copyrighted too: use the original `siren-police` and `news-sting` sounds instead.
 5. **No copyrighted audio.** Voice comes from Kokoro (offline), always the "Vish warm" voice in `template/tools/make_vo.py` (hm_omega + hm_psi blend, en-gb, 0.9×, −1 semitone, clarity chain). Music is original (MusicGen, run locally) or properly licensed. SFX come from the HyperFrames bundle (Pixabay licence).
 
 ## What's in this skill
@@ -43,6 +44,9 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 | `references/lead-engine.md` | Comment → DM → call → proposal → pilot, discovery questions per industry, metrics to track |
 | `references/guide-pdf.md` | How to write `guide.json` and build the PDF guide; layout and writing rules |
 | `scripts/guide/make_guide.py` | JSON → A4 PDF guide in the house style, with page PNGs and a link check (`render.js`, `guide.css` and bundled Inter fonts beside it) |
+| `scripts/make_news_sfx.py` | Regenerates the original police siren (wail → high-low-high yelps → wail) and the breaking-news sting |
+| `scripts/make_hindi_vo.py` | Natural Hindi line with AI4Bharat Indic Parler-TTS (needs `HF_TOKEN`); writes several takes to pick by ear |
+| `template/hooks/breaking-news-hook.html` | Optional 7-frame breaking-news opening (hard cuts, strobe, slams, shakes); swap it in as `src/scenes/hook.html` |
 | `scripts/setup.sh` | One-time install and check of the toolchain and models in a fresh container |
 | `assets/content-log.template.md` | Starting point for `vish-daily/content-log.md` |
 | `assets/lead-magnet/` | The first guide: web page, PDF and its `4-task-workflow.guide.json` source |

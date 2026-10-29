@@ -47,6 +47,15 @@ npx hyperframes render -q delivery --fps 30 -o vish_reel.mp4
 - `src/presenter.html`: Vish's panel, lip sync, blinks, brows, head shifts. Layers live in `assets/presenter/`; regenerate them with `scripts/make_sprite.py` from this skill.
 - `src/scenes/cta.html`: the follow + comment WORKFLOW ending (avatar at `assets/brand/avatar.png`).
 
+## Breaking-news hook (optional, for low-reach periods)
+
+Used in the 29 Oct short cut after the first reel got little reach from outside the network. Copy `template/hooks/breaking-news-hook.html` over `src/scenes/hook.html`, set the hook layout to `takeover`, start the presenter at the problem (`pres_in = win["problem"][0] + 0.05` in `tools/build.py`) and set `LEAD = 1.4` in `tools/make_vo.py`, so the sting and the siren play before the voice.
+- **Seven hard-cut full-screen frames, never one busy picture:** red BREAKING (hit 1, 0.00 s) → black NEWS (hit 2, 0.35 s) → red/blue strobe alert (hit 3, 0.70 s, siren) → TV news desk with LIVE and the ticker (on "Breaking news") → each headline line alone (AAJ RAAT SE / KOI ENQUIRY / THANDI NAHI!) → a flash cut into the problem.
+- **Every cut gets a zoom punch, a white flash and a shake;** the last line also gets an RGB glitch and an ice tint.
+- **Sounds:** `news-sting` (three brass/boom hits) and `siren-police` (rising wail → fast high-low-high yelps → falling wail, horn tone and echo, ducks under the voice after 1.3 s), both at the start of the hook. Regenerate them with `scripts/make_news_sfx.py`, and check the shape with a spectrogram (`ffmpeg -lavfi showspectrumpic`), since we can't listen.
+- **Hinglish voice:** write Hindi in Devanagari with `"lang": "hi"`; captions stay in Roman Hinglish. Kokoro's Hindi sounds robotic to Indian ears. For a natural accent use `scripts/make_hindi_vo.py` (Indic Parler-TTS, speaker Rohit, needs `HF_TOKEN`) or a phone recording, then set `"audio": "<file>"` on that scene in `tools/script.json`.
+- **Keep the problem beat punchy too:** a red UNREAD tag, a whip-flip of the clock, a "LEAD LOST ✗" stamp with a thud, and a riser that crests on the solution reveal.
+
 ## Lessons learned (avoid repeating these)
 
 - **Story flow (user feedback, Oct 2026):** the reel must go problem → solution → workflows → CTA. A `solution` scene ("That's why I built an AI agent solution for … with four connected workflows") sits between `problem` and `a1`, and each workflow starts "First, … / Second, …" and is explained right away. See `daily-run.md` Step 2.

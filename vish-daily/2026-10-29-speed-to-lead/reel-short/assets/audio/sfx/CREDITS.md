@@ -35,3 +35,4 @@ All files are distributed under the [Pixabay Content License](https://pixabay.co
 without any attribution requirement.
 
 - siren.mp3: original two-tone siren synthesised with numpy for @vish.workflows (no third-party audio).
+- siren-police.mp3, news-sting.mp3: original, synthesised for @vish.workflows (no third-party audio).

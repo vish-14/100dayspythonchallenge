@@ -60,7 +60,7 @@
   <script>
     (() => {
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
-      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaooooooaaaaaaaeeeerrrrrrrrrrraaaaarrrrraaaaaaaeeeeemmrrrrrrrrrrrrraaarrrraaarrrraarrroooooaarrrrrrrmmaaaaaaarrrrrrrraaaaaaaaaaaaaaaaeeeeoooaaooaaaaaaaaaaaaaaammmmrrrrrrrrrrrrrrrraaaoooooaaaaaaammmmoommmaaaaaaaaeemmmmrrroooaaaaaaaooorrraaaaaaaeeebbbmmrrrrrrrrrrrrroooaaaaaaaaaaaaabbbooaaaaeerrooaaaaaaeeerrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaaaaaaooooaaaaaaaaaabbrrrreeerrraaaaaaaaaarrraaaaaaaoommmmmeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaaoooaaaooorrrrraaooorrrraaaaaaaaaaaaaaaarrrrrraaaaeeaaaeeeeeeeooeeeeeooommmmrraaaaaaaaaaabbaaaaeeebbbbrrrrrrrrrrrrrraaammrrrrraaaaaarrrrrooaaarrrrooooaaaarrmmmmbbbmmrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrrraaaaaaaaaaooommmaaaaaaabbbbbbbrrrrrrraaooeeeeeeoooeeeeerrrrrrrrrrrrreeeeaaaaaaaaoooorrrrraaarrrraaaaaaaaaaaaaaaoooaaaaaaaabbmmmmrrrrrrrrrrrrrraaaaaaaaoorrrrrraaaaaaaaaaaammeeeaaaaaaaaoooaaaaaaaaaaaarrrrrrrrrrrrraaooooaaaeeeeeeeeeeaaaaaooooaaeeeeeeeeeooaaarrrraaaaammmrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaammmrraaammmmmaaaaaaaeeaaaaaarrrrrrrrrraaoooooaaooooaaaaaaooaaaaaaeeemmrrrrrrrrrrrrrrrrrraaaaaaaaaeeemmmaaaaarrrraaaaammaaaaarrrraaaaaaaaaaaaaaaaammmmrrrrrrrrrrrrraaaaaaaaooaaaaaarrrrooooeeaaaaaaoorrrrrrrrrrraaaaarrmmmaabbbbrrrrrrrrrraaaaaaaeeeeeaaooaaaaaaoommaaaaaaaaaaooommrrrrooaaaooooaaaabbbbbbmmrrrrrr", FPS = 30, BLINKS = [1.15, 4.75, 7.85, 11.85, 14.75, 17.45, 21.05, 24.15, 28.15, 31.05, 33.75], BROWS = [1.36, 13.76, 16.56, 22.663, 26.505, 28.929, 33.973], MOVES = [[7.163, -10, 0], [15.952, 0, 0], [22.713, 10, 0], [26.555, 0, 0], [28.979, 0, 10], [34.023, -10, 0], [36.42, 0, -10]];
+      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaooooooaaaaaaaeeeerrrrrrrrrrraaaaarrrrraaaaaaaeeeeemmrrrrrrrrrrraaaaarrrrrrrrrrraaaaaoooooaaarrrrrrmmaaaaaaarrrrrrrraaooooaaaaaaaarreeeeoooaaooaaaaaaaaaaaaaaammmmrrrrrrrrrrrrrrrrraaoooooaaaaaaammmmooommaaaaaaaaeeeeeerrroooaaaaaaaooorrraaaaaaaeeeeeeerrrrrrrrrrrrrrooooaaaaaaaaaaaabbbooaaaaeerrooaaaaaaeeerrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaaaaaaooooaaaaaaaaaabbrrrreeerrraaaaaaaaaarrraaaaaaaoommmmmeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaaoooaaaooorrrrraaooorrrraaaaaaaaaaaaaaaarrrrrraaaaeeaaaeeeeeeeooeeeeeooooooorraaammmmmaaabbaaaaeeebbbbbbrrrrrrrrrrrraaammrrrrraaaaaarrrrrooaaarrrrooooaaaarrmmmmbbbmmrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrrraaaaaaaaaaooommmaaaaaaabbbbbbbrrrrrrraaooeeeeeeoooeeeeerrrrrrrrrrrrreeeeaaaaaaaaoooorrrrraaarrrraaaaaaaaaaaaaaaoooaaaaaaaabbmmmmrrrrrrrrrrrrrraaaaaaaaarrrrrrraaaaaaaaaaaammeeeaaaaaaaaoooaaaaaaaaaaaarrrrrrrrrrrrraaooooaaaeeeeeeeeeeaaaaaooooaaeeeeeeeeeooaaarrrraaoooommrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaammrrraaammmmmaaaaaaaeeaaaaaarrrrrrrrrraaoooooaaooooaaaaaaooaaaaeeeeeerrrrrrrrrrrrrrrrrrraaaaaaaaaeeemmmaaaaarrrraaaaammaaaoorrrraaaaaaaaaaaaaaaaammmmrrrrrrrrrrrrraaaaaaaaooaaaaaarrrrooooeeaaaaaaoorrrrrrrrrrraaaaarrmmmaabbbbrrrrrrrrrraaaaaaaeeeeeaaooaaaaaaoommaaaaaaaaaaooommrrrrooaaaooooaaaabbbbbbbrrrrrrr", FPS = 30, BLINKS = [8.713, 12.313, 15.413, 19.413, 22.313, 25.013, 28.613, 31.713, 35.713], BROWS = [1.92, 14.4, 17.2, 23.263, 27.105, 29.529, 34.573], MOVES = [[7.763, -10, 0], [16.552, 0, 0], [23.313, 10, 0], [27.155, 0, 0], [29.579, 0, 10], [34.623, -10, 0], [37.06, 0, -10]];
       const tl = gsap.timeline({ paused: true });
       const $ = (id) => document.getElementById(id);
       const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };
@@ -68,8 +68,8 @@
       const brows = { n: $("pp-brows-neutral"), u: $("pp-brows-up") };
       const head = $("pp-head");
 
-      tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 0.050);
-      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 37.059 - 0.4);
+      tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 7.613);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 37.659 - 0.4);
 
       function render() {
         const t = tl.time();
@@ -89,7 +89,7 @@
         head.style.translate = `${dx}px ${dy}px`;
       }
       const drive = { p: 0 };
-      tl.to(drive, { p: 1, duration: 46.200, ease: "none", onUpdate: render }, 0);
+      tl.to(drive, { p: 1, duration: 46.800, ease: "none", onUpdate: render }, 0);
       render();
       window.__timelines["presenter"] = tl;
     })();
