@@ -15,576 +15,570 @@
     "id": "w2",
     "text": "Aj",
     "start": 2.48,
-    "end": 2.8
+    "end": 2.96
   },
   {
     "id": "w3",
     "text": "Ratse,",
-    "start": 2.96,
+    "start": 3.04,
     "end": 3.68
   },
   {
     "id": "w4",
-    "text": "Abki",
+    "text": "Apki",
     "start": 3.68,
-    "end": 4.24
+    "end": 4.16
   },
   {
     "id": "w5",
     "text": "Ekbi",
-    "start": 4.24,
-    "end": 4.56
+    "start": 4.32,
+    "end": 4.72
   },
   {
     "id": "w6",
-    "text": "Lead",
-    "start": 4.72,
-    "end": 4.96
+    "text": "Lead,",
+    "start": 4.8,
+    "end": 5.2
   },
   {
     "id": "w7",
-    "text": "Hat",
-    "start": 5.04,
-    "end": 5.28
-  },
-  {
-    "id": "w8",
-    "text": "se",
-    "start": 5.36,
-    "end": 5.44
-  },
-  {
-    "id": "w9",
-    "text": "nahi",
-    "start": 5.52,
+    "text": "Hatse",
+    "start": 5.2,
     "end": 5.76
   },
   {
+    "id": "w8",
+    "text": "Nahi",
+    "start": 5.76,
+    "end": 6
+  },
+  {
+    "id": "w9",
+    "text": "Jaya.",
+    "start": 6.16,
+    "end": 7.28
+  },
+  {
     "id": "w10",
-    "text": "jayagi.",
-    "start": 5.92,
-    "end": 6.72
+    "text": "A",
+    "start": 7.28,
+    "end": 7.52
   },
   {
     "id": "w11",
-    "text": "A",
-    "start": 6.72,
-    "end": 6.88
+    "text": "buyer",
+    "start": 7.52,
+    "end": 8.08
   },
   {
     "id": "w12",
-    "text": "buyer",
-    "start": 6.88,
-    "end": 7.36
+    "text": "inquires",
+    "start": 8.08,
+    "end": 8.72
   },
   {
     "id": "w13",
-    "text": "inquires",
-    "start": 7.36,
-    "end": 7.92
+    "text": "at",
+    "start": 8.72,
+    "end": 8.88
   },
   {
     "id": "w14",
-    "text": "at",
-    "start": 7.92,
-    "end": 8.16
+    "text": "9",
+    "start": 8.88,
+    "end": 9.36
   },
   {
     "id": "w15",
-    "text": "9",
-    "start": 8.16,
-    "end": 8.56
+    "text": "p.m.",
+    "start": 9.36,
+    "end": 10
   },
   {
     "id": "w16",
-    "text": "p.m.",
-    "start": 8.56,
-    "end": 9.2
+    "text": "You",
+    "start": 10.24,
+    "end": 10.48
   },
   {
     "id": "w17",
-    "text": "You",
-    "start": 9.52,
-    "end": 9.76
+    "text": "reply",
+    "start": 10.48,
+    "end": 10.88
   },
   {
     "id": "w18",
-    "text": "reply",
-    "start": 9.76,
-    "end": 10.16
+    "text": "the",
+    "start": 10.88,
+    "end": 11.04
   },
   {
     "id": "w19",
-    "text": "the",
-    "start": 10.16,
-    "end": 10.32
-  },
-  {
-    "id": "w20",
     "text": "next",
-    "start": 10.32,
-    "end": 10.64
-  },
-  {
-    "id": "w21",
-    "text": "morning.",
-    "start": 10.64,
+    "start": 11.04,
     "end": 11.36
   },
   {
-    "id": "w22",
-    "text": "By",
+    "id": "w20",
+    "text": "morning.",
     "start": 11.36,
-    "end": 11.6
+    "end": 12.08
+  },
+  {
+    "id": "w21",
+    "text": "By",
+    "start": 12.08,
+    "end": 12.32
+  },
+  {
+    "id": "w22",
+    "text": "then,",
+    "start": 12.32,
+    "end": 12.96
   },
   {
     "id": "w23",
-    "text": "then,",
-    "start": 11.6,
-    "end": 12.24
-  },
-  {
-    "id": "w24",
     "text": "another",
-    "start": 12.24,
-    "end": 12.72
-  },
-  {
-    "id": "w25",
-    "text": "broker",
-    "start": 12.72,
-    "end": 13.28
-  },
-  {
-    "id": "w26",
-    "text": "is",
-    "start": 13.28,
+    "start": 12.96,
     "end": 13.44
   },
   {
-    "id": "w27",
-    "text": "already",
+    "id": "w24",
+    "text": "broker",
     "start": 13.44,
-    "end": 13.92
+    "end": 14
   },
   {
-    "id": "w28",
-    "text": "talking",
-    "start": 13.92,
-    "end": 14.4
+    "id": "w25",
+    "text": "is",
+    "start": 14,
+    "end": 14.16
   },
   {
-    "id": "w29",
-    "text": "to",
-    "start": 14.4,
+    "id": "w26",
+    "text": "already",
+    "start": 14.16,
     "end": 14.64
   },
   {
-    "id": "w30",
-    "text": "them.",
+    "id": "w27",
+    "text": "talking",
     "start": 14.64,
-    "end": 15.28
+    "end": 15.12
   },
   {
-    "id": "w31",
-    "text": "That's",
-    "start": 15.28,
-    "end": 15.76
+    "id": "w28",
+    "text": "to",
+    "start": 15.12,
+    "end": 15.36
   },
   {
-    "id": "w32",
-    "text": "why",
-    "start": 15.76,
+    "id": "w29",
+    "text": "them.",
+    "start": 15.36,
     "end": 16
   },
   {
-    "id": "w33",
+    "id": "w30",
+    "text": "That's",
+    "start": 16.08,
+    "end": 16.48
+  },
+  {
+    "id": "w31",
+    "text": "why",
+    "start": 16.48,
+    "end": 16.8
+  },
+  {
+    "id": "w32",
     "text": "I",
-    "start": 16,
-    "end": 16.24
+    "start": 16.8,
+    "end": 17.04
+  },
+  {
+    "id": "w33",
+    "text": "built",
+    "start": 17.04,
+    "end": 17.44
   },
   {
     "id": "w34",
-    "text": "built",
-    "start": 16.24,
-    "end": 16.72
+    "text": "an",
+    "start": 17.44,
+    "end": 17.68
   },
   {
     "id": "w35",
-    "text": "an",
-    "start": 16.72,
-    "end": 16.96
+    "text": "AI",
+    "start": 17.68,
+    "end": 18.24
   },
   {
     "id": "w36",
-    "text": "AI",
-    "start": 16.96,
-    "end": 17.52
+    "text": "agent",
+    "start": 18.4,
+    "end": 18.88
   },
   {
     "id": "w37",
-    "text": "agent",
-    "start": 17.68,
-    "end": 18.16
-  },
-  {
-    "id": "w38",
     "text": "solution",
-    "start": 18.16,
-    "end": 18.56
-  },
-  {
-    "id": "w39",
-    "text": "for",
-    "start": 18.56,
-    "end": 18.8
-  },
-  {
-    "id": "w40",
-    "text": "property",
-    "start": 18.8,
+    "start": 18.88,
     "end": 19.28
   },
   {
-    "id": "w41",
-    "text": "agents",
+    "id": "w38",
+    "text": "for",
     "start": 19.28,
-    "end": 19.84
+    "end": 19.52
+  },
+  {
+    "id": "w39",
+    "text": "property",
+    "start": 19.52,
+    "end": 20
+  },
+  {
+    "id": "w40",
+    "text": "agents",
+    "start": 20,
+    "end": 20.56
+  },
+  {
+    "id": "w41",
+    "text": "with",
+    "start": 20.72,
+    "end": 20.96
   },
   {
     "id": "w42",
-    "text": "with",
-    "start": 20,
-    "end": 20.24
+    "text": "four",
+    "start": 20.96,
+    "end": 21.36
   },
   {
     "id": "w43",
-    "text": "four",
-    "start": 20.24,
-    "end": 20.64
+    "text": "connected",
+    "start": 21.36,
+    "end": 21.92
   },
   {
     "id": "w44",
-    "text": "connected",
-    "start": 20.64,
-    "end": 21.2
+    "text": "workflows.",
+    "start": 21.92,
+    "end": 22.96
   },
   {
     "id": "w45",
-    "text": "workflows.",
-    "start": 21.2,
-    "end": 22.24
+    "text": "First,",
+    "start": 22.96,
+    "end": 23.6
   },
   {
     "id": "w46",
-    "text": "First,",
-    "start": 22.24,
-    "end": 22.88
-  },
-  {
-    "id": "w47",
     "text": "it",
-    "start": 22.88,
-    "end": 23.04
-  },
-  {
-    "id": "w48",
-    "text": "replies",
-    "start": 23.04,
-    "end": 23.68
-  },
-  {
-    "id": "w49",
-    "text": "to",
-    "start": 23.68,
+    "start": 23.6,
     "end": 23.84
   },
   {
-    "id": "w50",
-    "text": "every",
+    "id": "w47",
+    "text": "replies",
     "start": 23.84,
-    "end": 24.24
+    "end": 24.4
+  },
+  {
+    "id": "w48",
+    "text": "to",
+    "start": 24.4,
+    "end": 24.56
+  },
+  {
+    "id": "w49",
+    "text": "every",
+    "start": 24.56,
+    "end": 24.96
+  },
+  {
+    "id": "w50",
+    "text": "inquiry",
+    "start": 24.96,
+    "end": 25.84
   },
   {
     "id": "w51",
-    "text": "inquiry",
-    "start": 24.24,
-    "end": 25.12
+    "text": "instantly.",
+    "start": 25.84,
+    "end": 26.88
   },
   {
     "id": "w52",
-    "text": "instantly.",
-    "start": 25.12,
-    "end": 26.16
+    "text": "Second,",
+    "start": 26.88,
+    "end": 27.52
   },
   {
     "id": "w53",
-    "text": "Second,",
-    "start": 26.16,
-    "end": 26.8
-  },
-  {
-    "id": "w54",
     "text": "it",
-    "start": 26.8,
-    "end": 26.96
-  },
-  {
-    "id": "w55",
-    "text": "qualifies",
-    "start": 26.96,
+    "start": 27.52,
     "end": 27.68
   },
   {
-    "id": "w56",
-    "text": "buyers.",
+    "id": "w54",
+    "text": "qualifies",
     "start": 27.68,
-    "end": 28.48
+    "end": 28.4
   },
   {
-    "id": "w57",
-    "text": "Third,",
-    "start": 28.48,
-    "end": 29.04
-  },
-  {
-    "id": "w58",
-    "text": "it",
-    "start": 29.04,
+    "id": "w55",
+    "text": "buyers.",
+    "start": 28.4,
     "end": 29.2
   },
   {
-    "id": "w59",
-    "text": "alerts",
+    "id": "w56",
+    "text": "Third,",
     "start": 29.2,
-    "end": 29.68
+    "end": 29.76
   },
   {
-    "id": "w60",
+    "id": "w57",
+    "text": "it",
+    "start": 29.76,
+    "end": 30
+  },
+  {
+    "id": "w58",
+    "text": "alerts",
+    "start": 30,
+    "end": 30.48
+  },
+  {
+    "id": "w59",
     "text": "you",
-    "start": 29.68,
-    "end": 29.92
-  },
-  {
-    "id": "w61",
-    "text": "on",
-    "start": 29.92,
-    "end": 30.08
-  },
-  {
-    "id": "w62",
-    "text": "WhatsApp",
-    "start": 30.08,
+    "start": 30.48,
     "end": 30.64
   },
   {
-    "id": "w63",
-    "text": "and",
-    "start": 30.72,
-    "end": 30.96
+    "id": "w60",
+    "text": "on",
+    "start": 30.64,
+    "end": 30.8
   },
   {
-    "id": "w64",
-    "text": "books",
-    "start": 30.96,
+    "id": "w61",
+    "text": "WhatsApp",
+    "start": 30.8,
     "end": 31.36
   },
   {
-    "id": "w65",
-    "text": "the",
-    "start": 31.36,
-    "end": 31.44
-  },
-  {
-    "id": "w66",
-    "text": "site",
+    "id": "w62",
+    "text": "and",
     "start": 31.44,
-    "end": 31.84
+    "end": 31.68
   },
   {
-    "id": "w67",
-    "text": "visit",
-    "start": 31.84,
+    "id": "w63",
+    "text": "books",
+    "start": 31.68,
+    "end": 32.08
+  },
+  {
+    "id": "w64",
+    "text": "the",
+    "start": 32.08,
     "end": 32.24
   },
   {
-    "id": "w68",
-    "text": "you",
+    "id": "w65",
+    "text": "site",
     "start": 32.24,
-    "end": 32.48
+    "end": 32.56
+  },
+  {
+    "id": "w66",
+    "text": "visit",
+    "start": 32.56,
+    "end": 32.96
+  },
+  {
+    "id": "w67",
+    "text": "you",
+    "start": 32.96,
+    "end": 33.2
+  },
+  {
+    "id": "w68",
+    "text": "approve.",
+    "start": 33.2,
+    "end": 34.24
   },
   {
     "id": "w69",
-    "text": "approve.",
-    "start": 32.48,
-    "end": 33.44
-  },
-  {
-    "id": "w70",
     "text": "Fourth,",
-    "start": 33.44,
-    "end": 34.16
-  },
-  {
-    "id": "w71",
-    "text": "it",
-    "start": 34.16,
-    "end": 34.32
-  },
-  {
-    "id": "w72",
-    "text": "follows",
-    "start": 34.32,
+    "start": 34.24,
     "end": 34.88
   },
   {
-    "id": "w73",
-    "text": "up",
+    "id": "w70",
+    "text": "it",
     "start": 34.88,
-    "end": 35.12
+    "end": 35.04
   },
   {
-    "id": "w74",
-    "text": "until",
-    "start": 35.12,
+    "id": "w71",
+    "text": "follows",
+    "start": 35.04,
     "end": 35.6
   },
   {
-    "id": "w75",
-    "text": "they're",
+    "id": "w72",
+    "text": "up",
     "start": 35.6,
-    "end": 36
+    "end": 35.84
   },
   {
-    "id": "w76",
-    "text": "ready.",
-    "start": 36,
+    "id": "w73",
+    "text": "until",
+    "start": 35.84,
+    "end": 36.32
+  },
+  {
+    "id": "w74",
+    "text": "they're",
+    "start": 36.32,
     "end": 36.72
   },
   {
-    "id": "w77",
-    "text": "Want",
+    "id": "w75",
+    "text": "ready.",
     "start": 36.72,
-    "end": 37.12
+    "end": 37.44
+  },
+  {
+    "id": "w76",
+    "text": "Want",
+    "start": 37.44,
+    "end": 37.84
+  },
+  {
+    "id": "w77",
+    "text": "this",
+    "start": 37.84,
+    "end": 38.08
   },
   {
     "id": "w78",
-    "text": "this",
-    "start": 37.12,
-    "end": 37.36
+    "text": "workflow",
+    "start": 38.08,
+    "end": 38.64
   },
   {
     "id": "w79",
-    "text": "workflow",
-    "start": 37.36,
-    "end": 37.92
+    "text": "built",
+    "start": 38.64,
+    "end": 38.96
   },
   {
     "id": "w80",
-    "text": "built",
-    "start": 37.92,
-    "end": 38.24
+    "text": "for",
+    "start": 38.96,
+    "end": 39.12
   },
   {
     "id": "w81",
-    "text": "for",
-    "start": 38.24,
-    "end": 38.4
+    "text": "your",
+    "start": 39.12,
+    "end": 39.28
   },
   {
     "id": "w82",
-    "text": "your",
-    "start": 38.4,
-    "end": 38.56
-  },
-  {
-    "id": "w83",
     "text": "business.",
-    "start": 38.56,
-    "end": 39.2
-  },
-  {
-    "id": "w84",
-    "text": "Follow",
-    "start": 39.2,
-    "end": 39.68
-  },
-  {
-    "id": "w85",
-    "text": "me",
-    "start": 39.68,
+    "start": 39.28,
     "end": 39.92
   },
   {
-    "id": "w86",
-    "text": "and",
+    "id": "w83",
+    "text": "Follow",
     "start": 39.92,
-    "end": 40.16
+    "end": 40.4
+  },
+  {
+    "id": "w84",
+    "text": "me",
+    "start": 40.4,
+    "end": 40.64
+  },
+  {
+    "id": "w85",
+    "text": "and",
+    "start": 40.64,
+    "end": 40.88
+  },
+  {
+    "id": "w86",
+    "text": "comment,",
+    "start": 40.88,
+    "end": 41.52
   },
   {
     "id": "w87",
-    "text": "comment,",
-    "start": 40.16,
-    "end": 40.8
+    "text": "workflow,",
+    "start": 41.52,
+    "end": 42.32
   },
   {
     "id": "w88",
-    "text": "workflow,",
-    "start": 40.8,
-    "end": 41.6
+    "text": "and",
+    "start": 42.32,
+    "end": 42.48
   },
   {
     "id": "w89",
-    "text": "and",
-    "start": 41.6,
-    "end": 41.76
+    "text": "I'll",
+    "start": 42.48,
+    "end": 42.8
   },
   {
     "id": "w90",
-    "text": "I'll",
-    "start": 41.76,
-    "end": 42.08
-  },
-  {
-    "id": "w91",
     "text": "send",
-    "start": 42.08,
-    "end": 42.24
-  },
-  {
-    "id": "w92",
-    "text": "you",
-    "start": 42.24,
-    "end": 42.4
-  },
-  {
-    "id": "w93",
-    "text": "the",
-    "start": 42.4,
-    "end": 42.56
-  },
-  {
-    "id": "w94",
-    "text": "details",
-    "start": 42.56,
+    "start": 42.8,
     "end": 43.04
   },
   {
-    "id": "w95",
-    "text": "in",
+    "id": "w91",
+    "text": "you",
     "start": 43.04,
     "end": 43.2
   },
   {
-    "id": "w96",
-    "text": "your",
+    "id": "w92",
+    "text": "the",
     "start": 43.2,
-    "end": 43.36
+    "end": 43.28
   },
   {
-    "id": "w97",
-    "text": "DMs.",
-    "start": 43.36,
+    "id": "w93",
+    "text": "details",
+    "start": 43.28,
+    "end": 43.76
+  },
+  {
+    "id": "w94",
+    "text": "in",
+    "start": 43.76,
+    "end": 43.92
+  },
+  {
+    "id": "w95",
+    "text": "your",
+    "start": 43.92,
     "end": 44.08
+  },
+  {
+    "id": "w96",
+    "text": "DMs.",
+    "start": 44.08,
+    "end": 44.88
   }
 ]

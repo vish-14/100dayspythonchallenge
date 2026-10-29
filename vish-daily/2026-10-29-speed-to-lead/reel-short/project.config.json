@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 45.9,
+    "duration": 46.6,
     "output": "reel.mp4"
   },
   "brand": {
@@ -118,7 +118,10 @@
       "note_k": "NEW LEAD · 9:04 PM",
       "note_v": "2BHK site visit enquiry",
       "l3a": "HAATH SE",
-      "l3b": "NAHI JAYEGI!"
+      "l3b": "NAHI JAYEGA!",
+      "card_k": "NEW LEAD",
+      "card_v": "Ananya · 2BHK",
+      "ok": "SECURED"
     },
     "problem": {
       "clock_a": "9:04 PM",
@@ -507,9 +510,47 @@
     },
     {
       "file": "whoosh.mp3",
-      "word": "hook:jayegi.",
+      "word": "hook:jayega!",
       "offset": 0.35,
       "volume": 0.4
+    },
+    {
+      "file": "whoosh-short.mp3",
+      "word": "hook:haath",
+      "offset": 0.3,
+      "volume": 0.4
+    },
+    {
+      "file": "impact-bass-1.mp3",
+      "word": "hook:haath",
+      "offset": 0.62,
+      "volume": 0.55
+    },
+    {
+      "file": "click.mp3",
+      "word": "hook:haath",
+      "offset": 0.9,
+      "volume": 0.5
+    },
+    {
+      "file": "ping.mp3",
+      "word": "hook:haath",
+      "offset": 1.0,
+      "volume": 0.3
+    },
+    {
+      "file": "key-press.mp3",
+      "word": "hook:Aaj",
+      "offset": 0.72,
+      "volume": 0.3
+    },
+    {
+      "file": "ping.mp3",
+      "word": "hook:Aaj",
+      "offset": 1.14,
+      "volume": 0.25
     }
-  ]
+  ],
+  "anchor_hook": true,
+  "anchor_plate": "VISH · LIVE"
 }

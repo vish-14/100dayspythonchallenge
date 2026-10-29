@@ -1,9 +1,9 @@
 <template>
   <style>
     {{BASE_CSS}}
-    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; overflow: hidden; visibility: hidden; transform-origin: 50% 36%; }
+    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; transform-origin: 50% 36%; }
     .big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
-    .stripes { position: absolute; left: -200px; top: 0; width: 1480px; height: 1010px; opacity: .07; background: repeating-linear-gradient(135deg, #F5F5F7 0 26px, transparent 26px 64px); }
+    .stripes { position: absolute; left: -200px; top: 0; width: 1480px; height: 1920px; opacity: .07; background: repeating-linear-gradient(135deg, #F5F5F7 0 26px, transparent 26px 64px); }
     .sub { position: absolute; left: 0; width: 1080px; text-align: center; font-size: 30px; }
     /* F1 BREAKING on red */
     #f1 { background: #E3262B; } #f1 .big { top: 360px; font-size: 200px; color: #fff; }
@@ -18,7 +18,7 @@
     #f3 .sub { top: 680px; color: #fff; font-size: 36px; font-weight: 700; }
     /* F4 TV news desk */
     #f4 { background: #0B1016; }
-    #f4-lights { position: absolute; left: 56px; top: 200px; width: 968px; height: 60px; display: flex; gap: 12px; }
+    #f4-lights { display: none; position: absolute; left: 56px; top: 200px; width: 968px; height: 60px; display: flex; gap: 12px; }
     .lt { flex: 1; border-radius: 10px; }
     .lt.r { background: #E3262B; box-shadow: 0 0 34px 8px rgba(227,38,43,.75); }
     .lt.b { background: #2F6BFF; box-shadow: 0 0 34px 8px rgba(47,107,255,.8); }
@@ -32,6 +32,11 @@
     #f4-time { position: absolute; left: 56px; top: 700px; padding: 14px 22px; background: var(--blue); color: #fff; font-size: 26px; }
     /* F5 AAJ RAAT SE */
     #f5 { background: #0B1016; } #f5 .big { top: 360px; font-size: 170px; color: var(--paper); }
+    #f5-clock { position: absolute; left: 0; width: 1080px; top: 600px; display: flex; justify-content: center; align-items: center; gap: 30px; }
+    #f5-moon { width: 110px; height: 110px; border-radius: 50%; box-shadow: -26px 14px 0 0 #F5D76E; transform: rotate(-20deg); }
+    #f5-time { position: relative; width: 330px; height: 110px; background: #E3262B; border-radius: 16px; overflow: hidden; }
+    #f5-time span { position: absolute; left: 0; top: 0; width: 330px; height: 110px; display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 62px; color: #fff; opacity: 0; }
     #f5-bar { position: absolute; left: 140px; top: 560px; width: 800px; height: 14px; background: #E3262B; transform-origin: 0 50%; }
     /* F6 KOI ENQUIRY */
     #f6 { background: #111826; } #f6 .big { top: 300px; font-size: 168px; color: var(--paper); }
@@ -40,15 +45,34 @@
     #f6-note b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: var(--ink); }
     #f6-note small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; margin-bottom: 6px; }
     /* F7 THANDI NAHI! */
-    #f7 { background: #0B1016; } #f7 .big { font-size: 150px; } #f7 .l1 { top: 280px; color: var(--paper); } #f7 .l2 { top: 450px; }
+    #f7 { background: #0B1016; } #f7 .big { font-size: 130px; } #f7 .l1 { top: 262px; color: var(--paper); } #f7 .l2 { top: 400px; }
+    #f7-hands { position: absolute; left: 290px; top: 560px; width: 500px; height: 340px; transform-origin: 50% 80%; }
+    #f7-card { position: absolute; left: 380px; top: 556px; width: 320px; height: 112px; background: var(--paper); border-radius: 18px; padding: 14px 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.45); transform-origin: 50% 100%; }
+    #f7-card small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #E3262B; font-weight: 700; }
+    #f7-card b { display: block; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; color: var(--ink); margin-top: 6px; }
+    #f7-x { position: absolute; left: 430px; top: 560px; width: 220px; height: 220px; border-radius: 50%; border: 16px solid #E3262B; background: rgba(227,38,43,.18);
+      display: flex; align-items: center; justify-content: center; color: #E3262B; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 150px; line-height: 1; }
+    #f7-ok { position: absolute; left: 700px; top: 560px; width: 170px; height: 170px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 84px; line-height: 1; box-shadow: 0 0 0 12px rgba(34,87,239,.35), 0 0 60px 10px rgba(34,87,239,.6); }
+    #f7-ok span { font-size: 18px; letter-spacing: .12em; margin-top: 4px; }
     #f7-main { color: #6F95FF; }
     #f7-g1 { color: #FF2A55; mix-blend-mode: screen; opacity: 0; } #f7-g2 { color: #22E5FF; mix-blend-mode: screen; opacity: 0; }
     #f7-frost { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, rgba(157,184,255,.55), rgba(157,184,255,0) 70%); }
-    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; background: #fff; opacity: 0; pointer-events: none; }
+    /* siren layer over every cut: light bar, red/blue edge glow, LIVE badge */
+    #ov-bar { position: absolute; left: 56px; top: 176px; width: 968px; height: 50px; display: flex; gap: 12px; }
+    #ov-bar i { flex: 1; border-radius: 10px; }
+    #ov-bar .r { background: #E3262B; box-shadow: 0 0 34px 8px rgba(227,38,43,.8); }
+    #ov-bar .b { background: #2F6BFF; box-shadow: 0 0 34px 8px rgba(47,107,255,.85); }
+    #ov-glow { position: absolute; inset: 0; pointer-events: none; }
+    #ov-live { position: absolute; left: 56px; top: 246px; display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: #E3262B; color: #fff; font-size: 22px; font-weight: 700; }
+    #ov-live i { width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+    #ov-alert { position: absolute; right: 56px; top: 240px; width: 70px; height: 70px; border-radius: 50%; background: #fff; color: #E3262B; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; }
+    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
   </style>
   <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
     <div id="hook-bg" class="full bg-dark"></div>
-    <div id="stage" style="position:absolute;left:0;top:0;width:1080px;height:1010px;overflow:hidden">
+    <div id="stage" style="position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden">
     <div id="f1" class="fr"><div class="stripes"></div><div class="big fit">BREAKING</div><div class="sub mono">{{c.f1sub}}</div></div>
     <div id="f2" class="fr"><div class="stripes"></div><div class="big fit">NEWS</div></div>
     <div id="f3" class="fr"><div id="f3-strobe"></div><div id="f3-alert">!</div><div class="sub mono">{{c.alert}}</div></div>
@@ -57,11 +81,28 @@
       <div id="f4-band"><b>BREAKING<br>NEWS</b><span id="f4-live" class="mono"><span id="f4-dot"></span>LIVE</span></div>
       <div id="f4-tick"><div id="f4-tag" class="mono">{{c.tick_tag}}</div><div id="f4-run" data-layout-allow-overlap>{{c.ticker}} &nbsp;·&nbsp; {{c.ticker}}</div></div>
       <div id="f4-time" class="mono">{{c.f4sub}}</div></div>
-    <div id="f5" class="fr"><div class="stripes"></div><div class="big fit">{{c.l1}}</div><div id="f5-bar"></div></div>
+    <div id="f5" class="fr"><div class="stripes"></div><div class="big fit">{{c.l1}}</div><div id="f5-bar"></div><div id="f5-clock"><div id="f5-moon"></div><div id="f5-time"><span>10:58 PM</span><span>10:59 PM</span><span>11:00 PM</span></div></div></div>
     <div id="f6" class="fr"><div class="stripes"></div><div class="big fit">{{c.l2}}</div>
       <div id="f6-note"><div id="f6-ico"></div><div><small>{{c.note_k}}</small><b>{{c.note_v}}</b></div></div></div>
-    <div id="f7" class="fr"><div id="f7-frost"></div><div class="big fit l1" data-layout-allow-overlap>{{c.l3a}}</div><div id="f7-g1" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div><div id="f7-g2" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div><div id="f7-main" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div></div>
+    <div id="f7" class="fr"><div id="f7-frost"></div><div class="big fit l1" data-layout-allow-overlap>{{c.l3a}}</div><div id="f7-g1" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div><div id="f7-g2" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div><div id="f7-main" class="big fit l2" data-layout-allow-overlap>{{c.l3b}}</div>
+      <svg id="f7-hands" viewBox="0 0 500 340" data-layout-allow-overlap>
+        <g id="f7-hl" style="transform-origin: 250px 300px">
+          <path d="M250 300 C170 300 70 250 40 170 C30 140 60 125 80 150 L120 200 C90 150 70 110 85 95 C100 82 118 95 130 120 L160 175 C140 120 135 80 155 75 C172 70 182 95 190 125 L205 180 C200 140 205 110 222 108 C240 106 245 140 245 175 Z"
+            fill="#CE966C" stroke="#140E16" stroke-width="8" stroke-linejoin="round"/>
+        </g>
+        <g id="f7-hr" style="transform-origin: 250px 300px">
+          <path d="M250 300 C330 300 430 250 460 170 C470 140 440 125 420 150 L380 200 C410 150 430 110 415 95 C400 82 382 95 370 120 L340 175 C360 120 365 80 345 75 C328 70 318 95 310 125 L295 180 C300 140 295 110 278 108 C260 106 255 140 255 175 Z"
+            fill="#CE966C" stroke="#140E16" stroke-width="8" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <div id="f7-card" data-layout-allow-overlap><small>{{c.card_k}}</small><b>{{c.card_v}}</b></div>
+      <div id="f7-x" data-layout-allow-overlap>✕</div>
+      <div id="f7-ok" data-layout-allow-overlap>✓<span>{{c.ok}}</span></div></div>
     </div>
+    <div id="ov-glow"></div>
+    <div id="ov-bar"><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i></div>
+    <div id="ov-live" class="mono"><i id="ov-dot"></i>LIVE</div>
+    <div id="ov-alert">!</div>
     <div id="fl"></div>
   </div>
   <script>
@@ -89,6 +130,7 @@
       const cut = (i, t, punch = 1.18, fl = 0.8, sh = 14) => {
         F.forEach((f, j) => tl.set(f, { visibility: j === i ? "visible" : "hidden" }, t));
         tl.fromTo(F[i], { scale: punch }, { scale: 1, duration: 0.28, ease: "power4.out", immediateRender: false }, t);
+        tl.to(F[i], { scale: 1.05, duration: 2.2, ease: "none" }, t + 0.3);   // slow drift so no frame ever sits still
         if (fl) flash(t, fl);
         if (sh) shake(F[i], t + 0.08, sh);
       };
@@ -113,6 +155,16 @@
       // fast cuts on the headline words
       cut(4, W.aaj - 0.05, 1.3, 0.5, 14);
       tl.fromTo("#f5-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out", immediateRender: false }, W.aaj + 0.1);
+      // "aaj raat se": the moon rises, the clock ticks to 11:00 PM
+      tl.fromTo("#f5-moon", { y: 60, opacity: 0, rotation: -60 }, { y: 0, opacity: 1, rotation: -20, duration: 0.35, ease: "back.out(1.8)", immediateRender: false }, W.aaj + 0.2);
+      tl.fromTo("#f5-time", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, W.aaj + 0.3);
+      const TS = gsap.utils.toArray("#f5-time span");
+      TS.forEach((el, i) => {
+        const t0 = W.aaj + 0.3 + i * 0.42;
+        tl.fromTo(el, { yPercent: 100, opacity: 1 }, { yPercent: 0, duration: 0.14, ease: "power3.out", immediateRender: false }, t0);
+        if (i < TS.length - 1) tl.to(el, { yPercent: -100, duration: 0.14, ease: "power3.in" }, t0 + 0.42);
+      });
+      tl.fromTo("#f5-time", { scale: 1 }, { scale: 1.12, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.aaj + 0.3 + 2 * 0.42);
       cut(5, W.ek - 0.05, 1.3, 0.5, 14);
       tl.fromTo("#f6-note", { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, W.lead - 0.05);
       tl.fromTo("#f6-note", { rotation: 0 }, { rotation: 2, duration: 0.05, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.lead + 0.35);
@@ -121,6 +173,35 @@
       tl.fromTo("#f7-frost", { opacity: 1 }, { opacity: 0.35, duration: 0.7, ease: "power2.out", immediateRender: false }, W.haath);
       tl.fromTo("#f7-main", { scale: 1 }, { scale: 1.07, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.jayegi);
       gsap.utils.toArray("#root .stripes").forEach((s) => tl.fromTo(s, { x: 0 }, { x: -180, duration: D, ease: "none" }, 0));
+      // siren layer: lights alternate fast during the siren, then keep pulsing; edge glow swaps red/blue; LIVE blinks; alert pings
+      const B = gsap.utils.toArray("#ov-bar i");
+      for (let k = 0; k * 0.11 < D - 0.2; k++) {
+        const fast = k * 0.11 < W.aaj;
+        if (!fast && k % 2) continue;
+        B.forEach((el, i) => tl.set(el, { opacity: (i + k) % 2 ? 1 : 0.12 }, k * 0.11));
+        tl.set("#ov-glow", { boxShadow: (k % 2 ? "inset 0 0 120px 30px rgba(47,107,255,.55)" : "inset 0 0 120px 30px rgba(227,38,43,.6)") }, k * 0.11);
+      }
+      tl.fromTo("#ov-live", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, 0.7);
+      tl.fromTo("#ov-dot", { opacity: 1 }, { opacity: 0.15, duration: 0.25, yoyo: true, repeat: 20, ease: "steps(1)" }, 0.7);
+      [0.7, W.aaj, W.ek, W.haath].forEach((t) => tl.fromTo("#ov-alert", { scale: 1.8, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, t));
+      tl.set("#ov-alert", { opacity: 0 }, 0);
+      // "haath se nahi jayega": the lead slips out of the hands, a red ✕ stops it, the hands grip it, ✓ SECURED
+      const H = W.haath;
+      tl.fromTo("#f7-hands", { y: 260, opacity: 0 }, { y: 0, opacity: 1, duration: 0.22, ease: "back.out(1.6)" }, H - 0.02);
+      tl.fromTo("#f7-card", { scale: 0.3, opacity: 0, rotation: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.2)" }, H + 0.08);
+      tl.set(["#f7-x", "#f7-ok"], { opacity: 0 }, 0);
+      tl.to("#f7-card", { rotation: 24, x: 150, y: 120, duration: 0.32, ease: "power2.in" }, H + 0.34);                 // slipping out…
+      tl.to("#f7-hl", { rotation: -8, duration: 0.3, ease: "power2.in" }, H + 0.34);
+      tl.to("#f7-hr", { rotation: 10, duration: 0.3, ease: "power2.in" }, H + 0.34);
+      tl.fromTo("#f7-x", { scale: 2.6, opacity: 0, rotation: -20 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.18, ease: "power4.out", immediateRender: false }, H + 0.62);   // STOP
+      flash(H + 0.64, 0.5, 0.12); shake("#f7", H + 0.66, 18, 6);
+      tl.to("#f7-card", { rotation: 0, x: 0, y: 0, duration: 0.2, ease: "back.out(2)" }, H + 0.86);                       // snaps back
+      tl.to("#f7-x", { scale: 0.3, opacity: 0, duration: 0.14, ease: "power3.in" }, H + 0.9);
+      tl.to("#f7-hl", { rotation: 5, x: 10, duration: 0.18, ease: "power3.out" }, H + 0.9);                                    // grip
+      tl.to("#f7-hr", { rotation: -5, x: -10, duration: 0.18, ease: "power3.out" }, H + 0.9);
+      tl.fromTo("#f7-ok", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.24, ease: "back.out(2.8)", immediateRender: false }, H + 1.0);
+      flash(H + 1.0, 0.35, 0.12);
+      tl.fromTo("#f7-ok", { scale: 1 }, { scale: 1.1, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, H + 1.26);
       // flash out into the problem
       tl.fromTo("#f7", { scale: 1 }, { scale: 1.14, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);
       tl.fromTo("#fl", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "power2.in", immediateRender: false }, D - 0.12);

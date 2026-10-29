@@ -61,7 +61,7 @@
   </div>
   <script>
     (() => {
-      const W = {"fourth": 0.15, "fourth_end": 0.67, "it": 0.67, "it_end": 0.83, "follows": 0.83, "follows_end": 1.39, "up": 1.39, "up_end": 1.63, "until": 1.63, "until_end": 2.11, "theyre": 2.11, "theyre_end": 2.51, "ready": 2.51, "ready_end": 3.23};
+      const W = {"fourth": 0.15, "fourth_end": 0.658, "it": 0.658, "it_end": 0.818, "follows": 0.818, "follows_end": 1.378, "up": 1.378, "up_end": 1.618, "until": 1.618, "until_end": 2.098, "theyre": 2.098, "theyre_end": 2.498, "ready": 2.498, "ready_end": 3.218};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.fourth - 0.04);
       tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.follows - 0.04);
@@ -84,7 +84,7 @@
       tl.set("#a4-tag1", { opacity: 0 }, W.ready);
       tl.fromTo("#a4-tag2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.5)" }, W.ready);
       tl.to("#a4-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.ready + 0.05);
-      tl.fromTo("#a4-prog", { scaleX: 0.7296 }, { scaleX: 0.8001, duration: 3.236, ease: "none" }, 0);
+      tl.fromTo("#a4-prog", { scaleX: 0.7344 }, { scaleX: 0.8038, duration: 3.235, ease: "none" }, 0);
       window.__timelines["a4"] = tl;
     })();
   </script>

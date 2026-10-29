@@ -2,10 +2,10 @@
  {
   "id": "hook",
   "label": "00 / BREAKING",
-  "say": "ब्रेकिंग न्यूज़! आज रात से, आपकी एक भी लीड हाथ से नहीं जाएगी।",
+  "say": "ब्रेकिंग न्यूज़! आज रात से, आपकी एक भी लीड, हाथ से नहीं जाएगा!",
   "lang": "hi",
   "speed": 0.95,
-  "text": "Breaking news! Aaj raat se, aapki ek bhi lead haath se nahi jayegi."
+  "text": "Breaking news! Aaj raat se, aapki ek bhi lead, haath se nahi jayega!"
  },
  {
   "id": "problem",

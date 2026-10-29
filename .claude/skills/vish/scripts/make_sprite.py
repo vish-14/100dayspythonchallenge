@@ -164,6 +164,37 @@ def mouth(kind):
 for k in ("rest", "M", "B", "A", "E", "O"):
     save(mouth(k), f"mouth_{k}")
 
+# ---------------------------------------------------------------- props (news-anchor look, optional layers)
+# Brand colours only: near-black desk, grey metal, news red plate. Drawn on the same grid, same 1px outline.
+P = {"desk": (11, 16, 22, 255), "desk_top": (58, 66, 82, 255), "desk_edge": (88, 98, 118, 255),
+     "red": (227, 38, 43, 255), "red_dk": (170, 24, 30, 255), "metal": (138, 147, 163, 255), "metal_dk": (90, 98, 112, 255),
+     "mic": (30, 30, 36, 255), "grille": (70, 72, 82, 255)}
+
+
+def desk():
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.rectangle((0, 76, 107, 91), fill=P["desk"])           # front panel
+    d.rectangle((0, 73, 107, 75), fill=P["desk_top"])       # desktop
+    d.line((0, 76, 107, 76), fill=P["desk_edge"])            # front edge highlight
+    d.rectangle((30, 80, 77, 88), fill=P["red"])            # name plate (text is added in HTML)
+    d.line((30, 88, 77, 88), fill=P["red_dk"])
+    return outline(im)
+
+
+def mic():
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.rectangle((30, 71, 38, 73), fill=P["metal_dk"])       # base on the desk
+    for i in range(5):                                       # short stem
+        d.point((34, 70 - i), fill=P["metal"]); d.point((35, 70 - i), fill=P["metal"])
+    d.rectangle((31, 62, 38, 65), fill=P["red"])            # channel flag
+    d.ellipse((31, 54, 38, 62), fill=P["mic"])              # mic head, in front of the chest, clear of the face
+    for gx, gy in ((33, 56), (35, 56), (32, 58), (34, 58), (36, 58), (33, 60), (35, 60)):
+        d.point((gx, gy), fill=P["grille"])
+    return outline(im)
+
+
+save(desk(), "prop_desk"); save(mic(), "prop_mic")
+
 # ---------------------------------------------------------------- previews
 if len(sys.argv) > 2:
     tiles = []

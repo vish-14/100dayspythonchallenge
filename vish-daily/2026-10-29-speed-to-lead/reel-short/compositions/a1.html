@@ -50,7 +50,7 @@
   </div>
   <script>
     (() => {
-      const W = {"first": 0.15, "first_end": 0.701, "it": 0.701, "it_end": 0.861, "replies": 0.861, "replies_end": 1.501, "to": 1.501, "to_end": 1.661, "every": 1.661, "every_end": 2.061, "enquiry": 2.061, "enquiry_end": 2.941, "instantly": 2.941, "instantly_end": 3.981};
+      const W = {"first": 0.15, "first_end": 0.689, "it": 0.689, "it_end": 0.929, "replies": 0.929, "replies_end": 1.489, "to": 1.489, "to_end": 1.649, "every": 1.649, "every_end": 2.049, "enquiry": 2.049, "enquiry_end": 2.929, "instantly": 2.929, "instantly_end": 3.969};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.first - 0.04);
       tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.replies - 0.06);
@@ -62,7 +62,7 @@
       tl.fromTo("#a1-b2", { opacity: 0, scale: 0.8, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.instantly - 0.05);
       tl.fromTo("#a1-meta", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }, W.instantly + 0.3);
       tl.fromTo("#a1-time", { scale: 1.6 }, { scale: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, W.instantly + 0.3);
-      tl.fromTo("#a1-prog", { scaleX: 0.4832 }, { scaleX: 0.5669, duration: 3.843, ease: "none" }, 0);
+      tl.fromTo("#a1-prog", { scaleX: 0.4917 }, { scaleX: 0.5741, duration: 3.843, ease: "none" }, 0);
       window.__timelines["a1"] = tl;
     })();
   </script>

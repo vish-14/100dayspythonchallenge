@@ -25,17 +25,21 @@
 .head .ttl{font-size:66px;line-height:.98;padding-top:12px}
 .t-blue .head .num, .on-blue .num{color:var(--paper)}
 
-    #pp-panel { position: absolute; left: 0; top: 1010px; width: 1080px; height: 910px; overflow: hidden;
+    #pp-panel { position: absolute; left: 0; top: 1010px; width: 1080px; height: 910px; overflow: hidden; }
+    #pp-bg { position: absolute; inset: 0;
       background:
         repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 3px, rgba(255,255,255,0) 3px 46px),
         radial-gradient(ellipse 72% 62% at 50% 42%, #4277FF 0%, #2257EF 46%, #163FC2 100%); }
-    #pp-sprite { position: absolute; left: 0; top: -10px; width: 1080px; height: 920px; }
+    #pp-sprite { position: absolute; left: 0; top: -10px; width: 1080px; height: 920px; transform-origin: 50% 100%; }
+    #pp-plate { position: absolute; left: 300px; top: 800px; width: 480px; height: 80px; display: flex; align-items: center; justify-content: center; gap: 14px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; letter-spacing: .04em; }
+    #pp-plate i { width: 18px; height: 18px; border-radius: 50%; background: #fff; }
     #pp-sprite img { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; image-rendering: pixelated; }
     #pp-head { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; }
     #pp-edge { position: absolute; left: 0; top: 0; width: 1080px; height: 4px; background: rgba(11,16,22,0.35); }
   </style>
   <div id="root" data-composition-id="presenter" data-width="1080" data-height="1920">
     <div id="pp-panel" data-layout-allow-overflow>
+      <div id="pp-bg"></div>
       <div id="pp-sprite">
         <img id="pp-body" src="assets/presenter/body.png" alt="" />
         <div id="pp-head">
@@ -53,6 +57,11 @@
           <img id="pp-m-o" src="assets/presenter/mouth_O.png" alt="" style="opacity:0" />
           <img id="pp-stache" src="assets/presenter/mustache.png" alt="" />
         </div>
+        <img id="pp-mic" src="assets/presenter/prop_mic.png" alt="" />
+      </div>
+      <div id="pp-set" style="position:absolute;left:0;top:-10px;width:1080px;height:920px">
+        <img id="pp-desk" src="assets/presenter/prop_desk.png" alt="" style="position:absolute;left:0;top:0;width:1080px;height:920px;image-rendering:pixelated" />
+        <div id="pp-plate"><i id="pp-plate-dot"></i>VISH · LIVE</div>
       </div>
       <div id="pp-edge"></div>
     </div>
@@ -60,8 +69,23 @@
   <script>
     (() => {
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
-      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaooooooooaaaaaeeerrrrrrrrrraaaaarraaaaaaaaaeeebbbbrrrrrrrrrrraaaarrrrrrrrraaaaaooooorrrrrrrraaaaaaeeeaaaaarrrrraaaaaaaoorrraaaabbbbeeerrrrrrrrrrrrrrrrraaoooooaaaaaaammmmoommmaaaaaaaaeeeeeerrroooaaaaaaaooorreeaaaaaaeeebbbmmrrrrrrrrrrrrrooooaaaaaaaaaaaaaaaooaaaaeerrooaaaaaaeeerrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaaaaaaooooaaaaaaaaaabbrrrreeerrraaaaaaaaaarrraaaaaaaoommmmmeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaaoooaaaooorrrrraaooorrrraaaaaaaaaaaaaaaarrrrrraaaaeeaaaeeeeeeeooeeeeeooooooorraaammmmmaaabbaaaaeeebbbbbbrrrrrrrrrrrraaammrrrrraaaaaarrrrrooaaarrrrooooaaaarrmmmmbbbmmrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrrraaaaaaaaaaooommmaaaaaaaabbbbbbrrrrrrraaooeeeeeeoooeeeeerrrrrrrrrrrrreeeeaaaaaaaaoooorrrrraaarrrraaaaaaaaaaaaaaaoooaaaaaaaabbmmmmrrrrrrrrrrrrrraaaaaaaaaarrrrrraaaaaaaaaaaammeeeaaaaaaaaoooaaaaaaaaaaaarrrrrrrrrrrrraaooooaaaeeeeeeeeeeaaaaaooooaaeeeeeeeeeooaaarrrraaoooommrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaammmrraaammmmmaaaaaaaeeaaaaaarrrrrrrrrraaoooooaaooooaaaaaaooaaaaeeeeemmrrrrrrrrrrrrrrrrrraaaaaaaaaeeemmmaaaaarrrraaaaammaaaaarrrraaaaaaaaaaaaaoooommmmrrrrrrrrrrrrraaaaaaaaooaaaaaarrrrooooeeaaaaaaoorrrrrrrrrrooaaaarrmmmaabbbbrrrrrrrrrraaaaaaaeeeeeaaooaaaooooommaaaaaaaaaaooommrrrrooaaaooooaaaabbbbbbmmrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7], BROWS = [1.92, 13.44, 16.24, 22.329, 26.172, 28.596, 33.64], MOVES = [[6.829, -10, 0], [15.618, 0, 0], [22.379, 10, 0], [26.222, 0, 0], [28.646, 0, 10], [33.69, -10, 0], [36.1, 0, -10]];
+      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaaooooooooaaaaeeeerrrrrrrrrraaaaaaaaaaaaaaaaaeeebbbbrrrrrrrrrraaaaarrrrrrrrrraaammoooooooooaaaabbbmmrrrrrrrrraaaaaaaeeeaaaaaoooorrraaaabbbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaoooooaaaaaaammmmooommaaaaaaaaeeeeeerrroooaaaaaaaooorrraaaaaaaeeeeeemmrrrrrrrrrrrrrooooaaaaaaaaaaaaaaaooaaaaeerrooaaaaaaeeerrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaaaaaaoooaaaaaaaaaaabbrrrreeerrraaaaaaaaaarrraaaaaaaoommmmmeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaaoooaaaooorrrrraaooorrrraaaaaaaaaaaaaaaarrrrrraaaaeeaaaeeeeeeeooeeeeeooooooorraaammmmmaaaaaaaaaeeeeooooorrrrrrrrrrrraaammrrrrraaaaaarreeeooaaarrrrooooaaaarrmmmmbbbmmrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrrraaaaaaaaaaooommmaaaaaaabbbbbbbrrrrrrraaooeeeeeeoooeeeeerrrrrrrrrrrrreeeeaaaaaaaaoooorrrraaaarrrraaaaaammaaaaaeeoooaaaaaaeeeemmmmrrrrrrrrrrrrrraaaaaaaaaarrrrrraaaaaaaaaaaammeeeeeeeeaaaoooaaaaaaaaaaaarrrrrrrrrrrrraaooooaaaeeeeeeeeeeaaaaaooooaaeeeeeeeeeooaaarrrraaaoommmrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaammmrraaammmmaaaaaaaaeeaaaaaarrrrrrrrrraaoooooaaooooaaaaaaooaaaaeeeeemmrrrrrrrrrrrrrrrrrraaaaaaaaaeeemmmaaaaarrrraaaaammaaaaarrrraaaaaaaaaaaaaoooommmmrrrrrrrrrrrrraaaaaaaaooaaaaaarrrrooooeeaaaaaaoorrrrrrrrrrraaaaarrmmmaabbbbrrrrrrrrrraaaaaaaeeeeeaaooaaaaaaoommaaaaaaaaaaooommrrrrooaaaooooaaaaaabbbbbrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7], BROWS = [1.92, 14.16, 17.04, 23.061, 26.904, 29.328, 34.372], MOVES = [[7.561, -10, 0], [16.35, 0, 0], [23.111, 10, 0], [26.954, 0, 0], [29.378, 0, 10], [34.422, -10, 0], [36.82, 0, -10]];
       const tl = gsap.timeline({ paused: true });
+      // news-anchor hook: cut-out Vish at a desk (no background) jumping on every hard cut, then the normal panel returns
+      const HOOK_END = 7.361, CUTS = [[0.0, -170, 0.84], [0.35, 190, 0.9], [0.7, 0, 1.06], [1.36, 0, 1.0], [2.43, -160, 0.9], [4.27, 170, 0.92], [5.15, 0, 1.1]];
+      if (HOOK_END > 0) {
+        tl.set("#pp-bg", { opacity: 0 }, 0); tl.set("#pp-edge", { opacity: 0 }, 0);
+        CUTS.forEach(([t, x, s]) => {
+          tl.set("#pp-sprite", { x, scale: s * 1.06 }, t);
+          tl.to("#pp-sprite", { scale: s, duration: 0.16, ease: "power3.out" }, t + 0.01);
+        });
+        tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
+        tl.set("#pp-bg", { opacity: 1 }, HOOK_END); tl.set("#pp-edge", { opacity: 1 }, HOOK_END);
+        tl.set("#pp-sprite", { x: 0, scale: 1 }, HOOK_END);
+        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, HOOK_END);
+      } else {
+        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, 0);
+      }
       const $ = (id) => document.getElementById(id);
       const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };
       const eyes = { open: $("pp-eyes-open"), half: $("pp-eyes-half"), closed: $("pp-eyes-closed") };
@@ -70,7 +94,7 @@
 
       if (0.000 < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
       else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 0.000);
-      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 36.726 - 0.4);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 37.457 - 0.4);
 
       function render() {
         const t = tl.time();
@@ -90,7 +114,7 @@
         head.style.translate = `${dx}px ${dy}px`;
       }
       const drive = { p: 0 };
-      tl.to(drive, { p: 1, duration: 45.900, ease: "none", onUpdate: render }, 0);
+      tl.to(drive, { p: 1, duration: 46.600, ease: "none", onUpdate: render }, 0);
       render();
       window.__timelines["presenter"] = tl;
     })();
