@@ -1,0 +1,74 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #a3-alert { left: 56px; top: 452px; width: 560px; height: 420px; overflow: visible; }
+    #a3-ring { position: absolute; left: 7px; top: 6px; width: 46px; height: 46px; border-radius: 50%; border: 4px solid var(--blue); opacity: 0; }
+    .a3-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .a3-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); }
+    .a3-s { font-size: 25px; font-weight: 600; color: #2A3242; margin-top: 8px; }
+    #a3-q { margin: 22px 24px 0; padding: 16px 20px; border-radius: 16px; background: #EEF1F6; font-size: 27px; font-weight: 700; color: #141A24; }
+    #a3-btns { position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; gap: 16px; }
+    .a3-btn { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 27px; padding: 16px 0; border-radius: 14px; text-align: center; }
+    #a3-ok { flex: 1.4; background: var(--blue); color: #fff; position: relative; }
+    #a3-chg { flex: 1; border: 3px solid #C6CBD5; color: #4E5666; }
+    #a3-cal { left: 640px; top: 452px; width: 384px; height: 420px; overflow: visible; }
+    .a3-row { position: relative; height: 84px; border-bottom: 2px solid #ECEEF2; display: flex; align-items: center; padding-left: 20px; }
+    .a3-row .a3-k { width: 90px; }
+    #a3-book { position: absolute; left: 112px; top: 8px; right: 14px; bottom: 8px; border-radius: 12px; background: var(--blue); color: #fff; font-weight: 800; font-size: 21px; display: flex; align-items: center; padding: 0 14px; white-space: nowrap; }
+    #a3-stamp { position: absolute; right: 16px; top: -22px; }
+    #a3-cursor { position: absolute; left: 0; top: 0; width: 44px; height: 54px; }
+  </style>
+  <div id="root" data-composition-id="a3" data-width="1080" data-height="1920">
+    <div id="a3-bg" class="panel bg-dark"></div>
+    <div class="head" style="color:var(--paper)">
+      <div class="mask"><div id="a3-num" class="disp num">{{c.num}}</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a3-t1">{{c.title.0}}</div></div><div class="mask"><div id="a3-t2">{{c.title.1}}</div></div></div>
+    </div>
+    <div id="a3-alert" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;{{c.alert_k}}</div>
+      <div id="a3-ring"></div>
+      <div style="padding:22px 24px 0"><div class="a3-v">{{c.lead}}</div><div class="a3-s">{{c.detail}}</div></div>
+      <div id="a3-q">{{c.slot_q}}</div>
+      <div id="a3-btns"><div id="a3-ok" class="a3-btn"><span id="a3-ok1">{{c.approve}}</span><span id="a3-ok2" style="position:absolute;left:0;right:0;top:16px;opacity:0">✓ Approved</span></div><div id="a3-chg" class="a3-btn">{{c.change}}</div></div>
+    </div>
+    <div id="a3-cal" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;{{c.cal_k}}</div>
+      <span id="a3-stamp" class="tag blue">{{c.stamp}}</span>
+      <div class="a3-row"><span class="a3-k">{{c.slots.0}}</span></div>
+      <div class="a3-row"><span class="a3-k">{{c.slots.1}}</span><div id="a3-book">{{c.booked}}</div></div>
+      <div class="a3-row"><span class="a3-k">{{c.slots.2}}</span></div>
+      <div class="a3-row" style="border:none"><span class="a3-k">{{c.slots.3}}</span></div>
+    </div>
+    <svg id="a3-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
+      tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.alerts - 0.04);
+      tl.fromTo("#a3-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.books - 0.06);
+      // the calendar waits on "book"
+      tl.fromTo("#a3-cal", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, W.books - 0.1);
+      tl.set(["#a3-book", "#a3-stamp"], { opacity: 0 }, 0);
+      // "Ready buyers ping you on WhatsApp"
+      tl.fromTo("#a3-alert", { opacity: 0, x: -120, rotation: -3 }, { opacity: 1, x: 0, rotation: 0, duration: 0.45, ease: "expo.out" }, W.third + 0.1);
+      tl.fromTo("#a3-alert", { rotation: 0 }, { rotation: 1.5, duration: 0.06, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.alerts);
+      tl.fromTo("#a3-ring", { scale: 0.6, opacity: 1 }, { scale: 2.2, opacity: 0, duration: 0.6, ease: "power2.out" }, W.alerts);
+      // "You approve"
+      tl.fromTo("#a3-cursor", { x: 520, y: 1000, opacity: 0 }, { x: 250, y: 830, opacity: 1, duration: 0.45, ease: "power3.inOut" }, W.visit - 0.1);
+      tl.to("#a3-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.to("#a3-ok", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.set("#a3-ok1", { opacity: 0 }, W.approve + 0.11); tl.set("#a3-ok2", { opacity: 1 }, W.approve + 0.11);
+      tl.to("#a3-ok", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.11);
+      tl.to("#a3-cursor", { opacity: 0, duration: 0.25 }, W.approve + 0.45);
+      // "the viewing lands in your calendar"
+      tl.fromTo("#a3-book", { opacity: 0, x: -300, scale: 0.9 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "expo.out" }, W.approve + 0.2);
+      tl.fromTo("#a3-stamp", { opacity: 0, scale: 2.2 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, W.approve + 0.5);
+      tl.to("#a3-cal", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.approve + 0.5);
+      tl.fromTo("#a3-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a3"] = tl;
+    })();
+  </script>
+</template>

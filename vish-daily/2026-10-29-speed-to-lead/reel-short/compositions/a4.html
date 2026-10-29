@@ -1,0 +1,91 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #a4-track { position: absolute; left: 110px; top: 712px; width: 860px; height: 4px; background: rgba(245,245,247,.35); }
+    #a4-trackfill { position: absolute; left: 110px; top: 712px; width: 860px; height: 4px; background: var(--paper); transform-origin: 0 50%; }
+    .a4-mk { position: absolute; top: 698px; width: 32px; height: 32px; border-radius: 50%; background: var(--blue); border: 4px solid var(--paper); }
+    .a4-day { position: absolute; top: 744px; width: 200px; text-align: center; font-size: 22px; color: var(--paper); }
+    #a4-ring { position: absolute; left: 504px; top: 674px; width: 80px; height: 80px; border-radius: 50%; border: 4px solid var(--paper); opacity: 0; }
+    #a4-lead { left: 30px; top: 548px; width: 300px; height: 120px; padding: 16px 22px; overflow: visible; }
+    .a4-k { font-family: 'JetBrains Mono', monospace; font-size: 17px; letter-spacing: .16em; color: #5B6372; text-transform: uppercase; }
+    .a4-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 30px; color: var(--ink); margin-top: 4px; }
+    #a4-tags { position: absolute; left: 22px; bottom: -22px; height: 40px; width: 260px; }
+    #a4-tags .tag { position: absolute; left: 0; top: 0; white-space: nowrap; }
+    #a4-match { left: 486px; top: 410px; width: 520px; height: 108px; display: flex; align-items: center; gap: 18px; padding: 0 22px; }
+    #a4-house { width: 64px; height: 64px; border-radius: 16px; background: var(--blue); flex: none; position: relative; }
+    #a4-house::before { content: ""; position: absolute; left: 14px; top: 12px; width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 16px solid #fff; }
+    #a4-house::after { content: ""; position: absolute; left: 19px; top: 28px; width: 26px; height: 22px; background: #fff; }
+    #a4-msg { left: 110px; top: 800px; width: 860px; height: 92px; display: flex; align-items: center; gap: 18px; padding: 0 24px; }
+  </style>
+  <div id="root" data-composition-id="a4" data-width="1080" data-height="1920">
+    <div id="a4-bg" class="panel bg-blue"></div>
+    <div class="head on-blue" style="color:var(--paper)">
+      <div class="mask"><div id="a4-num" class="disp num">04</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a4-t1">FOLLOW</div></div><div class="mask"><div id="a4-t2">UP</div></div></div>
+    </div>
+    <div id="a4-track"></div><div id="a4-trackfill"></div>
+    <div id="a4-m1" class="a4-mk" style="left:164px"></div><div id="a4-m2" class="a4-mk" style="left:528px"></div><div id="a4-m3" class="a4-mk" style="left:892px"></div>
+    <div id="a4-ring"></div>
+    <div id="a4-d1" class="a4-day mono" style="left:80px">DAY 2</div><div id="a4-d2" class="a4-day mono" style="left:444px">DAY 7</div><div id="a4-d3" class="a4-day mono" style="left:808px">DAY 14</div>
+    <div id="a4-match" class="card"><div id="a4-house"></div><div><div class="a4-k">NEW MATCH · Day 7</div><div class="a4-v" style="font-size:28px">3BHK · Indiranagar</div></div></div>
+    <div id="a4-msg" class="card"><span class="tag blue">AI check-in</span><span class="a4-v" style="font-size:26px;font-weight:700;font-family:Inter,sans-serif;margin:0">Hi Rohan, any questions on the flats you saw?</span></div>
+    <div id="a4-lead" class="card">
+      <div class="a4-k">Lead</div><div class="a4-v">Rohan K.</div>
+      <div id="a4-tags"><span id="a4-tag1" class="tag ink">Not ready yet</span><span id="a4-tag2" class="tag blue">Ready ✓</span></div>
+    </div>
+    <div id="a4-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>04 / 04</span></div><div id="a4-chrome-bot" class="chrome bot mono t-blue"><span>04 / FOLLOW UP</span><span class="prog"><i id="a4-prog"></i></span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"fourth": 0.15, "fourth_end": 0.657, "it": 0.657, "it_end": 0.817, "follows": 0.817, "follows_end": 1.377, "up": 1.377, "up_end": 1.617, "until": 1.617, "until_end": 2.097, "theyre": 2.097, "theyre_end": 2.497, "ready": 2.497, "ready_end": 3.217};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.fourth - 0.04);
+      tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.follows - 0.04);
+      tl.fromTo("#a4-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.up - 0.06);
+      tl.fromTo("#a4-track", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, W.fourth);
+      tl.fromTo(["#a4-m1", "#a4-m2", "#a4-m3"], { scale: 0 }, { scale: 1, duration: 0.25, stagger: 0.1, ease: "back.out(2.5)" }, W.fourth + 0.2);
+      tl.fromTo(["#a4-d1", "#a4-d2", "#a4-d3"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1 }, W.fourth + 0.3);
+      tl.fromTo("#a4-lead", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, W.follows);
+      tl.set(["#a4-tag1", "#a4-tag2"], { opacity: 0 }, 0);
+      tl.fromTo("#a4-tag1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.24, ease: "back.out(2)" }, W.follows);
+      // "follows up": a check-in goes out on day 2, a match lands on day 7
+      tl.fromTo("#a4-trackfill", { scaleX: 0 }, { scaleX: 0.06, duration: 0.25, ease: "power2.out" }, W.follows);
+      tl.fromTo("#a4-msg", { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, W.up - 0.05);
+      tl.to("#a4-msg", { x: -260, y: -220, scale: 0.3, opacity: 0, duration: 0.38, ease: "power3.in" }, W.until - 0.05);
+      tl.to("#a4-trackfill", { scaleX: 0.48, duration: 0.5, ease: "power2.inOut" }, W.until);
+      tl.to("#a4-lead", { x: 364, duration: 0.5, ease: "power2.inOut" }, W.until);
+      tl.fromTo("#a4-ring", { scale: 0.5, opacity: 1 }, { scale: 1.6, opacity: 0, duration: 0.6, ease: "power2.out" }, W.theyre);
+      tl.fromTo("#a4-match", { opacity: 0, y: -24, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.34, ease: "back.out(2)" }, W.theyre);
+      // "ready": the lead turns ready
+      tl.set("#a4-tag1", { opacity: 0 }, W.ready);
+      tl.fromTo("#a4-tag2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2.5)" }, W.ready);
+      tl.to("#a4-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.ready + 0.05);
+      tl.fromTo("#a4-prog", { scaleX: 0.7321 }, { scaleX: 0.8021, duration: 3.236, ease: "none" }, 0);
+      window.__timelines["a4"] = tl;
+    })();
+  </script>
+</template>

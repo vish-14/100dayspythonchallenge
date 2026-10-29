@@ -21,7 +21,7 @@
   <div id="root" data-composition-id="solution" data-width="1080" data-height="1920">
     <div id="solution-bg" class="panel"></div>
     <div id="so-kick" class="mono">{{c.kicker}}</div>
-    <div id="so-h1m" class="mask"><div id="so-h1" class="disp">{{c.h1a}} <b>{{c.h1b}}</b></div></div>
+    <div id="so-h1m"><div id="so-h1" class="disp">{{c.h1a}} <b>{{c.h1b}}</b></div></div>
     <div id="so-h2" class="mono">{{c.h2}}</div>
     <div id="so-l1" class="so-line" style="left:217px;width:132px"></div><div id="so-f1" class="so-fill" style="left:217px;width:132px"></div>
     <div id="so-l2" class="so-line" style="left:459px;width:132px"></div><div id="so-f2" class="so-fill" style="left:459px;width:132px"></div>
@@ -45,7 +45,7 @@
       tl.fromTo("#solution-bg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
       tl.fromTo("#so-kick", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, W.thats);
       // "an AI agent solution": the headline rises on the words
-      tl.fromTo("#so-h1", { yPercent: 110 }, { yPercent: 0, duration: 0.45, ease: "power4.out" }, W.ai - 0.1);
+      tl.fromTo("#so-h1", { opacity: 0, y: 46 }, { opacity: 1, y: 0, duration: 0.4, ease: "power4.out" }, W.ai - 0.1);
       tl.fromTo("#so-h2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, W.property - 0.05);
       // "four connected workflows": four nodes, then the links fill, then the labels
       [1, 2, 3, 4].forEach((i) => {

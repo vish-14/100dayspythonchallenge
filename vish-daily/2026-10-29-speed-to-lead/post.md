@@ -1,3 +1,44 @@
+# ▶ POST THIS: short "Breaking news" version
+
+Files: `reel-short.mp4` (46.2 s, 1080×1920) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)
+Time: **Thu 29 Oct, 8:00 PM IST** (Dubai 6:30 PM · London 2:30 PM · New York 10:30 AM)
+
+## Caption (short version)
+
+```
+🚨 Breaking news: aaj raat se, koi property enquiry thandi nahi padegi. Property agents, ye dekho 👇
+AI agent for real estate | WhatsApp lead automation | India 🇮🇳
+
+Buyer ne 9 PM pe enquiry ki. Aapne reply kiya agle din subah.
+Tab tak another broker unse baat kar raha tha 😬
+
+That's why I built an AI agent for property agents, with 4 connected workflows. You stay in control 👇
+
+1️⃣ Instant reply: every enquiry from 99acres, MagicBricks, Housing.com or WhatsApp gets a reply in minutes, in your style
+2️⃣ Qualify buyers: budget, location, timeline and home loan, scored for you
+3️⃣ Route + book: the agent alerts you on WhatsApp, and books the site visit you approve
+4️⃣ Follow up: it keeps checking in, until they're ready
+
+💬 Sach batao: new enquiry ka reply kitni der mein karte ho? 5 min, 1 hour ya next day? 👇
+
+👉 Want this workflow built for your business?
+Follow @vish.workflows and comment "WORKFLOW". I'll send you the free Speed-to-Lead Playbook in your DMs 📩
+
+💾 Save this and share it with a broker friend who's always on site visits.
+
+Built for real estate agents, brokers, builders and channel partners in Bengaluru, Mumbai, Pune, Hyderabad, Delhi NCR, Chennai, Dubai and worldwide. AI automation, AI agents, real estate CRM automation, WhatsApp Business API automation, property lead management and site visit booking, by Sri Trilinga Technologies Private Limited.
+
+#RealEstateIndia #AIAutomation #RealEstateAgent #PropertyDealer #WhatsAppAutomation
+```
+
+- **Cover:** `cover-short.png` (BREAKING NEWS · AAJ RAAT SE / KOI ENQUIRY / THANDI NAHI! · Vish).
+- **Pinned comment, alt text, Story, SuperProfile, first hour:** as in the sections below. The pinned comment and the DM flow are the same.
+- **Alt text:** "Breaking-news style reel: an AI agent for property agents replies to every enquiry instantly, qualifies buyers, alerts you on WhatsApp and books approved site visits, then follows up."
+
+---
+
+# Long version (74.6 s, v4), kept as a backup
+
 # Post kit · Thu 29 Oct 2026 · Speed-to-lead (real estate)
 
 Files: `reel.mp4` (74.6 s, 1080×1920) · `cover.png` · `guide.pdf` (4 pages, "The Speed-to-Lead Playbook")

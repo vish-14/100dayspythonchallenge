@@ -1,0 +1,1459 @@
+{
+ "fps": 30,
+ "vo_duration": 44.49,
+ "scenes": [
+  {
+   "id": "hook",
+   "vo_start": 0.8,
+   "vo_end": 6.713
+  },
+  {
+   "id": "problem",
+   "vo_start": 7.113,
+   "vo_end": 15.002
+  },
+  {
+   "id": "solution",
+   "vo_start": 15.902,
+   "vo_end": 22.263
+  },
+  {
+   "id": "a1",
+   "vo_start": 22.663,
+   "vo_end": 26.205
+  },
+  {
+   "id": "a2",
+   "vo_start": 26.505,
+   "vo_end": 28.629
+  },
+  {
+   "id": "a3",
+   "vo_start": 28.929,
+   "vo_end": 33.323
+  },
+  {
+   "id": "a4",
+   "vo_start": 33.973,
+   "vo_end": 36.759
+  },
+  {
+   "id": "cta",
+   "vo_start": 37.209,
+   "vo_end": 44.49
+  }
+ ],
+ "words": [
+  {
+   "text": "Breaking",
+   "scene": "hook",
+   "start": 0.8,
+   "end": 1.36
+  },
+  {
+   "text": "news!",
+   "scene": "hook",
+   "start": 1.36,
+   "end": 1.92
+  },
+  {
+   "text": "Aaj",
+   "scene": "hook",
+   "start": 1.96,
+   "end": 2.28
+  },
+  {
+   "text": "raat",
+   "scene": "hook",
+   "start": 2.44,
+   "end": 3.16
+  },
+  {
+   "text": "se,",
+   "scene": "hook",
+   "start": 3.16,
+   "end": 3.64
+  },
+  {
+   "text": "aapki",
+   "scene": "hook",
+   "start": 3.16,
+   "end": 3.64
+  },
+  {
+   "text": "koi",
+   "scene": "hook",
+   "start": 3.72,
+   "end": 3.88
+  },
+  {
+   "text": "bhi",
+   "scene": "hook",
+   "start": 4.04,
+   "end": 4.2
+  },
+  {
+   "text": "property",
+   "scene": "hook",
+   "start": 4.44,
+   "end": 4.76
+  },
+  {
+   "text": "enquiry",
+   "scene": "hook",
+   "start": 5,
+   "end": 5.48
+  },
+  {
+   "text": "thandi",
+   "scene": "hook",
+   "start": 5.48,
+   "end": 5.96
+  },
+  {
+   "text": "nahi",
+   "scene": "hook",
+   "start": 5.96,
+   "end": 6.12
+  },
+  {
+   "text": "padegi.",
+   "scene": "hook",
+   "start": 6.2,
+   "end": 6.92
+  },
+  {
+   "text": "A",
+   "scene": "problem",
+   "start": 7.113,
+   "end": 7.28
+  },
+  {
+   "text": "buyer",
+   "scene": "problem",
+   "start": 7.28,
+   "end": 7.68
+  },
+  {
+   "text": "enquires",
+   "scene": "problem",
+   "start": 7.68,
+   "end": 8.32
+  },
+  {
+   "text": "at",
+   "scene": "problem",
+   "start": 8.32,
+   "end": 8.48
+  },
+  {
+   "text": "9",
+   "scene": "problem",
+   "start": 8.48,
+   "end": 8.96
+  },
+  {
+   "text": "PM.",
+   "scene": "problem",
+   "start": 8.96,
+   "end": 9.6
+  },
+  {
+   "text": "You",
+   "scene": "problem",
+   "start": 9.84,
+   "end": 10.08
+  },
+  {
+   "text": "reply",
+   "scene": "problem",
+   "start": 10.08,
+   "end": 10.48
+  },
+  {
+   "text": "the",
+   "scene": "problem",
+   "start": 10.48,
+   "end": 10.64
+  },
+  {
+   "text": "next",
+   "scene": "problem",
+   "start": 10.64,
+   "end": 10.96
+  },
+  {
+   "text": "morning.",
+   "scene": "problem",
+   "start": 10.96,
+   "end": 11.68
+  },
+  {
+   "text": "By",
+   "scene": "problem",
+   "start": 11.68,
+   "end": 11.92
+  },
+  {
+   "text": "then,",
+   "scene": "problem",
+   "start": 11.92,
+   "end": 12.56
+  },
+  {
+   "text": "another",
+   "scene": "problem",
+   "start": 12.56,
+   "end": 13.04
+  },
+  {
+   "text": "broker",
+   "scene": "problem",
+   "start": 13.04,
+   "end": 13.6
+  },
+  {
+   "text": "is",
+   "scene": "problem",
+   "start": 13.6,
+   "end": 13.76
+  },
+  {
+   "text": "already",
+   "scene": "problem",
+   "start": 13.76,
+   "end": 14.24
+  },
+  {
+   "text": "talking",
+   "scene": "problem",
+   "start": 14.24,
+   "end": 14.72
+  },
+  {
+   "text": "to",
+   "scene": "problem",
+   "start": 14.72,
+   "end": 14.96
+  },
+  {
+   "text": "them.",
+   "scene": "problem",
+   "start": 14.96,
+   "end": 15.36
+  },
+  {
+   "text": "That's",
+   "scene": "solution",
+   "start": 15.902,
+   "end": 16.08
+  },
+  {
+   "text": "why",
+   "scene": "solution",
+   "start": 16.08,
+   "end": 16.4
+  },
+  {
+   "text": "I",
+   "scene": "solution",
+   "start": 16.4,
+   "end": 16.56
+  },
+  {
+   "text": "built",
+   "scene": "solution",
+   "start": 16.56,
+   "end": 17.04
+  },
+  {
+   "text": "an",
+   "scene": "solution",
+   "start": 17.04,
+   "end": 17.28
+  },
+  {
+   "text": "AI",
+   "scene": "solution",
+   "start": 17.28,
+   "end": 17.84
+  },
+  {
+   "text": "agent",
+   "scene": "solution",
+   "start": 18,
+   "end": 18.48
+  },
+  {
+   "text": "solution",
+   "scene": "solution",
+   "start": 18.48,
+   "end": 18.88
+  },
+  {
+   "text": "for",
+   "scene": "solution",
+   "start": 18.88,
+   "end": 19.12
+  },
+  {
+   "text": "property",
+   "scene": "solution",
+   "start": 19.12,
+   "end": 19.68
+  },
+  {
+   "text": "agents,",
+   "scene": "solution",
+   "start": 19.68,
+   "end": 20.16
+  },
+  {
+   "text": "with",
+   "scene": "solution",
+   "start": 20.32,
+   "end": 20.56
+  },
+  {
+   "text": "four",
+   "scene": "solution",
+   "start": 20.56,
+   "end": 20.96
+  },
+  {
+   "text": "connected",
+   "scene": "solution",
+   "start": 20.96,
+   "end": 21.52
+  },
+  {
+   "text": "workflows.",
+   "scene": "solution",
+   "start": 21.52,
+   "end": 22.56
+  },
+  {
+   "text": "First,",
+   "scene": "a1",
+   "start": 22.663,
+   "end": 23.2
+  },
+  {
+   "text": "it",
+   "scene": "a1",
+   "start": 23.2,
+   "end": 23.44
+  },
+  {
+   "text": "replies",
+   "scene": "a1",
+   "start": 23.44,
+   "end": 24
+  },
+  {
+   "text": "to",
+   "scene": "a1",
+   "start": 24,
+   "end": 24.16
+  },
+  {
+   "text": "every",
+   "scene": "a1",
+   "start": 24.16,
+   "end": 24.56
+  },
+  {
+   "text": "enquiry,",
+   "scene": "a1",
+   "start": 24.56,
+   "end": 25.44
+  },
+  {
+   "text": "instantly.",
+   "scene": "a1",
+   "start": 25.44,
+   "end": 26.48
+  },
+  {
+   "text": "Second,",
+   "scene": "a2",
+   "start": 26.505,
+   "end": 27.12
+  },
+  {
+   "text": "it",
+   "scene": "a2",
+   "start": 27.12,
+   "end": 27.28
+  },
+  {
+   "text": "qualifies",
+   "scene": "a2",
+   "start": 27.28,
+   "end": 28
+  },
+  {
+   "text": "buyers.",
+   "scene": "a2",
+   "start": 28,
+   "end": 28.8
+  },
+  {
+   "text": "Third,",
+   "scene": "a3",
+   "start": 28.929,
+   "end": 29.36
+  },
+  {
+   "text": "it",
+   "scene": "a3",
+   "start": 29.36,
+   "end": 29.6
+  },
+  {
+   "text": "alerts",
+   "scene": "a3",
+   "start": 29.6,
+   "end": 30.08
+  },
+  {
+   "text": "you",
+   "scene": "a3",
+   "start": 30.08,
+   "end": 30.24
+  },
+  {
+   "text": "on",
+   "scene": "a3",
+   "start": 30.24,
+   "end": 30.4
+  },
+  {
+   "text": "WhatsApp,",
+   "scene": "a3",
+   "start": 30.4,
+   "end": 30.96
+  },
+  {
+   "text": "and",
+   "scene": "a3",
+   "start": 31.04,
+   "end": 31.28
+  },
+  {
+   "text": "books",
+   "scene": "a3",
+   "start": 31.28,
+   "end": 31.68
+  },
+  {
+   "text": "the",
+   "scene": "a3",
+   "start": 31.68,
+   "end": 31.76
+  },
+  {
+   "text": "site",
+   "scene": "a3",
+   "start": 31.76,
+   "end": 32.16
+  },
+  {
+   "text": "visit",
+   "scene": "a3",
+   "start": 32.16,
+   "end": 32.56
+  },
+  {
+   "text": "you",
+   "scene": "a3",
+   "start": 32.56,
+   "end": 32.8
+  },
+  {
+   "text": "approve.",
+   "scene": "a3",
+   "start": 32.8,
+   "end": 33.84
+  },
+  {
+   "text": "Fourth,",
+   "scene": "a4",
+   "start": 33.973,
+   "end": 34.48
+  },
+  {
+   "text": "it",
+   "scene": "a4",
+   "start": 34.48,
+   "end": 34.64
+  },
+  {
+   "text": "follows",
+   "scene": "a4",
+   "start": 34.64,
+   "end": 35.2
+  },
+  {
+   "text": "up,",
+   "scene": "a4",
+   "start": 35.2,
+   "end": 35.44
+  },
+  {
+   "text": "until",
+   "scene": "a4",
+   "start": 35.44,
+   "end": 35.92
+  },
+  {
+   "text": "they're",
+   "scene": "a4",
+   "start": 35.92,
+   "end": 36.32
+  },
+  {
+   "text": "ready.",
+   "scene": "a4",
+   "start": 36.32,
+   "end": 37.04
+  },
+  {
+   "text": "Want",
+   "scene": "cta",
+   "start": 37.209,
+   "end": 37.44
+  },
+  {
+   "text": "this",
+   "scene": "cta",
+   "start": 37.44,
+   "end": 37.68
+  },
+  {
+   "text": "workflow",
+   "scene": "cta",
+   "start": 37.68,
+   "end": 38.24
+  },
+  {
+   "text": "built",
+   "scene": "cta",
+   "start": 38.24,
+   "end": 38.56
+  },
+  {
+   "text": "for",
+   "scene": "cta",
+   "start": 38.56,
+   "end": 38.72
+  },
+  {
+   "text": "your",
+   "scene": "cta",
+   "start": 38.72,
+   "end": 38.88
+  },
+  {
+   "text": "business?",
+   "scene": "cta",
+   "start": 38.88,
+   "end": 39.52
+  },
+  {
+   "text": "Follow",
+   "scene": "cta",
+   "start": 39.52,
+   "end": 40
+  },
+  {
+   "text": "me",
+   "scene": "cta",
+   "start": 40,
+   "end": 40.24
+  },
+  {
+   "text": "and",
+   "scene": "cta",
+   "start": 40.24,
+   "end": 40.48
+  },
+  {
+   "text": "comment",
+   "scene": "cta",
+   "start": 40.48,
+   "end": 41.12
+  },
+  {
+   "text": "\"workflow\",",
+   "scene": "cta",
+   "start": 41.12,
+   "end": 41.92
+  },
+  {
+   "text": "and",
+   "scene": "cta",
+   "start": 41.92,
+   "end": 42.08
+  },
+  {
+   "text": "I'll",
+   "scene": "cta",
+   "start": 42.08,
+   "end": 42.4
+  },
+  {
+   "text": "send",
+   "scene": "cta",
+   "start": 42.4,
+   "end": 42.64
+  },
+  {
+   "text": "you",
+   "scene": "cta",
+   "start": 42.64,
+   "end": 42.8
+  },
+  {
+   "text": "the",
+   "scene": "cta",
+   "start": 42.8,
+   "end": 42.88
+  },
+  {
+   "text": "details",
+   "scene": "cta",
+   "start": 42.88,
+   "end": 43.36
+  },
+  {
+   "text": "in",
+   "scene": "cta",
+   "start": 43.36,
+   "end": 43.52
+  },
+  {
+   "text": "your",
+   "scene": "cta",
+   "start": 43.52,
+   "end": 43.68
+  },
+  {
+   "text": "DMs.",
+   "scene": "cta",
+   "start": 43.68,
+   "end": 44.48
+  }
+ ],
+ "captions": [
+  {
+   "id": "cap00",
+   "scene": "hook",
+   "start": 0.74,
+   "end": 1.92,
+   "words": [
+    {
+     "text": "Breaking",
+     "start": 0.8,
+     "end": 1.36,
+     "key": true
+    },
+    {
+     "text": "news!",
+     "start": 1.36,
+     "end": 1.92,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap01",
+   "scene": "hook",
+   "start": 1.93,
+   "end": 3.64,
+   "words": [
+    {
+     "text": "Aaj",
+     "start": 1.96,
+     "end": 2.28,
+     "key": false
+    },
+    {
+     "text": "raat",
+     "start": 2.44,
+     "end": 3.16,
+     "key": false
+    },
+    {
+     "text": "se,",
+     "start": 3.16,
+     "end": 3.64,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap02",
+   "scene": "hook",
+   "start": 3.65,
+   "end": 4.38,
+   "words": [
+    {
+     "text": "aapki",
+     "start": 3.16,
+     "end": 3.64,
+     "key": false
+    },
+    {
+     "text": "koi",
+     "start": 3.72,
+     "end": 3.88,
+     "key": false
+    },
+    {
+     "text": "bhi",
+     "start": 4.04,
+     "end": 4.2,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap03",
+   "scene": "hook",
+   "start": 4.38,
+   "end": 7.053,
+   "words": [
+    {
+     "text": "property",
+     "start": 4.44,
+     "end": 4.76,
+     "key": false
+    },
+    {
+     "text": "enquiry",
+     "start": 5,
+     "end": 5.48,
+     "key": false
+    },
+    {
+     "text": "thandi",
+     "start": 5.48,
+     "end": 5.96,
+     "key": true
+    },
+    {
+     "text": "nahi",
+     "start": 5.96,
+     "end": 6.12,
+     "key": false
+    },
+    {
+     "text": "padegi.",
+     "start": 6.2,
+     "end": 6.92,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap04",
+   "scene": "problem",
+   "start": 7.053,
+   "end": 8.96,
+   "words": [
+    {
+     "text": "A",
+     "start": 7.113,
+     "end": 7.28,
+     "key": false
+    },
+    {
+     "text": "buyer",
+     "start": 7.28,
+     "end": 7.68,
+     "key": false
+    },
+    {
+     "text": "enquires",
+     "start": 7.68,
+     "end": 8.32,
+     "key": false
+    },
+    {
+     "text": "at",
+     "start": 8.32,
+     "end": 8.48,
+     "key": false
+    },
+    {
+     "text": "9",
+     "start": 8.48,
+     "end": 8.96,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap05",
+   "scene": "problem",
+   "start": 8.97,
+   "end": 9.78,
+   "words": [
+    {
+     "text": "PM.",
+     "start": 8.96,
+     "end": 9.6,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap06",
+   "scene": "problem",
+   "start": 9.78,
+   "end": 11.68,
+   "words": [
+    {
+     "text": "You",
+     "start": 9.84,
+     "end": 10.08,
+     "key": false
+    },
+    {
+     "text": "reply",
+     "start": 10.08,
+     "end": 10.48,
+     "key": false
+    },
+    {
+     "text": "the",
+     "start": 10.48,
+     "end": 10.64,
+     "key": false
+    },
+    {
+     "text": "next",
+     "start": 10.64,
+     "end": 10.96,
+     "key": false
+    },
+    {
+     "text": "morning.",
+     "start": 10.96,
+     "end": 11.68,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap07",
+   "scene": "problem",
+   "start": 11.69,
+   "end": 12.56,
+   "words": [
+    {
+     "text": "By",
+     "start": 11.68,
+     "end": 11.92,
+     "key": false
+    },
+    {
+     "text": "then,",
+     "start": 11.92,
+     "end": 12.56,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap08",
+   "scene": "problem",
+   "start": 12.57,
+   "end": 14.72,
+   "words": [
+    {
+     "text": "another",
+     "start": 12.56,
+     "end": 13.04,
+     "key": true
+    },
+    {
+     "text": "broker",
+     "start": 13.04,
+     "end": 13.6,
+     "key": false
+    },
+    {
+     "text": "is",
+     "start": 13.6,
+     "end": 13.76,
+     "key": false
+    },
+    {
+     "text": "already",
+     "start": 13.76,
+     "end": 14.24,
+     "key": false
+    },
+    {
+     "text": "talking",
+     "start": 14.24,
+     "end": 14.72,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap09",
+   "scene": "problem",
+   "start": 14.73,
+   "end": 15.66,
+   "words": [
+    {
+     "text": "to",
+     "start": 14.72,
+     "end": 14.96,
+     "key": false
+    },
+    {
+     "text": "them.",
+     "start": 14.96,
+     "end": 15.36,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap10",
+   "scene": "solution",
+   "start": 15.842,
+   "end": 17.28,
+   "words": [
+    {
+     "text": "That's",
+     "start": 15.902,
+     "end": 16.08,
+     "key": false
+    },
+    {
+     "text": "why",
+     "start": 16.08,
+     "end": 16.4,
+     "key": false
+    },
+    {
+     "text": "I",
+     "start": 16.4,
+     "end": 16.56,
+     "key": false
+    },
+    {
+     "text": "built",
+     "start": 16.56,
+     "end": 17.04,
+     "key": false
+    },
+    {
+     "text": "an",
+     "start": 17.04,
+     "end": 17.28,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap11",
+   "scene": "solution",
+   "start": 17.29,
+   "end": 19.68,
+   "words": [
+    {
+     "text": "AI",
+     "start": 17.28,
+     "end": 17.84,
+     "key": false
+    },
+    {
+     "text": "agent",
+     "start": 18,
+     "end": 18.48,
+     "key": true
+    },
+    {
+     "text": "solution",
+     "start": 18.48,
+     "end": 18.88,
+     "key": false
+    },
+    {
+     "text": "for",
+     "start": 18.88,
+     "end": 19.12,
+     "key": false
+    },
+    {
+     "text": "property",
+     "start": 19.12,
+     "end": 19.68,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap12",
+   "scene": "solution",
+   "start": 19.69,
+   "end": 22.603,
+   "words": [
+    {
+     "text": "agents,",
+     "start": 19.68,
+     "end": 20.16,
+     "key": false
+    },
+    {
+     "text": "with",
+     "start": 20.32,
+     "end": 20.56,
+     "key": false
+    },
+    {
+     "text": "four",
+     "start": 20.56,
+     "end": 20.96,
+     "key": false
+    },
+    {
+     "text": "connected",
+     "start": 20.96,
+     "end": 21.52,
+     "key": true
+    },
+    {
+     "text": "workflows.",
+     "start": 21.52,
+     "end": 22.56,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap13",
+   "scene": "a1",
+   "start": 22.603,
+   "end": 24.56,
+   "words": [
+    {
+     "text": "First,",
+     "start": 22.663,
+     "end": 23.2,
+     "key": false
+    },
+    {
+     "text": "it",
+     "start": 23.2,
+     "end": 23.44,
+     "key": false
+    },
+    {
+     "text": "replies",
+     "start": 23.44,
+     "end": 24,
+     "key": false
+    },
+    {
+     "text": "to",
+     "start": 24,
+     "end": 24.16,
+     "key": false
+    },
+    {
+     "text": "every",
+     "start": 24.16,
+     "end": 24.56,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap14",
+   "scene": "a1",
+   "start": 24.57,
+   "end": 26.48,
+   "words": [
+    {
+     "text": "enquiry,",
+     "start": 24.56,
+     "end": 25.44,
+     "key": false
+    },
+    {
+     "text": "instantly.",
+     "start": 25.44,
+     "end": 26.48,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap15",
+   "scene": "a2",
+   "start": 26.49,
+   "end": 28.869,
+   "words": [
+    {
+     "text": "Second,",
+     "start": 26.505,
+     "end": 27.12,
+     "key": false
+    },
+    {
+     "text": "it",
+     "start": 27.12,
+     "end": 27.28,
+     "key": false
+    },
+    {
+     "text": "qualifies",
+     "start": 27.28,
+     "end": 28,
+     "key": false
+    },
+    {
+     "text": "buyers.",
+     "start": 28,
+     "end": 28.8,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap16",
+   "scene": "a3",
+   "start": 28.869,
+   "end": 30.4,
+   "words": [
+    {
+     "text": "Third,",
+     "start": 28.929,
+     "end": 29.36,
+     "key": false
+    },
+    {
+     "text": "it",
+     "start": 29.36,
+     "end": 29.6,
+     "key": false
+    },
+    {
+     "text": "alerts",
+     "start": 29.6,
+     "end": 30.08,
+     "key": false
+    },
+    {
+     "text": "you",
+     "start": 30.08,
+     "end": 30.24,
+     "key": false
+    },
+    {
+     "text": "on",
+     "start": 30.24,
+     "end": 30.4,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap17",
+   "scene": "a3",
+   "start": 30.41,
+   "end": 32.16,
+   "words": [
+    {
+     "text": "WhatsApp,",
+     "start": 30.4,
+     "end": 30.96,
+     "key": true
+    },
+    {
+     "text": "and",
+     "start": 31.04,
+     "end": 31.28,
+     "key": false
+    },
+    {
+     "text": "books",
+     "start": 31.28,
+     "end": 31.68,
+     "key": false
+    },
+    {
+     "text": "the",
+     "start": 31.68,
+     "end": 31.76,
+     "key": false
+    },
+    {
+     "text": "site",
+     "start": 31.76,
+     "end": 32.16,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap18",
+   "scene": "a3",
+   "start": 32.17,
+   "end": 33.913,
+   "words": [
+    {
+     "text": "visit",
+     "start": 32.16,
+     "end": 32.56,
+     "key": false
+    },
+    {
+     "text": "you",
+     "start": 32.56,
+     "end": 32.8,
+     "key": false
+    },
+    {
+     "text": "approve.",
+     "start": 32.8,
+     "end": 33.84,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap19",
+   "scene": "a4",
+   "start": 33.913,
+   "end": 35.44,
+   "words": [
+    {
+     "text": "Fourth,",
+     "start": 33.973,
+     "end": 34.48,
+     "key": false
+    },
+    {
+     "text": "it",
+     "start": 34.48,
+     "end": 34.64,
+     "key": false
+    },
+    {
+     "text": "follows",
+     "start": 34.64,
+     "end": 35.2,
+     "key": false
+    },
+    {
+     "text": "up,",
+     "start": 35.2,
+     "end": 35.44,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap20",
+   "scene": "a4",
+   "start": 35.45,
+   "end": 37.149,
+   "words": [
+    {
+     "text": "until",
+     "start": 35.44,
+     "end": 35.92,
+     "key": false
+    },
+    {
+     "text": "they're",
+     "start": 35.92,
+     "end": 36.32,
+     "key": false
+    },
+    {
+     "text": "ready.",
+     "start": 36.32,
+     "end": 37.04,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap21",
+   "scene": "cta",
+   "start": 37.149,
+   "end": 38.56,
+   "words": [
+    {
+     "text": "Want",
+     "start": 37.209,
+     "end": 37.44,
+     "key": false
+    },
+    {
+     "text": "this",
+     "start": 37.44,
+     "end": 37.68,
+     "key": false
+    },
+    {
+     "text": "workflow",
+     "start": 37.68,
+     "end": 38.24,
+     "key": true
+    },
+    {
+     "text": "built",
+     "start": 38.24,
+     "end": 38.56,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap22",
+   "scene": "cta",
+   "start": 38.57,
+   "end": 39.52,
+   "words": [
+    {
+     "text": "for",
+     "start": 38.56,
+     "end": 38.72,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 38.72,
+     "end": 38.88,
+     "key": false
+    },
+    {
+     "text": "business?",
+     "start": 38.88,
+     "end": 39.52,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap23",
+   "scene": "cta",
+   "start": 39.53,
+   "end": 41.92,
+   "words": [
+    {
+     "text": "Follow",
+     "start": 39.52,
+     "end": 40,
+     "key": true
+    },
+    {
+     "text": "me",
+     "start": 40,
+     "end": 40.24,
+     "key": false
+    },
+    {
+     "text": "and",
+     "start": 40.24,
+     "end": 40.48,
+     "key": false
+    },
+    {
+     "text": "comment",
+     "start": 40.48,
+     "end": 41.12,
+     "key": false
+    },
+    {
+     "text": "\"workflow\",",
+     "start": 41.12,
+     "end": 41.92,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap24",
+   "scene": "cta",
+   "start": 41.93,
+   "end": 42.8,
+   "words": [
+    {
+     "text": "and",
+     "start": 41.92,
+     "end": 42.08,
+     "key": false
+    },
+    {
+     "text": "I'll",
+     "start": 42.08,
+     "end": 42.4,
+     "key": false
+    },
+    {
+     "text": "send",
+     "start": 42.4,
+     "end": 42.64,
+     "key": false
+    },
+    {
+     "text": "you",
+     "start": 42.64,
+     "end": 42.8,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap25",
+   "scene": "cta",
+   "start": 42.81,
+   "end": 44.78,
+   "words": [
+    {
+     "text": "the",
+     "start": 42.8,
+     "end": 42.88,
+     "key": false
+    },
+    {
+     "text": "details",
+     "start": 42.88,
+     "end": 43.36,
+     "key": false
+    },
+    {
+     "text": "in",
+     "start": 43.36,
+     "end": 43.52,
+     "key": false
+    },
+    {
+     "text": "your",
+     "start": 43.52,
+     "end": 43.68,
+     "key": false
+    },
+    {
+     "text": "DMs.",
+     "start": 43.68,
+     "end": 44.48,
+     "key": false
+    }
+   ]
+  }
+ ],
+ "visemes": "rrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaooooooaaaaaaaeeeerrrrrrrrrrraaaaarrrrraaaaaaaeeeeemmrrrrrrrrrrrrraaarrrraaarrrraarrroooooaarrrrrrrmmaaaaaaarrrrrrrraaaaaaaaaaaaaaaaeeeeoooaaooaaaaaaaaaaaaaaammmmrrrrrrrrrrrrrrrraaaoooooaaaaaaammmmoommmaaaaaaaaeemmmmrrroooaaaaaaaooorrraaaaaaaeeebbbmmrrrrrrrrrrrrroooaaaaaaaaaaaaabbbooaaaaeerrooaaaaaaeeerrrrrrrrrrrrrrraaaaaaaaaaaaooorrrrrrrrrrrrrooaaaaaaooooaaaaaaaaaabbrrrreeerrraaaaaaaaaarrraaaaaaaoommmmmeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaaoooaaaooorrrrraaooorrrraaaaaaaaaaaaaaaarrrrrraaaaeeaaaeeeeeeeooeeeeeooommmmrraaaaaaaaaaabbaaaaeeebbbbrrrrrrrrrrrrrraaammrrrrraaaaaarrrrrooaaarrrrooooaaaarrmmmmbbbmmrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrrraaaaaaaaaaooommmaaaaaaabbbbbbbrrrrrrraaooeeeeeeoooeeeeerrrrrrrrrrrrreeeeaaaaaaaaoooorrrrraaarrrraaaaaaaaaaaaaaaoooaaaaaaaabbmmmmrrrrrrrrrrrrrraaaaaaaaoorrrrrraaaaaaaaaaaammeeeaaaaaaaaoooaaaaaaaaaaaarrrrrrrrrrrrraaooooaaaeeeeeeeeeeaaaaaooooaaeeeeeeeeeooaaarrrraaaaammmrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaammmrraaammmmmaaaaaaaeeaaaaaarrrrrrrrrraaoooooaaooooaaaaaaooaaaaaaeeemmrrrrrrrrrrrrrrrrrraaaaaaaaaeeemmmaaaaarrrraaaaammaaaaarrrraaaaaaaaaaaaaaaaammmmrrrrrrrrrrrrraaaaaaaaooaaaaaarrrrooooeeaaaaaaoorrrrrrrrrrraaaaarrmmmaabbbbrrrrrrrrrraaaaaaaeeeeeaaooaaaaaaoommaaaaaaaaaaooommrrrrooaaaooooaaaabbbbbbmmrrrrrr"
+}

@@ -1,0 +1,45 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #a1-chat { left: 56px; top: 470px; width: 968px; height: 380px; }
+    .a1-k { font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; margin: 22px 30px 0; }
+    .a1-bub { margin: 10px 30px 0; padding: 18px 24px; border-radius: 20px; font-size: 31px; font-weight: 600; color: #141A24; width: fit-content; max-width: 760px; line-height: 1.25; }
+    #a1-b1 { background: #EEF1F6; border-top-left-radius: 6px; }
+    #a1-b2 { background: #DCE5FD; margin-left: auto; margin-right: 30px; border-top-right-radius: 6px; }
+    #a1-meta { display: flex; justify-content: flex-end; gap: 14px; align-items: center; margin: 12px 30px 0; }
+    #a1-meta .tag { font-size: 20px; }
+  </style>
+  <div id="root" data-composition-id="a1" data-width="1080" data-height="1920">
+    <div id="a1-bg" class="panel bg-dark"></div>
+    <div class="head" style="color:var(--paper)">
+      <div class="mask"><div id="a1-num" class="disp num">{{c.num}}</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a1-t1">{{c.title.0}}</div></div><div class="mask"><div id="a1-t2">{{c.title.1}}</div></div></div>
+    </div>
+    <div id="a1-chat" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;{{c.bar}}</div>
+      <div class="a1-k">{{c.from}}</div>
+      <div id="a1-b1" class="a1-bub">{{c.ask}}</div>
+      <div id="a1-b2" class="a1-bub">{{c.reply}}</div>
+      <div id="a1-meta"><span id="a1-ai" class="tag blue">{{c.ai}}</span><span id="a1-time" class="tag ink">{{c.time}}</span></div>
+    </div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a1-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.first - 0.04);
+      tl.fromTo("#a1-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.replies - 0.06);
+      tl.fromTo("#a1-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.instantly - 0.06);
+      // "every enquiry": the buyer's message lands
+      tl.fromTo("#a1-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.replies - 0.1);
+      tl.fromTo("#a1-b1", { opacity: 0, scale: 0.8, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.every - 0.05);
+      // "instantly": the AI reply and the time stamp
+      tl.fromTo("#a1-b2", { opacity: 0, scale: 0.8, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.instantly - 0.05);
+      tl.fromTo("#a1-meta", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" }, W.instantly + 0.3);
+      tl.fromTo("#a1-time", { scale: 1.6 }, { scale: 1, duration: 0.25, ease: "back.out(2)", immediateRender: false }, W.instantly + 0.3);
+      tl.fromTo("#a1-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a1"] = tl;
+    })();
+  </script>
+</template>

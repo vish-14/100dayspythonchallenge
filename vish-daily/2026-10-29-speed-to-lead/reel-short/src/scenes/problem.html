@@ -1,0 +1,82 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #pb-clock { position: absolute; left: 56px; top: 262px; width: 470px; height: 130px; }
+    #pb-clock .disp { position: absolute; left: 0; top: 0; font-size: 124px; color: var(--paper); white-space: nowrap; }
+    #pb-clab { position: absolute; left: 60px; top: 396px; width: 460px; height: 30px; font-size: 22px; color: rgba(245,245,247,.86); }
+    #pb-clab span { position: absolute; left: 0; top: 0; }
+    #pb-other { left: 560px; top: 262px; width: 464px; height: 150px; padding: 20px 24px; overflow: visible; }
+    .pb-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .pb-v { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 28px; color: var(--ink); margin-top: 10px; display: flex; align-items: center; gap: 12px; }
+    #pb-live { width: 18px; height: 18px; border-radius: 50%; background: var(--blue); flex: none; }
+    #pb-chat { left: 56px; top: 450px; width: 968px; height: 410px; }
+    .pb-lab { margin: 22px 30px 0; }
+    .pb-bub { margin: 10px 30px 0; padding: 18px 24px; border-radius: 20px; font-size: 30px; font-weight: 600; color: #141A24; width: fit-content; max-width: 720px; line-height: 1.25; }
+    #pb-b1 { background: #EEF1F6; border-top-left-radius: 6px; }
+    #pb-b2 { background: #DCE5FD; margin-left: auto; margin-right: 30px; border-top-right-radius: 6px; }
+    #pb-meta { display: flex; justify-content: flex-end; gap: 16px; margin: 10px 30px 0; font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .1em; color: #5B6372; }
+    #pb-seen { color: var(--ink); font-weight: 700; }
+    #pb-unread { position: absolute; right: 18px; top: 10px; background: #E3262B; color: #fff; font-size: 20px; }
+    #pb-lost { position: absolute; left: 300px; top: 560px; padding: 14px 28px; border: 8px solid #E3262B; color: #E3262B; border-radius: 14px;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 74px; letter-spacing: .02em; transform: rotate(-8deg); background: rgba(245,245,247,.92); }
+    #pb-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+    #pb-ca, #pb-cb, #pb-la, #pb-lb, #pb-b1, #pb-l1, #pb-b2, #pb-meta, #pb-seen { opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+    <div id="pb-clock"><div id="pb-ca" class="disp">{{c.clock_a}}</div><div id="pb-cb" class="disp">{{c.clock_b}}</div></div>
+    <div id="pb-clab" class="mono"><span id="pb-la">BUYER ENQUIRES</span><span id="pb-lb">YOU REPLY</span></div>
+    <div id="pb-other" class="card">
+      <div class="pb-k">{{c.other_k}}</div>
+      <div class="pb-v"><span id="pb-live"></span>{{c.other_v}}</div>
+    </div>
+    <div id="pb-chat" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;Portal · messages<span id="pb-unread" class="tag">Unread</span></div>
+      <div id="pb-l1" class="pb-k pb-lab">{{c.buyer}}</div>
+      <div id="pb-b1" class="pb-bub">{{c.ask}}</div>
+      <div id="pb-b2" class="pb-bub">{{c.reply}}</div>
+      <div id="pb-meta"><span id="pb-time">8:31 AM</span><span id="pb-seen">{{c.seen}}</span></div>
+    </div>
+    <div id="pb-lost" data-layout-allow-overlap>LEAD LOST ✗</div>
+    {{CHROME}}
+    <div id="pb-flash"></div>
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // "A buyer enquires": the conversation opens, the message lands
+      tl.fromTo("#pb-chat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.a - 0.1);
+      tl.fromTo("#pb-l1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.buyer);
+      tl.fromTo("#pb-b1", { opacity: 0, scale: 0.8, transformOrigin: "0% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.enquires);
+      // "at 9 PM": the clock
+      tl.fromTo("#pb-ca", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, W["9"] - 0.08);
+      tl.to("#pb-la", { opacity: 1, duration: 0.25 }, W["9"] + 0.1);
+      // "the next morning": the clock flips
+      tl.to("#pb-ca", { rotationX: 90, opacity: 0, duration: 0.18, ease: "power2.in" }, W.next - 0.12);
+      tl.fromTo("#pb-cb", { rotationX: -90, opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.24, ease: "power2.out" }, W.next + 0.06);
+      tl.set("#pb-la", { opacity: 0 }, W.next); tl.set("#pb-lb", { opacity: 1 }, W.next + 0.1);
+      tl.fromTo("#pb-b2", { opacity: 0, scale: 0.8, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.8)" }, W.morning);
+      tl.fromTo("#pb-meta", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.morning + 0.25);
+      // "another agent is already talking to them"
+      tl.fromTo("#pb-other", { opacity: 0, x: 300, rotation: 5 }, { opacity: 1, x: 0, rotation: 2, duration: 0.45, ease: "expo.out" }, W.another - 0.08);
+      tl.fromTo("#pb-live", { scale: 0.6 }, { scale: 1.25, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, W.broker);
+      tl.fromTo("#pb-seen", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.talking);
+      tl.to("#pb-b2", { opacity: 0.45, duration: 0.3 }, W.talking + 0.1);
+      // fast-cut energy: flash in from the hook, unread alarm, a hard stamp when the lead is gone
+      tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
+      tl.fromTo("#pb-chat", { scale: 1.12 }, { scale: 1, duration: 0.35, ease: "power4.out", immediateRender: false }, W.a - 0.1);
+      tl.fromTo("#pb-unread", { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.18, ease: "back.out(2)" }, W.pm);
+      tl.to("#pb-unread", { opacity: 0.35, duration: 0.2, yoyo: true, repeat: 3, ease: "steps(1)" }, W.pm + 0.25);
+      tl.set("#pb-unread", { opacity: 0 }, W.reply);
+      tl.fromTo("#pb-clock", { x: 0 }, { x: -60, duration: 0.08, yoyo: true, repeat: 1, ease: "power2.inOut" }, W.next - 0.12);
+      tl.fromTo("#pb-flash", { opacity: 0.45 }, { opacity: 0, duration: 0.12, immediateRender: false }, W.next);
+      tl.fromTo("#pb-other", { scale: 1 }, { scale: 1.08, duration: 0.08, yoyo: true, repeat: 3, ease: "none", immediateRender: false }, W.agent ?? W.broker);
+      tl.fromTo("#pb-lost", { opacity: 0, scale: 3, rotation: -8 }, { opacity: 1, scale: 1, rotation: -8, duration: 0.2, ease: "power4.out" }, W.them - 0.05);
+      tl.fromTo("#pb-flash", { opacity: 0.5 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.them);
+      tl.fromTo("#pb-lost", { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.them + 0.15);
+      tl.fromTo("#problem-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>
