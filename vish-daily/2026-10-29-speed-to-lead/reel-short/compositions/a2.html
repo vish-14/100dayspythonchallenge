@@ -63,7 +63,7 @@
   </div>
   <script>
     (() => {
-      const W = {"second": 0.15, "second_end": 0.725, "it": 0.725, "it_end": 0.965, "qualifies": 0.965, "qualifies_end": 1.685, "buyers": 1.685, "buyers_end": 2.485};
+      const W = {"second": 0.15, "second_end": 0.778, "it": 0.778, "it_end": 0.938, "qualifies": 0.938, "qualifies_end": 1.658, "buyers": 1.658, "buyers_end": 2.458};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.second - 0.04);
       tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.qualifies - 0.06);
@@ -78,7 +78,7 @@
       });
       tl.fromTo("#a2-score", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, W.buyers + 0.45);
       tl.to("#a2-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.buyers + 0.45);
-      tl.fromTo("#a2-prog", { scaleX: 0.5760 }, { scaleX: 0.6278, duration: 2.424, ease: "none" }, 0);
+      tl.fromTo("#a2-prog", { scaleX: 0.5669 }, { scaleX: 0.6197, duration: 2.424, ease: "none" }, 0);
       window.__timelines["a2"] = tl;
     })();
   </script>

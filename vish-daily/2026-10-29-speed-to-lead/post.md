@@ -1,12 +1,12 @@
 # ▶ POST THIS: short "Breaking news" version
 
-Files: `reel-short.mp4` (46.8 s, 1080×1920; v6 opening: 7 fast-cut frames, police siren, news sting) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)
+Files: `reel-short.mp4` (45.9 s, 1080×1920; v7 opening: Vish anchors from frame 0, 7 fast-cut frames, police siren, news sting) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)
 Time: **Thu 29 Oct, 8:00 PM IST** (Dubai 6:30 PM · London 2:30 PM · New York 10:30 AM)
 
 ## Caption (short version)
 
 ```
-🚨 Breaking news: aaj raat se, koi property enquiry thandi nahi padegi. Property agents, ye dekho 👇
+🚨 Breaking news: aaj raat se, aapki ek bhi lead haath se nahi jayegi. Property agents, ye dekho 👇
 AI agent for real estate | WhatsApp lead automation | India 🇮🇳
 
 Buyer ne 9 PM pe enquiry ki. Aapne reply kiya agle din subah.
@@ -31,7 +31,7 @@ Built for real estate agents, brokers, builders and channel partners in Bengalur
 #RealEstateIndia #AIAutomation #RealEstateAgent #PropertyDealer #WhatsAppAutomation
 ```
 
-- **Cover:** `cover-short.png` (BREAKING NEWS · AAJ RAAT SE / KOI ENQUIRY / THANDI NAHI! · Vish).
+- **Cover:** `cover-short.png` (BREAKING NEWS · AAJ RAAT SE / EK BHI LEAD / HAATH SE NAHI JAYEGI! · Vish).
 - **Pinned comment, alt text, Story, SuperProfile, first hour:** as in the sections below. The pinned comment and the DM flow are the same.
 - **Alt text:** "Breaking-news style reel: an AI agent for property agents replies to every enquiry instantly, qualifies buyers, alerts you on WhatsApp and books approved site visits, then follows up."
 

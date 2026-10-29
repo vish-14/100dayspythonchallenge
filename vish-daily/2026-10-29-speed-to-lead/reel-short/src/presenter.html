@@ -44,7 +44,8 @@
       const brows = { n: $("pp-brows-neutral"), u: $("pp-brows-up") };
       const head = $("pp-head");
 
-      tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, {{IN}});
+      if ({{IN}} < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
+      else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, {{IN}});
       tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, {{OUT}} - 0.4);
 
       function render() {

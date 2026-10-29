@@ -63,7 +63,7 @@
   </div>
   <script>
     (() => {
-      const W = {"thats": 0.15, "thats_end": 0.288, "why": 0.288, "why_end": 0.608, "i": 0.608, "i_end": 0.848, "built": 0.848, "built_end": 1.328, "an": 1.328, "an_end": 1.568, "ai": 1.568, "ai_end": 2.128, "agent": 2.208, "agent_end": 2.768, "solution": 2.768, "solution_end": 3.168, "for": 3.168, "for_end": 3.408, "property": 3.408, "property_end": 3.888, "agents": 3.888, "agents_end": 4.448, "with": 4.528, "with_end": 4.768, "four": 4.768, "four_end": 5.168, "connected": 5.168, "connected_end": 5.808, "workflows": 5.808, "workflows_end": 6.848};
+      const W = {"thats": 0.15, "thats_end": 0.342, "why": 0.342, "why_end": 0.582, "i": 0.582, "i_end": 0.822, "built": 0.822, "built_end": 1.302, "an": 1.302, "an_end": 1.542, "ai": 1.542, "ai_end": 2.102, "agent": 2.262, "agent_end": 2.742, "solution": 2.742, "solution_end": 3.142, "for": 3.142, "for_end": 3.382, "property": 3.382, "property_end": 3.862, "agents": 3.862, "agents_end": 4.422, "with": 4.582, "with_end": 4.822, "four": 4.822, "four_end": 5.222, "connected": 5.222, "connected_end": 5.782, "workflows": 5.782, "workflows_end": 6.822};
       const tl = gsap.timeline({ paused: true });
       // the panel turns light: the answer to the problem
       tl.fromTo("#solution-bg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
@@ -83,7 +83,7 @@
       tl.fromTo("#so-pill", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.workflows + 0.3);
       // hand-off: node 01 lights up just before "First, respond to enquiries"
       tl.to("#so-n1", { backgroundColor: "#2257EF", scale: 1.12, duration: 0.25, ease: "power2.out" }, 6.761 - 0.45);
-      tl.fromTo("#solution-prog", { scaleX: 0.3494 }, { scaleX: 0.4939, duration: 6.761, ease: "none" }, 0);
+      tl.fromTo("#solution-prog", { scaleX: 0.3359 }, { scaleX: 0.4832, duration: 6.761, ease: "none" }, 0);
       window.__timelines["solution"] = tl;
     })();
   </script>

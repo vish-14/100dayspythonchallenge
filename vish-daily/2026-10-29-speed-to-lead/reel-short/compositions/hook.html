@@ -25,53 +25,54 @@
 .head .ttl{font-size:66px;line-height:.98;padding-top:12px}
 .t-blue .head .num, .on-blue .num{color:var(--paper)}
 
-    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; transform-origin: 50% 36%; }
+    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; overflow: hidden; visibility: hidden; transform-origin: 50% 36%; }
     .big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
-    .stripes { position: absolute; left: -200px; top: 0; width: 1480px; height: 1920px; opacity: .07; background: repeating-linear-gradient(135deg, #F5F5F7 0 26px, transparent 26px 64px); }
+    .stripes { position: absolute; left: -200px; top: 0; width: 1480px; height: 1010px; opacity: .07; background: repeating-linear-gradient(135deg, #F5F5F7 0 26px, transparent 26px 64px); }
     .sub { position: absolute; left: 0; width: 1080px; text-align: center; font-size: 30px; }
     /* F1 BREAKING on red */
-    #f1 { background: #E3262B; } #f1 .big { top: 560px; font-size: 200px; color: #fff; }
-    #f1 .sub { top: 800px; color: rgba(255,255,255,.85); }
+    #f1 { background: #E3262B; } #f1 .big { top: 360px; font-size: 200px; color: #fff; }
+    #f1 .sub { top: 600px; color: rgba(255,255,255,.85); }
     /* F2 NEWS on black */
-    #f2 { background: #0B1016; } #f2 .big { top: 500px; font-size: 330px; color: #E3262B; }
+    #f2 { background: #0B1016; } #f2 .big { top: 300px; font-size: 330px; color: #E3262B; }
     /* F3 strobe alert */
     #f3 { background: #0B1016; }
     #f3-strobe { position: absolute; inset: 0; background: #E3262B; }
-    #f3-alert { position: absolute; left: 340px; top: 400px; width: 400px; height: 400px; border-radius: 50%; background: #fff; color: #E3262B;
-      display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 300px; line-height: 1; box-shadow: 0 0 0 26px rgba(255,255,255,.3); }
-    #f3 .sub { top: 1110px; color: #fff; font-size: 36px; font-weight: 700; }
+    #f3-alert { position: absolute; left: 375px; top: 260px; width: 330px; height: 330px; border-radius: 50%; background: #fff; color: #E3262B;
+      display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 250px; line-height: 1; box-shadow: 0 0 0 26px rgba(255,255,255,.3); }
+    #f3 .sub { top: 680px; color: #fff; font-size: 36px; font-weight: 700; }
     /* F4 TV news desk */
     #f4 { background: #0B1016; }
-    #f4-lights { position: absolute; left: 56px; top: 330px; width: 968px; height: 60px; display: flex; gap: 12px; }
+    #f4-lights { position: absolute; left: 56px; top: 200px; width: 968px; height: 60px; display: flex; gap: 12px; }
     .lt { flex: 1; border-radius: 10px; }
     .lt.r { background: #E3262B; box-shadow: 0 0 34px 8px rgba(227,38,43,.75); }
     .lt.b { background: #2F6BFF; box-shadow: 0 0 34px 8px rgba(47,107,255,.8); }
-    #f4-band { position: absolute; left: 0; top: 470px; width: 1080px; height: 190px; background: #E3262B; display: flex; flex-direction: column; justify-content: center; padding: 0 56px; }
+    #f4-band { position: absolute; left: 0; top: 330px; width: 1080px; height: 190px; background: #E3262B; display: flex; flex-direction: column; justify-content: center; padding: 0 56px; }
     #f4-band b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 104px; color: #fff; line-height: 1; }
     #f4-live { position: absolute; right: 56px; top: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 26px; font-weight: 700; }
     #f4-dot { width: 20px; height: 20px; border-radius: 50%; background: #fff; }
-    #f4-tick { position: absolute; left: 0; top: 660px; width: 1080px; height: 76px; background: var(--paper); overflow: hidden; }
+    #f4-tick { position: absolute; left: 0; top: 520px; width: 1080px; height: 76px; background: var(--paper); overflow: hidden; }
     #f4-tag { position: absolute; left: 0; top: 0; height: 76px; padding: 0 22px; background: var(--blue); color: #fff; display: flex; align-items: center; font-size: 24px; z-index: 2; }
     #f4-run { position: absolute; left: 270px; top: 0; height: 76px; display: flex; align-items: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: var(--ink); }
-    #f4-time { position: absolute; left: 0; width: 1080px; top: 1120px; text-align: center; color: #8A93A3; font-size: 30px; }
+    #f4-time { position: absolute; left: 56px; top: 700px; padding: 14px 22px; background: var(--blue); color: #fff; font-size: 26px; }
     /* F5 AAJ RAAT SE */
-    #f5 { background: #0B1016; } #f5 .big { top: 560px; font-size: 170px; color: var(--paper); }
-    #f5-bar { position: absolute; left: 140px; top: 760px; width: 800px; height: 14px; background: #E3262B; transform-origin: 0 50%; }
+    #f5 { background: #0B1016; } #f5 .big { top: 360px; font-size: 170px; color: var(--paper); }
+    #f5-bar { position: absolute; left: 140px; top: 560px; width: 800px; height: 14px; background: #E3262B; transform-origin: 0 50%; }
     /* F6 KOI ENQUIRY */
-    #f6 { background: #111826; } #f6 .big { top: 540px; font-size: 168px; color: var(--paper); }
-    #f6-note { position: absolute; left: 120px; top: 1110px; width: 840px; height: 130px; background: var(--paper); border-radius: 26px; display: flex; align-items: center; gap: 24px; padding: 0 30px; box-shadow: 0 28px 60px rgba(0,0,0,.5); }
+    #f6 { background: #111826; } #f6 .big { top: 300px; font-size: 168px; color: var(--paper); }
+    #f6-note { position: absolute; left: 120px; top: 560px; width: 840px; height: 130px; background: var(--paper); border-radius: 26px; display: flex; align-items: center; gap: 24px; padding: 0 30px; box-shadow: 0 28px 60px rgba(0,0,0,.5); }
     #f6-ico { width: 80px; height: 80px; border-radius: 20px; background: var(--blue); flex: none; }
     #f6-note b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: var(--ink); }
     #f6-note small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; margin-bottom: 6px; }
     /* F7 THANDI NAHI! */
-    #f7 { background: #0B1016; } #f7 .big { top: 540px; font-size: 168px; }
-    #f7-main { color: #9DB8FF; }
+    #f7 { background: #0B1016; } #f7 .big { font-size: 150px; } #f7 .l1 { top: 280px; color: var(--paper); } #f7 .l2 { top: 450px; }
+    #f7-main { color: #6F95FF; }
     #f7-g1 { color: #FF2A55; mix-blend-mode: screen; opacity: 0; } #f7-g2 { color: #22E5FF; mix-blend-mode: screen; opacity: 0; }
     #f7-frost { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, rgba(157,184,255,.55), rgba(157,184,255,0) 70%); }
-    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1010px; background: #fff; opacity: 0; pointer-events: none; }
   </style>
   <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
     <div id="hook-bg" class="full bg-dark"></div>
+    <div id="stage" style="position:absolute;left:0;top:0;width:1080px;height:1010px;overflow:hidden">
     <div id="f1" class="fr"><div class="stripes"></div><div class="big fit">BREAKING</div><div class="sub mono">PROPERTY AGENTS · ALERT</div></div>
     <div id="f2" class="fr"><div class="stripes"></div><div class="big fit">NEWS</div></div>
     <div id="f3" class="fr"><div id="f3-strobe"></div><div id="f3-alert">!</div><div class="sub mono">ALERT FOR PROPERTY AGENTS</div></div>
@@ -79,11 +80,12 @@
       <div id="f4-lights"><i class="lt r"></i><i class="lt b"></i><i class="lt r"></i><i class="lt b"></i><i class="lt r"></i><i class="lt b"></i><i class="lt r"></i><i class="lt b"></i></div>
       <div id="f4-band"><b>BREAKING<br>NEWS</b><span id="f4-live" class="mono"><span id="f4-dot"></span>LIVE</span></div>
       <div id="f4-tick"><div id="f4-tag" class="mono">PROPERTY AGENTS</div><div id="f4-run" data-layout-allow-overlap>AI agent replies to every enquiry · qualifies buyers · books site visits you approve · follows up &nbsp;·&nbsp; AI agent replies to every enquiry · qualifies buyers · books site visits you approve · follows up</div></div>
-      <div id="f4-time" class="mono">@VISH.WORKFLOWS · AI AUTOMATION</div></div>
+      <div id="f4-time" class="mono">VISH · AI AUTOMATION DESK</div></div>
     <div id="f5" class="fr"><div class="stripes"></div><div class="big fit">AAJ RAAT SE</div><div id="f5-bar"></div></div>
-    <div id="f6" class="fr"><div class="stripes"></div><div class="big fit">KOI ENQUIRY</div>
-      <div id="f6-note"><div id="f6-ico"></div><div><small>NEW ENQUIRY · 9:04 PM</small><b>2BHK still available?</b></div></div></div>
-    <div id="f7" class="fr"><div id="f7-frost"></div><div id="f7-g1" class="big fit" data-layout-allow-overlap>THANDI NAHI!</div><div id="f7-g2" class="big fit" data-layout-allow-overlap>THANDI NAHI!</div><div id="f7-main" class="big fit" data-layout-allow-overlap>THANDI NAHI!</div></div>
+    <div id="f6" class="fr"><div class="stripes"></div><div class="big fit">EK BHI LEAD</div>
+      <div id="f6-note"><div id="f6-ico"></div><div><small>NEW LEAD · 9:04 PM</small><b>2BHK site visit enquiry</b></div></div></div>
+    <div id="f7" class="fr"><div id="f7-frost"></div><div class="big fit l1" data-layout-allow-overlap>HAATH SE</div><div id="f7-g1" class="big fit l2" data-layout-allow-overlap>NAHI JAYEGI!</div><div id="f7-g2" class="big fit l2" data-layout-allow-overlap>NAHI JAYEGI!</div><div id="f7-main" class="big fit l2" data-layout-allow-overlap>NAHI JAYEGI!</div></div>
+    </div>
     <div id="fl"></div>
   </div>
   <script>
@@ -95,8 +97,8 @@
         el.textContent = ""; el.appendChild(span);
         while (span.getBoundingClientRect().width > 980 && fs > 40) { fs -= 4; el.style.fontSize = fs + "px"; }
       });
-      const W = {"breaking": 1.4, "breaking_end": 1.84, "news": 1.92, "news_end": 2.56, "aaj": 2.56, "aaj_end": 2.88, "raat": 3.04, "raat_end": 3.76, "se": 3.76, "se_end": 4.16, "aapki": 4.32, "aapki_end": 4.88, "koi": 4.32, "koi_end": 4.88, "bhi": 4.32, "bhi_end": 4.88, "property": 5.04, "property_end": 5.36, "enquiry": 5.52, "enquiry_end": 6.0, "thandi": 6.08, "thandi_end": 6.72, "nahi": 6.72, "nahi_end": 6.82, "padegi": 6.8, "padegi_end": 7.68};
-      const D = 7.563;
+      const W = {"breaking": 1.4, "breaking_end": 1.92, "news": 1.92, "news_end": 2.48, "aaj": 2.48, "aaj_end": 2.8, "raat": 2.96, "raat_end": 3.68, "se": 2.96, "se_end": 3.68, "aapki": 3.68, "aapki_end": 4.24, "ek": 4.24, "ek_end": 4.56, "bhi": 4.24, "bhi_end": 4.56, "lead": 4.72, "lead_end": 4.96, "haath": 5.04, "haath_end": 5.28, "se_2": 5.36, "se_2_end": 5.44, "nahi": 5.52, "nahi_end": 5.76, "jayegi": 5.92, "jayegi_end": 6.72};
+      const D = 6.629;
       const tl = gsap.timeline({ paused: true });
       const F = ["#f1", "#f2", "#f3", "#f4", "#f5", "#f6", "#f7"];
       const flash = (t, o = 0.85, d = 0.14) => tl.fromTo("#fl", { opacity: o }, { opacity: 0, duration: d, ease: "power2.out", immediateRender: false }, t);
@@ -115,8 +117,9 @@
         if (sh) shake(F[i], t + 0.08, sh);
       };
       // the three sting hits: 0.00 BREAKING, 0.35 NEWS, 0.70 ALERT (siren)
-      cut(0, 0, 1.35, 1, 18);
-      tl.fromTo("#f1 .big", { scale: 1.6 }, { scale: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, 0);
+      cut(0, 0, 1.0, 0, 0);  // frame 0 is the thumbnail people see before swiping: fully readable, no flash
+      shake("#f1", 0.05, 18);
+      tl.fromTo("#f1 .big", { scale: 1 }, { scale: 1.12, duration: 0.08, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 0.04);
       cut(1, 0.35, 1.45, 0.9, 22);
       cut(2, 0.70, 1.2, 0.9, 18);
       for (let k = 0; 0.70 + k * 0.1 < W.breaking; k++) {
@@ -134,13 +137,13 @@
       // fast cuts on the headline words
       cut(4, W.aaj - 0.05, 1.3, 0.5, 14);
       tl.fromTo("#f5-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power3.out", immediateRender: false }, W.aaj + 0.1);
-      cut(5, W.koi - 0.05, 1.3, 0.5, 14);
-      tl.fromTo("#f6-note", { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, W.property - 0.05);
-      tl.fromTo("#f6-note", { rotation: 0 }, { rotation: 2, duration: 0.05, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.enquiry);
-      cut(6, W.thandi - 0.05, 1.5, 0.75, 26);
-      [["#f7-g1", -16], ["#f7-g2", 16]].forEach(([g, dx]) => tl.fromTo(g, { opacity: 0.9, x: dx }, { opacity: 0, x: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, W.thandi + 0.05));
-      tl.fromTo("#f7-frost", { opacity: 1 }, { opacity: 0.35, duration: 0.7, ease: "power2.out", immediateRender: false }, W.thandi);
-      tl.fromTo("#f7-main", { scale: 1 }, { scale: 1.07, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.nahi);
+      cut(5, W.ek - 0.05, 1.3, 0.5, 14);
+      tl.fromTo("#f6-note", { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, W.lead - 0.05);
+      tl.fromTo("#f6-note", { rotation: 0 }, { rotation: 2, duration: 0.05, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.lead + 0.35);
+      cut(6, W.haath - 0.05, 1.5, 0.75, 26);
+      [["#f7-g1", -16], ["#f7-g2", 16]].forEach(([g, dx]) => tl.fromTo(g, { opacity: 0.9, x: dx }, { opacity: 0, x: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, W.nahi + 0.05));
+      tl.fromTo("#f7-frost", { opacity: 1 }, { opacity: 0.35, duration: 0.7, ease: "power2.out", immediateRender: false }, W.haath);
+      tl.fromTo("#f7-main", { scale: 1 }, { scale: 1.07, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.jayegi);
       gsap.utils.toArray("#root .stripes").forEach((s) => tl.fromTo(s, { x: 0 }, { x: -180, duration: D, ease: "none" }, 0));
       // flash out into the problem
       tl.fromTo("#f7", { scale: 1 }, { scale: 1.14, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);

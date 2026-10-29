@@ -4,7 +4,7 @@
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "duration": 46.8,
+    "duration": 45.9,
     "output": "reel.mp4"
   },
   "brand": {
@@ -51,7 +51,7 @@
       "chapter": "00 / BREAKING",
       "counter": "00 / 04",
       "theme": "dark",
-      "layout": "takeover"
+      "layout": "split"
     },
     {
       "id": "problem",
@@ -108,15 +108,17 @@
       "band": "BREAKING NEWS",
       "live": "LIVE",
       "l1": "AAJ RAAT SE",
-      "l2": "KOI ENQUIRY",
+      "l2": "EK BHI LEAD",
       "l3": "THANDI NAHI!",
       "tick_tag": "PROPERTY AGENTS",
       "ticker": "AI agent replies to every enquiry · qualifies buyers · books site visits you approve · follows up",
       "alert": "ALERT FOR PROPERTY AGENTS",
       "f1sub": "PROPERTY AGENTS · ALERT",
-      "f4sub": "@VISH.WORKFLOWS · AI AUTOMATION",
-      "note_k": "NEW ENQUIRY · 9:04 PM",
-      "note_v": "2BHK still available?"
+      "f4sub": "VISH · AI AUTOMATION DESK",
+      "note_k": "NEW LEAD · 9:04 PM",
+      "note_v": "2BHK site visit enquiry",
+      "l3a": "HAATH SE",
+      "l3b": "NAHI JAYEGI!"
     },
     "problem": {
       "clock_a": "9:04 PM",
@@ -487,25 +489,25 @@
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "hook:koi",
+      "word": "hook:ek",
       "offset": -0.05,
       "volume": 0.5
     },
     {
       "file": "notification.mp3",
-      "word": "hook:property",
+      "word": "hook:lead",
       "offset": -0.05,
       "volume": 0.3
     },
     {
       "file": "impact-bass-1.mp3",
-      "word": "hook:thandi",
+      "word": "hook:haath",
       "offset": -0.05,
       "volume": 0.6
     },
     {
       "file": "whoosh.mp3",
-      "word": "hook:padegi.",
+      "word": "hook:jayegi.",
       "offset": 0.35,
       "volume": 0.4
     }

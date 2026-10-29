@@ -1,104 +1,108 @@
 1
-00:00:01,340 --> 00:00:02,560
+00:00:01,340 --> 00:00:02,480
 Breaking news!
 
 2
-00:00:02,570 --> 00:00:04,260
+00:00:02,490 --> 00:00:03,680
 Aaj raat se,
 
 3
-00:00:04,260 --> 00:00:04,980
-aapki koi bhi
+00:00:03,690 --> 00:00:04,660
+aapki ek bhi
 
 4
-00:00:04,980 --> 00:00:07,680
-property enquiry thandi nahi padegi.
+00:00:04,660 --> 00:00:05,860
+lead haath se nahi
 
 5
-00:00:07,690 --> 00:00:09,520
-A buyer enquires at 9
+00:00:05,860 --> 00:00:06,720
+jayegi.
 
 6
-00:00:09,530 --> 00:00:10,340
-PM.
+00:00:06,730 --> 00:00:08,560
+A buyer enquires at 9
 
 7
-00:00:10,340 --> 00:00:12,240
-You reply the next morning.
+00:00:08,570 --> 00:00:09,460
+PM.
 
 8
-00:00:12,250 --> 00:00:13,120
-By then,
+00:00:09,460 --> 00:00:11,360
+You reply the next morning.
 
 9
-00:00:13,130 --> 00:00:15,280
-another broker is already talking
+00:00:11,370 --> 00:00:12,240
+By then,
 
 10
-00:00:15,290 --> 00:00:16,442
-to them.
+00:00:12,250 --> 00:00:14,400
+another broker is already talking
 
 11
-00:00:16,442 --> 00:00:17,920
-That's why I built an
+00:00:14,410 --> 00:00:15,508
+to them.
 
 12
-00:00:17,930 --> 00:00:20,240
-AI agent solution for property
+00:00:15,508 --> 00:00:16,960
+That's why I built an
 
 13
-00:00:20,250 --> 00:00:23,203
-agents, with four connected workflows.
+00:00:16,970 --> 00:00:19,280
+AI agent solution for property
 
 14
-00:00:23,210 --> 00:00:25,200
-First, it replies to every
+00:00:19,290 --> 00:00:22,269
+agents, with four connected workflows.
 
 15
-00:00:25,210 --> 00:00:27,045
-enquiry, instantly.
+00:00:22,269 --> 00:00:24,240
+First, it replies to every
 
 16
-00:00:27,050 --> 00:00:29,469
-Second, it qualifies buyers.
+00:00:24,250 --> 00:00:26,160
+enquiry, instantly.
 
 17
-00:00:29,469 --> 00:00:30,960
-Third, it alerts you on
+00:00:26,170 --> 00:00:28,536
+Second, it qualifies buyers.
 
 18
-00:00:30,970 --> 00:00:32,800
-WhatsApp, and books the site
+00:00:28,536 --> 00:00:30,080
+Third, it alerts you on
 
 19
-00:00:32,810 --> 00:00:34,513
-visit you approve.
+00:00:30,090 --> 00:00:31,840
+WhatsApp, and books the site
 
 20
-00:00:34,513 --> 00:00:36,080
-Fourth, it follows up,
+00:00:31,850 --> 00:00:33,580
+visit you approve.
 
 21
-00:00:36,090 --> 00:00:37,749
-until they're ready.
+00:00:33,580 --> 00:00:35,120
+Fourth, it follows up,
 
 22
-00:00:37,749 --> 00:00:39,120
-Want this workflow built
+00:00:35,130 --> 00:00:36,816
+until they're ready.
 
 23
-00:00:39,130 --> 00:00:40,160
-for your business?
+00:00:36,816 --> 00:00:38,240
+Want this workflow built
 
 24
-00:00:40,170 --> 00:00:42,560
-Follow me and comment "workflow",
+00:00:38,250 --> 00:00:39,200
+for your business?
 
 25
-00:00:42,570 --> 00:00:43,360
-and I'll send you
+00:00:39,210 --> 00:00:41,600
+Follow me and comment "workflow",
 
 26
-00:00:43,370 --> 00:00:45,340
+00:00:41,610 --> 00:00:42,400
+and I'll send you
+
+27
+00:00:42,410 --> 00:00:44,380
 the details in your DMs.
 
