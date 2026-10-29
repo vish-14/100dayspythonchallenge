@@ -1,0 +1,66 @@
+[
+ {
+  "id": "hook",
+  "label": "00 / BREAKING",
+  "say": "ब्रेकिंग न्यूज़! आज रात से, आपकी एक भी लीड, हाथ से नहीं जाएगा!",
+  "lang": "hi",
+  "speed": 0.95,
+  "text": "Breaking news! Aaj raat se, aapki ek bhi lead, haath se nahi jayega!"
+ },
+ {
+  "id": "problem",
+  "label": "00 / THE PROBLEM",
+  "say": "रात नौ बजे बायर ने इंक्वायरी भेजी। आपने रिप्लाई किया अगली सुबह। तब तक दूसरा ब्रोकर उससे बात कर चुका था।",
+  "text": "Raat 9 baje buyer ne enquiry bheji. Aapne reply kiya agli subah. Tab tak doosra broker usse baat kar chuka tha.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "solution",
+  "label": "00 / THE SOLUTION",
+  "say": "इसलिए मैंने प्रॉपर्टी एजेंट्स के लिए एक ए आई एजेंट बनाया है, चार कनेक्टेड वर्कफ़्लोज़ के साथ।",
+  "text": "Isliye maine property agents ke liye ek AI agent banaya hai, chaar connected workflows ke saath.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "a1",
+  "label": "01 / REPLY",
+  "say": "पहला: हर इंक्वायरी का रिप्लाई, तुरंत।",
+  "text": "Pehla: har enquiry ka reply, turant.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "a2",
+  "label": "02 / QUALIFY",
+  "say": "दूसरा: बजट, लोकेशन और होम लोन पूछ के, बायर को क्वालिफ़ाई करता है।",
+  "text": "Doosra: budget, location aur home loan poochh ke, buyer ko qualify karta hai.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "a3",
+  "label": "03 / ROUTE + BOOK",
+  "say": "तीसरा: जब बायर आपके क्राइटेरिया मैच करे, एजेंट आपको व्हाट्सऐप पे अलर्ट करता है, और आपके अप्रूव करने पे साइट विज़िट बुक करता है।",
+  "text": "Teesra: jab buyer aapke criteria match kare, agent aapko WhatsApp pe alert karta hai, aur aapke approve karne pe site visit book karta hai.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "a4",
+  "label": "04 / FOLLOW UP",
+  "say": "चौथा: बायर रेडी होने तक, फ़ॉलो अप करता रहता है।",
+  "text": "Chautha: buyer ready hone tak, follow up karta rehta hai.",
+  "lang": "hi",
+  "speed": 1.05
+ },
+ {
+  "id": "cta",
+  "label": "06 / YOUR TURN",
+  "say": "ये वर्कफ़्लो आपके बिज़नेस के लिए चाहिए? मुझे फ़ॉलो करो, और कमेंट करो, वर्कफ़्लो। डिटेल्स मैं आपको डी एम में भेज दूँगा।",
+  "text": "Ye workflow aapke business ke liye chahiye? Mujhe follow karo, aur comment karo \"workflow\". Details main aapko DM mein bhej dunga.",
+  "speed": 1.05,
+  "lang": "hi"
+ }
+]

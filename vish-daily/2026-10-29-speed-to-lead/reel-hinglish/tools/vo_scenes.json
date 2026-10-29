@@ -1,0 +1,42 @@
+[
+ {
+  "id": "hook",
+  "vo_start": 1.4,
+  "vo_end": 6.611
+ },
+ {
+  "id": "problem",
+  "vo_start": 7.511,
+  "vo_end": 16.082
+ },
+ {
+  "id": "solution",
+  "vo_start": 16.982,
+  "vo_end": 24.087
+ },
+ {
+  "id": "a1",
+  "vo_start": 24.487,
+  "vo_end": 27.158
+ },
+ {
+  "id": "a2",
+  "vo_start": 27.458,
+  "vo_end": 32.851
+ },
+ {
+  "id": "a3",
+  "vo_start": 33.151,
+  "vo_end": 43.457
+ },
+ {
+  "id": "a4",
+  "vo_start": 44.107,
+  "vo_end": 47.865
+ },
+ {
+  "id": "cta",
+  "vo_start": 48.315,
+  "vo_end": 57.207
+ }
+]

@@ -1,0 +1,66 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #solution-bg { background: var(--paper); }
+    #solution-chrome-top, #solution-chrome-bot { color: #4E5666; }
+    #solution-chrome-bot .prog { background: #D5D9E1; }
+    #solution-chrome-bot .prog i { background: var(--blue); }
+    #so-kick { position: absolute; left: 56px; top: 262px; font-size: 24px; color: var(--blue); }
+    #so-h1m { position: absolute; left: 50px; top: 306px; width: 980px; height: 118px; }
+    #so-h1 { font-size: 112px; color: var(--ink); white-space: nowrap; }
+    #so-h1 b { color: var(--blue); font-weight: 900; }
+    #so-h2 { position: absolute; left: 58px; top: 440px; font-size: 26px; color: #3A4252; }
+    .so-line { position: absolute; top: 638px; height: 6px; background: #D5D9E1; }
+    .so-fill { position: absolute; top: 638px; height: 6px; background: var(--blue); transform-origin: 0 50%; }
+    .so-node { position: absolute; top: 586px; width: 110px; height: 110px; border-radius: 50%; background: var(--ink); color: var(--paper);
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; display: flex; align-items: center; justify-content: center; }
+    .so-lab { position: absolute; top: 718px; width: 240px; text-align: center; font-size: 22px; color: var(--ink); letter-spacing: .12em; font-weight: 700; }
+    #so-pill { position: absolute; left: 0; width: 1080px; top: 800px; text-align: center; }
+    #so-pill .tag { font-size: 24px; padding: 12px 20px; }
+  </style>
+  <div id="root" data-composition-id="solution" data-width="1080" data-height="1920">
+    <div id="solution-bg" class="panel"></div>
+    <div id="so-kick" class="mono">{{c.kicker}}</div>
+    <div id="so-h1m"><div id="so-h1" class="disp">{{c.h1a}} <b>{{c.h1b}}</b></div></div>
+    <div id="so-h2" class="mono">{{c.h2}}</div>
+    <div id="so-l1" class="so-line" style="left:217px;width:132px"></div><div id="so-f1" class="so-fill" style="left:217px;width:132px"></div>
+    <div id="so-l2" class="so-line" style="left:459px;width:132px"></div><div id="so-f2" class="so-fill" style="left:459px;width:132px"></div>
+    <div id="so-l3" class="so-line" style="left:701px;width:132px"></div><div id="so-f3" class="so-fill" style="left:701px;width:132px"></div>
+    <div id="so-n1" class="so-node" style="left:107px">01</div>
+    <div id="so-n2" class="so-node" style="left:349px">02</div>
+    <div id="so-n3" class="so-node" style="left:591px">03</div>
+    <div id="so-n4" class="so-node" style="left:833px">04</div>
+    <div id="so-b1" class="so-lab mono" style="left:42px">{{c.nodes.0}}</div>
+    <div id="so-b2" class="so-lab mono" style="left:284px">{{c.nodes.1}}</div>
+    <div id="so-b3" class="so-lab mono" style="left:526px">{{c.nodes.2}}</div>
+    <div id="so-b4" class="so-lab mono" style="left:768px">{{c.nodes.3}}</div>
+    <div id="so-pill"><span class="tag blue">{{c.pill}}</span></div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // the panel turns light: the answer to the problem
+      tl.fromTo("#solution-bg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
+      tl.fromTo("#so-kick", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, W.isliye);
+      // "an AI agent solution": the headline rises on the words
+      tl.fromTo("#so-h1", { opacity: 0, y: 46 }, { opacity: 1, y: 0, duration: 0.4, ease: "power4.out" }, W.ai - 0.1);
+      tl.fromTo("#so-h2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, W.property - 0.05);
+      // "four connected workflows": four nodes, then the links fill, then the labels
+      [1, 2, 3, 4].forEach((i) => {
+        tl.fromTo(`#so-n${i}`, { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }, W.chaar - 0.05 + (i - 1) * 0.09);
+      });
+      tl.fromTo(["#so-l1", "#so-l2", "#so-l3"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.chaar + 0.2);
+      [1, 2, 3].forEach((i) => {
+        tl.fromTo(`#so-f${i}`, { scaleX: 0 }, { scaleX: 1, duration: 0.22, ease: "power2.inOut" }, W.connected + (i - 1) * 0.16);
+      });
+      tl.fromTo(["#so-b1", "#so-b2", "#so-b3", "#so-b4"], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.28, stagger: 0.07, ease: "power2.out" }, W.workflows - 0.1);
+      tl.fromTo("#so-pill", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.workflows + 0.3);
+      // hand-off: node 01 lights up just before "First, respond to enquiries"
+      tl.to("#so-n1", { backgroundColor: "#2257EF", scale: 1.12, duration: 0.25, ease: "power2.out" }, {{DUR}} - 0.45);
+      tl.fromTo("#solution-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["solution"] = tl;
+    })();
+  </script>
+</template>

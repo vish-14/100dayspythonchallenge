@@ -1,0 +1,1867 @@
+{
+ "fps": 30,
+ "vo_duration": 57.207,
+ "scenes": [
+  {
+   "id": "hook",
+   "vo_start": 1.4,
+   "vo_end": 6.611
+  },
+  {
+   "id": "problem",
+   "vo_start": 7.511,
+   "vo_end": 16.082
+  },
+  {
+   "id": "solution",
+   "vo_start": 16.982,
+   "vo_end": 24.087
+  },
+  {
+   "id": "a1",
+   "vo_start": 24.487,
+   "vo_end": 27.158
+  },
+  {
+   "id": "a2",
+   "vo_start": 27.458,
+   "vo_end": 32.851
+  },
+  {
+   "id": "a3",
+   "vo_start": 33.151,
+   "vo_end": 43.457
+  },
+  {
+   "id": "a4",
+   "vo_start": 44.107,
+   "vo_end": 47.865
+  },
+  {
+   "id": "cta",
+   "vo_start": 48.315,
+   "vo_end": 57.207
+  }
+ ],
+ "words": [
+  {
+   "text": "Breaking",
+   "scene": "hook",
+   "start": 1.4,
+   "end": 1.92
+  },
+  {
+   "text": "news!",
+   "scene": "hook",
+   "start": 1.92,
+   "end": 2.56
+  },
+  {
+   "text": "Aaj",
+   "scene": "hook",
+   "start": 2.56,
+   "end": 2.88
+  },
+  {
+   "text": "raat",
+   "scene": "hook",
+   "start": 3.04,
+   "end": 3.6
+  },
+  {
+   "text": "se,",
+   "scene": "hook",
+   "start": 3.04,
+   "end": 3.6
+  },
+  {
+   "text": "aapki",
+   "scene": "hook",
+   "start": 3.76,
+   "end": 4.16
+  },
+  {
+   "text": "ek",
+   "scene": "hook",
+   "start": 4.24,
+   "end": 4.4
+  },
+  {
+   "text": "bhi",
+   "scene": "hook",
+   "start": 4.56,
+   "end": 4.64
+  },
+  {
+   "text": "lead,",
+   "scene": "hook",
+   "start": 4.8,
+   "end": 5.2
+  },
+  {
+   "text": "haath",
+   "scene": "hook",
+   "start": 5.2,
+   "end": 5.68
+  },
+  {
+   "text": "se",
+   "scene": "hook",
+   "start": 5.68,
+   "end": 5.82
+  },
+  {
+   "text": "nahi",
+   "scene": "hook",
+   "start": 5.84,
+   "end": 6
+  },
+  {
+   "text": "jayega!",
+   "scene": "hook",
+   "start": 6.16,
+   "end": 7.28
+  },
+  {
+   "text": "Raat",
+   "scene": "problem",
+   "start": 7.511,
+   "end": 7.76
+  },
+  {
+   "text": "9",
+   "scene": "problem",
+   "start": 7.76,
+   "end": 7.84
+  },
+  {
+   "text": "baje",
+   "scene": "problem",
+   "start": 8,
+   "end": 8.16
+  },
+  {
+   "text": "buyer",
+   "scene": "problem",
+   "start": 8.48,
+   "end": 8.72
+  },
+  {
+   "text": "ne",
+   "scene": "problem",
+   "start": 8.88,
+   "end": 9.04
+  },
+  {
+   "text": "enquiry",
+   "scene": "problem",
+   "start": 9.28,
+   "end": 9.84
+  },
+  {
+   "text": "bheji.",
+   "scene": "problem",
+   "start": 9.92,
+   "end": 10.32
+  },
+  {
+   "text": "Aapne",
+   "scene": "problem",
+   "start": 10.48,
+   "end": 10.96
+  },
+  {
+   "text": "reply",
+   "scene": "problem",
+   "start": 11.12,
+   "end": 11.44
+  },
+  {
+   "text": "kiya",
+   "scene": "problem",
+   "start": 11.6,
+   "end": 11.76
+  },
+  {
+   "text": "agli",
+   "scene": "problem",
+   "start": 12.08,
+   "end": 12.48
+  },
+  {
+   "text": "subah.",
+   "scene": "problem",
+   "start": 12.48,
+   "end": 13.28
+  },
+  {
+   "text": "Tab",
+   "scene": "problem",
+   "start": 12.48,
+   "end": 13.28
+  },
+  {
+   "text": "tak",
+   "scene": "problem",
+   "start": 12.48,
+   "end": 13.28
+  },
+  {
+   "text": "doosra",
+   "scene": "problem",
+   "start": 13.52,
+   "end": 14
+  },
+  {
+   "text": "broker",
+   "scene": "problem",
+   "start": 14.08,
+   "end": 14.24
+  },
+  {
+   "text": "usse",
+   "scene": "problem",
+   "start": 14.52,
+   "end": 14.6
+  },
+  {
+   "text": "baat",
+   "scene": "problem",
+   "start": 14.68,
+   "end": 14.92
+  },
+  {
+   "text": "kar",
+   "scene": "problem",
+   "start": 15.28,
+   "end": 15.44
+  },
+  {
+   "text": "chuka",
+   "scene": "problem",
+   "start": 15.52,
+   "end": 16.72
+  },
+  {
+   "text": "tha.",
+   "scene": "problem",
+   "start": 16.8,
+   "end": 17.28
+  },
+  {
+   "text": "Isliye",
+   "scene": "solution",
+   "start": 17.28,
+   "end": 17.44
+  },
+  {
+   "text": "maine",
+   "scene": "solution",
+   "start": 17.44,
+   "end": 17.52
+  },
+  {
+   "text": "property",
+   "scene": "solution",
+   "start": 17.92,
+   "end": 18.24
+  },
+  {
+   "text": "agents",
+   "scene": "solution",
+   "start": 18.48,
+   "end": 18.8
+  },
+  {
+   "text": "ke",
+   "scene": "solution",
+   "start": 18.96,
+   "end": 19.68
+  },
+  {
+   "text": "liye",
+   "scene": "solution",
+   "start": 19.68,
+   "end": 19.76
+  },
+  {
+   "text": "ek",
+   "scene": "solution",
+   "start": 20.24,
+   "end": 20.4
+  },
+  {
+   "text": "AI",
+   "scene": "solution",
+   "start": 20.24,
+   "end": 20.4
+  },
+  {
+   "text": "agent",
+   "scene": "solution",
+   "start": 20.64,
+   "end": 20.96
+  },
+  {
+   "text": "banaya",
+   "scene": "solution",
+   "start": 20.96,
+   "end": 21.36
+  },
+  {
+   "text": "hai,",
+   "scene": "solution",
+   "start": 21.52,
+   "end": 21.6
+  },
+  {
+   "text": "chaar",
+   "scene": "solution",
+   "start": 21.92,
+   "end": 22
+  },
+  {
+   "text": "connected",
+   "scene": "solution",
+   "start": 22.32,
+   "end": 22.8
+  },
+  {
+   "text": "workflows",
+   "scene": "solution",
+   "start": 22.88,
+   "end": 22.96
+  },
+  {
+   "text": "ke",
+   "scene": "solution",
+   "start": 23.12,
+   "end": 23.2
+  },
+  {
+   "text": "saath.",
+   "scene": "solution",
+   "start": 23.2,
+   "end": 23.52
+  },
+  {
+   "text": "Pehla:",
+   "scene": "a1",
+   "start": 24.487,
+   "end": 24.607
+  },
+  {
+   "text": "har",
+   "scene": "a1",
+   "start": 24.607,
+   "end": 24.727
+  },
+  {
+   "text": "enquiry",
+   "scene": "a1",
+   "start": 25.24,
+   "end": 25.72
+  },
+  {
+   "text": "ka",
+   "scene": "a1",
+   "start": 25.8,
+   "end": 25.88
+  },
+  {
+   "text": "reply,",
+   "scene": "a1",
+   "start": 26.04,
+   "end": 26.44
+  },
+  {
+   "text": "turant.",
+   "scene": "a1",
+   "start": 26.6,
+   "end": 27.24
+  },
+  {
+   "text": "Doosra:",
+   "scene": "a2",
+   "start": 27.458,
+   "end": 28.16
+  },
+  {
+   "text": "budget,",
+   "scene": "a2",
+   "start": 28.16,
+   "end": 28.8
+  },
+  {
+   "text": "location",
+   "scene": "a2",
+   "start": 28.8,
+   "end": 29.28
+  },
+  {
+   "text": "aur",
+   "scene": "a2",
+   "start": 29.36,
+   "end": 29.6
+  },
+  {
+   "text": "home",
+   "scene": "a2",
+   "start": 29.6,
+   "end": 29.84
+  },
+  {
+   "text": "loan",
+   "scene": "a2",
+   "start": 29.84,
+   "end": 30.08
+  },
+  {
+   "text": "poochh",
+   "scene": "a2",
+   "start": 30.24,
+   "end": 30.48
+  },
+  {
+   "text": "ke,",
+   "scene": "a2",
+   "start": 30.56,
+   "end": 30.96
+  },
+  {
+   "text": "buyer",
+   "scene": "a2",
+   "start": 30.96,
+   "end": 31.2
+  },
+  {
+   "text": "ko",
+   "scene": "a2",
+   "start": 31.36,
+   "end": 31.52
+  },
+  {
+   "text": "qualify",
+   "scene": "a2",
+   "start": 31.68,
+   "end": 32.16
+  },
+  {
+   "text": "karta",
+   "scene": "a2",
+   "start": 32.24,
+   "end": 32.56
+  },
+  {
+   "text": "hai.",
+   "scene": "a2",
+   "start": 32.64,
+   "end": 32.72
+  },
+  {
+   "text": "Teesra:",
+   "scene": "a3",
+   "start": 33.151,
+   "end": 33.52
+  },
+  {
+   "text": "jab",
+   "scene": "a3",
+   "start": 33.68,
+   "end": 33.92
+  },
+  {
+   "text": "buyer",
+   "scene": "a3",
+   "start": 34,
+   "end": 34.24
+  },
+  {
+   "text": "aapke",
+   "scene": "a3",
+   "start": 34.48,
+   "end": 34.88
+  },
+  {
+   "text": "criteria",
+   "scene": "a3",
+   "start": 35.04,
+   "end": 35.6
+  },
+  {
+   "text": "match",
+   "scene": "a3",
+   "start": 35.6,
+   "end": 36
+  },
+  {
+   "text": "kare,",
+   "scene": "a3",
+   "start": 36,
+   "end": 36.32
+  },
+  {
+   "text": "agent",
+   "scene": "a3",
+   "start": 36.56,
+   "end": 36.88
+  },
+  {
+   "text": "aapko",
+   "scene": "a3",
+   "start": 37.04,
+   "end": 37.52
+  },
+  {
+   "text": "WhatsApp",
+   "scene": "a3",
+   "start": 37.6,
+   "end": 38.08
+  },
+  {
+   "text": "pe",
+   "scene": "a3",
+   "start": 38.24,
+   "end": 38.32
+  },
+  {
+   "text": "alert",
+   "scene": "a3",
+   "start": 38.48,
+   "end": 38.8
+  },
+  {
+   "text": "karta",
+   "scene": "a3",
+   "start": 38.88,
+   "end": 39.2
+  },
+  {
+   "text": "hai,",
+   "scene": "a3",
+   "start": 39.28,
+   "end": 39.36
+  },
+  {
+   "text": "aur",
+   "scene": "a3",
+   "start": 39.68,
+   "end": 39.76
+  },
+  {
+   "text": "aapke",
+   "scene": "a3",
+   "start": 40,
+   "end": 40.48
+  },
+  {
+   "text": "approve",
+   "scene": "a3",
+   "start": 40.72,
+   "end": 41.12
+  },
+  {
+   "text": "karne",
+   "scene": "a3",
+   "start": 41.12,
+   "end": 41.44
+  },
+  {
+   "text": "pe",
+   "scene": "a3",
+   "start": 41.52,
+   "end": 41.6
+  },
+  {
+   "text": "site",
+   "scene": "a3",
+   "start": 41.84,
+   "end": 42.16
+  },
+  {
+   "text": "visit",
+   "scene": "a3",
+   "start": 42.16,
+   "end": 42.4
+  },
+  {
+   "text": "book",
+   "scene": "a3",
+   "start": 42.56,
+   "end": 42.8
+  },
+  {
+   "text": "karta",
+   "scene": "a3",
+   "start": 42.88,
+   "end": 43.12
+  },
+  {
+   "text": "hai.",
+   "scene": "a3",
+   "start": 43.28,
+   "end": 44.4
+  },
+  {
+   "text": "Chautha:",
+   "scene": "a4",
+   "start": 44.107,
+   "end": 44.4
+  },
+  {
+   "text": "buyer",
+   "scene": "a4",
+   "start": 44.64,
+   "end": 44.88
+  },
+  {
+   "text": "ready",
+   "scene": "a4",
+   "start": 45.04,
+   "end": 45.52
+  },
+  {
+   "text": "hone",
+   "scene": "a4",
+   "start": 45.52,
+   "end": 46
+  },
+  {
+   "text": "tak,",
+   "scene": "a4",
+   "start": 45.52,
+   "end": 46
+  },
+  {
+   "text": "follow",
+   "scene": "a4",
+   "start": 46.32,
+   "end": 46.64
+  },
+  {
+   "text": "up",
+   "scene": "a4",
+   "start": 46.64,
+   "end": 46.72
+  },
+  {
+   "text": "karta",
+   "scene": "a4",
+   "start": 46.88,
+   "end": 47.12
+  },
+  {
+   "text": "rehta",
+   "scene": "a4",
+   "start": 47.2,
+   "end": 47.52
+  },
+  {
+   "text": "hai.",
+   "scene": "a4",
+   "start": 47.68,
+   "end": 47.76
+  },
+  {
+   "text": "Ye",
+   "scene": "cta",
+   "start": 48.4,
+   "end": 48.72
+  },
+  {
+   "text": "workflow",
+   "scene": "cta",
+   "start": 48.8,
+   "end": 49.04
+  },
+  {
+   "text": "aapke",
+   "scene": "cta",
+   "start": 49.2,
+   "end": 49.68
+  },
+  {
+   "text": "business",
+   "scene": "cta",
+   "start": 49.68,
+   "end": 49.92
+  },
+  {
+   "text": "ke",
+   "scene": "cta",
+   "start": 50,
+   "end": 50.24
+  },
+  {
+   "text": "liye",
+   "scene": "cta",
+   "start": 50.56,
+   "end": 51.2
+  },
+  {
+   "text": "chahiye?",
+   "scene": "cta",
+   "start": 51.2,
+   "end": 51.36
+  },
+  {
+   "text": "Mujhe",
+   "scene": "cta",
+   "start": 51.2,
+   "end": 51.36
+  },
+  {
+   "text": "follow",
+   "scene": "cta",
+   "start": 51.68,
+   "end": 51.92
+  },
+  {
+   "text": "karo,",
+   "scene": "cta",
+   "start": 52,
+   "end": 52.24
+  },
+  {
+   "text": "aur",
+   "scene": "cta",
+   "start": 52.56,
+   "end": 52.72
+  },
+  {
+   "text": "comment",
+   "scene": "cta",
+   "start": 52.72,
+   "end": 53.12
+  },
+  {
+   "text": "karo",
+   "scene": "cta",
+   "start": 53.2,
+   "end": 53.76
+  },
+  {
+   "text": "\"workflow\".",
+   "scene": "cta",
+   "start": 53.76,
+   "end": 53.84
+  },
+  {
+   "text": "Details",
+   "scene": "cta",
+   "start": 54.48,
+   "end": 54.8
+  },
+  {
+   "text": "main",
+   "scene": "cta",
+   "start": 54.96,
+   "end": 55.28
+  },
+  {
+   "text": "aapko",
+   "scene": "cta",
+   "start": 55.28,
+   "end": 55.68
+  },
+  {
+   "text": "DM",
+   "scene": "cta",
+   "start": 55.76,
+   "end": 55.92
+  },
+  {
+   "text": "mein",
+   "scene": "cta",
+   "start": 56,
+   "end": 56.64
+  },
+  {
+   "text": "bhej",
+   "scene": "cta",
+   "start": 56,
+   "end": 56.64
+  },
+  {
+   "text": "dunga.",
+   "scene": "cta",
+   "start": 56.8,
+   "end": 57.12
+  }
+ ],
+ "captions": [
+  {
+   "id": "cap00",
+   "scene": "hook",
+   "start": 1.34,
+   "end": 2.56,
+   "words": [
+    {
+     "text": "Breaking",
+     "start": 1.4,
+     "end": 1.92,
+     "key": true
+    },
+    {
+     "text": "news!",
+     "start": 1.92,
+     "end": 2.56,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap01",
+   "scene": "hook",
+   "start": 2.57,
+   "end": 3.7,
+   "words": [
+    {
+     "text": "Aaj",
+     "start": 2.56,
+     "end": 2.88,
+     "key": false
+    },
+    {
+     "text": "raat",
+     "start": 3.04,
+     "end": 3.6,
+     "key": false
+    },
+    {
+     "text": "se,",
+     "start": 3.04,
+     "end": 3.6,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap02",
+   "scene": "hook",
+   "start": 3.7,
+   "end": 5.2,
+   "words": [
+    {
+     "text": "aapki",
+     "start": 3.76,
+     "end": 4.16,
+     "key": false
+    },
+    {
+     "text": "ek",
+     "start": 4.24,
+     "end": 4.4,
+     "key": false
+    },
+    {
+     "text": "bhi",
+     "start": 4.56,
+     "end": 4.64,
+     "key": false
+    },
+    {
+     "text": "lead,",
+     "start": 4.8,
+     "end": 5.2,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap03",
+   "scene": "hook",
+   "start": 5.21,
+   "end": 6.1,
+   "words": [
+    {
+     "text": "haath",
+     "start": 5.2,
+     "end": 5.68,
+     "key": true
+    },
+    {
+     "text": "se",
+     "start": 5.68,
+     "end": 5.82,
+     "key": false
+    },
+    {
+     "text": "nahi",
+     "start": 5.84,
+     "end": 6,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap04",
+   "scene": "hook",
+   "start": 6.1,
+   "end": 7.451,
+   "words": [
+    {
+     "text": "jayega!",
+     "start": 6.16,
+     "end": 7.28,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap05",
+   "scene": "problem",
+   "start": 7.451,
+   "end": 8.42,
+   "words": [
+    {
+     "text": "Raat",
+     "start": 7.511,
+     "end": 7.76,
+     "key": false
+    },
+    {
+     "text": "9",
+     "start": 7.76,
+     "end": 7.84,
+     "key": true
+    },
+    {
+     "text": "baje",
+     "start": 8,
+     "end": 8.16,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap06",
+   "scene": "problem",
+   "start": 8.42,
+   "end": 10.42,
+   "words": [
+    {
+     "text": "buyer",
+     "start": 8.48,
+     "end": 8.72,
+     "key": false
+    },
+    {
+     "text": "ne",
+     "start": 8.88,
+     "end": 9.04,
+     "key": false
+    },
+    {
+     "text": "enquiry",
+     "start": 9.28,
+     "end": 9.84,
+     "key": false
+    },
+    {
+     "text": "bheji.",
+     "start": 9.92,
+     "end": 10.32,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap07",
+   "scene": "problem",
+   "start": 10.42,
+   "end": 12.02,
+   "words": [
+    {
+     "text": "Aapne",
+     "start": 10.48,
+     "end": 10.96,
+     "key": false
+    },
+    {
+     "text": "reply",
+     "start": 11.12,
+     "end": 11.44,
+     "key": false
+    },
+    {
+     "text": "kiya",
+     "start": 11.6,
+     "end": 11.76,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap08",
+   "scene": "problem",
+   "start": 12.02,
+   "end": 13.28,
+   "words": [
+    {
+     "text": "agli",
+     "start": 12.08,
+     "end": 12.48,
+     "key": false
+    },
+    {
+     "text": "subah.",
+     "start": 12.48,
+     "end": 13.28,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap09",
+   "scene": "problem",
+   "start": 13.29,
+   "end": 14.46,
+   "words": [
+    {
+     "text": "Tab",
+     "start": 12.48,
+     "end": 13.28,
+     "key": false
+    },
+    {
+     "text": "tak",
+     "start": 12.48,
+     "end": 13.28,
+     "key": false
+    },
+    {
+     "text": "doosra",
+     "start": 13.52,
+     "end": 14,
+     "key": true
+    },
+    {
+     "text": "broker",
+     "start": 14.08,
+     "end": 14.24,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap10",
+   "scene": "problem",
+   "start": 14.46,
+   "end": 17.28,
+   "words": [
+    {
+     "text": "usse",
+     "start": 14.52,
+     "end": 14.6,
+     "key": false
+    },
+    {
+     "text": "baat",
+     "start": 14.68,
+     "end": 14.92,
+     "key": false
+    },
+    {
+     "text": "kar",
+     "start": 15.28,
+     "end": 15.44,
+     "key": false
+    },
+    {
+     "text": "chuka",
+     "start": 15.52,
+     "end": 16.72,
+     "key": false
+    },
+    {
+     "text": "tha.",
+     "start": 16.8,
+     "end": 17.28,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap11",
+   "scene": "solution",
+   "start": 17.29,
+   "end": 18.42,
+   "words": [
+    {
+     "text": "Isliye",
+     "start": 17.28,
+     "end": 17.44,
+     "key": false
+    },
+    {
+     "text": "maine",
+     "start": 17.44,
+     "end": 17.52,
+     "key": false
+    },
+    {
+     "text": "property",
+     "start": 17.92,
+     "end": 18.24,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap12",
+   "scene": "solution",
+   "start": 18.42,
+   "end": 20.06,
+   "words": [
+    {
+     "text": "agents",
+     "start": 18.48,
+     "end": 18.8,
+     "key": false
+    },
+    {
+     "text": "ke",
+     "start": 18.96,
+     "end": 19.68,
+     "key": false
+    },
+    {
+     "text": "liye",
+     "start": 19.68,
+     "end": 19.76,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap13",
+   "scene": "solution",
+   "start": 20.18,
+   "end": 21.86,
+   "words": [
+    {
+     "text": "ek",
+     "start": 20.24,
+     "end": 20.4,
+     "key": false
+    },
+    {
+     "text": "AI",
+     "start": 20.24,
+     "end": 20.4,
+     "key": false
+    },
+    {
+     "text": "agent",
+     "start": 20.64,
+     "end": 20.96,
+     "key": true
+    },
+    {
+     "text": "banaya",
+     "start": 20.96,
+     "end": 21.36,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "start": 21.52,
+     "end": 21.6,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap14",
+   "scene": "solution",
+   "start": 21.86,
+   "end": 23.06,
+   "words": [
+    {
+     "text": "chaar",
+     "start": 21.92,
+     "end": 22,
+     "key": false
+    },
+    {
+     "text": "connected",
+     "start": 22.32,
+     "end": 22.8,
+     "key": true
+    },
+    {
+     "text": "workflows",
+     "start": 22.88,
+     "end": 22.96,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap15",
+   "scene": "solution",
+   "start": 23.06,
+   "end": 23.82,
+   "words": [
+    {
+     "text": "ke",
+     "start": 23.12,
+     "end": 23.2,
+     "key": false
+    },
+    {
+     "text": "saath.",
+     "start": 23.2,
+     "end": 23.52,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap16",
+   "scene": "a1",
+   "start": 24.427,
+   "end": 24.607,
+   "words": [
+    {
+     "text": "Pehla:",
+     "start": 24.487,
+     "end": 24.607,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap17",
+   "scene": "a1",
+   "start": 24.617,
+   "end": 26.54,
+   "words": [
+    {
+     "text": "har",
+     "start": 24.607,
+     "end": 24.727,
+     "key": false
+    },
+    {
+     "text": "enquiry",
+     "start": 25.24,
+     "end": 25.72,
+     "key": false
+    },
+    {
+     "text": "ka",
+     "start": 25.8,
+     "end": 25.88,
+     "key": false
+    },
+    {
+     "text": "reply,",
+     "start": 26.04,
+     "end": 26.44,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap18",
+   "scene": "a1",
+   "start": 26.54,
+   "end": 27.398,
+   "words": [
+    {
+     "text": "turant.",
+     "start": 26.6,
+     "end": 27.24,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap19",
+   "scene": "a2",
+   "start": 27.398,
+   "end": 28.16,
+   "words": [
+    {
+     "text": "Doosra:",
+     "start": 27.458,
+     "end": 28.16,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap20",
+   "scene": "a2",
+   "start": 28.17,
+   "end": 30.18,
+   "words": [
+    {
+     "text": "budget,",
+     "start": 28.16,
+     "end": 28.8,
+     "key": false
+    },
+    {
+     "text": "location",
+     "start": 28.8,
+     "end": 29.28,
+     "key": false
+    },
+    {
+     "text": "aur",
+     "start": 29.36,
+     "end": 29.6,
+     "key": false
+    },
+    {
+     "text": "home",
+     "start": 29.6,
+     "end": 29.84,
+     "key": false
+    },
+    {
+     "text": "loan",
+     "start": 29.84,
+     "end": 30.08,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap21",
+   "scene": "a2",
+   "start": 30.18,
+   "end": 30.96,
+   "words": [
+    {
+     "text": "poochh",
+     "start": 30.24,
+     "end": 30.48,
+     "key": false
+    },
+    {
+     "text": "ke,",
+     "start": 30.56,
+     "end": 30.96,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap22",
+   "scene": "a2",
+   "start": 30.97,
+   "end": 33.02,
+   "words": [
+    {
+     "text": "buyer",
+     "start": 30.96,
+     "end": 31.2,
+     "key": false
+    },
+    {
+     "text": "ko",
+     "start": 31.36,
+     "end": 31.52,
+     "key": false
+    },
+    {
+     "text": "qualify",
+     "start": 31.68,
+     "end": 32.16,
+     "key": true
+    },
+    {
+     "text": "karta",
+     "start": 32.24,
+     "end": 32.56,
+     "key": false
+    },
+    {
+     "text": "hai.",
+     "start": 32.64,
+     "end": 32.72,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap23",
+   "scene": "a3",
+   "start": 33.091,
+   "end": 33.62,
+   "words": [
+    {
+     "text": "Teesra:",
+     "start": 33.151,
+     "end": 33.52,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap24",
+   "scene": "a3",
+   "start": 33.62,
+   "end": 34.98,
+   "words": [
+    {
+     "text": "jab",
+     "start": 33.68,
+     "end": 33.92,
+     "key": false
+    },
+    {
+     "text": "buyer",
+     "start": 34,
+     "end": 34.24,
+     "key": false
+    },
+    {
+     "text": "aapke",
+     "start": 34.48,
+     "end": 34.88,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap25",
+   "scene": "a3",
+   "start": 34.98,
+   "end": 36.5,
+   "words": [
+    {
+     "text": "criteria",
+     "start": 35.04,
+     "end": 35.6,
+     "key": false
+    },
+    {
+     "text": "match",
+     "start": 35.6,
+     "end": 36,
+     "key": false
+    },
+    {
+     "text": "kare,",
+     "start": 36,
+     "end": 36.32,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap26",
+   "scene": "a3",
+   "start": 36.5,
+   "end": 38.18,
+   "words": [
+    {
+     "text": "agent",
+     "start": 36.56,
+     "end": 36.88,
+     "key": true
+    },
+    {
+     "text": "aapko",
+     "start": 37.04,
+     "end": 37.52,
+     "key": false
+    },
+    {
+     "text": "WhatsApp",
+     "start": 37.6,
+     "end": 38.08,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap27",
+   "scene": "a3",
+   "start": 38.18,
+   "end": 39.62,
+   "words": [
+    {
+     "text": "pe",
+     "start": 38.24,
+     "end": 38.32,
+     "key": false
+    },
+    {
+     "text": "alert",
+     "start": 38.48,
+     "end": 38.8,
+     "key": false
+    },
+    {
+     "text": "karta",
+     "start": 38.88,
+     "end": 39.2,
+     "key": false
+    },
+    {
+     "text": "hai,",
+     "start": 39.28,
+     "end": 39.36,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap28",
+   "scene": "a3",
+   "start": 39.62,
+   "end": 41.78,
+   "words": [
+    {
+     "text": "aur",
+     "start": 39.68,
+     "end": 39.76,
+     "key": false
+    },
+    {
+     "text": "aapke",
+     "start": 40,
+     "end": 40.48,
+     "key": false
+    },
+    {
+     "text": "approve",
+     "start": 40.72,
+     "end": 41.12,
+     "key": true
+    },
+    {
+     "text": "karne",
+     "start": 41.12,
+     "end": 41.44,
+     "key": false
+    },
+    {
+     "text": "pe",
+     "start": 41.52,
+     "end": 41.6,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap29",
+   "scene": "a3",
+   "start": 41.78,
+   "end": 43.22,
+   "words": [
+    {
+     "text": "site",
+     "start": 41.84,
+     "end": 42.16,
+     "key": false
+    },
+    {
+     "text": "visit",
+     "start": 42.16,
+     "end": 42.4,
+     "key": false
+    },
+    {
+     "text": "book",
+     "start": 42.56,
+     "end": 42.8,
+     "key": false
+    },
+    {
+     "text": "karta",
+     "start": 42.88,
+     "end": 43.12,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap30",
+   "scene": "a3",
+   "start": 43.22,
+   "end": 44.4,
+   "words": [
+    {
+     "text": "hai.",
+     "start": 43.28,
+     "end": 44.4,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap31",
+   "scene": "a4",
+   "start": 44.41,
+   "end": 44.58,
+   "words": [
+    {
+     "text": "Chautha:",
+     "start": 44.107,
+     "end": 44.4,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap32",
+   "scene": "a4",
+   "start": 44.58,
+   "end": 46.26,
+   "words": [
+    {
+     "text": "buyer",
+     "start": 44.64,
+     "end": 44.88,
+     "key": false
+    },
+    {
+     "text": "ready",
+     "start": 45.04,
+     "end": 45.52,
+     "key": true
+    },
+    {
+     "text": "hone",
+     "start": 45.52,
+     "end": 46,
+     "key": false
+    },
+    {
+     "text": "tak,",
+     "start": 45.52,
+     "end": 46,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap33",
+   "scene": "a4",
+   "start": 46.26,
+   "end": 47.62,
+   "words": [
+    {
+     "text": "follow",
+     "start": 46.32,
+     "end": 46.64,
+     "key": true
+    },
+    {
+     "text": "up",
+     "start": 46.64,
+     "end": 46.72,
+     "key": false
+    },
+    {
+     "text": "karta",
+     "start": 46.88,
+     "end": 47.12,
+     "key": false
+    },
+    {
+     "text": "rehta",
+     "start": 47.2,
+     "end": 47.52,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap34",
+   "scene": "a4",
+   "start": 47.62,
+   "end": 48.06,
+   "words": [
+    {
+     "text": "hai.",
+     "start": 47.68,
+     "end": 47.76,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap35",
+   "scene": "cta",
+   "start": 48.34,
+   "end": 50.5,
+   "words": [
+    {
+     "text": "Ye",
+     "start": 48.4,
+     "end": 48.72,
+     "key": false
+    },
+    {
+     "text": "workflow",
+     "start": 48.8,
+     "end": 49.04,
+     "key": true
+    },
+    {
+     "text": "aapke",
+     "start": 49.2,
+     "end": 49.68,
+     "key": false
+    },
+    {
+     "text": "business",
+     "start": 49.68,
+     "end": 49.92,
+     "key": false
+    },
+    {
+     "text": "ke",
+     "start": 50,
+     "end": 50.24,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap36",
+   "scene": "cta",
+   "start": 50.5,
+   "end": 51.36,
+   "words": [
+    {
+     "text": "liye",
+     "start": 50.56,
+     "end": 51.2,
+     "key": false
+    },
+    {
+     "text": "chahiye?",
+     "start": 51.2,
+     "end": 51.36,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap37",
+   "scene": "cta",
+   "start": 51.37,
+   "end": 52.5,
+   "words": [
+    {
+     "text": "Mujhe",
+     "start": 51.2,
+     "end": 51.36,
+     "key": false
+    },
+    {
+     "text": "follow",
+     "start": 51.68,
+     "end": 51.92,
+     "key": true
+    },
+    {
+     "text": "karo,",
+     "start": 52,
+     "end": 52.24,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap38",
+   "scene": "cta",
+   "start": 52.5,
+   "end": 54.14,
+   "words": [
+    {
+     "text": "aur",
+     "start": 52.56,
+     "end": 52.72,
+     "key": false
+    },
+    {
+     "text": "comment",
+     "start": 52.72,
+     "end": 53.12,
+     "key": false
+    },
+    {
+     "text": "karo",
+     "start": 53.2,
+     "end": 53.76,
+     "key": false
+    },
+    {
+     "text": "\"workflow\".",
+     "start": 53.76,
+     "end": 53.84,
+     "key": true
+    }
+   ]
+  },
+  {
+   "id": "cap39",
+   "scene": "cta",
+   "start": 54.42,
+   "end": 56.64,
+   "words": [
+    {
+     "text": "Details",
+     "start": 54.48,
+     "end": 54.8,
+     "key": false
+    },
+    {
+     "text": "main",
+     "start": 54.96,
+     "end": 55.28,
+     "key": false
+    },
+    {
+     "text": "aapko",
+     "start": 55.28,
+     "end": 55.68,
+     "key": false
+    },
+    {
+     "text": "DM",
+     "start": 55.76,
+     "end": 55.92,
+     "key": false
+    },
+    {
+     "text": "mein",
+     "start": 56,
+     "end": 56.64,
+     "key": false
+    }
+   ]
+  },
+  {
+   "id": "cap40",
+   "scene": "cta",
+   "start": 56.65,
+   "end": 57.42,
+   "words": [
+    {
+     "text": "bhej",
+     "start": 56,
+     "end": 56.64,
+     "key": false
+    },
+    {
+     "text": "dunga.",
+     "start": 56.8,
+     "end": 57.12,
+     "key": false
+    }
+   ]
+  }
+ ],
+ "visemes": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrooaaaaaaaaaaooooooooooaaaeeeerrrrrrrrrraaaaaarrrraaaaaaaeeebbbbrrrrrrrrrraaaaarrrrrrrrrraaarrooooorrrraaaabbbmmrrrrrrrrraaaaaaaeeeaaaaaoooorrraaaabbbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrroooaarrrrrrrraaaaaaaaarrrbbbbrrrrrrrrraaaoommmaaaaaaaaaarrrmmmooaaaaaarrrraaaarrroobbbrrrrrrrrraaaaaaaaarrrrrrrrrrrrrrrrrrrrrraaaoooooeeeeeoooooaaaaaaaarrrraaarrrrrrmmmoooeeeeaaaooaaaammmmrrrrrrrrrrrraaeeeeaarrrrrrrrrrrraaaaaeeeeeaaammeeeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrreeeeaaaaooooaaarrrrrrrrrraaaaaaaaaaaarrrrrrrrraaaaaaaarreerrraaoooobbbbbrrrrrrrrrrrrrrrrrrrrrrrrraaaaarrrrrrrraaaaaaaoooooaaaaaaaarrrrrrrrrrrrrrrrrraarrrrrrrrraaaaaaarrraaaaaoooorrrraaammmaaaaeerrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaaaaaarrrrrrrrrrrrrrrrraaoommmaaaaaaaaaaarrrraaaaaaaaaaooorrrrrraaaaaooorrrrrrrrrrrrrrrrrroooeeeeaaaaarrrrrooaaaaaaaarrrrrrrrrrooaaammmaaeeeeaaooorrraaaaooooaaooooaaaarrrrrrrrreeeeeebbrrrrrrrrrooaaaaaarrrrrrraarrrrraaaaaaammaaaaarrraaaaaaaaaaeeeerrrrrrrrrrrrraaaeeeeaaaarrrrrraaaooooaaaaaaaaarrrrrrrraaarrrraaaarrraaaaaaaaaaaaaaaaaaoooaaaaaeemmaabbbbrrrrrrrrrrrraaaaaaaaarrrrrrrrrraaaarrrrrrooeeeeaaaaaeeeaarrrrraarrrrrrooaaammmmmmmmrraaaeeeeerrrrrrrrrrraaarrrrrrrrrraaaarrrraaoorrrrrrrraaaaaaaaaaaaaaaoooaaaaaaaarrrrrraaaaaaaaooaaeeaaaarrrrrroooorrraaaaaaaarrreeerrrrrrrrrrrrrrrrrrrrrrrraaaaaaeeerrrrrroooaaaaarrrrooooaaaaooaaoooooooaaaaaaaaarrrrrrrrrrrrraaaaaaaaaarrrrrrrrrrrrraaaeeeemmaarrreeerrrrrrrrrrrrrrrrrrraaaaaaaaaaaaammmaaaaarrrrrrraaarrrraaooaaeeeeaaaaeeeeaaaarrrrrrrraaeeeeeemmrrrrrrrrrrrrooorrrrrrrrrraaaaaaaaaaabbbbbrrrrrrrrrrraaaaaaaaaooaaaaaaaaaaabbbbbrrrrrrrrroorrrrrrrrrrrrrrrrrrrrmmaaaaaeerrrrbboorrrrrrrreeaaarrraaaaaaaaarrrrraaoooooaaaaaeeaaarrrrroooobbbbrrr"
+}

@@ -1,0 +1,61 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #a2-ask { left: 56px; top: 452px; width: 968px; height: 96px; display: flex; align-items: center; gap: 20px; padding: 0 24px; }
+    #a2-qs { position: relative; flex: 1; height: 40px; }
+    #a2-qs span { position: absolute; left: 0; top: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); white-space: nowrap; }
+    #a2-lead { left: 56px; top: 500px; width: 968px; height: 300px; overflow: visible; }
+    #a2-score { position: absolute; right: 18px; top: 10px; font-size: 22px; }
+    #a2-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .a2-f { height: 120px; padding: 18px 26px; border-bottom: 2px solid #ECEEF2; }
+    .a2-f:nth-child(odd) { border-right: 2px solid #ECEEF2; }
+    .a2-f:nth-child(n+3) { border-bottom: none; }
+    .a2-k { font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .16em; color: #5B6372; text-transform: uppercase; }
+    .a2-slot { position: relative; height: 48px; margin-top: 10px; }
+    .a2-slot b, .a2-slot i { position: absolute; left: 0; top: 0; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; white-space: nowrap; font-style: normal; }
+    .a2-slot i { color: #C6CBD5; }
+    .a2-slot b { color: var(--ink); }
+  </style>
+  <div id="root" data-composition-id="a2" data-width="1080" data-height="1920">
+    <div id="a2-bg" class="panel bg-blue"></div>
+    <div id="a2-head" class="head on-blue" style="color:var(--paper)">
+      <div class="mask"><div id="a2-num" class="disp num">{{c.num}}</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a2-t1">{{c.title.0}}</div></div><div class="mask"><div id="a2-t2">{{c.title.1}}</div></div></div>
+    </div>
+    <div id="a2-ask" class="card"><span class="tag blue">AI asks</span>
+      <div id="a2-qs"><span id="a2-q0">{{c.qs.0}}</span><span id="a2-q1">{{c.qs.1}}</span><span id="a2-q2">{{c.qs.2}}</span><span id="a2-q3">{{c.qs.3}}</span></div>
+    </div>
+    <div id="a2-lead" class="card">
+      <div class="bar"><span class="dot b"></span>&nbsp;CRM · {{c.lead}}</div>
+      <span id="a2-score" class="tag blue">{{c.score}}</span>
+      <div id="a2-grid">
+        <div class="a2-f"><div class="a2-k">{{c.fields.0.0}}</div><div class="a2-slot"><i id="a2-p0">—</i><b id="a2-v0">{{c.fields.0.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.1.0}}</div><div class="a2-slot"><i id="a2-p1">—</i><b id="a2-v1">{{c.fields.1.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.2.0}}</div><div class="a2-slot"><i id="a2-p2">—</i><b id="a2-v2">{{c.fields.2.1}}</b></div></div>
+        <div class="a2-f"><div class="a2-k">{{c.fields.3.0}}</div><div class="a2-slot"><i id="a2-p3">—</i><b id="a2-v3">{{c.fields.3.1}}</b></div></div>
+      </div>
+    </div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.doosra - 0.04);
+      tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.budget - 0.06);
+      tl.fromTo("#a2-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.qualify - 0.06);
+      // the lead record opens empty; "AI asks" one question per word, each answer fills its field
+      tl.fromTo("#a2-lead", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.budget - 0.1);
+      tl.set(["#a2-ask", "#a2-v0", "#a2-v1", "#a2-v2", "#a2-v3", "#a2-score"], { opacity: 0 }, 0);
+      [0, 1, 2, 3].forEach((i) => {
+        const t = W.budget + 0.15 + i * 0.28;
+        tl.set(`#a2-p${i}`, { opacity: 0 }, t);
+        tl.fromTo(`#a2-v${i}`, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2, ease: "power3.out" }, t);
+      });
+      tl.fromTo("#a2-score", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, W.qualify + 0.45);
+      tl.to("#a2-lead", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.qualify + 0.45);
+      tl.fromTo("#a2-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a2"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,103 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    .cta-h { position: absolute; left: 70px; font-size: 80px; padding-bottom: 16px; }
+    #cta-ben { position: absolute; left: 70px; top: 560px; width: 940px; }
+    .cta-bn { height: 104px; margin-bottom: 18px; border-radius: 22px; background: var(--ink-2); border: 2px solid var(--gray-line); display: flex; align-items: center; gap: 22px; padding: 0 28px;
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--paper); }
+    .cta-tick { width: 52px; height: 52px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 900; flex: none; }
+    #cta-l1 { color: var(--paper); } #cta-l2 { color: #5C87FF; }
+    #cta-card { left: 70px; top: 652px; width: 940px; height: 292px; }
+    .cta-av { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); flex: none; position: relative; }
+    .cta-av::before { content: ""; position: absolute; left: 21px; top: 11px; width: 22px; height: 22px; border-radius: 50%; background: #fff; }
+    .cta-av::after { content: ""; position: absolute; left: 12px; top: 37px; width: 40px; height: 20px; border-radius: 20px 20px 6px 6px; background: #fff; }
+    #cta-rowA { position: absolute; left: 26px; right: 26px; top: 82px; height: 92px; display: flex; align-items: center; gap: 20px; }
+    #cta-input { flex: 1; height: 76px; border-radius: 38px; border: 3px solid #C6CBD5; display: flex; align-items: center; padding: 0 28px; position: relative; }
+    #cta-typed { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; color: var(--ink); letter-spacing: .02em; }
+    #cta-ph { position: absolute; left: 28px; font-size: 28px; color: #6A7180; font-weight: 600; }
+    #cta-send { width: 76px; height: 76px; border-radius: 50%; background: var(--blue); flex: none; display: flex; align-items: center; justify-content: center; }
+    #cta-posted { position: absolute; left: 26px; right: 26px; top: 82px; height: 92px; display: flex; align-items: center; gap: 20px; }
+    .cta-k { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .cta-v { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; color: var(--ink); margin-top: 2px; }
+    #cta-dm { position: absolute; left: 26px; right: 26px; top: 190px; height: 94px; border-radius: 20px; background: var(--ink); display: flex; align-items: center; gap: 20px; padding: 0 24px; }
+    .cta-env { width: 62px; height: 46px; border-radius: 9px; background: var(--blue); position: relative; flex: none; overflow: hidden; }
+    .cta-env::after { content: ""; position: absolute; left: 8px; top: -24px; width: 46px; height: 46px; border: 4px solid #fff; transform: rotate(45deg); border-radius: 4px; }
+    #cta-dm .t { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--paper); margin-top: 4px; }
+    #cta-dm .cta-k { color: #A9B0BD; }
+    #cta-pill { position: absolute; left: 70px; top: 1092px; width: 940px; height: 112px; border-radius: 56px; background: var(--blue);
+      display: flex; align-items: center; justify-content: center; gap: 16px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; white-space: nowrap; }
+    #cta-note { position: absolute; left: 0; top: 1240px; width: 1080px; text-align: center; font-size: 32px; font-weight: 700; color: var(--paper); }
+    .cta-num { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--paper); color: var(--paper); flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; }
+    #cta-pill span.lt { font-weight: 700; opacity: .9; }
+    #cta-followrow { position: absolute; left: 70px; top: 548px; width: 940px; height: 92px; display: flex; align-items: center; gap: 24px; }
+    #cta-follow { position: relative; width: 260px; height: 84px; border-radius: 20px; background: var(--paper); flex: none; }
+    #cta-f1, #cta-f2 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; border-radius: 20px; }
+    #cta-f1 { color: var(--ink); } #cta-f2 { color: var(--paper); background: var(--ink-2); border: 3px solid var(--paper); }
+    #cta-fsub { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; color: var(--paper); margin-right: auto; }
+    #cta-avatar { width: 76px; height: 76px; border-radius: 50%; border: 3px solid var(--paper); flex: none; }
+    #cta-cursor { position: absolute; left: 0; top: 0; width: 46px; height: 56px; }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+    <div id="cta-bg" class="full bg-dark"></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>{{c.line1}}</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">{{c.line1b}}</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>{{c.line2}}</div></div>
+    <div id="cta-card" class="card">
+      <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;{{c.comments}} · comment “{{c.typed}}”</div>
+      <div id="cta-rowA">
+        <div class="cta-av"></div>
+        <div id="cta-input"><span id="cta-ph">Add a comment…</span><span id="cta-typed">{{c.typed}}</span></div>
+        <div id="cta-send"><svg width="38" height="38" viewBox="0 0 24 24"><path d="M3 11.5 L21 3 L13.5 21 L11 13 Z" fill="#fff"/></svg></div>
+      </div>
+      <div id="cta-posted">
+        <div class="cta-av"></div>
+        <div><div class="cta-k">{{c.user}} · now</div><div class="cta-v">{{c.typed}}</div></div>
+      </div>
+      <div id="cta-dm"><span class="cta-env"></span><div><div class="cta-k">{{c.reply_k}}</div><div class="t">{{c.reply}}</div></div></div>
+    </div>
+
+    <div id="cta-pill">{{c.pill_a}} {{c.pill_b}}
+      <svg width="36" height="36" viewBox="0 0 24 24"><path d="M12 4 V19 M5 12 L12 19 L19 12" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div id="cta-note">{{c.dm_note}}</div>
+    <div id="cta-followrow">
+      <div class="cta-num">1</div>
+      <img id="cta-avatar" src="assets/brand/avatar.png" alt="" />
+      <div id="cta-fsub">{{c.follow_sub}}</div>
+      <div id="cta-follow"><div id="cta-f1">+ {{c.follow}}</div><div id="cta-f2">{{c.following}}</div></div>
+    </div>
+    <svg id="cta-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      // "Want this workflow?"
+      tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.ye);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.aapke - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.chahiye - 0.05);
+      // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
+      tl.set("#cta-f2", { opacity: 0 }, 0);
+      tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);
+      tl.fromTo("#cta-cursor", { x: 620, y: 760, opacity: 0 }, { x: 880, y: 590, opacity: 1, duration: 0.42, ease: "power3.inOut" }, W.follow + 0.0);
+      tl.to("#cta-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.karo + 0.2);
+      tl.to("#cta-follow", { scale: 0.95, duration: 0.06, yoyo: true, repeat: 1 }, W.karo + 0.2);
+      tl.set("#cta-f1", { opacity: 0 }, W.karo + 0.26); tl.set("#cta-f2", { opacity: 1 }, W.karo + 0.26);
+      tl.to("#cta-cursor", { opacity: 0, duration: 0.25 }, W.karo + 0.55);
+      // STEP 2 · "then comment workflow below": the comment types and posts
+      tl.fromTo("#cta-card", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.aur - 0.1);
+      tl.set(["#cta-posted", "#cta-dm"], { opacity: 0 }, 0);
+      tl.fromTo("#cta-typed", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "steps(8)" }, W.comment + 0.1);
+      tl.to("#cta-ph", { opacity: 0, duration: 0.05 }, W.comment + 0.1);
+      tl.to("#cta-send", { scale: 0.86, duration: 0.07, yoyo: true, repeat: 1 }, W.workflow_2 + 0.55);
+      tl.to("#cta-rowA", { opacity: 0, y: -10, duration: 0.18 }, W.workflow_2 + 0.65);
+      tl.fromTo("#cta-posted", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.28, ease: "power3.out" }, W.workflow_2 + 0.75);
+      tl.fromTo("#cta-pill", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, W.comment);
+      // "we'll send it straight to your inbox"
+      tl.fromTo("#cta-dm", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, W.dm);
+      tl.fromTo("#cta-note", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, W.bhej);
+      // after the last word everything holds still, so the call to action stays readable to the end
+      window.__timelines["cta"] = tl;
+    })();
+  </script>
+</template>

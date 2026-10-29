@@ -1,3 +1,51 @@
+# ▶ A/B TEST WITH TRIAL REELS (Thu 29 Oct, 8:00 PM IST)
+
+| | Version A | Version B |
+|---|---|---|
+| File | `reel-short.mp4` (46.6 s) | `reel-hinglish.mp4` (59.0 s) |
+| Voice + captions | Hindi hook, English body | Full Hinglish, Roman Hinglish captions |
+| Captions file | `captions-short.srt` | `captions-hinglish.srt` |
+| Cover | `cover-short.png` (same for both) | `cover-short.png` |
+
+**How to run it**
+1. Post **both as Trial Reels** (in the share screen, switch on *Trial*). Trials are shown to non-followers only, so followers don't see two similar reels.
+2. Use the same caption style; for B use the Hinglish caption below. Add the same location tag and hashtags.
+3. SuperProfile: if trial reels don't show up in the reel picker, run the WORKFLOW keyword on "any post or reel" for these 72 hours, then switch it back to the winner only.
+4. After **24–72 hours** compare, in this order: **average watch time and % who watched past 3 s, then shares, saves and WORKFLOW comments**, then views. Not likes.
+5. **Share the winner to your profile** (Instagram offers this on the trial's insights), and leave the loser as a trial. Note the result in `content-log.md`; it decides whether future reels go Hinglish.
+
+**Before posting B:** the Kokoro Hindi voice is a stand-in. For the real test, B should get the natural voice (`HF_TOKEN` and Indic Parler-TTS, or your own recording). Otherwise B may lose because of the robotic voice, not because of the language.
+
+## Caption for B (Hinglish)
+
+```
+🚨 Breaking news: aaj raat se, aapki ek bhi lead haath se nahi jayega. Property agents, ye dekho 👇
+AI agent for real estate | WhatsApp lead automation | India 🇮🇳
+
+Raat 9 baje buyer ne enquiry bheji. Aapne reply kiya agli subah.
+Tab tak doosra broker usse baat kar chuka tha 😬
+
+Isliye maine property agents ke liye ek AI agent banaya hai, 4 connected workflows ke saath 👇
+
+1️⃣ Instant reply: 99acres, MagicBricks, Housing.com ya WhatsApp, har enquiry ka reply turant
+2️⃣ Qualify: budget, location aur home loan poochh ke buyer ko qualify karta hai
+3️⃣ Route + book: criteria match hote hi agent aapko WhatsApp pe alert karta hai; aap approve karo, site visit book
+4️⃣ Follow up: buyer ready hone tak follow up karta rehta hai
+
+💬 Sach batao: new enquiry ka reply kitni der mein karte ho? 5 min, 1 hour ya next day? 👇
+
+👉 Ye workflow aapke business ke liye chahiye?
+Follow @vish.workflows aur comment karo "WORKFLOW". Speed-to-Lead Playbook main aapko DM mein bhej dunga 📩
+
+💾 Save karo aur us broker dost ko share karo jo hamesha site visit pe hota hai.
+
+Built for real estate agents, brokers, builders and channel partners in Bengaluru, Mumbai, Pune, Hyderabad, Delhi NCR, Chennai, Dubai and worldwide. AI automation, AI agents, real estate CRM automation, WhatsApp Business API automation, property lead management and site visit booking, by Sri Trilinga Technologies Private Limited.
+
+#RealEstateIndia #AIAutomation #RealEstateAgent #PropertyDealer #WhatsAppAutomation
+```
+
+---
+
 # ▶ POST THIS: short "Breaking news" version
 
 Files: `reel-short.mp4` (46.6 s, 1080×1920; v9 opening: Vish as a cut-out news anchor at a desk with a mic, siren layer over 7 fast cuts, a moon and clock on "aaj raat se", the hands/✕/✓ animation on "haath se nahi jayega", then his normal panel returns) · `cover-short.png` · `captions-short.srt` · `guide.pdf` (unchanged)

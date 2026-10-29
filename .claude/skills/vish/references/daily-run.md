@@ -112,6 +112,10 @@ Write `vish-daily/<date>-<slug>/post.md` with:
 3. If the folder is a git repo, commit (`vish-daily: <date> <slug>`) and push to the session's branch. Don't commit model caches or `node_modules`.
 4. Send the user `reel.mp4`, `cover.png`, `guide.pdf` and `post.md`. End with a short summary: concept, length, post time (IST plus local times), what to upload to SuperProfile, and anything you couldn't verify.
 
+## A/B with Trial Reels (when reach is low)
+
+When the user wants to test a variation (language, hook, length), build both from the same project (a copy per variant, e.g. `reel-short/` and `reel-hinglish/`), post both as Instagram **Trial Reels** (shown to non-followers only), compare after 24–72 h on watch time, the 3-second hold, shares, saves and WORKFLOW comments, then share the winner to the profile and log the result. Hinglish variants: Hindi sentences with the English words brokers use (lead, site visit, WhatsApp, approve), with Devanagari for the voice (`"lang": "hi"`) and Roman Hinglish captions. Re-time every scene's word cues, since the word order changes. A Hinglish variant needs the natural Hindi voice (Parler-TTS or a recording) for a fair test.
+
 ## Time-savers and guardrails
 
 - If the user says "fast", skip Gate 2: show the script and continue unless they object.

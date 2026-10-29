@@ -195,7 +195,7 @@
       cut(6, W.haath - 0.05, 1.5, 0.75, 26);
       [["#f7-g1", -16], ["#f7-g2", 16]].forEach(([g, dx]) => tl.fromTo(g, { opacity: 0.9, x: dx }, { opacity: 0, x: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, W.nahi + 0.05));
       tl.fromTo("#f7-frost", { opacity: 1 }, { opacity: 0.35, duration: 0.7, ease: "power2.out", immediateRender: false }, W.haath);
-      tl.fromTo("#f7-main", { scale: 1 }, { scale: 1.07, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.jayegi);
+      tl.fromTo("#f7-main", { scale: 1 }, { scale: 1.07, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.jayega);
       gsap.utils.toArray("#root .stripes").forEach((s) => tl.fromTo(s, { x: 0 }, { x: -180, duration: D, ease: "none" }, 0));
       // siren layer: lights alternate fast during the siren, then keep pulsing; edge glow swaps red/blue; LIVE blinks; alert pings
       const B = gsap.utils.toArray("#ov-bar i");

@@ -1,0 +1,98 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #pp-panel { position: absolute; left: 0; top: 1010px; width: 1080px; height: 910px; overflow: hidden; }
+    #pp-bg { position: absolute; inset: 0;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 3px, rgba(255,255,255,0) 3px 46px),
+        radial-gradient(ellipse 72% 62% at 50% 42%, #4277FF 0%, #2257EF 46%, #163FC2 100%); }
+    #pp-sprite { position: absolute; left: 0; top: -10px; width: 1080px; height: 920px; transform-origin: 50% 100%; }
+    #pp-plate { position: absolute; left: 300px; top: 800px; width: 480px; height: 80px; display: flex; align-items: center; justify-content: center; gap: 14px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; letter-spacing: .04em; }
+    #pp-plate i { width: 18px; height: 18px; border-radius: 50%; background: #fff; }
+    #pp-sprite img { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; image-rendering: pixelated; }
+    #pp-head { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; }
+    #pp-edge { position: absolute; left: 0; top: 0; width: 1080px; height: 4px; background: rgba(11,16,22,0.35); }
+  </style>
+  <div id="root" data-composition-id="presenter" data-width="1080" data-height="1920">
+    <div id="pp-panel" data-layout-allow-overflow>
+      <div id="pp-bg"></div>
+      <div id="pp-sprite">
+        <img id="pp-body" src="assets/presenter/body.png" alt="" />
+        <div id="pp-head">
+          <img id="pp-headimg" src="assets/presenter/head.png" alt="" />
+          <img id="pp-eyes-open" src="assets/presenter/eyes_open.png" alt="" />
+          <img id="pp-eyes-half" src="assets/presenter/eyes_half.png" alt="" style="opacity:0" />
+          <img id="pp-eyes-closed" src="assets/presenter/eyes_closed.png" alt="" style="opacity:0" />
+          <img id="pp-brows-neutral" src="assets/presenter/brows_neutral.png" alt="" />
+          <img id="pp-brows-up" src="assets/presenter/brows_up.png" alt="" style="opacity:0" />
+          <img id="pp-m-r" src="assets/presenter/mouth_rest.png" alt="" />
+          <img id="pp-m-m" src="assets/presenter/mouth_M.png" alt="" style="opacity:0" />
+          <img id="pp-m-b" src="assets/presenter/mouth_B.png" alt="" style="opacity:0" />
+          <img id="pp-m-a" src="assets/presenter/mouth_A.png" alt="" style="opacity:0" />
+          <img id="pp-m-e" src="assets/presenter/mouth_E.png" alt="" style="opacity:0" />
+          <img id="pp-m-o" src="assets/presenter/mouth_O.png" alt="" style="opacity:0" />
+          <img id="pp-stache" src="assets/presenter/mustache.png" alt="" />
+        </div>
+        <img id="pp-mic" src="assets/presenter/prop_mic.png" alt="" />
+      </div>
+      <div id="pp-set" style="position:absolute;left:0;top:-10px;width:1080px;height:920px">
+        <img id="pp-desk" src="assets/presenter/prop_desk.png" alt="" style="position:absolute;left:0;top:0;width:1080px;height:920px;image-rendering:pixelated" />
+        <div id="pp-plate"><i id="pp-plate-dot"></i>{{PLATE}}</div>
+      </div>
+      <div id="pp-edge"></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
+      const VIS = {{VISEMES}}, FPS = {{FPS}}, BLINKS = {{BLINKS}}, BROWS = {{BROWS}}, MOVES = {{MOVES}};
+      const tl = gsap.timeline({ paused: true });
+      // news-anchor hook: cut-out Vish at a desk (no background) jumping on every hard cut, then the normal panel returns
+      const HOOK_END = {{HOOK_END}}, CUTS = {{CUTS}};
+      if (HOOK_END > 0) {
+        tl.set("#pp-bg", { opacity: 0 }, 0); tl.set("#pp-edge", { opacity: 0 }, 0);
+        CUTS.forEach(([t, x, s]) => {
+          tl.set("#pp-sprite", { x, scale: s * 1.06 }, t);
+          tl.to("#pp-sprite", { scale: s, duration: 0.16, ease: "power3.out" }, t + 0.01);
+        });
+        tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
+        tl.set("#pp-bg", { opacity: 1 }, HOOK_END); tl.set("#pp-edge", { opacity: 1 }, HOOK_END);
+        tl.set("#pp-sprite", { x: 0, scale: 1 }, HOOK_END);
+        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, HOOK_END);
+      } else {
+        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, 0);
+      }
+      const $ = (id) => document.getElementById(id);
+      const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };
+      const eyes = { open: $("pp-eyes-open"), half: $("pp-eyes-half"), closed: $("pp-eyes-closed") };
+      const brows = { n: $("pp-brows-neutral"), u: $("pp-brows-up") };
+      const head = $("pp-head");
+
+      if ({{IN}} < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
+      else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, {{IN}});
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, {{OUT}} - 0.4);
+
+      function render() {
+        const t = tl.time();
+        const f = Math.max(0, Math.min(VIS.length - 1, Math.floor(t * FPS + 1e-6)));
+        const v = VIS[f];
+        for (const k in mouths) mouths[k].style.opacity = k === v ? 1 : 0;
+        let e = "open";
+        for (const b of BLINKS) {
+          const d = t - b;
+          if (d >= 0 && d < 0.034) e = "half"; else if (d >= 0.034 && d < 0.1) e = "closed"; else if (d >= 0.1 && d < 0.134) e = "half";
+        }
+        for (const k in eyes) eyes[k].style.opacity = k === e ? 1 : 0;
+        const up = BROWS.some((b) => t >= b && t < b + 0.75);
+        brows.u.style.opacity = up ? 1 : 0; brows.n.style.opacity = up ? 0 : 1;
+        let dx = 0, dy = 0;
+        for (const [mt, mx, my] of MOVES) if (t >= mt) { dx = mx; dy = my; }
+        head.style.translate = `${dx}px ${dy}px`;
+      }
+      const drive = { p: 0 };
+      tl.to(drive, { p: 1, duration: {{DUR}}, ease: "none", onUpdate: render }, 0);
+      render();
+      window.__timelines["presenter"] = tl;
+    })();
+  </script>
+</template>
