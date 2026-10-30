@@ -103,5 +103,15 @@
   "file": "news-sting.mp3",
   "description": "Original breaking-news sting (synthesised): three brass/boom hits at 0.0, 0.35, 0.70 s with a long tail.",
   "duration": 2.6
+ },
+ "dhol-intro": {
+  "file": "dhol-intro.mp3",
+  "description": "Original dhol intro (synthesised): dha ta ta dha ta dha-ta DHA, ends on a big hit at 0.9 s.",
+  "duration": 1.6
+ },
+ "dhol-loop": {
+  "file": "dhol-loop.mp3",
+  "description": "Original dhol groove (synthesised), 4 bars at 100 bpm, to sit under a voice at low volume.",
+  "duration": 5.3
  }
 }

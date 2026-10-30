@@ -1,0 +1,674 @@
+[
+  {
+    "id": "w0",
+    "text": "Shadika",
+    "start": 0.64,
+    "end": 1.28
+  },
+  {
+    "id": "w1",
+    "text": "season",
+    "start": 1.52,
+    "end": 2
+  },
+  {
+    "id": "w2",
+    "text": "agaya",
+    "start": 2,
+    "end": 2.64
+  },
+  {
+    "id": "w3",
+    "text": "or",
+    "start": 2.72,
+    "end": 2.88
+  },
+  {
+    "id": "w4",
+    "text": "apka",
+    "start": 2.88,
+    "end": 3.28
+  },
+  {
+    "id": "w5",
+    "text": "vats",
+    "start": 3.44,
+    "end": 3.68
+  },
+  {
+    "id": "w6",
+    "text": "Do",
+    "start": 4.28,
+    "end": 4.36
+  },
+  {
+    "id": "w7",
+    "text": "so",
+    "start": 4.52,
+    "end": 4.6
+  },
+  {
+    "id": "w8",
+    "text": "or",
+    "start": 4.72,
+    "end": 4.88
+  },
+  {
+    "id": "w9",
+    "text": "unread",
+    "start": 4.96,
+    "end": 5.6
+  },
+  {
+    "id": "w10",
+    "text": "inquiries.",
+    "start": 5.68,
+    "end": 6.8
+  },
+  {
+    "id": "w11",
+    "text": "Every",
+    "start": 6.8,
+    "end": 7.28
+  },
+  {
+    "id": "w12",
+    "text": "family",
+    "start": 7.28,
+    "end": 7.76
+  },
+  {
+    "id": "w13",
+    "text": "wants",
+    "start": 7.76,
+    "end": 8.08
+  },
+  {
+    "id": "w14",
+    "text": "a",
+    "start": 8.08,
+    "end": 8.24
+  },
+  {
+    "id": "w15",
+    "text": "date,",
+    "start": 8.24,
+    "end": 8.72
+  },
+  {
+    "id": "w16",
+    "text": "a",
+    "start": 8.72,
+    "end": 8.96
+  },
+  {
+    "id": "w17",
+    "text": "package",
+    "start": 8.96,
+    "end": 9.44
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 9.44,
+    "end": 9.6
+  },
+  {
+    "id": "w19",
+    "text": "a",
+    "start": 9.6,
+    "end": 9.68
+  },
+  {
+    "id": "w20",
+    "text": "price",
+    "start": 9.68,
+    "end": 10
+  },
+  {
+    "id": "w21",
+    "text": "today.",
+    "start": 10.16,
+    "end": 10.88
+  },
+  {
+    "id": "w22",
+    "text": "Reply",
+    "start": 10.88,
+    "end": 11.44
+  },
+  {
+    "id": "w23",
+    "text": "late",
+    "start": 11.44,
+    "end": 11.84
+  },
+  {
+    "id": "w24",
+    "text": "and",
+    "start": 11.92,
+    "end": 12.08
+  },
+  {
+    "id": "w25",
+    "text": "they",
+    "start": 12.08,
+    "end": 12.32
+  },
+  {
+    "id": "w26",
+    "text": "book",
+    "start": 12.32,
+    "end": 12.72
+  },
+  {
+    "id": "w27",
+    "text": "the",
+    "start": 12.72,
+    "end": 12.8
+  },
+  {
+    "id": "w28",
+    "text": "next",
+    "start": 12.8,
+    "end": 13.04
+  },
+  {
+    "id": "w29",
+    "text": "planner.",
+    "start": 13.04,
+    "end": 13.92
+  },
+  {
+    "id": "w30",
+    "text": "That's",
+    "start": 13.92,
+    "end": 14.32
+  },
+  {
+    "id": "w31",
+    "text": "why",
+    "start": 14.32,
+    "end": 14.56
+  },
+  {
+    "id": "w32",
+    "text": "I",
+    "start": 14.56,
+    "end": 14.8
+  },
+  {
+    "id": "w33",
+    "text": "built",
+    "start": 14.8,
+    "end": 15.2
+  },
+  {
+    "id": "w34",
+    "text": "an",
+    "start": 15.2,
+    "end": 15.44
+  },
+  {
+    "id": "w35",
+    "text": "AI",
+    "start": 15.44,
+    "end": 16
+  },
+  {
+    "id": "w36",
+    "text": "agent",
+    "start": 16,
+    "end": 16.4
+  },
+  {
+    "id": "w37",
+    "text": "for",
+    "start": 16.4,
+    "end": 16.56
+  },
+  {
+    "id": "w38",
+    "text": "wedding",
+    "start": 16.56,
+    "end": 17.04
+  },
+  {
+    "id": "w39",
+    "text": "planners",
+    "start": 17.04,
+    "end": 17.6
+  },
+  {
+    "id": "w40",
+    "text": "with",
+    "start": 17.68,
+    "end": 17.92
+  },
+  {
+    "id": "w41",
+    "text": "four",
+    "start": 17.92,
+    "end": 18.32
+  },
+  {
+    "id": "w42",
+    "text": "connected",
+    "start": 18.32,
+    "end": 18.88
+  },
+  {
+    "id": "w43",
+    "text": "workflows.",
+    "start": 18.88,
+    "end": 19.92
+  },
+  {
+    "id": "w44",
+    "text": "First,",
+    "start": 19.92,
+    "end": 20.48
+  },
+  {
+    "id": "w45",
+    "text": "it",
+    "start": 20.48,
+    "end": 20.72
+  },
+  {
+    "id": "w46",
+    "text": "replies",
+    "start": 20.72,
+    "end": 21.36
+  },
+  {
+    "id": "w47",
+    "text": "to",
+    "start": 21.36,
+    "end": 21.52
+  },
+  {
+    "id": "w48",
+    "text": "every",
+    "start": 21.52,
+    "end": 21.84
+  },
+  {
+    "id": "w49",
+    "text": "enquiry",
+    "start": 21.84,
+    "end": 22.56
+  },
+  {
+    "id": "w50",
+    "text": "with",
+    "start": 22.72,
+    "end": 22.96
+  },
+  {
+    "id": "w51",
+    "text": "your",
+    "start": 22.96,
+    "end": 23.2
+  },
+  {
+    "id": "w52",
+    "text": "packages",
+    "start": 23.2,
+    "end": 24
+  },
+  {
+    "id": "w53",
+    "text": "and",
+    "start": 24,
+    "end": 24.16
+  },
+  {
+    "id": "w54",
+    "text": "open",
+    "start": 24.16,
+    "end": 24.64
+  },
+  {
+    "id": "w55",
+    "text": "dates.",
+    "start": 24.64,
+    "end": 25.44
+  },
+  {
+    "id": "w56",
+    "text": "Second,",
+    "start": 25.44,
+    "end": 26
+  },
+  {
+    "id": "w57",
+    "text": "it",
+    "start": 26,
+    "end": 26.24
+  },
+  {
+    "id": "w58",
+    "text": "drafts",
+    "start": 26.24,
+    "end": 26.8
+  },
+  {
+    "id": "w59",
+    "text": "the",
+    "start": 26.8,
+    "end": 26.96
+  },
+  {
+    "id": "w60",
+    "text": "quote",
+    "start": 26.96,
+    "end": 27.36
+  },
+  {
+    "id": "w61",
+    "text": "and",
+    "start": 27.44,
+    "end": 27.68
+  },
+  {
+    "id": "w62",
+    "text": "you",
+    "start": 27.68,
+    "end": 27.84
+  },
+  {
+    "id": "w63",
+    "text": "approve",
+    "start": 27.84,
+    "end": 28.32
+  },
+  {
+    "id": "w64",
+    "text": "it",
+    "start": 28.32,
+    "end": 28.48
+  },
+  {
+    "id": "w65",
+    "text": "before",
+    "start": 28.48,
+    "end": 28.72
+  },
+  {
+    "id": "w66",
+    "text": "it",
+    "start": 28.72,
+    "end": 28.88
+  },
+  {
+    "id": "w67",
+    "text": "goes",
+    "start": 28.88,
+    "end": 29.28
+  },
+  {
+    "id": "w68",
+    "text": "out.",
+    "start": 29.28,
+    "end": 29.68
+  },
+  {
+    "id": "w69",
+    "text": "Third,",
+    "start": 29.68,
+    "end": 30.32
+  },
+  {
+    "id": "w70",
+    "text": "it",
+    "start": 30.32,
+    "end": 30.48
+  },
+  {
+    "id": "w71",
+    "text": "sends",
+    "start": 30.48,
+    "end": 30.88
+  },
+  {
+    "id": "w72",
+    "text": "polite",
+    "start": 30.88,
+    "end": 31.36
+  },
+  {
+    "id": "w73",
+    "text": "payment",
+    "start": 31.36,
+    "end": 31.76
+  },
+  {
+    "id": "w74",
+    "text": "reminders,",
+    "start": 31.76,
+    "end": 32.56
+  },
+  {
+    "id": "w75",
+    "text": "so",
+    "start": 32.56,
+    "end": 32.88
+  },
+  {
+    "id": "w76",
+    "text": "advances",
+    "start": 32.88,
+    "end": 33.6
+  },
+  {
+    "id": "w77",
+    "text": "come",
+    "start": 33.6,
+    "end": 33.84
+  },
+  {
+    "id": "w78",
+    "text": "in",
+    "start": 33.84,
+    "end": 34.08
+  },
+  {
+    "id": "w79",
+    "text": "on",
+    "start": 34.08,
+    "end": 34.4
+  },
+  {
+    "id": "w80",
+    "text": "time.",
+    "start": 34.4,
+    "end": 35.04
+  },
+  {
+    "id": "w81",
+    "text": "Fourth,",
+    "start": 35.04,
+    "end": 35.6
+  },
+  {
+    "id": "w82",
+    "text": "it",
+    "start": 35.6,
+    "end": 35.84
+  },
+  {
+    "id": "w83",
+    "text": "keeps",
+    "start": 35.84,
+    "end": 36.16
+  },
+  {
+    "id": "w84",
+    "text": "every",
+    "start": 36.16,
+    "end": 36.48
+  },
+  {
+    "id": "w85",
+    "text": "vendor",
+    "start": 36.48,
+    "end": 37.04
+  },
+  {
+    "id": "w86",
+    "text": "updated,",
+    "start": 37.04,
+    "end": 37.84
+  },
+  {
+    "id": "w87",
+    "text": "from",
+    "start": 37.84,
+    "end": 38.08
+  },
+  {
+    "id": "w88",
+    "text": "caterer",
+    "start": 38.08,
+    "end": 38.88
+  },
+  {
+    "id": "w89",
+    "text": "to",
+    "start": 38.88,
+    "end": 39.12
+  },
+  {
+    "id": "w90",
+    "text": "decorator.",
+    "start": 39.12,
+    "end": 40.16
+  },
+  {
+    "id": "w91",
+    "text": "Want",
+    "start": 40.16,
+    "end": 40.56
+  },
+  {
+    "id": "w92",
+    "text": "this",
+    "start": 40.56,
+    "end": 40.8
+  },
+  {
+    "id": "w93",
+    "text": "workflow",
+    "start": 40.8,
+    "end": 41.36
+  },
+  {
+    "id": "w94",
+    "text": "built",
+    "start": 41.36,
+    "end": 41.68
+  },
+  {
+    "id": "w95",
+    "text": "for",
+    "start": 41.68,
+    "end": 41.84
+  },
+  {
+    "id": "w96",
+    "text": "your",
+    "start": 41.84,
+    "end": 42
+  },
+  {
+    "id": "w97",
+    "text": "business.",
+    "start": 42,
+    "end": 42.64
+  },
+  {
+    "id": "w98",
+    "text": "Follow",
+    "start": 42.64,
+    "end": 43.12
+  },
+  {
+    "id": "w99",
+    "text": "me",
+    "start": 43.12,
+    "end": 43.36
+  },
+  {
+    "id": "w100",
+    "text": "and",
+    "start": 43.36,
+    "end": 43.6
+  },
+  {
+    "id": "w101",
+    "text": "comment",
+    "start": 43.6,
+    "end": 44
+  },
+  {
+    "id": "w102",
+    "text": "workflow",
+    "start": 44.24,
+    "end": 44.96
+  },
+  {
+    "id": "w103",
+    "text": "and",
+    "start": 45.04,
+    "end": 45.2
+  },
+  {
+    "id": "w104",
+    "text": "I'll",
+    "start": 45.2,
+    "end": 45.52
+  },
+  {
+    "id": "w105",
+    "text": "send",
+    "start": 45.52,
+    "end": 45.76
+  },
+  {
+    "id": "w106",
+    "text": "you",
+    "start": 45.76,
+    "end": 45.92
+  },
+  {
+    "id": "w107",
+    "text": "the",
+    "start": 45.92,
+    "end": 46
+  },
+  {
+    "id": "w108",
+    "text": "details",
+    "start": 46,
+    "end": 46.48
+  },
+  {
+    "id": "w109",
+    "text": "in",
+    "start": 46.48,
+    "end": 46.64
+  },
+  {
+    "id": "w110",
+    "text": "your",
+    "start": 46.64,
+    "end": 46.8
+  },
+  {
+    "id": "w111",
+    "text": "DMs.",
+    "start": 46.8,
+    "end": 47.6
+  }
+]

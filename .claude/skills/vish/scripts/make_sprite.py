@@ -195,6 +195,37 @@ def mic():
 
 save(desk(), "prop_desk"); save(mic(), "prop_mic")
 
+# wedding safa (turban) for festive hooks: saffron and red wraps, gold band, jewelled kalgi with a plume
+T = {"saffron": (240, 140, 0, 255), "red": (201, 42, 42, 255), "maroon": (150, 20, 40, 255), "gold": (242, 201, 76, 255),
+     "gold_dk": (196, 148, 32, 255), "cream": (255, 244, 214, 255), "jewel": (224, 49, 49, 255)}
+
+
+def turban():
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.ellipse((30, 3, 78, 36), fill=T["saffron"])               # dome, a little larger than the hair
+    d.rectangle((30, 27, 78, 40), fill=(0, 0, 0, 0))             # flat base at row 26, just above the brows
+    px = im.load()
+    for y in range(3, 27):                                       # diagonal wraps
+        for x in range(30, 79):
+            if px[x, y][3] and ((x + 2 * y) // 4) % 3 == 0:
+                px[x, y] = T["red"]
+            elif px[x, y][3] and ((x + 2 * y) // 4) % 3 == 1 and y > 14:
+                px[x, y] = T["maroon"]
+    d.rectangle((31, 23, 77, 26), fill=T["gold"])                # gold band on the forehead
+    for x in range(33, 77, 4):
+        d.point((x, 24), fill=T["gold_dk"]); d.point((x + 1, 25), fill=T["gold_dk"])
+    d.rectangle((74, 20, 79, 31), fill=T["red"])                 # loose end hanging at the side
+    d.line((74, 31, 79, 31), fill=T["gold"])
+    d.ellipse((51, 11, 58, 18), fill=T["gold"])                  # kalgi brooch
+    d.ellipse((53, 13, 56, 16), fill=T["jewel"])
+    for i in range(9):                                           # plume curving up and right
+        d.point((56 + i // 2, 11 - i), fill=T["cream"]); d.point((57 + i // 2, 11 - i), fill=T["cream"])
+    d.point((61, 2), fill=T["gold"])
+    return outline(im)
+
+
+save(turban(), "prop_turban")
+
 # ---------------------------------------------------------------- previews
 if len(sys.argv) > 2:
     tiles = []

@@ -1,0 +1,57 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    #a2-q { left: 56px; top: 452px; width: 968px; height: 410px; overflow: visible; }
+    .a2-line { display: flex; justify-content: space-between; margin: 0 30px; padding: 16px 0; border-bottom: 2px solid #ECEEF2; font-size: 28px; font-weight: 600; color: #141A24; }
+    .a2-line b { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+    #a2-tot { border: none; font-size: 32px; }
+    #a2-btns { position: absolute; left: 30px; right: 30px; bottom: 24px; display: flex; gap: 16px; align-items: center; }
+    .a2-btn { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 28px; padding: 16px 30px; border-radius: 14px; }
+    #a2-ok { background: var(--blue); color: #fff; position: relative; min-width: 260px; text-align: center; margin-left: auto; }
+    #a2-edit { border: 3px solid #C6CBD5; color: #4E5666; }
+    #a2-sent { position: absolute; right: 20px; top: -26px; font-size: 22px; }
+    #a2-cursor { position: absolute; left: 0; top: 0; width: 44px; height: 54px; }
+  </style>
+  <div id="root" data-composition-id="a2" data-width="1080" data-height="1920">
+    <div id="a2-bg" class="panel bg-blue"></div>
+    <div class="head on-blue" style="color:var(--paper)">
+      <div class="mask"><div id="a2-num" class="disp num">{{c.num}}</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a2-t1">{{c.title.0}}</div></div><div class="mask"><div id="a2-t2">{{c.title.1}}</div></div></div>
+    </div>
+    <div id="a2-q" class="card">
+      <div class="bar"><span class="tag blue" style="padding:4px 10px">AI draft</span>&nbsp;{{c.bar}}</div>
+      <div id="a2-l1" class="a2-line"><span>{{c.l1k}}</span><b>{{c.l1v}}</b></div>
+      <div id="a2-l2" class="a2-line"><span>{{c.l2k}}</span><b>{{c.l2v}}</b></div>
+      <div id="a2-tot" class="a2-line"><span>{{c.l3k}}</span><b>{{c.l3v}}</b></div>
+      <div id="a2-btns"><div class="a2-btn" id="a2-edit">Edit</div><div id="a2-ok" class="a2-btn"><span id="a2-ok1">Approve</span><span id="a2-ok2" style="position:absolute;left:0;right:0;top:16px;opacity:0">✓ Approved</span></div></div>
+      <span id="a2-sent" class="tag ink">{{c.sent}}</span>
+    </div>
+    <svg id="a2-cursor" viewBox="0 0 44 54"><path d="M4 3 L4 44 L15 34 L23 51 L31 47 L23 31 L38 31 Z" fill="#fff" stroke="#0B1016" stroke-width="3.5" stroke-linejoin="round"/></svg>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a2-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.second - 0.04);
+      tl.fromTo("#a2-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.drafts - 0.06);
+      tl.fromTo("#a2-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.quote - 0.06);
+      // "drafts the quote": the AI writes it line by line
+      tl.fromTo("#a2-q", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, W.drafts - 0.1);
+      ["#a2-l1", "#a2-l2", "#a2-tot"].forEach((l, i) => tl.fromTo(l, { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.3, ease: "steps(14)" }, W.drafts + 0.1 + i * 0.28));
+      tl.fromTo("#a2-btns", { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.quote + 0.3);
+      // "you approve it": a person clicks Approve
+      tl.fromTo("#a2-cursor", { x: 560, y: 1000, opacity: 0 }, { x: 840, y: 820, opacity: 1, duration: 0.4, ease: "power3.inOut" }, W.you - 0.2);
+      tl.to("#a2-cursor", { scale: 0.85, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.to("#a2-ok", { scale: 0.94, duration: 0.06, yoyo: true, repeat: 1 }, W.approve + 0.05);
+      tl.set("#a2-ok1", { opacity: 0 }, W.approve + 0.11); tl.set("#a2-ok2", { opacity: 1 }, W.approve + 0.11);
+      tl.to("#a2-ok", { backgroundColor: "#0B1016", duration: 0.15 }, W.approve + 0.11);
+      tl.to("#a2-cursor", { opacity: 0, duration: 0.2 }, W.approve + 0.4);
+      // "before it goes out": sent to the family
+      tl.set("#a2-sent", { opacity: 0 }, 0);
+      tl.fromTo("#a2-sent", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.22, ease: "back.out(2)", immediateRender: false }, W.out - 0.05);
+      tl.fromTo("#a2-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a2"] = tl;
+    })();
+  </script>
+</template>

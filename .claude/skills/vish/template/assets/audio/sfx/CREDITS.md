@@ -34,3 +34,4 @@ All files are distributed under the [Pixabay Content License](https://pixabay.co
 
 without any attribution requirement.
 - siren-police.mp3, news-sting.mp3: original, synthesised for @vish.workflows with scripts/make_news_sfx.py (no third-party audio).
+- dhol-intro.mp3, dhol-loop.mp3: original, synthesised for @vish.workflows with scripts/make_dhol_sfx.py.

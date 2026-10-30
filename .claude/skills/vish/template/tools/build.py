@@ -142,22 +142,28 @@ brow_up = [round(abs_word(r), 3) for r in ("hook:cold", "problem:already", "solu
 moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("solution", 0, 0), ("a1", 10, 0), ("a2", 0, 0), ("a3", 0, 10), ("a4", -10, 0))]
 moves.append((round(abs_word("a1:style.") + 0.1, 3), 0, -10))
 moves.sort()
-# news-anchor hook (optional, config "anchor_hook": true): hard-cut positions for the cut-out presenter, as [time, x px, scale]
-hook_cuts, hook_end = [], 0
+# hook mode (optional): a cut-out presenter during the hook, with props, hard-cut jumps and an optional dance.
+# "anchor_hook": true  -> news desk + mic + plate, cuts on the breaking-news words
+# "hook_mode": {"props": ["#pp-turban"], "cuts": [[time or "scene:word", offset, x, scale], ...], "dance": true}
+hook_cuts, hook_end, hook_props, dance = [], 0, [], False
+def _w(r, d=0.0):
+    try: return round((r if isinstance(r, (int, float)) else abs_word(r)) + d, 3)
+    except KeyError: return None
 if CFG.get("anchor_hook"):
-    def _w(r, d=0.0):
-        try: return round(abs_word(r) + d, 3)
-        except KeyError: return None
     raw = [(0.0, -170, 0.84), (0.35, 190, 0.9), (0.70, 0, 1.06), (_w("hook:Breaking", -0.04), 0, 1.0),
            (_w("hook:Aaj", -0.05), -160, 0.9), (_w("hook:ek", -0.05), 170, 0.92), (_w("hook:haath", -0.05), 0, 1.1)]
     hook_cuts = [list(c) for c in raw if c[0] is not None]
-    hook_end = win["problem"][0]
+    hook_end, hook_props = win["problem"][0], ["#pp-desk", "#pp-mic", "#pp-plate"]
+elif CFG.get("hook_mode"):
+    hm = CFG["hook_mode"]
+    hook_cuts = [[_w(r, d), x, s] for r, d, x, s in hm.get("cuts", []) if _w(r, d) is not None]
+    hook_end, hook_props, dance = win["problem"][0], hm.get("props", []), bool(hm.get("dance"))
 src = open(P("src", "presenter.html")).read()
 pres = (src.replace("{{BASE_CSS}}", BASE_CSS.replace("%VARS%", css_vars()))
         .replace("{{VISEMES}}", json.dumps(vis)).replace("{{FPS}}", str(FPS))
         .replace("{{BLINKS}}", json.dumps(blinks)).replace("{{BROWS}}", json.dumps(brow_up))
         .replace("{{MOVES}}", json.dumps(moves)).replace("{{IN}}", f"{pres_in:.3f}").replace("{{OUT}}", f"{pres_out:.3f}")
-        .replace("{{DUR}}", f"{DUR:.3f}").replace("{{HOOK_END}}", f"{hook_end:.3f}").replace("{{CUTS}}", json.dumps(hook_cuts))
+        .replace("{{DUR}}", f"{DUR:.3f}").replace("{{HOOK_END}}", f"{hook_end:.3f}").replace("{{CUTS}}", json.dumps(hook_cuts)).replace("{{HOOK_PROPS}}", json.dumps(hook_props)).replace("{{DANCE}}", "true" if dance else "false")
         .replace("{{PLATE}}", html.escape(CFG.get("anchor_plate", "VISH · LIVE"))))
 open(P("compositions", "presenter.html"), "w").write(pres)
 

@@ -1,0 +1,78 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #pb-card { left: 56px; top: 262px; width: 968px; height: 600px; overflow: visible; }
+    .pb-row { position: relative; display: flex; align-items: center; gap: 20px; height: 120px; padding: 0 26px; border-bottom: 2px solid #ECEEF2; }
+    .pb-av { width: 70px; height: 70px; border-radius: 50%; background: #FFD43B; flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; color: #0B1016; }
+    .pb-nm { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 32px; color: var(--ink); }
+    .pb-sub { font-family: 'JetBrains Mono', monospace; font-size: 19px; letter-spacing: .1em; color: #5B6372; margin-top: 6px; }
+    .pb-ask { margin-left: auto; font-size: 22px; }
+    #pb-late { position: absolute; right: -14px; top: -30px; background: var(--ink); color: #fff; font-size: 24px; padding: 10px 18px; }
+    #pb-lost { position: absolute; left: 200px; top: 60px; padding: 12px 26px; border: 8px solid #E3262B; color: #E3262B; border-radius: 14px; background: rgba(245,245,247,.94);
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; transform: rotate(-6deg); white-space: nowrap; }
+    #pb-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+    <div id="pb-card" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;WhatsApp · Wedding enquiries</div>
+      <div id="pb-r1" class="pb-row"><div class="pb-av">S</div><div><div class="pb-nm">Sharma family</div><div class="pb-sub">14 DEC · 300 GUESTS</div></div><span id="pb-a1" class="pb-ask tag blue">Date free?</span></div>
+      <div id="pb-r2" class="pb-row"><div class="pb-av">R</div><div><div class="pb-nm">Reddy family</div><div class="pb-sub">21 DEC · 500 GUESTS</div></div><span id="pb-a2" class="pb-ask tag blue">Package?</span></div>
+      <div id="pb-r3" class="pb-row"><div class="pb-av">K</div><div><div class="pb-nm">Khan family</div><div class="pb-sub">9 JAN · 250 GUESTS</div></div><span id="pb-a3" class="pb-ask tag blue">Price?</span></div>
+      <div id="pb-r4" class="pb-row" style="border:none"><div class="pb-av">P</div><div><div class="pb-nm">Patel family</div><div class="pb-sub">2 FEB · 400 GUESTS</div></div><span id="pb-a4" class="pb-ask tag" style="background:#E3262B;color:#fff">Reply today!</span></div>
+      <span id="pb-late" class="tag mono">2 DAYS LATER</span>
+      <div id="pb-lost" data-layout-allow-overlap>BOOKED ELSEWHERE ✗</div>
+    </div>
+    <div id="problem-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>00 / 04</span></div><div id="problem-chrome-bot" class="chrome bot mono t-blue"><span>00 / THE PROBLEM</span><span class="prog"><i id="problem-prog"></i></span></div>
+    <div id="pb-flash"></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"every": 0.15, "every_end": 0.48, "family": 0.48, "family_end": 0.96, "wants": 0.96, "wants_end": 1.28, "a": 1.28, "a_end": 1.44, "date": 1.44, "date_end": 1.92, "a_2": 1.92, "a_2_end": 2.16, "package": 2.16, "package_end": 2.64, "and": 2.64, "and_end": 2.8, "a_3": 2.8, "a_3_end": 2.88, "price": 2.88, "price_end": 3.2, "today": 3.36, "today_end": 4.08, "reply": 4.08, "reply_end": 4.64, "late": 4.64, "late_end": 5.04, "and_2": 5.12, "and_2_end": 5.28, "they": 5.28, "they_end": 5.52, "book": 5.52, "book_end": 5.92, "the": 5.92, "the_end": 6.0, "next": 6.0, "next_end": 6.24, "planner": 6.24, "planner_end": 7.12};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
+      tl.fromTo("#pb-card", { opacity: 0, y: 60, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, W.every - 0.1);
+      // one family per thing they want: date, package, price, today
+      [["#pb-r1", "#pb-a1", W.family], ["#pb-r2", "#pb-a2", W.package], ["#pb-r3", "#pb-a3", W.price], ["#pb-r4", "#pb-a4", W.today]].forEach(([r, a, t]) => {
+        tl.fromTo(r, { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.24, ease: "power3.out" }, t - 0.06);
+        tl.fromTo(a, { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2.5)" }, t + 0.12);
+      });
+      tl.fromTo("#pb-a1", { scale: 1 }, { scale: 1.12, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.date);
+      tl.to("#pb-a4", { opacity: 0.3, duration: 0.15, yoyo: true, repeat: 3, ease: "steps(1)" }, W.today + 0.35);
+      // "Reply late": two days pass, the rows go grey
+      tl.fromTo("#pb-late", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.out" }, W.reply);
+      tl.to(["#pb-r1", "#pb-r2", "#pb-r3", "#pb-r4"], { opacity: 0.45, duration: 0.3 }, W.late);
+      // "they book the next planner": stamp
+      tl.set("#pb-lost", { opacity: 0 }, 0);
+      tl.fromTo("#pb-lost", { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, W.book - 0.05);
+      tl.fromTo("#pb-flash", { opacity: 0.5 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.book);
+      tl.fromTo("#pb-card", { x: 0 }, { x: 14, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.book + 0.12);
+      tl.fromTo("#problem-prog", { scaleX: 0.1377 }, { scaleX: 0.2827, duration: 7.165, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>

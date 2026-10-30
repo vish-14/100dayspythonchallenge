@@ -1,0 +1,133 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #pp-panel { position: absolute; left: 0; top: 1010px; width: 1080px; height: 910px; overflow: hidden; }
+    #pp-bg { position: absolute; inset: 0;
+      background:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 3px, rgba(255,255,255,0) 3px 46px),
+        radial-gradient(ellipse 72% 62% at 50% 42%, #4277FF 0%, #2257EF 46%, #163FC2 100%); }
+    #pp-sprite { position: absolute; left: 0; top: -10px; width: 1080px; height: 920px; transform-origin: 50% 100%; }
+    #pp-plate { position: absolute; left: 300px; top: 800px; width: 480px; height: 80px; display: flex; align-items: center; justify-content: center; gap: 14px; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 42px; letter-spacing: .04em; }
+    #pp-plate i { width: 18px; height: 18px; border-radius: 50%; background: #fff; }
+    #pp-sprite img { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; image-rendering: pixelated; }
+    #pp-head { position: absolute; left: 0; top: 0; width: 1080px; height: 920px; }
+    #pp-edge { position: absolute; left: 0; top: 0; width: 1080px; height: 4px; background: rgba(11,16,22,0.35); }
+  </style>
+  <div id="root" data-composition-id="presenter" data-width="1080" data-height="1920">
+    <div id="pp-panel" data-layout-allow-overflow>
+      <div id="pp-bg"></div>
+      <div id="pp-sprite">
+        <img id="pp-body" src="assets/presenter/body.png" alt="" />
+        <div id="pp-head">
+          <img id="pp-headimg" src="assets/presenter/head.png" alt="" />
+          <img id="pp-eyes-open" src="assets/presenter/eyes_open.png" alt="" />
+          <img id="pp-eyes-half" src="assets/presenter/eyes_half.png" alt="" style="opacity:0" />
+          <img id="pp-eyes-closed" src="assets/presenter/eyes_closed.png" alt="" style="opacity:0" />
+          <img id="pp-brows-neutral" src="assets/presenter/brows_neutral.png" alt="" />
+          <img id="pp-brows-up" src="assets/presenter/brows_up.png" alt="" style="opacity:0" />
+          <img id="pp-m-r" src="assets/presenter/mouth_rest.png" alt="" />
+          <img id="pp-m-m" src="assets/presenter/mouth_M.png" alt="" style="opacity:0" />
+          <img id="pp-m-b" src="assets/presenter/mouth_B.png" alt="" style="opacity:0" />
+          <img id="pp-m-a" src="assets/presenter/mouth_A.png" alt="" style="opacity:0" />
+          <img id="pp-m-e" src="assets/presenter/mouth_E.png" alt="" style="opacity:0" />
+          <img id="pp-m-o" src="assets/presenter/mouth_O.png" alt="" style="opacity:0" />
+          <img id="pp-stache" src="assets/presenter/mustache.png" alt="" />
+          <img id="pp-turban" src="assets/presenter/prop_turban.png" alt="" />
+        </div>
+        <img id="pp-mic" src="assets/presenter/prop_mic.png" alt="" />
+      </div>
+      <div id="pp-set" style="position:absolute;left:0;top:-10px;width:1080px;height:920px">
+        <img id="pp-desk" src="assets/presenter/prop_desk.png" alt="" style="position:absolute;left:0;top:0;width:1080px;height:920px;image-rendering:pixelated" />
+        <div id="pp-plate"><i id="pp-plate-dot"></i>VISH · LIVE</div>
+      </div>
+      <div id="pp-edge"></div>
+    </div>
+  </div>
+  <script>
+    (() => {
+      // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
+      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrreeaaaaaaaaaaaaaeeeeeaaeeaaoooorrrrroooaaaaaammrrrrrrrrrraaaaarrraaaarrrrrrreeeeaaaarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaooaaaaaabbrrrroommmaaaaaaaaammmmmrrrrrrrrrrrrrrrrrrrrrraaaaaaaaammmaaaaoooooaaaaaaaaaaeeaaooooooeeerrrrrrrrrrraaarrreeaaaaaaaaooeeeaaaaarrraaaaaaaarrrrrrrraaaaammrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaarrrrrrrrrrrrooaaaoooaaarrrrrooaaaaeeerrrraaaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaaeeeaaaaaaaaaaaoooaaaooooooooooorrrrraaaaaaaaaaaaaaaaaaaaeeeaaoorrraaaaaaaaaaoooooaaaaoobbbmmrrrrrrrrrrrraaammrrrrraaaaaarreeeooaaarrrrooooaaaaammmbboommmmmmrrrrrrrrrrrrrrrrraaaaaaeerrrrrrraaoooaaaaaaaaaaaaaaaarrrrrrrraaaaaaaaaaooommmaaaaaaabbbmmrrrrrrrrrrooooooaaaarrrrrrrrraaooeeaaaaeeerrrrrroooooaaaaaaaaoooooooeemmrrmmmrrrrrrrrrrrrrreeeaaaaaaaoooorrrraaooooeeaaaaaaammmmrrrrrrraaaabbbbrrrrrrrrrrrraaooaaaaaaaaaaaaaooaaarrrrrmmmaaaaaaaaaaeeeaaabbmmrrrrrrrrrrrrrrrrrraaaaaaaaarrrrraaaaaeeaaaooeeerrraaaaaaaaarrrraaaaaaaaaaaoooaaaaooooeeerrrrrrrrrrrrreeaaaaaooooaaaaoooeeaaaeeerreeaaooaaooorraaaooooeeaabbeeerrrrrrrrrrrrrrrrrraaaaaaaaarrrrrrrrrrrraaaaeeerrrraaaaaaaaoooaaaoooaaaammaaarrrraaaammmeeerrrrrrrrrrrrraaooooeeaaaaaaaaaaaaaaarrrrrrroooaaammmaaaaaaammeeeerrrrrrrrrrrrrrrrrrraaaarrraaeeeeooaaaarrrrraaaooooaaooorrraaaaaaoooaaeeeeeemmmmrrrrrrrrrrrrrraaaaaaaaooaaaaarrraaoooooaaooooooorrrrrrrrrooaaaarrmmmmmbboorrrrrrrrrraaaaaaaaeeeeaaoooaaaaaaaaaaaaammaaaaaooommmmmooaaaaammmaaaaaabbbmmrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7, 37.3], BROWS = [3.44, 11.44, 14.8, 20.003, 25.474, 29.848, 35.085], MOVES = [[7.0, -10, 0], [14.165, 0, 0], [20.053, 10, 0], [25.524, 0, 0], [29.898, 0, 10], [35.135, -10, 0], [39.22, 0, -10]];
+      const tl = gsap.timeline({ paused: true });
+      // hook mode: cut-out Vish (no background) with this reel's props (news desk + mic, or a wedding turban),
+      // jumping on every hard cut and optionally bouncing to the beat; the normal panel returns at the problem
+      const HOOK_END = 6.800, CUTS = [[0.0, 0, 1.0], [2.68, -150, 0.9], [4.16, 170, 0.88], [5.63, 0, 1.06]], PROPS = ["#pp-turban"], DANCE = true;
+      const ALL = ["#pp-desk", "#pp-mic", "#pp-plate", "#pp-turban"];
+      tl.set(ALL.filter((p) => !(HOOK_END > 0 && PROPS.includes(p))), { opacity: 0 }, 0);
+      if (HOOK_END > 0) {
+        tl.set("#pp-bg", { opacity: 0 }, 0); tl.set("#pp-edge", { opacity: 0 }, 0);
+        CUTS.forEach(([t, x, s]) => {
+          tl.set("#pp-sprite", { x, scale: s * 1.06 }, t);
+          tl.to("#pp-sprite", { scale: s, duration: 0.16, ease: "power3.out" }, t + 0.01);
+        });
+        if (PROPS.includes("#pp-plate")) tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
+        if (DANCE) {   // "balle balle": a bounce and a shoulder tilt on every beat (0.3 s at 100 bpm)
+          for (let t = 0, k = 0; t < HOOK_END - 0.3; t += 0.3, k++) {
+            tl.to("#pp-head", { y: -16, rotation: k % 2 ? 3 : -3, duration: 0.09, ease: "power2.out" }, t);
+            tl.to("#pp-head", { y: 0, rotation: 0, duration: 0.17, ease: "power2.in" }, t + 0.09);
+            tl.to("#pp-body", { y: -8, duration: 0.09, ease: "power2.out" }, t + 0.02);
+            tl.to("#pp-body", { y: 0, duration: 0.17, ease: "power2.in" }, t + 0.11);
+          }
+        }
+        tl.set("#pp-bg", { opacity: 1 }, HOOK_END); tl.set("#pp-edge", { opacity: 1 }, HOOK_END);
+        tl.set("#pp-sprite", { x: 0, scale: 1 }, HOOK_END);
+        tl.set(["#pp-head", "#pp-body"], { y: 0, rotation: 0 }, HOOK_END);
+        tl.set(PROPS, { opacity: 0 }, HOOK_END);
+      }
+      const $ = (id) => document.getElementById(id);
+      const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };
+      const eyes = { open: $("pp-eyes-open"), half: $("pp-eyes-half"), closed: $("pp-eyes-closed") };
+      const brows = { n: $("pp-brows-neutral"), u: $("pp-brows-up") };
+      const head = $("pp-head");
+
+      if (0.000 < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
+      else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 0.000);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 40.176 - 0.4);
+
+      function render() {
+        const t = tl.time();
+        const f = Math.max(0, Math.min(VIS.length - 1, Math.floor(t * FPS + 1e-6)));
+        const v = VIS[f];
+        for (const k in mouths) mouths[k].style.opacity = k === v ? 1 : 0;
+        let e = "open";
+        for (const b of BLINKS) {
+          const d = t - b;
+          if (d >= 0 && d < 0.034) e = "half"; else if (d >= 0.034 && d < 0.1) e = "closed"; else if (d >= 0.1 && d < 0.134) e = "half";
+        }
+        for (const k in eyes) eyes[k].style.opacity = k === e ? 1 : 0;
+        const up = BROWS.some((b) => t >= b && t < b + 0.75);
+        brows.u.style.opacity = up ? 1 : 0; brows.n.style.opacity = up ? 0 : 1;
+        let dx = 0, dy = 0;
+        for (const [mt, mx, my] of MOVES) if (t >= mt) { dx = mx; dy = my; }
+        head.style.translate = `${dx}px ${dy}px`;
+      }
+      const drive = { p: 0 };
+      tl.to(drive, { p: 1, duration: 49.400, ease: "none", onUpdate: render }, 0);
+      render();
+      window.__timelines["presenter"] = tl;
+    })();
+  </script>
+</template>

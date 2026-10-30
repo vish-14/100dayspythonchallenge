@@ -67,7 +67,7 @@ Score = sum of (1–5 × weight); the maximum is 50. Show the best 3 with their 
 | SaaS and startups | Support load, lead qualification | Support triage + draft replies, inbound lead enrichment and routing, churn-risk alerts |
 | Insurance agents and financial advisors | Renewals, KYC paperwork | Renewal reminders, document collection, meeting prep summaries, compliance-checked drafts |
 | Automotive dealers and service centres | Service reminders, lead follow-up | Service-due reminders, test-drive booking, lead follow-ups, job-done updates |
-| Events and wedding planners | Vendor coordination, client questions | Enquiry → package quote, vendor timeline reminders, client update digests |
+| Events and wedding planners, caterers, decorators, banquet halls | Season flood of WhatsApp enquiries (Nov–Feb), quotes, advances, vendor coordination | Instant enquiry reply with packages and open dates, quote drafts the owner approves, polite payment reminders, vendor group updates (reel: 2026-10-30 shaadi-season) |
 | NGOs and nonprofits | Donor follow-up, volunteers | Donor thank-you and receipts, volunteer scheduling, impact report drafts |
 | Retail shops and franchises | Stock, staff updates, offers | Low-stock alerts, daily sales digest, WhatsApp offers to opted-in customers |
 | Creators and personal brands | DMs, brand deals, content repurposing | DM triage, brand-deal inbox qualifier, long video → clips and captions |

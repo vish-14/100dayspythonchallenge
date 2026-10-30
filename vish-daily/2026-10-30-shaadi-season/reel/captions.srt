@@ -1,0 +1,112 @@
+1
+00:00:00,840 --> 00:00:02,740
+Shaadi ka season aa gaya!
+
+2
+00:00:02,750 --> 00:00:03,980
+Aur aapka WhatsApp?
+
+3
+00:00:04,220 --> 00:00:06,890
+200 unread enquiries!
+
+4
+00:00:06,890 --> 00:00:08,720
+Every family wants a date,
+
+5
+00:00:08,730 --> 00:00:10,100
+a package and a price,
+
+6
+00:00:10,100 --> 00:00:10,880
+today.
+
+7
+00:00:10,890 --> 00:00:11,860
+Reply late,
+
+8
+00:00:11,860 --> 00:00:13,040
+and they book the next
+
+9
+00:00:13,050 --> 00:00:14,055
+planner.
+
+10
+00:00:14,055 --> 00:00:15,440
+That's why I built an
+
+11
+00:00:15,450 --> 00:00:17,620
+AI agent for wedding planners,
+
+12
+00:00:17,620 --> 00:00:19,943
+with four connected workflows.
+
+13
+00:00:19,943 --> 00:00:21,840
+First, it replies to every
+
+14
+00:00:21,850 --> 00:00:24,000
+enquiry, with your packages
+
+15
+00:00:24,010 --> 00:00:25,440
+and open dates.
+
+16
+00:00:25,450 --> 00:00:27,380
+Second, it drafts the quote,
+
+17
+00:00:27,380 --> 00:00:28,720
+and you approve it before
+
+18
+00:00:28,730 --> 00:00:29,788
+it goes out.
+
+19
+00:00:29,788 --> 00:00:31,760
+Third, it sends polite payment
+
+20
+00:00:31,770 --> 00:00:33,840
+reminders, so advances come
+
+21
+00:00:33,850 --> 00:00:35,040
+in on time.
+
+22
+00:00:35,050 --> 00:00:37,040
+Fourth, it keeps every vendor
+
+23
+00:00:37,050 --> 00:00:40,266
+updated, from caterer to decorator.
+
+24
+00:00:40,266 --> 00:00:41,680
+Want this workflow built
+
+25
+00:00:41,690 --> 00:00:42,640
+for your business?
+
+26
+00:00:42,650 --> 00:00:44,980
+Follow me and comment "workflow",
+
+27
+00:00:44,980 --> 00:00:45,920
+and I'll send you
+
+28
+00:00:45,930 --> 00:00:47,900
+the details in your DMs.
+

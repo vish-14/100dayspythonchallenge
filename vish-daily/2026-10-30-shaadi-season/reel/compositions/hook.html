@@ -1,0 +1,215 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; transform-origin: 50% 45%; }
+    .big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+    /* F1 marigold */
+    #f1 { background: radial-gradient(ellipse at 50% 40%, #FFB021 0%, #F97316 70%, #D9480F 100%); }
+    .gar { position: absolute; top: -20px; width: 26px; display: flex; flex-direction: column; align-items: center; gap: 2px; transform-origin: 50% 0; }
+    .gar i { width: 26px; height: 26px; border-radius: 50%; background: #FFD43B; box-shadow: inset -4px -4px 0 rgba(0,0,0,.12); }
+    .gar i:nth-child(even) { background: #FF8C00; }
+    .gar b { width: 10px; height: 10px; border-radius: 50%; background: #E03131; }
+    #f1-l1 { top: 300px; font-size: 230px; color: var(--ink); }
+    #f1-l2 { top: 520px; font-size: 150px; color: #fff; text-shadow: 0 8px 0 rgba(11,16,22,.25); }
+    #f1-tag { position: absolute; left: 0; width: 1080px; top: 700px; text-align: center; }
+    #f1-tag span { display: inline-block; background: var(--ink); color: #FFD43B; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; padding: 10px 30px; border-radius: 14px; transform: rotate(-4deg); }
+    #f1-lights { position: absolute; left: 0; top: 1000px; width: 1080px; height: 40px; }
+    #f1-lights i { position: absolute; top: 0; width: 18px; height: 18px; border-radius: 50%; background: #FFF3BF; box-shadow: 0 0 18px 6px rgba(255,236,153,.8); }
+    #f1-dancers { position: absolute; left: 0; top: 1080px; width: 1080px; height: 600px; }
+    .dancer { position: absolute; width: 150px; height: 325px; transform-origin: 50% 100%; }
+    .dancer .pb { opacity: 0; }
+    #petals { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; pointer-events: none; }
+    #petals i { position: absolute; top: -60px; width: 22px; height: 14px; border-radius: 50%; }
+    .bokeh { position: absolute; left: 0; top: 1010px; width: 1080px; height: 910px;
+      background: radial-gradient(circle at 12% 30%, rgba(255,212,59,.35) 0 60px, transparent 61px), radial-gradient(circle at 88% 22%, rgba(240,101,149,.35) 0 80px, transparent 81px),
+                  radial-gradient(circle at 20% 75%, rgba(240,101,149,.28) 0 70px, transparent 71px), radial-gradient(circle at 82% 70%, rgba(255,212,59,.3) 0 90px, transparent 91px),
+                  radial-gradient(circle at 50% 95%, rgba(255,146,43,.25) 0 120px, transparent 121px); }
+    /* F2 question */
+    #f2 { background: #0B1016; }
+    #f2-l1 { top: 300px; font-size: 140px; color: var(--paper); }
+    #f2-l2 { top: 470px; font-size: 168px; color: #25D366; }
+    /* F3 phone flood */
+    #f3 { background: #111826; }
+    #f3-phone { position: absolute; left: 70px; top: 250px; width: 420px; height: 640px; border-radius: 44px; background: #0B1016; border: 10px solid #2A313D; overflow: hidden; }
+    #f3-top { position: absolute; left: 0; top: 0; width: 100%; height: 70px; background: #075E54; color: #fff; display: flex; align-items: center; padding: 0 22px; font-weight: 800; font-size: 24px; z-index: 2; font-family: 'Montserrat', sans-serif; }
+    #f3-feed { position: absolute; left: 0; top: 70px; width: 100%; }
+    .msg { margin: 10px 14px; padding: 12px 16px; background: #F5F5F7; border-radius: 16px; border-top-left-radius: 4px; font-size: 22px; font-weight: 600; color: #141A24; width: fit-content; max-width: 340px; }
+    .msg small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #5B6372; margin-bottom: 4px; }
+    #f3-count { position: absolute; left: 520px; top: 250px; width: 520px; height: 260px; }
+    #f3-count span { position: absolute; left: 0; top: 0; width: 520px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 240px; line-height: 1; color: #fff; opacity: 0; }
+    #f3-badge { position: absolute; left: 600px; top: 520px; width: 360px; text-align: center; background: #E3262B; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; padding: 10px 0; border-radius: 14px; }
+    #f3-enq { position: absolute; left: 520px; top: 620px; width: 520px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; color: #FFD43B; }
+    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hook-bg" class="panel bg-dark"></div>
+    <div id="stage">
+      <div id="f1" class="fr">
+        <div id="garlands"></div>
+        <div id="f1-l1" class="big fit" data-layout-allow-overlap>SHAADI</div>
+        <div id="f1-l2" class="big fit" data-layout-allow-overlap>SEASON!</div>
+        <div id="f1-tag"><span id="f1-tagspan">AA GAYA!</span></div>
+        <div id="f1-lights"></div>
+        <div id="f1-dancers"></div>
+      </div>
+      <div id="f2" class="fr">
+        <div class="bokeh"></div>
+        <div id="f2-l1" class="big fit" data-layout-allow-overlap>AUR AAPKA</div>
+        <div id="f2-l2" class="big fit" data-layout-allow-overlap>WHATSAPP?</div>
+      </div>
+      <div id="f3" class="fr">
+        <div class="bokeh"></div>
+        <div id="f3-phone"><div id="f3-top">WhatsApp · Enquiries</div><div id="f3-feed" data-layout-allow-overlap></div></div>
+        <div id="f3-count"></div>
+        <div id="f3-badge">UNREAD</div>
+        <div id="f3-enq">ENQUIRIES!</div>
+      </div>
+    </div>
+    <div id="petals"></div>
+    <div id="fl"></div>
+  </div>
+  <script>
+    (() => {
+      document.querySelectorAll("#root .fit").forEach((el) => {
+        let fs = parseFloat(getComputedStyle(el).fontSize);
+        const span = document.createElement("span"); span.textContent = el.textContent; span.style.whiteSpace = "nowrap";
+        el.textContent = ""; el.appendChild(span);
+        while (span.getBoundingClientRect().width > 980 && fs > 40) { fs -= 4; el.style.fontSize = fs + "px"; }
+      });
+      // garlands across the top of the marigold frame
+      const G = document.getElementById("garlands");
+      for (let g = 0; g < 9; g++) {
+        const d = document.createElement("div"); d.className = "gar"; d.style.left = (40 + g * 122) + "px";
+        const n = 4 + (g % 3);
+        for (let k = 0; k < n; k++) d.appendChild(document.createElement("i"));
+        d.appendChild(document.createElement("b")); G.appendChild(d);
+      }
+      // the flood of family messages
+      const MSG = [["Sharma family · 9:02 PM", "14 Dec free hai?"], ["Reddy family · 9:03 PM", "Package price please"], ["Khan family · 9:05 PM", "300 guests, veg menu?"],
+        ["Patel family · 9:06 PM", "Mehndi + sangeet dono?"], ["Iyer family · 9:08 PM", "Decor photos bhejo"], ["Gupta family · 9:09 PM", "Advance kitna?"],
+        ["Rao family · 9:11 PM", "21 Dec available?"], ["Singh family · 9:12 PM", "Call kar sakte ho?"], ["Das family · 9:14 PM", "Quote today pls"]];
+      const feed = document.getElementById("f3-feed");
+      MSG.forEach(([who, txt]) => { const m = document.createElement("div"); m.className = "msg"; m.innerHTML = "<small>" + who + "</small>" + txt; feed.appendChild(m); });
+      const CNT = [3, 11, 24, 38, 57, 76, 98, 121, 147, 168, 186, 200];
+      const cc = document.getElementById("f3-count");
+      CNT.forEach((v) => { const s = document.createElement("span"); s.textContent = v; cc.appendChild(s); });
+
+      // fairy lights, dancers (original silhouettes, two bhangra poses) and marigold petals
+      const FL = document.getElementById("f1-lights");
+      for (let i = 0; i < 24; i++) { const b = document.createElement("i"); b.style.left = (12 + i * 45) + "px"; b.style.top = (Math.sin(i / 3.8 * Math.PI) * 14 + 10) + "px"; FL.appendChild(b); }
+      const pose = (col, accent) => `
+        <svg viewBox="0 0 120 260" width="150" height="325">
+          <g class="pa"><circle cx="60" cy="40" r="22" fill="${col}"/><path d="M38 72 L82 72 L98 205 L22 205 Z" fill="${col}"/>
+            <path d="M38 76 Q60 96 82 76" stroke="${accent}" stroke-width="8" fill="none"/>
+            <rect x="40" y="200" width="16" height="56" rx="6" fill="${col}"/><rect x="64" y="200" width="16" height="56" rx="6" fill="${col}"/>
+            <path d="M44 82 L18 8" stroke="${col}" stroke-width="15" stroke-linecap="round"/><path d="M76 82 L102 8" stroke="${col}" stroke-width="15" stroke-linecap="round"/></g>
+          <g class="pb"><circle cx="60" cy="40" r="22" fill="${col}"/><path d="M38 72 L82 72 L98 205 L22 205 Z" fill="${col}"/>
+            <path d="M38 76 Q60 96 82 76" stroke="${accent}" stroke-width="8" fill="none"/>
+            <rect x="34" y="200" width="16" height="56" rx="6" fill="${col}" transform="rotate(10 42 200)"/><rect x="66" y="200" width="16" height="56" rx="6" fill="${col}" transform="rotate(-14 74 200)"/>
+            <path d="M44 82 L14 60 L30 18" stroke="${col}" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M76 82 L110 62" stroke="${col}" stroke-width="15" stroke-linecap="round"/></g>
+        </svg>`;
+      const DN = document.getElementById("f1-dancers");
+      [[0, 60, "#7A0F2E", "#FFD43B", 1.0], [140, 10, "#5B2A86", "#FF922B", 0.9], [275, 90, "#9C1A3C", "#FFD43B", 0.8],
+       [660, 90, "#9C1A3C", "#FFD43B", 0.8], [800, 10, "#5B2A86", "#FF922B", 0.9], [935, 60, "#7A0F2E", "#FFD43B", 1.0]].forEach(([x, y, c, a, sc]) => {
+        const d = document.createElement("div"); d.className = "dancer"; d.style.left = x + "px"; d.style.top = y + "px"; d.style.transform = `scale(${sc})`;
+        d.innerHTML = pose(c, a); DN.appendChild(d);
+      });
+      const PT = document.getElementById("petals");
+      for (let i = 0; i < 34; i++) { const p = document.createElement("i"); p.style.left = ((i * 211) % 1060) + "px"; p.style.background = i % 3 ? "#FF922B" : "#FFD43B"; PT.appendChild(p); }
+      const W = {"shaadi": 0.9, "shaadi_end": 1.28, "ka": 1.28, "ka_end": 1.5, "season": 1.52, "season_end": 2.0, "aa": 2.0, "aa_end": 2.64, "gaya": 2.64, "gaya_end": 2.74, "aur": 2.72, "aur_end": 2.88, "aapka": 2.88, "aapka_end": 3.28, "whatsapp": 3.44, "whatsapp_end": 3.68, "200": 4.28, "200_end": 4.36, "unread": 4.96, "unread_end": 5.6, "enquiries": 5.68, "enquiries_end": 6.8};
+      const D = 6.800;
+      const tl = gsap.timeline({ paused: true });
+      const F = ["#f1", "#f2", "#f3"];
+      const flash = (t, o = 0.8, d = 0.14) => tl.fromTo("#fl", { opacity: o }, { opacity: 0, duration: d, ease: "power2.out", immediateRender: false }, t);
+      const shake = (sel, t, amp = 16, n = 6) => {
+        for (let i = 0; i < n; i++) {
+          const a = amp * (1 - i / n);
+          tl.to(sel, { x: (i % 2 ? -1 : 1) * a, y: (i % 3 - 1) * a * 0.6, duration: 0.035, ease: "none" }, t + i * 0.035);
+        }
+        tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "none" }, t + n * 0.035);
+      };
+      const cut = (i, t, punch = 1.18, fl = 0.7, sh = 14) => {
+        F.forEach((f, j) => tl.set(f, { visibility: j === i ? "visible" : "hidden" }, t));
+        tl.fromTo(F[i], { scale: punch }, { scale: 1, duration: 0.28, ease: "power4.out", immediateRender: false }, t);
+        tl.to(F[i], { scale: 1.05, duration: 2.2, ease: "none" }, t + 0.3);
+        if (fl) flash(t, fl);
+        if (sh) shake(F[i], t + 0.08, sh);
+      };
+      // frame 0 is the thumbnail: SHAADI SEASON! fully readable, then it punches on every dhol hit
+      cut(0, 0, 1.0, 0, 0);
+      gsap.utils.toArray("#garlands .gar").forEach((g, i) => tl.fromTo(g, { rotation: -6 }, { rotation: 6, duration: 0.45, yoyo: true, repeat: 7, ease: "sine.inOut" }, 0.05 * (i % 3)));
+      [0, 0.45, 0.75, 0.9].forEach((t, k) => {
+        tl.fromTo("#f1-l1", { scale: 1 }, { scale: k === 3 ? 1.12 : 1.06, duration: 0.07, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, t);
+      });
+      [0.15, 0.3, 0.6].forEach((t) => tl.fromTo("#f1-l2", { scale: 1 }, { scale: 1.06, duration: 0.06, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, t));
+      shake("#f1", 0.9, 14, 6);
+      tl.fromTo("#f1-l2", { scale: 1 }, { scale: 1.1, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.season);
+      tl.fromTo("#f1-tag", { scale: 0, opacity: 0, rotation: -12 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.22, ease: "back.out(2.6)" }, W.aa - 0.03);
+      // dancers swap poses and bounce on every beat; petals rain through the marigold frame; fairy lights twinkle
+      const DS = gsap.utils.toArray("#f1-dancers .dancer");
+      for (let t = 0, k = 0; t < W.aur; t += 0.3, k++) {
+        DS.forEach((d, i) => {
+          const a = d.querySelector(".pa"), b = d.querySelector(".pb"), alt = (k + i) % 2;
+          tl.set(a, { opacity: alt ? 0 : 1 }, t); tl.set(b, { opacity: alt ? 1 : 0 }, t);
+          tl.to(d, { y: -22, duration: 0.09, ease: "power2.out" }, t); tl.to(d, { y: 0, duration: 0.17, ease: "power2.in" }, t + 0.09);
+        });
+      }
+      gsap.utils.toArray("#f1-lights i").forEach((b, i) => tl.fromTo(b, { opacity: 1 }, { opacity: 0.25, duration: 0.3, yoyo: true, repeat: 9, ease: "steps(1)" }, (i % 3) * 0.1));
+      gsap.utils.toArray("#petals i").forEach((p, i) => {
+        const t0 = (i % 12) * 0.22, dur = 1.8 + (i % 5) * 0.25;
+        tl.fromTo(p, { y: -60 - (i % 4) * 120, rotation: 0, x: 0 }, { y: 2000, rotation: 540 + i * 20, x: (i % 2 ? 60 : -60), duration: dur, ease: "none", immediateRender: false }, t0);
+      });
+      tl.set("#petals", { opacity: 0 }, W.aur - 0.04);
+      // "Aur aapka WhatsApp?"
+      cut(1, W.aur - 0.04, 1.3, 0.5, 12);
+      tl.fromTo("#f2-l2", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, W.whatsapp - 0.05);
+      shake("#f2", W.whatsapp + 0.1, 14, 5);
+      // "200 unread enquiries!": the phone floods, the counter races
+      cut(2, W["200"] - 0.12, 1.25, 0.6, 12);
+      const msgs = gsap.utils.toArray("#f3-feed .msg");
+      msgs.forEach((m, i) => tl.fromTo(m, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.12, ease: "power2.out", immediateRender: false }, W["200"] - 0.05 + i * 0.09));
+      tl.fromTo("#f3-feed", { y: 0 }, { y: -(msgs.length * 92 - 520), duration: msgs.length * 0.09 + 0.3, ease: "power1.in", immediateRender: false }, W["200"] + 0.25);
+      tl.set(msgs, { opacity: 0 }, 0);
+      const S = gsap.utils.toArray("#f3-count span");
+      S.forEach((s, i) => {
+        tl.set(s, { opacity: 1 }, W["200"] - 0.05 + i * 0.075);
+        if (i < S.length - 1) tl.set(s, { opacity: 0 }, W["200"] - 0.05 + (i + 1) * 0.075);
+      });
+      tl.fromTo("#f3-count", { scale: 1 }, { scale: 1.15, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W["200"] - 0.05 + (S.length - 1) * 0.075);
+      tl.fromTo("#f3-badge", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, W.unread - 0.05);
+      tl.set(["#f3-badge", "#f3-enq"], { opacity: 0 }, 0);
+      tl.fromTo("#f3-enq", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.22, ease: "power3.out", immediateRender: false }, W.enquiries - 0.05);
+      flash(W.enquiries, 0.5, 0.12); shake("#f3", W.enquiries + 0.05, 22, 8);
+      tl.fromTo("#f3-badge", { scale: 1 }, { scale: 1.1, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, W.enquiries + 0.3);
+      // flash cut into the problem
+      tl.fromTo("#f3", { scale: 1.05 }, { scale: 1.16, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);
+      tl.fromTo("#fl", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "power2.in", immediateRender: false }, D - 0.12);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

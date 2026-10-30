@@ -1,0 +1,91 @@
+{
+  "title": "The Wedding Season Playbook",
+  "kicker": "A practical guide for wedding planners, caterers, decorators and banquet halls",
+  "subtitle": "How to answer every family's enquiry, send quotes you approve, collect advances on time and keep every vendor in sync during the wedding season.",
+  "overview": {
+    "heading": "The four automations at a glance",
+    "intro": "Each automation runs on its own, and they share one record per event. Start with the instant reply: in peak season, the first planner to answer usually gets the call.",
+    "columns": ["Automation", "Starts when", "You approve"],
+    "rows": [
+      ["Reply to every enquiry", "A family messages on WhatsApp, Instagram or your website.", "The reply templates and package details, once."],
+      ["Draft the quote", "The family shares date, guest count and services.", "Every quote, before it is sent."],
+      ["Payment reminders", "An advance or balance is coming due.", "The reminder wording and schedule, once."],
+      ["Vendor updates", "A booking is confirmed or a detail changes.", "Which vendors hear about which changes."]
+    ]
+  },
+  "rules": {
+    "label": "What makes it reliable",
+    "heading": "Three rules that keep it working",
+    "items": [
+      {"title": "One record per event", "text": "Date, guests, package, payments and vendors live in one place, so nothing is copied by hand."},
+      {"title": "Clear rules", "text": "You decide what the AI may say, which dates it may offer and when it hands over to you."},
+      {"title": "You approve", "text": "Quotes, discounts and anything unusual come to you first. Every message is logged."}
+    ]
+  },
+  "workflows": [
+    {
+      "name": "Reply to every enquiry",
+      "goal": "Every family gets a warm, useful reply in minutes, even at night or in the middle of a function.",
+      "trigger": "A new message on WhatsApp Business, an Instagram DM or your website form.",
+      "steps": [
+        "Read the message: family name, date, guest count and what they want.",
+        "Check your calendar and reply with open dates and your packages.",
+        "Ask the next useful question: venue, events, budget.",
+        "Save the enquiry as a new event record and notify you."
+      ],
+      "tools": [["Channels", "WhatsApp Business, Instagram, website form"], ["Records and AI", "Google Sheets, Zoho CRM or HubSpot, with ChatGPT or Claude"], ["Automation", "Make, Zapier or n8n"]],
+      "approval": "replies use only the packages, prices and dates you approved. Anything else comes to you."
+    },
+    {
+      "name": "Draft the quote",
+      "goal": "Families get a clear quote quickly, and you still control every number.",
+      "trigger": "The family has shared date, guest count and the services they need.",
+      "steps": [
+        "Pick the matching package and add the requested services.",
+        "Draft the quote in your format with inclusions and terms.",
+        "Send it to you for approval, edits or a discount.",
+        "Send the approved quote to the family and set a follow-up."
+      ],
+      "tools": [["Documents", "Google Docs, Canva or your quote template"], ["AI", "ChatGPT or Claude, with your price list"], ["Approval", "WhatsApp or email to you"]],
+      "approval": "no quote reaches a family until you approve it."
+    },
+    {
+      "name": "Payment reminders",
+      "goal": "Advances and balances arrive on time, without awkward calls.",
+      "trigger": "An advance or balance is due within the days you set.",
+      "steps": [
+        "Check upcoming due dates every morning.",
+        "Send a polite reminder from your approved template, with the payment link.",
+        "Mark the payment as received when it arrives.",
+        "Tell you about anything still pending after the due date."
+      ],
+      "tools": [["Payments", "Razorpay, PhonePe or bank links"], ["Channel", "WhatsApp Business or email"], ["Records", "your event sheet or CRM"]],
+      "approval": "only the reminder templates you approved go out, and you handle anything sensitive personally."
+    },
+    {
+      "name": "Vendor updates",
+      "goal": "Caterer, decorator, photographer and DJ always have the latest details.",
+      "trigger": "A booking is confirmed or a detail changes: date, guest count, menu, timings.",
+      "steps": [
+        "Detect the change in the event record.",
+        "Write a short update for each vendor it affects.",
+        "Send it to the vendor or the event's vendor group.",
+        "Collect confirmations and flag anyone who has not replied."
+      ],
+      "tools": [["Messages", "WhatsApp groups or email"], ["Records", "Google Sheets or a CRM"], ["Automation", "Make, Zapier or n8n"]],
+      "approval": "you choose which changes go to which vendors, and big changes wait for you."
+    }
+  ],
+  "start": {
+    "label": "Your first steps",
+    "heading": "Start this week",
+    "intro": "Five small steps, no new software needed. Each one makes the first build faster.",
+    "items": [
+      {"lead": "List where enquiries come from:", "text": "WhatsApp, Instagram, website, referrals."},
+      {"lead": "Write your packages in one page,", "text": "with what each includes and a starting price."},
+      {"lead": "Mark your open dates", "text": "for the season in one calendar."},
+      {"lead": "Write three reply templates", "text": "you would be happy to send to any family."},
+      {"lead": "List your regular vendors", "text": "and how each one prefers to get updates."}
+    ]
+  }
+}

@@ -46,6 +46,8 @@ Vish is the on-screen persona of the Instagram page **@vish.workflows** (display
 | `scripts/guide/make_guide.py` | JSON → A4 PDF guide in the house style, with page PNGs and a link check (`render.js`, `guide.css` and bundled Inter fonts beside it) |
 | `scripts/make_news_sfx.py` | Regenerates the original police siren (wail → high-low-high yelps → wail) and the breaking-news sting |
 | `scripts/make_hindi_vo.py` | Natural Hindi line with AI4Bharat Indic Parler-TTS (needs `HF_TOKEN`); writes several takes to pick by ear |
+| `template/hooks/wedding-hook.html` | Optional festive opening: marigold frame, garlands, fairy lights, original bhangra silhouettes, petals; use with `"hook_mode"` and the turban prop |
+| `scripts/make_dhol_sfx.py` | Regenerates the original dhol intro and loop |
 | `template/hooks/breaking-news-hook.html` | Optional 7-frame breaking-news opening (hard cuts, strobe, slams, shakes); swap it in as `src/scenes/hook.html` |
 | `scripts/setup.sh` | One-time install and check of the toolchain and models in a fresh container |
 | `assets/content-log.template.md` | Starting point for `vish-daily/content-log.md` |

@@ -56,7 +56,7 @@ Brand colours around him: electric blue #2257EF, near-black #0B1016, off-white #
 4. `brows_neutral` | `brows_up`
 5. `mouth_rest` | `mouth_M` (pressed) | `mouth_B` (small) | `mouth_A` (open) | `mouth_E` (wide) | `mouth_O` (round)
 6. `mustache` (always on top)
-7. Optional props for the news-anchor hook: `prop_desk` (near-black desk with a red name plate, covers the lower torso) and `prop_mic` (desk mic with a red channel flag, in front of the chest, never over the face). Brand colours only; drawn in `make_sprite.py`.
+7. Optional props for the news-anchor hook: `prop_desk` (near-black desk with a red name plate, covers the lower torso) and `prop_mic` (desk mic with a red channel flag, in front of the chest, never over the face). Brand colours only; drawn in `make_sprite.py`. `prop_turban`: a wedding safa (saffron and red wraps, gold band on the forehead, jewelled kalgi with a plume, loose end on the right) for festive hooks; it sits above the brows (rows 3–26) so the face stays readable, and moves with the head layer.
 
 ## Animation rules
 

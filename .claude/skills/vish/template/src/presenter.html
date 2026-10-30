@@ -32,6 +32,7 @@
           <img id="pp-m-e" src="assets/presenter/mouth_E.png" alt="" style="opacity:0" />
           <img id="pp-m-o" src="assets/presenter/mouth_O.png" alt="" style="opacity:0" />
           <img id="pp-stache" src="assets/presenter/mustache.png" alt="" />
+          <img id="pp-turban" src="assets/presenter/prop_turban.png" alt="" />
         </div>
         <img id="pp-mic" src="assets/presenter/prop_mic.png" alt="" />
       </div>
@@ -47,20 +48,30 @@
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
       const VIS = {{VISEMES}}, FPS = {{FPS}}, BLINKS = {{BLINKS}}, BROWS = {{BROWS}}, MOVES = {{MOVES}};
       const tl = gsap.timeline({ paused: true });
-      // news-anchor hook: cut-out Vish at a desk (no background) jumping on every hard cut, then the normal panel returns
-      const HOOK_END = {{HOOK_END}}, CUTS = {{CUTS}};
+      // hook mode: cut-out Vish (no background) with this reel's props (news desk + mic, or a wedding turban),
+      // jumping on every hard cut and optionally bouncing to the beat; the normal panel returns at the problem
+      const HOOK_END = {{HOOK_END}}, CUTS = {{CUTS}}, PROPS = {{HOOK_PROPS}}, DANCE = {{DANCE}};
+      const ALL = ["#pp-desk", "#pp-mic", "#pp-plate", "#pp-turban"];
+      tl.set(ALL.filter((p) => !(HOOK_END > 0 && PROPS.includes(p))), { opacity: 0 }, 0);
       if (HOOK_END > 0) {
         tl.set("#pp-bg", { opacity: 0 }, 0); tl.set("#pp-edge", { opacity: 0 }, 0);
         CUTS.forEach(([t, x, s]) => {
           tl.set("#pp-sprite", { x, scale: s * 1.06 }, t);
           tl.to("#pp-sprite", { scale: s, duration: 0.16, ease: "power3.out" }, t + 0.01);
         });
-        tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
+        if (PROPS.includes("#pp-plate")) tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
+        if (DANCE) {   // "balle balle": a bounce and a shoulder tilt on every beat (0.3 s at 100 bpm)
+          for (let t = 0, k = 0; t < HOOK_END - 0.3; t += 0.3, k++) {
+            tl.to("#pp-head", { y: -16, rotation: k % 2 ? 3 : -3, duration: 0.09, ease: "power2.out" }, t);
+            tl.to("#pp-head", { y: 0, rotation: 0, duration: 0.17, ease: "power2.in" }, t + 0.09);
+            tl.to("#pp-body", { y: -8, duration: 0.09, ease: "power2.out" }, t + 0.02);
+            tl.to("#pp-body", { y: 0, duration: 0.17, ease: "power2.in" }, t + 0.11);
+          }
+        }
         tl.set("#pp-bg", { opacity: 1 }, HOOK_END); tl.set("#pp-edge", { opacity: 1 }, HOOK_END);
         tl.set("#pp-sprite", { x: 0, scale: 1 }, HOOK_END);
-        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, HOOK_END);
-      } else {
-        tl.set(["#pp-desk", "#pp-mic", "#pp-plate"], { opacity: 0 }, 0);
+        tl.set(["#pp-head", "#pp-body"], { y: 0, rotation: 0 }, HOOK_END);
+        tl.set(PROPS, { opacity: 0 }, HOOK_END);
       }
       const $ = (id) => document.getElementById(id);
       const mouths = { r: $("pp-m-r"), m: $("pp-m-m"), b: $("pp-m-b"), a: $("pp-m-a"), e: $("pp-m-e"), o: $("pp-m-o") };

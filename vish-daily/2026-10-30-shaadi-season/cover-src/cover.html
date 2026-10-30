@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:Montserrat,sans-serif;background:radial-gradient(ellipse at 50% 35%,#FFB021 0%,#F97316 65%,#D9480F 100%)}
+.gar{position:absolute;top:-20px;width:26px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.gar i{width:26px;height:26px;border-radius:50%;background:#FFD43B;box-shadow:inset -4px -4px 0 rgba(0,0,0,.12)}.gar i:nth-child(even){background:#FF8C00}
+.gar b{width:10px;height:10px;border-radius:50%;background:#E03131}
+.hl{position:absolute;left:0;width:1080px;text-align:center;font-weight:900;letter-spacing:-.03em;line-height:1}
+#l1{top:310px;font-size:205px;color:#0B1016}
+#l2{top:520px;font-size:150px;color:#fff;text-shadow:0 8px 0 rgba(11,16,22,.25)}
+#pill{position:absolute;top:720px;width:1080px;text-align:center}
+#pill span{display:inline-block;background:#0B1016;color:#FFD43B;font-weight:900;font-size:50px;padding:14px 34px;border-radius:16px}
+#sub{position:absolute;top:830px;width:1080px;text-align:center}
+#sub span{display:inline-block;background:#F5F5F7;color:#0B1016;font-weight:800;font-size:36px;padding:12px 28px;border-radius:999px}
+#sub em{font-style:normal;color:#2257EF}
+#lights{position:absolute;left:0;top:1000px;width:1080px;height:40px}
+#lights i{position:absolute;width:18px;height:18px;border-radius:50%;background:#FFF3BF;box-shadow:0 0 18px 6px rgba(255,236,153,.8)}
+#v{position:absolute;left:0;top:1000px;width:1080px;height:920px}
+#v img{position:absolute;left:0;top:0;width:1080px;height:920px;image-rendering:pixelated}
+</style></head><body>
+<div id="g"></div>
+<div id="l1" class="hl">SHAADI</div><div id="l2" class="hl">SEASON!</div>
+<div id="pill"><span>200 UNREAD ENQUIRIES?</span></div>
+<div id="sub"><span><em>AI agent</em> for wedding businesses</span></div>
+<div id="lights"></div>
+<div id="v"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/body.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/head.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/eyes_open.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/brows_up.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/mouth_E.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/mustache.png"><img src="file:///home/user/100dayspythonchallenge/vish-daily/2026-10-30-shaadi-season/reel/assets/presenter/prop_turban.png"></div>
+<script>
+const G=document.getElementById('g');for(let g=0;g<9;g++){const d=document.createElement('div');d.className='gar';d.style.left=(40+g*122)+'px';for(let k=0;k<4+(g%3);k++)d.appendChild(document.createElement('i'));d.appendChild(document.createElement('b'));G.appendChild(d);}
+const L=document.getElementById('lights');for(let i=0;i<24;i++){const b=document.createElement('i');b.style.left=(12+i*45)+'px';b.style.top=(Math.sin(i/3.8*Math.PI)*14+10)+'px';L.appendChild(b);}
+</script>
+</body></html>

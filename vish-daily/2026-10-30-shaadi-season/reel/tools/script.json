@@ -1,0 +1,53 @@
+[
+ {
+  "id": "hook",
+  "label": "00 / SHAADI SEASON",
+  "say": "शादी का सीज़न आ गया! और आपका व्हाट्सऐप? दो सौ अनरेड इंक्वायरीज़!",
+  "text": "Shaadi ka season aa gaya! Aur aapka WhatsApp? 200 unread enquiries!",
+  "lang": "hi",
+  "speed": 0.95
+ },
+ {
+  "id": "problem",
+  "label": "00 / THE PROBLEM",
+  "say": "Every family wants a date, a package and a price, today. Reply late, and they book the next planner.",
+  "text": "Every family wants a date, a package and a price, today. Reply late, and they book the next planner."
+ },
+ {
+  "id": "solution",
+  "label": "00 / THE SOLUTION",
+  "say": "That's why I built an AI agent for wedding planners, with four connected workflows.",
+  "text": "That's why I built an AI agent for wedding planners, with four connected workflows."
+ },
+ {
+  "id": "a1",
+  "label": "01 / INSTANT REPLY",
+  "say": "First, it replies to every enquiry, with your packages and open dates.",
+  "text": "First, it replies to every enquiry, with your packages and open dates."
+ },
+ {
+  "id": "a2",
+  "label": "02 / QUOTE",
+  "say": "Second, it drafts the quote, and you approve it before it goes out.",
+  "text": "Second, it drafts the quote, and you approve it before it goes out."
+ },
+ {
+  "id": "a3",
+  "label": "03 / PAYMENTS",
+  "say": "Third, it sends polite payment reminders, so advances come in on time.",
+  "text": "Third, it sends polite payment reminders, so advances come in on time."
+ },
+ {
+  "id": "a4",
+  "label": "04 / VENDORS",
+  "say": "Fourth, it keeps every vendor updated, from caterer to decorator.",
+  "text": "Fourth, it keeps every vendor updated, from caterer to decorator."
+ },
+ {
+  "id": "cta",
+  "label": "06 / YOUR TURN",
+  "say": "Want this workflow built for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
+  "text": "Want this workflow built for your business? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
+  "speed": 1.0
+ }
+]

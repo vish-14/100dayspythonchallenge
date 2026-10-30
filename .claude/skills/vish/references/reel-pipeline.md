@@ -47,6 +47,12 @@ npx hyperframes render -q delivery --fps 30 -o vish_reel.mp4
 - `src/presenter.html`: Vish's panel, lip sync, blinks, brows, head shifts. Layers live in `assets/presenter/`; regenerate them with `scripts/make_sprite.py` from this skill.
 - `src/scenes/cta.html`: the follow + comment WORKFLOW ending (avatar at `assets/brand/avatar.png`).
 
+## Festive / themed hook mode (cut-out Vish with props)
+
+Set `"hook_mode"` in `project.config.json` to make Vish a cut-out (no blue panel) during the hook, wearing props and jumping on hard cuts, with his normal panel back at the problem:
+`"hook_mode": {"props": ["#pp-turban"], "dance": true, "cuts": [[0.0, 0, 0, 1.0], ["hook:Aur", -0.04, -150, 0.9], ["hook:200", -0.12, 170, 0.88]]}` (each cut is a time or a "scene:word", an offset, an x shift and a scale). `"dance": true` adds a bounce and a head tilt on every 0.3 s beat ("balle balle"). Props: `#pp-turban` (wedding safa), or the news set `#pp-desk`, `#pp-mic`, `#pp-plate` (or simply `"anchor_hook": true`). The hook frames must then be full height (1920) so there is a scene behind him.
+- **Wedding version (30 Oct, "Shaadi season"):** `template/hooks/wedding-hook.html`. A marigold frame with garlands, a blinking fairy-light string, six original bhangra silhouettes switching poses on the beat and falling marigold petals; then dark festive frames with bokeh lights. Sound: the original `dhol-intro` and a quiet `dhol-loop` under the voice (`scripts/make_dhol_sfx.py`), with `LEAD = 0.9` so the dhol lands before the voice.
+
 ## Breaking-news hook (optional, for low-reach periods)
 
 Used in the 29 Oct short cut after the first reel got little reach from outside the network. The final version (v9) is the reference: `vish-daily/2026-10-29-speed-to-lead/reel-short/`.
