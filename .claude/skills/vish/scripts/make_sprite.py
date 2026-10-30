@@ -226,6 +226,44 @@ def turban():
 
 save(turban(), "prop_turban")
 
+
+# wedding dhol for festive hooks: a barrel drum slung across the chest, plus two sticks (thick dagga for the bass head on
+# the left, thin tilli cane for the treble head on the right) drawn as their own layers so they can strike on the beat
+D = {"wood": (150, 52, 24, 255), "wood_dk": (110, 34, 16, 255), "wood_lt": (190, 80, 36, 255), "skin": (246, 228, 190, 255),
+     "skin_dk": (214, 190, 146, 255), "rope": (242, 201, 76, 255), "strap": (201, 42, 42, 255), "stick": (120, 72, 40, 255), "cane": (214, 176, 110, 255)}
+
+
+def dhol():
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.polygon([(30, 66), (36, 66), (78, 82), (72, 82)], fill=D["strap"])        # strap from the left shoulder
+    d.rounded_rectangle((26, 72, 82, 92), radius=6, fill=D["wood"])              # barrel
+    d.rectangle((28, 74, 80, 76), fill=D["wood_lt"])                             # top highlight
+    d.rectangle((28, 89, 80, 92), fill=D["wood_dk"])
+    for x in range(32, 78, 6):                                                   # gold rope lacing in a zigzag
+        d.line((x, 74, x + 3, 90), fill=D["rope"]); d.line((x + 3, 90, x + 6, 74), fill=D["rope"])
+    d.ellipse((18, 70, 32, 92), fill=D["skin"]); d.ellipse((21, 74, 29, 88), fill=D["skin_dk"])   # bass head (left)
+    d.ellipse((77, 72, 89, 92), fill=D["skin"]); d.ellipse((80, 76, 86, 88), fill=D["skin_dk"])   # treble head (right)
+    d.ellipse((17, 69, 33, 93), outline=D["rope"]); d.ellipse((76, 71, 90, 93), outline=D["rope"])
+    return outline(im)
+
+
+def dagga():   # thick curved bass stick, pivot near the bottom-left (hand) at (10, 90)
+    im = canvas(); d = ImageDraw.Draw(im)
+    pts = [(10, 90), (12, 86), (14, 82), (17, 79), (20, 77), (23, 76)]
+    for i in range(len(pts) - 1):
+        d.line((pts[i], pts[i + 1]), fill=D["stick"], width=3)
+    d.ellipse((21, 74, 26, 79), fill=D["stick"])
+    return outline(im)
+
+
+def tilli():   # thin straight cane, pivot near the bottom-right (hand) at (100, 90)
+    im = canvas(); d = ImageDraw.Draw(im)
+    d.line((100, 90, 86, 74), fill=D["cane"], width=2)
+    return outline(im)
+
+
+save(dhol(), "prop_dhol"); save(dagga(), "prop_dagga"); save(tilli(), "prop_tilli")
+
 # ---------------------------------------------------------------- previews
 if len(sys.argv) > 2:
     tiles = []

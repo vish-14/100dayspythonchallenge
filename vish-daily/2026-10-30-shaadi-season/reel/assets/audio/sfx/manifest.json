@@ -118,5 +118,10 @@
   "file": "dhol-loop.mp3",
   "description": "Original dhol groove (synthesised), 4 bars at 100 bpm, to sit under a voice at low volume.",
   "duration": 5.3
+ },
+ "dhol-baraat": {
+  "file": "dhol-baraat.mp3",
+  "description": "AI-generated baraat dhol (MusicGen, picked by the user), 83 bpm, first hit 0.204 s; stops dead at 6.05 s on \"aur\".",
+  "duration": 6.05
  }
 }

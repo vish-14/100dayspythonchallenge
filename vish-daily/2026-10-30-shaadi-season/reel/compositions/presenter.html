@@ -59,6 +59,9 @@
           <img id="pp-turban" src="assets/presenter/prop_turban.png" alt="" />
         </div>
         <img id="pp-mic" src="assets/presenter/prop_mic.png" alt="" />
+        <img id="pp-dhol" src="assets/presenter/prop_dhol.png" alt="" />
+        <img id="pp-dagga" src="assets/presenter/prop_dagga.png" alt="" style="transform-origin:100px 900px" />
+        <img id="pp-tilli" src="assets/presenter/prop_tilli.png" alt="" style="transform-origin:1000px 900px" />
       </div>
       <div id="pp-set" style="position:absolute;left:0;top:-10px;width:1080px;height:920px">
         <img id="pp-desk" src="assets/presenter/prop_desk.png" alt="" style="position:absolute;left:0;top:0;width:1080px;height:920px;image-rendering:pixelated" />
@@ -70,12 +73,12 @@
   <script>
     (() => {
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
-      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrreeaaaaaaaaaaaaaeeeeeaaeeaaoooorrrrroooaaaaaammrrrrrrrrrraaaaarrraaaarrrrrrreeeeaaaarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrraaooaaaaaabbrrrroommmaaaaaaaaammmmmrrrrrrrrrrrrrrrrrrrrrraaaaaaaaammmaaaaoooooaaaaaaaaaaeeaaooooooeeerrrrrrrrrrraaarrreeaaaaaaaaooeeeaaaaarrraaaaaaaarrrrrrrraaaaammrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaarrrrrrrrrrrrooaaaoooaaarrrrrooaaaaeeerrrraaaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaaeeeaaaaaaaaaaaoooaaaooooooooooorrrrraaaaaaaaaaaaaaaaaaaaeeeaaoorrraaaaaaaaaaoooooaaaaoobbbmmrrrrrrrrrrrraaammrrrrraaaaaarreeeooaaarrrrooooaaaaammmbboommmmmmrrrrrrrrrrrrrrrrraaaaaaeerrrrrrraaoooaaaaaaaaaaaaaaaarrrrrrrraaaaaaaaaaooommmaaaaaaabbbmmrrrrrrrrrrooooooaaaarrrrrrrrraaooeeaaaaeeerrrrrroooooaaaaaaaaoooooooeemmrrmmmrrrrrrrrrrrrrreeeaaaaaaaoooorrrraaooooeeaaaaaaammmmrrrrrrraaaabbbbrrrrrrrrrrrraaooaaaaaaaaaaaaaooaaarrrrrmmmaaaaaaaaaaeeeaaabbmmrrrrrrrrrrrrrrrrrraaaaaaaaarrrrraaaaaeeaaaooeeerrraaaaaaaaarrrraaaaaaaaaaaoooaaaaooooeeerrrrrrrrrrrrreeaaaaaooooaaaaoooeeaaaeeerreeaaooaaooorraaaooooeeaabbeeerrrrrrrrrrrrrrrrrraaaaaaaaarrrrrrrrrrrraaaaeeerrrraaaaaaaaoooaaaoooaaaammaaarrrraaaammmeeerrrrrrrrrrrrraaooooeeaaaaaaaaaaaaaaarrrrrrroooaaammmaaaaaaammeeeerrrrrrrrrrrrrrrrrrraaaarrraaeeeeooaaaarrrrraaaooooaaooorrraaaaaaoooaaeeeeeemmmmrrrrrrrrrrrrrraaaaaaaaooaaaaarrraaoooooaaooooooorrrrrrrrrooaaaarrmmmmmbboorrrrrrrrrraaaaaaaaeeeeaaoooaaaaaaaaaaaaammaaaaaooommmmmooaaaaammmaaaaaabbbmmrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7, 37.3], BROWS = [3.44, 11.44, 14.8, 20.003, 25.474, 29.848, 35.085], MOVES = [[7.0, -10, 0], [14.165, 0, 0], [20.053, 10, 0], [25.524, 0, 0], [29.898, 0, 10], [35.135, -10, 0], [39.22, 0, -10]];
+      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrreeeaaaaooaaaaaaaaaaaammmmmmeeaaaooorrrrraaaaoooaabbeeemmrrrrrrrrrrrrrrooaaaaaaaaoooaaaooorrrrreeaaaaeeaaaaaaarrrrraaaaaaaaaaarrrrrrrrrrrrrrrraarrrrrrraaaaarrraaaeeeeeeeerrrooooaaaaeeaaaaaarrrrrrrrrrrrrrrrrrrrraaaaaaaaooaaaaarrrrrrrraaaaoooooaaabbbbbooommaaaaaaaaaeemmmmmmrrrrrrrrrrrrrrrrrrrrraaaaaaaaammmaaaaaaaooaaaaaaaaaaeeeeoooaaaeeerrrrrrrrrrrrrrrrreeaaaaaaaaooeeeeeeeerrmmaaaaaaeerrrrrrraaaeemmrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaarrrrrrrrrrraaooaaoooooorrrraaooaaaaaarrrraaaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaaeeeaaaaaaaaaaaoooaaaoooooooaaoorrrrraaaaaaaaaaaaabbbaaaaaeeaaoorrrraaooaaaaaooooooaaaaabbbmmrrrrrrrrrrrraaammrrrrraaaaaarrrraaaaaarrrrooooaaaarrmmmmmmmmmmmmrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrraaaaaaaaaaooommaaaaaaaabbbmmrrrrrrrrrrrrrrraaaaarrrreeeeeeeooeeaaaaeeerrrrraaaaaaaaaaaaaaoooooaaeemmrrmmmrrrrrrrrrrrrrreeeaaaaaaaaoooorrrraaoooooaaaaaaammeeeeaaaaaaaaabbbbrrrrrrrrrrrraaooooaaaarrrraaaooaaaaaaaaaaaaaaaaoooaaeeeaaaaammrrrrrrrrrrrrrrrrrraaaaaaaoorrrrrrrrmmeeaaaooeeerrraaaaaaaaarrrraaaooooooaaoooaaaaooooeeerrrrrrrrrrrrrrraaaaaooooaaaaaaeeeaaaeeerrrraaooaaaaarraaaooooeeaaaaeeerrrrrrrrrrrrrrrrrraaaaaaaaarrrrrraaaaaaaaooeeerrrraaaaaaaaaaaaaaoooaaaaaaaaarrrraaaammeeemmrrrrrrrrrrrraaooooeeaaaammaaaaaaaaarrrrrraaooaaaaaaaaaaaaaaaeeeerrrrrrrrrrrrrrrrrrraaaaaaaaaeeeeooaaaarrrrraaaaaaaaaooorrraaaaaaaaaaaeeeoooommmmrrrrrrrrrrrrraaaaaaaaooaaaaaarraaoooooaaaaabbbbrrrrrrrrrrraaaaaammmmmbbbbbrrrrrrrrrrrraaaaaeeeeaaaooaaaaaaooooaaaaaaaaaaooommrrrooaaaaooooaaaaaabbbbrrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7, 37.3, 40.4], BROWS = [7.28, 15.76, 19.04, 24.276, 29.747, 34.122, 39.359], MOVES = [[11.274, -10, 0], [18.439, 0, 0], [24.326, 10, 0], [29.797, 0, 0], [34.172, 0, 10], [39.409, -10, 0], [43.46, 0, -10]];
       const tl = gsap.timeline({ paused: true });
-      // hook mode: cut-out Vish (no background) with this reel's props (news desk + mic, or a wedding turban),
+      // hook mode: cut-out Vish (no background) with this reel's props (news desk + mic, or a wedding turban + dhol),
       // jumping on every hard cut and optionally bouncing to the beat; the normal panel returns at the problem
-      const HOOK_END = 6.800, CUTS = [[0.0, 0, 1.0], [2.68, -150, 0.9], [4.16, 170, 0.88], [5.63, 0, 1.06]], PROPS = ["#pp-turban"], DANCE = true;
-      const ALL = ["#pp-desk", "#pp-mic", "#pp-plate", "#pp-turban"];
+      const HOOK_END = 11.074, CUTS = [[0.0, 0, 1.0], [1.45, -150, 0.9], [3.63, 170, 0.86], [4.51, -170, 0.86], [5.23, 0, 0.95], [6.04, -150, 0.9], [8.2, 170, 0.88], [9.79, 0, 1.06]], PROPS = ["#pp-turban", "#pp-dhol", "#pp-dagga", "#pp-tilli"], DANCE = [0.204, 0.36];
+      const ALL = ["#pp-desk", "#pp-mic", "#pp-plate", "#pp-turban", "#pp-dhol", "#pp-dagga", "#pp-tilli"];
       tl.set(ALL.filter((p) => !(HOOK_END > 0 && PROPS.includes(p))), { opacity: 0 }, 0);
       if (HOOK_END > 0) {
         tl.set("#pp-bg", { opacity: 0 }, 0); tl.set("#pp-edge", { opacity: 0 }, 0);
@@ -84,17 +87,24 @@
           tl.to("#pp-sprite", { scale: s, duration: 0.16, ease: "power3.out" }, t + 0.01);
         });
         if (PROPS.includes("#pp-plate")) tl.to("#pp-plate-dot", { opacity: 0.2, duration: 0.3, yoyo: true, repeat: Math.max(1, Math.floor(HOOK_END / 0.3) - 1), ease: "steps(1)" }, 0);
-        if (DANCE) {   // "balle balle": a bounce and a shoulder tilt on every beat (0.3 s at 100 bpm)
-          for (let t = 0, k = 0; t < HOOK_END - 0.3; t += 0.3, k++) {
-            tl.to("#pp-head", { y: -16, rotation: k % 2 ? 3 : -3, duration: 0.09, ease: "power2.out" }, t);
-            tl.to("#pp-head", { y: 0, rotation: 0, duration: 0.17, ease: "power2.in" }, t + 0.09);
-            tl.to("#pp-body", { y: -8, duration: 0.09, ease: "power2.out" }, t + 0.02);
-            tl.to("#pp-body", { y: 0, duration: 0.17, ease: "power2.in" }, t + 0.11);
+        if (DANCE) {   // "balle balle": a bounce and a shoulder tilt on every half beat; with a dhol, the sticks strike too
+          const [T0, P] = DANCE, drum = PROPS.includes("#pp-dagga"), torso = ["#pp-body", ...PROPS.filter((q) => ["#pp-dhol", "#pp-dagga", "#pp-tilli"].includes(q))];
+          if (drum) { tl.set("#pp-dagga", { rotation: -28 }, 0); tl.set("#pp-tilli", { rotation: 30 }, 0); }
+          for (let t = T0 % P, k = 0; t < HOOK_END - P; t += P, k++) {
+            tl.to("#pp-head", { y: -16, rotation: k % 2 ? 3 : -3, duration: P * 0.3, ease: "power2.out" }, t);
+            tl.to("#pp-head", { y: 0, rotation: 0, duration: P * 0.55, ease: "power2.in" }, t + P * 0.3);
+            tl.to(torso, { y: -8, duration: P * 0.3, ease: "power2.out" }, t + 0.02);
+            tl.to(torso, { y: 0, duration: P * 0.55, ease: "power2.in" }, t + 0.02 + P * 0.3);
+            if (drum) {   // dagga (bass) on the beat, tilli (treble) on the off-beat; each lands exactly on its hit
+              const st = k % 2 ? "#pp-tilli" : "#pp-dagga", up = k % 2 ? 30 : -28;
+              tl.to(st, { rotation: up * 0.15, duration: 0.05, ease: "power3.in" }, t - 0.05);
+              tl.to(st, { rotation: up, duration: P * 1.6, ease: "power2.out" }, t);
+            }
           }
         }
         tl.set("#pp-bg", { opacity: 1 }, HOOK_END); tl.set("#pp-edge", { opacity: 1 }, HOOK_END);
         tl.set("#pp-sprite", { x: 0, scale: 1 }, HOOK_END);
-        tl.set(["#pp-head", "#pp-body"], { y: 0, rotation: 0 }, HOOK_END);
+        tl.set(["#pp-head", "#pp-body", "#pp-dhol", "#pp-dagga", "#pp-tilli"], { y: 0, rotation: 0 }, HOOK_END);
         tl.set(PROPS, { opacity: 0 }, HOOK_END);
       }
       const $ = (id) => document.getElementById(id);
@@ -105,7 +115,7 @@
 
       if (0.000 < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
       else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 0.000);
-      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 40.176 - 0.4);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 44.450 - 0.4);
 
       function render() {
         const t = tl.time();
@@ -125,7 +135,7 @@
         head.style.translate = `${dx}px ${dy}px`;
       }
       const drive = { p: 0 };
-      tl.to(drive, { p: 1, duration: 49.400, ease: "none", onUpdate: render }, 0);
+      tl.to(drive, { p: 1, duration: 52.500, ease: "none", onUpdate: render }, 0);
       render();
       window.__timelines["presenter"] = tl;
     })();

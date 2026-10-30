@@ -35,6 +35,10 @@ att = 1 - np.exp(-1 / (0.06 * sr)); rel = 1 - np.exp(-1 / (0.35 * sr))
 g = np.empty_like(target); acc = target[0]
 for i, tg in enumerate(target):
     acc += (att if tg < acc else rel) * (tg - acc); g[i] = acc
+# optional "music_from": "<scene id>" keeps the bed silent until that scene (e.g. while a dhol carries the hook)
+if A.get("music_from"):
+    t0 = next(x["vo_start"] for x in json.load(open(P("tools", "vo_scenes.json"))) if x["id"] == A["music_from"]) - 0.5
+    g *= np.clip((t_music - t0) / 0.4, 0, 1)
 bed = music * g[:, None]
 sf.write(P(cfg["assets"]["music_bed"]), bed, sr)
 print("music bed:", round(len(bed) / sr, 2), "s; ducked share", round(float((mask > 0.5).mean()), 2))

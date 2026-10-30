@@ -145,7 +145,8 @@ moves.sort()
 # hook mode (optional): a cut-out presenter during the hook, with props, hard-cut jumps and an optional dance.
 # "anchor_hook": true  -> news desk + mic + plate, cuts on the breaking-news words
 # "hook_mode": {"props": ["#pp-turban"], "cuts": [[time or "scene:word", offset, x, scale], ...], "dance": true}
-hook_cuts, hook_end, hook_props, dance = [], 0, [], False
+#   "dance" may also be {"t0": time or "scene:word", "period": s} to bounce (and strike the dhol sticks) on the music's beat
+hook_cuts, hook_end, hook_props, dance = [], 0, [], None
 def _w(r, d=0.0):
     try: return round((r if isinstance(r, (int, float)) else abs_word(r)) + d, 3)
     except KeyError: return None
@@ -157,13 +158,16 @@ if CFG.get("anchor_hook"):
 elif CFG.get("hook_mode"):
     hm = CFG["hook_mode"]
     hook_cuts = [[_w(r, d), x, s] for r, d, x, s in hm.get("cuts", []) if _w(r, d) is not None]
-    hook_end, hook_props, dance = win["problem"][0], hm.get("props", []), bool(hm.get("dance"))
+    hook_end, hook_props = win["problem"][0], hm.get("props", [])
+    dv = hm.get("dance")
+    if isinstance(dv, dict): dance = [_w(dv.get("t0", 0.0)) or 0.0, float(dv.get("period", 0.3))]
+    elif dv: dance = [0.0, 0.3]
 src = open(P("src", "presenter.html")).read()
 pres = (src.replace("{{BASE_CSS}}", BASE_CSS.replace("%VARS%", css_vars()))
         .replace("{{VISEMES}}", json.dumps(vis)).replace("{{FPS}}", str(FPS))
         .replace("{{BLINKS}}", json.dumps(blinks)).replace("{{BROWS}}", json.dumps(brow_up))
         .replace("{{MOVES}}", json.dumps(moves)).replace("{{IN}}", f"{pres_in:.3f}").replace("{{OUT}}", f"{pres_out:.3f}")
-        .replace("{{DUR}}", f"{DUR:.3f}").replace("{{HOOK_END}}", f"{hook_end:.3f}").replace("{{CUTS}}", json.dumps(hook_cuts)).replace("{{HOOK_PROPS}}", json.dumps(hook_props)).replace("{{DANCE}}", "true" if dance else "false")
+        .replace("{{DUR}}", f"{DUR:.3f}").replace("{{HOOK_END}}", f"{hook_end:.3f}").replace("{{CUTS}}", json.dumps(hook_cuts)).replace("{{HOOK_PROPS}}", json.dumps(hook_props)).replace("{{DANCE}}", json.dumps(dance))
         .replace("{{PLATE}}", html.escape(CFG.get("anchor_plate", "VISH · LIVE"))))
 open(P("compositions", "presenter.html"), "w").write(pres)
 

@@ -57,7 +57,7 @@
   </div>
   <script>
     (() => {
-      const W = {"third": 0.15, "third_end": 0.622, "it": 0.622, "it_end": 0.782, "sends": 0.782, "sends_end": 1.182, "polite": 1.182, "polite_end": 1.662, "payment": 1.662, "payment_end": 2.062, "reminders": 2.062, "reminders_end": 2.862, "so": 2.862, "so_end": 3.182, "advances": 3.182, "advances_end": 3.902, "come": 3.902, "come_end": 4.142, "in": 4.142, "in_end": 4.382, "on": 4.382, "on_end": 4.702, "time": 4.702, "time_end": 5.342};
+      const W = {"third": 0.15, "third_end": 0.588, "it": 0.588, "it_end": 0.828, "sends": 0.828, "sends_end": 1.148, "polite": 1.148, "polite_end": 1.628, "payment": 1.628, "payment_end": 2.108, "reminders": 2.108, "reminders_end": 2.828, "so": 2.828, "so_end": 3.148, "advances": 3.148, "advances_end": 3.948, "come": 3.948, "come_end": 4.108, "in": 4.108, "in_end": 4.348, "on": 4.348, "on_end": 4.668, "time": 4.668, "time_end": 5.308};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
       tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.payment - 0.06);
@@ -72,7 +72,7 @@
       tl.to("#a3-due", { rotationX: 90, opacity: 0, duration: 0.15, ease: "power2.in" }, W.come - 0.1);
       tl.fromTo("#a3-paid", { rotationX: -90, opacity: 0 }, { rotationX: 0, opacity: 1, duration: 0.2, ease: "power2.out", immediateRender: false }, W.come + 0.05);
       tl.to("#a3-pay", { boxShadow: "0 0 0 6px #2257EF, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.time);
-      tl.fromTo("#a3-prog", { scaleX: 0.6012 }, { scaleX: 0.7072, duration: 5.237, ease: "none" }, 0);
+      tl.fromTo("#a3-prog", { scaleX: 0.6471 }, { scaleX: 0.7468, duration: 5.237, ease: "none" }, 0);
       window.__timelines["a3"] = tl;
     })();
   </script>

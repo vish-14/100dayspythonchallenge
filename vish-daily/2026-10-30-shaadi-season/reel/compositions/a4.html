@@ -49,7 +49,7 @@
   </div>
   <script>
     (() => {
-      const W = {"fourth": 0.15, "fourth_end": 0.665, "it": 0.665, "it_end": 0.905, "keeps": 0.905, "keeps_end": 1.225, "every": 1.225, "every_end": 1.545, "vendor": 1.545, "vendor_end": 2.105, "updated": 2.105, "updated_end": 2.905, "from": 2.905, "from_end": 3.145, "caterer": 3.145, "caterer_end": 3.945, "to": 3.945, "to_end": 4.185, "decorator": 4.185, "decorator_end": 5.225};
+      const W = {"fourth": 0.15, "fourth_end": 0.711, "it": 0.711, "it_end": 0.871, "keeps": 0.871, "keeps_end": 1.271, "every": 1.271, "every_end": 1.591, "vendor": 1.591, "vendor_end": 2.071, "updated": 2.071, "updated_end": 2.711, "from": 2.871, "from_end": 3.111, "caterer": 3.111, "caterer_end": 3.831, "to": 3.991, "to_end": 4.151, "decorator": 4.151, "decorator_end": 5.271};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#a4-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.fourth - 0.04);
       tl.fromTo("#a4-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.vendor - 0.06);
@@ -62,7 +62,7 @@
         tl.fromTo(`#a4-k${i + 1}`, { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, t);
       });
       tl.to("#a4-g", { boxShadow: "0 0 0 6px #F5F5F7, 0 28px 60px rgba(4,8,20,.38)", duration: 0.25 }, W.decorator + 0.25);
-      tl.fromTo("#a4-prog", { scaleX: 0.7072 }, { scaleX: 0.8133, duration: 5.241, ease: "none" }, 0);
+      tl.fromTo("#a4-prog", { scaleX: 0.7468 }, { scaleX: 0.8467, duration: 5.241, ease: "none" }, 0);
       window.__timelines["a4"] = tl;
     })();
   </script>

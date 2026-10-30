@@ -1,535 +1,594 @@
 {
-  "_readme": "Central configuration. Edit copy, colours, contact details or asset paths here, then run: python3 tools/build.py && npx hyperframes check. Timings come from the real voiceover (tools/timing.json).",
-  "video": {
-    "width": 1080,
-    "height": 1920,
-    "fps": 30,
-    "duration": 49.4,
-    "output": "reel.mp4"
+ "_readme": "Central configuration. Edit copy, colours, contact details or asset paths here, then run: python3 tools/build.py && npx hyperframes check. Timings come from the real voiceover (tools/timing.json).",
+ "video": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 52.5,
+  "output": "reel.mp4"
+ },
+ "brand": {
+  "company": "Sri Trilinga Technologies",
+  "contact_name": "Sri",
+  "series_label": "@VISH.WORKFLOWS \u00b7 AI AUTOMATION",
+  "cta_keyword": "WORKFLOW",
+  "handle": "@vish.workflows",
+  "persona": "Vish"
+ },
+ "colors": {
+  "blue": "#2257EF",
+  "blue_deep": "#1A44C4",
+  "ink": "#0B1016",
+  "ink_2": "#151B24",
+  "paper": "#F5F5F7",
+  "gray": "#8A93A3",
+  "gray_dark": "#3A4252",
+  "gray_line": "#2A313D",
+  "ok": "#2257EF"
+ },
+ "fonts": {
+  "display": "Montserrat",
+  "mono": "JetBrains Mono",
+  "ui": "Inter"
+ },
+ "assets": {
+  "voiceover": "assets/audio/voiceover.wav",
+  "music_bed": "assets/audio/music_bed.wav",
+  "music_raw": "assets/audio/music.wav",
+  "sfx_dir": "assets/audio/sfx",
+  "presenter_dir": "assets/presenter",
+  "avatar": "assets/brand/avatar.png"
+ },
+ "audio": {
+  "voice_volume": 1.0,
+  "music_volume": 1.0,
+  "duck_db": -9.0,
+  "music_base_db": -2.0,
+  "music_from": "problem"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "chapter": "00 / SHAADI SEASON",
+   "counter": "00 / 04",
+   "theme": "dark",
+   "layout": "split"
   },
-  "brand": {
-    "company": "Sri Trilinga Technologies",
-    "contact_name": "Sri",
-    "series_label": "@VISH.WORKFLOWS · AI AUTOMATION",
-    "cta_keyword": "WORKFLOW",
-    "handle": "@vish.workflows",
-    "persona": "Vish"
+  {
+   "id": "problem",
+   "chapter": "00 / THE PROBLEM",
+   "counter": "00 / 04",
+   "theme": "blue",
+   "layout": "split"
   },
-  "colors": {
-    "blue": "#2257EF",
-    "blue_deep": "#1A44C4",
-    "ink": "#0B1016",
-    "ink_2": "#151B24",
-    "paper": "#F5F5F7",
-    "gray": "#8A93A3",
-    "gray_dark": "#3A4252",
-    "gray_line": "#2A313D",
-    "ok": "#2257EF"
+  {
+   "id": "solution",
+   "chapter": "00 / THE SOLUTION",
+   "counter": "00 / 04",
+   "theme": "dark",
+   "layout": "split"
   },
-  "fonts": {
-    "display": "Montserrat",
-    "mono": "JetBrains Mono",
-    "ui": "Inter"
+  {
+   "id": "a1",
+   "chapter": "01 / INSTANT REPLY",
+   "counter": "01 / 04",
+   "theme": "dark",
+   "layout": "split"
   },
-  "assets": {
-    "voiceover": "assets/audio/voiceover.wav",
-    "music_bed": "assets/audio/music_bed.wav",
-    "music_raw": "assets/audio/music.wav",
-    "sfx_dir": "assets/audio/sfx",
-    "presenter_dir": "assets/presenter",
-    "avatar": "assets/brand/avatar.png"
+  {
+   "id": "a2",
+   "chapter": "02 / QUOTE \u00b7 YOU APPROVE",
+   "counter": "02 / 04",
+   "theme": "blue",
+   "layout": "split"
   },
-  "audio": {
-    "voice_volume": 1.0,
-    "music_volume": 1.0,
-    "duck_db": -9.0,
-    "music_base_db": -2.0
+  {
+   "id": "a3",
+   "chapter": "03 / PAYMENT REMINDERS",
+   "counter": "03 / 04",
+   "theme": "dark",
+   "layout": "split"
   },
-  "scenes": [
-    {
-      "id": "hook",
-      "chapter": "00 / SHAADI SEASON",
-      "counter": "00 / 04",
-      "theme": "dark",
-      "layout": "split"
-    },
-    {
-      "id": "problem",
-      "chapter": "00 / THE PROBLEM",
-      "counter": "00 / 04",
-      "theme": "blue",
-      "layout": "split"
-    },
-    {
-      "id": "solution",
-      "chapter": "00 / THE SOLUTION",
-      "counter": "00 / 04",
-      "theme": "dark",
-      "layout": "split"
-    },
-    {
-      "id": "a1",
-      "chapter": "01 / INSTANT REPLY",
-      "counter": "01 / 04",
-      "theme": "dark",
-      "layout": "split"
-    },
-    {
-      "id": "a2",
-      "chapter": "02 / QUOTE · YOU APPROVE",
-      "counter": "02 / 04",
-      "theme": "blue",
-      "layout": "split"
-    },
-    {
-      "id": "a3",
-      "chapter": "03 / PAYMENT REMINDERS",
-      "counter": "03 / 04",
-      "theme": "dark",
-      "layout": "split"
-    },
-    {
-      "id": "a4",
-      "chapter": "04 / VENDOR UPDATES",
-      "counter": "04 / 04",
-      "theme": "blue",
-      "layout": "split"
-    },
-    {
-      "id": "cta",
-      "chapter": "06 / YOUR TURN",
-      "counter": "",
-      "theme": "dark",
-      "layout": "takeover"
-    }
-  ],
-  "copy": {
-    "hook": {
-      "l1": "SHAADI",
-      "l2": "SEASON!",
-      "tag": "AA GAYA!",
-      "q1": "AUR AAPKA",
-      "q2": "WHATSAPP?",
-      "unread": "UNREAD",
-      "enq": "ENQUIRIES!"
-    },
-    "problem": {
-      "bar": "WhatsApp · Wedding enquiries",
-      "r1": "Sharma family",
-      "r1s": "14 DEC · 300 GUESTS",
-      "a1": "Date free?",
-      "r2": "Reddy family",
-      "r2s": "21 DEC · 500 GUESTS",
-      "a2": "Package?",
-      "r3": "Khan family",
-      "r3s": "9 JAN · 250 GUESTS",
-      "a3": "Price?",
-      "r4": "Patel family",
-      "r4s": "2 FEB · 400 GUESTS",
-      "a4": "Reply today!",
-      "late": "2 DAYS LATER",
-      "lost": "BOOKED ELSEWHERE ✗"
-    },
-    "solution": {
-      "kicker": "THE SOLUTION",
-      "h1a": "MY AI",
-      "h1b": "AGENT",
-      "h2": "FOR WEDDING BUSINESSES",
-      "nodes": [
-        "REPLY",
-        "QUOTE",
-        "PAYMENTS",
-        "VENDORS"
-      ],
-      "pill": "4 CONNECTED WORKFLOWS"
-    },
-    "a1": {
-      "num": "01",
-      "title": [
-        "INSTANT",
-        "REPLY"
-      ],
-      "bar": "WhatsApp · Wedding enquiries",
-      "from": "Sharma family · 9:02 PM",
-      "ask": "14 Dec free hai? 300 guests",
-      "reply": "Yes! 14 Dec is open. Silver · Gold · Platinum packages attached.",
-      "ai": "AI reply",
-      "time": "Open: 14 · 21 Dec"
-    },
-    "a2": {
-      "num": "02",
-      "title": [
-        "DRAFT",
-        "QUOTE"
-      ],
-      "bar": "Quote · Sharma family · 14 Dec",
-      "l1k": "Package",
-      "l1v": "Gold · 300 guests",
-      "l2k": "Includes",
-      "l2v": "Decor + catering + DJ",
-      "l3k": "Total (example)",
-      "l3v": "₹6,50,000",
-      "sent": "Sent to Sharma family ✓"
-    },
-    "a3": {
-      "num": "03",
-      "title": [
-        "PAYMENT",
-        "REMINDERS"
-      ],
-      "wa": "WhatsApp · auto reminder",
-      "msg": "Namaste Sharma ji! A gentle reminder: the advance for 14 Dec is due on 5 Dec. Thank you!",
-      "tag": "Polite · approved template",
-      "payk": "Advance (example)",
-      "payv": "₹1,00,000",
-      "duek": "Due date",
-      "duev": "5 Dec",
-      "due": "Due",
-      "paid": "Paid ✓"
-    },
-    "a4": {
-      "num": "04",
-      "title": [
-        "VENDOR",
-        "UPDATES"
-      ],
-      "bar": "Vendor group · auto updates",
-      "event": "Sharma wedding · 14 Dec · 300 guests",
-      "v1": "Photographer",
-      "v2": "DJ & sound",
-      "v3": "Caterer",
-      "v4": "Decorator"
-    },
-    "cta": {
-      "line1": "Want this workflow",
-      "line2": "business?",
-      "comments": "COMMENTS",
-      "user": "you",
-      "typed": "WORKFLOW",
-      "reply_k": "VISH · JUST NOW",
-      "reply": "Here's your workflow guide ✓",
-      "pill_a": "FOLLOW + COMMENT",
-      "pill_b": "“WORKFLOW”",
-      "pill_c": "",
-      "follow": "Follow",
-      "following": "Following ✓",
-      "follow_sub": "@vish.workflows",
-      "step1": "STEP 1",
-      "step2": "STEP 2",
-      "dm_note": "Follow first, so my reply can reach your DMs",
-      "line1b": "built for your"
-    }
+  {
+   "id": "a4",
+   "chapter": "04 / VENDOR UPDATES",
+   "counter": "04 / 04",
+   "theme": "blue",
+   "layout": "split"
   },
-  "sfx": [
-    {
-      "file": "dhol-intro.mp3",
-      "word": "hook:Shaadi",
-      "offset": -0.9,
-      "volume": 0.9
-    },
-    {
-      "file": "dhol-loop.mp3",
-      "word": "hook:Shaadi",
-      "offset": 0.0,
-      "volume": 0.22
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:Shaadi",
-      "offset": 0,
-      "volume": 0.4
-    },
-    {
-      "file": "pop.mp3",
-      "word": "hook:aa",
-      "offset": 0,
-      "volume": 0.4
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "hook:Aur",
-      "offset": -0.06,
-      "volume": 0.4
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:WhatsApp?",
-      "offset": -0.05,
-      "volume": 0.45
-    },
-    {
-      "file": "notification.mp3",
-      "word": "hook:200",
-      "offset": -0.1,
-      "volume": 0.3
-    },
-    {
-      "file": "notification.mp3",
-      "word": "hook:200",
-      "offset": 0.15,
-      "volume": 0.25
-    },
-    {
-      "file": "notification.mp3",
-      "word": "hook:200",
-      "offset": 0.4,
-      "volume": 0.25
-    },
-    {
-      "file": "ping.mp3",
-      "word": "hook:200",
-      "offset": 0.65,
-      "volume": 0.25
-    },
-    {
-      "file": "notification.mp3",
-      "word": "hook:unread",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "hook:enquiries!",
-      "offset": 0,
-      "volume": 0.6
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "hook:enquiries!",
-      "offset": 0.75,
-      "volume": 0.4
-    },
-    {
-      "file": "pop.mp3",
-      "word": "problem:family",
-      "offset": 0,
-      "volume": 0.35
-    },
-    {
-      "file": "pop.mp3",
-      "word": "problem:package",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "problem:price,",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "ping.mp3",
-      "word": "problem:today.",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "problem:Reply",
-      "offset": -0.1,
-      "volume": 0.35
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "problem:book",
-      "offset": -0.05,
-      "volume": 0.55
-    },
-    {
-      "file": "riser.mp3",
-      "word": "solution:AI",
-      "offset": -10.03,
-      "volume": 0.16
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "solution:That's",
-      "offset": -0.15,
-      "volume": 0.4
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "solution:AI",
-      "offset": 0,
-      "volume": 0.35
-    },
-    {
-      "file": "pop.mp3",
-      "word": "solution:four",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "solution:connected",
-      "offset": 0,
-      "volume": 0.28
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "a1:First,",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "a1:every",
-      "offset": 0,
-      "volume": 0.35
-    },
-    {
-      "file": "notification.mp3",
-      "word": "a1:packages",
-      "offset": 0,
-      "volume": 0.25
-    },
-    {
-      "file": "click-soft.mp3",
-      "word": "a1:dates.",
-      "offset": 0,
-      "volume": 0.45
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "a2:Second,",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "typing.mp3",
-      "word": "a2:drafts",
-      "offset": 0.1,
-      "volume": 0.18
-    },
-    {
-      "file": "click.mp3",
-      "word": "a2:approve",
-      "offset": 0.05,
-      "volume": 0.55
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "a2:out.",
-      "offset": -0.05,
-      "volume": 0.3
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "a3:Third,",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "notification.mp3",
-      "word": "a3:polite",
-      "offset": 0,
-      "volume": 0.25
-    },
-    {
-      "file": "click-soft.mp3",
-      "word": "a3:come",
-      "offset": 0.05,
-      "volume": 0.45
-    },
-    {
-      "file": "ping.mp3",
-      "word": "a3:time.",
-      "offset": 0,
-      "volume": 0.25
-    },
-    {
-      "file": "impact-bass-1.mp3",
-      "word": "a4:Fourth,",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "a4:caterer",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "pop.mp3",
-      "word": "a4:decorator.",
-      "offset": 0,
-      "volume": 0.3
-    },
-    {
-      "file": "ping.mp3",
-      "word": "a4:decorator.",
-      "offset": 0.3,
-      "volume": 0.22
-    },
-    {
-      "file": "whoosh.mp3",
-      "word": "cta:Want",
-      "offset": -0.12,
-      "volume": 0.4
-    },
-    {
-      "file": "whoosh-short.mp3",
-      "word": "cta:Follow",
-      "offset": -0.2,
-      "volume": 0.3
-    },
-    {
-      "file": "click.mp3",
-      "word": "cta:me",
-      "offset": 0.2,
-      "volume": 0.5
-    },
-    {
-      "file": "key-press.mp3",
-      "word": "cta:comment",
-      "offset": 0.1,
-      "volume": 0.3
-    },
-    {
-      "file": "click.mp3",
-      "word": "cta:workflow_2",
-      "offset": 0.55,
-      "volume": 0.5
-    },
-    {
-      "file": "notification.mp3",
-      "word": "cta:DMs.",
-      "offset": 0.0,
-      "volume": 0.25
-    }
-  ],
-  "anchor_hook": false,
-  "anchor_plate": "VISH · LIVE",
-  "hook_mode": {
-    "props": [
-      "#pp-turban"
-    ],
-    "dance": true,
-    "cuts": [
-      [
-        0.0,
-        0,
-        0,
-        1.0
-      ],
-      [
-        "hook:Aur",
-        -0.04,
-        -150,
-        0.9
-      ],
-      [
-        "hook:200",
-        -0.12,
-        170,
-        0.88
-      ],
-      [
-        "hook:enquiries!",
-        -0.05,
-        0,
-        1.06
-      ]
-    ]
+  {
+   "id": "cta",
+   "chapter": "06 / YOUR TURN",
+   "counter": "",
+   "theme": "dark",
+   "layout": "takeover"
   }
+ ],
+ "copy": {
+  "hook": {
+   "l1": "SHAADI",
+   "l2": "SEASON!",
+   "tag": "AA GAYA!",
+   "q1": "AUR AAPKA",
+   "q2": "WHATSAPP?",
+   "unread": "UNREAD",
+   "enq": "ENQUIRIES!",
+   "b1": "BALLE",
+   "b2": "BALLE!",
+   "bpill": "WEDDING SEASON 2026",
+   "e1": "MEHENDI",
+   "e1s": "HAATHON PE RANG",
+   "e2": "SANGEET",
+   "e2s": "NAACHO SAARI RAAT",
+   "e3": "BARAAT",
+   "e3s": "DHOOM DHAAM SE",
+   "band": "BAND BAAJA"
+  },
+  "problem": {
+   "bar": "WhatsApp \u00b7 Wedding enquiries",
+   "r1": "Sharma family",
+   "r1s": "14 DEC \u00b7 300 GUESTS",
+   "a1": "Date free?",
+   "r2": "Reddy family",
+   "r2s": "21 DEC \u00b7 500 GUESTS",
+   "a2": "Package?",
+   "r3": "Khan family",
+   "r3s": "9 JAN \u00b7 250 GUESTS",
+   "a3": "Price?",
+   "r4": "Patel family",
+   "r4s": "2 FEB \u00b7 400 GUESTS",
+   "a4": "Reply today!",
+   "late": "2 DAYS LATER",
+   "lost": "BOOKED ELSEWHERE \u2717"
+  },
+  "solution": {
+   "kicker": "THE SOLUTION",
+   "h1a": "MY AI",
+   "h1b": "AGENT",
+   "h2": "FOR WEDDING BUSINESSES",
+   "nodes": [
+    "REPLY",
+    "QUOTE",
+    "PAYMENTS",
+    "VENDORS"
+   ],
+   "pill": "4 CONNECTED WORKFLOWS"
+  },
+  "a1": {
+   "num": "01",
+   "title": [
+    "INSTANT",
+    "REPLY"
+   ],
+   "bar": "WhatsApp \u00b7 Wedding enquiries",
+   "from": "Sharma family \u00b7 9:02 PM",
+   "ask": "14 Dec free hai? 300 guests",
+   "reply": "Yes! 14 Dec is open. Silver \u00b7 Gold \u00b7 Platinum packages attached.",
+   "ai": "AI reply",
+   "time": "Open: 14 \u00b7 21 Dec"
+  },
+  "a2": {
+   "num": "02",
+   "title": [
+    "DRAFT",
+    "QUOTE"
+   ],
+   "bar": "Quote \u00b7 Sharma family \u00b7 14 Dec",
+   "l1k": "Package",
+   "l1v": "Gold \u00b7 300 guests",
+   "l2k": "Includes",
+   "l2v": "Decor + catering + DJ",
+   "l3k": "Total (example)",
+   "l3v": "\u20b96,50,000",
+   "sent": "Sent to Sharma family \u2713"
+  },
+  "a3": {
+   "num": "03",
+   "title": [
+    "PAYMENT",
+    "REMINDERS"
+   ],
+   "wa": "WhatsApp \u00b7 auto reminder",
+   "msg": "Namaste Sharma ji! A gentle reminder: the advance for 14 Dec is due on 5 Dec. Thank you!",
+   "tag": "Polite \u00b7 approved template",
+   "payk": "Advance (example)",
+   "payv": "\u20b91,00,000",
+   "duek": "Due date",
+   "duev": "5 Dec",
+   "due": "Due",
+   "paid": "Paid \u2713"
+  },
+  "a4": {
+   "num": "04",
+   "title": [
+    "VENDOR",
+    "UPDATES"
+   ],
+   "bar": "Vendor group \u00b7 auto updates",
+   "event": "Sharma wedding \u00b7 14 Dec \u00b7 300 guests",
+   "v1": "Photographer",
+   "v2": "DJ & sound",
+   "v3": "Caterer",
+   "v4": "Decorator"
+  },
+  "cta": {
+   "line1": "Want this workflow",
+   "line2": "business?",
+   "comments": "COMMENTS",
+   "user": "you",
+   "typed": "WORKFLOW",
+   "reply_k": "VISH \u00b7 JUST NOW",
+   "reply": "Here's your workflow guide \u2713",
+   "pill_a": "FOLLOW + COMMENT",
+   "pill_b": "\u201cWORKFLOW\u201d",
+   "pill_c": "",
+   "follow": "Follow",
+   "following": "Following \u2713",
+   "follow_sub": "@vish.workflows",
+   "step1": "STEP 1",
+   "step2": "STEP 2",
+   "dm_note": "Follow first, so my reply can reach your DMs",
+   "line1b": "built for your"
+  }
+ },
+ "sfx": [
+  {
+   "file": "dhol-baraat.mp3",
+   "word": "hook:Shaadi",
+   "offset": -1.5,
+   "volume": 0.85
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "hook:Shaadi",
+   "offset": -1.3,
+   "volume": 0.45
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "hook:Shaadi",
+   "offset": -0.05,
+   "volume": 0.4
+  },
+  {
+   "file": "pop.mp3",
+   "word": "hook:aa",
+   "offset": 0,
+   "volume": 0.4
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "hook:Mehendi,",
+   "offset": -0.08,
+   "volume": 0.4
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "hook:sangeet,",
+   "offset": -0.08,
+   "volume": 0.4
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "hook:baraat\u2026",
+   "offset": -0.08,
+   "volume": 0.4
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "hook:aur",
+   "offset": -0.05,
+   "volume": 0.55
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "hook:WhatsApp?",
+   "offset": -0.05,
+   "volume": 0.45
+  },
+  {
+   "file": "notification.mp3",
+   "word": "hook:200",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "notification.mp3",
+   "word": "hook:200",
+   "offset": 0.15,
+   "volume": 0.25
+  },
+  {
+   "file": "notification.mp3",
+   "word": "hook:200",
+   "offset": 0.4,
+   "volume": 0.25
+  },
+  {
+   "file": "ping.mp3",
+   "word": "hook:200",
+   "offset": 0.65,
+   "volume": 0.25
+  },
+  {
+   "file": "notification.mp3",
+   "word": "hook:unread",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "hook:enquiries!",
+   "offset": 0,
+   "volume": 0.6
+  },
+  {
+   "file": "whoosh.mp3",
+   "word": "hook:enquiries!",
+   "offset": 0.75,
+   "volume": 0.4
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:family",
+   "offset": 0,
+   "volume": 0.35
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:package",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:price,",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "ping.mp3",
+   "word": "problem:today.",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "problem:Reply",
+   "offset": -0.1,
+   "volume": 0.35
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "problem:book",
+   "offset": -0.05,
+   "volume": 0.55
+  },
+  {
+   "file": "riser.mp3",
+   "word": "solution:AI",
+   "offset": -10.03,
+   "volume": 0.16
+  },
+  {
+   "file": "whoosh.mp3",
+   "word": "solution:That's",
+   "offset": -0.15,
+   "volume": 0.4
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "solution:AI",
+   "offset": 0,
+   "volume": 0.35
+  },
+  {
+   "file": "pop.mp3",
+   "word": "solution:four",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "solution:connected",
+   "offset": 0,
+   "volume": 0.28
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "a1:First,",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a1:every",
+   "offset": 0,
+   "volume": 0.35
+  },
+  {
+   "file": "notification.mp3",
+   "word": "a1:packages",
+   "offset": 0,
+   "volume": 0.25
+  },
+  {
+   "file": "click-soft.mp3",
+   "word": "a1:dates.",
+   "offset": 0,
+   "volume": 0.45
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "a2:Second,",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "typing.mp3",
+   "word": "a2:drafts",
+   "offset": 0.1,
+   "volume": 0.18
+  },
+  {
+   "file": "click.mp3",
+   "word": "a2:approve",
+   "offset": 0.05,
+   "volume": 0.55
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "a2:out.",
+   "offset": -0.05,
+   "volume": 0.3
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "a3:Third,",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "notification.mp3",
+   "word": "a3:polite",
+   "offset": 0,
+   "volume": 0.25
+  },
+  {
+   "file": "click-soft.mp3",
+   "word": "a3:come",
+   "offset": 0.05,
+   "volume": 0.45
+  },
+  {
+   "file": "ping.mp3",
+   "word": "a3:time.",
+   "offset": 0,
+   "volume": 0.25
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "a4:Fourth,",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a4:caterer",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a4:decorator.",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "ping.mp3",
+   "word": "a4:decorator.",
+   "offset": 0.3,
+   "volume": 0.22
+  },
+  {
+   "file": "whoosh.mp3",
+   "word": "cta:Want",
+   "offset": -0.12,
+   "volume": 0.4
+  },
+  {
+   "file": "whoosh-short.mp3",
+   "word": "cta:Follow",
+   "offset": -0.2,
+   "volume": 0.3
+  },
+  {
+   "file": "click.mp3",
+   "word": "cta:me",
+   "offset": 0.2,
+   "volume": 0.5
+  },
+  {
+   "file": "key-press.mp3",
+   "word": "cta:comment",
+   "offset": 0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "click.mp3",
+   "word": "cta:workflow_2",
+   "offset": 0.55,
+   "volume": 0.5
+  },
+  {
+   "file": "notification.mp3",
+   "word": "cta:DMs.",
+   "offset": 0.0,
+   "volume": 0.25
+  }
+ ],
+ "anchor_hook": false,
+ "anchor_plate": "VISH \u00b7 LIVE",
+ "hook_mode": {
+  "props": [
+   "#pp-turban",
+   "#pp-dhol",
+   "#pp-dagga",
+   "#pp-tilli"
+  ],
+  "dance": {
+   "t0": 0.204,
+   "period": 0.36
+  },
+  "cuts": [
+   [
+    0.0,
+    0,
+    0,
+    1.0
+   ],
+   [
+    "hook:Shaadi",
+    -0.05,
+    -150,
+    0.9
+   ],
+   [
+    "hook:Mehendi,",
+    -0.05,
+    170,
+    0.86
+   ],
+   [
+    "hook:sangeet,",
+    -0.05,
+    -170,
+    0.86
+   ],
+   [
+    "hook:baraat\u2026",
+    -0.05,
+    0,
+    0.95
+   ],
+   [
+    "hook:aur",
+    -0.04,
+    -150,
+    0.9
+   ],
+   [
+    "hook:200",
+    -0.12,
+    170,
+    0.88
+   ],
+   [
+    "hook:enquiries!",
+    -0.05,
+    0,
+    1.06
+   ]
+  ]
+ }
 }

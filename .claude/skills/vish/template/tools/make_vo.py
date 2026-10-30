@@ -20,8 +20,16 @@ for s in SC:
     if s.get('audio'):  # a recorded or Parler-TTS clip, resampled to 24 kHz mono
         a = subprocess.run(['ffmpeg', '-v', 'error', '-i', s['audio'], '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'], capture_output=True, check=True).stdout
         a, sr = np.frombuffer(a, dtype=np.float32), SR
+    elif s.get('parts'):  # mixed Hindi + English: each part in its own language mode, so English words sound English
+        vo_ = k.get_voice_style(s['voice']) if s.get('voice') else VOICE; seg = []
+        for txt, lang, gap in s['parts']:
+            p, sr = k.create(txt, voice=vo_, speed=s.get('speed', 0.9), lang=lang)
+            i_ = np.where(np.abs(p) > 0.01 * np.abs(p).max())[0]
+            seg += [p[max(0, i_[0] - 480):i_[-1] + 1900], np.zeros(int(gap * SR), np.float32)]
+        a = np.concatenate(seg)
     else:
-        a, sr = k.create(s['say'], voice=VOICE, speed=s.get('speed', 0.9), lang=s.get('lang', 'en-gb')); assert sr == SR
+        vo_ = k.get_voice_style(s['voice']) if s.get('voice') else VOICE
+        a, sr = k.create(s['say'], voice=vo_, speed=s.get('speed', 0.9), lang=s.get('lang', 'en-gb')); assert sr == SR
     a = np.asarray(a, dtype=np.float32); thr = 0.01 * np.abs(a).max(); idx = np.where(np.abs(a) > thr)[0]
     a = a[max(0, idx[0] - int(0.02 * sr)):idx[-1] + int(0.08 * sr)]
     scenes.append({'id': s['id'], 'vo_start': round(t, 3), 'vo_end': round(t + len(a) / SR, 3)})

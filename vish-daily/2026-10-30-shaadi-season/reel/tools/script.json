@@ -2,10 +2,36 @@
  {
   "id": "hook",
   "label": "00 / SHAADI SEASON",
-  "say": "शादी का सीज़न आ गया! और आपका व्हाट्सऐप? दो सौ अनरेड इंक्वायरीज़!",
-  "text": "Shaadi ka season aa gaya! Aur aapka WhatsApp? 200 unread enquiries!",
-  "lang": "hi",
-  "speed": 0.95
+  "text": "Shaadi ka season aa gaya! Mehendi, sangeet, baraat… aur aapka WhatsApp? 200 unread enquiries!",
+  "speed": 0.95,
+  "voice": "hm_psi",
+  "parts": [
+   [
+    "शादी का सीज़न आ गया!",
+    "hi",
+    0.35
+   ],
+   [
+    "मेहंदी, संगीत, बारात...",
+    "hi",
+    0.3
+   ],
+   [
+    "और आपका",
+    "hi",
+    0.04
+   ],
+   [
+    "WhatsApp?",
+    "en-gb",
+    0.35
+   ],
+   [
+    "Two hundred unread enquiries!",
+    "en-gb",
+    0
+   ]
+  ]
  },
  {
   "id": "problem",

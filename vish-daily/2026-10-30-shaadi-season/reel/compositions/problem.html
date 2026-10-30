@@ -52,7 +52,7 @@
   </div>
   <script>
     (() => {
-      const W = {"every": 0.15, "every_end": 0.48, "family": 0.48, "family_end": 0.96, "wants": 0.96, "wants_end": 1.28, "a": 1.28, "a_end": 1.44, "date": 1.44, "date_end": 1.92, "a_2": 1.92, "a_2_end": 2.16, "package": 2.16, "package_end": 2.64, "and": 2.64, "and_end": 2.8, "a_3": 2.8, "a_3_end": 2.88, "price": 2.88, "price_end": 3.2, "today": 3.36, "today_end": 4.08, "reply": 4.08, "reply_end": 4.64, "late": 4.64, "late_end": 5.04, "and_2": 5.12, "and_2_end": 5.28, "they": 5.28, "they_end": 5.52, "book": 5.52, "book_end": 5.92, "the": 5.92, "the_end": 6.0, "next": 6.0, "next_end": 6.24, "planner": 6.24, "planner_end": 7.12};
+      const W = {"every": 0.15, "every_end": 0.446, "family": 0.446, "family_end": 0.926, "wants": 0.926, "wants_end": 1.246, "a": 1.246, "a_end": 1.406, "date": 1.406, "date_end": 1.966, "a_2": 1.966, "a_2_end": 2.126, "package": 2.126, "package_end": 2.526, "and": 2.606, "and_end": 2.766, "a_3": 2.766, "a_3_end": 2.926, "price": 2.926, "price_end": 3.246, "today": 3.406, "today_end": 4.126, "reply": 4.126, "reply_end": 4.686, "late": 4.686, "late_end": 5.006, "and_2": 5.086, "and_2_end": 5.326, "they": 5.326, "they_end": 5.486, "book": 5.486, "book_end": 5.886, "the": 5.886, "the_end": 5.966, "next": 5.966, "next_end": 6.286, "planner": 6.286, "planner_end": 7.166};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
       tl.fromTo("#pb-card", { opacity: 0, y: 60, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, W.every - 0.1);
@@ -71,7 +71,7 @@
       tl.fromTo("#pb-lost", { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, W.book - 0.05);
       tl.fromTo("#pb-flash", { opacity: 0.5 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.book);
       tl.fromTo("#pb-card", { x: 0 }, { x: 14, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.book + 0.12);
-      tl.fromTo("#problem-prog", { scaleX: 0.1377 }, { scaleX: 0.2827, duration: 7.165, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.2109 }, { scaleX: 0.3474, duration: 7.165, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

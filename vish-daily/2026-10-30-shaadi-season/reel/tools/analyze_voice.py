@@ -20,7 +20,7 @@ vo, sr = sf.read(T("assets", "audio", "voiceover.wav"))
 if vo.ndim > 1:
     vo = vo.mean(1)
 
-NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "for": "four", "inquiries": "enquiries", "inquiry": "enquiry", "shadika": "shaadi", "agaya": "aa", "or": "aur", "apka": "aapka", "vats": "whatsapp", "do": "200"}
+NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "for": "four", "inquiries": "enquiries", "inquiry": "enquiry", "shadika": "shaadi", "agaya": "aa", "or": "aur", "apka": "aapka", "vats": "whatsapp", "do": "200", "mehandi": "mehendi", "sangit": "sangeet", "bharat": "baraat", "abgay": "aapka", "abge": "aapka", "whats": "whatsapp", "enquires": "enquiries"}
 
 
 def norm(w):

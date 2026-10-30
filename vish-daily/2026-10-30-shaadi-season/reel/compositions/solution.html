@@ -63,7 +63,7 @@
   </div>
   <script>
     (() => {
-      const W = {"thats": 0.15, "thats_end": 0.355, "why": 0.355, "why_end": 0.595, "i": 0.595, "i_end": 0.835, "built": 0.835, "built_end": 1.235, "an": 1.235, "an_end": 1.475, "ai": 1.475, "ai_end": 2.035, "agent": 2.035, "agent_end": 2.435, "for": 2.435, "for_end": 2.595, "wedding": 2.595, "wedding_end": 3.075, "planners": 3.075, "planners_end": 3.635, "with": 3.715, "with_end": 3.955, "four": 3.955, "four_end": 4.355, "connected": 4.355, "connected_end": 4.915, "workflows": 4.915, "workflows_end": 5.955};
+      const W = {"thats": 0.15, "thats_end": 0.321, "why": 0.321, "why_end": 0.561, "i": 0.561, "i_end": 0.801, "built": 0.801, "built_end": 1.201, "an": 1.201, "an_end": 1.441, "ai": 1.441, "ai_end": 2.001, "agent": 2.001, "agent_end": 2.401, "for": 2.401, "for_end": 2.641, "wedding": 2.641, "wedding_end": 3.041, "planners": 3.041, "planners_end": 3.601, "with": 3.761, "with_end": 3.921, "four": 3.921, "four_end": 4.321, "connected": 4.321, "connected_end": 4.961, "workflows": 4.961, "workflows_end": 5.921};
       const tl = gsap.timeline({ paused: true });
       // the panel turns light: the answer to the problem
       tl.fromTo("#solution-bg", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0);
@@ -82,8 +82,8 @@
       tl.fromTo(["#so-b1", "#so-b2", "#so-b3", "#so-b4"], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.28, stagger: 0.07, ease: "power2.out" }, W.workflows - 0.1);
       tl.fromTo("#so-pill", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.workflows + 0.3);
       // hand-off: node 01 lights up just before "First, respond to enquiries"
-      tl.to("#so-n1", { backgroundColor: "#2257EF", scale: 1.12, duration: 0.25, ease: "power2.out" }, 5.888 - 0.45);
-      tl.fromTo("#solution-prog", { scaleX: 0.2827 }, { scaleX: 0.4019, duration: 5.888, ease: "none" }, 0);
+      tl.to("#so-n1", { backgroundColor: "#2257EF", scale: 1.12, duration: 0.25, ease: "power2.out" }, 5.887 - 0.45);
+      tl.fromTo("#solution-prog", { scaleX: 0.3474 }, { scaleX: 0.4595, duration: 5.887, ease: "none" }, 0);
       window.__timelines["solution"] = tl;
     })();
   </script>
