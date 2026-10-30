@@ -4,7 +4,7 @@
   "width": 1080,
   "height": 1920,
   "fps": 30,
-  "duration": 52.5,
+  "duration": 57.9,
   "output": "reel.mp4"
  },
  "brand": {
@@ -139,7 +139,12 @@
    "r4s": "2 FEB \u00b7 400 GUESTS",
    "a4": "Reply today!",
    "late": "2 DAYS LATER",
-   "lost": "BOOKED ELSEWHERE \u2717"
+   "lost": "BOOKED ELSEWHERE \u2717",
+   "vbar": "Today \u00b7 Sharma wedding",
+   "vtag": "AT THE VENUE",
+   "vh1": "Decor, vendors,",
+   "vh2": "site checks\u2026",
+   "vsub": "ALL DAY ON YOUR FEET"
   },
   "solution": {
    "kicker": "THE SOLUTION",
@@ -524,6 +529,30 @@
    "file": "notification.mp3",
    "word": "cta:DMs.",
    "offset": 0.0,
+   "volume": 0.25
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:venue",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "notification.mp3",
+   "word": "problem:WhatsApp",
+   "offset": 0,
+   "volume": 0.3
+  },
+  {
+   "file": "notification.mp3",
+   "word": "problem:WhatsApp",
+   "offset": 0.3,
+   "volume": 0.25
+  },
+  {
+   "file": "notification.mp3",
+   "word": "problem:never",
+   "offset": 0.1,
    "volume": 0.25
   }
  ],

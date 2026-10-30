@@ -3,118 +3,134 @@
 Shaadi ka season aa gaya!
 
 2
-00:00:03,790 --> 00:00:05,220
+00:00:03,790 --> 00:00:05,280
 Mehendi, sangeet,
 
 3
-00:00:05,220 --> 00:00:08,060
+00:00:05,290 --> 00:00:08,320
 baraat… aur aapka WhatsApp?
 
 4
-00:00:08,260 --> 00:00:11,164
+00:00:08,330 --> 00:00:11,164
 200 unread enquiries!
 
 5
-00:00:11,164 --> 00:00:13,040
-Every family wants a date,
+00:00:11,164 --> 00:00:12,400
+Wedding planners,
 
 6
-00:00:13,050 --> 00:00:14,420
-a package and a price,
+00:00:12,410 --> 00:00:13,760
+you're busy at the venue
 
 7
-00:00:14,420 --> 00:00:15,200
-today.
+00:00:13,770 --> 00:00:14,420
+all day,
 
 8
-00:00:15,210 --> 00:00:16,100
-Reply late,
+00:00:14,420 --> 00:00:16,640
+and your WhatsApp never stops.
 
 9
-00:00:16,100 --> 00:00:17,360
-and they book the next
+00:00:16,650 --> 00:00:18,480
+Every family wants a date,
 
 10
-00:00:17,370 --> 00:00:18,329
-planner.
+00:00:18,490 --> 00:00:19,860
+a package and a price,
 
 11
-00:00:18,329 --> 00:00:19,680
-That's why I built an
+00:00:19,860 --> 00:00:20,640
+today.
 
 12
-00:00:19,690 --> 00:00:21,940
-AI agent for wedding planners,
+00:00:20,650 --> 00:00:21,620
+Reply late,
 
 13
-00:00:21,940 --> 00:00:24,216
-with four connected workflows.
+00:00:21,620 --> 00:00:22,800
+and they book the next
 
 14
-00:00:24,216 --> 00:00:26,160
-First, it replies to every
+00:00:22,810 --> 00:00:23,783
+planner.
 
 15
-00:00:26,170 --> 00:00:28,160
-enquiry, with your packages
+00:00:23,783 --> 00:00:25,200
+That's why I built an
 
 16
-00:00:28,170 --> 00:00:29,687
-and open dates.
+00:00:25,210 --> 00:00:27,380
+AI agent for wedding planners,
 
 17
-00:00:29,690 --> 00:00:31,700
-Second, it drafts the quote,
+00:00:27,380 --> 00:00:29,680
+with four connected workflows.
 
 18
-00:00:31,700 --> 00:00:33,040
-and you approve it before
+00:00:29,690 --> 00:00:31,600
+First, it replies to every
 
 19
-00:00:33,050 --> 00:00:34,062
-it goes out.
+00:00:31,610 --> 00:00:33,680
+enquiry, with your packages
 
 20
-00:00:34,062 --> 00:00:36,080
-Third, it sends polite payment
+00:00:33,690 --> 00:00:35,141
+and open dates.
 
 21
-00:00:36,090 --> 00:00:38,080
-reminders, so advances come
+00:00:35,141 --> 00:00:37,140
+Second, it drafts the quote,
 
 22
-00:00:38,090 --> 00:00:39,299
-in on time.
+00:00:37,140 --> 00:00:38,480
+and you approve it before
 
 23
-00:00:39,299 --> 00:00:41,280
-Fourth, it keeps every vendor
+00:00:38,490 --> 00:00:39,516
+it goes out.
 
 24
-00:00:41,290 --> 00:00:43,140
-updated, from caterer
+00:00:39,516 --> 00:00:41,520
+Third, it sends polite payment
 
 25
-00:00:43,140 --> 00:00:44,540
-to decorator.
+00:00:41,530 --> 00:00:43,600
+reminders, so advances come
 
 26
-00:00:44,540 --> 00:00:45,920
-Want this workflow built
+00:00:43,610 --> 00:00:44,753
+in on time.
 
 27
-00:00:45,930 --> 00:00:46,960
-for your business?
+00:00:44,753 --> 00:00:46,720
+Fourth, it keeps every vendor
 
 28
-00:00:46,970 --> 00:00:49,300
-Follow me and comment "workflow",
+00:00:46,730 --> 00:00:48,560
+updated, from caterer
 
 29
-00:00:49,300 --> 00:00:50,160
-and I'll send you
+00:00:48,570 --> 00:00:49,994
+to decorator.
 
 30
-00:00:50,170 --> 00:00:52,140
+00:00:49,994 --> 00:00:51,360
+Want this workflow built
+
+31
+00:00:51,370 --> 00:00:52,400
+for your business?
+
+32
+00:00:52,410 --> 00:00:54,740
+Follow me and comment "workflow",
+
+33
+00:00:54,740 --> 00:00:55,600
+and I'll send you
+
+34
+00:00:55,610 --> 00:00:57,580
 the details in your DMs.
 

@@ -34,10 +34,33 @@
     #pb-late { position: absolute; right: -14px; top: -30px; background: var(--ink); color: #fff; font-size: 24px; padding: 10px 18px; }
     #pb-lost { position: absolute; left: 200px; top: 60px; padding: 12px 26px; border: 8px solid #E3262B; color: #E3262B; border-radius: 14px; background: rgba(245,245,247,.94);
       font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 54px; transform: rotate(-6deg); white-space: nowrap; }
+    /* opener: the planner is busy at the venue while WhatsApp keeps buzzing */
+    #pb-venue { left: 56px; top: 262px; width: 968px; height: 600px; }
+    #pb-vtag { position: absolute; left: 30px; top: 92px; font-size: 24px; }
+    #pb-vh { position: absolute; left: 30px; top: 150px; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; line-height: 1.02; color: var(--ink); }
+    #pb-vs { position: absolute; left: 30px; top: 300px; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: .1em; color: #5B6372; }
+    #pb-clock span { position: absolute; left: 30px; top: 350px; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; color: #F76707; opacity: 0; }
+    #pb-phone { position: absolute; left: 600px; top: 88px; width: 320px; height: 480px; border-radius: 36px; background: #0B1016; border: 8px solid #2A313D; overflow: hidden; }
+    #pb-ptop { height: 58px; background: #075E54; color: #fff; display: flex; align-items: center; padding: 0 18px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; }
+    .pb-n { margin: 10px 12px 0; padding: 10px 14px; background: #F5F5F7; border-radius: 14px; border-top-left-radius: 4px; font-size: 19px; font-weight: 600; color: #141A24; width: fit-content; }
+    #pb-badge { position: absolute; left: 860px; top: 60px; width: 120px; height: 120px; border-radius: 50%; background: #E3262B; color: #fff; border: 6px solid #fff;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 44px; }
+    #pb-badge span { position: absolute; left: 0; top: 0; width: 108px; height: 108px; display: flex; align-items: center; justify-content: center; opacity: 0; }
     #pb-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
   </style>
   <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
     <div id="problem-bg" class="panel bg-blue"></div>
+    <div id="pb-venue" class="card">
+      <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;Today · Sharma wedding</div>
+      <span id="pb-vtag" class="tag ink">AT THE VENUE</span>
+      <div id="pb-vh">Decor, vendors,<br>site checks…</div>
+      <div id="pb-vs">ALL DAY ON YOUR FEET</div>
+      <div id="pb-clock"><span>10:00 AM</span><span>1:30 PM</span><span>5:00 PM</span><span>9:30 PM</span></div>
+      <div id="pb-phone"><div id="pb-ptop">WhatsApp</div>
+        <div class="pb-n">Date free hai?</div><div class="pb-n">Package bhejo</div><div class="pb-n">Price kya hai?</div><div class="pb-n">Hello??</div><div class="pb-n">Reply karo pls</div>
+      </div>
+      <div id="pb-badge"><span>12</span><span>37</span><span>64</span><span>99+</span></div>
+    </div>
     <div id="pb-card" class="card">
       <div class="bar"><span class="dot b"></span><span class="dot"></span><span class="dot"></span>&nbsp;WhatsApp · Wedding enquiries</div>
       <div id="pb-r1" class="pb-row"><div class="pb-av">S</div><div><div class="pb-nm">Sharma family</div><div class="pb-sub">14 DEC · 300 GUESTS</div></div><span id="pb-a1" class="pb-ask tag blue">Date free?</span></div>
@@ -52,9 +75,22 @@
   </div>
   <script>
     (() => {
-      const W = {"every": 0.15, "every_end": 0.446, "family": 0.446, "family_end": 0.926, "wants": 0.926, "wants_end": 1.246, "a": 1.246, "a_end": 1.406, "date": 1.406, "date_end": 1.966, "a_2": 1.966, "a_2_end": 2.126, "package": 2.126, "package_end": 2.526, "and": 2.606, "and_end": 2.766, "a_3": 2.766, "a_3_end": 2.926, "price": 2.926, "price_end": 3.246, "today": 3.406, "today_end": 4.126, "reply": 4.126, "reply_end": 4.686, "late": 4.686, "late_end": 5.006, "and_2": 5.086, "and_2_end": 5.326, "they": 5.326, "they_end": 5.486, "book": 5.486, "book_end": 5.886, "the": 5.886, "the_end": 5.966, "next": 5.966, "next_end": 6.286, "planner": 6.286, "planner_end": 7.166};
+      const W = {"wedding": 0.15, "wedding_end": 0.606, "planners": 0.606, "planners_end": 1.326, "youre": 1.326, "youre_end": 1.646, "busy": 1.646, "busy_end": 1.966, "at": 1.966, "at_end": 2.126, "the": 2.126, "the_end": 2.206, "venue": 2.206, "venue_end": 2.686, "all": 2.686, "all_end": 2.926, "day": 2.926, "day_end": 3.326, "and": 3.406, "and_end": 3.566, "your": 3.566, "your_end": 3.806, "whatsapp": 3.806, "whatsapp_end": 4.526, "never": 4.526, "never_end": 4.766, "stops": 4.766, "stops_end": 5.566, "every": 5.566, "every_end": 5.886, "family": 5.886, "family_end": 6.366, "wants": 6.366, "wants_end": 6.686, "a": 6.686, "a_end": 6.846, "date": 6.846, "date_end": 7.406, "a_2": 7.406, "a_2_end": 7.566, "package": 7.566, "package_end": 7.966, "and_2": 8.046, "and_2_end": 8.206, "a_3": 8.206, "a_3_end": 8.366, "price": 8.366, "price_end": 8.686, "today": 8.846, "today_end": 9.566, "reply": 9.566, "reply_end": 10.126, "late": 10.126, "late_end": 10.526, "and_3": 10.606, "and_3_end": 10.766, "they": 10.766, "they_end": 11.006, "book": 11.006, "book_end": 11.406, "the_2": 11.406, "the_2_end": 11.486, "next": 11.486, "next_end": 11.726, "planner": 11.726, "planner_end": 12.606};
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
+      // "you're busy at the venue all day": the day runs on the clock while the phone fills up
+      tl.fromTo("#pb-venue", { opacity: 0, y: 60, scale: 1.06 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, 0.05);
+      tl.fromTo("#pb-vtag", { scale: 0 }, { scale: 1, duration: 0.22, ease: "back.out(2.5)" }, W.venue - 0.1);
+      const CL = gsap.utils.toArray("#pb-clock span");
+      CL.forEach((c, i) => { const t = W.venue + i * ((W.whatsapp - W.venue) / CL.length); tl.set(c, { opacity: 1 }, t); if (i < CL.length - 1) tl.set(c, { opacity: 0 }, t + (W.whatsapp - W.venue) / CL.length); });
+      // "and your WhatsApp never stops": messages pile in, the badge climbs, the phone buzzes
+      const NS = gsap.utils.toArray("#pb-phone .pb-n");   // they trickle in all day, the last ones pile up on "never stops"
+      NS.forEach((n, i) => tl.fromTo(n, { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.14, ease: "power2.out" }, 0.5 + (W.never - 0.5) * i / (NS.length - 1)));
+      const BG = gsap.utils.toArray("#pb-badge span");
+      BG.forEach((b, i) => { const t = W.whatsapp + i * 0.22; tl.set(b, { opacity: 1 }, t); if (i < BG.length - 1) tl.set(b, { opacity: 0 }, t + 0.22); });
+      tl.fromTo("#pb-badge", { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2.5)" }, W.whatsapp - 0.05);
+      for (let i = 0; i < 4; i++) tl.fromTo("#pb-phone", { x: 0, rotation: 0 }, { x: 8, rotation: 2, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.whatsapp + 0.1 + i * 0.4);
+      tl.to("#pb-venue", { opacity: 0, y: -80, scale: 0.94, duration: 0.25, ease: "power3.in" }, W.every - 0.3);
       tl.fromTo("#pb-card", { opacity: 0, y: 60, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, W.every - 0.1);
       // one family per thing they want: date, package, price, today
       [["#pb-r1", "#pb-a1", W.family], ["#pb-r2", "#pb-a2", W.package], ["#pb-r3", "#pb-a3", W.price], ["#pb-r4", "#pb-a4", W.today]].forEach(([r, a, t]) => {
@@ -71,7 +107,7 @@
       tl.fromTo("#pb-lost", { opacity: 0, scale: 3 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, W.book - 0.05);
       tl.fromTo("#pb-flash", { opacity: 0.5 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.book);
       tl.fromTo("#pb-card", { x: 0 }, { x: 14, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.book + 0.12);
-      tl.fromTo("#problem-prog", { scaleX: 0.2109 }, { scaleX: 0.3474, duration: 7.165, ease: "none" }, 0);
+      tl.fromTo("#problem-prog", { scaleX: 0.1913 }, { scaleX: 0.4092, duration: 12.619, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();
   </script>

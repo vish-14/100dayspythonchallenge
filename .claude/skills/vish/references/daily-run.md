@@ -28,6 +28,7 @@ Show the 3 concepts in the format from concept-engine §6, ranked. Ask with AskU
 
 - Pacing: about 55–65 s of explainer at 0.9× with en-gb pronunciation, then the standard ~8 s WORKFLOW CTA at 1.0× (about 70–75 s in total). Clarity beats speed: the audience is largely Indian, and the first version at 1.0×/1.1× with US pronunciation was reported as hard to understand. Don't rush the problem → solution turn; it gets a slightly longer pause (`GAP` in `make_vo.py`).
 - **Narrative (required): problem → my solution → how its workflows work → CTA.** Never jump from the problem straight into a numbered list.
+- **Open the problem with the owner's day (user feedback, 30 Oct):** after the hook, say the audience by name and their real pain in one or two plain lines before the customer asks, e.g. "Wedding planners, you're busy at the venue all day, and your WhatsApp never stops." Show it: a venue/site card with a clock running through the day, and a WhatsApp phone filling up with a badge racing to 99+. Then the customer asks, the late reply, the lost booking, and "That's why I built…".
   - **Hook** (≤2 s, names the audience and the pain, in their own words: "Property agents: your enquiries go cold while you're out on site visits.").
   - **Problem** (one relatable moment: "A buyer enquires at 9 PM. You reply the next morning. By then, another broker is already talking to them.").
   - **Solution** (the turn, first person, names the solution and the number of workflows): "That's why I built an AI agent solution for [audience], with [four] connected workflows."

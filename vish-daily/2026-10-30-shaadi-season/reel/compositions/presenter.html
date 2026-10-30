@@ -73,7 +73,7 @@
   <script>
     (() => {
       // Mouth shape per frame comes from the real voiceover (tools/analyze_voice.py): r rest, m pressed, b small, a open, e wide, o round.
-      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrreeeaaaaooaaaaaaaaaaaammmmmmeeaaaooorrrrraaaaoooaabbeeemmrrrrrrrrrrrrrrooaaaaaaaaoooaaaooorrrrreeaaaaeeaaaaaaarrrrraaaaaaaaaaarrrrrrrrrrrrrrrraarrrrrrraaaaarrraaaeeeeeeeerrrooooaaaaeeaaaaaarrrrrrrrrrrrrrrrrrrrraaaaaaaaooaaaaarrrrrrrraaaaoooooaaabbbbbooommaaaaaaaaaeemmmmmmrrrrrrrrrrrrrrrrrrrrraaaaaaaaammmaaaaaaaooaaaaaaaaaaeeeeoooaaaeeerrrrrrrrrrrrrrrrreeaaaaaaaaooeeeeeeeerrmmaaaaaaeerrrrrrraaaeemmrrrrrrrrrrrrrraaaaaaaaaaaaaaaaaaaaaarrrrrrrrrrraaooaaoooooorrrraaooaaaaaarrrraaaaaaaarrrrrrrrrrrrrrrrrrrrrrrraaaaeeeaaaaaaaaaaaoooaaaoooooooaaoorrrrraaaaaaaaaaaaabbbaaaaaeeaaoorrrraaooaaaaaooooooaaaaabbbmmrrrrrrrrrrrraaammrrrrraaaaaarrrraaaaaarrrrooooaaaarrmmmmmmmmmmmmrrrrrrrrrrrrrrrrraaaaaaeeerrrrrraaoooaaaaaaaaaaaaaaeerrrrrrrraaaaaaaaaaooommaaaaaaaabbbmmrrrrrrrrrrrrrrraaaaarrrreeeeeeeooeeaaaaeeerrrrraaaaaaaaaaaaaaoooooaaeemmrrmmmrrrrrrrrrrrrrreeeaaaaaaaaoooorrrraaoooooaaaaaaammeeeeaaaaaaaaabbbbrrrrrrrrrrrraaooooaaaarrrraaaooaaaaaaaaaaaaaaaaoooaaeeeaaaaammrrrrrrrrrrrrrrrrrraaaaaaaoorrrrrrrrmmeeaaaooeeerrraaaaaaaaarrrraaaooooooaaoooaaaaooooeeerrrrrrrrrrrrrrraaaaaooooaaaaaaeeeaaaeeerrrraaooaaaaarraaaooooeeaaaaeeerrrrrrrrrrrrrrrrrraaaaaaaaarrrrrraaaaaaaaooeeerrrraaaaaaaaaaaaaaoooaaaaaaaaarrrraaaammeeemmrrrrrrrrrrrraaooooeeaaaammaaaaaaaaarrrrrraaooaaaaaaaaaaaaaaaeeeerrrrrrrrrrrrrrrrrrraaaaaaaaaeeeeooaaaarrrrraaaaaaaaaooorrraaaaaaaaaaaeeeoooommmmrrrrrrrrrrrrraaaaaaaaooaaaaaarraaoooooaaaaabbbbrrrrrrrrrrraaaaaammmmmbbbbbrrrrrrrrrrrraaaaaeeeeaaaooaaaaaaooooaaaaaaaaaaooommrrrooaaaaooooaaaaaabbbbrrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7, 37.3, 40.4], BROWS = [7.28, 15.76, 19.04, 24.276, 29.747, 34.122, 39.359], MOVES = [[11.274, -10, 0], [18.439, 0, 0], [24.326, 10, 0], [29.797, 0, 0], [34.172, 0, 10], [39.409, -10, 0], [43.46, 0, -10]];
+      const VIS = "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrreeeaaaaooaaaaaaaaaaaammmmmmeeaaaooorrrrraaaaoooaabbeeemmrrrrrrrrrrrrrrooaaaaaaaaoooaaaooorrrrreeaaaaeeaaaaaammmoooaaaaaaaaaaarrrrrrrrrrrrrrrraarrrrrrraaaaarrraaeeeeeeeeerrrooooaaaaeeaaaaaaaaaaaaarrrrrrrrrrrrrraaaaaaaaooaaaaarrrrrrrraaaaoooooaaabbbbbooommaaaaaaaaaeemmmmmmrrrrrrrrrrrrrrrrrrrrroooaaaaaaaoommmaaaaaaaaaeeerrrrrrrrrrooaaaooooaaaeeeaaaaaaaaaaaaaoooooooorrraaaaaooooaaaeeeeerrrrrrrrrraaaaaaaaaaaaaaeeeeaaarroooaaaaaaeeeeeeaabbrrreeerrrrrrrrrrrrrraaaaaaaaaaaaaaooooaaaaooaaaaeeeaaaaaaaeeeerrrrrrrrrrrrrrrrrreeeeeeaaoommmmmmmmmmrrrraaaaaaarrrraaaaaaeemmmrrrrrrrrrrrrraaaarrraaaaaaabbbaaaabbbrrrrrrrrrrrrooaaaoooaaarrrrrooaaammmrrrrraaaaaaarrrrrrrrrrrrrrrrrrrrrrraaaaaeeeaaaaaaaaaaooooaaaooooooaaooorrrraaaaaaaaaaaaaaaaaaaaaeeaaooorrraaooaaaaaaoooooaaaaabbbmmmrrrrrrrrrrrraaammrrrrraaaaaarrraaoooorrraaooooaaarrmmmbbbbmmrrmmrrrrrrrrrrrrrrrrraaaaaaeerrrrrrraaoooaaaaaaaaaaaaaaaaaaaaarrraaaooaaaaaooommmaaaaaabbbbbrrrrrrrrrrrraaeeaaaaarrrrrrrrraaooeeaaaaeeerrrrrrrrrrraaaaaaaaooooaaaeeerrrmmrrrrrrrrrrrrrrreeeaaaaaaaoooorrrraaooooeeaaaaaammmmmmmmmmmmaaaabbbbrrrrrrrrrrrrrooooaaaaaaaaaaaaaaaaarrrrrmmmaaaaoooaaaeeaaaaaammrrrrrrrrrrrrrrrrraaaaaaaaaarrrrraaaaeeeaaaooeeerrraaaaaaaaarrrraaaaaaaaaaaoooaaaaooooommrrrrrrrrrrrrrraaaaaoooooaaaaoooeeaaaeeerrraaaaaaaooorraaaoooooaaaaaeeerrrrrrrrrrrrrrrrrraaaaaaaarrrrrrrrrrrrraaaaeeerrrraaaaaaaaoooaaaoooaaaaaaaaarrraaaaaaaaeeerrrrrrrrrrrrrrooooooaaaaaaaaaaaaaoorrrrrrrrrooaaaaaaaaaaaaaaeeeeerrrrrrrrrrrrrrrrrooaaaarraaaeeeeeaaaaarrmmaaaaoooaaaaarrrraaaaaaoooaaeeeeeemmmmrrrrrrrrrrrrrraaaaaaaoooaaaaarrraaoooooaaaaaaoorrrrrrrrrrooaaaarrmmmmmbbbbrrrrrrrrrraaaaaaaeeeeeaaoooaaaaaaaaaaaaaaaaaaaaoooorrrrooaaaoommmaaaaeebbbbrrrrrrrr", FPS = 30, BLINKS = [1.1, 4.7, 7.8, 11.8, 14.7, 17.4, 21.0, 24.1, 28.1, 31.0, 33.7, 37.3, 40.4, 44.4, 47.3], BROWS = [7.28, 21.2, 24.48, 29.73, 35.201, 39.576, 44.813], MOVES = [[11.274, -10, 0], [23.893, 0, 0], [29.78, 10, 0], [35.251, 0, 0], [39.626, 0, 10], [44.863, -10, 0], [48.9, 0, -10]];
       const tl = gsap.timeline({ paused: true });
       // hook mode: cut-out Vish (no background) with this reel's props (news desk + mic, or a wedding turban + dhol),
       // jumping on every hard cut and optionally bouncing to the beat; the normal panel returns at the problem
@@ -115,7 +115,7 @@
 
       if (0.000 < 0.1) tl.set("#pp-panel", { y: 0 }, 0);  // an anchor already on air at frame 0
       else tl.fromTo("#pp-panel", { y: 910 }, { y: 0, duration: 0.55, ease: "power3.out" }, 0.000);
-      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 44.450 - 0.4);
+      tl.to("#pp-panel", { y: 910, duration: 0.4, ease: "power3.in" }, 49.904 - 0.4);
 
       function render() {
         const t = tl.time();
@@ -135,7 +135,7 @@
         head.style.translate = `${dx}px ${dy}px`;
       }
       const drive = { p: 0 };
-      tl.to(drive, { p: 1, duration: 52.500, ease: "none", onUpdate: render }, 0);
+      tl.to(drive, { p: 1, duration: 57.900, ease: "none", onUpdate: render }, 0);
       render();
       window.__timelines["presenter"] = tl;
     })();

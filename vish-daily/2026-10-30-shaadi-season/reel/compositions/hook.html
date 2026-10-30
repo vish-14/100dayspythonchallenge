@@ -177,7 +177,7 @@
         el.textContent = ""; el.appendChild(span);
         while (span.getBoundingClientRect().width > 980 && fs > 40) { fs -= 4; el.style.fontSize = fs + "px"; }
       });
-      const W = {"shaadi": 1.5, "shaadi_end": 2.0, "ka": 2.0, "ka_end": 2.22, "season": 2.24, "season_end": 2.8, "aa": 2.8, "aa_end": 3.68, "gaya": 3.68, "gaya_end": 3.78, "mehendi": 3.68, "mehendi_end": 4.56, "sangeet": 4.56, "sangeet_end": 5.12, "baraat": 5.28, "baraat_end": 6.08, "aur": 6.08, "aur_end": 6.24, "aapka": 6.48, "aapka_end": 7.28, "whatsapp": 7.28, "whatsapp_end": 7.76, "200": 8.32, "200_end": 8.96, "unread": 9.12, "unread_end": 9.84, "enquiries": 9.84, "enquiries_end": 11.04};
+      const W = {"shaadi": 1.5, "shaadi_end": 2.0, "ka": 2.0, "ka_end": 2.22, "season": 2.24, "season_end": 2.8, "aa": 2.8, "aa_end": 3.68, "gaya": 3.68, "gaya_end": 3.78, "mehendi": 3.68, "mehendi_end": 4.56, "sangeet": 4.56, "sangeet_end": 5.28, "baraat": 5.28, "baraat_end": 6.08, "aur": 6.08, "aur_end": 6.24, "aapka": 6.48, "aapka_end": 7.28, "whatsapp": 7.28, "whatsapp_end": 8.32, "200": 8.32, "200_end": 8.96, "unread": 9.12, "unread_end": 9.84, "enquiries": 9.84, "enquiries_end": 11.12};
       const D = 11.074;
       const BEAT0 = 0.204, BEAT = 0.72;   // beat grid of the dhol track (measured: first hit 0.204 s, 83 bpm)
       const mk = (parent, tag, n, fn) => { for (let i = 0; i < n; i++) { const e = document.createElement(tag); fn(e, i); parent.appendChild(e); } };
