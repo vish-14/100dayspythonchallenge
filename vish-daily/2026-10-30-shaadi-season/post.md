@@ -1,6 +1,6 @@
 # Post kit · Fri 30 Oct 2026 · "Shaadi season" (wedding businesses)
 
-Files: `reel.mp4` (49.4 s, 1080×1920) · `cover.png` · `captions.srt` · `guide.pdf` (4 pages, "The Wedding Season Playbook")
+Files: `reel.mp4` (57.9 s, 1080×1920) · `cover.png` · `captions.srt` · `guide.pdf` (4 pages, "The Wedding Season Playbook")
 
 ## 1. When to post
 
@@ -9,15 +9,16 @@ Files: `reel.mp4` (49.4 s, 1080×1920) · `cover.png` · `captions.srt` · `guid
 ## 2. Caption
 
 ```
-💍 Shaadi ka season aa gaya… aur aapka WhatsApp? 200 unread enquiries! Wedding planners, ye dekho 👇
-AI agent for wedding businesses | WhatsApp automation | India 🇮🇳
+💍 Balle balle! Shaadi ka season aa gaya… aur aapka WhatsApp? 200 unread enquiries! Wedding planners, ye dekho 👇
+AI agent for wedding planners | WhatsApp automation | India 🇮🇳
 
+Wedding planners, you're at the venue all day… and your WhatsApp never stops 📱
 Every family wants a date, a package and a price, today.
 Reply late, and they book the next planner 😬
 
 That's why I built an AI agent for wedding planners, with 4 connected workflows. You stay in control 👇
 
-1️⃣ Instant reply: every enquiry gets your packages and open dates, even during a function
+1️⃣ Instant reply: every enquiry gets your packages and open dates, even while you're at a function
 2️⃣ Quote: it drafts the quote, and you approve it before it goes out
 3️⃣ Payments: polite reminders, so advances come in on time
 4️⃣ Vendors: caterer, decorator, photographer and DJ always get the latest details
@@ -27,20 +28,20 @@ That's why I built an AI agent for wedding planners, with 4 connected workflows.
 👉 Want this workflow built for your business?
 Follow @vish.workflows and comment "WORKFLOW". I'll send you the free Wedding Season Playbook in your DMs 📩
 
-💾 Save this and share it with a planner friend who's drowning in enquiries this season.
+💾 Save this and send it to a planner friend who's drowning in enquiries this season.
 
 Built for wedding planners, caterers, decorators, banquet halls and event managers in Hyderabad, Vijayawada, Mumbai, Delhi NCR, Bengaluru, Chennai, Jaipur, Dubai and worldwide. AI automation, AI agents, WhatsApp Business API automation, wedding enquiry management, quote automation and vendor coordination, by Sri Trilinga Technologies Private Limited.
 
 #WeddingPlanner #WeddingSeason #AIAutomation #EventPlanner #WhatsAppAutomation
 ```
 
-The first line is 101 characters (shows before "more"). "200 unread" is an illustrative scene, not a statistic.
+The first line is 114 characters (shows before "more"). "200 unread" is an illustrative scene, not a statistic.
 
 ## 3. Cover, settings, alt text
 
 - **Cover:** Edit cover → Add from camera roll → `cover.png` (SHAADI SEASON! · 200 UNREAD ENQUIRIES? · AI agent for wedding businesses · Vish in a turban).
 - **Location:** Vijayawada, India. **AI label: ON** (the voice is AI-generated). **Your story: ON.** **Schedule: OFF** (post manually).
-- **Alt text:** "Pixel-art presenter Vish in a wedding turban explains an AI agent for wedding planners: instant replies to family enquiries, quotes the planner approves, payment reminders and vendor updates."
+- **Alt text:** "Pixel-art presenter Vish in a wedding turban plays the dhol, then explains an AI agent for wedding planners: instant replies to family enquiries, quotes the planner approves, payment reminders and vendor updates."
 
 ## 4. Pinned comment
 
