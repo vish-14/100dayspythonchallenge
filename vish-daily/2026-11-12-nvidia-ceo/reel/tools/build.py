@@ -137,10 +137,12 @@ blinks, t, k = [], pres_in + 1.1, 0
 while t < pres_out - 0.4:
     blinks.append(round(t, 3)); k += 1; t += (2.7, 3.6, 3.1, 4.0, 2.9)[k % 5]
 # brows lift on the numbered headlines and the hook
-brow_up = [round(abs_word(r), 3) for r in ("hook:Jensen", "problem:wonder:", "solution:yes.", "a1:First,", "a2:Second,", "a3:Third,", "a4:Fourth,")]
+def _try(r):
+    try: return round(abs_word(r), 3)
+    except KeyError: return None
+brow_up = [b for b in (_try(r) for r in ("hook:Jensen", "problem:Denny's.", "solution:admitted", "solution:second", "a1:Wednesday,")) if b is not None]
 # restrained head moves in whole sprite pixels (10 px): one small shift per scene, back to centre at the next
-moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("solution", 0, 0), ("a1", 10, 0), ("a2", 0, 0), ("a3", 0, 10), ("a4", -10, 0))]
-moves.append((round(abs_word("a1:running.") + 0.1, 3), 0, -10))
+moves = [(round(win[s][0] + 0.2, 3), dx, dy) for s, dx, dy in (("problem", -10, 0), ("solution", 0, 0), ("a1", 10, 0)) if s in win]
 moves.sort()
 # hook mode (optional): a cut-out presenter during the hook, with props, hard-cut jumps and an optional dance.
 # "anchor_hook": true  -> news desk + mic + plate, cuts on the breaking-news words

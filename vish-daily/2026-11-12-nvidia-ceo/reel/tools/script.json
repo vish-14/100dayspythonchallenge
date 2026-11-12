@@ -1,30 +1,39 @@
 [
- {"id": "hook", "label": "00 / BREAKING",
-  "say": "Breaking news. Jensen Wong just resigned as En-vidia's C E O. Here's what it means for your business.",
-  "text": "Breaking news. Jensen Huang just resigned as Nvidia's CEO. Here's what it means for your business."},
- {"id": "problem", "label": "00 / THE PROBLEM",
-  "say": "En-vidia makes the chips behind most of the big AI tools. When the man who built it leaves overnight, a lot of business owners wonder: will my AI tools still work?",
-  "text": "Nvidia makes the chips behind most of the big AI tools. When the man who built it leaves overnight, a lot of business owners wonder: will my AI tools still work?"},
- {"id": "solution", "label": "00 / THE ANSWER",
-  "say": "Short answer: yes. But it's a reminder to build AI the smart way. That's why I build AI agents with four rules, so you never depend on one company.",
-  "text": "Short answer: yes. But it's a reminder to build AI the smart way. That's why I build AI agents with four rules, so you never depend on one company."},
- {"id": "a1", "label": "01 / DON'T PANIC",
-  "say": "First, don't panic. A C E O change doesn't switch off your tools. The AI you use today keeps running.",
-  "text": "First, don't panic. A CEO change doesn't switch off your tools. The AI you use today keeps running."},
- {"id": "a2", "label": "02 / NO LOCK-IN",
-  "say": "Second, never lock into one model. I build agents that can switch between AI models, so if one gets pricier or slower, we swap it in minutes.",
-  "text": "Second, never lock into one model. I build agents that can switch between AI models, so if one gets pricier or slower, we swap it in minutes."},
- {"id": "a3", "label": "03 / OWN YOUR WORKFLOW",
-  "say": "Third, own your workflow. Your data, your prompts and your steps stay with you, not stuck inside one tool.",
-  "text": "Third, own your workflow. Your data, your prompts and your steps stay with you, not stuck inside one tool."},
- {"id": "a4", "label": "04 / HUMAN IN CONTROL",
-  "say": "Fourth, keep a human in control. The agent does the work, and you approve what matters.",
-  "text": "Fourth, keep a human in control. The agent does the work, and you approve what matters."},
- {"id": "key", "label": "05 / THE TAKEAWAY",
-  "say": "Leaders change. Good systems keep running.",
-  "text": "Leaders change. Good systems keep running."},
- {"id": "cta", "label": "06 / YOUR TURN",
-  "say": "Want an AI agent built like this for your business? Follow me and comment, workflow, and I'll send you the details in your DMs.",
-  "text": "Want an AI agent built like this for your business? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
-  "speed": 1.0}
+ {
+  "id": "hook",
+  "label": "00 / BREAKING",
+  "say": "Breaking news. Jensen Wong just resigned as En-vidia's C E O. He started as a dishwasher. He built En-vidia. And in just a few days, it's over. Here's what happened.",
+  "text": "Breaking news. Jensen Huang just resigned as Nvidia's CEO. He started as a dishwasher. He built Nvidia. And in just a few days, it's over. Here's what happened."
+ },
+ {
+  "id": "problem",
+  "label": "01 / THE RISE",
+  "say": "Born in Taiwan, he grew up in America. As a teenager, he washed dishes and cleared tables at Denny's. In nineteen ninety-three, he started En-vidia in a Denny's booth, and built it into one of the most valuable companies in the world.",
+  "text": "Born in Taiwan, he grew up in America. As a teenager, he washed dishes and cleared tables at Denny's. In 1993, he started Nvidia in a Denny's booth, and built it into one of the most valuable companies in the world."
+ },
+ {
+  "id": "solution",
+  "label": "02 / THE MISTAKES",
+  "say": "Then, two affairs. On Sunday, he admitted to an affair, and apologised to his family and En-vidia's employees. Reports say U S officials believe the woman is a Chinese spy. Days later, the New York Times reported a second relationship, with a senior En-vidia executive who reports to him.",
+  "text": "Then, two affairs. On Sunday, he admitted to an affair, and apologised to his family and Nvidia's employees. Reports say US officials believe the woman is a Chinese spy. Days later, the New York Times reported a second relationship, with a senior Nvidia executive who reports to him."
+ },
+ {
+  "id": "a1",
+  "label": "03 / THE FALLOUT",
+  "say": "On Wednesday, the board accepted his resignation. C F O Colette Kress is now interim C E O, and an independent investigation has begun. The board says it has no reason to believe trade secrets or national security were compromised.",
+  "text": "On Wednesday, the board accepted his resignation. CFO Colette Kress is now interim CEO, and an independent investigation has begun. The board says it has no reason to believe trade secrets or national security were compromised."
+ },
+ {
+  "id": "key",
+  "label": "04 / THE LESSON",
+  "say": "Thirty-three years to build. A few days to lose. And the board's message? Operations continue without interruption. That's what happens when a company runs on systems, not on one person.",
+  "text": "Thirty-three years to build. A few days to lose. And the board's message? Operations continue without interruption. That's what happens when a company runs on systems, not on one person."
+ },
+ {
+  "id": "cta",
+  "label": "05 / YOUR TURN",
+  "say": "Want your business to run on systems, not just on you? Follow me and comment, workflow, and I'll send you the details in your DMs.",
+  "text": "Want your business to run on systems, not just on you? Follow me and comment \"workflow\", and I'll send you the details in your DMs.",
+  "speed": 1.0
+ }
 ]

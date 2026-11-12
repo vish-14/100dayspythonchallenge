@@ -4,7 +4,7 @@
   "width": 1080,
   "height": 1920,
   "fps": 30,
-  "duration": 76.1,
+  "duration": 92.0,
   "output": "reel.mp4"
  },
  "brand": {
@@ -50,62 +50,41 @@
   {
    "id": "hook",
    "chapter": "00 / BREAKING",
-   "counter": "00 / 04",
+   "counter": "",
    "theme": "dark",
    "layout": "split"
   },
   {
    "id": "problem",
-   "chapter": "00 / THE PROBLEM",
-   "counter": "00 / 04",
+   "chapter": "01 / THE RISE",
+   "counter": "",
    "theme": "blue",
    "layout": "split"
   },
   {
    "id": "solution",
-   "chapter": "00 / THE ANSWER",
-   "counter": "00 / 04",
+   "chapter": "02 / THE MISTAKES",
+   "counter": "",
    "theme": "dark",
    "layout": "split"
   },
   {
    "id": "a1",
-   "chapter": "01 / DON'T PANIC",
-   "counter": "01 / 04",
-   "theme": "dark",
-   "layout": "split"
-  },
-  {
-   "id": "a2",
-   "chapter": "02 / NO LOCK-IN",
-   "counter": "02 / 04",
-   "theme": "blue",
-   "layout": "split"
-  },
-  {
-   "id": "a3",
-   "chapter": "03 / OWN YOUR WORKFLOW",
-   "counter": "03 / 04",
-   "theme": "dark",
-   "layout": "split"
-  },
-  {
-   "id": "a4",
-   "chapter": "04 / HUMAN IN CONTROL",
-   "counter": "04 / 04",
+   "chapter": "03 / THE FALLOUT",
+   "counter": "",
    "theme": "blue",
    "layout": "split"
   },
   {
    "id": "key",
-   "chapter": "05 / THE TAKEAWAY",
-   "counter": "04 / 04",
+   "chapter": "04 / THE LESSON",
+   "counter": "",
    "theme": "dark",
    "layout": "takeover"
   },
   {
    "id": "cta",
-   "chapter": "06 / YOUR TURN",
+   "chapter": "05 / YOUR TURN",
    "counter": "",
    "theme": "dark",
    "layout": "takeover"
@@ -124,32 +103,41 @@
    "card_v": "Jensen Huang",
    "stamp": "RESIGNED",
    "l3": "WHAT IT MEANS",
-   "l4": "FOR YOUR BUSINESS"
+   "l4": "FOR YOUR BUSINESS",
+   "d1": "HE STARTED AS A",
+   "d2": "DISHWASHER",
+   "n1": "HE BUILT",
+   "n2": "NVIDIA",
+   "o1": "IN A FEW DAYS,",
+   "o2": "IT'S OVER.",
+   "o3": "HERE'S WHAT HAPPENED"
   },
   "problem": {
-   "n1": "AI CHIPS",
-   "n2": "AI TOOLS",
-   "n3": "YOUR BUSINESS",
-   "ceo": "CEO",
-   "qk": "EVERY OWNER TODAY",
-   "q": "Will my AI tools still work?"
+   "h": "FROM NOTHING",
+   "m1k": "BORN",
+   "m1": "Taiwan",
+   "m1s": "Grew up in America",
+   "m2k": "TEENAGER",
+   "m2": "Denny's",
+   "m2s": "Washed dishes, cleared tables",
+   "m3k": "1993",
+   "m3": "Nvidia",
+   "m3s": "Started in a Denny's booth",
+   "m4k": "TODAY",
+   "m4": "Top tier",
+   "m4s": "One of the world's most valuable companies"
   },
   "a1": {
-   "num": "01",
-   "title": [
-    "DON'T",
-    "PANIC"
-   ],
-   "bar": "Your AI tools · status",
-   "rows": [
-    "Website chatbot",
-    "WhatsApp replies",
-    "Email assistant",
-    "CRM notes"
-   ],
-   "running": "RUNNING",
-   "news": "CEO CHANGE",
-   "ok": "Nothing breaks tomorrow ✓"
+   "h": "THE FALLOUT",
+   "d1": "WEDNESDAY",
+   "l1": "Board accepts resignation",
+   "s1": "RESIGNED",
+   "d2": "NOW",
+   "l2": "CFO Colette Kress · interim CEO",
+   "d3": "OPEN",
+   "l3": "Independent investigation",
+   "qk": "NVIDIA BOARD",
+   "q": "No reason to believe trade secrets or national security were compromised."
   },
   "a2": {
    "num": "02",
@@ -195,16 +183,18 @@
    "done": "Approved by you"
   },
   "key": {
-   "seat": "CEO · changes",
-   "l1": "LEADERS",
-   "l2": "CHANGE.",
-   "l3": "SYSTEMS",
-   "l4": "STAY.",
-   "run": "STILL RUNNING"
+   "l1": "33 YEARS",
+   "l2": "TO BUILD.",
+   "l3": "A FEW DAYS",
+   "l4": "TO LOSE.",
+   "qk": "NVIDIA BOARD · 12 NOV",
+   "q": "Operations continue without interruption.",
+   "s1": "SYSTEMS",
+   "s2": "NOT <s>ONE PERSON</s>"
   },
   "cta": {
-   "line1": "Want an AI agent",
-   "line2": "business?",
+   "line1": "Want your business",
+   "line2": "not just on you?",
    "comments": "COMMENTS",
    "user": "you",
    "typed": "WORKFLOW",
@@ -219,21 +209,20 @@
    "step1": "STEP 1",
    "step2": "STEP 2",
    "dm_note": "Follow first, so my reply can reach your DMs",
-   "line1b": "built like this for your"
+   "line1b": "to run on systems,"
   },
   "solution": {
-   "kicker": "BUILD AI THE SMART WAY",
-   "h1a": "4",
-   "h1b": "RULES",
-   "h2": "FOR FUTURE-PROOF AI AGENTS",
-   "nodes": [
-    "DON'T PANIC",
-    "NO LOCK-IN",
-    "OWN IT",
-    "HUMAN OK"
-   ],
-   "pill": "NEVER DEPEND ON ONE COMPANY",
-   "yes": "YES ✓"
+   "h1": "TWO",
+   "h2": "AFFAIRS",
+   "c1t": "ADMITTED",
+   "c1k": "SUNDAY · HIS STATEMENT",
+   "c1": "Affair #1",
+   "c1s": "Apologised to his family and Nvidia's employees",
+   "c1r": "REPORTS: US OFFICIALS BELIEVE SHE IS A CHINESE SPY",
+   "c2t": "REPORTED",
+   "c2k": "DAYS LATER · NEW YORK TIMES",
+   "c2": "Relationship #2",
+   "c2s": "With a senior Nvidia executive who reports to him"
   }
  },
  "sfx": [
@@ -268,220 +257,124 @@
    "volume": 0.6
   },
   {
-   "file": "whoosh.mp3",
-   "word": "hook:Here's",
+   "file": "whoosh-short.mp3",
+   "word": "hook:He",
    "offset": -0.08,
    "volume": 0.4
   },
   {
-   "file": "pop.mp3",
-   "word": "hook:business.",
-   "offset": 0,
-   "volume": 0.35
-  },
-  {
-   "file": "pop.mp3",
-   "word": "problem:chips",
-   "offset": -0.1,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "problem:AI",
-   "offset": -0.1,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "problem:tools.",
-   "offset": 0.2,
-   "volume": 0.3
-  },
-  {
    "file": "whoosh-short.mp3",
-   "word": "problem:leaves",
-   "offset": 0,
+   "word": "hook:built",
+   "offset": -0.08,
    "volume": 0.4
   },
   {
    "file": "impact-bass-1.mp3",
-   "word": "problem:leaves",
-   "offset": 0.35,
-   "volume": 0.5
+   "word": "hook:few",
+   "offset": -0.1,
+   "volume": 0.6
   },
   {
-   "file": "ping.mp3",
-   "word": "problem:will",
+   "file": "pop.mp3",
+   "word": "problem:Born",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:teenager,",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "problem:1993,",
    "offset": -0.1,
    "volume": 0.3
   },
   {
    "file": "riser.mp3",
-   "word": "solution:yes.",
-   "offset": -10.03,
-   "volume": 0.16
-  },
-  {
-   "file": "impact-bass-1.mp3",
-   "word": "solution:yes.",
-   "offset": -0.05,
-   "volume": 0.45
-  },
-  {
-   "file": "whoosh.mp3",
-   "word": "solution:That's",
-   "offset": -0.15,
-   "volume": 0.35
+   "word": "problem:most",
+   "offset": -1.5,
+   "volume": 0.14
   },
   {
    "file": "pop.mp3",
-   "word": "solution:four",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "whoosh-short.mp3",
-   "word": "solution:rules,",
-   "offset": 0,
-   "volume": 0.28
-  },
-  {
-   "file": "impact-bass-1.mp3",
-   "word": "a1:First,",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "impact-bass-1.mp3",
-   "word": "a1:CEO",
-   "offset": -0.05,
+   "word": "problem:most",
+   "offset": -0.1,
    "volume": 0.35
   },
   {
-   "file": "whoosh-short.mp3",
-   "word": "a1:switch",
-   "offset": 0,
-   "volume": 0.35
-  },
-  {
-   "file": "ping.mp3",
-   "word": "a1:keeps",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
    "file": "impact-bass-1.mp3",
-   "word": "a2:Second,",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "click-soft.mp3",
-   "word": "a2:switch",
-   "offset": 0,
-   "volume": 0.45
-  },
-  {
-   "file": "click-soft.mp3",
-   "word": "a2:between",
-   "offset": 0.1,
-   "volume": 0.45
-  },
-  {
-   "file": "pop.mp3",
-   "word": "a2:pricier",
+   "word": "solution:two",
    "offset": -0.05,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "a2:slower,",
-   "offset": -0.05,
-   "volume": 0.3
-  },
-  {
-   "file": "click.mp3",
-   "word": "a2:swap",
-   "offset": 0,
    "volume": 0.5
   },
   {
-   "file": "ping.mp3",
-   "word": "a2:minutes.",
-   "offset": 0,
-   "volume": 0.3
+   "file": "whoosh-short.mp3",
+   "word": "solution:Sunday,",
+   "offset": -0.1,
+   "volume": 0.35
   },
   {
    "file": "impact-bass-1.mp3",
-   "word": "a3:Third,",
+   "word": "solution:spy.",
    "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "a3:data,",
-   "offset": -0.1,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "a3:prompts",
-   "offset": -0.1,
-   "volume": 0.3
-  },
-  {
-   "file": "pop.mp3",
-   "word": "a3:steps",
-   "offset": -0.1,
-   "volume": 0.3
-  },
-  {
-   "file": "click.mp3",
-   "word": "a3:you,",
-   "offset": 0.1,
    "volume": 0.45
   },
   {
+   "file": "whoosh-short.mp3",
+   "word": "solution:New",
+   "offset": -0.1,
+   "volume": 0.35
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a1:board",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
    "file": "impact-bass-1.mp3",
-   "word": "a3:one",
-   "offset": 0.05,
+   "word": "a1:resignation.",
+   "offset": -0.05,
+   "volume": 0.5
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a1:CFO",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "pop.mp3",
+   "word": "a1:independent",
+   "offset": -0.1,
+   "volume": 0.3
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "key:Thirty-three",
+   "offset": -0.1,
+   "volume": 0.5
+  },
+  {
+   "file": "impact-bass-1.mp3",
+   "word": "key:few",
+   "offset": -0.1,
+   "volume": 0.6
+  },
+  {
+   "file": "whoosh.mp3",
+   "word": "key:And",
+   "offset": -0.1,
    "volume": 0.4
   },
   {
    "file": "impact-bass-1.mp3",
-   "word": "a4:Fourth,",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "typing.mp3",
-   "word": "a4:does",
-   "offset": 0,
-   "volume": 0.18
-  },
-  {
-   "file": "click.mp3",
-   "word": "a4:approve",
-   "offset": 0.05,
-   "volume": 0.5
-  },
-  {
-   "file": "ping.mp3",
-   "word": "a4:what",
-   "offset": 0,
-   "volume": 0.3
-  },
-  {
-   "file": "impact-bass-1.mp3",
-   "word": "key:Leaders",
+   "word": "key:systems,",
    "offset": -0.05,
-   "volume": 0.5
-  },
-  {
-   "file": "impact-bass-1.mp3",
-   "word": "key:Good",
-   "offset": -0.05,
-   "volume": 0.5
+   "volume": 0.45
   },
   {
    "file": "whoosh.mp3",
@@ -565,8 +458,20 @@
     0.95
    ],
    [
-    "hook:Here's",
+    "hook:He",
     -0.05,
+    -150,
+    0.9
+   ],
+   [
+    "hook:built",
+    -0.05,
+    160,
+    0.92
+   ],
+   [
+    "hook:few",
+    -0.1,
     0,
     1.08
    ]

@@ -26,49 +26,49 @@
 .t-blue .head .num, .on-blue .num{color:var(--paper)}
 
     .k-big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
-    #k1 { top: 340px; font-size: 150px; color: var(--paper); }
-    #k2 { top: 500px; font-size: 150px; color: #8A93A3; }
-    #k3 { top: 1110px; font-size: 150px; color: var(--paper); }
-    #k4 { top: 1270px; font-size: 150px; color: #6F95FF; }
-    #k-seat { position: absolute; left: 0; width: 1080px; top: 260px; text-align: center; }
-    #k-seat span { display: inline-block; font-size: 26px; padding: 10px 18px; border-radius: 10px; border: 2px solid #3A4252; color: #8A93A3; }
+    #g1, #g2, #g3 { position: absolute; inset: 0; }
+    #k1 { top: 330px; font-size: 150px; color: var(--paper); } #k2 { top: 490px; font-size: 110px; color: #76B900; }
+    #k3 { top: 1130px; font-size: 150px; color: var(--paper); } #k4 { top: 1290px; font-size: 110px; color: #E3262B; }
+    #kq { position: absolute; left: 90px; top: 340px; width: 900px; padding: 34px 40px; }
+    #kq small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 22px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    #kq b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 58px; color: var(--ink); line-height: 1.1; margin-top: 12px; }
+    #ks1 { top: 1130px; font-size: 130px; color: #6F95FF; }
+    #ks2 { top: 1290px; font-size: 64px; color: #8A93A3; }
+    #ks2 s { text-decoration-thickness: 8px; text-decoration-color: #E3262B; }
     #k-gear { position: absolute; left: 440px; top: 1450px; width: 200px; height: 200px; }
-    #k-run { position: absolute; left: 0; width: 1080px; top: 1690px; text-align: center; }
-    #k-run span { display: inline-flex; align-items: center; gap: 12px; font-size: 26px; padding: 12px 20px; border-radius: 12px; background: #D3F9D8; color: #1F7A3A; }
-    #k-run i { width: 16px; height: 16px; border-radius: 50%; background: #2F9E44; }
   </style>
   <div id="root" data-composition-id="key" data-width="1080" data-height="1920">
     <div id="key-bg" class="full bg-dark"></div>
-    <div id="k-seat" class="mono"><span id="k-seat-s">CEO · changes</span></div>
-    <div id="k1" class="k-big">LEADERS</div>
-    <div id="k2" class="k-big">CHANGE.</div>
-    <div id="k3" class="k-big">SYSTEMS</div>
-    <div id="k4" class="k-big">STAY.</div>
-    <svg id="k-gear" viewBox="0 0 100 100"><g fill="#6F95FF"><circle cx="50" cy="50" r="30"/>
-      <rect x="44" y="4" width="12" height="20" rx="3"/><rect x="44" y="76" width="12" height="20" rx="3"/><rect x="4" y="44" width="20" height="12" rx="3"/><rect x="76" y="44" width="20" height="12" rx="3"/>
-      <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(45 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(135 50 50)"/>
-      <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(225 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(315 50 50)"/></g>
-      <circle cx="50" cy="50" r="12" fill="#0B1016"/></svg>
-    <div id="k-run" class="mono"><span><i id="k-dot"></i>STILL RUNNING</span></div>
-    <div id="key-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>04 / 04</span></div>
+    <div id="g1"><div id="k1" class="k-big">33 YEARS</div><div id="k2" class="k-big">TO BUILD.</div><div id="k3" class="k-big">A FEW DAYS</div><div id="k4" class="k-big">TO LOSE.</div></div>
+    <div id="g2"><div id="kq" class="card"><small>NVIDIA BOARD · 12 NOV</small><b>“Operations continue without interruption.”</b></div>
+      <div id="ks1" class="k-big">SYSTEMS</div><div id="ks2" class="k-big">NOT <s>ONE PERSON</s></div>
+      <svg id="k-gear" viewBox="0 0 100 100"><g fill="#6F95FF"><circle cx="50" cy="50" r="30"/>
+        <rect x="44" y="4" width="12" height="20" rx="3"/><rect x="44" y="76" width="12" height="20" rx="3"/><rect x="4" y="44" width="20" height="12" rx="3"/><rect x="76" y="44" width="20" height="12" rx="3"/>
+        <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(45 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(135 50 50)"/>
+        <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(225 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(315 50 50)"/></g>
+        <circle cx="50" cy="50" r="12" fill="#0B1016"/></svg></div>
+    <div id="key-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span></span></div>
   </div>
   <script>
     (() => {
-      const W = {"leaders": 0.15, "leaders_end": 0.803, "change": 0.803, "change_end": 1.443, "good": 1.443, "good_end": 1.683, "systems": 1.843, "systems_end": 2.323, "keep": 2.323, "keep_end": 2.643, "running": 2.643, "running_end": 3.523};
-      const D = 3.538;
+      const W = {"thirtythree": 0.15, "thirtythree_end": 0.783, "years": 0.783, "years_end": 1.183, "to": 1.183, "to_end": 1.423, "build": 1.423, "build_end": 1.903, "a": 2.063, "a_end": 2.223, "few": 2.223, "few_end": 2.463, "days": 2.463, "days_end": 2.783, "to_2": 2.783, "to_2_end": 3.023, "lose": 3.023, "lose_end": 3.583, "and": 3.583, "and_end": 3.823, "the": 3.823, "the_end": 3.983, "boards": 3.983, "boards_end": 4.543, "message": 4.543, "message_end": 5.343, "operations": 5.343, "operations_end": 6.223, "continue": 6.223, "continue_end": 6.783, "without": 6.783, "without_end": 7.183, "interruption": 7.183, "interruption_end": 8.143, "thats": 8.143, "thats_end": 8.463, "what": 8.463, "what_end": 8.703, "happens": 8.703, "happens_end": 9.183, "when": 9.183, "when_end": 9.423, "a_2": 9.423, "a_2_end": 9.583, "company": 9.583, "company_end": 10.063, "runs": 10.063, "runs_end": 10.463, "on": 10.463, "on_end": 10.703, "systems": 10.703, "systems_end": 11.503, "not": 11.503, "not_end": 11.743, "on_2": 11.743, "on_2_end": 11.983, "one": 11.983, "one_end": 12.303, "person": 12.303, "person_end": 13.263};
       const tl = gsap.timeline({ paused: true });
-      // "Leaders change.": the seat label flips, the words slam in
-      tl.fromTo("#k-seat", { opacity: 0 }, { opacity: 1, duration: 0.2 }, Math.max(0, W.leaders - 0.2));
-      tl.fromTo("#k1", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.leaders - 0.05);
-      tl.fromTo("#k2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.change - 0.05);
-      tl.fromTo("#k-seat-s", { rotationX: 0 }, { rotationX: 360, duration: 0.4, ease: "power2.inOut" }, W.change);
-      // "Good systems keep running.": the gear turns, the status stays green
-      tl.fromTo("#k3", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.good - 0.05);
-      tl.fromTo("#k4", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.keep - 0.05);
+      // "Thirty-three years to build. A few days to lose."
+      tl.fromTo("#k1", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, Math.max(0, W.thirtythree - 0.1));
+      tl.fromTo("#k2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.build - 0.05);
+      tl.fromTo("#k3", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.few - 0.1);
+      tl.fromTo("#k4", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.lose - 0.05);
+      tl.fromTo("#k4", { x: 0 }, { x: 14, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.lose + 0.2);
+      // "And the board's message? Operations continue without interruption."
+      tl.to("#g1", { opacity: 0, y: -60, duration: 0.25, ease: "power3.in" }, W.and - 0.1);
+      tl.set("#g2", { opacity: 0 }, 0);
+      tl.to("#g2", { opacity: 1, duration: 0.01 }, W.and + 0.15);
+      tl.fromTo("#kq", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.boards - 0.05);
+      // "That's what happens when a company runs on systems, not on one person."
+      tl.fromTo("#ks1", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.systems - 0.05);
+      tl.fromTo("#ks2", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.not - 0.05);
       tl.fromTo("#k-gear", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.systems);
       tl.fromTo("#k-gear", { rotation: 0 }, { rotation: 360, duration: 3, ease: "none" }, W.systems);
-      tl.fromTo("#k-run", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, W.running);
-      tl.fromTo("#k-dot", { opacity: 1 }, { opacity: 0.25, duration: 0.3, yoyo: true, repeat: 5, ease: "steps(1)" }, W.running);
       window.__timelines["key"] = tl;
     })();
   </script>

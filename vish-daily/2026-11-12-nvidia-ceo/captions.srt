@@ -3,202 +3,218 @@
 Breaking news.
 
 2
-00:00:02,410 --> 00:00:04,800
+00:00:02,410 --> 00:00:04,720
 Jensen Huang just resigned as
 
 3
-00:00:04,810 --> 00:00:07,040
+00:00:04,730 --> 00:00:07,040
 Nvidia's CEO.
 
 4
-00:00:07,050 --> 00:00:08,080
-Here's what it means
+00:00:07,050 --> 00:00:08,800
+He started as a dishwasher.
 
 5
-00:00:08,090 --> 00:00:09,301
-for your business.
+00:00:08,810 --> 00:00:10,320
+He built Nvidia.
 
 6
-00:00:09,301 --> 00:00:11,520
-Nvidia makes the chips behind
+00:00:10,330 --> 00:00:11,200
+And in just a few
 
 7
-00:00:11,530 --> 00:00:13,040
-most of the big AI
+00:00:11,210 --> 00:00:12,480
+days, it's over.
 
 8
-00:00:13,050 --> 00:00:13,680
-tools.
+00:00:12,490 --> 00:00:14,038
+Here's what happened.
 
 9
-00:00:13,690 --> 00:00:14,800
-When the man who built
+00:00:14,038 --> 00:00:15,520
+Born in Taiwan,
 
 10
-00:00:14,810 --> 00:00:16,400
-it leaves overnight,
+00:00:15,530 --> 00:00:17,280
+he grew up in America.
 
 11
-00:00:16,410 --> 00:00:17,920
-a lot of business owners
+00:00:17,290 --> 00:00:18,480
+As a teenager,
 
 12
-00:00:17,930 --> 00:00:18,560
-wonder:
+00:00:18,490 --> 00:00:19,520
+he washed dishes
 
 13
-00:00:18,570 --> 00:00:20,560
-will my AI tools still
+00:00:19,530 --> 00:00:21,680
+and cleared tables at Denny's.
 
 14
-00:00:20,570 --> 00:00:21,260
-work?
+00:00:21,690 --> 00:00:23,120
+In 1993,
 
 15
-00:00:21,339 --> 00:00:22,420
-Short answer:
+00:00:23,130 --> 00:00:24,660
+he started Nvidia
 
 16
-00:00:22,420 --> 00:00:23,120
-yes.
+00:00:24,660 --> 00:00:25,940
+in a Denny's booth,
 
 17
-00:00:23,130 --> 00:00:24,160
-But it's a reminder
+00:00:25,940 --> 00:00:27,280
+and built it into one
 
 18
-00:00:24,170 --> 00:00:25,920
-to build AI the smart
+00:00:27,290 --> 00:00:29,040
+of the most valuable companies
 
 19
-00:00:25,930 --> 00:00:26,480
-way.
+00:00:29,050 --> 00:00:30,101
+in the world.
 
 20
-00:00:26,490 --> 00:00:28,400
-That's why I build AI
+00:00:30,101 --> 00:00:31,760
+Then, two affairs.
 
 21
-00:00:28,410 --> 00:00:30,000
-agents with four rules,
+00:00:31,770 --> 00:00:32,720
+On Sunday,
 
 22
-00:00:30,010 --> 00:00:31,440
-so you never depend on
+00:00:32,730 --> 00:00:34,260
+he admitted to an affair,
 
 23
-00:00:31,450 --> 00:00:32,562
-one company.
+00:00:34,260 --> 00:00:36,000
+and apologised to his family
 
 24
-00:00:32,562 --> 00:00:34,000
-First, don't panic.
+00:00:36,010 --> 00:00:38,000
+and Nvidia's employees.
 
 25
-00:00:34,010 --> 00:00:36,320
-A CEO change doesn't switch
+00:00:38,010 --> 00:00:40,640
+Reports say US officials believe
 
 26
-00:00:36,330 --> 00:00:37,440
-off your tools.
+00:00:40,650 --> 00:00:42,240
+the woman is a Chinese
 
 27
-00:00:37,450 --> 00:00:38,740
-The AI you use
+00:00:42,250 --> 00:00:42,960
+spy.
 
 28
-00:00:38,740 --> 00:00:40,321
-today keeps running.
+00:00:42,970 --> 00:00:44,000
+Days later,
 
 29
-00:00:40,330 --> 00:00:42,080
-Second, never lock into one
+00:00:44,010 --> 00:00:45,920
+the New York Times reported
 
 30
-00:00:42,090 --> 00:00:42,720
-model.
+00:00:45,930 --> 00:00:47,360
+a second relationship,
 
 31
-00:00:42,730 --> 00:00:43,920
-I build agents that
+00:00:47,370 --> 00:00:49,140
+with a senior Nvidia
 
 32
-00:00:43,930 --> 00:00:46,240
-can switch between AI models,
+00:00:49,140 --> 00:00:51,455
+executive who reports to him.
 
 33
-00:00:46,250 --> 00:00:47,760
-so if one gets pricier
+00:00:51,455 --> 00:00:52,400
+On Wednesday,
 
 34
-00:00:47,770 --> 00:00:48,560
-or slower,
+00:00:52,410 --> 00:00:54,960
+the board accepted his resignation.
 
 35
-00:00:48,570 --> 00:00:50,275
-we swap it in minutes.
+00:00:54,970 --> 00:00:57,060
+CFO Colette Kress
 
 36
-00:00:50,275 --> 00:00:52,240
-Third, own your workflow.
+00:00:57,060 --> 00:00:59,760
+is now interim CEO,
 
 37
-00:00:52,250 --> 00:00:53,140
-Your data,
+00:00:59,770 --> 00:01:02,160
+and an independent investigation has
 
 38
-00:00:53,140 --> 00:00:54,720
-your prompts and your steps
+00:01:02,170 --> 00:01:02,990
+begun.
 
 39
-00:00:54,730 --> 00:00:55,520
-stay with you,
+00:01:02,990 --> 00:01:04,490
+The board says it has
 
 40
-00:00:55,530 --> 00:00:57,624
-not stuck inside one tool.
+00:01:04,500 --> 00:01:06,090
+no reason to believe trade
 
 41
-00:00:57,624 --> 00:00:59,050
-Fourth, keep a human
+00:01:06,100 --> 00:01:08,490
+secrets or national security were
 
 42
-00:00:59,060 --> 00:01:00,090
-in control.
+00:01:08,500 --> 00:01:09,717
+compromised.
 
 43
-00:01:00,100 --> 00:01:01,470
-The agent does the work,
+00:01:09,717 --> 00:01:11,630
+Thirty-three years to build.
 
 44
-00:01:01,470 --> 00:01:03,617
-and you approve what matters.
+00:01:11,630 --> 00:01:13,210
+A few days to lose.
 
 45
-00:01:03,617 --> 00:01:04,970
-Leaders change.
+00:01:13,220 --> 00:01:14,970
+And the board's message?
 
 46
-00:01:04,980 --> 00:01:07,155
-Good systems keep running.
+00:01:14,980 --> 00:01:17,770
+Operations continue without interruption.
 
 47
-00:01:07,155 --> 00:01:09,050
-Want an AI agent built
+00:01:17,780 --> 00:01:18,810
+That's what happens
 
 48
-00:01:09,060 --> 00:01:10,570
-like this for your business?
+00:01:18,820 --> 00:01:20,330
+when a company runs on
 
 49
-00:01:10,580 --> 00:01:12,970
-Follow me and comment "workflow",
+00:01:20,340 --> 00:01:22,973
+systems, not on one person.
 
 50
-00:01:12,980 --> 00:01:13,850
-and I'll send you
+00:01:22,973 --> 00:01:24,410
+Want your business to run
 
 51
-00:01:13,860 --> 00:01:15,830
+00:01:24,420 --> 00:01:25,290
+on systems,
+
+52
+00:01:25,300 --> 00:01:26,490
+not just on you?
+
+53
+00:01:26,500 --> 00:01:28,810
+Follow me and comment "workflow",
+
+54
+00:01:28,820 --> 00:01:29,690
+and I'll send you
+
+55
+00:01:29,700 --> 00:01:31,670
 the details in your DMs.
 

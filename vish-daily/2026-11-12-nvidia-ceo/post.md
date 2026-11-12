@@ -1,87 +1,92 @@
-# Post kit · Thu 12 Nov 2026 · "Nvidia's CEO just quit. Is your AI safe?" (news-jack, all industries)
+# Post kit · Thu 12 Nov 2026 · "Dishwasher → Nvidia → out" (news-jack, all industries)
 
-Files: `reel.mp4` (1080×1920) · `cover.png` · `captions.srt` · `guide.pdf` (4 pages, "The Future-Proof AI Playbook")
+Files: `reel.mp4` (92 s, 1080×1920) · `cover.png` · `captions.srt` · `guide.pdf` (4 pages, "The Run-On-Systems Playbook")
 
-## 0. Fact check (done 12 Nov)
+## 0. Fact check (done 12 Nov), with how each claim is worded
 
-- **Confirmed:** Nvidia's official press release "NVIDIA Announces CEO Transition" and its SEC 8-K say Jensen Huang resigned as president, CEO and board member, effective immediately, and CFO Colette Kress is interim CEO while she stays CFO. Sources:
-  - https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/default.aspx
-  - https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm
+| Claim in the reel | Status | Source |
+| --- | --- | --- |
+| Huang resigned as CEO; the board accepted it on Wednesday; CFO Colette Kress is interim CEO | Confirmed | Nvidia press release and SEC 8-K; TechCrunch |
+| Independent investigation; board has "no reason to believe" trade secrets or national security were compromised | Confirmed (board statement) | Yahoo Finance |
+| "Operations… continue without interruption" | Board chair's statement | Nvidia press release |
+| He admitted an affair on Sunday and apologised to his family and employees | His own statement | Yahoo Finance, TechCrunch |
+| The woman is believed by US officials to be a Chinese spy | **Reported, not proven.** The voice says "Reports say…" and the screen says "REPORTS:" | TechCrunch, Yahoo Finance |
+| Second relationship with a senior executive who reports to him | **Reported** by the New York Times (citing five people). The screen says "REPORTED" | CNBC, Axios |
+| Washed dishes and bussed tables at Denny's as a teenager; Nvidia started in a Denny's booth in 1993 | His own words; Nvidia's blog | Fortune, NVIDIA blog |
+
 - **Left out on purpose:**
-  - The reasons reported in the press. They are allegations, and Nvidia's filing doesn't address them.
-  - The stock move.
-  - Any likeness of Huang. He appears only as a name on a text card.
-- **Changed from the draft:**
-  - "AI chips are already ordered years ahead" was unverified. It is now "A CEO change doesn't switch off your tools".
-  - "Almost every big AI tool" is now "most of the big AI tools".
-- **Voice spelling:** the voice says "Jensen Wong" because Kokoro mispronounced "Huang". Captions spell it Huang.
+  - The women's names: they aren't public figures, and the claims about them are only allegations.
+  - The stock drop.
+  - Any likeness of Huang: he appears only as a name on a text card.
+  - His exact age when he came to the US, because sources disagree.
+- **Voice:** it says "Jensen Wong" because Kokoro mispronounces "Huang". Captions spell it Huang.
+- If you edit the caption, keep "reported" next to the spy and second-relationship claims.
 
 ## 1. When to post
 
-**Post now, today (Thu 12 Nov), as soon as possible.** News reels lose reach within hours, so skip the 8 PM slot. If it's already evening, 8:00 PM IST is fine: Dubai 6:30 PM · London 2:30 PM · New York 9:30 AM (EST).
+**Now, today (Thu 12 Nov), as soon as possible.** News reels lose reach within hours. If it's already evening, 8:00 PM IST is fine: Dubai 6:30 PM · London 2:30 PM · New York 9:30 AM (EST).
 
 ## 2. Caption
 
 ```
-Nvidia's CEO Jensen Huang just resigned. Here's what it means for your AI tools ⚡
-AI agents for business | AI automation | India 🇮🇳 UAE 🇦🇪 UK 🇬🇧 USA 🇺🇸
+From dishwasher to Nvidia CEO… and out in a few days 😮
+Business lessons | AI automation | India 🇮🇳 UAE 🇦🇪 UK 🇬🇧 USA 🇺🇸
 
-Big news in AI today. Nvidia named CFO Colette Kress interim CEO while it looks for a permanent one.
-Your AI tools won't stop tomorrow, but it's the right moment to build AI that doesn't depend on one company 👇
+Jensen Huang washed dishes at Denny's as a teenager. In 1993 he started Nvidia in a Denny's booth, and built it into one of the most valuable companies in the world.
 
-1️⃣ Don't panic: a CEO change doesn't switch off the tools you use today
-2️⃣ No lock-in: agents that switch between AI models in minutes
-3️⃣ Own your workflow: your data, prompts and steps stay yours
-4️⃣ Human in control: the agent does the work, you approve what matters
+This week:
+🔴 Sunday: he admitted to an affair and apologised to his family and employees. Reports say US officials believe the woman is a Chinese spy.
+🔴 Days later: the New York Times reported a second relationship, with a senior Nvidia executive who reports to him.
+🔴 Wednesday: the board accepted his resignation. CFO Colette Kress is interim CEO, and an independent investigation has begun. The board says it has no reason to believe trade secrets or national security were compromised.
 
-Leaders change. Good systems keep running 🤝
+33 years to build. A few days to lose.
 
-💬 Which AI tool does your business rely on most? Tell me below 👇
+But the board's message to customers? "Operations continue without interruption." That's what a company that runs on systems, not on one person, looks like 🤝
 
-👉 Want an AI agent built like this for your business?
-Follow @vish.workflows and comment "WORKFLOW". I'll send you the free Future-Proof AI Playbook in your DMs 📩
+💬 If you stepped away for a week, would your business keep running? Be honest 👇
 
-💾 Save this and share it with a business owner who's worried about their AI tools today.
+👉 Want your business to run on systems, not just on you?
+Follow @vish.workflows and comment "WORKFLOW". I'll send you the free Run-On-Systems Playbook in your DMs 📩
 
-AI automation, AI agents and workflow automation for small businesses in Hyderabad, Vijayawada, Mumbai, Bengaluru, Delhi NCR, Dubai, London and worldwide. Model-agnostic AI agents, WhatsApp automation and business process automation, by Sri Trilinga Technologies Private Limited.
+AI automation, AI agents and workflow automation for small businesses in Hyderabad, Vijayawada, Mumbai, Bengaluru, Delhi NCR, Dubai, London and worldwide. WhatsApp automation, follow-ups, approvals and daily reports, by Sri Trilinga Technologies Private Limited.
 
-#AIAutomation #Nvidia #AIAgents #BusinessAutomation #AINews
+#Nvidia #JensenHuang #BusinessLessons #AIAutomation #Entrepreneur
 ```
 
 ## 3. Cover, settings, alt text
 
-- **Cover:** Edit cover → Add from camera roll → `cover.png` (BREAKING NEWS · NVIDIA'S CEO JUST QUIT · "Is your AI safe?" · Vish at the news desk).
+- **Cover:** Edit cover → Add from camera roll → `cover.png` (BREAKING NEWS · NVIDIA'S CEO JUST QUIT · "Dishwasher → Nvidia → out" · Vish at the news desk).
 - **Location:** Vijayawada, India.
-- **AI label:** ON (the voice is AI-generated).
+- **AI label:** ON.
 - **Your story:** ON.
 - **Schedule:** OFF (post now).
-- **Alt text:** "Pixel-art presenter Vish reads breaking news that Nvidia's CEO resigned, then explains four rules for future-proof AI agents: don't panic, avoid lock-in to one model, own your workflow, and keep a human in control."
+- **Alt text:** "Pixel-art presenter Vish reports that Nvidia's CEO Jensen Huang resigned: his rise from dishwasher to founding Nvidia, the admitted and reported affairs, the board's response, and the lesson that companies should run on systems, not one person."
 
 ## 4. Pinned comment
 
-> Comment WORKFLOW and I'll send you the free Future-Proof AI Playbook 📩 4 rules: don't panic, no lock-in to one model, own your workflow, keep a human in control. (Follow first so it reaches your DMs 👇)
+> Comment WORKFLOW and I'll send you the free Run-On-Systems Playbook 📩 4 workflows so your business runs without you watching everything: instant replies, follow-ups, one-tap approvals and a daily summary. (Follow first so it reaches your DMs 👇)
 
-Reply under it: "Which AI tool would hurt most if it stopped tomorrow? 👇"
+Reply under it: "If you took a week off, what would break first? 👇"
 
 ## 5. SuperProfile
 
-1. Upload `guide.pdf` as a free resource ("The Future-Proof AI Playbook").
-2. Create a new automation on **this reel only**, with keyword `WORKFLOW`, for followers only.
-3. **Message A (not following):** "Hey! 👋 The Future-Proof AI Playbook is for followers. Tap Follow on @vish.workflows, then comment WORKFLOW again and it'll come straight to you."
-4. **Message B (follower):** "Hey [first name]! 👋 Here's the playbook from the reel: 👉 [Open the playbook] It shows the 4 rules I build every AI agent with, so no single company can stop your business. Want me to check or build yours? 📅 [Book a free discovery call] https://cal.com/vishworkflows/discovery, or reply BUILD with your business and the AI tools you use."
-5. **Message C (24 h, once):** "Quick one: which AI tool would hurt most if it stopped tomorrow? Reply with its name and I'll tell you how I'd make it switchable."
+1. Upload `guide.pdf` as a free resource ("The Run-On-Systems Playbook").
+2. Create a new automation on **this reel only**, keyword `WORKFLOW`, followers only.
+3. **Message A (not following):** "Hey! 👋 The Run-On-Systems Playbook is for followers. Tap Follow on @vish.workflows, then comment WORKFLOW again and it'll come straight to you."
+4. **Message B (follower):** "Hey [first name]! 👋 Here's the playbook from the reel: 👉 [Open the playbook] 4 workflows that move the daily work out of your head: instant replies, follow-ups, one-tap approvals and a daily summary. Want me to build them for your business? 📅 [Book a free discovery call] https://cal.com/vishworkflows/discovery, or reply BUILD with your business and the task that eats your time."
+5. **Message C (24 h, once):** "Quick one: if you took a week off, what would break first? Reply in one line and I'll tell you how I'd automate it."
 6. **Message D (BUILD):** "Love it 🙌 Based on what you said, I'd start with [workflow]. Grab a free call and we'll map it together: https://cal.com/vishworkflows/discovery"
-7. Test from a second account, once as a follower and once as a non-follower, before posting.
+7. Test from a second account, once as a follower and once as a non-follower.
 
 ## 6. First hour
 
-- Reply to every comment within 60 minutes, and answer DMs personally after the auto-DM.
-- Share to Story with a poll: "Worried about your AI tools after today's news? Yes / No 🤔", plus the booking link.
+- Reply to every comment within 60 minutes. Keep replies about the business lesson, not gossip, and don't add claims that aren't in the reel.
+- Share to Story with a poll: "Would your business run for a week without you? Yes / Not yet 😅", plus the booking link.
 - Don't edit the caption in the first hour.
-- If Nvidia's official wording changes later, check the caption still matches.
+- If Nvidia, Huang or the board says something new, check the caption still matches.
 
 ## 7. Discovery questions (BUILD replies and calls)
 
-1. Which AI tools do you use today, and which ones would stop your work if they went down?
-2. Where do your data and prompts live: inside the tool, or somewhere you control?
-3. Which actions does AI take on its own today, and which should come to you first?
+1. Which jobs only you can do today, and how many hours a week do they take?
+2. Where do customers, quotes and payments live today: your phone, a sheet or a CRM?
+3. What would you want to approve yourself, and what could run on its own?

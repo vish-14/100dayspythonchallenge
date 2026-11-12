@@ -63,9 +63,9 @@
   </style>
   <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
     <div id="cta-bg" class="full bg-dark"></div>
-    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want an AI agent</div></div>
-    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">built like this for your</div></div>
-    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>business?</div></div>
+    <div class="cta-h" style="top:262px"><div id="cta-l1" class="disp" data-layout-allow-occlusion>Want your business</div></div>
+    <div class="cta-h" style="top:346px"><div id="cta-l1b" class="disp" data-layout-allow-occlusion style="color:var(--paper)">to run on systems,</div></div>
+    <div class="cta-h" style="top:430px"><div id="cta-l2" class="disp" data-layout-allow-occlusion>not just on you?</div></div>
     <div id="cta-card" class="card">
       <div class="bar"><span class="tag blue" style="padding:4px 10px">2</span>&nbsp;COMMENTS · comment “WORKFLOW”</div>
       <div id="cta-rowA">
@@ -94,12 +94,12 @@
   </div>
   <script>
     (() => {
-      const W = {"want": 0.15, "want_end": 0.385, "an": 0.385, "an_end": 0.625, "ai": 0.625, "ai_end": 1.105, "agent": 1.105, "agent_end": 1.585, "built": 1.585, "built_end": 1.985, "like": 1.985, "like_end": 2.145, "this": 2.145, "this_end": 2.385, "for": 2.385, "for_end": 2.625, "your": 2.625, "your_end": 2.785, "business": 2.785, "business_end": 3.505, "follow": 3.505, "follow_end": 3.905, "me": 3.905, "me_end": 4.145, "and": 4.145, "and_end": 4.385, "comment": 4.385, "comment_end": 5.105, "workflow": 5.105, "workflow_end": 5.905, "and_2": 5.905, "and_2_end": 6.065, "ill": 6.065, "ill_end": 6.385, "send": 6.385, "send_end": 6.625, "you": 6.625, "you_end": 6.785, "the": 6.785, "the_end": 6.865, "details": 6.865, "details_end": 7.345, "in": 7.345, "in_end": 7.505, "your_2": 7.505, "your_2_end": 7.745, "dms": 7.745, "dms_end": 8.465};
+      const W = {"want": 0.15, "want_end": 0.407, "your": 0.407, "your_end": 0.567, "business": 0.567, "business_end": 1.047, "to": 1.047, "to_end": 1.207, "run": 1.207, "run_end": 1.527, "on": 1.527, "on_end": 1.767, "systems": 1.767, "systems_end": 2.407, "not": 2.407, "not_end": 2.647, "just": 2.647, "just_end": 2.887, "on_2": 2.887, "on_2_end": 3.127, "you": 3.127, "you_end": 3.607, "follow": 3.607, "follow_end": 4.007, "me": 4.007, "me_end": 4.247, "and": 4.247, "and_end": 4.487, "comment": 4.487, "comment_end": 5.127, "workflow": 5.127, "workflow_end": 5.927, "and_2": 5.927, "and_2_end": 6.087, "ill": 6.087, "ill_end": 6.407, "send": 6.407, "send_end": 6.647, "you_2": 6.647, "you_2_end": 6.807, "the": 6.807, "the_end": 6.887, "details": 6.887, "details_end": 7.367, "in": 7.367, "in_end": 7.527, "your_2": 7.527, "your_2_end": 7.687, "dms": 7.687, "dms_end": 8.487};
       const tl = gsap.timeline({ paused: true });
       // "Want this workflow?"
       tl.fromTo("#cta-l1", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.want);
-      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.built - 0.05);
-      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.business - 0.05);
+      tl.fromTo("#cta-l1b", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.run - 0.05);
+      tl.fromTo("#cta-l2", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W.not - 0.05);
       // STEP 1 · "Follow us": the button is clicked first (the auto-DM only reaches followers)
       tl.set("#cta-f2", { opacity: 0 }, 0);
       tl.fromTo("#cta-followrow", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W.follow - 0.1);

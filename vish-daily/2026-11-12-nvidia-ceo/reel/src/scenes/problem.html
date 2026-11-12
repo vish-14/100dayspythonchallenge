@@ -1,69 +1,47 @@
 <template>
   <style>
     {{BASE_CSS}}
-    .pn { position: absolute; top: 330px; width: 230px; height: 230px; border-radius: 28px; background: var(--paper); box-shadow: 0 24px 50px rgba(4,8,20,.35);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
-    .pn b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; color: var(--ink); text-align: center; line-height: 1.05; }
-    #pn1 { left: 70px; } #pn2 { left: 425px; } #pn3 { left: 780px; }
-    #chip { position: relative; width: 96px; height: 96px; border-radius: 14px; background: #0B1016; }
-    #chip::before { content: ""; position: absolute; left: 26px; top: 26px; width: 44px; height: 44px; border-radius: 6px; background: #76B900; }
-    #chip i { position: absolute; width: 10px; height: 16px; background: #8A93A3; }
-    #ai-ico { width: 96px; height: 96px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; }
-    #biz-ico { position: relative; width: 104px; height: 96px; }
-    #biz-ico::before { content: ""; position: absolute; left: 6px; top: 34px; width: 92px; height: 62px; background: #0B1016; border-radius: 6px; }
-    #biz-ico::after { content: ""; position: absolute; left: 0; top: 10px; width: 104px; height: 30px; background: repeating-linear-gradient(90deg, #E3262B 0 17px, #F5F5F7 17px 26px); border-radius: 6px 6px 0 0; }
-    .pl { position: absolute; top: 441px; height: 8px; width: 125px; background: rgba(245,245,247,.35); }
-    .pf { position: absolute; top: 441px; height: 8px; width: 125px; background: var(--paper); transform-origin: 0 50%; }
-    #pl1, #pf1 { left: 300px; } #pl2, #pf2 { left: 655px; }
-    #ceo { position: absolute; left: 105px; top: 262px; padding: 10px 20px; background: #0B1016; color: #fff; border-radius: 12px; font-size: 24px; white-space: nowrap; }
-    #ceo-x { position: absolute; left: 140px; top: 250px; width: 90px; height: 90px; border-radius: 50%; background: #E3262B; color: #fff; display: flex; align-items: center; justify-content: center;
-      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; }
-    #pq { left: 70px; top: 640px; width: 940px; height: 150px; display: flex; align-items: center; gap: 24px; padding: 0 30px; }
-    #pq-mark { width: 92px; height: 92px; border-radius: 50%; background: #E3262B; color: #fff; flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; }
-    #pq b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: var(--ink); white-space: nowrap; }
-    #pq small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; margin-bottom: 6px; }
-    #pb-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+    #rs-h { position: absolute; left: 56px; top: 262px; font-size: 76px; color: var(--paper); }
+    .ms { position: absolute; top: 430px; width: 220px; height: 260px; border-radius: 22px; background: var(--paper); box-shadow: 0 24px 50px rgba(4,8,20,.35); padding: 22px 18px; }
+    .ms small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: .14em; color: #5B6372; text-transform: uppercase; }
+    .ms b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; color: var(--ink); line-height: 1.02; margin-top: 8px; }
+    .ms p { font-size: 20px; color: #3A4252; margin-top: 10px; line-height: 1.25; font-weight: 600; }
+    .ms .ico { width: 64px; height: 64px; border-radius: 16px; margin-top: 14px; }
+    #ms1 { left: 56px; } #ms2 { left: 302px; } #ms3 { left: 548px; } #ms4 { left: 794px; }
+    #ms4 { background: #76B900; } #ms4 b, #ms4 small, #ms4 p { color: #0B1016; }
+    .ar { position: absolute; top: 548px; width: 26px; height: 26px; border-top: 6px solid var(--paper); border-right: 6px solid var(--paper); transform: rotate(45deg); }
+    #rs-chart { position: absolute; left: 56px; top: 720px; width: 968px; height: 150px; }
+    #rs-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
   </style>
   <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
     <div id="problem-bg" class="panel bg-blue"></div>
-    <div id="pl1" class="pl"></div><div id="pf1" class="pf"></div><div id="pl2" class="pl"></div><div id="pf2" class="pf"></div>
-    <div id="pn1" class="pn"><div id="chip"></div><b>{{c.n1}}</b></div>
-    <div id="pn2" class="pn"><div id="ai-ico">AI</div><b>{{c.n2}}</b></div>
-    <div id="pn3" class="pn"><div id="biz-ico"></div><b>{{c.n3}}</b></div>
-    <div id="ceo" class="mono">{{c.ceo}}</div>
-    <div id="ceo-x">✕</div>
-    <div id="pq" class="card"><div id="pq-mark">?</div><div><small>{{c.qk}}</small><b>{{c.q}}</b></div></div>
+    <div id="rs-h" class="disp">{{c.h}}</div>
+    <div id="ms1" class="ms"><small>{{c.m1k}}</small><b>{{c.m1}}</b><p>{{c.m1s}}</p></div>
+    <div id="ms2" class="ms"><small>{{c.m2k}}</small><b>{{c.m2}}</b><p>{{c.m2s}}</p></div>
+    <div id="ms3" class="ms"><small>{{c.m3k}}</small><b>{{c.m3}}</b><p>{{c.m3s}}</p></div>
+    <div id="ms4" class="ms"><small>{{c.m4k}}</small><b>{{c.m4}}</b><p>{{c.m4s}}</p></div>
+    <i id="ar1" class="ar" style="left:270px"></i><i id="ar2" class="ar" style="left:516px"></i><i id="ar3" class="ar" style="left:762px"></i>
+    <svg id="rs-chart" viewBox="0 0 968 150"><path id="rs-line" d="M10 140 C200 138 350 130 480 110 C620 88 760 50 958 10" fill="none" stroke="#F5F5F7" stroke-width="10" stroke-linecap="round"/></svg>
     {{CHROME}}
-    <div id="pb-flash"></div>
+    <div id="rs-flash"></div>
   </div>
   <script>
     (() => {
       const W = {{W}};
       const tl = gsap.timeline({ paused: true });
-      // chip pins
-      const chip = document.getElementById("chip");
-      [[16, -14], [40, -14], [64, -14], [16, 94], [40, 94], [64, 94]].forEach(([x, y]) => { const i = document.createElement("i"); i.style.left = (x + 3) + "px"; i.style.top = y + "px"; chip.appendChild(i); });
-      tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
-      // "Nvidia makes the chips behind most of the big AI tools": chip → AI tools
-      tl.fromTo("#pn1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.chips - 0.1);
-      tl.fromTo(["#pl1", "#pl2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.behind);
-      tl.fromTo("#pf1", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" }, W.behind);
-      tl.fromTo("#pn2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.ai - 0.1);
-      tl.fromTo("#pf2", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" }, W.tools);
-      tl.fromTo("#pn3", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.tools + 0.25);
-      // "the man who built it": the CEO tag sits on the chip; "leaves overnight": it flies off, the chain flickers
-      tl.fromTo("#ceo", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, W.man - 0.05);
-      tl.to("#ceo", { y: -400, x: 160, rotation: 20, opacity: 0, duration: 0.45, ease: "power3.in" }, W.leaves);
-      tl.set("#ceo-x", { opacity: 0 }, 0);
-      tl.fromTo("#ceo-x", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, W.leaves + 0.35);
-      tl.fromTo("#pb-flash", { opacity: 0.4 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.leaves + 0.35);
-      for (let k = 0; k < 6; k++) tl.set(["#pf1", "#pf2"], { backgroundColor: k % 2 ? "#F5F5F7" : "#E3262B", opacity: k % 2 ? 1 : 0.5 }, W.leaves + 0.4 + k * 0.12);
-      tl.to(["#pf1", "#pf2"], { backgroundColor: "#E3262B", duration: 0.01 }, W.leaves + 1.2);
-      // "a lot of business owners wonder": your business shakes; "will my AI tools still work?"
-      tl.fromTo("#pn3", { x: 0 }, { x: 10, duration: 0.04, yoyo: true, repeat: 7, ease: "none", immediateRender: false }, W.owners);
-      tl.fromTo("#pn3", { boxShadow: "0 24px 50px rgba(4,8,20,.35)" }, { boxShadow: "0 0 0 8px #E3262B, 0 24px 50px rgba(4,8,20,.35)", duration: 0.2, immediateRender: false }, W.owners);
-      tl.fromTo("#pq", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.will - 0.1);
-      tl.fromTo("#pq-mark", { rotation: -15 }, { rotation: 15, duration: 0.18, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.still);
+      tl.fromTo("#rs-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
+      tl.fromTo("#rs-h", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0.05);
+      // one milestone per beat: Taiwan → Denny's → 1993 → most valuable
+      [[1, W.born], [2, W.teenager], [3, W["1993"]], [4, W.most]].forEach(([i, t]) => {
+        tl.fromTo(`#ms${i}`, { opacity: 0, y: 60, scale: 0.85 }, { opacity: 1, y: 0, scale: 1, duration: 0.32, ease: "back.out(1.8)" }, t - 0.1);
+        if (i > 1) tl.fromTo(`#ar${i - 1}`, { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.2 }, t - 0.15);
+      });
+      tl.fromTo("#ms2", { rotation: 0 }, { rotation: 3, duration: 0.08, yoyo: true, repeat: 3, immediateRender: false }, W.dishes);
+      tl.fromTo("#ms3", { boxShadow: "0 24px 50px rgba(4,8,20,.35)" }, { boxShadow: "0 0 0 6px #76B900, 0 24px 50px rgba(4,8,20,.35)", duration: 0.25, immediateRender: false }, W.booth);
+      // "built it into one of the most valuable companies in the world": the line climbs
+      const ln = document.getElementById("rs-line"), L = ln.getTotalLength(); ln.style.strokeDasharray = L;
+      tl.fromTo(ln, { strokeDashoffset: L }, { strokeDashoffset: 0, duration: 1.6, ease: "power2.inOut" }, W.built);
+      tl.fromTo("#ms4", { scale: 1 }, { scale: 1.08, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false }, W.world);
       tl.fromTo("#problem-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
       window.__timelines["problem"] = tl;
     })();

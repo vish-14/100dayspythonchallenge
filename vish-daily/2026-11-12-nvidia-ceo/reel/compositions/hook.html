@@ -58,12 +58,14 @@
     #f5-card b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--ink); }
     #f5-stamp { position: absolute; left: 470px; top: 640px; padding: 8px 22px; border: 8px solid #E3262B; color: #E3262B; border-radius: 14px; background: rgba(245,245,247,.92);
       font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 58px; transform: rotate(-8deg); white-space: nowrap; }
-    /* F6 WHAT IT MEANS FOR YOUR BUSINESS */
-    #f6 { background: #111826; }
-    #f6 .l1 { top: 280px; font-size: 140px; color: var(--paper); }
-    #f6 .l2 { top: 430px; font-size: 120px; color: #6F95FF; }
-    #f6-q { position: absolute; left: 440px; top: 590px; width: 200px; height: 200px; border-radius: 50%; background: #2257EF; color: #fff; display: flex; align-items: center; justify-content: center;
-      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 150px; box-shadow: 0 0 0 18px rgba(34,87,239,.3), 0 0 80px 10px rgba(34,87,239,.5); }
+    /* F6 DISHWASHER, F7 NVIDIA, F8 IT'S OVER */
+    #f6 { background: #111826; } #f6 .l1 { top: 300px; font-size: 64px; color: #8A93A3; } #f6 .l2 { top: 390px; font-size: 150px; color: var(--paper); }
+    #f6-plate { position: absolute; left: 400px; top: 600px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, #F5F5F7 0 45%, #DEE2E6 46% 62%, #F5F5F7 63%); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+    #f6-bub { position: absolute; width: 50px; height: 50px; border-radius: 50%; border: 4px solid rgba(157,184,255,.8); }
+    #f7 { background: radial-gradient(ellipse at 50% 40%, #1B3A0A 0%, #0B1016 70%); } #f7 .l1 { top: 300px; font-size: 64px; color: #8A93A3; } #f7 .l2 { top: 390px; font-size: 200px; color: #76B900; }
+    #f7-chart { position: absolute; left: 190px; top: 640px; width: 700px; height: 260px; }
+    #f8 { background: #E3262B; } #f8 .l1 { top: 300px; font-size: 90px; color: rgba(255,255,255,.85); } #f8 .l2 { top: 420px; font-size: 200px; color: #fff; }
+    #f8 .sub { top: 700px; color: #fff; font-size: 34px; font-weight: 700; }
     /* siren layer over every cut: light bar, red/blue edge glow, LIVE badge */
     #ov-bar { position: absolute; left: 56px; top: 176px; width: 968px; height: 50px; display: flex; gap: 12px; }
     #ov-bar i { flex: 1; border-radius: 10px; }
@@ -89,9 +91,11 @@
         <div class="big fit l1" data-layout-allow-overlap>NVIDIA&#x27;S CEO</div><div class="big fit l2" data-layout-allow-overlap>JUST QUIT</div>
         <div id="f5-card"><div id="f5-ico">CEO</div><div><small>NVIDIA · PRESIDENT &amp; CEO</small><b>Jensen Huang</b></div></div>
         <div id="f5-stamp" data-layout-allow-overlap>RESIGNED</div></div>
-      <div id="f6" class="fr"><div class="stripes"></div>
-        <div class="big fit l1" data-layout-allow-overlap>WHAT IT MEANS</div><div class="big fit l2" data-layout-allow-overlap>FOR YOUR BUSINESS</div>
-        <div id="f6-q">?</div></div>
+      <div id="f6" class="fr"><div class="stripes"></div><div class="big l1">HE STARTED AS A</div><div class="big fit l2" data-layout-allow-overlap>DISHWASHER</div>
+        <div id="f6-plate"></div></div>
+      <div id="f7" class="fr"><div class="big l1">HE BUILT</div><div class="big fit l2" data-layout-allow-overlap>NVIDIA</div>
+        <svg id="f7-chart" viewBox="0 0 700 260"><path id="f7-line" d="M10 250 C120 245 200 235 280 210 C360 185 420 150 480 110 C540 70 600 40 690 10" fill="none" stroke="#76B900" stroke-width="14" stroke-linecap="round"/></svg></div>
+      <div id="f8" class="fr"><div class="stripes"></div><div class="big l1">IN A FEW DAYS,</div><div class="big fit l2" data-layout-allow-overlap>IT&#x27;S OVER.</div><div class="sub mono">HERE&#x27;S WHAT HAPPENED</div></div>
     </div>
     <div id="ov-glow"></div>
     <div id="ov-bar"><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i></div>
@@ -108,10 +112,10 @@
         el.textContent = ""; el.appendChild(span);
         while (span.getBoundingClientRect().width > 980 && fs > 40) { fs -= 4; el.style.fontSize = fs + "px"; }
       });
-      const W = {"breaking": 1.3, "breaking_end": 1.76, "news": 1.76, "news_end": 2.4, "jensen": 2.4, "jensen_end": 2.96, "huang": 3.12, "huang_end": 3.52, "just": 3.76, "just_end": 4.0, "resigned": 4.0, "resigned_end": 4.56, "as": 4.56, "as_end": 4.8, "nvidias": 4.8, "nvidias_end": 5.52, "ceo": 5.76, "ceo_end": 7.04, "heres": 7.04, "heres_end": 7.44, "what": 7.44, "what_end": 7.6, "it": 7.6, "it_end": 7.76, "means": 7.76, "means_end": 8.08, "for": 8.08, "for_end": 8.24, "your": 8.24, "your_end": 8.4, "business": 8.4, "business_end": 9.2};
-      const D = 9.211;
+      const W = {"breaking": 1.3, "breaking_end": 1.76, "news": 1.76, "news_end": 2.4, "jensen": 2.4, "jensen_end": 3.04, "huang": 3.2, "huang_end": 3.6, "just": 3.84, "just_end": 4.08, "resigned": 4.08, "resigned_end": 4.48, "as": 4.48, "as_end": 4.72, "nvidias": 4.72, "nvidias_end": 5.76, "ceo": 5.76, "ceo_end": 7.04, "he": 7.04, "he_end": 7.2, "started": 7.2, "started_end": 7.6, "as_2": 7.6, "as_2_end": 7.76, "a": 7.76, "a_end": 7.84, "dishwasher": 7.84, "dishwasher_end": 8.8, "he_2": 8.8, "he_2_end": 8.96, "built": 8.96, "built_end": 9.28, "nvidia": 9.28, "nvidia_end": 10.32, "and": 10.32, "and_end": 10.56, "in": 10.56, "in_end": 10.72, "just_2": 10.72, "just_2_end": 10.88, "a_2": 10.88, "a_2_end": 10.96, "few": 10.96, "few_end": 11.2, "days": 11.2, "days_end": 11.52, "its": 11.6, "its_end": 12.0, "over": 12.0, "over_end": 12.48, "heres": 12.48, "heres_end": 12.96, "what": 12.96, "what_end": 13.2, "happened": 13.2, "happened_end": 14.0};
+      const D = 13.948;
       const tl = gsap.timeline({ paused: true });
-      const F = ["#f1", "#f2", "#f3", "#f4", "#f5", "#f6"];
+      const F = ["#f1", "#f2", "#f3", "#f4", "#f5", "#f6", "#f7", "#f8"];
       const flash = (t, o = 0.85, d = 0.14) => tl.fromTo("#fl", { opacity: o }, { opacity: 0, duration: d, ease: "power2.out", immediateRender: false }, t);
       const shake = (sel, t, amp = 16, n = 6) => {
         for (let i = 0; i < n; i++) { const a = amp * (1 - i / n); tl.to(sel, { x: (i % 2 ? -1 : 1) * a, y: (i % 3 - 1) * a * 0.6, duration: 0.035, ease: "none" }, t + i * 0.035); }
@@ -144,10 +148,17 @@
       tl.fromTo("#f5-stamp", { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, W.resigned - 0.02);
       flash(W.resigned, 0.45, 0.12); shake("#f5", W.resigned + 0.04, 20, 7);
       tl.fromTo("#f5 .l2", { scale: 1 }, { scale: 1.08, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.ceo);
-      // "Here's what it means for your business."
-      cut(5, W.heres - 0.05, 1.3, 0.6, 14);
-      tl.fromTo("#f6-q", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.4)", immediateRender: false }, W.business - 0.05);
-      tl.fromTo("#f6-q", { scale: 1 }, { scale: 1.1, duration: 0.14, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, W.business + 0.3);
+      // "He started as a dishwasher." → "He built Nvidia." → "And in just a few days, it's over."
+      cut(5, W.he - 0.05, 1.3, 0.5, 12);
+      tl.fromTo("#f6-plate", { rotation: 0, scale: 0.6 }, { rotation: 200, scale: 1, duration: 1.2, ease: "power2.out", immediateRender: false }, W.he);
+      cut(6, W.built - 0.05, 1.3, 0.6, 12);
+      const ln = document.getElementById("f7-line"), LL = ln.getTotalLength(); ln.style.strokeDasharray = LL;
+      tl.fromTo(ln, { strokeDashoffset: LL }, { strokeDashoffset: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, W.built);
+      tl.set(ln, { strokeDashoffset: LL }, 0);
+      cut(7, W.few - 0.1, 1.5, 0.8, 24);
+      tl.fromTo("#f8 .l2", { scale: 1 }, { scale: 1.1, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.over);
+      tl.fromTo("#f8 .sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out", immediateRender: false }, W.heres - 0.05);
+      tl.set("#f8 .sub", { opacity: 0 }, 0);
       gsap.utils.toArray("#root .stripes").forEach((s) => tl.fromTo(s, { x: 0 }, { x: -180, duration: D, ease: "none" }, 0));
       // siren layer: lights alternate fast until the name, then keep pulsing; edge glow swaps red/blue; LIVE blinks; alert pings
       const B = gsap.utils.toArray("#ov-bar i");
@@ -159,10 +170,10 @@
       }
       tl.fromTo("#ov-live", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, 0.7);
       tl.fromTo("#ov-dot", { opacity: 1 }, { opacity: 0.15, duration: 0.25, yoyo: true, repeat: 30, ease: "steps(1)" }, 0.7);
-      [0.7, W.jensen, W.resigned, W.heres].forEach((t) => tl.fromTo("#ov-alert", { scale: 1.8, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, t));
+      [0.7, W.jensen, W.resigned, W.few].forEach((t) => tl.fromTo("#ov-alert", { scale: 1.8, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, t));
       tl.set("#ov-alert", { opacity: 0 }, 0);
       // flash out into the problem
-      tl.fromTo("#f6", { scale: 1 }, { scale: 1.14, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);
+      tl.fromTo("#f8", { scale: 1 }, { scale: 1.14, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);
       tl.fromTo("#fl", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "power2.in", immediateRender: false }, D - 0.12);
       window.__timelines["hook"] = tl;
     })();

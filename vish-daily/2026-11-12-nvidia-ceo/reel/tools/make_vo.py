@@ -14,7 +14,7 @@ CLARITY = ("highpass=f=80,equalizer=f=250:t=q:w=1.2:g=-3,equalizer=f=3200:t=q:w=
            "equalizer=f=8000:t=q:w=1.2:g=1.5,deesser=i=0.3,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2")
 SC = json.load(open('script.json'))
 LEAD = 1.3   # sting + siren before the first word
-GAP = {'hook': 0.45, 'problem': 0.55, 'solution': 0.45, 'a1': 0.35, 'a2': 0.35, 'a3': 0.35, 'a4': 0.45, 'key': 0.6}
+GAP = {'hook': 0.45, 'problem': 0.5, 'solution': 0.5, 'a1': 0.55, 'key': 0.6}
 SR = 24000; parts = [np.zeros(int(LEAD * SR), np.float32)]; t = LEAD; scenes = []
 for s in SC:
     if s.get('audio'):  # a recorded or Parler-TTS clip, resampled to 24 kHz mono

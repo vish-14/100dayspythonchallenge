@@ -84,6 +84,9 @@ Used in the 29 Oct short cut after the first reel got little reach from outside 
   - Replace any claim you can't source ("chips are ordered years ahead") with one you can stand behind.
   - Post as soon as possible, not at the usual slot.
   - Use `"hook_mode"` with `["#pp-desk", "#pp-mic", "#pp-plate"]` and your own cuts, plus `pres_in = 0.0` and new brow anchors in `tools/build.py`, rather than `"anchor_hook": true`, whose cut words are hard-wired to the Hindi hook. Example: `vish-daily/2026-11-12-nvidia-ceo/`.
+- **News reels say what happened, not generic AI advice (user feedback, 12 Nov):** the first Nvidia cut ("Is your AI safe? 4 rules…") was rejected as AI slop. The kept version tells the story: the person's rise (from their own words), what happened, the fallout, then one plain lesson ("33 years to build. A few days to lose."), and a business bridge taken from an official statement ("Operations continue without interruption" → run on systems, not one person) before the CTA.
+  - Admitted facts are stated plainly. Allegations are attributed in both voice and on screen ("Reports say…", REPORTED tag), and the official denial or fairness line stays in.
+  - Private people involved are never named.
 - **Names the voice mangles:** test proper nouns in isolation with Parakeet before the full voiceover. "Jensen Huang" came out as "Jensen A. Chwang", so `say` uses "Jensen Wong" while `text` keeps "Huang" (and add the misheard form to `NUM` in `analyze_voice.py`). Spell brands for the voice the same way when needed ("En-vidia").
 
 - **Story flow (user feedback, Oct 2026):** the reel must go problem → solution → workflows → CTA. A `solution` scene ("That's why I built an AI agent solution for … with four connected workflows") sits between `problem` and `a1`, and each workflow starts "First, … / Second, …" and is explained right away. See `daily-run.md` Step 2.
