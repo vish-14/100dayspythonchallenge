@@ -1,0 +1,57 @@
+<template>
+  <style>
+    {{BASE_CSS}}
+    .a3-chip { position: absolute; top: 480px; width: 290px; height: 110px; border-radius: 20px; background: var(--paper); display: flex; align-items: center; gap: 16px; padding: 0 22px; box-shadow: 0 20px 40px rgba(4,8,20,.4); }
+    .a3-chip b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; color: var(--ink); }
+    .a3-chip i { width: 46px; height: 46px; border-radius: 12px; background: var(--blue); flex: none; }
+    #a3-c1 { left: 56px; } #a3-c2 { left: 395px; } #a3-c3 { left: 734px; }
+    #a3-vault { left: 260px; top: 650px; width: 560px; height: 220px; display: flex; align-items: center; gap: 26px; padding: 0 34px; }
+    #a3-lock { position: relative; width: 110px; height: 120px; flex: none; }
+    #a3-lock::before { content: ""; position: absolute; left: 20px; top: 0; width: 70px; height: 70px; border: 14px solid var(--ink); border-bottom: none; border-radius: 40px 40px 0 0; box-sizing: border-box; }
+    #a3-lock::after { content: ""; position: absolute; left: 0; top: 50px; width: 110px; height: 70px; border-radius: 14px; background: var(--blue); }
+    #a3-vault b { display: block; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: var(--ink); }
+    #a3-vault small { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; }
+    #a3-tool { position: absolute; left: 640px; top: 640px; width: 380px; height: 240px; border-radius: 22px; border: 6px dashed #5B6372; display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: .14em; color: #8A93A3; text-transform: uppercase; }
+    #a3-x { position: absolute; left: 930px; top: 590px; width: 110px; height: 110px; border-radius: 50%; border: 12px solid #E3262B; color: #E3262B; display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 70px; background: #0B1016; }
+  </style>
+  <div id="root" data-composition-id="a3" data-width="1080" data-height="1920">
+    <div id="a3-bg" class="panel bg-dark"></div>
+    <div class="head" style="color:var(--paper)">
+      <div class="mask"><div id="a3-num" class="disp num">{{c.num}}</div></div>
+      <div class="ttl disp"><div class="mask"><div id="a3-t1">{{c.title.0}}</div></div><div class="mask"><div id="a3-t2">{{c.title.1}}</div></div></div>
+    </div>
+    <div id="a3-c1" class="a3-chip"><i></i><b>{{c.chips.0}}</b></div>
+    <div id="a3-c2" class="a3-chip"><i></i><b>{{c.chips.1}}</b></div>
+    <div id="a3-c3" class="a3-chip"><i></i><b>{{c.chips.2}}</b></div>
+    <div id="a3-tool" data-layout-allow-overlap>{{c.tool}}</div>
+    <div id="a3-x" data-layout-allow-overlap>✕</div>
+    <div id="a3-vault" class="card"><div id="a3-lock"></div><div><b>{{c.vault}}</b><small>{{c.vault_s}}</small></div></div>
+    {{CHROME}}
+  </div>
+  <script>
+    (() => {
+      const W = {{W}};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#a3-num", { yPercent: 110 }, { yPercent: 0, duration: 0.4, ease: "power4.out" }, W.third - 0.04);
+      tl.fromTo("#a3-t1", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.own - 0.06);
+      tl.fromTo("#a3-t2", { yPercent: 110 }, { yPercent: 0, duration: 0.36, ease: "power4.out" }, W.workflow - 0.06);
+      // "Your data, your prompts and your steps": one chip per word
+      [[1, W.data], [2, W.prompts], [3, W.steps]].forEach(([i, t]) => tl.fromTo(`#a3-c${i}`, { opacity: 0, y: -60, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: "back.out(2)" }, t - 0.1));
+      // "stay with you": the vault appears and the chips drop into it, the lock snaps
+      tl.fromTo("#a3-vault", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, W.stay - 0.15);
+      [1, 2, 3].forEach((i) => tl.to(`#a3-c${i}`, { x: [250, -90, -430][i - 1], y: 220, scale: 0.3, opacity: 0, duration: 0.3, ease: "power3.in" }, W.with + (i - 1) * 0.08));
+      tl.fromTo("#a3-lock", { scale: 1 }, { scale: 1.2, duration: 0.1, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, W.you + 0.1);
+      // "not stuck inside one tool": a locked-in tool box appears beside it and gets crossed out
+      tl.to("#a3-vault", { x: -200, duration: 0.3, ease: "power3.inOut" }, W.not - 0.1);
+      tl.fromTo("#a3-tool", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, W.stuck - 0.1);
+      tl.set("#a3-x", { opacity: 0 }, 0);
+      tl.fromTo("#a3-x", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, W.one + 0.05);
+      tl.fromTo("#a3-tool", { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, W.one + 0.15);
+      tl.set("#a3-tool", { opacity: 0 }, 0);
+      tl.fromTo("#a3-prog", { scaleX: {{P0}} }, { scaleX: {{P1}}, duration: {{DUR}}, ease: "none" }, 0);
+      window.__timelines["a3"] = tl;
+    })();
+  </script>
+</template>

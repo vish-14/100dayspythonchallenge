@@ -79,6 +79,13 @@ Used in the 29 Oct short cut after the first reel got little reach from outside 
 
 ## Lessons learned (avoid repeating these)
 
+- **News-jack reels (12 Nov 2026, Nvidia CEO):** verify the story on the company's own newsroom or regulatory filing (SEC 8-K) before writing a word, and cite it on screen ("SOURCE: NVIDIA PRESS RELEASE · 12 NOV").
+  - Leave out reported reasons that are only allegations, stock moves and any likeness of the person. A name on a text card is fine; a drawn character of them is not (rule 6).
+  - Replace any claim you can't source ("chips are ordered years ahead") with one you can stand behind.
+  - Post as soon as possible, not at the usual slot.
+  - Use `"hook_mode"` with `["#pp-desk", "#pp-mic", "#pp-plate"]` and your own cuts, plus `pres_in = 0.0` and new brow anchors in `tools/build.py`, rather than `"anchor_hook": true`, whose cut words are hard-wired to the Hindi hook. Example: `vish-daily/2026-11-12-nvidia-ceo/`.
+- **Names the voice mangles:** test proper nouns in isolation with Parakeet before the full voiceover. "Jensen Huang" came out as "Jensen A. Chwang", so `say` uses "Jensen Wong" while `text` keeps "Huang" (and add the misheard form to `NUM` in `analyze_voice.py`). Spell brands for the voice the same way when needed ("En-vidia").
+
 - **Story flow (user feedback, Oct 2026):** the reel must go problem → solution → workflows → CTA. A `solution` scene ("That's why I built an AI agent solution for … with four connected workflows") sits between `problem` and `a1`, and each workflow starts "First, … / Second, …" and is explained right away. See `daily-run.md` Step 2.
 - **The automation is the actor:** "Serious buyers alert you on WhatsApp" wrongly implied the buyers send the alert. Write "The agent alerts you on WhatsApp when a buyer meets your criteria", and label UI cards the same way ("WhatsApp · AI agent alert", "meets criteria").
 - **Long-file transcription slips:** on a 70 s+ voiceover, Parakeet sometimes mishears words that are clear on their own ("matching" → "marching"). Before rewording, regenerate just that line and transcribe it alone. Reword only if it fails in isolation too.

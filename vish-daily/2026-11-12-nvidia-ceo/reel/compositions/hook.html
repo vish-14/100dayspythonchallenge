@@ -1,0 +1,170 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    .fr { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; visibility: hidden; transform-origin: 50% 36%; }
+    .big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+    .stripes { position: absolute; left: -200px; top: 0; width: 1480px; height: 1920px; opacity: .07; background: repeating-linear-gradient(135deg, #F5F5F7 0 26px, transparent 26px 64px); }
+    .sub { position: absolute; left: 0; width: 1080px; text-align: center; font-size: 30px; }
+    /* F1 BREAKING on red, F2 NEWS on black, F3 strobe alert */
+    #f1 { background: #E3262B; } #f1 .big { top: 360px; font-size: 200px; color: #fff; }
+    #f1 .sub { top: 600px; color: rgba(255,255,255,.85); }
+    #f2 { background: #0B1016; } #f2 .big { top: 300px; font-size: 330px; color: #E3262B; }
+    #f3 { background: #0B1016; }
+    #f3-strobe { position: absolute; inset: 0; background: #E3262B; }
+    #f3-alert { position: absolute; left: 375px; top: 300px; width: 330px; height: 330px; border-radius: 50%; background: #fff; color: #E3262B;
+      display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 250px; line-height: 1; box-shadow: 0 0 0 26px rgba(255,255,255,.3); }
+    #f3 .sub { top: 700px; color: #fff; font-size: 36px; font-weight: 700; }
+    /* F4 TV news desk */
+    #f4 { background: #0B1016; }
+    #f4-band { position: absolute; left: 0; top: 330px; width: 1080px; height: 190px; background: #E3262B; display: flex; flex-direction: column; justify-content: center; padding: 0 56px; transform-origin: 0 50%; }
+    #f4-band b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 104px; color: #fff; line-height: 1; }
+    #f4-live { position: absolute; right: 56px; top: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: 26px; font-weight: 700; }
+    #f4-dot { width: 20px; height: 20px; border-radius: 50%; background: #fff; }
+    #f4-tick { position: absolute; left: 0; top: 520px; width: 1080px; height: 76px; background: var(--paper); overflow: hidden; }
+    #f4-tag { position: absolute; left: 0; top: 0; height: 76px; padding: 0 22px; background: var(--blue); color: #fff; display: flex; align-items: center; font-size: 24px; z-index: 2; }
+    #f4-run { position: absolute; left: 240px; top: 0; height: 76px; display: flex; align-items: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 34px; color: var(--ink); }
+    #f4-src { position: absolute; left: 56px; top: 650px; padding: 14px 22px; background: var(--blue); color: #fff; font-size: 24px; }
+    /* F5 NVIDIA'S CEO JUST QUIT: a name card (text only), stamped RESIGNED */
+    #f5 { background: #0B1016; }
+    #f5 .l1 { top: 300px; font-size: 120px; color: var(--paper); }
+    #f5 .l2 { top: 430px; font-size: 168px; color: #76B900; }
+    #f5-card { position: absolute; left: 190px; top: 650px; width: 700px; height: 150px; background: var(--paper); border-radius: 22px; display: flex; align-items: center; gap: 24px; padding: 0 30px; box-shadow: 0 28px 60px rgba(0,0,0,.5); }
+    #f5-ico { width: 90px; height: 90px; border-radius: 22px; background: #76B900; flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 34px; color: #0B1016; }
+    #f5-card small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; margin-bottom: 6px; }
+    #f5-card b { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 40px; color: var(--ink); }
+    #f5-stamp { position: absolute; left: 470px; top: 640px; padding: 8px 22px; border: 8px solid #E3262B; color: #E3262B; border-radius: 14px; background: rgba(245,245,247,.92);
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 58px; transform: rotate(-8deg); white-space: nowrap; }
+    /* F6 WHAT IT MEANS FOR YOUR BUSINESS */
+    #f6 { background: #111826; }
+    #f6 .l1 { top: 280px; font-size: 140px; color: var(--paper); }
+    #f6 .l2 { top: 430px; font-size: 120px; color: #6F95FF; }
+    #f6-q { position: absolute; left: 440px; top: 590px; width: 200px; height: 200px; border-radius: 50%; background: #2257EF; color: #fff; display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 150px; box-shadow: 0 0 0 18px rgba(34,87,239,.3), 0 0 80px 10px rgba(34,87,239,.5); }
+    /* siren layer over every cut: light bar, red/blue edge glow, LIVE badge */
+    #ov-bar { position: absolute; left: 56px; top: 176px; width: 968px; height: 50px; display: flex; gap: 12px; }
+    #ov-bar i { flex: 1; border-radius: 10px; }
+    #ov-bar .r { background: #E3262B; box-shadow: 0 0 34px 8px rgba(227,38,43,.8); }
+    #ov-bar .b { background: #2F6BFF; box-shadow: 0 0 34px 8px rgba(47,107,255,.85); }
+    #ov-glow { position: absolute; inset: 0; pointer-events: none; }
+    #ov-live { position: absolute; left: 56px; top: 246px; display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: #E3262B; color: #fff; font-size: 22px; font-weight: 700; }
+    #ov-live i { width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+    #ov-alert { position: absolute; right: 56px; top: 240px; width: 70px; height: 70px; border-radius: 50%; background: #fff; color: #E3262B; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; }
+    #fl { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hook-bg" class="full bg-dark"></div>
+    <div id="stage" style="position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden">
+      <div id="f1" class="fr"><div class="stripes"></div><div class="big fit">BREAKING</div><div class="sub mono">AI NEWS · ALERT</div></div>
+      <div id="f2" class="fr"><div class="stripes"></div><div class="big fit">NEWS</div></div>
+      <div id="f3" class="fr"><div id="f3-strobe"></div><div id="f3-alert">!</div><div class="sub mono">ALERT FOR BUSINESS OWNERS</div></div>
+      <div id="f4" class="fr"><div class="stripes"></div>
+        <div id="f4-band"><b>BREAKING<br>NEWS</b><span id="f4-live" class="mono"><span id="f4-dot"></span>LIVE</span></div>
+        <div id="f4-tick"><div id="f4-tag" class="mono">AI NEWS</div><div id="f4-run" data-layout-allow-overlap>Jensen Huang resigns as Nvidia CEO · CFO Colette Kress named interim CEO &nbsp;·&nbsp; Jensen Huang resigns as Nvidia CEO · CFO Colette Kress named interim CEO</div></div>
+        <div id="f4-src" class="mono">SOURCE: NVIDIA PRESS RELEASE · 12 NOV</div></div>
+      <div id="f5" class="fr"><div class="stripes"></div>
+        <div class="big fit l1" data-layout-allow-overlap>NVIDIA&#x27;S CEO</div><div class="big fit l2" data-layout-allow-overlap>JUST QUIT</div>
+        <div id="f5-card"><div id="f5-ico">CEO</div><div><small>NVIDIA · PRESIDENT &amp; CEO</small><b>Jensen Huang</b></div></div>
+        <div id="f5-stamp" data-layout-allow-overlap>RESIGNED</div></div>
+      <div id="f6" class="fr"><div class="stripes"></div>
+        <div class="big fit l1" data-layout-allow-overlap>WHAT IT MEANS</div><div class="big fit l2" data-layout-allow-overlap>FOR YOUR BUSINESS</div>
+        <div id="f6-q">?</div></div>
+    </div>
+    <div id="ov-glow"></div>
+    <div id="ov-bar"><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i><i class="r"></i><i class="b"></i></div>
+    <div id="ov-live" class="mono"><i id="ov-dot"></i>LIVE</div>
+    <div id="ov-alert">!</div>
+    <div id="fl"></div>
+  </div>
+  <script>
+    (() => {
+      // keep every giant word inside a 980 px line
+      document.querySelectorAll("#root .fit").forEach((el) => {
+        let fs = parseFloat(getComputedStyle(el).fontSize);
+        const span = document.createElement("span"); span.textContent = el.textContent; span.style.whiteSpace = "nowrap";
+        el.textContent = ""; el.appendChild(span);
+        while (span.getBoundingClientRect().width > 980 && fs > 40) { fs -= 4; el.style.fontSize = fs + "px"; }
+      });
+      const W = {"breaking": 1.3, "breaking_end": 1.76, "news": 1.76, "news_end": 2.4, "jensen": 2.4, "jensen_end": 2.96, "huang": 3.12, "huang_end": 3.52, "just": 3.76, "just_end": 4.0, "resigned": 4.0, "resigned_end": 4.56, "as": 4.56, "as_end": 4.8, "nvidias": 4.8, "nvidias_end": 5.52, "ceo": 5.76, "ceo_end": 7.04, "heres": 7.04, "heres_end": 7.44, "what": 7.44, "what_end": 7.6, "it": 7.6, "it_end": 7.76, "means": 7.76, "means_end": 8.08, "for": 8.08, "for_end": 8.24, "your": 8.24, "your_end": 8.4, "business": 8.4, "business_end": 9.2};
+      const D = 9.211;
+      const tl = gsap.timeline({ paused: true });
+      const F = ["#f1", "#f2", "#f3", "#f4", "#f5", "#f6"];
+      const flash = (t, o = 0.85, d = 0.14) => tl.fromTo("#fl", { opacity: o }, { opacity: 0, duration: d, ease: "power2.out", immediateRender: false }, t);
+      const shake = (sel, t, amp = 16, n = 6) => {
+        for (let i = 0; i < n; i++) { const a = amp * (1 - i / n); tl.to(sel, { x: (i % 2 ? -1 : 1) * a, y: (i % 3 - 1) * a * 0.6, duration: 0.035, ease: "none" }, t + i * 0.035); }
+        tl.to(sel, { x: 0, y: 0, duration: 0.05, ease: "none" }, t + n * 0.035);
+      };
+      const cut = (i, t, punch = 1.18, fl = 0.8, sh = 14) => {
+        F.forEach((f, j) => tl.set(f, { visibility: j === i ? "visible" : "hidden" }, t));
+        tl.fromTo(F[i], { scale: punch }, { scale: 1, duration: 0.28, ease: "power4.out", immediateRender: false }, t);
+        tl.to(F[i], { scale: 1.05, duration: 2.6, ease: "none" }, t + 0.3);
+        if (fl) flash(t, fl);
+        if (sh) shake(F[i], t + 0.08, sh);
+      };
+      // sting hits: 0.00 BREAKING (frame 0 is the thumbnail: readable, no flash), 0.35 NEWS, 0.70 ALERT
+      cut(0, 0, 1.0, 0, 0);
+      shake("#f1", 0.05, 18);
+      tl.fromTo("#f1 .big", { scale: 1 }, { scale: 1.12, duration: 0.08, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, 0.04);
+      cut(1, 0.35, 1.45, 0.9, 22);
+      cut(2, 0.70, 1.2, 0.9, 18);
+      for (let k = 0; 0.70 + k * 0.1 < W.breaking; k++) tl.set("#f3-strobe", { backgroundColor: k % 2 ? "#2F6BFF" : "#E3262B", opacity: k % 3 === 2 ? 0.2 : 1 }, 0.70 + k * 0.1);
+      tl.fromTo("#f3-alert", { scale: 0.3 }, { scale: 1, duration: 0.22, ease: "back.out(2.6)", immediateRender: false }, 0.72);
+      // "Breaking news.": the TV desk, ticker running
+      cut(3, W.breaking - 0.04, 1.2, 0.6, 12);
+      tl.fromTo("#f4-band", { scaleX: 0.2 }, { scaleX: 1, duration: 0.2, ease: "power4.out", immediateRender: false }, W.breaking);
+      tl.fromTo("#f4-dot", { opacity: 1 }, { opacity: 0.15, duration: 0.25, yoyo: true, repeat: 5, ease: "steps(1)" }, W.breaking);
+      tl.fromTo("#f4-run", { x: 0 }, { x: -260, duration: W.jensen - W.breaking + 0.2, ease: "none" }, W.breaking);
+      // "Jensen Huang just resigned as Nvidia's CEO": the name card, stamped on "resigned"
+      cut(4, W.jensen - 0.05, 1.3, 0.5, 14);
+      tl.fromTo("#f5-card", { y: 160, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, W.jensen + 0.05);
+      tl.set("#f5-stamp", { opacity: 0 }, 0);
+      tl.fromTo("#f5-stamp", { scale: 3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, W.resigned - 0.02);
+      flash(W.resigned, 0.45, 0.12); shake("#f5", W.resigned + 0.04, 20, 7);
+      tl.fromTo("#f5 .l2", { scale: 1 }, { scale: 1.08, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, W.ceo);
+      // "Here's what it means for your business."
+      cut(5, W.heres - 0.05, 1.3, 0.6, 14);
+      tl.fromTo("#f6-q", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.4)", immediateRender: false }, W.business - 0.05);
+      tl.fromTo("#f6-q", { scale: 1 }, { scale: 1.1, duration: 0.14, yoyo: true, repeat: 3, ease: "sine.inOut", immediateRender: false }, W.business + 0.3);
+      gsap.utils.toArray("#root .stripes").forEach((s) => tl.fromTo(s, { x: 0 }, { x: -180, duration: D, ease: "none" }, 0));
+      // siren layer: lights alternate fast until the name, then keep pulsing; edge glow swaps red/blue; LIVE blinks; alert pings
+      const B = gsap.utils.toArray("#ov-bar i");
+      for (let k = 0; k * 0.11 < D - 0.2; k++) {
+        const fast = k * 0.11 < W.jensen;
+        if (!fast && k % 2) continue;
+        B.forEach((el, i) => tl.set(el, { opacity: (i + k) % 2 ? 1 : 0.12 }, k * 0.11));
+        tl.set("#ov-glow", { boxShadow: (k % 2 ? "inset 0 0 120px 30px rgba(47,107,255,.55)" : "inset 0 0 120px 30px rgba(227,38,43,.6)") }, k * 0.11);
+      }
+      tl.fromTo("#ov-live", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.2, ease: "power3.out" }, 0.7);
+      tl.fromTo("#ov-dot", { opacity: 1 }, { opacity: 0.15, duration: 0.25, yoyo: true, repeat: 30, ease: "steps(1)" }, 0.7);
+      [0.7, W.jensen, W.resigned, W.heres].forEach((t) => tl.fromTo("#ov-alert", { scale: 1.8, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.2, ease: "back.out(2.5)", immediateRender: false }, t));
+      tl.set("#ov-alert", { opacity: 0 }, 0);
+      // flash out into the problem
+      tl.fromTo("#f6", { scale: 1 }, { scale: 1.14, duration: 0.18, ease: "power3.in", immediateRender: false }, D - 0.18);
+      tl.fromTo("#fl", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "power2.in", immediateRender: false }, D - 0.12);
+      window.__timelines["hook"] = tl;
+    })();
+  </script>
+</template>

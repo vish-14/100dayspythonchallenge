@@ -1,0 +1,75 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    .k-big { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
+    #k1 { top: 340px; font-size: 150px; color: var(--paper); }
+    #k2 { top: 500px; font-size: 150px; color: #8A93A3; }
+    #k3 { top: 1110px; font-size: 150px; color: var(--paper); }
+    #k4 { top: 1270px; font-size: 150px; color: #6F95FF; }
+    #k-seat { position: absolute; left: 0; width: 1080px; top: 260px; text-align: center; }
+    #k-seat span { display: inline-block; font-size: 26px; padding: 10px 18px; border-radius: 10px; border: 2px solid #3A4252; color: #8A93A3; }
+    #k-gear { position: absolute; left: 440px; top: 1450px; width: 200px; height: 200px; }
+    #k-run { position: absolute; left: 0; width: 1080px; top: 1690px; text-align: center; }
+    #k-run span { display: inline-flex; align-items: center; gap: 12px; font-size: 26px; padding: 12px 20px; border-radius: 12px; background: #D3F9D8; color: #1F7A3A; }
+    #k-run i { width: 16px; height: 16px; border-radius: 50%; background: #2F9E44; }
+  </style>
+  <div id="root" data-composition-id="key" data-width="1080" data-height="1920">
+    <div id="key-bg" class="full bg-dark"></div>
+    <div id="k-seat" class="mono"><span id="k-seat-s">CEO · changes</span></div>
+    <div id="k1" class="k-big">LEADERS</div>
+    <div id="k2" class="k-big">CHANGE.</div>
+    <div id="k3" class="k-big">SYSTEMS</div>
+    <div id="k4" class="k-big">STAY.</div>
+    <svg id="k-gear" viewBox="0 0 100 100"><g fill="#6F95FF"><circle cx="50" cy="50" r="30"/>
+      <rect x="44" y="4" width="12" height="20" rx="3"/><rect x="44" y="76" width="12" height="20" rx="3"/><rect x="4" y="44" width="20" height="12" rx="3"/><rect x="76" y="44" width="20" height="12" rx="3"/>
+      <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(45 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(135 50 50)"/>
+      <rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(225 50 50)"/><rect x="44" y="4" width="12" height="20" rx="3" transform="rotate(315 50 50)"/></g>
+      <circle cx="50" cy="50" r="12" fill="#0B1016"/></svg>
+    <div id="k-run" class="mono"><span><i id="k-dot"></i>STILL RUNNING</span></div>
+    <div id="key-chrome-top" class="chrome top mono t-dark"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>04 / 04</span></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"leaders": 0.15, "leaders_end": 0.803, "change": 0.803, "change_end": 1.443, "good": 1.443, "good_end": 1.683, "systems": 1.843, "systems_end": 2.323, "keep": 2.323, "keep_end": 2.643, "running": 2.643, "running_end": 3.523};
+      const D = 3.538;
+      const tl = gsap.timeline({ paused: true });
+      // "Leaders change.": the seat label flips, the words slam in
+      tl.fromTo("#k-seat", { opacity: 0 }, { opacity: 1, duration: 0.2 }, Math.max(0, W.leaders - 0.2));
+      tl.fromTo("#k1", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.leaders - 0.05);
+      tl.fromTo("#k2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.change - 0.05);
+      tl.fromTo("#k-seat-s", { rotationX: 0 }, { rotationX: 360, duration: 0.4, ease: "power2.inOut" }, W.change);
+      // "Good systems keep running.": the gear turns, the status stays green
+      tl.fromTo("#k3", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, W.good - 0.05);
+      tl.fromTo("#k4", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, W.keep - 0.05);
+      tl.fromTo("#k-gear", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.systems);
+      tl.fromTo("#k-gear", { rotation: 0 }, { rotation: 360, duration: 3, ease: "none" }, W.systems);
+      tl.fromTo("#k-run", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, W.running);
+      tl.fromTo("#k-dot", { opacity: 1 }, { opacity: 0.25, duration: 0.3, yoyo: true, repeat: 5, ease: "steps(1)" }, W.running);
+      window.__timelines["key"] = tl;
+    })();
+  </script>
+</template>

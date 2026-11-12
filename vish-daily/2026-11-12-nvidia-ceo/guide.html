@@ -1,0 +1,175 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Future-Proof AI Playbook</title><style>/* Vish guide print styles: A4, white, Inter, restrained blue. Used by make_guide.py. */
+@font-face { font-family: "Inter"; font-weight: 400; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url("fonts/inter-latin-700-normal.woff2") format("woff2"); }
+:root {
+  --text: #1B1F27;
+  --muted: #5A6170;
+  --blue: #1F4FD8;
+  --blue-soft: #F1F4FC;
+  --rule: #E2E5EB;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; color: var(--text); }
+body { font-family: "Inter", sans-serif; font-size: 10.5pt; line-height: 1.55; font-feature-settings: "ss01", "cv11"; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+h1 { font-size: 30pt; letter-spacing: -0.02em; line-height: 1.08; }
+h2 { font-size: 17pt; }
+h3 { font-size: 11pt; }
+a { color: var(--blue); }
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+
+/* section label: sentence case, readable */
+.label { font-size: 9.5pt; font-weight: 600; color: var(--blue); margin-bottom: 4pt; }
+.muted { color: var(--muted); }
+
+/* cover */
+.brand { display: flex; align-items: center; gap: 10pt; padding-bottom: 14pt; border-bottom: 1px solid var(--rule); }
+.brand img { width: 34pt; height: 34pt; border-radius: 50%; image-rendering: pixelated; }
+.brand b { display: block; font-size: 10.5pt; }
+.brand span { font-size: 9.5pt; color: var(--muted); }
+.cover-title { padding: 28pt 0 22pt; }
+.cover-title h1 { margin: 2pt 0 12pt; }
+.cover-title .lede { font-size: 12.5pt; line-height: 1.5; color: var(--muted); max-width: 150mm; }
+
+.overview h2 { margin-bottom: 6pt; }
+.overview .intro { margin-bottom: 14pt; max-width: 155mm; }
+table.at-a-glance { width: 100%; border-collapse: collapse; }
+.at-a-glance th { text-align: left; font-size: 9.5pt; font-weight: 600; color: var(--muted); padding: 0 10pt 6pt 0; border-bottom: 1.5px solid var(--text); }
+.at-a-glance td { vertical-align: top; padding: 8pt 10pt 8pt 0; border-bottom: 1px solid var(--rule); }
+.at-a-glance td.n { width: 22pt; font-weight: 700; color: var(--blue); }
+.at-a-glance td.name { width: 44mm; font-weight: 600; }
+.at-a-glance td:last-child { padding-right: 0; }
+.reliable { margin-top: 30pt; }
+
+/* automation blocks */
+.auto { padding-top: 2pt; }
+.auto + .auto { margin-top: 24pt; padding-top: 22pt; border-top: 1px solid var(--rule); }
+.auto h2 { margin-bottom: 4pt; }
+.auto .goal { color: var(--muted); margin-bottom: 12pt; max-width: 160mm; }
+.rows { display: grid; grid-template-columns: 24mm 1fr; column-gap: 12pt; row-gap: 10pt; }
+.rows > dt { font-weight: 600; font-size: 10pt; padding-top: 0.5pt; }
+.rows > dd { margin: 0; }
+ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 3pt; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 14pt 1fr; }
+ol.steps li::before { content: counter(s) "."; font-weight: 600; color: var(--blue); }
+.tools p + p { margin-top: 1pt; }
+.tools b { font-weight: 600; }
+.approve { margin-top: 12pt; background: var(--blue-soft); border-left: 3px solid var(--blue); padding: 8pt 12pt; }
+.approve b { font-weight: 600; }
+
+/* rules + checklist */
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16pt; margin-top: 12pt; }
+.rules > div { border-top: 2px solid var(--blue); padding-top: 9pt; }
+.rules h3 { margin-bottom: 4pt; }
+.rules p { color: var(--muted); }
+.start { }
+.start .intro { margin: 6pt 0 16pt; color: var(--muted); }
+ul.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+ul.check li { display: grid; grid-template-columns: 22pt 1fr; padding: 11pt 0; border-bottom: 1px solid var(--rule); }
+ul.check li:first-child { border-top: 1px solid var(--rule); }
+ul.check li::before { content: ""; width: 10pt; height: 10pt; margin-top: 2.5pt; border: 1.5px solid var(--blue); border-radius: 2pt; }
+ul.check b { font-weight: 600; }
+
+/* closing */
+.close { margin-top: 44pt; }
+.close .lede { font-size: 11pt; max-width: 170mm; margin: 6pt 0 14pt; }
+.book { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-weight: 600; font-size: 11pt; padding: 10pt 16pt; border-radius: 4pt; }
+.book-url { margin-top: 8pt; font-size: 9.5pt; color: var(--muted); }
+.book-url a { color: var(--muted); }
+.call { margin-top: 26pt; }
+.call ol.steps { margin-top: 8pt; }
+.contact { margin-top: 22pt; padding-top: 16pt; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1fr; gap: 16pt; }
+.contact h3 { font-size: 10.5pt; margin-bottom: 3pt; }
+.close.alone { margin-top: 0; }
+.close .call { margin-top: 22pt; }
+</style></head><body>
+<section class="page">
+  <div class="brand"><img src="avatar.png" alt=""><div><b>Vish | AI Automation</b><span>@vish.workflows</span></div></div>
+  <div class="cover-title">
+    <div class="label">A practical guide for business owners using AI tools and agents</div>
+    <h1>The Future-Proof AI Playbook</h1>
+    <p class="lede">On 12 Nov 2026, Nvidia announced Jensen Huang&#x27;s resignation as CEO, with CFO Colette Kress as interim CEO. Your AI tools don&#x27;t stop when a leader changes, but it&#x27;s a good moment to check how your AI is built.</p>
+  </div>
+  <div class="overview">
+    <h2>The four rules at a glance</h2>
+    <p class="intro">Each rule is a design choice you make once, so no single vendor, model or price change can stop your business.</p>
+    <table class="at-a-glance"><thead><tr><th></th><th>Rule</th><th>What it protects</th><th>You decide</th></tr></thead><tbody><tr><td class="n">01</td><td class="name">Don&#x27;t panic, check</td><td>Your day-to-day operations.</td><td>Which tools are critical, and who owns each one.</td></tr><tr><td class="n">02</td><td class="name">No lock-in to one model</td><td>Your costs and speed.</td><td>Which models are approved, and when to switch.</td></tr><tr><td class="n">03</td><td class="name">Own your workflow</td><td>Your data, prompts and process.</td><td>Where they&#x27;re stored and who can export them.</td></tr><tr><td class="n">04</td><td class="name">Human in control</td><td>Your customers and your brand.</td><td>Which actions need your approval.</td></tr></tbody></table>
+  </div>
+  <div class="reliable">
+    <div class="label">What makes it reliable</div>
+    <h2>Three habits that keep AI dependable</h2>
+    <div class="rules"><div><h3>Write it down</h3><p>Each workflow has a one-page description: trigger, steps, tools, owner.</p></div><div><h3>Test the switch</h3><p>Each quarter, run one workflow on a backup model, so switching is routine.</p></div><div><h3>Log and review</h3><p>Every AI action is logged, and you review the log weekly.</p></div></div>
+  </div>
+</section>
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 01</div>
+    <h2>Rule 1 · Don&#x27;t panic, check</h2>
+    <p class="goal">Know in ten minutes which of your AI tools matter most, and that they&#x27;re still running.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>Big news about an AI company, a price change, or an outage.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>List every AI tool you use: chatbot, WhatsApp replies, email assistant, CRM notes.</span></li><li><span>Mark each one: critical, useful or nice-to-have.</span></li><li><span>Check the vendor&#x27;s official status page or newsroom, not social media.</span></li><li><span>Note any announced change to price, terms or availability, and decide if action is needed.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Inventory:</b> Google Sheets or Notion</p><p><b>Sources:</b> Vendor status pages, official newsrooms</p><p><b>Alerts:</b> Email or WhatsApp to the tool owner</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> you decide what is critical. Nothing changes without your go-ahead.</div>
+  </article>
+  <article class="auto">
+    <div class="label">Automation 02</div>
+    <h2>Rule 2 · No lock-in to one model</h2>
+    <p class="goal">If one AI model gets pricier or slower, you swap it in minutes, not months.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>A model&#x27;s price, speed, quality or terms change.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Build agents with a model setting, not a model baked into every step.</span></li><li><span>Keep two approved models for each workflow, a main one and a backup.</span></li><li><span>Store prompts outside the tool, so they work with either model.</span></li><li><span>Test the backup model on real examples before you switch.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Models:</b> Claude, ChatGPT, Gemini or open models</p><p><b>Automation:</b> n8n, Make or Zapier, or a custom agent</p><p><b>Testing:</b> A small sheet of sample inputs and expected outputs</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> you approve which models are allowed and when to switch.</div>
+  </article>
+</section>
+<section class="page">
+  <article class="auto">
+    <div class="label">Automation 03</div>
+    <h2>Rule 3 · Own your workflow</h2>
+    <p class="goal">Your data, prompts and steps stay with you, not stuck inside one tool.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>You start any new AI workflow, or renew a tool subscription.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Keep customer data in your own CRM or database, not only inside the AI tool.</span></li><li><span>Save every prompt and template in a shared document you control.</span></li><li><span>Write the workflow steps down: trigger, actions, rules, owner.</span></li><li><span>Check that you can export your data and settings, and test the export once.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Data:</b> Your CRM, Google Sheets or database</p><p><b>Prompts and steps:</b> Google Docs or Notion</p><p><b>Backups:</b> Scheduled exports to your own drive</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> you control access and exports. Vendors never hold the only copy.</div>
+  </article>
+  <article class="auto">
+    <div class="label">Automation 04</div>
+    <h2>Rule 4 · Human in control</h2>
+    <p class="goal">The agent does the work, and you approve what matters.</p>
+    <dl class="rows">
+      <dt>Trigger</dt><dd>The agent drafts anything that affects money, customers or your brand.</dd>
+      <dt>Steps</dt><dd><ol class="steps"><li><span>Decide which actions are automatic (replies within approved templates) and which need you.</span></li><li><span>Route quotes, discounts, refunds and unusual requests to you for approval.</span></li><li><span>Approve, edit or reject in one tap from WhatsApp or email.</span></li><li><span>Log every action, so you can review what the agent did and why.</span></li></ol></dd>
+      <dt>Tools</dt><dd class="tools"><p><b>Approvals:</b> WhatsApp, Slack or email</p><p><b>Logs:</b> Your CRM or a Google Sheet</p><p><b>Rules:</b> A one-page policy the agent follows</p></dd>
+    </dl>
+    <div class="approve"><b>Human approval:</b> anything involving money, commitments or exceptions waits for you.</div>
+  </article>
+</section>
+<section class="page">
+  <div class="start">
+    <div class="label">Your first steps</div>
+    <h2>Start this week</h2>
+    <p class="intro">Five small steps, no new software needed.</p>
+    <ul class="check"><li><span><b>List every AI tool you use</b> and mark the critical ones.</span></li><li><span><b>Find where each tool keeps your data,</b> and check you can export it.</span></li><li><span><b>Copy your best prompts</b> into one document you own.</span></li><li><span><b>Pick one workflow</b> and write its steps on one page.</span></li><li><span><b>Decide what needs your approval:</b> money, discounts, refunds, exceptions.</span></li></ul>
+  </div>
+  <div class="close">
+    <div class="label">Want it built for you?</div>
+    <h2>I build AI agents around your business.</h2>
+    <p class="lede">In a free call, we’ll find the one workflow that frees up the most time for you and your team.</p>
+    <a class="book" href="https://cal.com/vishworkflows/discovery">Book a free discovery call</a>
+    <p class="book-url"><a href="https://cal.com/vishworkflows/discovery">cal.com/vishworkflows/discovery</a> · online, shown in your time zone</p>
+    
+    <div class="contact">
+      <div><h3>Prefer to chat?</h3><p class="muted">Reply <b>BUILD</b> to my Instagram DM with your business, your tools and the task that eats your time.</p></div>
+      <div><h3>Support</h3><p class="muted"><a href="mailto:support@sritrilinga.com">support@sritrilinga.com</a><br>Instagram: @vish.workflows</p></div>
+    </div>
+  </div>
+</section>
+</body></html>

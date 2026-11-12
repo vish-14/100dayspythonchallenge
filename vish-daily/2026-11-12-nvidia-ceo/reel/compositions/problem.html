@@ -1,0 +1,95 @@
+<template>
+  <style>
+    
+#root{position:absolute;inset:0;overflow:hidden;font-family:'Inter',sans-serif;--blue:#2257EF;--blue-deep:#1A44C4;--ink:#0B1016;--ink-2:#151B24;--paper:#F5F5F7;--gray:#8A93A3;--gray-dark:#3A4252;--gray-line:#2A313D;--ok:#2257EF}
+.panel{position:absolute;left:0;top:0;width:1080px;height:1010px}
+.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.bg-dark{background:var(--ink)} .bg-blue{background:var(--blue)}
+.mono{font-family:'JetBrains Mono',monospace;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.disp{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:.92}
+.chrome{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:24px}
+.chrome.top{top:200px}.chrome.bot{top:900px}
+.prog{width:220px;height:3px;position:relative}
+.prog i{position:absolute;left:0;top:0;height:3px;width:220px;transform-origin:0 50%}
+.t-dark{color:var(--gray)} .t-dark .prog{background:var(--gray-line)} .t-dark .prog i{background:var(--paper)}
+.t-blue{color:rgba(245,245,247,.86)} .t-blue .prog{background:rgba(245,245,247,.3)} .t-blue .prog i{background:var(--paper)}
+.card{position:absolute;background:var(--paper);color:var(--ink);border-radius:22px;box-shadow:0 28px 60px rgba(4,8,20,.38);overflow:hidden}
+.card .bar{height:58px;border-bottom:2px solid #E1E4EA;display:flex;align-items:center;gap:10px;padding:0 24px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;color:#4E5666;text-transform:uppercase;font-weight:500}
+.dot{width:12px;height:12px;border-radius:50%;background:#C6CBD5}.dot.b{background:var(--blue)}
+.ln{height:14px;border-radius:7px;background:#DADDE4}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:.16em;font-weight:500;padding:8px 14px;border-radius:10px;text-transform:uppercase}
+.tag.blue{background:var(--blue);color:#fff}.tag.ink{background:var(--ink);color:#fff}.tag.ghost{border:2px solid currentColor}
+.mask{overflow:hidden;display:block}
+.head{position:absolute;left:56px;top:262px;display:flex;align-items:flex-start;gap:26px}
+.head .num{font-size:150px;color:var(--blue)}
+.head .ttl{font-size:66px;line-height:.98;padding-top:12px}
+.t-blue .head .num, .on-blue .num{color:var(--paper)}
+
+    .pn { position: absolute; top: 330px; width: 230px; height: 230px; border-radius: 28px; background: var(--paper); box-shadow: 0 24px 50px rgba(4,8,20,.35);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+    .pn b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; color: var(--ink); text-align: center; line-height: 1.05; }
+    #pn1 { left: 70px; } #pn2 { left: 425px; } #pn3 { left: 780px; }
+    #chip { position: relative; width: 96px; height: 96px; border-radius: 14px; background: #0B1016; }
+    #chip::before { content: ""; position: absolute; left: 26px; top: 26px; width: 44px; height: 44px; border-radius: 6px; background: #76B900; }
+    #chip i { position: absolute; width: 10px; height: 16px; background: #8A93A3; }
+    #ai-ico { width: 96px; height: 96px; border-radius: 50%; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 40px; }
+    #biz-ico { position: relative; width: 104px; height: 96px; }
+    #biz-ico::before { content: ""; position: absolute; left: 6px; top: 34px; width: 92px; height: 62px; background: #0B1016; border-radius: 6px; }
+    #biz-ico::after { content: ""; position: absolute; left: 0; top: 10px; width: 104px; height: 30px; background: repeating-linear-gradient(90deg, #E3262B 0 17px, #F5F5F7 17px 26px); border-radius: 6px 6px 0 0; }
+    .pl { position: absolute; top: 441px; height: 8px; width: 125px; background: rgba(245,245,247,.35); }
+    .pf { position: absolute; top: 441px; height: 8px; width: 125px; background: var(--paper); transform-origin: 0 50%; }
+    #pl1, #pf1 { left: 300px; } #pl2, #pf2 { left: 655px; }
+    #ceo { position: absolute; left: 105px; top: 262px; padding: 10px 20px; background: #0B1016; color: #fff; border-radius: 12px; font-size: 24px; white-space: nowrap; }
+    #ceo-x { position: absolute; left: 140px; top: 250px; width: 90px; height: 90px; border-radius: 50%; background: #E3262B; color: #fff; display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 56px; }
+    #pq { left: 70px; top: 640px; width: 940px; height: 150px; display: flex; align-items: center; gap: 24px; padding: 0 30px; }
+    #pq-mark { width: 92px; height: 92px; border-radius: 50%; background: #E3262B; color: #fff; flex: none; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 64px; }
+    #pq b { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 46px; color: var(--ink); white-space: nowrap; }
+    #pq small { display: block; font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: .14em; color: #5B6372; margin-bottom: 6px; }
+    #pb-flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #fff; opacity: 0; pointer-events: none; }
+  </style>
+  <div id="root" data-composition-id="problem" data-width="1080" data-height="1920">
+    <div id="problem-bg" class="panel bg-blue"></div>
+    <div id="pl1" class="pl"></div><div id="pf1" class="pf"></div><div id="pl2" class="pl"></div><div id="pf2" class="pf"></div>
+    <div id="pn1" class="pn"><div id="chip"></div><b>AI CHIPS</b></div>
+    <div id="pn2" class="pn"><div id="ai-ico">AI</div><b>AI TOOLS</b></div>
+    <div id="pn3" class="pn"><div id="biz-ico"></div><b>YOUR BUSINESS</b></div>
+    <div id="ceo" class="mono">CEO</div>
+    <div id="ceo-x">✕</div>
+    <div id="pq" class="card"><div id="pq-mark">?</div><div><small>EVERY OWNER TODAY</small><b>Will my AI tools still work?</b></div></div>
+    <div id="problem-chrome-top" class="chrome top mono t-blue"><span>@VISH.WORKFLOWS · AI AUTOMATION</span><span>00 / 04</span></div><div id="problem-chrome-bot" class="chrome bot mono t-blue"><span>00 / THE PROBLEM</span><span class="prog"><i id="problem-prog"></i></span></div>
+    <div id="pb-flash"></div>
+  </div>
+  <script>
+    (() => {
+      const W = {"nvidia": 0.15, "nvidia_end": 0.789, "makes": 0.949, "makes_end": 1.189, "the": 1.189, "the_end": 1.349, "chips": 1.349, "chips_end": 1.909, "behind": 1.909, "behind_end": 2.309, "most": 2.309, "most_end": 2.549, "of": 2.549, "of_end": 2.709, "the_2": 2.709, "the_2_end": 2.869, "big": 2.869, "big_end": 3.269, "ai": 3.269, "ai_end": 3.829, "tools": 3.829, "tools_end": 4.469, "when": 4.469, "when_end": 4.709, "the_3": 4.709, "the_3_end": 4.869, "man": 4.869, "man_end": 5.109, "who": 5.109, "who_end": 5.269, "built": 5.269, "built_end": 5.589, "it": 5.589, "it_end": 5.829, "leaves": 5.829, "leaves_end": 7.189, "overnight": 5.829, "overnight_end": 7.189, "a": 7.189, "a_end": 7.349, "lot": 7.349, "lot_end": 7.509, "of_2": 7.509, "of_2_end": 7.669, "business": 7.669, "business_end": 8.069, "owners": 8.069, "owners_end": 8.709, "wonder": 8.709, "wonder_end": 9.349, "will": 9.349, "will_end": 9.509, "my": 9.669, "my_end": 9.909, "ai_2": 9.909, "ai_2_end": 10.469, "tools_2": 10.469, "tools_2_end": 10.949, "still": 10.949, "still_end": 11.349, "work": 11.349, "work_end": 11.749};
+      const tl = gsap.timeline({ paused: true });
+      // chip pins
+      const chip = document.getElementById("chip");
+      [[16, -14], [40, -14], [64, -14], [16, 94], [40, 94], [64, 94]].forEach(([x, y]) => { const i = document.createElement("i"); i.style.left = (x + 3) + "px"; i.style.top = y + "px"; chip.appendChild(i); });
+      tl.fromTo("#pb-flash", { opacity: 1 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0);
+      // "Nvidia makes the chips behind most of the big AI tools": chip → AI tools
+      tl.fromTo("#pn1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.chips - 0.1);
+      tl.fromTo(["#pl1", "#pl2"], { opacity: 0 }, { opacity: 1, duration: 0.2 }, W.behind);
+      tl.fromTo("#pf1", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" }, W.behind);
+      tl.fromTo("#pn2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.ai - 0.1);
+      tl.fromTo("#pf2", { scaleX: 0 }, { scaleX: 1, duration: 0.3, ease: "power2.inOut" }, W.tools);
+      tl.fromTo("#pn3", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, W.tools + 0.25);
+      // "the man who built it": the CEO tag sits on the chip; "leaves overnight": it flies off, the chain flickers
+      tl.fromTo("#ceo", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, W.man - 0.05);
+      tl.to("#ceo", { y: -400, x: 160, rotation: 20, opacity: 0, duration: 0.45, ease: "power3.in" }, W.leaves);
+      tl.set("#ceo-x", { opacity: 0 }, 0);
+      tl.fromTo("#ceo-x", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.18, ease: "power4.out", immediateRender: false }, W.leaves + 0.35);
+      tl.fromTo("#pb-flash", { opacity: 0.4 }, { opacity: 0, duration: 0.14, immediateRender: false }, W.leaves + 0.35);
+      for (let k = 0; k < 6; k++) tl.set(["#pf1", "#pf2"], { backgroundColor: k % 2 ? "#F5F5F7" : "#E3262B", opacity: k % 2 ? 1 : 0.5 }, W.leaves + 0.4 + k * 0.12);
+      tl.to(["#pf1", "#pf2"], { backgroundColor: "#E3262B", duration: 0.01 }, W.leaves + 1.2);
+      // "a lot of business owners wonder": your business shakes; "will my AI tools still work?"
+      tl.fromTo("#pn3", { x: 0 }, { x: 10, duration: 0.04, yoyo: true, repeat: 7, ease: "none", immediateRender: false }, W.owners);
+      tl.fromTo("#pn3", { boxShadow: "0 24px 50px rgba(4,8,20,.35)" }, { boxShadow: "0 0 0 8px #E3262B, 0 24px 50px rgba(4,8,20,.35)", duration: 0.2, immediateRender: false }, W.owners);
+      tl.fromTo("#pq", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, W.will - 0.1);
+      tl.fromTo("#pq-mark", { rotation: -15 }, { rotation: 15, duration: 0.18, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, W.still);
+      tl.fromTo("#problem-prog", { scaleX: 0.1210 }, { scaleX: 0.2792, duration: 12.038, ease: "none" }, 0);
+      window.__timelines["problem"] = tl;
+    })();
+  </script>
+</template>

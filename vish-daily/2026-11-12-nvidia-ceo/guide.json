@@ -1,0 +1,187 @@
+{
+ "title": "The Future-Proof AI Playbook",
+ "kicker": "A practical guide for business owners using AI tools and agents",
+ "subtitle": "On 12 Nov 2026, Nvidia announced Jensen Huang's resignation as CEO, with CFO Colette Kress as interim CEO. Your AI tools don't stop when a leader changes, but it's a good moment to check how your AI is built.",
+ "overview": {
+  "heading": "The four rules at a glance",
+  "intro": "Each rule is a design choice you make once, so no single vendor, model or price change can stop your business.",
+  "columns": [
+   "Rule",
+   "What it protects",
+   "You decide"
+  ],
+  "rows": [
+   [
+    "Don't panic, check",
+    "Your day-to-day operations.",
+    "Which tools are critical, and who owns each one."
+   ],
+   [
+    "No lock-in to one model",
+    "Your costs and speed.",
+    "Which models are approved, and when to switch."
+   ],
+   [
+    "Own your workflow",
+    "Your data, prompts and process.",
+    "Where they're stored and who can export them."
+   ],
+   [
+    "Human in control",
+    "Your customers and your brand.",
+    "Which actions need your approval."
+   ]
+  ]
+ },
+ "rules": {
+  "label": "What makes it reliable",
+  "heading": "Three habits that keep AI dependable",
+  "items": [
+   {
+    "title": "Write it down",
+    "text": "Each workflow has a one-page description: trigger, steps, tools, owner."
+   },
+   {
+    "title": "Test the switch",
+    "text": "Each quarter, run one workflow on a backup model, so switching is routine."
+   },
+   {
+    "title": "Log and review",
+    "text": "Every AI action is logged, and you review the log weekly."
+   }
+  ]
+ },
+ "workflows": [
+  {
+   "name": "Rule 1 · Don't panic, check",
+   "goal": "Know in ten minutes which of your AI tools matter most, and that they're still running.",
+   "trigger": "Big news about an AI company, a price change, or an outage.",
+   "steps": [
+    "List every AI tool you use: chatbot, WhatsApp replies, email assistant, CRM notes.",
+    "Mark each one: critical, useful or nice-to-have.",
+    "Check the vendor's official status page or newsroom, not social media.",
+    "Note any announced change to price, terms or availability, and decide if action is needed."
+   ],
+   "tools": [
+    [
+     "Inventory",
+     "Google Sheets or Notion"
+    ],
+    [
+     "Sources",
+     "Vendor status pages, official newsrooms"
+    ],
+    [
+     "Alerts",
+     "Email or WhatsApp to the tool owner"
+    ]
+   ],
+   "approval": "you decide what is critical. Nothing changes without your go-ahead."
+  },
+  {
+   "name": "Rule 2 · No lock-in to one model",
+   "goal": "If one AI model gets pricier or slower, you swap it in minutes, not months.",
+   "trigger": "A model's price, speed, quality or terms change.",
+   "steps": [
+    "Build agents with a model setting, not a model baked into every step.",
+    "Keep two approved models for each workflow, a main one and a backup.",
+    "Store prompts outside the tool, so they work with either model.",
+    "Test the backup model on real examples before you switch."
+   ],
+   "tools": [
+    [
+     "Models",
+     "Claude, ChatGPT, Gemini or open models"
+    ],
+    [
+     "Automation",
+     "n8n, Make or Zapier, or a custom agent"
+    ],
+    [
+     "Testing",
+     "A small sheet of sample inputs and expected outputs"
+    ]
+   ],
+   "approval": "you approve which models are allowed and when to switch."
+  },
+  {
+   "name": "Rule 3 · Own your workflow",
+   "goal": "Your data, prompts and steps stay with you, not stuck inside one tool.",
+   "trigger": "You start any new AI workflow, or renew a tool subscription.",
+   "steps": [
+    "Keep customer data in your own CRM or database, not only inside the AI tool.",
+    "Save every prompt and template in a shared document you control.",
+    "Write the workflow steps down: trigger, actions, rules, owner.",
+    "Check that you can export your data and settings, and test the export once."
+   ],
+   "tools": [
+    [
+     "Data",
+     "Your CRM, Google Sheets or database"
+    ],
+    [
+     "Prompts and steps",
+     "Google Docs or Notion"
+    ],
+    [
+     "Backups",
+     "Scheduled exports to your own drive"
+    ]
+   ],
+   "approval": "you control access and exports. Vendors never hold the only copy."
+  },
+  {
+   "name": "Rule 4 · Human in control",
+   "goal": "The agent does the work, and you approve what matters.",
+   "trigger": "The agent drafts anything that affects money, customers or your brand.",
+   "steps": [
+    "Decide which actions are automatic (replies within approved templates) and which need you.",
+    "Route quotes, discounts, refunds and unusual requests to you for approval.",
+    "Approve, edit or reject in one tap from WhatsApp or email.",
+    "Log every action, so you can review what the agent did and why."
+   ],
+   "tools": [
+    [
+     "Approvals",
+     "WhatsApp, Slack or email"
+    ],
+    [
+     "Logs",
+     "Your CRM or a Google Sheet"
+    ],
+    [
+     "Rules",
+     "A one-page policy the agent follows"
+    ]
+   ],
+   "approval": "anything involving money, commitments or exceptions waits for you."
+  }
+ ],
+ "start": {
+  "label": "Your first steps",
+  "heading": "Start this week",
+  "intro": "Five small steps, no new software needed.",
+  "items": [
+   {
+    "lead": "List every AI tool you use",
+    "text": "and mark the critical ones."
+   },
+   {
+    "lead": "Find where each tool keeps your data,",
+    "text": "and check you can export it."
+   },
+   {
+    "lead": "Copy your best prompts",
+    "text": "into one document you own."
+   },
+   {
+    "lead": "Pick one workflow",
+    "text": "and write its steps on one page."
+   },
+   {
+    "lead": "Decide what needs your approval:",
+    "text": "money, discounts, refunds, exceptions."
+   }
+  ]
+ }
+}
